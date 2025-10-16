@@ -8,7 +8,7 @@
         </h1>
       </div>
 
-      <!-- Search Form -->
+      <!-- formularz wyszukiwania -->
       <div class="flex flex-wrap items-end gap-4 px-4 py-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm mb-8">
         <label class="flex flex-col min-w-40 flex-1">
           <p class="text-gray-900 dark:text-white text-base font-medium leading-normal pb-2">Miejsce docelowe</p>
@@ -57,12 +57,12 @@
       </div>
 
       <div class="flex gap-8">
-        <!-- Filters Sidebar -->
+        <!-- sidebar z filtrami -->
         <div class="w-1/4">
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
             <h2 class="text-gray-900 dark:text-white text-xl font-bold mb-6">Filtry</h2>
             
-            <!-- Price Range Filter -->
+            <!-- price range -->
             <div class="mb-6">
               <p class="text-gray-900 dark:text-white text-base font-medium mb-4">Cena za noc (zł)</p>
               <div class="flex items-center gap-4 mb-2">
@@ -82,7 +82,7 @@
               </div>
             </div>
 
-            <!-- Accommodation Type Filter -->
+            <!-- filtr typów noclegu -->
             <div class="mb-6">
               <p class="text-gray-900 dark:text-white text-base font-medium mb-4">Typ noclegu</p>
               <select 
@@ -98,7 +98,7 @@
               </select>
             </div>
 
-            <!-- Rating Filter -->
+            <!-- filtr ocen -->
             <div class="mb-6">
               <p class="text-gray-900 dark:text-white text-base font-medium mb-4">Minimalna ocena</p>
               <select 
@@ -113,7 +113,7 @@
               </select>
             </div>
 
-            <!-- Amenities Filter -->
+            <!-- filtr udogodnień -->
             <div class="mb-6">
               <p class="text-gray-900 dark:text-white text-base font-medium mb-4">Udogodnienia</p>
               <div class="space-y-2">
@@ -158,7 +158,7 @@
           </div>
         </div>
 
-        <!-- Results -->
+        <!-- wyniki wyszukiwania -->
         <div class="flex-1">
           <div class="flex justify-between items-center mb-6">
             <h2 class="text-gray-900 dark:text-white text-xl font-bold">
@@ -185,7 +185,7 @@
               class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow"
             >
               <div class="flex">
-                <!-- Image -->
+                <!-- zdjęcie -->
                 <div class="w-64 h-48 flex-shrink-0">
                   <img 
                     :src="accommodation.image" 
@@ -194,7 +194,7 @@
                   />
                 </div>
                 
-                <!-- Content -->
+                <!-- treść -->
                 <div class="flex-1 p-6">
                   <div class="flex justify-between items-start mb-2">
                     <div>
@@ -237,7 +237,7 @@
                     {{ accommodation.description }}
                   </p>
                   
-                  <!-- Amenities -->
+                  <!-- udogodnienia -->
                   <div class="flex flex-wrap gap-2 mb-4">
                     <span 
                       v-for="amenity in accommodation.amenities.slice(0, 4)" 
@@ -452,6 +452,6 @@ const getAmenityLabel = (amenity: string) => {
 
 const searchAccommodations = () => {
   console.log('Wyszukiwanie noclegów...', searchForm.value)
-  // Tu będzie integracja z API
+  // TODO: podpiąć API jak będzie gotowe
 }
 </script>

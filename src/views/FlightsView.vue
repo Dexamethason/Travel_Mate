@@ -8,7 +8,7 @@
         </h1>
       </div>
 
-      <!-- Search Form -->
+      <!-- formularz wyszukiwania lotów -->
       <div class="flex flex-wrap items-end gap-4 px-4 py-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm mb-8">
         <label class="flex flex-col min-w-40 flex-1">
           <p class="text-gray-900 dark:text-white text-base font-medium leading-normal pb-2">Skąd</p>
@@ -66,12 +66,12 @@
       </div>
 
       <div class="flex gap-8">
-        <!-- Filters Sidebar -->
+        <!-- sidebar z filtrami -->
         <div class="w-1/4">
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
             <h2 class="text-gray-900 dark:text-white text-xl font-bold mb-6">Filtry</h2>
             
-            <!-- Price Range Filter -->
+            <!-- filtr ceny -->
             <div class="mb-6">
               <p class="text-gray-900 dark:text-white text-base font-medium mb-4">Przedział cenowy</p>
               <div class="flex items-center gap-4 mb-2">
@@ -91,7 +91,7 @@
               </div>
             </div>
 
-            <!-- Stops Filter -->
+            <!-- filtr przesiadek -->
             <div class="mb-6">
               <p class="text-gray-900 dark:text-white text-base font-medium mb-4">Maksymalna liczba przesiadek</p>
               <select 
@@ -107,7 +107,7 @@
           </div>
         </div>
 
-        <!-- Results -->
+        <!-- wyniki wyszukiwania -->
         <div class="flex-1">
           <h2 class="text-gray-900 dark:text-white text-xl font-bold mb-6">Wyniki</h2>
           
@@ -241,6 +241,6 @@ const filteredFlights = computed(() => {
 
 const searchFlights = () => {
   console.log('Wyszukiwanie lotów...', searchForm.value)
-  // Tu będzie integracja z API
+  // TODO: podpiąć prawdziwe API jak będzie gotowe
 }
 </script>

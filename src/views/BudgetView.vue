@@ -6,7 +6,7 @@
       <p class="text-sm text-gray-600 dark:text-gray-400">Zarządzaj wydatkami podróży i śledź swoje koszty.</p>
     </div>
 
-    <!-- Summary Cards -->
+    <!-- Podsumowanie budżetu -->
     <div class="mb-6">
       <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Podsumowanie</h2>
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <!-- Expenses Table -->
+    <!-- tabela z wydatkami -->
     <div class="mb-6">
       <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Wydatki</h2>
       <div class="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
@@ -76,7 +76,7 @@
       </div>
     </div>
 
-    <!-- Add Expense Button -->
+    <!-- przycisk do dodawania wydatków -->
     <div class="flex justify-end">
       <button 
         @click="showAddExpenseModal = true"
@@ -89,7 +89,7 @@
       </button>
     </div>
 
-    <!-- Add Expense Modal -->
+    <!-- modal do dodawania nowego wydatku -->
     <div 
       v-if="showAddExpenseModal"
       class="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
@@ -285,7 +285,7 @@ const addExpense = () => {
   budget.value.spent += expense.amount
   budget.value.remaining = budget.value.total - budget.value.spent
   
-  // Reset form
+  // czyszczenie formularza
   newExpense.value = {
     date: '',
     category: '',
