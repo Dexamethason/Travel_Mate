@@ -1,4 +1,6 @@
 import express from 'express';
+import tripRoutes from './tripRoutes';
+import expenseRoutes from './expenseRoutes';
 
 const router = express.Router();
 
@@ -11,6 +13,7 @@ router.get('/', (req, res) => {
       health: '/health',
       users: '/api/users',
       trips: '/api/trips',
+      expenses: '/api/expenses',
       accommodations: '/api/accommodations',
       activities: '/api/activities',
       flights: '/api/flights',
@@ -18,6 +21,9 @@ router.get('/', (req, res) => {
     }
   });
 });
+
+router.use('/trips', tripRoutes);
+router.use('/expenses', expenseRoutes);
 
 // // Przykładowe trasy (do rozwinięcia)
 // router.get('/test-firestore', async (req, res) => {
