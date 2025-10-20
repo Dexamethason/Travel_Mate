@@ -2,16 +2,13 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import dotenv from 'dotenv';
+import { serverEnv } from './config/env';
 import { initializeFirebase } from './config/firebase';
 import { errorHandler, notFound } from './middleware/errorHandler';
 import indexRoutes from './routes/index';
 
-// Ładowanie zmiennych środowiskowych
-dotenv.config();
-
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = serverEnv.port;
 
 // Inicjalizacja Firebase
 initializeFirebase();
@@ -24,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Konfiguracja CORS
 const corsOptions = {
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:5173', 'http://localhost:3000'],
+  origin: serverEnv.allowedOrigins,
   credentials: true,
   optionsSuccessStatus: 200
 };
@@ -37,7 +34,7 @@ app.get('/health', (req, res) => {
     status: 'OK',
     uptime: process.uptime(),
     timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development'
+    environment: serverEnv.nodeEnv
   });
 });
 
@@ -57,7 +54,7 @@ app.use(errorHandler);
 // Uruchomienie serwera
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`📍 Environment: ${serverEnv.nodeEnv}`);
   console.log(`🔗 Health check: http://localhost:${PORT}/health`);
 });
 

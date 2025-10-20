@@ -23,6 +23,11 @@ const routes: RouteRecordRaw[] = [
         component: () => import('../views/BudgetView.vue'),
       },
       {
+        path: 'budget/:tripId',
+        name: 'BudgetTrip',
+        component: () => import('../views/BudgetView.vue'),
+      },
+      {
         path: 'accommodations',
         name: 'Accommodations',
         component: () => import('../views/AccommodationsView.vue'),

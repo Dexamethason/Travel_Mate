@@ -1,21 +1,25 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs, addDoc, doc, getDoc, updateDoc, deleteDoc } from 'firebase/firestore/lite';
-// import { getAnalytics } from "firebase/analytics";
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
+import { getFirestore } from 'firebase/firestore/lite';
+import { firebaseEnv } from './env';
 
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Firebase configuration loaded from environment variables
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID
+  apiKey: firebaseEnv.apiKey,
+  authDomain: firebaseEnv.authDomain,
+  projectId: firebaseEnv.projectId,
+  storageBucket: firebaseEnv.storageBucket,
+  messagingSenderId: firebaseEnv.messagingSenderId,
+  appId: firebaseEnv.appId,
+  measurementId: firebaseEnv.measurementId
 };
+
+// Debug - sprawdź czy zmienne są załadowane
+if (!firebaseConfig.projectId) {
+  console.error('❌ BŁĄD: Firebase projectId jest undefined!');
+  console.error('Sprawdź czy plik server/.env jest poprawnie skonfigurowany.');
+  console.error('Uruchom: cd server && npm run check-env');
+  throw new Error('Firebase configuration is missing required fields');
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -25,6 +29,7 @@ const db = getFirestore(app);
 // Initialize Firebase function
 export const initializeFirebase = () => {
   console.log('✅ Firebase initialized successfully');
+  console.log(`📍 Project ID: ${firebaseConfig.projectId}`);
   return { app, db };
 };
 
