@@ -43,6 +43,16 @@
           </svg>
           <span class="font-semibold text-sm">Profil</span>
         </router-link>
+        
+        <button 
+          @click="logout"
+          class="flex items-center gap-3 rounded-lg px-3 py-2 transition-colors text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20"
+        >
+          <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M112,216a8,8,0,0,1-8,8H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h56a8,8,0,0,1,0,16H48V208h56A8,8,0,0,1,112,216Zm109.66-93.66-40-40a8,8,0,0,0-11.32,11.32L196.69,120H104a8,8,0,0,0,0,16h92.69l-26.35,26.34a8,8,0,0,0,11.32,11.32l40-40A8,8,0,0,0,221.66,122.34Z"/>
+          </svg>
+          <span class="font-semibold text-sm">Wyloguj się</span>
+        </button>
       </div>
     </aside>
 
@@ -50,14 +60,15 @@
     <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900">
       <router-view />
     </main>
+
   </div>
 </template>
 
 <script setup lang="ts">
-// import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
+const router = useRouter()
 
 const navigationItems = [
   {
@@ -103,5 +114,10 @@ const isActive = (path: string) => {
     return route.path === '/'
   }
   return route.path.startsWith(path)
+}
+
+const logout = () => {
+  localStorage.removeItem('token')
+  router.push('/login')
 }
 </script>

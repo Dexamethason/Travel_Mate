@@ -6,6 +6,7 @@ import { serverEnv } from './config/env';
 import { initializeFirebase } from './config/firebase';
 import { errorHandler, notFound } from './middleware/errorHandler';
 import indexRoutes from './routes/index';
+import authRoutes from './routes/authRoutes';
 
 const app = express();
 const PORT = serverEnv.port;
@@ -40,6 +41,8 @@ app.get('/health', (req, res) => {
 
 // Główne trasy API
 app.use('/api', indexRoutes);
+// Auth routes (un-prefixed by /api)
+app.use('/auth', authRoutes);
 
 // Import tras (dodaj gdy będą utworzone)
 // import userRoutes from './routes/userRoutes';

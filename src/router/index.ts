@@ -4,8 +4,31 @@ import MainLayout from '../layouts/MainLayout.vue'
 
 const routes: RouteRecordRaw[] = [
   {
+    path: '/dashboard',
+    redirect: '/'
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/LoginView.vue'),
+    meta: { requiresAuth: false }
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/RegisterView.vue'),
+    meta: { requiresAuth: false }
+  },
+  {
+    path: '/forgot-password',
+    name: 'ForgotPassword',
+    component: () => import('../views/ForgotPasswordView.vue'),
+    meta: { requiresAuth: false }
+  },
+  {
     path: '/',
     component: MainLayout,
+    meta: { requiresAuth: true },
     children: [
       {
         path: '',
@@ -48,12 +71,25 @@ const routes: RouteRecordRaw[] = [
         component: () => import('../views/ProfileView.vue'),
       },
     ]
-  },
+  }
 ]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+})
+
+// Navigation guard
+router.beforeEach((to, _from, next) => {
+  const isAuthenticated = !!localStorage.getItem('token') // You might want to adjust this based on your auth logic
+  
+  if (to.meta.requiresAuth && !isAuthenticated) {
+    next('/login')
+  } else if (!to.meta.requiresAuth && isAuthenticated && to.name !== 'Login') {
+    next('/')
+  } else {
+    next()
+  }
 })
 
 export default router
