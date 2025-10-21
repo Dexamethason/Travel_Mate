@@ -14,6 +14,6 @@
 </template>
 
 <script setup lang="ts">
-// Placeholder for activities functionality
+// atrakcje - póki co tylko placeholder, zrobimy później
 </script>
 

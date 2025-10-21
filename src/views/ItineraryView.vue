@@ -14,6 +14,6 @@
 </template>
 
 <script setup lang="ts">
-// Placeholder for itinerary functionality
+// plan podróży - jeszcze nie gotowe, ale będzie super
 </script>
 

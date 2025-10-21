@@ -8,11 +8,11 @@
       </div>
 
       <div class="space-y-12">
-        <!-- Trip Summary -->
+        <!-- podsumowanie podróży -->
         <div>
           <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Podsumowanie podróży</h3>
           <div class="space-y-6">
-            <!-- Flights Card -->
+            <!-- Loty -->
             <div class="flex items-center gap-6 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm border border-gray-200 dark:border-gray-700">
               <div class="h-32 w-1/3 flex-shrink-0 rounded-lg bg-cover bg-center" 
                 style='background-image: url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800");'></div>
@@ -22,7 +22,7 @@
               </div>
             </div>
 
-            <!-- Accommodations Card -->
+            <!-- Noclegi -->
             <div class="flex items-center gap-6 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm border border-gray-200 dark:border-gray-700">
               <div class="h-32 w-1/3 flex-shrink-0 rounded-lg bg-cover bg-center" 
                 style='background-image: url("https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800");'></div>
@@ -32,7 +32,7 @@
               </div>
             </div>
 
-            <!-- Activities Card -->
+            <!-- Atrakcje -->
             <div class="flex items-center gap-6 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm border border-gray-200 dark:border-gray-700">
               <div class="h-32 w-1/3 flex-shrink-0 rounded-lg bg-cover bg-center" 
                 style='background-image: url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800");'></div>
@@ -44,7 +44,7 @@
           </div>
         </div>
 
-        <!-- Budget -->
+        <!-- budżet -->
         <div>
           <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Budżet</h3>
           <div class="rounded-xl bg-white dark:bg-gray-800 p-6 shadow-sm border border-gray-200 dark:border-gray-700">
@@ -59,7 +59,7 @@
           </div>
         </div>
 
-        <!-- Group Members -->
+        <!-- członkowie grupy -->
         <div>
           <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Uczestnicy</h3>
           <div class="flex -space-x-4">
@@ -72,7 +72,7 @@
           </div>
         </div>
 
-        <!-- Itinerary -->
+        <!-- plan podróży -->
         <div>
           <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Plan podróży</h3>
           <div class="flow-root">

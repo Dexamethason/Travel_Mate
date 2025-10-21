@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-screen overflow-hidden bg-gray-50 dark:bg-gray-900">
-    <!-- Sidebar Navigation -->
+    <!-- Nawigacja -->
     <aside class="flex h-full w-64 flex-col border-r border-gray-200 bg-white dark:bg-gray-800 p-4">
       <div class="flex flex-col gap-8">
         <div class="flex items-center gap-4 text-gray-900 dark:text-white">
@@ -46,7 +46,7 @@
       </div>
     </aside>
 
-    <!-- Main Content -->
+    <!-- główna treść -->
     <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900">
       <router-view />
     </main>
