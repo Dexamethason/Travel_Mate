@@ -17,8 +17,8 @@ router.get('/', (req, res) => {
       accommodations: '/api/accommodations',
       activities: '/api/activities',
       flights: '/api/flights',
-      budget: '/api/budget'
-    }
+      budget: '/api/budget',
+    },
   });
 });
 
@@ -30,16 +30,16 @@ router.use('/expenses', expenseRoutes);
 //   try {
 //     // Import funkcji Firebase (tylko gdy potrzebne)
 //     const { firestoreHelpers } = await import('../config/firebase');
-    
+
 //     // Test dodawania dokumentu
 //     const testData = {
 //       name: 'Test Document',
 //       createdAt: new Date().toISOString(),
 //       type: 'test'
 //     };
-    
+
 //     const docId = await firestoreHelpers.addDocument('test', testData);
-    
+
 //     res.json({
 //       success: true,
 //       message: 'Firestore test successful',

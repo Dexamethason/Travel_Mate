@@ -1,7 +1,7 @@
 <template>
-  <div class="flex-1 p-6 bg-gray-50 dark:bg-gray-900 min-h-screen">
+  <div class="min-h-screen flex-1 bg-gray-50 p-6 dark:bg-gray-900">
     <!-- Stan: Lista tripów lub pusty stan -->
-    <TripList 
+    <TripList
       v-if="!tripId"
       :trips="trips"
       :loading="tripsLoading"
@@ -12,8 +12,8 @@
     <!-- Stan: Widok budżetu wybranego tripa -->
     <div v-else>
       <!-- Ładowanie -->
-      <div v-if="tripsLoading || expensesLoading" class="flex justify-center items-center py-12">
-        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+      <div v-if="tripsLoading || expensesLoading" class="flex items-center justify-center py-12">
+        <div class="h-12 w-12 animate-spin rounded-full border-b-2 border-blue-500"></div>
       </div>
 
       <!-- Widok tripa -->
@@ -21,38 +21,55 @@
         <!-- Header z przyciskiem powrotu -->
         <div class="mb-6 flex items-center justify-between">
           <div class="flex items-center gap-4">
-            <button 
+            <button
+              class="rounded-lg p-2 transition-colors hover:bg-gray-200 dark:hover:bg-gray-700"
               @click="goBackToList"
-              class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900 dark:text-white" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-gray-900 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </button>
             <div>
-              <h1 class="text-3xl font-bold text-gray-900 dark:text-white">{{ currentTrip.name }}</h1>
-              <p class="text-sm text-gray-600 dark:text-gray-400">Zarządzaj wydatkami podróży i śledź swoje koszty.</p>
+              <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
+                {{ currentTrip.name }}
+              </h1>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Zarządzaj wydatkami podróży i śledź swoje koszty.
+              </p>
             </div>
           </div>
-          <button 
+          <button
+            class="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-gray-900 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700"
             @click="openEditTripModal"
-            class="inline-flex items-center px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="mr-2 h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+              />
             </svg>
             Edytuj trip
           </button>
         </div>
 
         <!-- Podsumowanie budżetu -->
-        <TripSummary 
-          :budget="currentTrip.budget"
-          :total-spent="totalSpent"
-        />
+        <TripSummary :budget="currentTrip.budget" :total-spent="totalSpent" />
 
         <!-- Tabela wydatków -->
-        <ExpenseTable 
+        <ExpenseTable
           :expenses="expenses"
           :participants="currentTrip.participants"
           @edit-expense="openEditExpenseModal"
@@ -61,12 +78,21 @@
 
         <!-- Przycisk dodawania wydatków -->
         <div class="flex justify-end">
-          <button 
+          <button
+            class="flex h-10 items-center justify-center rounded-lg bg-blue-500 px-4 text-sm font-bold text-white transition-colors hover:bg-blue-600"
             @click="openAddExpenseModal"
-            class="flex h-10 items-center justify-center rounded-lg bg-blue-500 hover:bg-blue-600 px-4 text-sm font-bold text-white transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="mr-2 h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                clip-rule="evenodd"
+              />
             </svg>
             <span>Dodaj wydatek</span>
           </button>
@@ -75,21 +101,25 @@
     </div>
 
     <!-- Modal tworzenia/edycji tripa -->
-    <TripModal 
+    <TripModal
       :show="showTripModal"
       :is-editing="isEditingTrip"
-      :initial-data="isEditingTrip && currentTrip ? {
-        name: currentTrip.name,
-        budget: currentTrip.budget,
-        participants: currentTrip.participants
-      } : undefined"
+      :initial-data="
+        isEditingTrip && currentTrip
+          ? {
+              name: currentTrip.name,
+              budget: currentTrip.budget,
+              participants: currentTrip.participants,
+            }
+          : undefined
+      "
       @close="closeTripModal"
       @submit="handleSaveTrip"
       @delete="handleDeleteTrip"
     />
 
     <!-- Modal dodawania/edycji wydatku -->
-    <ExpenseModal 
+    <ExpenseModal
       :show="showExpenseModal"
       :is-editing="isEditingExpense"
       :participants="currentTrip?.participants || []"
@@ -118,8 +148,24 @@ import ExpenseModal from '@/components/ExpenseModal.vue';
 const route = useRoute();
 const router = useRouter();
 
-const { trips, currentTrip, loading: tripsLoading, fetchTrips, fetchTripById, createTrip, updateTrip, deleteTrip } = useTrips();
-const { expenses, loading: expensesLoading, fetchExpenses, createExpense, updateExpense, deleteExpense } = useExpenses();
+const {
+  trips,
+  currentTrip,
+  loading: tripsLoading,
+  fetchTrips,
+  fetchTripById,
+  createTrip,
+  updateTrip,
+  deleteTrip,
+} = useTrips();
+const {
+  expenses,
+  loading: expensesLoading,
+  fetchExpenses,
+  createExpense,
+  updateExpense,
+  deleteExpense,
+} = useExpenses();
 
 const tripId = computed(() => route.params.tripId as string | undefined);
 
@@ -160,10 +206,14 @@ const closeTripModal = () => {
   showTripModal.value = false;
 };
 
-const handleSaveTrip = async (data: { name: string; budget: number; participants: Participant[] }) => {
+const handleSaveTrip = async (data: {
+  name: string;
+  budget: number;
+  participants: Participant[];
+}) => {
   if (isEditingTrip.value && currentTrip.value?.id) {
     const success = await updateTrip(currentTrip.value.id, data);
-    
+
     if (success) {
       closeTripModal();
       if (tripId.value) {
@@ -172,7 +222,7 @@ const handleSaveTrip = async (data: { name: string; budget: number; participants
     }
   } else {
     const newTripId = await createTrip(data);
-    
+
     if (newTripId) {
       closeTripModal();
       router.push(`/budget/${newTripId}`);
@@ -182,7 +232,7 @@ const handleSaveTrip = async (data: { name: string; budget: number; participants
 
 const handleDeleteTrip = async () => {
   if (!currentTrip.value?.id) return;
-  
+
   if (confirm('Czy na pewno chcesz usunąć ten trip? Ta operacja jest nieodwracalna.')) {
     const success = await deleteTrip(currentTrip.value.id);
     if (success) {
@@ -218,19 +268,19 @@ const handleSaveExpense = async (data: {
   splitWith: SplitParticipant[];
 }) => {
   if (!tripId.value) return;
-  
+
   if (isEditingExpense.value && editingExpense.value?.id) {
     const success = await updateExpense(editingExpense.value.id, tripId.value, data);
-    
+
     if (success) {
       closeExpenseModal();
     }
   } else {
     const newExpenseId = await createExpense({
       tripId: tripId.value,
-      ...data
+      ...data,
     });
-    
+
     if (newExpenseId) {
       closeExpenseModal();
     }
@@ -239,17 +289,16 @@ const handleSaveExpense = async (data: {
 
 const handleDeleteExpense = async (expenseId: string) => {
   if (!tripId.value) return;
-  
+
   if (confirm('Czy na pewno chcesz usunąć ten wydatek?')) {
     await deleteExpense(expenseId, tripId.value);
   }
 };
 
-
 // Lifecycle
 onMounted(async () => {
   await fetchTrips();
-  
+
   if (tripId.value) {
     await fetchTripById(tripId.value);
     await fetchExpenses(tripId.value);
@@ -257,7 +306,7 @@ onMounted(async () => {
 });
 
 // Watch for route changes
-watch(tripId, async (newTripId) => {
+watch(tripId, async newTripId => {
   if (newTripId) {
     await fetchTripById(newTripId);
     await fetchExpenses(newTripId);

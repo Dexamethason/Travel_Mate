@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: firebaseEnv.storageBucket,
   messagingSenderId: firebaseEnv.messagingSenderId,
   appId: firebaseEnv.appId,
-  measurementId: firebaseEnv.measurementId
+  measurementId: firebaseEnv.measurementId,
 };
 
 // Debug - sprawdź czy zmienne są załadowane

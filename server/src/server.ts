@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 const corsOptions = {
   origin: serverEnv.allowedOrigins,
   credentials: true,
-  optionsSuccessStatus: 200
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
@@ -34,7 +34,7 @@ app.get('/health', (req, res) => {
     status: 'OK',
     uptime: process.uptime(),
     timestamp: new Date().toISOString(),
-    environment: serverEnv.nodeEnv
+    environment: serverEnv.nodeEnv,
   });
 });
 

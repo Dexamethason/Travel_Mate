@@ -1,5 +1,16 @@
 import { db } from '../config/firebase';
-import { collection, getDocs, addDoc, doc, getDoc, updateDoc, deleteDoc, query, where, Timestamp } from 'firebase/firestore/lite';
+import {
+  collection,
+  getDocs,
+  addDoc,
+  doc,
+  getDoc,
+  updateDoc,
+  deleteDoc,
+  query,
+  where,
+  Timestamp,
+} from 'firebase/firestore/lite';
 
 export interface SplitParticipant {
   participantId: string;
@@ -26,11 +37,14 @@ export const expenseService = {
       const expensesCol = collection(db, COLLECTION_NAME);
       const q = query(expensesCol, where('tripId', '==', tripId));
       const expenseSnapshot = await getDocs(q);
-      
-      return expenseSnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      } as Expense));
+
+      return expenseSnapshot.docs.map(
+        doc =>
+          ({
+            id: doc.id,
+            ...doc.data(),
+          }) as Expense
+      );
     } catch (error) {
       console.error('Error getting expenses:', error);
       throw error;
@@ -42,11 +56,11 @@ export const expenseService = {
     try {
       const expenseDoc = doc(db, COLLECTION_NAME, expenseId);
       const expenseSnapshot = await getDoc(expenseDoc);
-      
+
       if (expenseSnapshot.exists()) {
         return {
           id: expenseSnapshot.id,
-          ...expenseSnapshot.data()
+          ...expenseSnapshot.data(),
         } as Expense;
       }
       return null;
@@ -61,9 +75,9 @@ export const expenseService = {
     try {
       const newExpense = {
         ...expenseData,
-        createdAt: Timestamp.now()
+        createdAt: Timestamp.now(),
       };
-      
+
       const docRef = await addDoc(collection(db, COLLECTION_NAME), newExpense);
       return docRef.id;
     } catch (error) {
@@ -73,7 +87,10 @@ export const expenseService = {
   },
 
   // Aktualizuje wydatek
-  async updateExpense(expenseId: string, expenseData: Partial<Omit<Expense, 'id' | 'createdAt'>>): Promise<void> {
+  async updateExpense(
+    expenseId: string,
+    expenseData: Partial<Omit<Expense, 'id' | 'createdAt'>>
+  ): Promise<void> {
     try {
       const expenseDoc = doc(db, COLLECTION_NAME, expenseId);
       await updateDoc(expenseDoc, expenseData);
@@ -92,6 +109,5 @@ export const expenseService = {
       console.error('Error deleting expense:', error);
       throw error;
     }
-  }
+  },
 };
-

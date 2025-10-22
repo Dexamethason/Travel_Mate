@@ -30,4 +30,3 @@ export interface UpdateExpenseData {
   amount?: number;
   splitWith?: SplitParticipant[];
 }
-
