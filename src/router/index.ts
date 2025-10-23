@@ -79,7 +79,7 @@ const router = createRouter({
 })
 
 // guardy routingu - sprawdzają czy user może wejść na daną stronę
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   try {
     const { isAuthenticated, loading } = useAuth()
     
