@@ -25,11 +25,13 @@ Travel Mate to nowoczesna aplikacja webowa stworzona w Vue 3 z TypeScript, któr
 ### Instalacja
 
 1. Sklonuj repozytorium lub przejdź do katalogu projektu:
+
 ```bash
 cd Travel_Mate
 ```
 
 2. Zainstaluj zależności:
+
 ```bash
 npm install
 ```
@@ -92,6 +94,7 @@ src/
 ## 🎨 Wygląd aplikacji
 
 Aplikacja wykorzystuje nowoczesny design oparty na Tailwind CSS z:
+
 - Responsywnym layoutem
 - Trybem ciemnym (dark mode)
 - Kolorem głównym: `#13a4ec` (niebieski)
@@ -100,7 +103,7 @@ Aplikacja wykorzystuje nowoczesny design oparty na Tailwind CSS z:
 ## 👥 Autorzy
 
 - Jakub Rogula
-- Daniel Koćma  
+- Daniel Koćma
 - Bartłomiej Prześlak
 
 ## 📝 Licencja

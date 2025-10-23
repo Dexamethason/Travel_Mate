@@ -1,5 +1,14 @@
 import { db } from '../config/firebase';
-import { collection, getDocs, addDoc, doc, getDoc, updateDoc, deleteDoc, Timestamp } from 'firebase/firestore/lite';
+import {
+  collection,
+  getDocs,
+  addDoc,
+  doc,
+  getDoc,
+  updateDoc,
+  deleteDoc,
+  Timestamp,
+} from 'firebase/firestore/lite';
 
 export interface Participant {
   id: string;
@@ -23,10 +32,13 @@ export const tripService = {
     try {
       const tripsCol = collection(db, COLLECTION_NAME);
       const tripSnapshot = await getDocs(tripsCol);
-      return tripSnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      } as Trip));
+      return tripSnapshot.docs.map(
+        doc =>
+          ({
+            id: doc.id,
+            ...doc.data(),
+          }) as Trip
+      );
     } catch (error) {
       console.error('Error getting trips:', error);
       throw error;
@@ -38,11 +50,11 @@ export const tripService = {
     try {
       const tripDoc = doc(db, COLLECTION_NAME, tripId);
       const tripSnapshot = await getDoc(tripDoc);
-      
+
       if (tripSnapshot.exists()) {
         return {
           id: tripSnapshot.id,
-          ...tripSnapshot.data()
+          ...tripSnapshot.data(),
         } as Trip;
       }
       return null;
@@ -57,9 +69,9 @@ export const tripService = {
     try {
       const newTrip = {
         ...tripData,
-        createdAt: Timestamp.now()
+        createdAt: Timestamp.now(),
       };
-      
+
       const docRef = await addDoc(collection(db, COLLECTION_NAME), newTrip);
       return docRef.id;
     } catch (error) {
@@ -69,7 +81,10 @@ export const tripService = {
   },
 
   // Aktualizuje trip
-  async updateTrip(tripId: string, tripData: Partial<Omit<Trip, 'id' | 'createdAt'>>): Promise<void> {
+  async updateTrip(
+    tripId: string,
+    tripData: Partial<Omit<Trip, 'id' | 'createdAt'>>
+  ): Promise<void> {
     try {
       const tripDoc = doc(db, COLLECTION_NAME, tripId);
       await updateDoc(tripDoc, tripData);
@@ -88,6 +103,5 @@ export const tripService = {
       console.error('Error deleting trip:', error);
       throw error;
     }
-  }
+  },
 };
-

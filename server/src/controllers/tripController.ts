@@ -8,13 +8,13 @@ export const tripController = {
       const trips = await tripService.getAllTrips();
       res.json({
         success: true,
-        data: trips
+        data: trips,
       });
     } catch (error) {
       res.status(500).json({
         success: false,
         message: 'Failed to fetch trips',
-        error: error instanceof Error ? error.message : 'Unknown error'
+        error: error instanceof Error ? error.message : 'Unknown error',
       });
     }
   },
@@ -24,23 +24,23 @@ export const tripController = {
     try {
       const { id } = req.params;
       const trip = await tripService.getTripById(id);
-      
+
       if (!trip) {
         return res.status(404).json({
           success: false,
-          message: 'Trip not found'
+          message: 'Trip not found',
         });
       }
-      
+
       res.json({
         success: true,
-        data: trip
+        data: trip,
       });
     } catch (error) {
       res.status(500).json({
         success: false,
         message: 'Failed to fetch trip',
-        error: error instanceof Error ? error.message : 'Unknown error'
+        error: error instanceof Error ? error.message : 'Unknown error',
       });
     }
   },
@@ -49,31 +49,31 @@ export const tripController = {
   async createTrip(req: Request, res: Response) {
     try {
       const { name, budget, participants } = req.body;
-      
+
       // Walidacja
       if (!name || budget === undefined || !participants) {
         return res.status(400).json({
           success: false,
-          message: 'Missing required fields: name, budget, participants'
+          message: 'Missing required fields: name, budget, participants',
         });
       }
-      
+
       const tripId = await tripService.createTrip({
         name,
         budget,
-        participants
+        participants,
       });
-      
+
       res.status(201).json({
         success: true,
         message: 'Trip created successfully',
-        data: { id: tripId }
+        data: { id: tripId },
       });
     } catch (error) {
       res.status(500).json({
         success: false,
         message: 'Failed to create trip',
-        error: error instanceof Error ? error.message : 'Unknown error'
+        error: error instanceof Error ? error.message : 'Unknown error',
       });
     }
   },
@@ -83,18 +83,18 @@ export const tripController = {
     try {
       const { id } = req.params;
       const updateData = req.body;
-      
+
       await tripService.updateTrip(id, updateData);
-      
+
       res.json({
         success: true,
-        message: 'Trip updated successfully'
+        message: 'Trip updated successfully',
       });
     } catch (error) {
       res.status(500).json({
         success: false,
         message: 'Failed to update trip',
-        error: error instanceof Error ? error.message : 'Unknown error'
+        error: error instanceof Error ? error.message : 'Unknown error',
       });
     }
   },
@@ -104,18 +104,17 @@ export const tripController = {
     try {
       const { id } = req.params;
       await tripService.deleteTrip(id);
-      
+
       res.json({
         success: true,
-        message: 'Trip deleted successfully'
+        message: 'Trip deleted successfully',
       });
     } catch (error) {
       res.status(500).json({
         success: false,
         message: 'Failed to delete trip',
-        error: error instanceof Error ? error.message : 'Unknown error'
+        error: error instanceof Error ? error.message : 'Unknown error',
       });
     }
-  }
+  },
 };
-

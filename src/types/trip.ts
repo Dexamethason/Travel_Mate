@@ -23,4 +23,3 @@ export interface UpdateTripData {
   budget?: number;
   participants?: Participant[];
 }
-

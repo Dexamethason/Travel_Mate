@@ -11,11 +11,18 @@ export const firebaseEnv = {
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET || '',
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID || '',
   appId: process.env.FIREBASE_APP_ID || '',
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID || ''
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID || '',
 };
 
 // Sprawdź czy wszystkie wymagane zmienne są ustawione
-const requiredVars = ['apiKey', 'authDomain', 'projectId', 'storageBucket', 'messagingSenderId', 'appId'];
+const requiredVars = [
+  'apiKey',
+  'authDomain',
+  'projectId',
+  'storageBucket',
+  'messagingSenderId',
+  'appId',
+];
 const missingVars = requiredVars.filter(key => !firebaseEnv[key as keyof typeof firebaseEnv]);
 
 if (missingVars.length > 0) {
@@ -30,6 +37,8 @@ if (missingVars.length > 0) {
 export const serverEnv = {
   port: process.env.PORT || '3001',
   nodeEnv: process.env.NODE_ENV || 'development',
-  allowedOrigins: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:5173', 'http://localhost:3001']
+  allowedOrigins: process.env.ALLOWED_ORIGINS?.split(',') || [
+    'http://localhost:5173',
+    'http://localhost:3001',
+  ],
 };
-
