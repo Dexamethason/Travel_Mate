@@ -15,7 +15,7 @@ export function useExpenses() {
     try {
       const response = await fetch(`${API_URL}/expenses/${tripId}`);
       const data = await response.json();
-      
+
       if (data.success) {
         expenses.value = data.data;
       } else {
@@ -41,9 +41,9 @@ export function useExpenses() {
         },
         body: JSON.stringify(expenseData),
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         await fetchExpenses(expenseData.tripId); // Odświeża listę wydatków
         return data.data.id;
@@ -61,7 +61,11 @@ export function useExpenses() {
   };
 
   // Aktualizuje wydatek
-  const updateExpense = async (expenseId: string, tripId: string, expenseData: UpdateExpenseData) => {
+  const updateExpense = async (
+    expenseId: string,
+    tripId: string,
+    expenseData: UpdateExpenseData
+  ) => {
     loading.value = true;
     error.value = null;
     try {
@@ -72,9 +76,9 @@ export function useExpenses() {
         },
         body: JSON.stringify(expenseData),
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         await fetchExpenses(tripId); // Odświeża listę wydatków
         return true;
@@ -99,9 +103,9 @@ export function useExpenses() {
       const response = await fetch(`${API_URL}/expenses/${expenseId}`, {
         method: 'DELETE',
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         await fetchExpenses(tripId);
         return true;
@@ -128,4 +132,3 @@ export function useExpenses() {
     deleteExpense,
   };
 }
-

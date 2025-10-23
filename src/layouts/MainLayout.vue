@@ -1,47 +1,69 @@
 <template>
-  <div class="flex h-screen overflow-hidden bg-gray-50 dark:bg-gray-900">
-    <!-- Nawigacja -->
-    <aside class="flex h-full w-64 flex-col border-r border-gray-200 bg-white dark:bg-gray-800 p-4">
-      <div class="flex flex-col gap-8">
-        <div class="flex items-center gap-4 text-gray-900 dark:text-white">
-          <div class="w-6 h-6 text-blue-500">
-            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
-            </svg>
-          </div>
-          <h1 class="text-xl font-bold">Travel Mate</h1>
-        </div>
-        
-        <nav class="flex flex-col gap-2">
-          <router-link 
-            v-for="item in navigationItems" 
-            :key="item.name"
-            :to="item.path"
-            class="flex items-center gap-3 rounded-lg px-3 py-2 transition-colors"
-            :class="isActive(item.path) 
-              ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300' 
-              : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'"
-          >
-            <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
-              <path :d="item.icon"></path>
-            </svg>
-            <span class="font-semibold text-sm">{{ item.label }}</span>
-          </router-link>
-        </nav>
-      </div>
-      
-      <div class="mt-auto flex flex-col gap-2">
-        <router-link 
-          to="/profile"
-          class="flex items-center gap-3 rounded-lg px-3 py-2 transition-colors"
-          :class="isActive('/profile') 
-            ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300' 
-            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'"
+  <div class="flex h-screen bg-gray-100">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-lg">
+      <!-- Logo/Nazwa aplikacji - klikalna -->
+      <router-link
+        to="/"
+        class="flex items-center gap-3 border-b p-6 transition-colors hover:bg-gray-50"
+      >
+        <div
+          class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-400"
         >
-          <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+          <span class="text-xl font-bold text-white">✈️</span>
+        </div>
+        <span class="text-xl font-bold text-gray-800">Travel Mate</span>
+      </router-link>
+
+      <!-- Nawigacja -->
+      <nav class="flex flex-col gap-2 p-4">
+        <router-link
+          v-for="item in navigationItems"
+          :key="item.name"
+          :to="item.path"
+          class="flex items-center gap-3 rounded-lg px-3 py-2 transition-colors"
+          :class="
+            isActive(item.path)
+              ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-300'
+              : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+          "
+        >
+          <svg
+            fill="currentColor"
+            height="24"
+            viewBox="0 0 256 256"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path :d="item.icon"></path>
           </svg>
-          <span class="font-semibold text-sm">Profil</span>
+          <span class="text-sm font-semibold">{{ item.label }}</span>
+        </router-link>
+      </nav>
+
+      <!-- Profil link -->
+      <div class="mt-auto p-4">
+        <router-link
+          to="/app/profile"
+          class="flex items-center gap-3 rounded-lg px-3 py-2 transition-colors"
+          :class="
+            isActive('/app/profile')
+              ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-300'
+              : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+          "
+        >
+          <svg
+            fill="currentColor"
+            height="24"
+            viewBox="0 0 256 256"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-semibold">Profil</span>
         </router-link>
       </div>
     </aside>
@@ -54,54 +76,50 @@
 </template>
 
 <script setup lang="ts">
-// import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute } from 'vue-router';
 
-const route = useRoute()
+const route = useRoute();
 
 const navigationItems = [
   {
     name: 'dashboard',
     label: 'Dashboard',
-    path: '/',
-    icon: 'M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z'
+    path: '/app/dashboard',
+    icon: 'M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z',
   },
   {
     name: 'flights',
     label: 'Loty',
-    path: '/flights',
-    icon: 'M235.58,128.84,160,91.06V48a32,32,0,0,0-64,0V91.06L20.42,128.84A8,8,0,0,0,16,136v32a8,8,0,0,0,9.57,7.84L96,161.76v18.93L82.34,194.34A8,8,0,0,0,80,200v32a8,8,0,0,0,11,7.43l37-14.81,37,14.81A8,8,0,0,0,176,232V200a8,8,0,0,0-2.34-5.66L160,180.69V161.76l70.43,14.08A8,8,0,0,0,240,168V136A8,8,0,0,0,235.58,128.84ZM224,158.24l-70.43-14.08A8,8,0,0,0,144,152v32a8,8,0,0,0,2.34,5.66L160,203.31v16.87l-29-11.61a8,8,0,0,0-5.94,0L96,220.18V203.31l13.66-13.65A8,8,0,0,0,112,184V152a8,8,0,0,0-9.57-7.84L32,158.24v-17.3l75.58-37.78A8,8,0,0,0,112,96V48a16,16,0,0,1,32,0V96a8,8,0,0,0,4.42,7.16L224,140.94Z'
+    path: '/app/flights',
+    icon: 'M235.58,128.84,160,91.06V48a32,32,0,0,0-64,0V91.06L20.42,128.84A8,8,0,0,0,16,136v32a8,8,0,0,0,9.57,7.84L96,161.76v18.93L82.34,194.34A8,8,0,0,0,80,200v32a8,8,0,0,0,11,7.43l37-14.81,37,14.81A8,8,0,0,0,176,232V200a8,8,0,0,0-2.34-5.66L160,180.69V161.76l70.43,14.08A8,8,0,0,0,240,168V136A8,8,0,0,0,235.58,128.84ZM224,158.24l-70.43-14.08A8,8,0,0,0,144,152v32a8,8,0,0,0,2.34,5.66L160,203.31v16.87l-29-11.61a8,8,0,0,0-5.94,0L96,220.18V203.31l13.66-13.65A8,8,0,0,0,112,184V152a8,8,0,0,0-9.57-7.84L32,158.24v-17.3l75.58-37.78A8,8,0,0,0,112,96V48a16,16,0,0,1,32,0V96a8,8,0,0,0,4.42,7.16L224,140.94Z',
   },
   {
     name: 'accommodations',
     label: 'Noclegi',
-    path: '/accommodations',
-    icon: 'M208,72H24V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H232v32a8,8,0,0,0,16,0V112A40,40,0,0,0,208,72ZM24,88H96v72H24Zm88,72V88h96a24,24,0,0,1,24,24v48Z'
+    path: '/app/accommodations',
+    icon: 'M208,72H24V48a8,8,0,0,0-16,0V208a8,8,0,0,0,16,0V176H232v32a8,8,0,0,0,16,0V112A40,40,0,0,0,208,72ZM24,88H96v72H24Zm88,72V88h96a24,24,0,0,1,24,24v48Z',
   },
   {
     name: 'itinerary',
     label: 'Plan podróży',
-    path: '/itinerary',
-    icon: 'M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z'
+    path: '/app/itinerary',
+    icon: 'M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z',
   },
   {
     name: 'budget',
     label: 'Budżet',
-    path: '/budget',
-    icon: 'M152,120H136V56h8a32,32,0,0,1,32,32,8,8,0,0,0,16,0,48.05,48.05,0,0,0-48-48h-8V24a8,8,0,0,0-16,0V40h-8a48,48,0,0,0,0,96h8v64H104a32,32,0,0,1-32-32,8,8,0,0,0-16,0,48.05,48.05,0,0,0,48,48h16v16a8,8,0,0,0,16,0V216h16a48,48,0,0,0,0-96Zm-40,0a32,32,0,0,1,0-64h8v64Zm40,80H136V136h16a32,32,0,0,1,0,64Z'
+    path: '/app/budget',
+    icon: 'M152,120H136V56h8a32,32,0,0,1,32,32,8,8,0,0,0,16,0,48.05,48.05,0,0,0-48-48h-8V24a8,8,0,0,0-16,0V40h-8a48,48,0,0,0,0,96h8v64H104a32,32,0,0,1-32-32,8,8,0,0,0-16,0,48.05,48.05,0,0,0,48,48h16v16a8,8,0,0,0,16,0V216h16a48,48,0,0,0,0-96Zm-40,0a32,32,0,0,1,0-64h8v64Zm40,80H136V136h16a32,32,0,0,1,0,64Z',
   },
   {
     name: 'activities',
     label: 'Atrakcje',
-    path: '/activities',
-    icon: 'M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm64,24V200H96V72ZM40,72H80V200H40ZM216,200H176V72h40V200Z'
+    path: '/app/activities',
+    icon: 'M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm64,24V200H96V72ZM40,72H80V200H40ZM216,200H176V72h40V200Z',
   },
-]
+];
 
 const isActive = (path: string) => {
-  if (path === '/') {
-    return route.path === '/'
-  }
-  return route.path.startsWith(path)
-}
+  return route.path.startsWith(path);
+};
 </script>

@@ -16,7 +16,7 @@ export function useTrips() {
     try {
       const response = await fetch(`${API_URL}/trips`);
       const data = await response.json();
-      
+
       if (data.success) {
         trips.value = data.data;
       } else {
@@ -37,7 +37,7 @@ export function useTrips() {
     try {
       const response = await fetch(`${API_URL}/trips/${tripId}`);
       const data = await response.json();
-      
+
       if (data.success) {
         currentTrip.value = data.data;
         return data.data;
@@ -66,9 +66,9 @@ export function useTrips() {
         },
         body: JSON.stringify(tripData),
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         await fetchTrips(); // Odśwież listę tripów
         return data.data.id;
@@ -97,9 +97,9 @@ export function useTrips() {
         },
         body: JSON.stringify(tripData),
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         await fetchTrips(); // Odśwież listę tripów
         if (currentTrip.value?.id === tripId) {
@@ -127,9 +127,9 @@ export function useTrips() {
       const response = await fetch(`${API_URL}/trips/${tripId}`, {
         method: 'DELETE',
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         await fetchTrips(); // Odśwież listę tripów
         if (currentTrip.value?.id === tripId) {
@@ -161,4 +161,3 @@ export function useTrips() {
     deleteTrip,
   };
 }
-
