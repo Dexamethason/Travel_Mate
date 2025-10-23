@@ -34,7 +34,7 @@ const handleLogout = () => {
 };
 
 const goToDashboard = () => {
-  router.push('/app/dashboard');
+  router.push('/dashboard');
   isMobileMenuOpen.value = false;
 };
 </script>

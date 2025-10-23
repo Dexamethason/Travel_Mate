@@ -9,12 +9,12 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../views/LandingPage.vue'),
   },
   {
-    path: '/app',
+    path: '/',
     component: MainLayout,
     children: [
       {
-        path: '',
-        redirect: '/app/dashboard',
+        path: '/',
+        redirect: '/dashboard',
       },
       {
         path: 'dashboard',
