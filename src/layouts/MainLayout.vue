@@ -35,13 +35,11 @@
             width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
-              <path :d="item.icon"></path>
-            </svg>
-            <span class="font-semibold text-sm">{{ item.label }}</span>
-          </router-link>
-        </nav>
-      </div>
+            <path :d="item.icon"></path>
+          </svg>
+          <span class="font-semibold text-sm">{{ item.label }}</span>
+        </router-link>
+      </nav>
       
       <div class="mt-auto flex flex-col gap-2">
         <!-- info o userze - pokazuje email i czy jest zweryfikowany -->
