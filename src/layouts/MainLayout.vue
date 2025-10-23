@@ -37,14 +37,36 @@
           >
             <path :d="item.icon"></path>
           </svg>
-          <span class="text-sm font-semibold">{{ item.label }}</span>
+          <span class="font-semibold text-sm">{{ item.label }}</span>
         </router-link>
       </nav>
+      
+      <div class="mt-auto flex flex-col gap-2">
+        <!-- info o userze - pokazuje email i czy jest zweryfikowany -->
+        <div v-if="user" class="px-3 py-2 mb-2">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+              <span class="text-sm font-medium text-blue-600">
+                {{ (user.displayName || user.email)?.charAt(0).toUpperCase() }}
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-medium text-gray-900 dark:text-white truncate">
+                {{ user.displayName || user.email }}
+              </p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 truncate">
+                {{ user.email }}
+              </p>
+              <p v-if="!isEmailVerified" class="text-xs text-orange-600">
+                Email niezweryfikowany
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <!-- Profil link -->
-      <div class="mt-auto p-4">
-        <router-link
-          to="/app/profile"
+        <!-- link do profilu usera -->
+        <router-link 
+          to="/profile"
           class="flex items-center gap-3 rounded-lg px-3 py-2 transition-colors"
           :class="
             isActive('/app/profile')
@@ -65,10 +87,26 @@
           </svg>
           <span class="text-sm font-semibold">Profil</span>
         </router-link>
+
+        <!-- przycisk wylogowania -->
+        <button
+          @click="handleLogout"
+          :disabled="loading"
+          class="flex items-center gap-3 rounded-lg px-3 py-2 transition-colors text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          <svg v-if="loading" class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          <svg v-else fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M112,216a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0V208A8,8,0,0,1,112,216Zm109.66-82.34-40-40A8,8,0,0,0,168,96H128a8,8,0,0,0,0,16h32.69L200,150.34A8,8,0,0,1,200,169.66L160.69,128H128a8,8,0,0,0,0,16h40a8,8,0,0,0,5.66-2.34l40-40A8,8,0,0,0,221.66,133.66Z"></path>
+          </svg>
+          <span class="font-semibold text-sm">Wyloguj się</span>
+        </button>
       </div>
     </aside>
 
-    <!-- główna treść -->
+    <!-- główna treść aplikacji -->
     <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900">
       <router-view />
     </main>
@@ -76,9 +114,21 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+import { useRoute } from 'vue-router'
+import { useAuth } from '../composables/useAuth'
 
-const route = useRoute();
+const route = useRoute()
+const { user, isEmailVerified, logout, loading, checkPersistence } = useAuth()
+
+// obsługa wylogowania - wywołuje funkcję z composable
+const handleLogout = async () => {
+  await logout()
+}
+
+// debugowanie persistence - można wywołać z konsoli
+if (typeof window !== 'undefined') {
+  (window as any).checkAuth = checkPersistence;
+}
 
 const navigationItems = [
   {
@@ -119,6 +169,7 @@ const navigationItems = [
   },
 ];
 
+// sprawdza czy dana ścieżka jest aktywna - do podświetlania w nawigacji
 const isActive = (path: string) => {
   return route.path.startsWith(path);
 };
