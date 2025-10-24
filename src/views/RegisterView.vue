@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { useAuth } from '../composables/useAuth';
 
 const router = useRouter();
+const { register } = useAuth();
 
 // Dane formularza
 const firstName = ref('');
@@ -36,7 +38,7 @@ const isPasswordValid = () => {
   return Object.values(passwordValidation.value).every(Boolean);
 };
 
-// Funkcje nawigacji (bez logiki rejestracji)
+// Funkcja rejestracji z integracją z backendem
 const handleRegister = async () => {
   if (!firstName.value || !lastName.value || !email.value || !password.value || !confirmPassword.value) {
     errorMessage.value = 'Proszę wypełnić wszystkie pola';
@@ -61,13 +63,16 @@ const handleRegister = async () => {
   isLoading.value = true;
   errorMessage.value = '';
   
-  // Tutaj będzie logika Firebase Authentication
-  // Na razie tylko symulacja
-  setTimeout(() => {
-    isLoading.value = false;
+  try {
+    await register(email.value, password.value, firstName.value, lastName.value);
     // Przekierowanie do dashboard po udanej rejestracji
     router.push('/dashboard');
-  }, 1000);
+  } catch (error: any) {
+    errorMessage.value = error.message || 'Nie udało się zarejestrować';
+    console.error('Błąd rejestracji:', error);
+  } finally {
+    isLoading.value = false;
+  }
 };
 
 const goToLogin = () => {

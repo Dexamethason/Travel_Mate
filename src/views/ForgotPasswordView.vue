@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { useAuth } from '../composables/useAuth';
 
 const router = useRouter();
+const { forgotPassword } = useAuth();
 
 // Dane formularza
 const email = ref('');
@@ -11,7 +13,7 @@ const successMessage = ref('');
 const isLoading = ref(false);
 const emailSent = ref(false);
 
-// Funkcje nawigacji (bez logiki resetowania)
+// Funkcja resetowania hasła z integracją z backendem
 const handleForgotPassword = async () => {
   if (!email.value) {
     errorMessage.value = 'Proszę podać adres e-mail';
@@ -29,13 +31,16 @@ const handleForgotPassword = async () => {
   errorMessage.value = '';
   successMessage.value = '';
   
-  // Tutaj będzie logika Firebase Authentication
-  // Na razie tylko symulacja
-  setTimeout(() => {
-    isLoading.value = false;
+  try {
+    await forgotPassword(email.value);
     emailSent.value = true;
     successMessage.value = `Link do resetowania hasła został wysłany na adres ${email.value}`;
-  }, 1000);
+  } catch (error: any) {
+    errorMessage.value = error.message || 'Nie udało się wysłać emaila';
+    console.error('Błąd resetowania hasła:', error);
+  } finally {
+    isLoading.value = false;
+  }
 };
 
 const goToLogin = () => {

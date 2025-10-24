@@ -1,6 +1,7 @@
 import express from 'express';
 import tripRoutes from './tripRoutes';
 import expenseRoutes from './expenseRoutes';
+import authRoutes from './authRoutes';
 
 const router = express.Router();
 
@@ -22,6 +23,7 @@ router.get('/', (req, res) => {
   });
 });
 
+router.use('/auth', authRoutes);
 router.use('/trips', tripRoutes);
 router.use('/expenses', expenseRoutes);
 
