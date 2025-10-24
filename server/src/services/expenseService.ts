@@ -20,6 +20,7 @@ export interface SplitParticipant {
 export interface Expense {
   id?: string;
   tripId: string;
+  createdBy: string;
   date: string;
   category: string;
   description: string;
@@ -71,10 +72,14 @@ export const expenseService = {
   },
 
   // Tworzy nowy wydatek
-  async createExpense(expenseData: Omit<Expense, 'id' | 'createdAt'>): Promise<string> {
+  async createExpense(
+    expenseData: Omit<Expense, 'id' | 'createdAt' | 'createdBy'>,
+    createdBy: string
+  ): Promise<string> {
     try {
       const newExpense = {
         ...expenseData,
+        createdBy,
         createdAt: Timestamp.now(),
       };
 
@@ -86,12 +91,24 @@ export const expenseService = {
     }
   },
 
-  // Aktualizuje wydatek
+  // Aktualizuje wydatek (tylko twórca może edytować)
   async updateExpense(
     expenseId: string,
-    expenseData: Partial<Omit<Expense, 'id' | 'createdAt'>>
+    userId: string,
+    expenseData: Partial<Omit<Expense, 'id' | 'createdAt' | 'createdBy'>>
   ): Promise<void> {
     try {
+      // Pobierz wydatek i sprawdź uprawnienia
+      const expense = await this.getExpenseById(expenseId);
+      
+      if (!expense) {
+        throw new Error('Wydatek nie został znaleziony');
+      }
+      
+      if (expense.createdBy !== userId) {
+        throw new Error('Tylko twórca może edytować ten wydatek');
+      }
+
       const expenseDoc = doc(db, COLLECTION_NAME, expenseId);
       await updateDoc(expenseDoc, expenseData);
     } catch (error) {
@@ -100,9 +117,20 @@ export const expenseService = {
     }
   },
 
-  // Usuwa wydatek
-  async deleteExpense(expenseId: string): Promise<void> {
+  // Usuwa wydatek (tylko twórca może usunąć)
+  async deleteExpense(expenseId: string, userId: string): Promise<void> {
     try {
+      // Pobierz wydatek i sprawdź uprawnienia
+      const expense = await this.getExpenseById(expenseId);
+      
+      if (!expense) {
+        throw new Error('Wydatek nie został znaleziony');
+      }
+      
+      if (expense.createdBy !== userId) {
+        throw new Error('Tylko twórca może usunąć ten wydatek');
+      }
+
       const expenseDoc = doc(db, COLLECTION_NAME, expenseId);
       await deleteDoc(expenseDoc);
     } catch (error) {

@@ -40,57 +40,89 @@
           />
         </div>
 
-        <div>
+        <!-- Sekcja uczestników tylko przy edycji -->
+        <div v-if="isEditing && currentTrip">
           <label class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
             >Uczestnicy</label
           >
+          
+          <!-- Lista aktualnych uczestników -->
           <div class="mb-3 space-y-2">
             <div
-              v-for="(participant, index) in form.participants"
-              :key="participant.id"
-              class="flex gap-2"
+              v-for="participant in currentTrip.participants"
+              :key="participant.userId"
+              class="flex items-center gap-2 rounded-lg border border-gray-300 bg-gray-50 p-3 dark:border-gray-600 dark:bg-gray-700"
             >
+              <div class="flex-1">
+                <p class="font-medium text-gray-900 dark:text-white">
+                  {{ participant.firstName }} {{ participant.lastName }}
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  {{ participant.email }}
+                </p>
+              </div>
+              <span
+                v-if="participant.userId === currentTrip.ownerId"
+                class="rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+              >
+                Właściciel
+              </span>
+            </div>
+          </div>
+
+          <!-- Zaproszenia oczekujące -->
+          <div v-if="pendingInvitations.length > 0" class="mb-3">
+            <p class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+              Zaproszenia oczekujące
+            </p>
+            <div class="space-y-2">
+              <div
+                v-for="invitation in pendingInvitations"
+                :key="invitation.id"
+                class="flex items-center gap-2 rounded-lg border border-yellow-300 bg-yellow-50 p-3 dark:border-yellow-600 dark:bg-yellow-900/20"
+              >
+                <div class="flex-1">
+                  <p class="text-sm text-gray-900 dark:text-white">
+                    {{ invitation.invitedEmail }}
+                  </p>
+                </div>
+                <span
+                  class="rounded-full bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+                >
+                  Oczekujące
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formularz zaproszenia nowego uczestnika -->
+          <div class="space-y-2">
+            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              Zaproś nowego uczestnika
+            </p>
+            <div class="flex gap-2">
               <input
-                v-model="participant.firstName"
-                type="text"
-                required
-                placeholder="Imię"
-                class="flex-1 rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-              />
-              <input
-                v-model="participant.lastName"
-                type="text"
-                required
-                placeholder="Nazwisko"
+                v-model="inviteEmail"
+                type="email"
+                placeholder="Email użytkownika"
                 class="flex-1 rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
               />
               <button
                 type="button"
-                class="rounded-lg border border-red-300 px-3 py-2 text-red-600 transition-colors hover:bg-red-50 dark:border-red-600 dark:text-red-400 dark:hover:bg-red-900/20"
-                @click="removeParticipant(index)"
+                class="rounded-lg bg-green-600 px-4 py-2 text-white transition-colors hover:bg-green-700"
+                @click="handleSendInvitation"
+                :disabled="!inviteEmail || inviteLoading"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                {{ inviteLoading ? 'Wysyłanie...' : 'Wyślij' }}
               </button>
             </div>
+            <p v-if="inviteError" class="text-sm text-red-600 dark:text-red-400">
+              {{ inviteError }}
+            </p>
+            <p v-if="inviteSuccess" class="text-sm text-green-600 dark:text-green-400">
+              Zaproszenie wysłane pomyślnie!
+            </p>
           </div>
-          <button
-            type="button"
-            class="w-full rounded-lg border-2 border-dashed border-gray-300 px-3 py-2 text-gray-600 transition-colors hover:border-blue-500 hover:text-blue-500 dark:border-gray-600 dark:text-gray-400"
-            @click="addParticipant"
-          >
-            + Dodaj uczestnika
-          </button>
         </div>
 
         <div class="flex gap-3 pt-4">
@@ -102,7 +134,7 @@
             Anuluj
           </button>
           <button
-            v-if="isEditing"
+            v-if="isEditing && isOwner"
             type="button"
             class="rounded-lg bg-red-600 px-4 py-2 font-medium text-white transition-colors hover:bg-red-700"
             @click="$emit('delete')"
@@ -110,6 +142,7 @@
             Usuń trip
           </button>
           <button
+            v-if="!isEditing || isOwner"
             type="submit"
             class="flex-1 rounded-lg bg-blue-500 px-4 py-2 font-medium text-white transition-colors hover:bg-blue-600"
           >
@@ -123,18 +156,20 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import type { Participant } from '../types/trip';
+import type { Trip } from '../types/trip';
+import type { Invitation } from '../types/invitation';
+import { useAuth } from '../composables/useAuth';
+import { useInvitations } from '../composables/useInvitations';
 
 interface TripForm {
   name: string;
   budget: number;
-  participants: Participant[];
 }
 
 interface Props {
   show: boolean;
   isEditing: boolean;
-  initialData?: TripForm;
+  currentTrip?: Trip;
 }
 
 const props = defineProps<Props>();
@@ -145,46 +180,89 @@ const emit = defineEmits<{
   delete: [];
 }>();
 
+const { currentUser } = useAuth();
+const { sendInvitation, fetchTripInvitations } = useInvitations();
+
 const form = ref<TripForm>({
   name: '',
   budget: 0,
-  participants: [],
 });
 
-const addParticipant = () => {
-  form.value.participants.push({
-    id: `temp-${Date.now()}`,
-    firstName: '',
-    lastName: '',
-  });
-};
+const inviteEmail = ref('');
+const inviteLoading = ref(false);
+const inviteError = ref<string | null>(null);
+const inviteSuccess = ref(false);
+const pendingInvitations = ref<Invitation[]>([]);
 
-const removeParticipant = (index: number) => {
-  form.value.participants.splice(index, 1);
-};
+const isOwner = ref(false);
 
 const handleSubmit = () => {
   emit('submit', { ...form.value });
 };
 
-// Reset modulu formularza kiedy modal jest otwarty/zamknięty lub dane początkowe się zmienia
+const handleSendInvitation = async () => {
+  if (!inviteEmail.value || !props.currentTrip?.id) return;
+  
+  inviteLoading.value = true;
+  inviteError.value = null;
+  inviteSuccess.value = false;
+
+  const result = await sendInvitation({
+    tripId: props.currentTrip.id,
+    email: inviteEmail.value,
+  });
+
+  inviteLoading.value = false;
+
+  if (result) {
+    inviteSuccess.value = true;
+    inviteEmail.value = '';
+    // Odśwież listę zaproszeń
+    await loadInvitations();
+    setTimeout(() => {
+      inviteSuccess.value = false;
+    }, 3000);
+  } else {
+    inviteError.value = 'Nie udało się wysłać zaproszenia';
+  }
+};
+
+const loadInvitations = async () => {
+  if (props.currentTrip?.id) {
+    const invitations = await fetchTripInvitations(props.currentTrip.id);
+    pendingInvitations.value = invitations.filter(inv => inv.status === 'pending');
+  }
+};
+
+// Reset formularza kiedy modal jest otwarty/zamknięty lub dane początkowe się zmienia
 watch(
-  [() => props.show, () => props.initialData],
-  () => {
+  [() => props.show, () => props.currentTrip],
+  async () => {
     if (props.show) {
-      if (props.initialData) {
+      if (props.currentTrip) {
         form.value = {
-          name: props.initialData.name,
-          budget: props.initialData.budget,
-          participants: JSON.parse(JSON.stringify(props.initialData.participants)),
+          name: props.currentTrip.name,
+          budget: props.currentTrip.budget,
         };
+        
+        // Sprawdź czy aktualny użytkownik jest właścicielem
+        isOwner.value = currentUser.value?.uid === props.currentTrip.ownerId;
+        
+        // Załaduj zaproszenia dla tego tripa
+        await loadInvitations();
       } else {
         form.value = {
           name: '',
           budget: 0,
-          participants: [],
         };
+        isOwner.value = false;
+        pendingInvitations.value = [];
       }
+      
+      // Reset stanu zaproszenia
+      inviteEmail.value = '';
+      inviteError.value = null;
+      inviteSuccess.value = false;
     }
   },
   { immediate: true }

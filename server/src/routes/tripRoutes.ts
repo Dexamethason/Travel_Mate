@@ -1,10 +1,14 @@
 import express from 'express';
 import { tripController } from '../controllers/tripController';
+import { verifyToken } from '../middleware/authMiddleware';
 
 const router = express.Router();
 
-// GET /api/trips - Lista wszystkich tripów
-router.get('/', tripController.getAllTrips);
+// Wszystkie endpointy trip wymagają autoryzacji
+router.use(verifyToken);
+
+// GET /api/trips - Lista tripów dla zalogowanego użytkownika
+router.get('/', tripController.getUserTrips);
 
 // GET /api/trips/:id - Szczegóły tripa
 router.get('/:id', tripController.getTripById);

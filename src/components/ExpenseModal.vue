@@ -74,25 +74,25 @@
           <div class="space-y-2 rounded-lg bg-gray-50 p-4 dark:bg-gray-700/50">
             <div
               v-for="participant in participants"
-              :key="participant.id"
+              :key="participant.userId"
               class="flex items-center gap-3"
             >
               <input
-                :id="`participant-${participant.id}`"
+                :id="`participant-${participant.userId}`"
                 v-model="form.selectedParticipants"
                 type="checkbox"
-                :value="participant.id"
+                :value="participant.userId"
                 class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-blue-500"
               />
               <label
-                :for="`participant-${participant.id}`"
+                :for="`participant-${participant.userId}`"
                 class="flex-1 text-sm text-gray-900 dark:text-white"
               >
                 {{ participant.firstName }} {{ participant.lastName }}
               </label>
               <input
-                v-if="form.selectedParticipants.includes(participant.id)"
-                v-model.number="form.participantAmounts[participant.id]"
+                v-if="form.selectedParticipants.includes(participant.userId)"
+                v-model.number="form.participantAmounts[participant.userId]"
                 type="number"
                 required
                 min="0"

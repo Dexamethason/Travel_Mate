@@ -1,7 +1,11 @@
 import express from 'express';
 import { expenseController } from '../controllers/expenseController';
+import { verifyToken } from '../middleware/authMiddleware';
 
 const router = express.Router();
+
+// Wszystkie endpointy expense wymagają autoryzacji
+router.use(verifyToken);
 
 // GET /api/expenses/:tripId - Wydatki dla tripa
 router.get('/:tripId', expenseController.getExpensesByTripId);

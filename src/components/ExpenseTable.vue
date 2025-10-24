@@ -56,8 +56,10 @@
               <td class="px-4 py-3 text-sm">
                 <div class="flex gap-2">
                   <button
+                    v-if="canEditExpense(expense)"
                     class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                     @click="$emit('edit-expense', expense)"
+                    title="Edytuj wydatek"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -71,9 +73,10 @@
                     </svg>
                   </button>
                   <button
-                    v-if="expense.id"
+                    v-if="expense.id && canEditExpense(expense)"
                     class="text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300"
                     @click="$emit('delete-expense', expense.id)"
+                    title="Usuń wydatek"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -88,6 +91,12 @@
                       />
                     </svg>
                   </button>
+                  <span
+                    v-if="!canEditExpense(expense)"
+                    class="text-xs text-gray-400 dark:text-gray-500"
+                  >
+                    Brak uprawnień
+                  </span>
                 </div>
               </td>
             </tr>
@@ -101,6 +110,7 @@
 <script setup lang="ts">
 import type { Expense, SplitParticipant } from '../types/expense';
 import type { Participant } from '../types/trip';
+import { useAuth } from '../composables/useAuth';
 
 interface Props {
   expenses: Expense[];
@@ -113,6 +123,14 @@ defineEmits<{
   'edit-expense': [expense: Expense];
   'delete-expense': [id: string];
 }>();
+
+const { currentUser } = useAuth();
+
+// Sprawdź czy użytkownik może edytować wydatek (tylko twórca)
+const canEditExpense = (expense: Expense) => {
+  if (!currentUser.value) return false;
+  return expense.createdBy === currentUser.value.uid;
+};
 
 const formatCurrency = (amount: number) => {
   return new Intl.NumberFormat('pl-PL', {
@@ -141,7 +159,7 @@ const getCategoryClass = (category: string) => {
 const formatSplitWith = (splitWith: SplitParticipant[], participants: Participant[]) => {
   const names = splitWith
     .map(split => {
-      const participant = participants.find(p => p.id === split.participantId);
+      const participant = participants.find(p => p.userId === split.participantId);
       return participant ? `${participant.firstName}` : '';
     })
     .filter(Boolean);
