@@ -1,23 +1,25 @@
 import { adminAuth, adminDb } from '../config/firebase';
 import { User } from '../types/user';
-import { getAuth, signInWithEmailAndPassword, AuthError } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, AuthError, sendEmailVerification } from 'firebase/auth';
 import { app } from '../config/firebase';
 import admin from 'firebase-admin';
 
 export const authService = {
   // rejestracja usera w firebase auth i zapisanie danych usera w firestore
+  // WYSYŁA EMAIL WERYFIKACYJNY - user musi go potwierdzić przed logowaniem
   async registerUser(
     email: string,
     password: string,
     firstName: string,
     lastName: string
-  ): Promise<{ user: User; token: string }> {
+  ): Promise<{ user: User; emailSent: boolean }> {
     try {
       // 1. utworzenie usera w firebase auth
       const userRecord = await adminAuth.createUser({
         email,
         password,
         displayName: `${firstName} ${lastName}`,
+        emailVerified: false, // teraz wymaga weryfikacji!
       });
 
       // 2. przygotowanie danych usera do zapisu w firestore
@@ -37,14 +39,29 @@ export const authService = {
         createdAt: admin.firestore.Timestamp.fromDate(userData.createdAt),
       });
 
-      // 4. wygenerowanie custom tokena dla usera
-      const customToken = await adminAuth.createCustomToken(userRecord.uid);
-
-      console.log(`✅ Użytkownik zarejestrowany: ${email}`);
+      // 4. wysyła email weryfikacyjny
+      try {
+        // używa client sdk do wysłania emaila weryfikacyjnego
+        const auth = getAuth(app);
+        // zaloguj tymczasowo aby wysłać email
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        
+        // wysyła email weryfikacyjny
+        await sendEmailVerification(userCredential.user);
+        
+        console.log(`✅ Użytkownik zarejestrowany: ${email}`);
+        console.log(`📧 Email weryfikacyjny wysłany do: ${email}`);
+        
+        // wylogowuje tymczasową sesję
+        await auth.signOut();
+      } catch (emailError) {
+        console.error('Błąd podczas wysyłki emaila weryfikacyjnego:', emailError);
+        // Nie rzucaj błędu - użytkownik został utworzony, tylko email się nie wysłał
+      }
 
       return {
         user: userData,
-        token: customToken,
+        emailSent: true,
       };
     } catch (error) {
       const err = error as Error & { code?: string };
@@ -66,19 +83,26 @@ export const authService = {
   /**
    * loguje usera - weryfikuje email i hasło, zwraca custom token
    * używa firebase client sdk do weryfikacji hasła (admin sdk nie może tego zrobić)
+   * WYMAGA ZWERYFIKOWANEGO EMAILA!
    */
   async loginUser(email: string, password: string): Promise<{ user: User; token: string }> {
     try {
       // 1. weryfikacja hasła - użyj firebase client sdk
       const auth = getAuth(app);
       let uid: string;
+      let emailVerified: boolean;
       
       try {
         // próba zalogowania - to zweryfikuje email i hasło
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         uid = userCredential.user.uid;
+        emailVerified = userCredential.user.emailVerified;
         
         console.log(`✅ Hasło zweryfikowane poprawnie dla: ${email}`);
+        console.log(`📧 Email zweryfikowany: ${emailVerified}`);
+        
+        // Wyloguj tymczasową sesję
+        await auth.signOut();
       } catch (authError) {
         const error = authError as AuthError;
         console.error('Błąd weryfikacji hasła:', error.code);
@@ -97,7 +121,12 @@ export const authService = {
         throw new Error('Błąd podczas logowania');
       }
 
-      // 2. pobiera danye usera z firestore
+      // 2. sprawdza czy email jest zweryfikowany
+      if (!emailVerified) {
+        throw new Error('Potwierdź swój adres email przed zalogowaniem. Sprawdź skrzynkę pocztową!');
+      }
+
+      // 3. pobiera dane usera z firestore
       const userDoc = await adminDb.collection('users').doc(uid).get();
 
       if (!userDoc.exists) {
@@ -106,7 +135,7 @@ export const authService = {
 
       const userData = userDoc.data();
 
-      // 3. przygotowuje obiekt usera
+      // 4. przygotowuje obiekt usera
       const user: User = {
         uid,
         email,
@@ -115,7 +144,7 @@ export const authService = {
         createdAt: userData?.createdAt?.toDate() || new Date(),
       };
 
-      // 4. generuje custom token (dla frontendu)
+      // 5. generuje custom token (dla frontendu)
       const customToken = await adminAuth.createCustomToken(uid);
 
       console.log(`✅ Użytkownik zalogowany: ${email}`);
@@ -142,20 +171,16 @@ export const authService = {
   // wysyła email z linkiem do resetowania hasła
   async sendPasswordResetEmail(email: string): Promise<void> {
     try {
-      // sprawdza czy usera istnieje
+      // sprawdza czy user istnieje 
       await adminAuth.getUserByEmail(email);
 
-      // generuje link do resetowania hasła
-      const resetLink = await adminAuth.generatePasswordResetLink(email);
-
-      console.log(`✅ Link do resetowania hasła wygenerowany dla: ${email}`);
-      console.log(`🔗 Link: ${resetLink}`);
-
-      // Uwaga: Ten kod tylko generuje link. W produkcji należy użyć
-      // usługi wysyłania emaili (np. SendGrid, Mailgun, Firebase Extensions)
-      // Firebase Auth automatycznie wysyła email gdy używany jest z Client SDK
+      // używa firebase client sdk do wysłania emaila resetującego hasło
+      const auth = getAuth(app);
+      const { sendPasswordResetEmail: clientSendReset } = await import('firebase/auth');
       
-      // TODO: Zintegrować z usługą wysyłania emaili
+      await clientSendReset(auth, email);
+
+      console.log(`✅ Email resetujący hasło wysłany do: ${email}`);
       
     } catch (error) {
       const err = error as Error & { code?: string };

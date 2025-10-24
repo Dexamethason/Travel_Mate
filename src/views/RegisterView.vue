@@ -65,11 +65,20 @@ const handleRegister = async () => {
   
   try {
     await register(email.value, password.value, firstName.value, lastName.value);
-    // Przekierowanie do dashboard po udanej rejestracji
-    router.push('/dashboard');
-  } catch (error: any) {
-    errorMessage.value = error.message || 'Nie udało się zarejestrować';
-    console.error('Błąd rejestracji:', error);
+    
+    // rejestracja zakończona - email wysłany
+    // przekierowanie do logowania z komunikatem
+    router.push({
+      path: '/login',
+      query: { 
+        registered: 'true',
+        email: email.value 
+      }
+    });
+  } catch (error) {
+    const err = error as Error;
+    errorMessage.value = err.message || 'Nie udało się zarejestrować';
+    console.error('Błąd rejestracji:', err);
   } finally {
     isLoading.value = false;
   }

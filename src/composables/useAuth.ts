@@ -51,20 +51,13 @@ export function useAuth() {
         throw new Error(data.message || 'Nie udało się zarejestrować');
       }
 
-      // zapisuje dane usera i token
-      if (data.user && data.token) {
-        currentUser.value = data.user;
-        authToken.value = data.token;
-
-        // zapisuje w localStorage
-        localStorage.setItem('authToken', data.token);
-        localStorage.setItem('currentUser', JSON.stringify(data.user));
-      }
+      // nie zapisujemy tokena - user musi zweryfikować email!
+      // backend nie zwraca tokena przy rejestracji
 
       return data;
-    } catch (err: any) {
-      error.value = err.message || 'Wystąpił nieoczekiwany błąd';
-      throw err;
+    } catch (err) {
+      const error = err as Error;
+      throw error;
     } finally {
       isLoading.value = false;
     }
@@ -106,9 +99,9 @@ export function useAuth() {
       }
 
       return data;
-    } catch (err: any) {
-      error.value = err.message || 'Wystąpił nieoczekiwany błąd';
-      throw err;
+    } catch (err) {
+      const error = err as Error;
+      throw error;
     } finally {
       isLoading.value = false;
     }
@@ -139,9 +132,9 @@ export function useAuth() {
       }
 
       return data;
-    } catch (err: any) {
-      error.value = err.message || 'Wystąpił nieoczekiwany błąd';
-      throw err;
+    } catch (err) {
+      const error = err as Error;
+      throw error;
     } finally {
       isLoading.value = false;
     }

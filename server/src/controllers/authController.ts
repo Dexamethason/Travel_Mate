@@ -43,8 +43,8 @@ export const register = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    // rejestracja
-    const { user, token } = await authService.registerUser(
+    // rejestracja (wysyła email weryfikacyjny)
+    const { user, emailSent } = await authService.registerUser(
       email,
       password,
       firstName,
@@ -53,16 +53,18 @@ export const register = async (req: Request, res: Response): Promise<void> => {
 
     res.status(201).json({
       success: true,
-      message: 'Użytkownik został zarejestrowany pomyślnie',
+      message: 'Konto zostało utworzone! Sprawdź swoją skrzynkę email i potwierdź adres, aby się zalogować.',
       user,
-      token,
+      emailSent,
+      // NIE zwracamy tokena - user musi potwierdzić email!
     } as AuthResponse);
-  } catch (error: any) {
+  } catch (error) {
+    const err = error as Error;
     console.error('Błąd w kontrolerze register:', error);
 
     res.status(400).json({
       success: false,
-      message: error.message || 'Nie udało się zarejestrować użytkownika',
+      message: err.message || 'Nie udało się zarejestrować użytkownika',
       error: 'REGISTRATION_FAILED',
     } as AuthResponse);
   }
@@ -92,12 +94,13 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       user,
       token,
     } as AuthResponse);
-  } catch (error: any) {
-    console.error('Błąd w kontrolerze login:', error);
+  } catch (error) {
+    const err = error as Error;
+    console.error('Błąd w kontrolerze login:', err.message);
 
     res.status(401).json({
       success: false,
-      message: error.message || 'Nieprawidłowy email lub hasło',
+      message: err.message || 'Nieprawidłowy email lub hasło',
       error: 'LOGIN_FAILED',
     } as AuthResponse);
   }
@@ -141,8 +144,9 @@ export const forgotPassword = async (
       message:
         'Jeśli podany adres email istnieje w systemie, wysłaliśmy link do resetowania hasła',
     } as AuthResponse);
-  } catch (error: any) {
-    console.error('Błąd w kontrolerze forgotPassword:', error);
+  } catch (error) {
+    const err = error as Error;
+    console.error('Błąd w kontrolerze forgotPassword:', err.message);
 
     res.status(200).json({
       success: true,
