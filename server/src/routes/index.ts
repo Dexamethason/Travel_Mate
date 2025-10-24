@@ -2,6 +2,8 @@ import express from 'express';
 import tripRoutes from './tripRoutes';
 import expenseRoutes from './expenseRoutes';
 import authRoutes from './authRoutes';
+import invitationRoutes from './invitationRoutes';
+import userRoutes from './userRoutes';
 
 const router = express.Router();
 
@@ -12,9 +14,11 @@ router.get('/', (req, res) => {
     version: '1.0.0',
     endpoints: {
       health: '/health',
+      auth: '/api/auth',
       users: '/api/users',
       trips: '/api/trips',
       expenses: '/api/expenses',
+      invitations: '/api/invitations',
       accommodations: '/api/accommodations',
       activities: '/api/activities',
       flights: '/api/flights',
@@ -26,6 +30,8 @@ router.get('/', (req, res) => {
 router.use('/auth', authRoutes);
 router.use('/trips', tripRoutes);
 router.use('/expenses', expenseRoutes);
+router.use('/invitations', invitationRoutes);
+router.use('/users', userRoutes);
 
 // // Przykładowe trasy (do rozwinięcia)
 // router.get('/test-firestore', async (req, res) => {

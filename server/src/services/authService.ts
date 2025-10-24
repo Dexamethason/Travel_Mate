@@ -1,6 +1,6 @@
 import { adminAuth, adminDb } from '../config/firebase';
 import { User } from '../types/user';
-import { getAuth, signInWithEmailAndPassword, AuthError, sendEmailVerification } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, signInWithCustomToken, AuthError, sendEmailVerification } from 'firebase/auth';
 import { app } from '../config/firebase';
 import admin from 'firebase-admin';
 
@@ -144,14 +144,21 @@ export const authService = {
         createdAt: userData?.createdAt?.toDate() || new Date(),
       };
 
-      // 5. generuje custom token (dla frontendu)
+      // 5. generuje custom token i konwertuje na ID token
       const customToken = await adminAuth.createCustomToken(uid);
+      
+      // Zaloguj się custom tokenem aby otrzymać ID token
+      const userCredential = await signInWithCustomToken(auth, customToken);
+      const idToken = await userCredential.user.getIdToken();
+      
+      // Wyloguj tymczasową sesję
+      await auth.signOut();
 
       console.log(`✅ Użytkownik zalogowany: ${email}`);
 
       return {
         user,
-        token: customToken,
+        token: idToken, // Zwracamy ID token zamiast custom tokena
       };
     } catch (error) {
       const err = error as Error;
@@ -217,6 +224,44 @@ export const authService = {
       };
     } catch (error) {
       console.error('Błąd podczas pobierania użytkownika:', error);
+      return null;
+    }
+  },
+
+  // pobiera dane usera po emailu
+  async getUserByEmail(email: string): Promise<User | null> {
+    try {
+      // 1. Pobierz użytkownika z Firebase Auth
+      const userRecord = await adminAuth.getUserByEmail(email);
+
+      if (!userRecord) {
+        return null;
+      }
+
+      // 2. Pobierz dodatkowe dane z Firestore
+      const userDoc = await adminDb.collection('users').doc(userRecord.uid).get();
+
+      if (!userDoc.exists) {
+        return null;
+      }
+
+      const userData = userDoc.data();
+
+      return {
+        uid: userRecord.uid,
+        email: userRecord.email!,
+        firstName: userData?.firstName || '',
+        lastName: userData?.lastName || '',
+        createdAt: userData?.createdAt?.toDate() || new Date(),
+      };
+    } catch (error) {
+      const err = error as Error & { code?: string };
+      
+      if (err.code === 'auth/user-not-found') {
+        return null;
+      }
+      
+      console.error('Błąd podczas pobierania użytkownika po emailu:', error);
       return null;
     }
   },

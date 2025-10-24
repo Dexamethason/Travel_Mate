@@ -88,7 +88,7 @@ export function useAuth() {
         throw new Error(data.message || 'Nie udało się zalogować');
       }
 
-      // zapisuje dane usera i token
+      // zapisuje dane usera i token (ID token z backendu)
       if (data.user && data.token) {
         currentUser.value = data.user;
         authToken.value = data.token;
@@ -96,6 +96,8 @@ export function useAuth() {
         // zapisuje w localStorage
         localStorage.setItem('authToken', data.token);
         localStorage.setItem('currentUser', JSON.stringify(data.user));
+
+        console.log('✅ Zalogowano pomyślnie:', data.user.email);
       }
 
       return data;
@@ -164,6 +166,25 @@ export function useAuth() {
     }
   };
 
+  // funkcja do pobierania tokena (dla innych composables)
+  const getToken = (): string | null => {
+    return authToken.value;
+  };
+
+  // funkcja do pobierania headera autoryzacji
+  const getAuthHeaders = (): Record<string, string> => {
+    const token = getToken();
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+    };
+    
+    if (token) {
+      headers['Authorization'] = `Bearer ${token}`;
+    }
+    
+    return headers;
+  };
+
   return {
     currentUser: computed(() => currentUser.value),
     authToken: computed(() => authToken.value),
@@ -175,6 +196,8 @@ export function useAuth() {
     forgotPassword,
     logout,
     restoreSession,
+    getToken,
+    getAuthHeaders,
   };
 }
 

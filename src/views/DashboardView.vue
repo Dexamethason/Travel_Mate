@@ -3,11 +3,13 @@
     <div class="mx-auto max-w-4xl">
       <!-- Header -->
       <div class="mb-8">
-        <h2 class="text-4xl font-bold text-gray-900 dark:text-white">Podróż do Paryża</h2>
-        <p class="text-gray-500 dark:text-gray-400">15 lipca - 22 lipca, 2024</p>
+        <h2 class="text-4xl font-bold text-gray-900 dark:text-white">Dashboard</h2>
+        <p class="text-gray-500 dark:text-gray-400">Witaj w Travel Mate!</p>
       </div>
 
       <div class="space-y-12">
+        <!-- Panel zaproszeń -->
+        <InvitationsPanel />
         <!-- podsumowanie podróży -->
         <div>
           <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Podsumowanie podróży</h3>
@@ -145,6 +147,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import InvitationsPanel from '../components/InvitationsPanel.vue';
 
 const groupMembers = ref([
   'https://i.pravatar.cc/150?img=1',

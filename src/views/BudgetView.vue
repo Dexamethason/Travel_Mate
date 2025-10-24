@@ -48,6 +48,7 @@
             </div>
           </div>
           <button
+            v-if="isOwner"
             class="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-gray-900 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700"
             @click="openEditTripModal"
           >
@@ -104,15 +105,7 @@
     <TripModal
       :show="showTripModal"
       :is-editing="isEditingTrip"
-      :initial-data="
-        isEditingTrip && currentTrip
-          ? {
-              name: currentTrip.name,
-              budget: currentTrip.budget,
-              participants: currentTrip.participants,
-            }
-          : undefined
-      "
+      :current-trip="isEditingTrip && currentTrip ? currentTrip : undefined"
       @close="closeTripModal"
       @submit="handleSaveTrip"
       @delete="handleDeleteTrip"
@@ -135,7 +128,7 @@ import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useTrips } from '../composables/useTrips';
 import { useExpenses } from '../composables/useExpenses';
-import type { Participant } from '../types/trip';
+import { useAuth } from '../composables/useAuth';
 import type { Expense, SplitParticipant } from '../types/expense';
 
 // Components
@@ -148,6 +141,7 @@ import ExpenseModal from '@/components/ExpenseModal.vue';
 const route = useRoute();
 const router = useRouter();
 
+const { currentUser } = useAuth();
 const {
   trips,
   currentTrip,
@@ -181,6 +175,12 @@ const totalSpent = computed(() => {
   return expenses.value.reduce((sum, expense) => sum + expense.amount, 0);
 });
 
+// Sprawdź czy użytkownik jest właścicielem aktualnego tripa
+const isOwner = computed(() => {
+  if (!currentTrip.value || !currentUser.value) return false;
+  return currentTrip.value.ownerId === currentUser.value.uid;
+});
+
 // Nawigacja
 const selectTrip = (id: string) => {
   router.push(`/budget/${id}`);
@@ -209,7 +209,6 @@ const closeTripModal = () => {
 const handleSaveTrip = async (data: {
   name: string;
   budget: number;
-  participants: Participant[];
 }) => {
   if (isEditingTrip.value && currentTrip.value?.id) {
     const success = await updateTrip(currentTrip.value.id, data);

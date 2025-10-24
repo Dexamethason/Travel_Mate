@@ -1,5 +1,6 @@
 import { ref } from 'vue';
 import type { Expense, CreateExpenseData, UpdateExpenseData } from '../types/expense';
+import { useAuth } from './useAuth';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
@@ -7,13 +8,17 @@ export function useExpenses() {
   const expenses = ref<Expense[]>([]);
   const loading = ref(false);
   const error = ref<string | null>(null);
+  
+  const { getAuthHeaders } = useAuth();
 
   // Pobiera wszystkie wydatki dla tripa
   const fetchExpenses = async (tripId: string) => {
     loading.value = true;
     error.value = null;
     try {
-      const response = await fetch(`${API_URL}/expenses/${tripId}`);
+      const response = await fetch(`${API_URL}/expenses/${tripId}`, {
+        headers: getAuthHeaders(),
+      });
       const data = await response.json();
 
       if (data.success) {
@@ -36,9 +41,7 @@ export function useExpenses() {
     try {
       const response = await fetch(`${API_URL}/expenses`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: getAuthHeaders(),
         body: JSON.stringify(expenseData),
       });
 
@@ -71,9 +74,7 @@ export function useExpenses() {
     try {
       const response = await fetch(`${API_URL}/expenses/${expenseId}`, {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: getAuthHeaders(),
         body: JSON.stringify(expenseData),
       });
 
@@ -102,6 +103,7 @@ export function useExpenses() {
     try {
       const response = await fetch(`${API_URL}/expenses/${expenseId}`, {
         method: 'DELETE',
+        headers: getAuthHeaders(),
       });
 
       const data = await response.json();
