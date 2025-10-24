@@ -9,6 +9,21 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../views/LandingPage.vue'),
   },
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/LoginView.vue'),
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/RegisterView.vue'),
+  },
+  {
+    path: '/forgot-password',
+    name: 'ForgotPassword',
+    component: () => import('../views/ForgotPasswordView.vue'),
+  },
+  {
     path: '/',
     component: MainLayout,
     children: [

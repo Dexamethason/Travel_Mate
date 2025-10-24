@@ -34,6 +34,13 @@ if (missingVars.length > 0) {
   console.error('Szczegóły: https://console.firebase.google.com/\n');
 }
 
+// Firebase Admin SDK configuration (z .env - TYLKO TO!)
+export const firebaseAdminEnv = {
+  projectId: process.env.ADMIN_SDK_PROJECT_ID || '',
+  privateKey: process.env.ADMIN_SDK_PRIVATE_KEY || '',
+  clientEmail: process.env.ADMIN_SDK_CLIENT_EMAIL || '',
+};
+
 export const serverEnv = {
   port: process.env.PORT || '3001',
   nodeEnv: process.env.NODE_ENV || 'development',

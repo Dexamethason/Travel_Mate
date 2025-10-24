@@ -23,9 +23,7 @@ onUnmounted(() => {
 });
 
 const handleLogin = () => {
-  // Symulacja logowania (tymczasowo)
-  isLoggedIn.value = true;
-  isMobileMenuOpen.value = false;
+  router.push('/login');
 };
 
 const handleLogout = () => {
