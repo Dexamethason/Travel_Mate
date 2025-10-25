@@ -52,7 +52,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 // Uruchomienie serwera
-app.listen(PORT, () => {
+app.listen(Number(PORT), '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📍 Environment: ${serverEnv.nodeEnv}`);
   console.log(`🔗 Health check: http://localhost:${PORT}/health`);
