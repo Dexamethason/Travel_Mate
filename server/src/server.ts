@@ -38,6 +38,19 @@ app.get('/health', (req, res) => {
   });
 });
 
+// Główna trasa - przekierowanie do health check
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'Travel Mate API Server',
+    status: 'OK',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      api: '/api'
+    }
+  });
+});
+
 // Główne trasy API
 app.use('/api', indexRoutes);
 
