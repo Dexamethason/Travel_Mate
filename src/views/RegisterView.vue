@@ -2,6 +2,12 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuth } from '../composables/useAuth';
+import { 
+  ArrowPathIcon,
+  CheckIcon,
+  XMarkIcon,
+  XCircleIcon
+} from '@heroicons/vue/24/outline';
 
 const router = useRouter();
 const { register } = useAuth();
@@ -200,33 +206,29 @@ const goToLogin = () => {
               </div>
               <div class="space-y-1">
                 <div class="flex items-center text-xs">
-                  <span :class="passwordValidation.minLength ? 'text-green-600' : 'text-gray-400'">
-                    {{ passwordValidation.minLength ? '✓' : '○' }}
-                  </span>
+                  <CheckIcon v-if="passwordValidation.minLength" class="h-3 w-3 text-green-600" />
+                  <XMarkIcon v-else class="h-3 w-3 text-gray-400" />
                   <span :class="passwordValidation.minLength ? 'text-green-600' : 'text-gray-500'" class="ml-2">
                     Minimum 8 znaków
                   </span>
                 </div>
                 <div class="flex items-center text-xs">
-                  <span :class="passwordValidation.hasUpperCase ? 'text-green-600' : 'text-gray-400'">
-                    {{ passwordValidation.hasUpperCase ? '✓' : '○' }}
-                  </span>
+                  <CheckIcon v-if="passwordValidation.hasUpperCase" class="h-3 w-3 text-green-600" />
+                  <XMarkIcon v-else class="h-3 w-3 text-gray-400" />
                   <span :class="passwordValidation.hasUpperCase ? 'text-green-600' : 'text-gray-500'" class="ml-2">
                     Wielką literę
                   </span>
                 </div>
                 <div class="flex items-center text-xs">
-                  <span :class="passwordValidation.hasLowerCase ? 'text-green-600' : 'text-gray-400'">
-                    {{ passwordValidation.hasLowerCase ? '✓' : '○' }}
-                  </span>
+                  <CheckIcon v-if="passwordValidation.hasLowerCase" class="h-3 w-3 text-green-600" />
+                  <XMarkIcon v-else class="h-3 w-3 text-gray-400" />
                   <span :class="passwordValidation.hasLowerCase ? 'text-green-600' : 'text-gray-500'" class="ml-2">
                     Małą literę
                   </span>
                 </div>
                 <div class="flex items-center text-xs">
-                  <span :class="passwordValidation.hasNumber ? 'text-green-600' : 'text-gray-400'">
-                    {{ passwordValidation.hasNumber ? '✓' : '○' }}
-                  </span>
+                  <CheckIcon v-if="passwordValidation.hasNumber" class="h-3 w-3 text-green-600" />
+                  <XMarkIcon v-else class="h-3 w-3 text-gray-400" />
                   <span :class="passwordValidation.hasNumber ? 'text-green-600' : 'text-gray-500'" class="ml-2">
                     Cyfrę
                   </span>
@@ -282,6 +284,9 @@ const goToLogin = () => {
           <!-- Komunikat błędu -->
           <div v-if="errorMessage" class="rounded-lg bg-red-50 p-4">
             <div class="flex">
+              <div class="flex-shrink-0">
+                <XCircleIcon class="h-5 w-5 text-red-400" />
+              </div>
               <div class="ml-3">
                 <h3 class="text-sm font-medium text-red-800">
                   {{ errorMessage }}
@@ -298,10 +303,7 @@ const goToLogin = () => {
               class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               <span v-if="isLoading" class="absolute left-0 inset-y-0 flex items-center pl-3">
-                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
+                <ArrowPathIcon class="animate-spin h-5 w-5 text-white" />
               </span>
               {{ isLoading ? 'Tworzenie konta...' : 'Zarejestruj się' }}
             </button>

@@ -2,6 +2,12 @@
 import { ref, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { useAuth } from '../composables/useAuth';
+import { 
+  ArrowLeftIcon,
+  CheckCircleIcon,
+  XCircleIcon,
+  ArrowPathIcon
+} from '@heroicons/vue/24/outline';
 
 const router = useRouter();
 const route = useRoute();
@@ -53,6 +59,10 @@ const goToRegister = () => {
 const goToForgotPassword = () => {
   router.push('/forgot-password');
 };
+
+const goToHome = () => {
+  router.push('/');
+};
 </script>
 
 <template>
@@ -81,6 +91,18 @@ const goToForgotPassword = () => {
 
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
       <div class="bg-white py-8 px-4 shadow-xl sm:rounded-lg sm:px-10">
+        <!-- Przycisk powrotu do strony głównej -->
+        <div class="mb-6">
+          <button
+            type="button"
+            @click="goToHome"
+            class="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+          >
+            <ArrowLeftIcon class="w-4 h-4 mr-2" />
+            Powrót do strony głównej
+          </button>
+        </div>
+        
         <form class="space-y-6" @submit.prevent="handleLogin">
           <!-- Pole email -->
           <div>
@@ -96,7 +118,7 @@ const goToForgotPassword = () => {
                 autocomplete="email"
                 required
                 class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors"
-                placeholder="twoj@email.com"
+                placeholder="Wprowadź swój adres email"
               />
             </div>
           </div>
@@ -115,7 +137,7 @@ const goToForgotPassword = () => {
                 autocomplete="current-password"
                 required
                 class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors"
-                placeholder="Twoje hasło"
+                placeholder="Wprowadź swoje hasło"
               />
             </div>
           </div>
@@ -128,7 +150,7 @@ const goToForgotPassword = () => {
                 v-model="rememberMe"
                 name="remember-me"
                 type="checkbox"
-                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded cursor-pointer"
               />
               <label for="remember-me" class="ml-2 block text-sm text-gray-900">
                 Zapamiętaj mnie
@@ -140,9 +162,7 @@ const goToForgotPassword = () => {
           <div v-if="successMessage" class="rounded-lg bg-green-50 p-4">
             <div class="flex">
               <div class="flex-shrink-0">
-                <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
+                <CheckCircleIcon class="h-5 w-5 text-green-400" />
               </div>
               <div class="ml-3">
                 <p class="text-sm font-medium text-green-800">
@@ -156,9 +176,7 @@ const goToForgotPassword = () => {
           <div v-if="errorMessage" class="rounded-lg bg-red-50 p-4">
             <div class="flex">
               <div class="flex-shrink-0">
-                <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
-                </svg>
+                <XCircleIcon class="h-5 w-5 text-red-400" />
               </div>
               <div class="ml-3">
                 <h3 class="text-sm font-medium text-red-800">
@@ -176,10 +194,7 @@ const goToForgotPassword = () => {
               class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               <span v-if="isLoading" class="absolute left-0 inset-y-0 flex items-center pl-3">
-                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
+                <ArrowPathIcon class="animate-spin h-5 w-5 text-white" />
               </span>
               {{ isLoading ? 'Logowanie...' : 'Zaloguj się' }}
             </button>
