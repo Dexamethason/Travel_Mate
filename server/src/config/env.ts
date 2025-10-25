@@ -49,3 +49,12 @@ export const serverEnv = {
     'http://localhost:3001',
   ],
 };
+
+export const geminiEnv = {
+  apiKey: process.env.GEMINI_API_KEY || '',
+};
+
+if (!geminiEnv.apiKey) {
+  console.warn('⚠️  GEMINI_API_KEY nie jest ustawiony w pliku .env');
+  console.warn('📝 Dodaj GEMINI_API_KEY do pliku server/.env aby korzystać z AI planera');
+}
