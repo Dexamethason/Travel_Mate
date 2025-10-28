@@ -2,11 +2,11 @@
 import { ref, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { useAuth } from '../composables/useAuth';
-import { 
+import {
   ArrowLeftIcon,
   CheckCircleIcon,
   XCircleIcon,
-  ArrowPathIcon
+  ArrowPathIcon,
 } from '@heroicons/vue/24/outline';
 
 const router = useRouter();
@@ -26,7 +26,8 @@ onMounted(() => {
   if (route.query.registered === 'true') {
     const userEmail = route.query.email as string;
     email.value = userEmail || '';
-    successMessage.value = 'Konto zostało utworzone! Sprawdź swoją skrzynkę email i kliknij link weryfikacyjny, aby aktywować konto.';
+    successMessage.value =
+      'Konto zostało utworzone! Sprawdź swoją skrzynkę email i kliknij link weryfikacyjny, aby aktywować konto.';
   }
 });
 
@@ -36,10 +37,10 @@ const handleLogin = async () => {
     errorMessage.value = 'Proszę wypełnić wszystkie pola';
     return;
   }
-  
+
   isLoading.value = true;
   errorMessage.value = '';
-  
+
   try {
     await login(email.value, password.value);
     // Przekierowanie do dashboard po udanym logowaniu
@@ -70,16 +71,16 @@ const goToHome = () => {
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <!-- Logo aplikacji -->
       <div class="flex justify-center">
-        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-400 shadow-lg">
+        <div
+          class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-400 shadow-lg"
+        >
           <span class="text-3xl">✈️</span>
         </div>
       </div>
-      
+
       <!-- Nazwa aplikacji -->
-      <h1 class="mt-6 text-center text-3xl font-bold text-gray-900">
-        Travel Mate
-      </h1>
-      
+      <h1 class="mt-6 text-center text-3xl font-bold text-gray-900">Travel Mate</h1>
+
       <!-- Nagłówek -->
       <h2 class="mt-6 text-center text-2xl font-semibold text-gray-900">
         Zaloguj się do Travel Mate
@@ -102,7 +103,7 @@ const goToHome = () => {
             Powrót do strony głównej
           </button>
         </div>
-        
+
         <form class="space-y-6" @submit.prevent="handleLogin">
           <!-- Pole email -->
           <div>
@@ -125,9 +126,7 @@ const goToHome = () => {
 
           <!-- Pole hasła -->
           <div>
-            <label for="password" class="block text-sm font-medium text-gray-700">
-              Hasło
-            </label>
+            <label for="password" class="block text-sm font-medium text-gray-700"> Hasło </label>
             <div class="mt-1">
               <input
                 id="password"
