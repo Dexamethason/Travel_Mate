@@ -2,11 +2,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuth } from '../composables/useAuth';
-import { 
-  ArrowPathIcon,
-  CheckCircleIcon,
-  XCircleIcon
-} from '@heroicons/vue/24/outline';
+import { ArrowPathIcon, CheckCircleIcon, XCircleIcon } from '@heroicons/vue/24/outline';
 
 const router = useRouter();
 const { forgotPassword } = useAuth();
@@ -31,11 +27,11 @@ const handleForgotPassword = async () => {
     errorMessage.value = 'Proszę podać prawidłowy adres e-mail';
     return;
   }
-  
+
   isLoading.value = true;
   errorMessage.value = '';
   successMessage.value = '';
-  
+
   try {
     await forgotPassword(email.value);
     emailSent.value = true;
@@ -68,20 +64,18 @@ const resendEmail = () => {
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <!-- Logo aplikacji -->
       <div class="flex justify-center">
-        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-400 shadow-lg">
+        <div
+          class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-400 shadow-lg"
+        >
           <span class="text-3xl">✈️</span>
         </div>
       </div>
-      
+
       <!-- Nazwa aplikacji -->
-      <h1 class="mt-6 text-center text-3xl font-bold text-gray-900">
-        Travel Mate
-      </h1>
-      
+      <h1 class="mt-6 text-center text-3xl font-bold text-gray-900">Travel Mate</h1>
+
       <!-- Nagłówek -->
-      <h2 class="mt-6 text-center text-2xl font-semibold text-gray-900">
-        Resetowanie hasła
-      </h2>
+      <h2 class="mt-6 text-center text-2xl font-semibold text-gray-900">Resetowanie hasła</h2>
       <p class="mt-2 text-center text-sm text-gray-600">
         Podaj swój adres e-mail, aby otrzymać link do resetowania hasła
       </p>
@@ -106,7 +100,7 @@ const resendEmail = () => {
                   autocomplete="email"
                   required
                   class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors"
-                  placeholder="twoj@email.com"
+                  placeholder="Wprowadź swój adres email"
                 />
               </div>
             </div>

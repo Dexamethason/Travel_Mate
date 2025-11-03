@@ -2,12 +2,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuth } from '../composables/useAuth';
-import { 
-  ArrowPathIcon,
-  CheckIcon,
-  XMarkIcon,
-  XCircleIcon
-} from '@heroicons/vue/24/outline';
+import { ArrowPathIcon, CheckIcon, XMarkIcon, XCircleIcon } from '@heroicons/vue/24/outline';
 
 const router = useRouter();
 const { register } = useAuth();
@@ -28,6 +23,7 @@ const passwordValidation = ref({
   hasUpperCase: false,
   hasLowerCase: false,
   hasNumber: false,
+  hasSpecialChar: false,
 });
 
 const validatePassword = () => {
@@ -37,6 +33,7 @@ const validatePassword = () => {
     hasUpperCase: /[A-Z]/.test(pwd),
     hasLowerCase: /[a-z]/.test(pwd),
     hasNumber: /\d/.test(pwd),
+    hasSpecialChar: /[^A-Za-z0-9]/.test(pwd),
   };
 };
 
@@ -46,7 +43,13 @@ const isPasswordValid = () => {
 
 // Funkcja rejestracji z integracją z backendem
 const handleRegister = async () => {
-  if (!firstName.value || !lastName.value || !email.value || !password.value || !confirmPassword.value) {
+  if (
+    !firstName.value ||
+    !lastName.value ||
+    !email.value ||
+    !password.value ||
+    !confirmPassword.value
+  ) {
     errorMessage.value = 'Proszę wypełnić wszystkie pola';
     return;
   }
@@ -65,21 +68,21 @@ const handleRegister = async () => {
     errorMessage.value = 'Hasło nie spełnia wymagań bezpieczeństwa';
     return;
   }
-  
+
   isLoading.value = true;
   errorMessage.value = '';
-  
+
   try {
     await register(email.value, password.value, firstName.value, lastName.value);
-    
+
     // rejestracja zakończona - email wysłany
     // przekierowanie do logowania z komunikatem
     router.push({
       path: '/login',
-      query: { 
+      query: {
         registered: 'true',
-        email: email.value 
-      }
+        email: email.value,
+      },
     });
   } catch (error) {
     const err = error as Error;
@@ -100,23 +103,19 @@ const goToLogin = () => {
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <!-- Logo aplikacji -->
       <div class="flex justify-center">
-        <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-400 shadow-lg">
+        <div
+          class="flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-400 shadow-lg"
+        >
           <span class="text-3xl">✈️</span>
         </div>
       </div>
-      
+
       <!-- Nazwa aplikacji -->
-      <h1 class="mt-6 text-center text-3xl font-bold text-gray-900">
-        Travel Mate
-      </h1>
-      
+      <h1 class="mt-6 text-center text-3xl font-bold text-gray-900">Travel Mate</h1>
+
       <!-- Nagłówek -->
-      <h2 class="mt-6 text-center text-2xl font-semibold text-gray-900">
-        Stwórz nowe konto
-      </h2>
-      <p class="mt-2 text-center text-sm text-gray-600">
-        Dołącz do społeczności podróżników
-      </p>
+      <h2 class="mt-6 text-center text-2xl font-semibold text-gray-900">Stwórz nowe konto</h2>
+      <p class="mt-2 text-center text-sm text-gray-600">Dołącz do społeczności podróżników</p>
     </div>
 
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
@@ -125,9 +124,7 @@ const goToLogin = () => {
           <!-- Imię i nazwisko -->
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label for="firstName" class="block text-sm font-medium text-gray-700">
-                Imię
-              </label>
+              <label for="firstName" class="block text-sm font-medium text-gray-700"> Imię </label>
               <div class="mt-1">
                 <input
                   id="firstName"
@@ -141,7 +138,7 @@ const goToLogin = () => {
                 />
               </div>
             </div>
-            
+
             <div>
               <label for="lastName" class="block text-sm font-medium text-gray-700">
                 Nazwisko
@@ -175,16 +172,14 @@ const goToLogin = () => {
                 autocomplete="email"
                 required
                 class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors"
-                placeholder="twoj@email.com"
+                placeholder="Wprowadź swój adres email"
               />
             </div>
           </div>
 
           <!-- Pole hasła -->
           <div>
-            <label for="password" class="block text-sm font-medium text-gray-700">
-              Hasło
-            </label>
+            <label for="password" class="block text-sm font-medium text-gray-700"> Hasło </label>
             <div class="mt-1">
               <input
                 id="password"
@@ -198,39 +193,68 @@ const goToLogin = () => {
                 placeholder="Twoje hasło"
               />
             </div>
-            
+
             <!-- Wymagania hasła -->
             <div v-if="password" class="mt-2 space-y-1">
-              <div class="text-xs text-gray-600">
-                Hasło musi zawierać:
-              </div>
+              <div class="text-xs text-gray-600">Hasło musi zawierać:</div>
               <div class="space-y-1">
                 <div class="flex items-center text-xs">
                   <CheckIcon v-if="passwordValidation.minLength" class="h-3 w-3 text-green-600" />
                   <XMarkIcon v-else class="h-3 w-3 text-gray-400" />
-                  <span :class="passwordValidation.minLength ? 'text-green-600' : 'text-gray-500'" class="ml-2">
+                  <span
+                    :class="passwordValidation.minLength ? 'text-green-600' : 'text-gray-500'"
+                    class="ml-2"
+                  >
                     Minimum 8 znaków
                   </span>
                 </div>
                 <div class="flex items-center text-xs">
-                  <CheckIcon v-if="passwordValidation.hasUpperCase" class="h-3 w-3 text-green-600" />
+                  <CheckIcon
+                    v-if="passwordValidation.hasUpperCase"
+                    class="h-3 w-3 text-green-600"
+                  />
                   <XMarkIcon v-else class="h-3 w-3 text-gray-400" />
-                  <span :class="passwordValidation.hasUpperCase ? 'text-green-600' : 'text-gray-500'" class="ml-2">
+                  <span
+                    :class="passwordValidation.hasUpperCase ? 'text-green-600' : 'text-gray-500'"
+                    class="ml-2"
+                  >
                     Wielką literę
                   </span>
                 </div>
                 <div class="flex items-center text-xs">
-                  <CheckIcon v-if="passwordValidation.hasLowerCase" class="h-3 w-3 text-green-600" />
+                  <CheckIcon
+                    v-if="passwordValidation.hasLowerCase"
+                    class="h-3 w-3 text-green-600"
+                  />
                   <XMarkIcon v-else class="h-3 w-3 text-gray-400" />
-                  <span :class="passwordValidation.hasLowerCase ? 'text-green-600' : 'text-gray-500'" class="ml-2">
+                  <span
+                    :class="passwordValidation.hasLowerCase ? 'text-green-600' : 'text-gray-500'"
+                    class="ml-2"
+                  >
                     Małą literę
                   </span>
                 </div>
                 <div class="flex items-center text-xs">
                   <CheckIcon v-if="passwordValidation.hasNumber" class="h-3 w-3 text-green-600" />
                   <XMarkIcon v-else class="h-3 w-3 text-gray-400" />
-                  <span :class="passwordValidation.hasNumber ? 'text-green-600' : 'text-gray-500'" class="ml-2">
+                  <span
+                    :class="passwordValidation.hasNumber ? 'text-green-600' : 'text-gray-500'"
+                    class="ml-2"
+                  >
                     Cyfrę
+                  </span>
+                </div>
+                <div class="flex items-center text-xs">
+                  <CheckIcon
+                    v-if="passwordValidation.hasSpecialChar"
+                    class="h-3 w-3 text-green-600"
+                  />
+                  <XMarkIcon v-else class="h-3 w-3 text-gray-400" />
+                  <span
+                    :class="passwordValidation.hasSpecialChar ? 'text-green-600' : 'text-gray-500'"
+                    class="ml-2"
+                  >
+                    Znak specjalny (np. !@#$%)
                   </span>
                 </div>
               </div>
@@ -254,7 +278,10 @@ const goToLogin = () => {
                 placeholder="Powtórz hasło"
               />
             </div>
-            <div v-if="confirmPassword && password !== confirmPassword" class="mt-1 text-xs text-red-600">
+            <div
+              v-if="confirmPassword && password !== confirmPassword"
+              class="mt-1 text-xs text-red-600"
+            >
               Hasła nie są identyczne
             </div>
           </div>
@@ -268,15 +295,17 @@ const goToLogin = () => {
                 name="acceptTerms"
                 type="checkbox"
                 required
-                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded cursor-pointer"
               />
             </div>
             <div class="ml-3 text-sm">
               <label for="acceptTerms" class="text-gray-700">
-                Akceptuję 
+                Akceptuję
                 <a href="#" class="text-blue-600 hover:text-blue-500 font-medium">regulamin</a>
-                i 
-                <a href="#" class="text-blue-600 hover:text-blue-500 font-medium">politykę prywatności</a>
+                i
+                <a href="#" class="text-blue-600 hover:text-blue-500 font-medium"
+                  >politykę prywatności</a
+                >
               </label>
             </div>
           </div>
