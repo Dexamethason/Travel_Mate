@@ -15,11 +15,37 @@ const currentUser = ref<User | null>(null);
 const authToken = ref<string | null>(null);
 const isLoading = ref(false);
 const error = ref<string | null>(null);
+const sessionRestored = ref(false);
 
 export function useAuth() {
   const isAuthenticated = computed(() => currentUser.value !== null);
 
-// rejestracja usera
+  // przywracanie sesji z localStorage
+  const restoreSession = () => {
+    if (sessionRestored.value) return;
+
+    const token = localStorage.getItem('authToken');
+    const userStr = localStorage.getItem('currentUser');
+
+    if (token && userStr) {
+      try {
+        authToken.value = token;
+        currentUser.value = JSON.parse(userStr);
+      } catch (err) {
+        console.error('Błąd podczas przywracania sesji:', err);
+        logout();
+      }
+    }
+
+    sessionRestored.value = true;
+  };
+
+  // Automatyczne przywracanie sesji przy pierwszym użyciu
+  if (!sessionRestored.value) {
+    restoreSession();
+  }
+
+  // rejestracja usera
   const register = async (
     email: string,
     password: string,
@@ -96,8 +122,6 @@ export function useAuth() {
         // zapisuje w localStorage
         localStorage.setItem('authToken', data.token);
         localStorage.setItem('currentUser', JSON.stringify(data.user));
-
-        console.log('✅ Zalogowano pomyślnie:', data.user.email);
       }
 
       return data;
@@ -150,22 +174,6 @@ export function useAuth() {
     localStorage.removeItem('currentUser');
   };
 
-  // przywracanie sesji z localStorage
-  const restoreSession = () => {
-    const token = localStorage.getItem('authToken');
-    const userStr = localStorage.getItem('currentUser');
-
-    if (token && userStr) {
-      try {
-        authToken.value = token;
-        currentUser.value = JSON.parse(userStr);
-      } catch (err) {
-        console.error('Błąd podczas przywracania sesji:', err);
-        logout();
-      }
-    }
-  };
-
   // funkcja do pobierania tokena (dla innych composables)
   const getToken = (): string | null => {
     return authToken.value;
@@ -177,11 +185,11 @@ export function useAuth() {
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
-    
+
     if (token) {
       headers['Authorization'] = `Bearer ${token}`;
     }
-    
+
     return headers;
   };
 
@@ -200,4 +208,3 @@ export function useAuth() {
     getAuthHeaders,
   };
 }
-
