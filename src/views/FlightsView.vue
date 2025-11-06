@@ -1,199 +1,36 @@
 <template>
   <div class="flex min-h-screen flex-1 justify-center bg-gray-50 px-10 py-5 dark:bg-gray-900">
     <div class="flex max-w-6xl flex-1 flex-col">
-      <!-- Header -->
-      <div class="flex flex-wrap justify-between gap-3 p-4">
-        <h1 class="text-3xl font-bold leading-tight text-gray-900 dark:text-white">
-          Znajdź idealny lot
-        </h1>
-      </div>
-
-      <!-- formularz wyszukiwania lotów -->
+      <!-- Kontener na nagłówek i formularz - wyśrodkowany gdy brak wyników -->
       <div
-        class="mb-8 flex flex-wrap items-end gap-4 rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800"
+        :class="[
+          'flex flex-col',
+          !hasSearched ? 'flex-1 items-center justify-center -mt-[100px]' : 'pt-4',
+        ]"
       >
-        <label class="flex min-w-40 flex-1 flex-col">
-          <p class="pb-2 text-base font-medium leading-normal text-gray-900 dark:text-white">
-            Skąd
+        <!-- Header -->
+        <div :class="['mb-8 text-center', !hasSearched ? '' : 'text-left']">
+          <h1 class="text-4xl font-bold leading-tight text-gray-900 dark:text-white">
+            Znajdź idealny lot
+          </h1>
+          <p v-if="!hasSearched" class="mt-2 text-lg text-gray-600 dark:text-gray-400">
+            Wyszukaj najlepsze oferty lotów do wymarzonego miejsca
           </p>
-          <input
-            v-model="searchForm.from"
-            class="h-12 w-full rounded-lg border border-gray-300 bg-white px-4 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-            placeholder="Miasto lub lotnisko"
-          />
-        </label>
+        </div>
 
-        <label class="flex min-w-40 flex-1 flex-col">
-          <p class="pb-2 text-base font-medium leading-normal text-gray-900 dark:text-white">
-            Dokąd
-          </p>
-          <input
-            v-model="searchForm.to"
-            class="h-12 w-full rounded-lg border border-gray-300 bg-white px-4 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-            placeholder="Miasto lub lotnisko"
-          />
-        </label>
-
-        <label class="flex min-w-40 flex-1 flex-col">
-          <p class="pb-2 text-base font-medium leading-normal text-gray-900 dark:text-white">
-            Wylot
-          </p>
-          <input
-            v-model="searchForm.departure"
-            type="date"
-            class="h-12 w-full rounded-lg border border-gray-300 bg-white px-4 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-          />
-        </label>
-
-        <label class="flex min-w-40 flex-1 flex-col">
-          <p class="pb-2 text-base font-medium leading-normal text-gray-900 dark:text-white">
-            Powrót
-          </p>
-          <input
-            v-model="searchForm.return"
-            type="date"
-            class="h-12 w-full rounded-lg border border-gray-300 bg-white px-4 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-          />
-        </label>
-
-        <label class="flex min-w-40 flex-1 flex-col">
-          <p class="pb-2 text-base font-medium leading-normal text-gray-900 dark:text-white">
-            Pasażerowie
-          </p>
-          <input
-            v-model="searchForm.travelers"
-            type="number"
-            min="1"
-            class="h-12 w-full rounded-lg border border-gray-300 bg-white px-4 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-            placeholder="1 dorosły"
-          />
-        </label>
-
-        <button
-          class="h-12 rounded-lg bg-blue-500 px-6 py-3 font-bold text-white transition-colors hover:bg-blue-600"
-          @click="searchFlights"
-        >
-          Szukaj
-        </button>
+        <!-- formularz wyszukiwania lotów -->
+        <div :class="['w-full', !hasSearched ? 'max-w-5xl' : '']">
+          <FlightSearchForm v-model="searchForm" @search="searchFlights" />
+        </div>
       </div>
 
-      <div class="flex gap-8">
+      <!-- Wyniki i filtry - pokazują się tylko po wyszukaniu -->
+      <div v-if="hasSearched" class="mt-8 flex gap-8">
         <!-- sidebar z filtrami -->
-        <div class="w-1/4">
-          <div class="rounded-lg bg-white p-6 shadow-sm dark:bg-gray-800">
-            <h2 class="mb-6 text-xl font-bold text-gray-900 dark:text-white">Filtry</h2>
-
-            <!-- filtr ceny -->
-            <div class="mb-6">
-              <p class="mb-4 text-base font-medium text-gray-900 dark:text-white">
-                Przedział cenowy
-              </p>
-              <div class="mb-2 flex items-center gap-4">
-                <input
-                  v-model="filters.priceMin"
-                  type="number"
-                  class="w-24 rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-                  placeholder="Min"
-                />
-                <span class="text-gray-500">-</span>
-                <input
-                  v-model="filters.priceMax"
-                  type="number"
-                  class="w-24 rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-                  placeholder="Max"
-                />
-              </div>
-            </div>
-
-            <!-- filtr przesiadek -->
-            <div class="mb-6">
-              <p class="mb-4 text-base font-medium text-gray-900 dark:text-white">
-                Maksymalna liczba przesiadek
-              </p>
-              <select
-                v-model="filters.maxStops"
-                class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-              >
-                <option value="0">Bez przesiadek</option>
-                <option value="1">1 przesiadka</option>
-                <option value="2">2 przesiadki</option>
-                <option value="3">3+ przesiadki</option>
-              </select>
-            </div>
-          </div>
-        </div>
+        <FlightFilters v-model="filtersData" />
 
         <!-- wyniki wyszukiwania -->
-        <div class="flex-1">
-          <h2 class="mb-6 text-xl font-bold text-gray-900 dark:text-white">Wyniki</h2>
-
-          <div
-            v-if="flights.length === 0"
-            class="py-16 text-center text-gray-500 dark:text-gray-400"
-          >
-            Użyj formularza powyżej, aby wyszukać loty
-          </div>
-
-          <div v-for="flight in filteredFlights" :key="flight.id" class="mb-4">
-            <div
-              class="flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
-            >
-              <div
-                class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 font-bold text-blue-600 dark:bg-blue-900 dark:text-blue-300"
-              >
-                {{ flight.airline.charAt(0) }}
-              </div>
-
-              <div class="flex flex-1 flex-col">
-                <p class="text-base font-bold text-gray-900 dark:text-white">
-                  {{ flight.airline }}
-                </p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">{{ flight.stops }}</p>
-              </div>
-
-              <div class="flex flex-col items-center">
-                <p class="text-base font-bold text-gray-900 dark:text-white">
-                  {{ flight.departureTime }}
-                </p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  {{ flight.departureAirport }}
-                </p>
-              </div>
-
-              <svg
-                class="mx-4 text-gray-400"
-                fill="currentColor"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-              >
-                <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z" />
-              </svg>
-
-              <div class="flex flex-col items-center">
-                <p class="text-base font-bold text-gray-900 dark:text-white">
-                  {{ flight.arrivalTime }}
-                </p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">{{ flight.arrivalAirport }}</p>
-              </div>
-
-              <div class="flex flex-col items-center">
-                <p class="text-base font-bold text-gray-900 dark:text-white">
-                  {{ flight.duration }}
-                </p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">{{ flight.type }}</p>
-              </div>
-
-              <p class="text-lg font-bold text-gray-900 dark:text-white">{{ flight.price }} zł</p>
-
-              <button
-                class="rounded-lg bg-gray-100 px-4 py-2 text-gray-900 transition-colors hover:bg-blue-100 dark:bg-gray-700 dark:text-white dark:hover:bg-blue-900"
-              >
-                Zobacz ofertę
-              </button>
-            </div>
-          </div>
-        </div>
+        <FlightResults :flights="filteredFlights" />
       </div>
     </div>
   </div>
@@ -201,34 +38,41 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import FlightSearchForm from '@/components/FlightsPage/FlightSearchForm.vue';
+import FlightFilters from '@/components/FlightsPage/FlightFilters.vue';
+import FlightResults from '@/components/FlightsPage/FlightResults.vue';
+import type { SearchForm, Flight, FlightFiltersType } from '../types/flight';
 
-interface Flight {
-  id: number;
-  airline: string;
-  stops: string;
-  departureTime: string;
-  departureAirport: string;
-  arrivalTime: string;
-  arrivalAirport: string;
-  duration: string;
-  type: string;
-  price: number;
-}
+// Funkcja pomocnicza do konwersji daty na string
+const dateToString = (date: Date): string => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
 
-const searchForm = ref({
+// Ustaw domyślne daty
+const today = new Date();
+const nextWeek = new Date(today);
+nextWeek.setDate(today.getDate() + 7);
+
+const searchForm = ref<SearchForm>({
   from: '',
   to: '',
-  departure: '',
-  return: '',
-  travelers: 1,
+  departure: dateToString(today),
+  return: dateToString(nextWeek),
+  adults: 1,
+  children: 0,
 });
 
-const filters = ref({
+const filtersData = ref<FlightFiltersType>({
   priceMin: 0,
   priceMax: 5000,
   maxStops: '3',
   durationMax: 24,
 });
+
+const hasSearched = ref(false);
 
 const flights = ref<Flight[]>([
   {
@@ -272,10 +116,10 @@ const flights = ref<Flight[]>([
 const filteredFlights = computed(() => {
   return flights.value.filter(flight => {
     const priceInRange =
-      flight.price >= filters.value.priceMin && flight.price <= filters.value.priceMax;
+      flight.price >= filtersData.value.priceMin && flight.price <= filtersData.value.priceMax;
 
     const stopsCount = flight.stops === 'Bezpośredni' ? 0 : parseInt(flight.stops.charAt(0));
-    const stopsMatch = stopsCount <= parseInt(filters.value.maxStops);
+    const stopsMatch = stopsCount <= parseInt(filtersData.value.maxStops);
 
     return priceInRange && stopsMatch;
   });
@@ -283,6 +127,7 @@ const filteredFlights = computed(() => {
 
 const searchFlights = () => {
   console.log('Wyszukiwanie lotów...', searchForm.value);
+  hasSearched.value = true;
   // TODO: podpiąć prawdziwe API jak będzie gotowe
 };
 </script>
