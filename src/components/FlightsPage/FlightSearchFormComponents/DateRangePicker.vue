@@ -4,18 +4,22 @@
       Termin podróży
     </p>
     <button
+      ref="buttonRef"
       type="button"
       class="flex h-12 w-full items-center gap-3 rounded-lg border border-gray-300 bg-white px-4 text-left text-gray-900 transition-colors focus:border-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-500"
       @click="toggleCalendar"
     >
       <CalendarIcon class="h-5 w-5 flex-shrink-0 text-gray-400" />
-      <span v-if="departure && returnDate" class="flex-1 truncate">
+      <span v-if="tripType === 'oneWay' && departure" class="flex-1 truncate">
+        {{ formatDate(departure) }}
+      </span>
+      <span v-else-if="departure && returnDate" class="flex-1 truncate">
         {{ formatDate(departure) }} — {{ formatDate(returnDate) }}
       </span>
       <span v-else-if="departure" class="flex-1 truncate">
         {{ formatDate(departure) }} — Wybierz datę powrotu
       </span>
-      <span v-else class="flex-1 text-gray-500 dark:text-gray-400">Wybierz daty</span>
+      <span v-else class="flex-1 text-gray-500 dark:text-gray-400"> Wybierz daty </span>
     </button>
 
     <!-- Kalendarz -->
@@ -28,7 +32,8 @@
       >
         <!-- Nagłówek z datami -->
         <div
-          class="mb-4 flex justify-center gap-8 border-b border-gray-200 pb-4 dark:border-gray-700"
+          class="mb-4 flex justify-center border-b border-gray-200 pb-4 dark:border-gray-700"
+          :class="tripType === 'oneWay' ? 'gap-4' : 'gap-8'"
         >
           <div class="text-center">
             <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Wylot</p>
@@ -36,7 +41,7 @@
               {{ tempDeparture ? formatDateFull(tempDeparture) : 'Wybierz datę' }}
             </p>
           </div>
-          <div class="text-center">
+          <div v-if="tripType === 'roundTrip'" class="text-center">
             <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Powrót</p>
             <p class="text-base font-bold text-gray-900 dark:text-white">
               {{ tempReturn ? formatDateFull(tempReturn) : 'Wybierz datę' }}
@@ -58,7 +63,10 @@
             <span class="font-semibold text-gray-900 dark:text-white">
               {{ months[currentMonth] }} {{ currentYear }}
             </span>
-            <span class="font-semibold text-gray-900 dark:text-white">
+            <span
+              v-if="tripType === 'roundTrip'"
+              class="font-semibold text-gray-900 dark:text-white"
+            >
               {{ months[nextMonth] }} {{ nextMonthYear }}
             </span>
           </div>
@@ -72,20 +80,23 @@
           </button>
         </div>
 
-        <!-- Dwa miesiące -->
+        <!-- Jeden lub dwa miesiące w zależności od typu -->
         <div class="flex gap-4">
           <CalendarMonth
             :month="currentMonth"
             :year="currentYear"
             :selected-start="tempDeparture"
-            :selected-end="tempReturn"
+            :selected-end="tripType === 'roundTrip' ? tempReturn : ''"
+            :trip-type="tripType"
             @select-date="selectDate"
           />
           <CalendarMonth
+            v-if="tripType === 'roundTrip'"
             :month="nextMonth"
             :year="nextMonthYear"
             :selected-start="tempDeparture"
             :selected-end="tempReturn"
+            :trip-type="tripType"
             @select-date="selectDate"
           />
         </div>
@@ -103,6 +114,7 @@ import { useActivePanel } from '../../../composables/useActivePanel';
 interface Props {
   departure: string;
   returnDate: string;
+  tripType: 'roundTrip' | 'oneWay';
 }
 
 const props = defineProps<Props>();
@@ -162,6 +174,29 @@ watch(
   }
 );
 
+// Obserwuj zmiany tripType - wyczyść datę powrotu gdy zmieni się na oneWay
+watch(
+  () => props.tripType,
+  newType => {
+    if (newType === 'oneWay') {
+      tempReturn.value = '';
+      emit('update:returnDate', '');
+    } else {
+      // Jeśli zmieni się z oneWay na roundTrip, ustaw domyślną datę powrotu
+      if (tempDeparture.value && !props.returnDate) {
+        const departureDate = new Date(tempDeparture.value);
+        const returnDate = new Date(departureDate);
+        returnDate.setDate(departureDate.getDate() + 7);
+        const returnDateStr = returnDate.toISOString().split('T')[0] || '';
+        if (returnDateStr) {
+          tempReturn.value = returnDateStr;
+          emit('update:returnDate', returnDateStr);
+        }
+      }
+    }
+  }
+);
+
 const updateCalendarPosition = () => {
   if (!buttonRef.value) return;
 
@@ -169,9 +204,9 @@ const updateCalendarPosition = () => {
   const viewportHeight = window.innerHeight;
   const viewportWidth = window.innerWidth;
   const calendarHeight = 600;
-  const calendarWidth = 600;
+  const calendarWidth = props.tripType === 'oneWay' ? 350 : 650;
   const padding = 16;
-  const minSpaceRequired = 350; // Minimalna przestrzeń potrzebna do otwarcia w dół
+  const minSpaceRequired = 350;
 
   let top = rect.bottom + 8;
   let left = rect.left;
@@ -182,27 +217,21 @@ const updateCalendarPosition = () => {
   const spaceBelow = viewportHeight - rect.bottom - padding;
   const spaceAbove = rect.top - padding;
 
-  // ZAWSZE próbuj otworzyć w dół, chyba że naprawdę nie ma miejsca
   if (spaceBelow >= minSpaceRequired) {
-    // Jest wystarczająco miejsca w dół - otwórz w dół
     if (spaceBelow < calendarHeight) {
       maxHeight = `${spaceBelow - padding}px`;
       overflowY = 'auto';
     }
   } else if (spaceAbove > spaceBelow && spaceAbove >= minSpaceRequired) {
-    // Bardzo mało miejsca w dół, ale jest wystarczająco w górę - otwórz w górę
     top = rect.top - padding;
     transform = 'translateY(-100%)';
     maxHeight = `${Math.min(spaceAbove - padding, calendarHeight)}px`;
     overflowY = 'auto';
   } else {
-    // Mało miejsca w obu kierunkach - wybierz większą przestrzeń
     if (spaceBelow >= spaceAbove) {
-      // Preferuj w dół
       maxHeight = `${spaceBelow - padding}px`;
       overflowY = 'auto';
     } else {
-      // Otwórz w górę
       top = rect.top - padding;
       transform = 'translateY(-100%)';
       maxHeight = `${spaceAbove - padding}px`;
@@ -210,12 +239,10 @@ const updateCalendarPosition = () => {
     }
   }
 
-  // Sprawdź czy kalendarz się zmieści poziomo
   if (left + calendarWidth > viewportWidth - padding) {
     left = Math.max(padding, viewportWidth - calendarWidth - padding);
   }
 
-  // Dla bardzo małych ekranów - wyśrodkuj
   if (viewportWidth < 768) {
     left = viewportWidth / 2;
     transform = transform ? `${transform} translateX(-50%)` : 'translateX(-50%)';
@@ -241,8 +268,8 @@ const toggleCalendar = (event: Event) => {
   } else {
     showCalendar.value = true;
     setActivePanel('calendar');
-    tempDeparture.value = props.departure || tempDeparture.value;
-    tempReturn.value = props.returnDate || tempReturn.value;
+    tempDeparture.value = props.departure;
+    tempReturn.value = props.returnDate;
     nextTick(() => {
       updateCalendarPosition();
     });
@@ -268,19 +295,29 @@ const formatDateFull = (dateStr: string) => {
 const selectDate = (date: string) => {
   if (!date) return;
 
-  if (!tempDeparture.value || (tempDeparture.value && tempReturn.value)) {
+  if (props.tripType === 'oneWay') {
+    // Dla oneWay - ustaw tylko datę wylotu i zamknij
     tempDeparture.value = date;
-    tempReturn.value = '';
     emit('update:departure', date);
-  } else if (date < tempDeparture.value) {
-    tempDeparture.value = date;
-    tempReturn.value = '';
-    emit('update:departure', date);
-  } else {
-    tempReturn.value = date;
-    emit('update:returnDate', date);
+    emit('update:returnDate', '');
     showCalendar.value = false;
     closePanel();
+  } else {
+    // Dla roundTrip - zachowaj istniejącą logikę
+    if (!tempDeparture.value || (tempDeparture.value && tempReturn.value)) {
+      tempDeparture.value = date;
+      tempReturn.value = '';
+      emit('update:departure', date);
+    } else if (date < tempDeparture.value) {
+      tempDeparture.value = date;
+      tempReturn.value = '';
+      emit('update:departure', date);
+    } else {
+      tempReturn.value = date;
+      emit('update:returnDate', date);
+      showCalendar.value = false;
+      closePanel();
+    }
   }
 };
 
@@ -319,6 +356,7 @@ const handleClickOutside = (event: MouseEvent) => {
 onMounted(() => {
   tempDeparture.value = props.departure;
   tempReturn.value = props.returnDate;
+
   document.addEventListener('click', handleClickOutside);
   window.addEventListener('resize', updateCalendarPosition);
   window.addEventListener('scroll', updateCalendarPosition, true);

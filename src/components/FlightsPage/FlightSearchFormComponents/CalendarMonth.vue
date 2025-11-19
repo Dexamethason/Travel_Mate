@@ -33,9 +33,12 @@ interface Props {
   year: number;
   selectedStart: string;
   selectedEnd: string;
+  tripType?: 'roundTrip' | 'oneWay';
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  tripType: 'roundTrip',
+});
 
 defineEmits<{
   (e: 'select-date', date: string): void;
@@ -74,8 +77,9 @@ const getDayClasses = (day: DayObject) => {
   if (day.isOtherMonth) return 'invisible';
 
   const isStartDate = day.date === props.selectedStart;
-  const isEndDate = day.date === props.selectedEnd;
+  const isEndDate = props.tripType === 'roundTrip' && day.date === props.selectedEnd;
   const isInRange =
+    props.tripType === 'roundTrip' &&
     props.selectedStart &&
     props.selectedEnd &&
     day.date > props.selectedStart &&
@@ -87,7 +91,10 @@ const getDayClasses = (day: DayObject) => {
       'cursor-not-allowed text-gray-300 dark:text-gray-600': day.disabled,
       'hover:bg-blue-50 dark:hover:bg-blue-900 rounded-lg':
         !day.disabled && !isStartDate && !isEndDate && !isInRange,
-      'bg-blue-500 text-white font-bold rounded-l-lg': isStartDate,
+      'bg-blue-500 text-white font-bold': isStartDate && props.tripType === 'oneWay',
+      'bg-blue-500 text-white font-bold rounded-lg': isStartDate && props.tripType === 'oneWay',
+      'bg-blue-500 text-white font-bold rounded-l-lg':
+        isStartDate && props.tripType === 'roundTrip',
       'bg-blue-500 text-white font-bold rounded-r-lg': isEndDate,
       'bg-blue-100 dark:bg-blue-900': isInRange,
     },
