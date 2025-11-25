@@ -1,5 +1,6 @@
 import { ref } from 'vue';
 import type { Trip, CreateTripData, UpdateTripData } from '../types/trip';
+import { useAuth } from './useAuth';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
@@ -8,15 +9,19 @@ export function useTrips() {
   const currentTrip = ref<Trip | null>(null);
   const loading = ref(false);
   const error = ref<string | null>(null);
+  
+  const { getAuthHeaders } = useAuth();
 
-  // Pobierz wszystkie tripy
+  // Pobierz tripy dla zalogowanego użytkownika
   const fetchTrips = async () => {
     loading.value = true;
     error.value = null;
     try {
-      const response = await fetch(`${API_URL}/trips`);
+      const response = await fetch(`${API_URL}/trips`, {
+        headers: getAuthHeaders(),
+      });
       const data = await response.json();
-      
+
       if (data.success) {
         trips.value = data.data;
       } else {
@@ -35,9 +40,11 @@ export function useTrips() {
     loading.value = true;
     error.value = null;
     try {
-      const response = await fetch(`${API_URL}/trips/${tripId}`);
+      const response = await fetch(`${API_URL}/trips/${tripId}`, {
+        headers: getAuthHeaders(),
+      });
       const data = await response.json();
-      
+
       if (data.success) {
         currentTrip.value = data.data;
         return data.data;
@@ -61,14 +68,12 @@ export function useTrips() {
     try {
       const response = await fetch(`${API_URL}/trips`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: getAuthHeaders(),
         body: JSON.stringify(tripData),
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         await fetchTrips(); // Odśwież listę tripów
         return data.data.id;
@@ -92,14 +97,12 @@ export function useTrips() {
     try {
       const response = await fetch(`${API_URL}/trips/${tripId}`, {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: getAuthHeaders(),
         body: JSON.stringify(tripData),
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         await fetchTrips(); // Odśwież listę tripów
         if (currentTrip.value?.id === tripId) {
@@ -126,10 +129,11 @@ export function useTrips() {
     try {
       const response = await fetch(`${API_URL}/trips/${tripId}`, {
         method: 'DELETE',
+        headers: getAuthHeaders(),
       });
-      
+
       const data = await response.json();
-      
+
       if (data.success) {
         await fetchTrips(); // Odśwież listę tripów
         if (currentTrip.value?.id === tripId) {
@@ -161,4 +165,3 @@ export function useTrips() {
     deleteTrip,
   };
 }
-

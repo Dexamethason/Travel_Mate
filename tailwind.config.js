@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -21,13 +18,13 @@ export default {
         display: ['Plus Jakarta Sans', 'Noto Sans', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
-        'sm': '0.25rem',
-        'md': '0.5rem',
-        'lg': '0.75rem',
-        'xl': '1rem',
-        'full': '9999px',
+        sm: '0.25rem',
+        md: '0.5rem',
+        lg: '0.75rem',
+        xl: '1rem',
+        full: '9999px',
       },
     },
   },
   plugins: [],
-}
+};

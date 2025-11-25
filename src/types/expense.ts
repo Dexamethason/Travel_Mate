@@ -6,6 +6,7 @@ export interface SplitParticipant {
 export interface Expense {
   id?: string;
   tripId: string;
+  createdBy: string;
   date: string;
   category: string;
   description: string;
@@ -30,4 +31,3 @@ export interface UpdateExpenseData {
   amount?: number;
   splitWith?: SplitParticipant[];
 }
-

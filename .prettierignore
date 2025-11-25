@@ -1,0 +1,29 @@
+# Zależności
+node_modules
+dist
+coverage
+.vite
+
+# Pliki konfiguracyjne
+*.json
+*.config.js
+*.config.ts
+eslint.config.js
+vite.config.ts
+tailwind.config.js
+postcss.config.js
+tsconfig*.json
+package.json
+package-lock.json
+
+# Pliki dokumentacji
+*.md
+README.md
+project_info.md
+
+# Pliki środowiskowe
+.env*
+
+# Pliki git
+.git
+.gitignore

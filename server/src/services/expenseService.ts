@@ -1,5 +1,16 @@
 import { db } from '../config/firebase';
-import { collection, getDocs, addDoc, doc, getDoc, updateDoc, deleteDoc, query, where, Timestamp } from 'firebase/firestore/lite';
+import {
+  collection,
+  getDocs,
+  addDoc,
+  doc,
+  getDoc,
+  updateDoc,
+  deleteDoc,
+  query,
+  where,
+  Timestamp,
+} from 'firebase/firestore/lite';
 
 export interface SplitParticipant {
   participantId: string;
@@ -9,6 +20,7 @@ export interface SplitParticipant {
 export interface Expense {
   id?: string;
   tripId: string;
+  createdBy: string;
   date: string;
   category: string;
   description: string;
@@ -26,11 +38,14 @@ export const expenseService = {
       const expensesCol = collection(db, COLLECTION_NAME);
       const q = query(expensesCol, where('tripId', '==', tripId));
       const expenseSnapshot = await getDocs(q);
-      
-      return expenseSnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      } as Expense));
+
+      return expenseSnapshot.docs.map(
+        doc =>
+          ({
+            id: doc.id,
+            ...doc.data(),
+          }) as Expense
+      );
     } catch (error) {
       console.error('Error getting expenses:', error);
       throw error;
@@ -42,11 +57,11 @@ export const expenseService = {
     try {
       const expenseDoc = doc(db, COLLECTION_NAME, expenseId);
       const expenseSnapshot = await getDoc(expenseDoc);
-      
+
       if (expenseSnapshot.exists()) {
         return {
           id: expenseSnapshot.id,
-          ...expenseSnapshot.data()
+          ...expenseSnapshot.data(),
         } as Expense;
       }
       return null;
@@ -57,13 +72,17 @@ export const expenseService = {
   },
 
   // Tworzy nowy wydatek
-  async createExpense(expenseData: Omit<Expense, 'id' | 'createdAt'>): Promise<string> {
+  async createExpense(
+    expenseData: Omit<Expense, 'id' | 'createdAt' | 'createdBy'>,
+    createdBy: string
+  ): Promise<string> {
     try {
       const newExpense = {
         ...expenseData,
-        createdAt: Timestamp.now()
+        createdBy,
+        createdAt: Timestamp.now(),
       };
-      
+
       const docRef = await addDoc(collection(db, COLLECTION_NAME), newExpense);
       return docRef.id;
     } catch (error) {
@@ -72,9 +91,24 @@ export const expenseService = {
     }
   },
 
-  // Aktualizuje wydatek
-  async updateExpense(expenseId: string, expenseData: Partial<Omit<Expense, 'id' | 'createdAt'>>): Promise<void> {
+  // Aktualizuje wydatek (tylko twórca może edytować)
+  async updateExpense(
+    expenseId: string,
+    userId: string,
+    expenseData: Partial<Omit<Expense, 'id' | 'createdAt' | 'createdBy'>>
+  ): Promise<void> {
     try {
+      // Pobierz wydatek i sprawdź uprawnienia
+      const expense = await this.getExpenseById(expenseId);
+      
+      if (!expense) {
+        throw new Error('Wydatek nie został znaleziony');
+      }
+      
+      if (expense.createdBy !== userId) {
+        throw new Error('Tylko twórca może edytować ten wydatek');
+      }
+
       const expenseDoc = doc(db, COLLECTION_NAME, expenseId);
       await updateDoc(expenseDoc, expenseData);
     } catch (error) {
@@ -83,15 +117,25 @@ export const expenseService = {
     }
   },
 
-  // Usuwa wydatek
-  async deleteExpense(expenseId: string): Promise<void> {
+  // Usuwa wydatek (tylko twórca może usunąć)
+  async deleteExpense(expenseId: string, userId: string): Promise<void> {
     try {
+      // Pobierz wydatek i sprawdź uprawnienia
+      const expense = await this.getExpenseById(expenseId);
+      
+      if (!expense) {
+        throw new Error('Wydatek nie został znaleziony');
+      }
+      
+      if (expense.createdBy !== userId) {
+        throw new Error('Tylko twórca może usunąć ten wydatek');
+      }
+
       const expenseDoc = doc(db, COLLECTION_NAME, expenseId);
       await deleteDoc(expenseDoc);
     } catch (error) {
       console.error('Error deleting expense:', error);
       throw error;
     }
-  }
+  },
 };
-

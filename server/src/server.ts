@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 const corsOptions = {
   origin: serverEnv.allowedOrigins,
   credentials: true,
-  optionsSuccessStatus: 200
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
@@ -34,7 +34,20 @@ app.get('/health', (req, res) => {
     status: 'OK',
     uptime: process.uptime(),
     timestamp: new Date().toISOString(),
-    environment: serverEnv.nodeEnv
+    environment: serverEnv.nodeEnv,
+  });
+});
+
+// Główna trasa - przekierowanie do health check
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'Travel Mate API Server',
+    status: 'OK',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      api: '/api'
+    }
   });
 });
 
@@ -52,7 +65,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 // Uruchomienie serwera
-app.listen(PORT, () => {
+app.listen(Number(PORT), '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📍 Environment: ${serverEnv.nodeEnv}`);
   console.log(`🔗 Health check: http://localhost:${PORT}/health`);

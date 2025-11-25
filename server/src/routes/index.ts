@@ -1,6 +1,10 @@
 import express from 'express';
 import tripRoutes from './tripRoutes';
 import expenseRoutes from './expenseRoutes';
+import authRoutes from './authRoutes';
+import invitationRoutes from './invitationRoutes';
+import userRoutes from './userRoutes';
+import planRoutes from './planRoutes';
 
 const router = express.Router();
 
@@ -11,35 +15,42 @@ router.get('/', (req, res) => {
     version: '1.0.0',
     endpoints: {
       health: '/health',
+      auth: '/api/auth',
       users: '/api/users',
       trips: '/api/trips',
       expenses: '/api/expenses',
+      invitations: '/api/invitations',
+      plans: '/api/plans',
       accommodations: '/api/accommodations',
       activities: '/api/activities',
       flights: '/api/flights',
-      budget: '/api/budget'
-    }
+      budget: '/api/budget',
+    },
   });
 });
 
+router.use('/auth', authRoutes);
 router.use('/trips', tripRoutes);
 router.use('/expenses', expenseRoutes);
+router.use('/invitations', invitationRoutes);
+router.use('/users', userRoutes);
+router.use('/plans', planRoutes);
 
 // // Przykładowe trasy (do rozwinięcia)
 // router.get('/test-firestore', async (req, res) => {
 //   try {
 //     // Import funkcji Firebase (tylko gdy potrzebne)
 //     const { firestoreHelpers } = await import('../config/firebase');
-    
+
 //     // Test dodawania dokumentu
 //     const testData = {
 //       name: 'Test Document',
 //       createdAt: new Date().toISOString(),
 //       type: 'test'
 //     };
-    
+
 //     const docId = await firestoreHelpers.addDocument('test', testData);
-    
+
 //     res.json({
 //       success: true,
 //       message: 'Firestore test successful',
