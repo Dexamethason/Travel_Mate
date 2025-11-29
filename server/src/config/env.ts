@@ -58,3 +58,13 @@ if (!geminiEnv.apiKey) {
   console.warn('⚠️  GEMINI_API_KEY nie jest ustawiony w pliku .env');
   console.warn('📝 Dodaj GEMINI_API_KEY do pliku server/.env aby korzystać z AI planera');
 }
+
+export const amadeusEnv = {
+  clientId: process.env.AMADEUS_API_KEY || '',
+  clientSecret: process.env.AMADEUS_API_SECRET || '',
+};
+
+if (!amadeusEnv.clientId || !amadeusEnv.clientSecret) {
+  console.warn('⚠️  Dane do API Amadeus nie są ustawione');
+  console.warn('📝 Dodaj AMADEUS_API_KEY i AMADEUS_API_SECRET do pliku server/.env');
+}

@@ -11,13 +11,13 @@
       <input
         :value="modelValue"
         :placeholder="placeholder"
+        class="h-12 w-full rounded-lg border py-3 pl-10 pr-4 text-gray-900 transition-colors focus:outline-none dark:bg-gray-700 dark:text-white"
         :class="[
-          'h-12 w-full rounded-lg border py-3 pl-10 pr-4 text-gray-900 transition-colors focus:outline-none dark:bg-gray-700 dark:text-white',
           hasError
             ? 'border-red-500 bg-red-50 focus:border-red-500 dark:border-red-700 dark:bg-red-900/20'
             : 'border-gray-300 bg-white focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500',
         ]"
-        @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
+        @input="handleInput"
       />
     </div>
   </div>
@@ -37,7 +37,12 @@ withDefaults(defineProps<Props>(), {
   hasError: false,
 });
 
-defineEmits<{
+const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void;
 }>();
+
+const handleInput = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  emit('update:modelValue', target.value);
+};
 </script>

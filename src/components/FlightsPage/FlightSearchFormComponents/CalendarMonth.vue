@@ -91,7 +91,6 @@ const getDayClasses = (day: DayObject) => {
       'cursor-not-allowed text-gray-300 dark:text-gray-600': day.disabled,
       'hover:bg-blue-50 dark:hover:bg-blue-900 rounded-lg':
         !day.disabled && !isStartDate && !isEndDate && !isInRange,
-      'bg-blue-500 text-white font-bold': isStartDate && props.tripType === 'oneWay',
       'bg-blue-500 text-white font-bold rounded-lg': isStartDate && props.tripType === 'oneWay',
       'bg-blue-500 text-white font-bold rounded-l-lg':
         isStartDate && props.tripType === 'roundTrip',

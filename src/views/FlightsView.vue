@@ -11,8 +11,18 @@
     <div v-else class="py-8">
       <FlightSearchForm v-model="searchForm" :show-header="false" @search="handleSearch" />
 
+      <!-- Loader -->
+      <div v-if="isLoading" class="flex justify-center py-12">
+        <div class="h-12 w-12 animate-spin rounded-full border-4 border-blue-600 border-t-transparent"></div>
+      </div>
+
+      <!-- Błąd -->
+      <div v-else-if="error" class="my-8 rounded-lg bg-red-50 p-4 text-center text-red-600 dark:bg-red-900/20 dark:text-red-400">
+        {{ error }}
+      </div>
+
       <!-- Wyniki wyszukiwania -->
-      <div class="mt-8 flex gap-6">
+      <div v-else class="mt-8 flex gap-6">
         <!-- Filtry -->
         <FlightFilters
           v-model="filters"
@@ -77,6 +87,7 @@ import FlightSearchForm from '@/components/FlightsPage/FlightSearchForm.vue';
 import FlightFilters from '@/components/FlightsPage/FlightFilters.vue';
 import FlightCard from '@/components/FlightsPage/FlightCard.vue';
 import { useFlightFilters } from '../composables/useFlightFilters';
+import { useFlights } from '@/composables/useFlights';
 import type { Flight, SearchForm } from '@/types/flight';
 
 // Funkcja do wygenerowania domyślnych dat
@@ -113,79 +124,29 @@ const searchForm = ref<SearchForm>({
   tripType: 'roundTrip',
 });
 
-// Zamockowane dane - później zastąpisz to API
-const mockFlights = ref<Flight[]>([]);
+// Stan lotów z API
+const flights = ref<Flight[]>([]);
+const { searchFlights, isLoading, error } = useFlights();
 
-const { filters, filteredFlights, availableAirlines, resetFilters } = useFlightFilters(mockFlights);
+const { filters, filteredFlights, availableAirlines, resetFilters } = useFlightFilters(flights);
 
-const handleSearch = () => {
+const handleSearch = async () => {
   console.log('Wyszukiwanie lotów:', searchForm.value);
-
-  // Tymczasowo ustawiamy zamockowane dane
-  mockFlights.value = [
-    {
-      id: 1,
-      airline: 'LOT Polish Airlines',
-      stops: 'Bezpośredni',
-      departureTime: '08:30',
-      departureAirport: searchForm.value.from || 'WAW',
-      arrivalTime: '10:45',
-      arrivalAirport: searchForm.value.to || 'CDG',
-      duration: '2h 15min',
-      type: 'economy',
-      price: 450,
-    },
-    {
-      id: 2,
-      airline: 'Lufthansa',
-      stops: '1 przesiadka',
-      departureTime: '14:20',
-      departureAirport: searchForm.value.from || 'WAW',
-      arrivalTime: '19:30',
-      arrivalAirport: searchForm.value.to || 'CDG',
-      duration: '5h 10min',
-      type: 'economy',
-      price: 320,
-    },
-    {
-      id: 3,
-      airline: 'Ryanair',
-      stops: 'Bezpośredni',
-      departureTime: '06:00',
-      departureAirport: searchForm.value.from || 'WAW',
-      arrivalTime: '08:15',
-      arrivalAirport: searchForm.value.to || 'CDG',
-      duration: '2h 15min',
-      type: 'economy',
-      price: 180,
-    },
-    {
-      id: 4,
-      airline: 'Air France',
-      stops: 'Bezpośredni',
-      departureTime: '16:45',
-      departureAirport: searchForm.value.from || 'WAW',
-      arrivalTime: '19:00',
-      arrivalAirport: searchForm.value.to || 'CDG',
-      duration: '2h 15min',
-      type: 'business',
-      price: 890,
-    },
-    {
-      id: 5,
-      airline: 'Wizz Air',
-      stops: 'Bezpośredni',
-      departureTime: '22:30',
-      departureAirport: searchForm.value.from || 'WAW',
-      arrivalTime: '00:45',
-      arrivalAirport: searchForm.value.to || 'CDG',
-      duration: '2h 15min',
-      type: 'economy',
-      price: 150,
-    },
-  ];
-
+  
+  // Reset stanu przed nowym wyszukiwaniem
+  flights.value = [];
   searchPerformed.value = true;
+  
+  // Wykonaj zapytanie do API
+  const searchParams = {
+    ...searchForm.value,
+    // Upewniamy się, że data jest w formacie YYYY-MM-DD
+    date: searchForm.value.departure,
+    // Przekazujemy datę powrotu tylko dla lotów w obie strony
+    returnDate: searchForm.value.tripType === 'roundTrip' ? searchForm.value.return : undefined
+  };
+  const results = await searchFlights(searchParams);
+  flights.value = results;
 
   // Scroll do góry strony po wyszukaniu
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -207,31 +168,31 @@ const parseTimeForSort = (timeString: string): number => {
 };
 
 const sortedFlights = computed(() => {
-  const flights = [...filteredFlights.value];
+  const flightsList = [...filteredFlights.value];
 
   switch (sortBy.value) {
     case 'price-asc':
-      return flights.sort((a, b) => a.price - b.price);
+      return flightsList.sort((a, b) => a.price - b.price);
     case 'price-desc':
-      return flights.sort((a, b) => b.price - a.price);
+      return flightsList.sort((a, b) => b.price - a.price);
     case 'duration-asc':
-      return flights.sort(
+      return flightsList.sort(
         (a, b) => parseDurationForSort(a.duration) - parseDurationForSort(b.duration)
       );
     case 'duration-desc':
-      return flights.sort(
+      return flightsList.sort(
         (a, b) => parseDurationForSort(b.duration) - parseDurationForSort(a.duration)
       );
     case 'departure-asc':
-      return flights.sort(
+      return flightsList.sort(
         (a, b) => parseTimeForSort(a.departureTime) - parseTimeForSort(b.departureTime)
       );
     case 'departure-desc':
-      return flights.sort(
+      return flightsList.sort(
         (a, b) => parseTimeForSort(b.departureTime) - parseTimeForSort(a.departureTime)
       );
     default:
-      return flights;
+      return flightsList;
   }
 });
 </script>

@@ -8,8 +8,16 @@ export interface SearchForm {
   tripType: 'roundTrip' | 'oneWay';
 }
 
+export interface FlightSearchParams {
+  from: string;
+  to: string;
+  date: string;
+  returnDate?: string;
+  passengers?: number;
+}
+
 export interface Flight {
-  id: number;
+  id: number | string;
   airline: string;
   stops: string;
   departureTime: string;
@@ -19,6 +27,21 @@ export interface Flight {
   duration: string;
   type: string;
   price: number;
+  // Powrotny (opcjonalne dlatego ?)
+  returnAirline?: string;
+  returnStops?: string;
+  returnDepartureTime?: string;
+  returnDepartureAirport?: string;
+  returnArrivalTime?: string;
+  returnArrivalAirport?: string;
+  returnDuration?: string;
+}
+
+export interface Location {
+  name: string;
+  iataCode: string;
+  cityName: string;
+  countryName: string;
 }
 
 export interface FlightFiltersType {
