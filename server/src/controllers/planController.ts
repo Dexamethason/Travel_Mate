@@ -193,7 +193,7 @@ export const planController = {
   async deletePlan(req: Request, res: Response) {
     try {
       const planId = req.params.id;
-      const userId = req.body.userId || req.query.userId as string;
+      const userId = (req.body?.userId || req.query.userId) as string;
 
       if (!userId) {
         return res.status(400).json({
@@ -220,6 +220,13 @@ export const planController = {
 
       if (error.message === 'Brak dostępu do tego planu') {
         return res.status(403).json({
+          success: false,
+          error: error.message,
+        });
+      }
+
+      if (error.message === 'userId jest wymagany') {
+        return res.status(400).json({
           success: false,
           error: error.message,
         });
