@@ -29,7 +29,7 @@
           <div>
             <label class="mb-2 flex items-center gap-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
               <component :is="icons.MapPinIcon" class="h-4 w-4 text-gray-500" />
-              Miejsce wyjazdu</label>
+              Miejsce wyjazdu *</label>
             <input v-model="formData.origin" type="text" placeholder="np. Warszawa, Kraków" class="w-full rounded-lg border px-4 py-2" />
             <p v-if="showErrors && errors.origin" class="mt-1 text-xs text-red-600">{{ errors.origin }}</p>
           </div>
@@ -200,7 +200,7 @@
         <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
             <label v-for="interest in interestOptions" :key="interest.value" class="flex cursor-pointer items-center gap-2 rounded-lg border p-3 transition-all hover:border-blue-500"
             :class="{ 'border-blue-500 bg-blue-50': formData.interests.includes(interest.value) }">
-            <input type="checkbox" :value="interest.value" v-model="formData.interests" class="h-4 w-4" />
+            <input type="checkbox" :value="interest.value" v-model="formData.interests" class="h-4 w-4 cursor-pointer" />
             <span class="text-sm">{{ interest.label }}</span>
           </label>
         </div>
@@ -362,6 +362,7 @@ const showErrors = ref(false);
 const errors = computed(() => {
   const e: Record<string, string> = {};
   if (currentStep.value === 1) {
+    if (!formData.value.origin || !formData.value.origin.trim()) e.origin = 'Miejsce wyjazdu jest wymagane';
     if (!formData.value.destination || !formData.value.destination.trim()) e.destination = 'Cel podróży jest wymagany';
     if (!formData.value.start_date) e.start_date = 'Data wyjazdu jest wymagana';
     if (!formData.value.end_date) e.end_date = 'Data powrotu jest wymagana';
@@ -451,6 +452,7 @@ const removeAvoid = (idx: number) => avoidTags.value.splice(idx, 1);
 const getStepErrors = (step: number): Record<string, string> => {
   const e: Record<string, string> = {};
   if (step === 1) {
+    if (!formData.value.origin || !formData.value.origin.trim()) e.origin = 'Miejsce wyjazdu jest wymagane';
     if (!formData.value.destination || !formData.value.destination.trim()) e.destination = 'Cel podróży jest wymagany';
     if (!formData.value.start_date) e.start_date = 'Data wyjazdu jest wymagana';
     if (!formData.value.end_date) e.end_date = 'Data powrotu jest wymagana';

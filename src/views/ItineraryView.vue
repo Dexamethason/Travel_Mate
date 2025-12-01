@@ -37,17 +37,22 @@
         </div>
       </div>
 
-      <!-- komunikaty -->
-      <div v-if="error" class="mb-6 rounded-lg bg-red-50 p-4 dark:bg-red-900/20">
+      <!-- komunikaty błędów -->
+      <div v-if="error || Object.keys(validationErrors).length > 0" class="mb-6 rounded-lg bg-red-50 p-4 dark:bg-red-900/20">
         <div class="flex items-start gap-3">
           <ExclamationTriangleIcon class="h-6 w-6 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
           <div class="flex-1">
             <h3 class="font-semibold text-red-800 dark:text-red-200">Wystąpił błąd</h3>
-            <p class="text-sm text-red-700 dark:text-red-300">{{ error }}</p>
+            <p v-if="error" class="text-sm text-red-700 dark:text-red-300">{{ error }}</p>
+            <div v-else-if="Object.keys(validationErrors).length > 0" class="space-y-1">
+              <p v-for="(validationError, key) in validationErrors" :key="key" class="text-sm text-red-700 dark:text-red-300">
+                {{ validationError }}
+              </p>
+            </div>
           </div>
           <button
             class="cursor-pointer text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-200"
-            @click="clearError"
+            @click="clearError(); clearAllErrors()"
           >
             <XMarkIcon class="h-5 w-5" />
           </button>
@@ -150,12 +155,24 @@
           </div>
           <PlanDisplay
             :plan="selectedPlan"
-            :show-actions="true"
-            @edit="editPlan(selectedPlan)"
-            @delete="deletePlanConfirm(selectedPlan)"
+            :show-actions="false"
           />
         </div>
       </div>
+
+      <!-- Modal potwierdzenia usunięcia -->
+      <ConfirmModal
+        :show="showDeleteConfirm"
+        type="danger"
+        title="Usuń plan podróży"
+        :message="planToDelete ? `Czy na pewno chcesz usunąć plan podróży do: ${planToDelete.destination}? Tej operacji nie można cofnąć.` : ''"
+        confirm-text="Usuń"
+        cancel-text="Anuluj"
+        :loading="loading"
+        loading-text="Usuwanie..."
+        @close="closeDeleteConfirm"
+        @confirm="handleDeleteConfirm"
+      />
     </div>
   </div>
 </template>
@@ -164,8 +181,10 @@
 import { ref, onMounted, computed, watch } from 'vue';
 import { useAuth } from '../composables/useAuth';
 import { usePlans } from '../composables/usePlans';
+import { usePlanValidation } from '../composables/usePlanValidation';
 import PlannerForm from '../components/PlannerForm.vue';
 import PlanDisplay from '../components/PlanDisplay.vue';
+import ConfirmModal from '../components/ConfirmModal.vue';
 import type { PlannerInput, TravelPlan } from '../types/plan';
 import {
   PlusIcon,
@@ -191,10 +210,17 @@ const {
   deletePlan,
   clearError,
 } = usePlans();
+const {
+  validationErrors,
+  validateDeletePlan,
+  clearAllErrors,
+} = usePlanValidation();
 
 // stan widoku - początkowo null, ustawimy po załadowaniu planów
 const currentView = ref<'create' | 'list' | null>(null);
 const selectedPlan = ref<TravelPlan | null>(null);
+const showDeleteConfirm = ref(false);
+const planToDelete = ref<TravelPlan | null>(null);
 
 const userId = computed(() => currentUser.value?.uid || '');
 
@@ -244,39 +270,46 @@ const viewPlanDetails = (plan: TravelPlan) => {
   selectedPlan.value = plan;
 };
 
-// TODO: implementacja edycji planu (Bartek)
-const editPlan = (plan: TravelPlan) => {
-  console.log('Edycja planu:', plan.id);
-  // TODO: Implementacja edycji
-  alert('Funkcja edycji zostanie dodana wkrótce!');
+// usuwanie planu - otwórz modal potwierdzenia
+const deletePlanConfirm = (plan: TravelPlan) => {
+  clearAllErrors();
+  
+  // Walidacja przed pokazaniem modala
+  if (!validateDeletePlan(plan, userId.value)) {
+    // Wyświetl pierwszy błąd walidacji
+    const firstError = Object.values(validationErrors.value)[0];
+    if (firstError) {
+      error.value = firstError;
+    }
+    return;
+  }
+  
+  planToDelete.value = plan;
+  showDeleteConfirm.value = true;
 };
 
-// usuwanie planu
-const deletePlanConfirm = async (plan: TravelPlan) => {
-  if (!plan.id) {
-    error.value = 'Brak ID planu';
-    return;
-  }
+// Wykonaj usunięcie po potwierdzeniu
+const handleDeleteConfirm = async () => {
+  if (!planToDelete.value) return;
   
-  if (!userId.value) {
-    error.value = 'Musisz być zalogowany, aby usunąć plan';
-    return;
-  }
-  
-  const confirmed = confirm(
-    `Czy na pewno chcesz usunąć plan podróży do: ${plan.destination}?`
-  );
-  
-  if (confirmed) {
-    const success = await deletePlan(plan.id, userId.value);
-    if (success) {
-      selectedPlan.value = null;
-      // jak usunie wszystkie plany to przechodzi do widoku create
-      if (savedPlans.value.length === 0) {
-        currentView.value = 'create';
-      }
+  const success = await deletePlan(planToDelete.value.id!, userId.value);
+  if (success) {
+    selectedPlan.value = null;
+    showDeleteConfirm.value = false;
+    planToDelete.value = null;
+    clearAllErrors();
+    // jak usunie wszystkie plany to przechodzi do widoku create
+    if (savedPlans.value.length === 0) {
+      currentView.value = 'create';
     }
   }
+};
+
+// Zamknij modal
+const closeDeleteConfirm = () => {
+  showDeleteConfirm.value = false;
+  planToDelete.value = null;
+  clearAllErrors();
 };
 
 const formatDateShort = (dateString: string | Date) => {
