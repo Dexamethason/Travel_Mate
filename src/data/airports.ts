@@ -1,0 +1,42560 @@
+// Auto-generated from OpenFlights database
+// Total: 6072 airports
+
+export interface Airport {
+  code: string;
+  name: string;
+  city_en: string;
+  city_pl: string;
+  country_en: string;
+}
+
+export const airports: Airport[] = [
+  {
+    "code": "GKA",
+    "name": "Goroka Airport",
+    "city_en": "Goroka",
+    "city_pl": "Goroka",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "MAG",
+    "name": "Madang Airport",
+    "city_en": "Madang",
+    "city_pl": "Madang",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "HGU",
+    "name": "Mount Hagen Kagamuga Airport",
+    "city_en": "Mount Hagen",
+    "city_pl": "Mount Hagen",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "LAE",
+    "name": "Nadzab Airport",
+    "city_en": "Nadzab",
+    "city_pl": "Nadzab",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "POM",
+    "name": "Port Moresby Jacksons International Airport",
+    "city_en": "Port Moresby",
+    "city_pl": "Port Moresby",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "WWK",
+    "name": "Wewak International Airport",
+    "city_en": "Wewak",
+    "city_pl": "Wewak",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "UAK",
+    "name": "Narsarsuaq Airport",
+    "city_en": "Narssarssuaq",
+    "city_pl": "Narssarssuaq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "GOH",
+    "name": "Godthaab / Nuuk Airport",
+    "city_en": "Godthaab",
+    "city_pl": "Godthaab",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "SFJ",
+    "name": "Kangerlussuaq Airport",
+    "city_en": "Sondrestrom",
+    "city_pl": "Sondrestrom",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "THU",
+    "name": "Thule Air Base",
+    "city_en": "Thule",
+    "city_pl": "Thule",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "AEY",
+    "name": "Akureyri Airport",
+    "city_en": "Akureyri",
+    "city_pl": "Akureyri",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "EGS",
+    "name": "Egilsstaðir Airport",
+    "city_en": "Egilsstadir",
+    "city_pl": "Egilsstadir",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "HFN",
+    "name": "Hornafjörður Airport",
+    "city_en": "Hofn",
+    "city_pl": "Hofn",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "HZK",
+    "name": "Húsavík Airport",
+    "city_en": "Husavik",
+    "city_pl": "Husavik",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "IFJ",
+    "name": "Ísafjörður Airport",
+    "city_en": "Isafjordur",
+    "city_pl": "Isafjordur",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "KEF",
+    "name": "Keflavik International Airport",
+    "city_en": "Keflavik",
+    "city_pl": "Keflavik",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "PFJ",
+    "name": "Patreksfjörður Airport",
+    "city_en": "Patreksfjordur",
+    "city_pl": "Patreksfjordur",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "RKV",
+    "name": "Reykjavik Airport",
+    "city_en": "Reykjavik",
+    "city_pl": "Reykjavik",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "SIJ",
+    "name": "Siglufjörður Airport",
+    "city_en": "Siglufjordur",
+    "city_pl": "Siglufjordur",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "VEY",
+    "name": "Vestmannaeyjar Airport",
+    "city_en": "Vestmannaeyjar",
+    "city_pl": "Vestmannaeyjar",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "YAM",
+    "name": "Sault Ste Marie Airport",
+    "city_en": "Sault Sainte Marie",
+    "city_pl": "Sault Sainte Marie",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAY",
+    "name": "St. Anthony Airport",
+    "city_en": "St. Anthony",
+    "city_pl": "St. Anthony",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAZ",
+    "name": "Tofino / Long Beach Airport",
+    "city_en": "Tofino",
+    "city_pl": "Tofino",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBB",
+    "name": "Kugaaruk Airport",
+    "city_en": "Pelly Bay",
+    "city_pl": "Pelly Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBC",
+    "name": "Baie Comeau Airport",
+    "city_en": "Baie Comeau",
+    "city_pl": "Baie Comeau",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBG",
+    "name": "CFB Bagotville",
+    "city_en": "Bagotville",
+    "city_pl": "Bagotville",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBK",
+    "name": "Baker Lake Airport",
+    "city_en": "Baker Lake",
+    "city_pl": "Baker Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBL",
+    "name": "Campbell River Airport",
+    "city_en": "Campbell River",
+    "city_pl": "Campbell River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBR",
+    "name": "Brandon Municipal Airport",
+    "city_en": "Brandon",
+    "city_pl": "Brandon",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCB",
+    "name": "Cambridge Bay Airport",
+    "city_en": "Cambridge Bay",
+    "city_pl": "Cambridge Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCD",
+    "name": "Nanaimo Airport",
+    "city_en": "Nanaimo",
+    "city_pl": "Nanaimo",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCG",
+    "name": "Castlegar/West Kootenay Regional Airport",
+    "city_en": "Castlegar",
+    "city_pl": "Castlegar",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCH",
+    "name": "Miramichi Airport",
+    "city_en": "Chatham",
+    "city_pl": "Chatham",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCL",
+    "name": "Charlo Airport",
+    "city_en": "Charlo",
+    "city_pl": "Charlo",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCO",
+    "name": "Kugluktuk Airport",
+    "city_en": "Coppermine",
+    "city_pl": "Coppermine",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCT",
+    "name": "Coronation Airport",
+    "city_en": "Coronation",
+    "city_pl": "Coronation",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCW",
+    "name": "Chilliwack Airport",
+    "city_en": "Chilliwack",
+    "city_pl": "Chilliwack",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCY",
+    "name": "Clyde River Airport",
+    "city_en": "Clyde River",
+    "city_pl": "Clyde River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZS",
+    "name": "Coral Harbour Airport",
+    "city_en": "Coral Harbour",
+    "city_pl": "Coral Harbour",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDA",
+    "name": "Dawson City Airport",
+    "city_en": "Dawson",
+    "city_pl": "Dawson",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDB",
+    "name": "Burwash Airport",
+    "city_en": "Burwash",
+    "city_pl": "Burwash",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDF",
+    "name": "Deer Lake Airport",
+    "city_en": "Deer Lake",
+    "city_pl": "Deer Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDL",
+    "name": "Dease Lake Airport",
+    "city_en": "Dease Lake",
+    "city_pl": "Dease Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDN",
+    "name": "Dauphin Barker Airport",
+    "city_en": "Dauphin",
+    "city_pl": "Dauphin",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDQ",
+    "name": "Dawson Creek Airport",
+    "city_en": "Dawson Creek",
+    "city_pl": "Dawson Creek",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YEG",
+    "name": "Edmonton International Airport",
+    "city_en": "Edmonton",
+    "city_pl": "Edmonton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YEK",
+    "name": "Arviat Airport",
+    "city_en": "Eskimo Point",
+    "city_pl": "Eskimo Point",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YEN",
+    "name": "Estevan Airport",
+    "city_en": "Estevan",
+    "city_pl": "Estevan",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YET",
+    "name": "Edson Airport",
+    "city_en": "Edson",
+    "city_pl": "Edson",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YEU",
+    "name": "Eureka Airport",
+    "city_en": "Eureka",
+    "city_pl": "Eureka",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YEV",
+    "name": "Inuvik Mike Zubko Airport",
+    "city_en": "Inuvik",
+    "city_pl": "Inuvik",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFB",
+    "name": "Iqaluit Airport",
+    "city_en": "Iqaluit",
+    "city_pl": "Iqaluit",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFC",
+    "name": "Fredericton Airport",
+    "city_en": "Fredericton",
+    "city_pl": "Fredericton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFE",
+    "name": "Forestville Airport",
+    "city_en": "Forestville",
+    "city_pl": "Forestville",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFO",
+    "name": "Flin Flon Airport",
+    "city_en": "Flin Flon",
+    "city_pl": "Flin Flon",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFR",
+    "name": "Fort Resolution Airport",
+    "city_en": "Fort Resolution",
+    "city_pl": "Fort Resolution",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFS",
+    "name": "Fort Simpson Airport",
+    "city_en": "Fort Simpson",
+    "city_pl": "Fort Simpson",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGK",
+    "name": "Kingston Norman Rogers Airport",
+    "city_en": "Kingston",
+    "city_pl": "Kingston",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGL",
+    "name": "La Grande Rivière Airport",
+    "city_en": "La Grande Riviere",
+    "city_pl": "La Grande Riviere",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGP",
+    "name": "Gaspé (Michel-Pouliot) Airport",
+    "city_en": "Gaspe",
+    "city_pl": "Gaspe",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGQ",
+    "name": "Geraldton Greenstone Regional Airport",
+    "city_en": "Geraldton",
+    "city_pl": "Geraldton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGR",
+    "name": "Îles-de-la-Madeleine Airport",
+    "city_en": "Iles De La Madeleine",
+    "city_pl": "Iles De La Madeleine",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHB",
+    "name": "Hudson Bay Airport",
+    "city_en": "Hudson Bay",
+    "city_pl": "Hudson Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHD",
+    "name": "Dryden Regional Airport",
+    "city_en": "Dryden",
+    "city_pl": "Dryden",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHI",
+    "name": "Ulukhaktok Holman Airport",
+    "city_en": "Holman Island",
+    "city_pl": "Holman Island",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHK",
+    "name": "Gjoa Haven Airport",
+    "city_en": "Gjoa Haven",
+    "city_pl": "Gjoa Haven",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHM",
+    "name": "John C. Munro Hamilton International Airport",
+    "city_en": "Hamilton",
+    "city_pl": "Hamilton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHU",
+    "name": "Montréal / Saint-Hubert Airport",
+    "city_en": "Montreal",
+    "city_pl": "Montreal",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHY",
+    "name": "Hay River / Merlyn Carter Airport",
+    "city_en": "Hay River",
+    "city_pl": "Hay River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHZ",
+    "name": "Halifax / Stanfield International Airport",
+    "city_en": "Halifax",
+    "city_pl": "Halifax",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YIB",
+    "name": "Atikokan Municipal Airport",
+    "city_en": "Atikokan",
+    "city_pl": "Atikokan",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YIO",
+    "name": "Pond Inlet Airport",
+    "city_en": "Pond Inlet",
+    "city_pl": "Pond Inlet",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YJN",
+    "name": "St Jean Airport",
+    "city_en": "St. Jean",
+    "city_pl": "St. Jean",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YJT",
+    "name": "Stephenville Airport",
+    "city_en": "Stephenville",
+    "city_pl": "Stephenville",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKA",
+    "name": "Kamloops Airport",
+    "city_en": "Kamloops",
+    "city_pl": "Kamloops",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKF",
+    "name": "Waterloo Airport",
+    "city_en": "Waterloo",
+    "city_pl": "Waterloo",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKL",
+    "name": "Schefferville Airport",
+    "city_en": "Schefferville",
+    "city_pl": "Schefferville",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKY",
+    "name": "Kindersley Airport",
+    "city_en": "Kindersley",
+    "city_pl": "Kindersley",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKZ",
+    "name": "Buttonville Municipal Airport",
+    "city_en": "Toronto",
+    "city_pl": "Toronto",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLD",
+    "name": "Chapleau Airport",
+    "city_en": "Chapleau",
+    "city_pl": "Chapleau",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLJ",
+    "name": "Meadow Lake Airport",
+    "city_en": "Meadow Lake",
+    "city_pl": "Meadow Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLL",
+    "name": "Lloydminster Airport",
+    "city_en": "Lloydminster",
+    "city_pl": "Lloydminster",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLT",
+    "name": "Alert Airport",
+    "city_en": "Alert",
+    "city_pl": "Alert",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLW",
+    "name": "Kelowna International Airport",
+    "city_en": "Kelowna",
+    "city_pl": "Kelowna",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMA",
+    "name": "Mayo Airport",
+    "city_en": "Mayo",
+    "city_pl": "Mayo",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMJ",
+    "name": "Moose Jaw Air Vice Marshal C. M. McEwen Airport",
+    "city_en": "Moose Jaw",
+    "city_pl": "Moose Jaw",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMM",
+    "name": "Fort McMurray Airport",
+    "city_en": "Fort Mcmurray",
+    "city_pl": "Fort Mcmurray",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMO",
+    "name": "Moosonee Airport",
+    "city_en": "Moosonee",
+    "city_pl": "Moosonee",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMW",
+    "name": "Maniwaki Airport",
+    "city_en": "Maniwaki",
+    "city_pl": "Maniwaki",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMX",
+    "name": "Montreal International (Mirabel) Airport",
+    "city_en": "Montreal",
+    "city_pl": "Montreal",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YNA",
+    "name": "Natashquan Airport",
+    "city_en": "Natashquan",
+    "city_pl": "Natashquan",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YND",
+    "name": "Ottawa / Gatineau Airport",
+    "city_en": "Gatineau",
+    "city_pl": "Gatineau",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YNM",
+    "name": "Matagami Airport",
+    "city_en": "Matagami",
+    "city_pl": "Matagami",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YOC",
+    "name": "Old Crow Airport",
+    "city_en": "Old Crow",
+    "city_pl": "Old Crow",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YOD",
+    "name": "CFB Cold Lake",
+    "city_en": "Cold Lake",
+    "city_pl": "Cold Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YOJ",
+    "name": "High Level Airport",
+    "city_en": "High Level",
+    "city_pl": "High Level",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YOW",
+    "name": "Ottawa Macdonald-Cartier International Airport",
+    "city_en": "Ottawa",
+    "city_pl": "Ottawa",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPA",
+    "name": "Prince Albert Glass Field",
+    "city_en": "Prince Albert",
+    "city_pl": "Prince Albert",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPE",
+    "name": "Peace River Airport",
+    "city_en": "Peace River",
+    "city_pl": "Peace River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPG",
+    "name": "Southport Airport",
+    "city_en": "Portage-la-prairie",
+    "city_pl": "Portage-la-prairie",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPL",
+    "name": "Pickle Lake Airport",
+    "city_en": "Pickle Lake",
+    "city_pl": "Pickle Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPN",
+    "name": "Port Menier Airport",
+    "city_en": "Port Menier",
+    "city_pl": "Port Menier",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPQ",
+    "name": "Peterborough Airport",
+    "city_en": "Peterborough",
+    "city_pl": "Peterborough",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPR",
+    "name": "Prince Rupert Airport",
+    "city_en": "Prince Pupert",
+    "city_pl": "Prince Pupert",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPY",
+    "name": "Fort Chipewyan Airport",
+    "city_en": "Fort Chipewyan",
+    "city_pl": "Fort Chipewyan",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQA",
+    "name": "Muskoka Airport",
+    "city_en": "Muskoka",
+    "city_pl": "Muskoka",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQB",
+    "name": "Quebec Jean Lesage International Airport",
+    "city_en": "Quebec",
+    "city_pl": "Quebec",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQF",
+    "name": "Red Deer Regional Airport",
+    "city_en": "Red Deer Industrial",
+    "city_pl": "Red Deer Industrial",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQG",
+    "name": "Windsor Airport",
+    "city_en": "Windsor",
+    "city_pl": "Windsor",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQH",
+    "name": "Watson Lake Airport",
+    "city_en": "Watson Lake",
+    "city_pl": "Watson Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQK",
+    "name": "Kenora Airport",
+    "city_en": "Kenora",
+    "city_pl": "Kenora",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQL",
+    "name": "Lethbridge County Airport",
+    "city_en": "Lethbridge",
+    "city_pl": "Lethbridge",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQM",
+    "name": "Greater Moncton International Airport",
+    "city_en": "Moncton",
+    "city_pl": "Moncton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQQ",
+    "name": "Comox Airport",
+    "city_en": "Comox",
+    "city_pl": "Comox",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQR",
+    "name": "Regina International Airport",
+    "city_en": "Regina",
+    "city_pl": "Regina",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQT",
+    "name": "Thunder Bay Airport",
+    "city_en": "Thunder Bay",
+    "city_pl": "Thunder Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQU",
+    "name": "Grande Prairie Airport",
+    "city_en": "Grande Prairie",
+    "city_pl": "Grande Prairie",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQV",
+    "name": "Yorkton Municipal Airport",
+    "city_en": "Yorkton",
+    "city_pl": "Yorkton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQW",
+    "name": "North Battleford Airport",
+    "city_en": "North Battleford",
+    "city_pl": "North Battleford",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQX",
+    "name": "Gander International Airport",
+    "city_en": "Gander",
+    "city_pl": "Gander",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQY",
+    "name": "Sydney / J.A. Douglas McCurdy Airport",
+    "city_en": "Sydney",
+    "city_pl": "Sydney",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQZ",
+    "name": "Quesnel Airport",
+    "city_en": "Quesnel",
+    "city_pl": "Quesnel",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRB",
+    "name": "Resolute Bay Airport",
+    "city_en": "Resolute",
+    "city_pl": "Resolute",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRI",
+    "name": "Rivière-du-Loup Airport",
+    "city_en": "Riviere Du Loup",
+    "city_pl": "Riviere Du Loup",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRJ",
+    "name": "Roberval Airport",
+    "city_en": "Roberval",
+    "city_pl": "Roberval",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRM",
+    "name": "Rocky Mountain House Airport",
+    "city_en": "Rocky Mountain House",
+    "city_pl": "Rocky Mountain House",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRT",
+    "name": "Rankin Inlet Airport",
+    "city_en": "Rankin Inlet",
+    "city_pl": "Rankin Inlet",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSB",
+    "name": "Sudbury Airport",
+    "city_en": "Sudbury",
+    "city_pl": "Sudbury",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSC",
+    "name": "Sherbrooke Airport",
+    "city_en": "Sherbrooke",
+    "city_pl": "Sherbrooke",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSJ",
+    "name": "Saint John Airport",
+    "city_en": "St. John",
+    "city_pl": "St. John",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSM",
+    "name": "Fort Smith Airport",
+    "city_en": "Fort Smith",
+    "city_pl": "Fort Smith",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSR",
+    "name": "Nanisivik Airport",
+    "city_en": "Nanisivik",
+    "city_pl": "Nanisivik",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSU",
+    "name": "Summerside Airport",
+    "city_en": "Summerside",
+    "city_pl": "Summerside",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSY",
+    "name": "Sachs Harbour (David Nasogaluak Jr. Saaryuaq) Airport",
+    "city_en": "Sachs Harbour",
+    "city_pl": "Sachs Harbour",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YTE",
+    "name": "Cape Dorset Airport",
+    "city_en": "Cape Dorset",
+    "city_pl": "Cape Dorset",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YTH",
+    "name": "Thompson Airport",
+    "city_en": "Thompson",
+    "city_pl": "Thompson",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YTR",
+    "name": "CFB Trenton",
+    "city_en": "Trenton",
+    "city_pl": "Trenton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YTS",
+    "name": "Timmins/Victor M. Power",
+    "city_en": "Timmins",
+    "city_pl": "Timmins",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YTZ",
+    "name": "Billy Bishop Toronto City Centre Airport",
+    "city_en": "Toronto",
+    "city_pl": "Toronto",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YUB",
+    "name": "Tuktoyaktuk Airport",
+    "city_en": "Tuktoyaktuk",
+    "city_pl": "Tuktoyaktuk",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YUL",
+    "name": "Montreal / Pierre Elliott Trudeau International Airport",
+    "city_en": "Montreal",
+    "city_pl": "Montreal",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YUT",
+    "name": "Repulse Bay Airport",
+    "city_en": "Repulse Bay",
+    "city_pl": "Repulse Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YUX",
+    "name": "Hall Beach Airport",
+    "city_en": "Hall Beach",
+    "city_pl": "Hall Beach",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YUY",
+    "name": "Rouyn Noranda Airport",
+    "city_en": "Rouyn",
+    "city_pl": "Rouyn",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVC",
+    "name": "La Ronge Airport",
+    "city_en": "La Ronge",
+    "city_pl": "La Ronge",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVG",
+    "name": "Vermilion Airport",
+    "city_en": "Vermillion",
+    "city_pl": "Vermillion",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVM",
+    "name": "Qikiqtarjuaq Airport",
+    "city_en": "Broughton Island",
+    "city_pl": "Broughton Island",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVO",
+    "name": "Val-d'Or Airport",
+    "city_en": "Val D'or",
+    "city_pl": "Val D'or",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVP",
+    "name": "Kuujjuaq Airport",
+    "city_en": "Quujjuaq",
+    "city_pl": "Quujjuaq",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVQ",
+    "name": "Norman Wells Airport",
+    "city_en": "Norman Wells",
+    "city_pl": "Norman Wells",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVR",
+    "name": "Vancouver International Airport",
+    "city_en": "Vancouver",
+    "city_pl": "Vancouver",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVT",
+    "name": "Buffalo Narrows Airport",
+    "city_en": "Buffalo Narrows",
+    "city_pl": "Buffalo Narrows",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVV",
+    "name": "Wiarton Airport",
+    "city_en": "Wiarton",
+    "city_pl": "Wiarton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YWA",
+    "name": "Petawawa Airport",
+    "city_en": "Petawawa",
+    "city_pl": "Petawawa",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YWG",
+    "name": "Winnipeg / James Armstrong Richardson International Airport",
+    "city_en": "Winnipeg",
+    "city_pl": "Winnipeg",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YWK",
+    "name": "Wabush Airport",
+    "city_en": "Wabush",
+    "city_pl": "Wabush",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YWL",
+    "name": "Williams Lake Airport",
+    "city_en": "Williams Lake",
+    "city_pl": "Williams Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YWY",
+    "name": "Wrigley Airport",
+    "city_en": "Wrigley",
+    "city_pl": "Wrigley",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXC",
+    "name": "Cranbrook/Canadian Rockies International Airport",
+    "city_en": "Cranbrook",
+    "city_pl": "Cranbrook",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXD",
+    "name": "Edmonton City Centre (Blatchford Field) Airport",
+    "city_en": "Edmonton",
+    "city_pl": "Edmonton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXE",
+    "name": "Saskatoon John G. Diefenbaker International Airport",
+    "city_en": "Saskatoon",
+    "city_pl": "Saskatoon",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXH",
+    "name": "Medicine Hat Airport",
+    "city_en": "Medicine Hat",
+    "city_pl": "Medicine Hat",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXJ",
+    "name": "Fort St John Airport",
+    "city_en": "Fort Saint John",
+    "city_pl": "Fort Saint John",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXL",
+    "name": "Sioux Lookout Airport",
+    "city_en": "Sioux Lookout",
+    "city_pl": "Sioux Lookout",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXP",
+    "name": "Pangnirtung Airport",
+    "city_en": "Pangnirtung",
+    "city_pl": "Pangnirtung",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXR",
+    "name": "Earlton (Timiskaming Regional) Airport",
+    "city_en": "Earlton",
+    "city_pl": "Earlton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXS",
+    "name": "Prince George Airport",
+    "city_en": "Prince George",
+    "city_pl": "Prince George",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXT",
+    "name": "Northwest Regional Airport Terrace-Kitimat",
+    "city_en": "Terrace",
+    "city_pl": "Terrace",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXU",
+    "name": "London Airport",
+    "city_en": "London",
+    "city_pl": "Londyn",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXX",
+    "name": "Abbotsford Airport",
+    "city_en": "Abbotsford",
+    "city_pl": "Abbotsford",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXY",
+    "name": "Whitehorse / Erik Nielsen International Airport",
+    "city_en": "Whitehorse",
+    "city_pl": "Whitehorse",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYB",
+    "name": "North Bay Jack Garland Airport",
+    "city_en": "North Bay",
+    "city_pl": "North Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYC",
+    "name": "Calgary International Airport",
+    "city_en": "Calgary",
+    "city_pl": "Calgary",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYD",
+    "name": "Smithers Airport",
+    "city_en": "Smithers",
+    "city_pl": "Smithers",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYE",
+    "name": "Fort Nelson Airport",
+    "city_en": "Fort Nelson",
+    "city_pl": "Fort Nelson",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYF",
+    "name": "Penticton Airport",
+    "city_en": "Penticton",
+    "city_pl": "Penticton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYG",
+    "name": "Charlottetown Airport",
+    "city_en": "Charlottetown",
+    "city_pl": "Charlottetown",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYH",
+    "name": "Taloyoak Airport",
+    "city_en": "Spence Bay",
+    "city_pl": "Spence Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYJ",
+    "name": "Victoria International Airport",
+    "city_en": "Victoria",
+    "city_pl": "Victoria",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYL",
+    "name": "Lynn Lake Airport",
+    "city_en": "Lynn Lake",
+    "city_pl": "Lynn Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYN",
+    "name": "Swift Current Airport",
+    "city_en": "Swift Current",
+    "city_pl": "Swift Current",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYQ",
+    "name": "Churchill Airport",
+    "city_en": "Churchill",
+    "city_pl": "Churchill",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYR",
+    "name": "Goose Bay Airport",
+    "city_en": "Goose Bay",
+    "city_pl": "Goose Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYT",
+    "name": "St. John's International Airport",
+    "city_en": "St. John's",
+    "city_pl": "St. John's",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYU",
+    "name": "Kapuskasing Airport",
+    "city_en": "Kapuskasing",
+    "city_pl": "Kapuskasing",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYW",
+    "name": "Armstrong Airport",
+    "city_en": "Armstrong",
+    "city_pl": "Armstrong",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYY",
+    "name": "Mont Joli Airport",
+    "city_en": "Mont Joli",
+    "city_pl": "Mont Joli",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YYZ",
+    "name": "Lester B. Pearson International Airport",
+    "city_en": "Toronto",
+    "city_pl": "Toronto",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZD",
+    "name": "Downsview Airport",
+    "city_en": "Toronto",
+    "city_pl": "Toronto",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZE",
+    "name": "Gore Bay Manitoulin Airport",
+    "city_en": "Gore Bay",
+    "city_pl": "Gore Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZF",
+    "name": "Yellowknife Airport",
+    "city_en": "Yellowknife",
+    "city_pl": "Yellowknife",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZH",
+    "name": "Slave Lake Airport",
+    "city_en": "Slave Lake",
+    "city_pl": "Slave Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZP",
+    "name": "Sandspit Airport",
+    "city_en": "Sandspit",
+    "city_pl": "Sandspit",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZR",
+    "name": "Chris Hadfield Airport",
+    "city_en": "Sarnia",
+    "city_pl": "Sarnia",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZT",
+    "name": "Port Hardy Airport",
+    "city_en": "Port Hardy",
+    "city_pl": "Port Hardy",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZU",
+    "name": "Whitecourt Airport",
+    "city_en": "Whitecourt",
+    "city_pl": "Whitecourt",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZV",
+    "name": "Sept-Îles Airport",
+    "city_en": "Sept-iles",
+    "city_pl": "Sept-iles",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZW",
+    "name": "Teslin Airport",
+    "city_en": "Teslin",
+    "city_pl": "Teslin",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZX",
+    "name": "CFB Greenwood",
+    "city_en": "Greenwood",
+    "city_pl": "Greenwood",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZFA",
+    "name": "Faro Airport",
+    "city_en": "Faro",
+    "city_pl": "Faro",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZFM",
+    "name": "Fort Mcpherson Airport",
+    "city_en": "Fort Mcpherson",
+    "city_pl": "Fort Mcpherson",
+    "country_en": "Canada"
+  },
+  {
+    "code": "QLD",
+    "name": "Blida Airport",
+    "city_en": "Blida",
+    "city_pl": "Blida",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "BUJ",
+    "name": "Bou Saada Airport",
+    "city_en": "Bou Saada",
+    "city_pl": "Bou Saada",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "BJA",
+    "name": "Soummam Airport",
+    "city_en": "Bejaja",
+    "city_pl": "Bejaja",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "ALG",
+    "name": "Houari Boumediene Airport",
+    "city_en": "Algier",
+    "city_pl": "Algier",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "DJG",
+    "name": "Djanet Inedbirene Airport",
+    "city_en": "Djanet",
+    "city_pl": "Djanet",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "VVZ",
+    "name": "Illizi Takhamalt Airport",
+    "city_en": "Illizi",
+    "city_pl": "Illizi",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "TMR",
+    "name": "Aguenar – Hadj Bey Akhamok Airport",
+    "city_en": "Tamanrasset",
+    "city_pl": "Tamanrasset",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "GJL",
+    "name": "Jijel Ferhat Abbas Airport",
+    "city_en": "Jijel",
+    "city_pl": "Jijel",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "MZW",
+    "name": "Mecheria Airport",
+    "city_en": "Mecheria",
+    "city_pl": "Mecheria",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "AAE",
+    "name": "Rabah Bitat Airport",
+    "city_en": "Annaba",
+    "city_pl": "Annaba",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "CZL",
+    "name": "Mohamed Boudiaf International Airport",
+    "city_en": "Constantine",
+    "city_pl": "Constantine",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "TEE",
+    "name": "Cheikh Larbi Tébessi Airport",
+    "city_en": "Tebessa",
+    "city_pl": "Tebessa",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "HRM",
+    "name": "Hassi R'Mel Airport",
+    "city_en": "Tilrempt",
+    "city_pl": "Tilrempt",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "TID",
+    "name": "Bou Chekif Airport",
+    "city_en": "Tiaret",
+    "city_pl": "Tiaret",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "TIN",
+    "name": "Tindouf Airport",
+    "city_en": "Tindouf",
+    "city_pl": "Tindouf",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "CFK",
+    "name": "Ech Cheliff Airport",
+    "city_en": "Ech-cheliff",
+    "city_pl": "Ech-cheliff",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "TAF",
+    "name": "Tafaraoui Airport",
+    "city_en": "Oran",
+    "city_pl": "Oran",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "TLM",
+    "name": "Zenata – Messali El Hadj Airport",
+    "city_en": "Tlemcen",
+    "city_pl": "Tlemcen",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "ORN",
+    "name": "Es Senia Airport",
+    "city_en": "Oran",
+    "city_pl": "Oran",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "BFW",
+    "name": "Sidi Bel Abbes Airport",
+    "city_en": "Sidi Bel Abbes",
+    "city_pl": "Sidi Bel Abbes",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "MUW",
+    "name": "Ghriss Airport",
+    "city_en": "Ghriss",
+    "city_pl": "Ghriss",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "AZR",
+    "name": "Touat Cheikh Sidi Mohamed Belkebir Airport",
+    "city_en": "Adrar",
+    "city_pl": "Adrar",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "BSK",
+    "name": "Biskra Airport",
+    "city_en": "Biskra",
+    "city_pl": "Biskra",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "ELG",
+    "name": "El Golea Airport",
+    "city_en": "El Golea",
+    "city_pl": "El Golea",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "GHA",
+    "name": "Noumérat - Moufdi Zakaria Airport",
+    "city_en": "Ghardaia",
+    "city_pl": "Ghardaia",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "HME",
+    "name": "Oued Irara Airport",
+    "city_en": "Hassi Messaoud",
+    "city_pl": "Hassi Messaoud",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "INZ",
+    "name": "In Salah Airport",
+    "city_en": "In Salah",
+    "city_pl": "In Salah",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "TGR",
+    "name": "Touggourt Sidi Madhi Airport",
+    "city_en": "Touggourt",
+    "city_pl": "Touggourt",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "LOO",
+    "name": "Laghouat Airport",
+    "city_en": "Laghouat",
+    "city_pl": "Laghouat",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "TMX",
+    "name": "Timimoun Airport",
+    "city_en": "Timimoun",
+    "city_pl": "Timimoun",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "OGX",
+    "name": "Ain el Beida Airport",
+    "city_en": "Ouargla",
+    "city_pl": "Ouargla",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "IAM",
+    "name": "In Aménas Airport",
+    "city_en": "Zarzaitine",
+    "city_pl": "Zarzaitine",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "COO",
+    "name": "Cadjehoun Airport",
+    "city_en": "Cotonou",
+    "city_pl": "Cotonou",
+    "country_en": "Benin"
+  },
+  {
+    "code": "OUA",
+    "name": "Ouagadougou Airport",
+    "city_en": "Ouagadougou",
+    "city_pl": "Ouagadougou",
+    "country_en": "Burkina Faso"
+  },
+  {
+    "code": "BOY",
+    "name": "Bobo Dioulasso Airport",
+    "city_en": "Bobo-dioulasso",
+    "city_pl": "Bobo-dioulasso",
+    "country_en": "Burkina Faso"
+  },
+  {
+    "code": "ACC",
+    "name": "Kotoka International Airport",
+    "city_en": "Accra",
+    "city_pl": "Accra",
+    "country_en": "Ghana"
+  },
+  {
+    "code": "TML",
+    "name": "Tamale Airport",
+    "city_en": "Tamale",
+    "city_pl": "Tamale",
+    "country_en": "Ghana"
+  },
+  {
+    "code": "NYI",
+    "name": "Sunyani Airport",
+    "city_en": "Sunyani",
+    "city_pl": "Sunyani",
+    "country_en": "Ghana"
+  },
+  {
+    "code": "TKD",
+    "name": "Takoradi Airport",
+    "city_en": "Takoradi",
+    "city_pl": "Takoradi",
+    "country_en": "Ghana"
+  },
+  {
+    "code": "ABJ",
+    "name": "Port Bouet Airport",
+    "city_en": "Abidjan",
+    "city_pl": "Abidjan",
+    "country_en": "Cote d'Ivoire"
+  },
+  {
+    "code": "BYK",
+    "name": "Bouaké Airport",
+    "city_en": "Bouake",
+    "city_pl": "Bouake",
+    "country_en": "Cote d'Ivoire"
+  },
+  {
+    "code": "DJO",
+    "name": "Daloa Airport",
+    "city_en": "Daloa",
+    "city_pl": "Daloa",
+    "country_en": "Cote d'Ivoire"
+  },
+  {
+    "code": "HGO",
+    "name": "Korhogo Airport",
+    "city_en": "Korhogo",
+    "city_pl": "Korhogo",
+    "country_en": "Cote d'Ivoire"
+  },
+  {
+    "code": "MJC",
+    "name": "Man Airport",
+    "city_en": "Man",
+    "city_pl": "Man",
+    "country_en": "Cote d'Ivoire"
+  },
+  {
+    "code": "SPY",
+    "name": "San Pedro Airport",
+    "city_en": "San Pedro",
+    "city_pl": "San Pedro",
+    "country_en": "Cote d'Ivoire"
+  },
+  {
+    "code": "ASK",
+    "name": "Yamoussoukro Airport",
+    "city_en": "Yamoussoukro",
+    "city_pl": "Yamoussoukro",
+    "country_en": "Cote d'Ivoire"
+  },
+  {
+    "code": "ABV",
+    "name": "Nnamdi Azikiwe International Airport",
+    "city_en": "Abuja",
+    "city_pl": "Abuja",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "AKR",
+    "name": "Akure Airport",
+    "city_en": "Akure",
+    "city_pl": "Akure",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "BNI",
+    "name": "Benin Airport",
+    "city_en": "Benin",
+    "city_pl": "Benin",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "CBQ",
+    "name": "Margaret Ekpo International Airport",
+    "city_en": "Calabar",
+    "city_pl": "Calabar",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "ENU",
+    "name": "Akanu Ibiam International Airport",
+    "city_en": "Enugu",
+    "city_pl": "Enugu",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "IBA",
+    "name": "Ibadan Airport",
+    "city_en": "Ibadan",
+    "city_pl": "Ibadan",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "ILR",
+    "name": "Ilorin International Airport",
+    "city_en": "Ilorin",
+    "city_pl": "Ilorin",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "JOS",
+    "name": "Yakubu Gowon Airport",
+    "city_en": "Jos",
+    "city_pl": "Jos",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "KAD",
+    "name": "Kaduna Airport",
+    "city_en": "Kaduna",
+    "city_pl": "Kaduna",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "KAN",
+    "name": "Mallam Aminu International Airport",
+    "city_en": "Kano",
+    "city_pl": "Kano",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "MIU",
+    "name": "Maiduguri International Airport",
+    "city_en": "Maiduguri",
+    "city_pl": "Maiduguri",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "MDI",
+    "name": "Makurdi Airport",
+    "city_en": "Makurdi",
+    "city_pl": "Makurdi",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "LOS",
+    "name": "Murtala Muhammed International Airport",
+    "city_en": "Lagos",
+    "city_pl": "Lagos",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "MXJ",
+    "name": "Minna Airport",
+    "city_en": "Minna",
+    "city_pl": "Minna",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "PHC",
+    "name": "Port Harcourt International Airport",
+    "city_en": "Port Hartcourt",
+    "city_pl": "Port Hartcourt",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "SKO",
+    "name": "Sadiq Abubakar III International Airport",
+    "city_en": "Sokoto",
+    "city_pl": "Sokoto",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "YOL",
+    "name": "Yola Airport",
+    "city_en": "Yola",
+    "city_pl": "Yola",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "ZAR",
+    "name": "Zaria Airport",
+    "city_en": "Zaria",
+    "city_pl": "Zaria",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "MFQ",
+    "name": "Maradi Airport",
+    "city_en": "Maradi",
+    "city_pl": "Maradi",
+    "country_en": "Niger"
+  },
+  {
+    "code": "NIM",
+    "name": "Diori Hamani International Airport",
+    "city_en": "Niamey",
+    "city_pl": "Niamey",
+    "country_en": "Niger"
+  },
+  {
+    "code": "THZ",
+    "name": "Tahoua Airport",
+    "city_en": "Tahoua",
+    "city_pl": "Tahoua",
+    "country_en": "Niger"
+  },
+  {
+    "code": "AJY",
+    "name": "Mano Dayak International Airport",
+    "city_en": "Agadez",
+    "city_pl": "Agadez",
+    "country_en": "Niger"
+  },
+  {
+    "code": "ZND",
+    "name": "Zinder Airport",
+    "city_en": "Zinder",
+    "city_pl": "Zinder",
+    "country_en": "Niger"
+  },
+  {
+    "code": "MIR",
+    "name": "Monastir Habib Bourguiba International Airport",
+    "city_en": "Monastir",
+    "city_pl": "Monastir",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "TUN",
+    "name": "Tunis Carthage International Airport",
+    "city_en": "Tunis",
+    "city_pl": "Tunis",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "GAF",
+    "name": "Gafsa Ksar International Airport",
+    "city_en": "Gafsa",
+    "city_pl": "Gafsa",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "GAE",
+    "name": "Gabès Matmata International Airport",
+    "city_en": "Gabes",
+    "city_pl": "Gabes",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "DJE",
+    "name": "Djerba Zarzis International Airport",
+    "city_en": "Djerba",
+    "city_pl": "Djerba",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "EBM",
+    "name": "El Borma Airport",
+    "city_en": "El Borma",
+    "city_pl": "El Borma",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "SFA",
+    "name": "Sfax Thyna International Airport",
+    "city_en": "Sfax",
+    "city_pl": "Sfax",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "TOE",
+    "name": "Tozeur Nefta International Airport",
+    "city_en": "Tozeur",
+    "city_pl": "Tozeur",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "LRL",
+    "name": "Niamtougou International Airport",
+    "city_en": "Niatougou",
+    "city_pl": "Niatougou",
+    "country_en": "Togo"
+  },
+  {
+    "code": "LFW",
+    "name": "Lomé-Tokoin Airport",
+    "city_en": "Lome",
+    "city_pl": "Lome",
+    "country_en": "Togo"
+  },
+  {
+    "code": "ANR",
+    "name": "Antwerp International Airport (Deurne)",
+    "city_en": "Antwerp",
+    "city_pl": "Antwerp",
+    "country_en": "Belgium"
+  },
+  {
+    "code": "BRU",
+    "name": "Brussels Airport",
+    "city_en": "Brussels",
+    "city_pl": "Bruksela",
+    "country_en": "Belgium"
+  },
+  {
+    "code": "CRL",
+    "name": "Brussels South Charleroi Airport",
+    "city_en": "Charleroi",
+    "city_pl": "Charleroi",
+    "country_en": "Belgium"
+  },
+  {
+    "code": "KJK",
+    "name": "Wevelgem Airport",
+    "city_en": "Kortrijk-vevelgem",
+    "city_pl": "Kortrijk-vevelgem",
+    "country_en": "Belgium"
+  },
+  {
+    "code": "LGG",
+    "name": "Liège Airport",
+    "city_en": "Liege",
+    "city_pl": "Liege",
+    "country_en": "Belgium"
+  },
+  {
+    "code": "OST",
+    "name": "Ostend-Bruges International Airport",
+    "city_en": "Ostend",
+    "city_pl": "Ostend",
+    "country_en": "Belgium"
+  },
+  {
+    "code": "OBL",
+    "name": "Zoersel (Oostmalle) Airfield",
+    "city_en": "Zoersel",
+    "city_pl": "Zoersel",
+    "country_en": "Belgium"
+  },
+  {
+    "code": "AOC",
+    "name": "Altenburg-Nobitz Airport",
+    "city_en": "Altenburg",
+    "city_pl": "Altenburg",
+    "country_en": "Germany"
+  },
+  {
+    "code": "IES",
+    "name": "Riesa-Göhlis Airport",
+    "city_en": "Riesa",
+    "city_pl": "Riesa",
+    "country_en": "Germany"
+  },
+  {
+    "code": "REB",
+    "name": "Rechlin-Lärz Airport",
+    "city_en": "Rechlin-laerz",
+    "city_pl": "Rechlin-laerz",
+    "country_en": "Germany"
+  },
+  {
+    "code": "QXH",
+    "name": "Schönhagen Airport",
+    "city_en": "Schoenhagen",
+    "city_pl": "Schoenhagen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "BBH",
+    "name": "Barth Airport",
+    "city_en": "Barth",
+    "city_pl": "Barth",
+    "country_en": "Germany"
+  },
+  {
+    "code": "ZMG",
+    "name": "Magdeburg City Airport",
+    "city_en": "Magdeburg",
+    "city_pl": "Magdeburg",
+    "country_en": "Germany"
+  },
+  {
+    "code": "CBU",
+    "name": "Cottbus-Drewitz Airport",
+    "city_en": "Cottbus",
+    "city_pl": "Cottbus",
+    "country_en": "Germany"
+  },
+  {
+    "code": "SXF",
+    "name": "Berlin-Schönefeld Airport",
+    "city_en": "Berlin",
+    "city_pl": "Berlin",
+    "country_en": "Germany"
+  },
+  {
+    "code": "DRS",
+    "name": "Dresden Airport",
+    "city_en": "Dresden",
+    "city_pl": "Dresden",
+    "country_en": "Germany"
+  },
+  {
+    "code": "ERF",
+    "name": "Erfurt Airport",
+    "city_en": "Erfurt",
+    "city_pl": "Erfurt",
+    "country_en": "Germany"
+  },
+  {
+    "code": "FRA",
+    "name": "Frankfurt am Main Airport",
+    "city_en": "Frankfurt",
+    "city_pl": "Frankfurt nad Menem",
+    "country_en": "Germany"
+  },
+  {
+    "code": "FMO",
+    "name": "Münster Osnabrück Airport",
+    "city_en": "Munster",
+    "city_pl": "Munster",
+    "country_en": "Germany"
+  },
+  {
+    "code": "HAM",
+    "name": "Hamburg Airport",
+    "city_en": "Hamburg",
+    "city_pl": "Hamburg",
+    "country_en": "Germany"
+  },
+  {
+    "code": "THF",
+    "name": "Berlin-Tempelhof International Airport",
+    "city_en": "Berlin",
+    "city_pl": "Berlin",
+    "country_en": "Germany"
+  },
+  {
+    "code": "CGN",
+    "name": "Cologne Bonn Airport",
+    "city_en": "Cologne",
+    "city_pl": "Kolonia",
+    "country_en": "Germany"
+  },
+  {
+    "code": "DUS",
+    "name": "Düsseldorf Airport",
+    "city_en": "Duesseldorf",
+    "city_pl": "Duesseldorf",
+    "country_en": "Germany"
+  },
+  {
+    "code": "MUC",
+    "name": "Munich Airport",
+    "city_en": "Munich",
+    "city_pl": "Monachium",
+    "country_en": "Germany"
+  },
+  {
+    "code": "NUE",
+    "name": "Nuremberg Airport",
+    "city_en": "Nuernberg",
+    "city_pl": "Nuernberg",
+    "country_en": "Germany"
+  },
+  {
+    "code": "LEJ",
+    "name": "Leipzig/Halle Airport",
+    "city_en": "Leipzig",
+    "city_pl": "Leipzig",
+    "country_en": "Germany"
+  },
+  {
+    "code": "SCN",
+    "name": "Saarbrücken Airport",
+    "city_en": "Saarbruecken",
+    "city_pl": "Saarbruecken",
+    "country_en": "Germany"
+  },
+  {
+    "code": "STR",
+    "name": "Stuttgart Airport",
+    "city_en": "Stuttgart",
+    "city_pl": "Stuttgart",
+    "country_en": "Germany"
+  },
+  {
+    "code": "TXL",
+    "name": "Berlin-Tegel Airport",
+    "city_en": "Berlin",
+    "city_pl": "Berlin",
+    "country_en": "Germany"
+  },
+  {
+    "code": "HAJ",
+    "name": "Hannover Airport",
+    "city_en": "Hannover",
+    "city_pl": "Hannover",
+    "country_en": "Germany"
+  },
+  {
+    "code": "BRE",
+    "name": "Bremen Airport",
+    "city_en": "Bremen",
+    "city_pl": "Bremen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "QEF",
+    "name": "Frankfurt-Egelsbach Airport",
+    "city_en": "Egelsbach",
+    "city_pl": "Egelsbach",
+    "country_en": "Germany"
+  },
+  {
+    "code": "HHN",
+    "name": "Frankfurt-Hahn Airport",
+    "city_en": "Hahn",
+    "city_pl": "Hahn",
+    "country_en": "Germany"
+  },
+  {
+    "code": "MHG",
+    "name": "Mannheim-City Airport",
+    "city_en": "Mannheim",
+    "city_pl": "Mannheim",
+    "country_en": "Germany"
+  },
+  {
+    "code": "EIB",
+    "name": "Eisenach-Kindel Airport",
+    "city_en": "Eisenach",
+    "city_pl": "Eisenach",
+    "country_en": "Germany"
+  },
+  {
+    "code": "SGE",
+    "name": "Siegerland Airport",
+    "city_en": "Siegerland",
+    "city_pl": "Siegerland",
+    "country_en": "Germany"
+  },
+  {
+    "code": "XFW",
+    "name": "Hamburg-Finkenwerder Airport",
+    "city_en": "Hamburg",
+    "city_pl": "Hamburg",
+    "country_en": "Germany"
+  },
+  {
+    "code": "KEL",
+    "name": "Kiel-Holtenau Airport",
+    "city_en": "Kiel",
+    "city_pl": "Kiel",
+    "country_en": "Germany"
+  },
+  {
+    "code": "LBC",
+    "name": "Lübeck Blankensee Airport",
+    "city_en": "Luebeck",
+    "city_pl": "Luebeck",
+    "country_en": "Germany"
+  },
+  {
+    "code": "ESS",
+    "name": "Essen Mulheim Airport",
+    "city_en": "Essen",
+    "city_pl": "Essen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "BFE",
+    "name": "Bielefeld Airport",
+    "city_en": "Bielefeld",
+    "city_pl": "Bielefeld",
+    "country_en": "Germany"
+  },
+  {
+    "code": "MGL",
+    "name": "Mönchengladbach Airport",
+    "city_en": "Moenchengladbach",
+    "city_pl": "Moenchengladbach",
+    "country_en": "Germany"
+  },
+  {
+    "code": "PAD",
+    "name": "Paderborn Lippstadt Airport",
+    "city_en": "Paderborn",
+    "city_pl": "Paderborn",
+    "country_en": "Germany"
+  },
+  {
+    "code": "DTM",
+    "name": "Dortmund Airport",
+    "city_en": "Dortmund",
+    "city_pl": "Dortmund",
+    "country_en": "Germany"
+  },
+  {
+    "code": "AGB",
+    "name": "Augsburg Airport",
+    "city_en": "Augsburg",
+    "city_pl": "Augsburg",
+    "country_en": "Germany"
+  },
+  {
+    "code": "OBF",
+    "name": "Oberpfaffenhofen Airport",
+    "city_en": "Oberpfaffenhofen",
+    "city_pl": "Oberpfaffenhofen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "RBM",
+    "name": "Straubing Airport",
+    "city_en": "Straubing",
+    "city_pl": "Straubing",
+    "country_en": "Germany"
+  },
+  {
+    "code": "FDH",
+    "name": "Friedrichshafen Airport",
+    "city_en": "Friedrichshafen",
+    "city_pl": "Friedrichshafen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "SZW",
+    "name": "Schwerin Parchim Airport",
+    "city_en": "Parchim",
+    "city_pl": "Parchim",
+    "country_en": "Germany"
+  },
+  {
+    "code": "BYU",
+    "name": "Bayreuth Airport",
+    "city_en": "Bayreuth",
+    "city_pl": "Bayreuth",
+    "country_en": "Germany"
+  },
+  {
+    "code": "URD",
+    "name": "Burg Feuerstein Airport",
+    "city_en": "Burg Feuerstein",
+    "city_pl": "Burg Feuerstein",
+    "country_en": "Germany"
+  },
+  {
+    "code": "HOQ",
+    "name": "Hof-Plauen Airport",
+    "city_en": "Hof",
+    "city_pl": "Hof",
+    "country_en": "Germany"
+  },
+  {
+    "code": "ZQW",
+    "name": "Zweibrücken Airport",
+    "city_en": "Zweibruecken",
+    "city_pl": "Zweibruecken",
+    "country_en": "Germany"
+  },
+  {
+    "code": "ZQL",
+    "name": "Donaueschingen-Villingen Airport",
+    "city_en": "Donaueschingen",
+    "city_pl": "Donaueschingen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "BWE",
+    "name": "Braunschweig-Wolfsburg Airport",
+    "city_en": "Braunschweig",
+    "city_pl": "Braunschweig",
+    "country_en": "Germany"
+  },
+  {
+    "code": "KSF",
+    "name": "Kassel-Calden Airport",
+    "city_en": "Kassel",
+    "city_pl": "Kassel",
+    "country_en": "Germany"
+  },
+  {
+    "code": "BRV",
+    "name": "Bremerhaven Airport",
+    "city_en": "Bremerhaven",
+    "city_pl": "Bremerhaven",
+    "country_en": "Germany"
+  },
+  {
+    "code": "EME",
+    "name": "Emden Airport",
+    "city_en": "Emden",
+    "city_pl": "Emden",
+    "country_en": "Germany"
+  },
+  {
+    "code": "WVN",
+    "name": "Wilhelmshaven-Mariensiel Airport",
+    "city_en": "Wilhelmshaven",
+    "city_pl": "Wilhelmshaven",
+    "country_en": "Germany"
+  },
+  {
+    "code": "BMK",
+    "name": "Borkum Airport",
+    "city_en": "Borkum",
+    "city_pl": "Borkum",
+    "country_en": "Germany"
+  },
+  {
+    "code": "NRD",
+    "name": "Norderney Airport",
+    "city_en": "Norderney",
+    "city_pl": "Norderney",
+    "country_en": "Germany"
+  },
+  {
+    "code": "FLF",
+    "name": "Flensburg-Schäferhaus Airport",
+    "city_en": "Flensburg",
+    "city_pl": "Flensburg",
+    "country_en": "Germany"
+  },
+  {
+    "code": "GWT",
+    "name": "Westerland Sylt Airport",
+    "city_en": "Westerland",
+    "city_pl": "Westerland",
+    "country_en": "Germany"
+  },
+  {
+    "code": "KDL",
+    "name": "Kärdla Airport",
+    "city_en": "Kardla",
+    "city_pl": "Kardla",
+    "country_en": "Estonia"
+  },
+  {
+    "code": "URE",
+    "name": "Kuressaare Airport",
+    "city_en": "Kuressaare",
+    "city_pl": "Kuressaare",
+    "country_en": "Estonia"
+  },
+  {
+    "code": "EPU",
+    "name": "Pärnu Airport",
+    "city_en": "Parnu",
+    "city_pl": "Parnu",
+    "country_en": "Estonia"
+  },
+  {
+    "code": "TLL",
+    "name": "Lennart Meri Tallinn Airport",
+    "city_en": "Tallinn-ulemiste International",
+    "city_pl": "Tallinn-ulemiste International",
+    "country_en": "Estonia"
+  },
+  {
+    "code": "TAY",
+    "name": "Tartu Airport",
+    "city_en": "Tartu",
+    "city_pl": "Tartu",
+    "country_en": "Estonia"
+  },
+  {
+    "code": "ENF",
+    "name": "Enontekio Airport",
+    "city_en": "Enontekio",
+    "city_pl": "Enontekio",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KEV",
+    "name": "Halli Airport",
+    "city_en": "Halli",
+    "city_pl": "Halli",
+    "country_en": "Finland"
+  },
+  {
+    "code": "HEM",
+    "name": "Helsinki Malmi Airport",
+    "city_en": "Helsinki",
+    "city_pl": "Helsinki",
+    "country_en": "Finland"
+  },
+  {
+    "code": "HEL",
+    "name": "Helsinki Vantaa Airport",
+    "city_en": "Helsinki",
+    "city_pl": "Helsinki",
+    "country_en": "Finland"
+  },
+  {
+    "code": "HYV",
+    "name": "Hyvinkää Airfield",
+    "city_en": "Hyvinkaa",
+    "city_pl": "Hyvinkaa",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KTQ",
+    "name": "Kitee Airport",
+    "city_en": "Kitee",
+    "city_pl": "Kitee",
+    "country_en": "Finland"
+  },
+  {
+    "code": "IVL",
+    "name": "Ivalo Airport",
+    "city_en": "Ivalo",
+    "city_pl": "Ivalo",
+    "country_en": "Finland"
+  },
+  {
+    "code": "JOE",
+    "name": "Joensuu Airport",
+    "city_en": "Joensuu",
+    "city_pl": "Joensuu",
+    "country_en": "Finland"
+  },
+  {
+    "code": "JYV",
+    "name": "Jyvaskyla Airport",
+    "city_en": "Jyvaskyla",
+    "city_pl": "Jyvaskyla",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KAU",
+    "name": "Kauhava Airport",
+    "city_en": "Kauhava",
+    "city_pl": "Kauhava",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KEM",
+    "name": "Kemi-Tornio Airport",
+    "city_en": "Kemi",
+    "city_pl": "Kemi",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KAJ",
+    "name": "Kajaani Airport",
+    "city_en": "Kajaani",
+    "city_pl": "Kajaani",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KHJ",
+    "name": "Kauhajoki Airport",
+    "city_en": "Kauhajoki",
+    "city_pl": "Kauhajoki",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KOK",
+    "name": "Kokkola-Pietarsaari Airport",
+    "city_en": "Kruunupyy",
+    "city_pl": "Kruunupyy",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KAO",
+    "name": "Kuusamo Airport",
+    "city_en": "Kuusamo",
+    "city_pl": "Kuusamo",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KTT",
+    "name": "Kittilä Airport",
+    "city_en": "Kittila",
+    "city_pl": "Kittila",
+    "country_en": "Finland"
+  },
+  {
+    "code": "KUO",
+    "name": "Kuopio Airport",
+    "city_en": "Kuopio",
+    "city_pl": "Kuopio",
+    "country_en": "Finland"
+  },
+  {
+    "code": "QLF",
+    "name": "Lahti Vesivehmaa Airport",
+    "city_en": "Vesivehmaa",
+    "city_pl": "Vesivehmaa",
+    "country_en": "Finland"
+  },
+  {
+    "code": "LPP",
+    "name": "Lappeenranta Airport",
+    "city_en": "Lappeenranta",
+    "city_pl": "Lappeenranta",
+    "country_en": "Finland"
+  },
+  {
+    "code": "MHQ",
+    "name": "Mariehamn Airport",
+    "city_en": "Mariehamn",
+    "city_pl": "Mariehamn",
+    "country_en": "Finland"
+  },
+  {
+    "code": "MIK",
+    "name": "Mikkeli Airport",
+    "city_en": "Mikkeli",
+    "city_pl": "Mikkeli",
+    "country_en": "Finland"
+  },
+  {
+    "code": "OUL",
+    "name": "Oulu Airport",
+    "city_en": "Oulu",
+    "city_pl": "Oulu",
+    "country_en": "Finland"
+  },
+  {
+    "code": "POR",
+    "name": "Pori Airport",
+    "city_en": "Pori",
+    "city_pl": "Pori",
+    "country_en": "Finland"
+  },
+  {
+    "code": "RVN",
+    "name": "Rovaniemi Airport",
+    "city_en": "Rovaniemi",
+    "city_pl": "Rovaniemi",
+    "country_en": "Finland"
+  },
+  {
+    "code": "SVL",
+    "name": "Savonlinna Airport",
+    "city_en": "Savonlinna",
+    "city_pl": "Savonlinna",
+    "country_en": "Finland"
+  },
+  {
+    "code": "SOT",
+    "name": "Sodankyla Airport",
+    "city_en": "Sodankyla",
+    "city_pl": "Sodankyla",
+    "country_en": "Finland"
+  },
+  {
+    "code": "TMP",
+    "name": "Tampere-Pirkkala Airport",
+    "city_en": "Tampere",
+    "city_pl": "Tampere",
+    "country_en": "Finland"
+  },
+  {
+    "code": "TKU",
+    "name": "Turku Airport",
+    "city_en": "Turku",
+    "city_pl": "Turku",
+    "country_en": "Finland"
+  },
+  {
+    "code": "UTI",
+    "name": "Utti Air Base",
+    "city_en": "Utti",
+    "city_pl": "Utti",
+    "country_en": "Finland"
+  },
+  {
+    "code": "VAA",
+    "name": "Vaasa Airport",
+    "city_en": "Vaasa",
+    "city_pl": "Vaasa",
+    "country_en": "Finland"
+  },
+  {
+    "code": "VRK",
+    "name": "Varkaus Airport",
+    "city_en": "Varkaus",
+    "city_pl": "Varkaus",
+    "country_en": "Finland"
+  },
+  {
+    "code": "YLI",
+    "name": "Ylivieska Airfield",
+    "city_en": "Ylivieska-raudaskyla",
+    "city_pl": "Ylivieska-raudaskyla",
+    "country_en": "Finland"
+  },
+  {
+    "code": "BFS",
+    "name": "Belfast International Airport",
+    "city_en": "Belfast",
+    "city_pl": "Belfast",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "ENK",
+    "name": "St Angelo Airport",
+    "city_en": "Enniskillen",
+    "city_pl": "Enniskillen",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BHD",
+    "name": "George Best Belfast City Airport",
+    "city_en": "Belfast",
+    "city_pl": "Belfast",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LDY",
+    "name": "City of Derry Airport",
+    "city_en": "Londonderry",
+    "city_pl": "Londonderry",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BHX",
+    "name": "Birmingham International Airport",
+    "city_en": "Birmingham",
+    "city_pl": "Birmingham",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "CVT",
+    "name": "Coventry Airport",
+    "city_en": "Coventry",
+    "city_pl": "Coventry",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "GLO",
+    "name": "Gloucestershire Airport",
+    "city_en": "Golouchestershire",
+    "city_pl": "Golouchestershire",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "GBA",
+    "name": "Cotswold Airport",
+    "city_en": "Pailton",
+    "city_pl": "Pailton",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "MAN",
+    "name": "Manchester Airport",
+    "city_en": "Manchester",
+    "city_pl": "Manchester",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "NQY",
+    "name": "Newquay Cornwall Airport",
+    "city_en": "Newquai",
+    "city_pl": "Newquai",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LYE",
+    "name": "RAF Lyneham",
+    "city_en": "Lyneham",
+    "city_pl": "Lyneham",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "YEO",
+    "name": "RNAS Yeovilton",
+    "city_en": "Yeovilton",
+    "city_pl": "Yeovilton",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "HAW",
+    "name": "Haverfordwest Airport",
+    "city_en": "Haverfordwest",
+    "city_pl": "Haverfordwest",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "CWL",
+    "name": "Cardiff International Airport",
+    "city_en": "Cardiff",
+    "city_pl": "Cardiff",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SWS",
+    "name": "Swansea Airport",
+    "city_en": "Swansea",
+    "city_pl": "Swansea",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BRS",
+    "name": "Bristol Airport",
+    "city_en": "Bristol",
+    "city_pl": "Bristol",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LPL",
+    "name": "Liverpool John Lennon Airport",
+    "city_en": "Liverpool",
+    "city_pl": "Liverpool",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LTN",
+    "name": "London Luton Airport",
+    "city_en": "London",
+    "city_pl": "Londyn",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "PLH",
+    "name": "Plymouth City Airport",
+    "city_en": "Plymouth",
+    "city_pl": "Plymouth",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BOH",
+    "name": "Bournemouth Airport",
+    "city_en": "Bournemouth",
+    "city_pl": "Bournemouth",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SOU",
+    "name": "Southampton Airport",
+    "city_en": "Southampton",
+    "city_pl": "Southampton",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "QLA",
+    "name": "Lasham Airport",
+    "city_en": "Lasham",
+    "city_pl": "Lasham",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "ACI",
+    "name": "Alderney Airport",
+    "city_en": "Alderney",
+    "city_pl": "Alderney",
+    "country_en": "Guernsey"
+  },
+  {
+    "code": "GCI",
+    "name": "Guernsey Airport",
+    "city_en": "Guernsey",
+    "city_pl": "Guernsey",
+    "country_en": "Guernsey"
+  },
+  {
+    "code": "JER",
+    "name": "Jersey Airport",
+    "city_en": "Jersey",
+    "city_pl": "Jersey",
+    "country_en": "Jersey"
+  },
+  {
+    "code": "ESH",
+    "name": "Shoreham Airport",
+    "city_en": "Shoreham By Sea",
+    "city_pl": "Shoreham By Sea",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BQH",
+    "name": "London Biggin Hill Airport",
+    "city_en": "Biggin Hill",
+    "city_pl": "Biggin Hill",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LGW",
+    "name": "London Gatwick Airport",
+    "city_en": "London",
+    "city_pl": "Londyn",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LCY",
+    "name": "London City Airport",
+    "city_en": "London",
+    "city_pl": "Londyn",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "FAB",
+    "name": "Farnborough Airport",
+    "city_en": "Farnborough",
+    "city_pl": "Farnborough",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BBS",
+    "name": "Blackbushe Airport",
+    "city_en": "Blackbushe",
+    "city_pl": "Blackbushe",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LHR",
+    "name": "London Heathrow Airport",
+    "city_en": "London",
+    "city_pl": "Londyn",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SEN",
+    "name": "Southend Airport",
+    "city_en": "Southend",
+    "city_pl": "Southend",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LYX",
+    "name": "Lydd Airport",
+    "city_en": "Lydd",
+    "city_pl": "Lydd",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "MSE",
+    "name": "Kent International Airport",
+    "city_en": "Manston",
+    "city_pl": "Manston",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "CAX",
+    "name": "Carlisle Airport",
+    "city_en": "Carlisle",
+    "city_pl": "Carlisle",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BLK",
+    "name": "Blackpool International Airport",
+    "city_en": "Blackpool",
+    "city_pl": "Blackpool",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "HUY",
+    "name": "Humberside Airport",
+    "city_en": "Humberside",
+    "city_pl": "Humberside",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BWF",
+    "name": "Barrow Walney Island Airport",
+    "city_en": "Barrow Island",
+    "city_pl": "Barrow Island",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LBA",
+    "name": "Leeds Bradford Airport",
+    "city_en": "Leeds",
+    "city_pl": "Leeds",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "WRT",
+    "name": "Warton Airport",
+    "city_en": "Warton",
+    "city_pl": "Warton",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "CEG",
+    "name": "Hawarden Airport",
+    "city_en": "Hawarden",
+    "city_pl": "Hawarden",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "IOM",
+    "name": "Isle of Man Airport",
+    "city_en": "Isle Of Man",
+    "city_pl": "Isle Of Man",
+    "country_en": "Isle of Man"
+  },
+  {
+    "code": "NCL",
+    "name": "Newcastle Airport",
+    "city_en": "Newcastle",
+    "city_pl": "Newcastle",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "MME",
+    "name": "Durham Tees Valley Airport",
+    "city_en": "Teesside",
+    "city_pl": "Teesside",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "EMA",
+    "name": "East Midlands Airport",
+    "city_en": "East Midlands",
+    "city_pl": "East Midlands",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "KOI",
+    "name": "Kirkwall Airport",
+    "city_en": "Kirkwall",
+    "city_pl": "Kirkwall",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LSI",
+    "name": "Sumburgh Airport",
+    "city_en": "Sumburgh",
+    "city_pl": "Sumburgh",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "WIC",
+    "name": "Wick Airport",
+    "city_en": "Wick",
+    "city_pl": "Wick",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "ABZ",
+    "name": "Aberdeen Dyce Airport",
+    "city_en": "Aberdeen",
+    "city_pl": "Aberdeen",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "INV",
+    "name": "Inverness Airport",
+    "city_en": "Inverness",
+    "city_pl": "Inverness",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "GLA",
+    "name": "Glasgow International Airport",
+    "city_en": "Glasgow",
+    "city_pl": "Glasgow",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "EDI",
+    "name": "Edinburgh Airport",
+    "city_en": "Edinburgh",
+    "city_pl": "Edinburgh",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "ILY",
+    "name": "Islay Airport",
+    "city_en": "Islay",
+    "city_pl": "Islay",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "PIK",
+    "name": "Glasgow Prestwick Airport",
+    "city_en": "Prestwick",
+    "city_pl": "Prestwick",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BEB",
+    "name": "Benbecula Airport",
+    "city_en": "Benbecula",
+    "city_pl": "Benbecula",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SCS",
+    "name": "Scatsta Airport",
+    "city_en": "Scatsta",
+    "city_pl": "Scatsta",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "DND",
+    "name": "Dundee Airport",
+    "city_en": "Dundee",
+    "city_pl": "Dundee",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SYY",
+    "name": "Stornoway Airport",
+    "city_en": "Stornoway",
+    "city_pl": "Stornoway",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "TRE",
+    "name": "Tiree Airport",
+    "city_en": "Tiree",
+    "city_pl": "Tiree",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "ADX",
+    "name": "RAF Leuchars",
+    "city_en": "Leuchars",
+    "city_pl": "Leuchars",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LMO",
+    "name": "RAF Lossiemouth",
+    "city_en": "Lossiemouth",
+    "city_pl": "Lossiemouth",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "CBG",
+    "name": "Cambridge Airport",
+    "city_en": "Cambridge",
+    "city_pl": "Cambridge",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "NWI",
+    "name": "Norwich International Airport",
+    "city_en": "Norwich",
+    "city_pl": "Norwich",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "STN",
+    "name": "London Stansted Airport",
+    "city_en": "London",
+    "city_pl": "Londyn",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "EXT",
+    "name": "Exeter International Airport",
+    "city_en": "Exeter",
+    "city_pl": "Exeter",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "FZO",
+    "name": "Bristol Filton Airport",
+    "city_en": "Bristol",
+    "city_pl": "Bristol",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "OXF",
+    "name": "Oxford (Kidlington) Airport",
+    "city_en": "Oxford",
+    "city_pl": "Oxford",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BEX",
+    "name": "RAF Benson",
+    "city_en": "Benson",
+    "city_pl": "Benson",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LKZ",
+    "name": "RAF Lakenheath",
+    "city_en": "Lakenheath",
+    "city_pl": "Lakenheath",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "MHZ",
+    "name": "RAF Mildenhall",
+    "city_en": "Mildenhall",
+    "city_pl": "Mildenhall",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "QUY",
+    "name": "RAF Wyton",
+    "city_en": "Wyton",
+    "city_pl": "Wyton",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "FFD",
+    "name": "RAF Fairford",
+    "city_en": "Fairford",
+    "city_pl": "Fairford",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BZZ",
+    "name": "RAF Brize Norton",
+    "city_en": "Brize Norton",
+    "city_pl": "Brize Norton",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "ODH",
+    "name": "RAF Odiham",
+    "city_en": "Odiham",
+    "city_pl": "Odiham",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "NHT",
+    "name": "RAF Northolt",
+    "city_en": "Northolt",
+    "city_pl": "Northolt",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "QCY",
+    "name": "RAF Coningsby",
+    "city_en": "Coningsby",
+    "city_pl": "Coningsby",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BEQ",
+    "name": "RAF Honington",
+    "city_en": "Honington",
+    "city_pl": "Honington",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SQZ",
+    "name": "RAF Scampton",
+    "city_en": "Scampton",
+    "city_pl": "Scampton",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "HRT",
+    "name": "RAF Linton-On-Ouse",
+    "city_en": "Linton-on-ouse",
+    "city_pl": "Linton-on-ouse",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "WTN",
+    "name": "RAF Waddington",
+    "city_en": "Waddington",
+    "city_pl": "Waddington",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "KNF",
+    "name": "RAF Marham",
+    "city_en": "Marham",
+    "city_pl": "Marham",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "MPN",
+    "name": "Mount Pleasant Airport",
+    "city_en": "Mount Pleasant",
+    "city_pl": "Mount Pleasant",
+    "country_en": "Falkland Islands"
+  },
+  {
+    "code": "AMS",
+    "name": "Amsterdam Airport Schiphol",
+    "city_en": "Amsterdam",
+    "city_pl": "Amsterdam",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "MST",
+    "name": "Maastricht Aachen Airport",
+    "city_en": "Maastricht",
+    "city_pl": "Maastricht",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "EIN",
+    "name": "Eindhoven Airport",
+    "city_en": "Eindhoven",
+    "city_pl": "Eindhoven",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "GRQ",
+    "name": "Eelde Airport",
+    "city_en": "Groningen",
+    "city_pl": "Groningen",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "GLZ",
+    "name": "Gilze Rijen Air Base",
+    "city_en": "Gilze-rijen",
+    "city_pl": "Gilze-rijen",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "DHR",
+    "name": "De Kooy Airport",
+    "city_en": "De Kooy",
+    "city_pl": "De Kooy",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "LEY",
+    "name": "Lelystad Airport",
+    "city_en": "Lelystad",
+    "city_pl": "Lelystad",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "LWR",
+    "name": "Leeuwarden Air Base",
+    "city_en": "Leeuwarden",
+    "city_pl": "Leeuwarden",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "RTM",
+    "name": "Rotterdam The Hague Airport",
+    "city_en": "Rotterdam",
+    "city_pl": "Rotterdam",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "UTC",
+    "name": "Soesterberg Air Base",
+    "city_en": "Soesterberg",
+    "city_pl": "Soesterberg",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "ENS",
+    "name": "Twente Airport",
+    "city_en": "Enschede",
+    "city_pl": "Enschede",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "LID",
+    "name": "Valkenburg Naval Air Base",
+    "city_en": "Valkenburg",
+    "city_pl": "Valkenburg",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "WOE",
+    "name": "Woensdrecht Air Base",
+    "city_en": "Woensdrecht",
+    "city_pl": "Woensdrecht",
+    "country_en": "Netherlands"
+  },
+  {
+    "code": "ORK",
+    "name": "Cork Airport",
+    "city_en": "Cork",
+    "city_pl": "Cork",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "GWY",
+    "name": "Galway Airport",
+    "city_en": "Galway",
+    "city_pl": "Galway",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "DUB",
+    "name": "Dublin Airport",
+    "city_en": "Dublin",
+    "city_pl": "Dublin",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "NOC",
+    "name": "Ireland West Knock Airport",
+    "city_en": "Connaught",
+    "city_pl": "Connaught",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "KIR",
+    "name": "Kerry Airport",
+    "city_en": "Kerry",
+    "city_pl": "Kerry",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "SNN",
+    "name": "Shannon Airport",
+    "city_en": "Shannon",
+    "city_pl": "Shannon",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "SXL",
+    "name": "Sligo Airport",
+    "city_en": "Sligo",
+    "city_pl": "Sligo",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "WAT",
+    "name": "Waterford Airport",
+    "city_en": "Waterford",
+    "city_pl": "Waterford",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "AAR",
+    "name": "Aarhus Airport",
+    "city_en": "Aarhus",
+    "city_pl": "Aarhus",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "BLL",
+    "name": "Billund Airport",
+    "city_en": "Billund",
+    "city_pl": "Billund",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "CPH",
+    "name": "Copenhagen Kastrup Airport",
+    "city_en": "Copenhagen",
+    "city_pl": "Kopenhaga",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "EBJ",
+    "name": "Esbjerg Airport",
+    "city_en": "Esbjerg",
+    "city_pl": "Esbjerg",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "KRP",
+    "name": "Karup Airport",
+    "city_en": "Karup",
+    "city_pl": "Karup",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "BYR",
+    "name": "Læsø Airport",
+    "city_en": "Laeso",
+    "city_pl": "Laeso",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "MRW",
+    "name": "Lolland Falster Maribo Airport",
+    "city_en": "Maribo",
+    "city_pl": "Maribo",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "ODE",
+    "name": "Odense Airport",
+    "city_en": "Odense",
+    "city_pl": "Odense",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "RKE",
+    "name": "Copenhagen Roskilde Airport",
+    "city_en": "Copenhagen",
+    "city_pl": "Kopenhaga",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "RNN",
+    "name": "Bornholm Airport",
+    "city_en": "Ronne",
+    "city_pl": "Ronne",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "SGD",
+    "name": "Sønderborg Airport",
+    "city_en": "Soenderborg",
+    "city_pl": "Soenderborg",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "SKS",
+    "name": "Skrydstrup Air Base",
+    "city_en": "Skrydstrup",
+    "city_pl": "Skrydstrup",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "SQW",
+    "name": "Skive Airport",
+    "city_en": "Skive",
+    "city_pl": "Skive",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "TED",
+    "name": "Thisted Airport",
+    "city_en": "Thisted",
+    "city_pl": "Thisted",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "FAE",
+    "name": "Vagar Airport",
+    "city_en": "Vagar",
+    "city_pl": "Vagar",
+    "country_en": "Faroe Islands"
+  },
+  {
+    "code": "STA",
+    "name": "Stauning Airport",
+    "city_en": "Stauning",
+    "city_pl": "Stauning",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "AAL",
+    "name": "Aalborg Airport",
+    "city_en": "Aalborg",
+    "city_pl": "Aalborg",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "LUX",
+    "name": "Luxembourg-Findel International Airport",
+    "city_en": "Luxemburg",
+    "city_pl": "Luxemburg",
+    "country_en": "Luxembourg"
+  },
+  {
+    "code": "AES",
+    "name": "Ålesund Airport",
+    "city_en": "Alesund",
+    "city_pl": "Alesund",
+    "country_en": "Norway"
+  },
+  {
+    "code": "ANX",
+    "name": "Andøya Airport",
+    "city_en": "Andoya",
+    "city_pl": "Andoya",
+    "country_en": "Norway"
+  },
+  {
+    "code": "ALF",
+    "name": "Alta Airport",
+    "city_en": "Alta",
+    "city_pl": "Alta",
+    "country_en": "Norway"
+  },
+  {
+    "code": "BNN",
+    "name": "Brønnøysund Airport",
+    "city_en": "Bronnoysund",
+    "city_pl": "Bronnoysund",
+    "country_en": "Norway"
+  },
+  {
+    "code": "BOO",
+    "name": "Bodø Airport",
+    "city_en": "Bodo",
+    "city_pl": "Bodo",
+    "country_en": "Norway"
+  },
+  {
+    "code": "BGO",
+    "name": "Bergen Airport Flesland",
+    "city_en": "Bergen",
+    "city_pl": "Bergen",
+    "country_en": "Norway"
+  },
+  {
+    "code": "BJF",
+    "name": "Båtsfjord Airport",
+    "city_en": "Batsfjord",
+    "city_pl": "Batsfjord",
+    "country_en": "Norway"
+  },
+  {
+    "code": "KRS",
+    "name": "Kristiansand Airport",
+    "city_en": "Kristiansand",
+    "city_pl": "Kristiansand",
+    "country_en": "Norway"
+  },
+  {
+    "code": "DLD",
+    "name": "Geilo Airport Dagali",
+    "city_en": "Geilo",
+    "city_pl": "Geilo",
+    "country_en": "Norway"
+  },
+  {
+    "code": "BDU",
+    "name": "Bardufoss Airport",
+    "city_en": "Bardufoss",
+    "city_pl": "Bardufoss",
+    "country_en": "Norway"
+  },
+  {
+    "code": "EVE",
+    "name": "Harstad/Narvik Airport, Evenes",
+    "city_en": "Harstad/Narvik",
+    "city_pl": "Harstad/Narvik",
+    "country_en": "Norway"
+  },
+  {
+    "code": "VDB",
+    "name": "Leirin Airport",
+    "city_en": "Fagernes",
+    "city_pl": "Fagernes",
+    "country_en": "Norway"
+  },
+  {
+    "code": "FRO",
+    "name": "Florø Airport",
+    "city_en": "Floro",
+    "city_pl": "Floro",
+    "country_en": "Norway"
+  },
+  {
+    "code": "OSL",
+    "name": "Oslo Lufthavn",
+    "city_en": "Oslo",
+    "city_pl": "Oslo",
+    "country_en": "Norway"
+  },
+  {
+    "code": "HAU",
+    "name": "Haugesund Airport",
+    "city_en": "Haugesund",
+    "city_pl": "Haugesund",
+    "country_en": "Norway"
+  },
+  {
+    "code": "HAA",
+    "name": "Hasvik Airport",
+    "city_en": "Hasvik",
+    "city_pl": "Hasvik",
+    "country_en": "Norway"
+  },
+  {
+    "code": "KSU",
+    "name": "Kristiansund Airport (Kvernberget)",
+    "city_en": "Kristiansund",
+    "city_pl": "Kristiansund",
+    "country_en": "Norway"
+  },
+  {
+    "code": "KKN",
+    "name": "Kirkenes Airport (Høybuktmoen)",
+    "city_en": "Kirkenes",
+    "city_pl": "Kirkenes",
+    "country_en": "Norway"
+  },
+  {
+    "code": "FAN",
+    "name": "Lista Airport",
+    "city_en": "Farsund",
+    "city_pl": "Farsund",
+    "country_en": "Norway"
+  },
+  {
+    "code": "MOL",
+    "name": "Molde Airport",
+    "city_en": "Molde",
+    "city_pl": "Molde",
+    "country_en": "Norway"
+  },
+  {
+    "code": "MJF",
+    "name": "Mosjøen Airport (Kjærstad)",
+    "city_en": "Mosjoen",
+    "city_pl": "Mosjoen",
+    "country_en": "Norway"
+  },
+  {
+    "code": "LKL",
+    "name": "Banak Airport",
+    "city_en": "Lakselv",
+    "city_pl": "Lakselv",
+    "country_en": "Norway"
+  },
+  {
+    "code": "NTB",
+    "name": "Notodden Airport",
+    "city_en": "Notodden",
+    "city_pl": "Notodden",
+    "country_en": "Norway"
+  },
+  {
+    "code": "OLA",
+    "name": "Ørland Airport",
+    "city_en": "Orland",
+    "city_pl": "Orland",
+    "country_en": "Norway"
+  },
+  {
+    "code": "RRS",
+    "name": "Røros Airport",
+    "city_en": "Roros",
+    "city_pl": "Roros",
+    "country_en": "Norway"
+  },
+  {
+    "code": "RYG",
+    "name": "Moss Airport, Rygge",
+    "city_en": "Rygge",
+    "city_pl": "Rygge",
+    "country_en": "Norway"
+  },
+  {
+    "code": "LYR",
+    "name": "Svalbard Airport, Longyear",
+    "city_en": "Svalbard",
+    "city_pl": "Svalbard",
+    "country_en": "Norway"
+  },
+  {
+    "code": "SKE",
+    "name": "Skien Airport",
+    "city_en": "Skien",
+    "city_pl": "Skien",
+    "country_en": "Norway"
+  },
+  {
+    "code": "SRP",
+    "name": "Stord Airport",
+    "city_en": "Stord",
+    "city_pl": "Stord",
+    "country_en": "Norway"
+  },
+  {
+    "code": "SSJ",
+    "name": "Sandnessjøen Airport (Stokka)",
+    "city_en": "Sandnessjoen",
+    "city_pl": "Sandnessjoen",
+    "country_en": "Norway"
+  },
+  {
+    "code": "TOS",
+    "name": "Tromsø Airport,",
+    "city_en": "Tromso",
+    "city_pl": "Tromso",
+    "country_en": "Norway"
+  },
+  {
+    "code": "TRF",
+    "name": "Sandefjord Airport, Torp",
+    "city_en": "Sandefjord",
+    "city_pl": "Sandefjord",
+    "country_en": "Norway"
+  },
+  {
+    "code": "TRD",
+    "name": "Trondheim Airport Værnes",
+    "city_en": "Trondheim",
+    "city_pl": "Trondheim",
+    "country_en": "Norway"
+  },
+  {
+    "code": "SVG",
+    "name": "Stavanger Airport Sola",
+    "city_en": "Stavanger",
+    "city_pl": "Stavanger",
+    "country_en": "Norway"
+  },
+  {
+    "code": "GDN",
+    "name": "Gdańsk Lech Wałęsa Airport",
+    "city_en": "Gdansk",
+    "city_pl": "Gdańsk",
+    "country_en": "Poland"
+  },
+  {
+    "code": "KRK",
+    "name": "Kraków John Paul II International Airport",
+    "city_en": "Krakow",
+    "city_pl": "Kraków",
+    "country_en": "Poland"
+  },
+  {
+    "code": "KTW",
+    "name": "Katowice International Airport",
+    "city_en": "Katowice",
+    "city_pl": "Katowice",
+    "country_en": "Poland"
+  },
+  {
+    "code": "POZ",
+    "name": "Poznań-Ławica Airport",
+    "city_en": "Poznan",
+    "city_pl": "Poznań",
+    "country_en": "Poland"
+  },
+  {
+    "code": "RZE",
+    "name": "Rzeszów-Jasionka Airport",
+    "city_en": "Rzeszow",
+    "city_pl": "Rzeszow",
+    "country_en": "Poland"
+  },
+  {
+    "code": "SZZ",
+    "name": "Szczecin-Goleniów Solidarność Airport",
+    "city_en": "Szczecin",
+    "city_pl": "Szczecin",
+    "country_en": "Poland"
+  },
+  {
+    "code": "OSP",
+    "name": "Redzikowo Air Base",
+    "city_en": "Slupsk",
+    "city_pl": "Slupsk",
+    "country_en": "Poland"
+  },
+  {
+    "code": "WAW",
+    "name": "Warsaw Chopin Airport",
+    "city_en": "Warsaw",
+    "city_pl": "Warszawa",
+    "country_en": "Poland"
+  },
+  {
+    "code": "WRO",
+    "name": "Copernicus Wrocław Airport",
+    "city_en": "Wroclaw",
+    "city_pl": "Wrocław",
+    "country_en": "Poland"
+  },
+  {
+    "code": "IEG",
+    "name": "Zielona Góra-Babimost Airport",
+    "city_en": "Zielona Gora",
+    "city_pl": "Zielona Gora",
+    "country_en": "Poland"
+  },
+  {
+    "code": "RNB",
+    "name": "Ronneby Airport",
+    "city_en": "Ronneby",
+    "city_pl": "Ronneby",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "GOT",
+    "name": "Gothenburg-Landvetter Airport",
+    "city_en": "Gothenborg",
+    "city_pl": "Gothenborg",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "JKG",
+    "name": "Jönköping Airport",
+    "city_en": "Joenkoeping",
+    "city_pl": "Joenkoeping",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "LDK",
+    "name": "Lidköping-Hovby Airport",
+    "city_en": "Lidkoping",
+    "city_pl": "Lidkoping",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "GSE",
+    "name": "Gothenburg City Airport",
+    "city_en": "Gothenborg",
+    "city_pl": "Gothenborg",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "KVB",
+    "name": "Skövde Airport",
+    "city_en": "Skovde",
+    "city_pl": "Skovde",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "THN",
+    "name": "Trollhättan-Vänersborg Airport",
+    "city_en": "Trollhattan",
+    "city_pl": "Trollhattan",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "KSK",
+    "name": "Karlskoga Airport",
+    "city_en": "Karlskoga",
+    "city_pl": "Karlskoga",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "MXX",
+    "name": "Mora Airport",
+    "city_en": "Mora",
+    "city_pl": "Mora",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "NYO",
+    "name": "Stockholm Skavsta Airport",
+    "city_en": "Stockholm",
+    "city_pl": "Sztokholm",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "KID",
+    "name": "Kristianstad Airport",
+    "city_en": "Kristianstad",
+    "city_pl": "Kristianstad",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "OSK",
+    "name": "Oskarshamn Airport",
+    "city_en": "Oskarshamn",
+    "city_pl": "Oskarshamn",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "KLR",
+    "name": "Kalmar Airport",
+    "city_en": "Kalkmar",
+    "city_pl": "Kalkmar",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "MMX",
+    "name": "Malmö Sturup Airport",
+    "city_en": "Malmoe",
+    "city_pl": "Malmoe",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "HAD",
+    "name": "Halmstad Airport",
+    "city_en": "Halmstad",
+    "city_pl": "Halmstad",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "VXO",
+    "name": "Växjö Kronoberg Airport",
+    "city_en": "Vaxjo",
+    "city_pl": "Vaxjo",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "EVG",
+    "name": "Sveg Airport",
+    "city_en": "Sveg",
+    "city_pl": "Sveg",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "GEV",
+    "name": "Gällivare Airport",
+    "city_en": "Gallivare",
+    "city_pl": "Gallivare",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "HUV",
+    "name": "Hudiksvall Airport",
+    "city_en": "Hudiksvall",
+    "city_pl": "Hudiksvall",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "KRF",
+    "name": "Kramfors Sollefteå Airport",
+    "city_en": "Kramfors",
+    "city_pl": "Kramfors",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "LYC",
+    "name": "Lycksele Airport",
+    "city_en": "Lycksele",
+    "city_pl": "Lycksele",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "SDL",
+    "name": "Sundsvall-Härnösand Airport",
+    "city_en": "Sundsvall",
+    "city_pl": "Sundsvall",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "OER",
+    "name": "Örnsköldsvik Airport",
+    "city_en": "Ornskoldsvik",
+    "city_pl": "Ornskoldsvik",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "KRN",
+    "name": "Kiruna Airport",
+    "city_en": "Kiruna",
+    "city_pl": "Kiruna",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "SFT",
+    "name": "Skellefteå Airport",
+    "city_en": "Skelleftea",
+    "city_pl": "Skelleftea",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "UME",
+    "name": "Umeå Airport",
+    "city_en": "Umea",
+    "city_pl": "Umea",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "VHM",
+    "name": "Vilhelmina Airport",
+    "city_en": "Vilhelmina",
+    "city_pl": "Vilhelmina",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "AJR",
+    "name": "Arvidsjaur Airport",
+    "city_en": "Arvidsjaur",
+    "city_pl": "Arvidsjaur",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "ORB",
+    "name": "Örebro Airport",
+    "city_en": "Orebro",
+    "city_pl": "Orebro",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "VST",
+    "name": "Stockholm Västerås Airport",
+    "city_en": "Vasteras",
+    "city_pl": "Vasteras",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "LLA",
+    "name": "Luleå Airport",
+    "city_en": "Lulea",
+    "city_pl": "Lulea",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "ARN",
+    "name": "Stockholm-Arlanda Airport",
+    "city_en": "Stockholm",
+    "city_pl": "Sztokholm",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "BMA",
+    "name": "Stockholm-Bromma Airport",
+    "city_en": "Stockholm",
+    "city_pl": "Sztokholm",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "BLE",
+    "name": "Borlange Airport",
+    "city_en": "Borlange",
+    "city_pl": "Borlange",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "HLF",
+    "name": "Hultsfred Airport",
+    "city_en": "Hultsfred",
+    "city_pl": "Hultsfred",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "GVX",
+    "name": "Gävle Sandviken Airport",
+    "city_en": "Gavle",
+    "city_pl": "Gavle",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "LPI",
+    "name": "Linköping City Airport",
+    "city_en": "Linkoeping",
+    "city_pl": "Linkoeping",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "NRK",
+    "name": "Norrköping Airport",
+    "city_en": "Norrkoeping",
+    "city_pl": "Norrkoeping",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "EKT",
+    "name": "Eskilstuna Airport",
+    "city_en": "Eskilstuna",
+    "city_pl": "Eskilstuna",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "VBY",
+    "name": "Visby Airport",
+    "city_en": "Visby",
+    "city_pl": "Visby",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "SPM",
+    "name": "Spangdahlem Air Base",
+    "city_en": "Spangdahlem",
+    "city_pl": "Spangdahlem",
+    "country_en": "Germany"
+  },
+  {
+    "code": "RMS",
+    "name": "Ramstein Air Base",
+    "city_en": "Ramstein",
+    "city_pl": "Ramstein",
+    "country_en": "Germany"
+  },
+  {
+    "code": "GHF",
+    "name": "[Duplicate] Giebelstadt Army Air Field",
+    "city_en": "Giebelstadt",
+    "city_pl": "Giebelstadt",
+    "country_en": "Germany"
+  },
+  {
+    "code": "ZCN",
+    "name": "Celle Airport",
+    "city_en": "Celle",
+    "city_pl": "Celle",
+    "country_en": "Germany"
+  },
+  {
+    "code": "FRZ",
+    "name": "Fritzlar Airport",
+    "city_en": "Fritzlar",
+    "city_pl": "Fritzlar",
+    "country_en": "Germany"
+  },
+  {
+    "code": "ZNF",
+    "name": "Hanau Army Air Field",
+    "city_en": "Hanau",
+    "city_pl": "Hanau",
+    "country_en": "Germany"
+  },
+  {
+    "code": "KZG",
+    "name": "Flugplatz Kitzingen",
+    "city_en": "Kitzingen",
+    "city_pl": "Kitzingen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "FCN",
+    "name": "Nordholz Naval Airbase",
+    "city_en": "Nordholz",
+    "city_pl": "Nordholz",
+    "country_en": "Germany"
+  },
+  {
+    "code": "GKE",
+    "name": "Geilenkirchen Air Base",
+    "city_en": "Geilenkirchen",
+    "city_pl": "Geilenkirchen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "RLG",
+    "name": "Rostock-Laage Airport",
+    "city_en": "Laage",
+    "city_pl": "Laage",
+    "country_en": "Germany"
+  },
+  {
+    "code": "WBG",
+    "name": "Schleswig Air Base",
+    "city_en": "Schleswig",
+    "city_pl": "Schleswig",
+    "country_en": "Germany"
+  },
+  {
+    "code": "WIE",
+    "name": "Wiesbaden Army Airfield",
+    "city_en": "Wiesbaden",
+    "city_pl": "Wiesbaden",
+    "country_en": "Germany"
+  },
+  {
+    "code": "FEL",
+    "name": "Fürstenfeldbruck Air Base",
+    "city_en": "Fuerstenfeldbruck",
+    "city_pl": "Fuerstenfeldbruck",
+    "country_en": "Germany"
+  },
+  {
+    "code": "IGS",
+    "name": "Ingolstadt Manching Airport",
+    "city_en": "Ingolstadt",
+    "city_pl": "Ingolstadt",
+    "country_en": "Germany"
+  },
+  {
+    "code": "GUT",
+    "name": "Gütersloh Air Base",
+    "city_en": "Guetersloh",
+    "city_pl": "Guetersloh",
+    "country_en": "Germany"
+  },
+  {
+    "code": "ALJ",
+    "name": "Alexander Bay Airport",
+    "city_en": "Alexander Bay",
+    "city_pl": "Alexander Bay",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "AGZ",
+    "name": "Aggeneys Airport",
+    "city_en": "Aggeneys",
+    "city_pl": "Aggeneys",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "BIY",
+    "name": "Bisho Airport",
+    "city_en": "Bisho",
+    "city_pl": "Bisho",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "BFN",
+    "name": "Bram Fischer International Airport",
+    "city_en": "Bloemfontein",
+    "city_pl": "Bloemfontein",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "CPT",
+    "name": "Cape Town International Airport",
+    "city_en": "Cape Town",
+    "city_pl": "Kapsztad",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "DUR",
+    "name": "King Shaka International Airport",
+    "city_en": "Durban",
+    "city_pl": "Durban",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "ELS",
+    "name": "Ben Schoeman Airport",
+    "city_en": "East London",
+    "city_pl": "East London",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "FCB",
+    "name": "Ficksburg Sentraoes Airport",
+    "city_en": "Ficksburg",
+    "city_pl": "Ficksburg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "GCJ",
+    "name": "Grand Central Airport",
+    "city_en": "Johannesburg",
+    "city_pl": "Johanesburg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "GRJ",
+    "name": "George Airport",
+    "city_en": "George",
+    "city_pl": "George",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "HRS",
+    "name": "Harrismith Airport",
+    "city_en": "Harrismith",
+    "city_pl": "Harrismith",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "HDS",
+    "name": "Hoedspruit Air Force Base Airport",
+    "city_en": "Hoedspruit",
+    "city_pl": "Hoedspruit",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "JNB",
+    "name": "OR Tambo International Airport",
+    "city_en": "Johannesburg",
+    "city_pl": "Johanesburg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "KXE",
+    "name": "P C Pelser Airport",
+    "city_en": "Klerksdorp",
+    "city_pl": "Klerksdorp",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "KIM",
+    "name": "Kimberley Airport",
+    "city_en": "Kimberley",
+    "city_pl": "Kimberley",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "KMH",
+    "name": "Johan Pienaar Airport",
+    "city_en": "Kuruman",
+    "city_pl": "Kuruman",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "KLZ",
+    "name": "Kleinsee Airport",
+    "city_en": "Kleinsee",
+    "city_pl": "Kleinsee",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "HLA",
+    "name": "Lanseria Airport",
+    "city_en": "Johannesburg",
+    "city_pl": "Johanesburg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "SDB",
+    "name": "Langebaanweg Airport",
+    "city_en": "Langebaanweg",
+    "city_pl": "Langebaanweg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "LAY",
+    "name": "Ladysmith Airport",
+    "city_en": "Ladysmith",
+    "city_pl": "Ladysmith",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "MGH",
+    "name": "Margate Airport",
+    "city_en": "Margate",
+    "city_pl": "Margate",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "LLE",
+    "name": "Riverside Airport",
+    "city_en": "Malalane",
+    "city_pl": "Malalane",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "MZQ",
+    "name": "Mkuze Airport",
+    "city_en": "Mkuze",
+    "city_pl": "Mkuze",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "NCS",
+    "name": "Newcastle Airport",
+    "city_en": "Newcastle",
+    "city_pl": "Newcastle",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "OVG",
+    "name": "Overberg Airport",
+    "city_en": "Overberg",
+    "city_pl": "Overberg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "OUH",
+    "name": "Oudtshoorn Airport",
+    "city_en": "Oudtshoorn",
+    "city_pl": "Oudtshoorn",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "PLZ",
+    "name": "Port Elizabeth Airport",
+    "city_en": "Port Elizabeth",
+    "city_pl": "Port Elizabeth",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "PBZ",
+    "name": "Plettenberg Bay Airport",
+    "city_en": "Plettenberg Bay",
+    "city_pl": "Plettenberg Bay",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "PHW",
+    "name": "Hendrik Van Eck Airport",
+    "city_en": "Phalaborwa",
+    "city_pl": "Phalaborwa",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "JOH",
+    "name": "Port St Johns Airport",
+    "city_en": "Port Saint Johns",
+    "city_pl": "Port Saint Johns",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "PZB",
+    "name": "Pietermaritzburg Airport",
+    "city_en": "Pietermaritzburg",
+    "city_pl": "Pietermaritzburg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "NTY",
+    "name": "Pilanesberg International Airport",
+    "city_en": "Pilanesberg",
+    "city_pl": "Pilanesberg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "PTG",
+    "name": "Polokwane International Airport",
+    "city_en": "Potgietersrus",
+    "city_pl": "Potgietersrus",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "PCF",
+    "name": "Potchefstroom Airport",
+    "city_en": "Potchefstroom",
+    "city_pl": "Potchefstroom",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "UTW",
+    "name": "Queenstown Airport",
+    "city_en": "Queenstown",
+    "city_pl": "Queenstown",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "RCB",
+    "name": "Richards Bay Airport",
+    "city_en": "Richard's Bay",
+    "city_pl": "Richard's Bay",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "ROD",
+    "name": "Robertson Airport",
+    "city_en": "Robertson",
+    "city_pl": "Robertson",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "SBU",
+    "name": "Springbok Airport",
+    "city_en": "Springbok",
+    "city_pl": "Springbok",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "ZEC",
+    "name": "Secunda Airport",
+    "city_en": "Secunda",
+    "city_pl": "Secunda",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "SIS",
+    "name": "Sishen Airport",
+    "city_en": "Sishen",
+    "city_pl": "Sishen",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "SZK",
+    "name": "Skukuza Airport",
+    "city_en": "Skukuza",
+    "city_pl": "Skukuza",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "LTA",
+    "name": "Tzaneen Airport",
+    "city_en": "Tzaneen",
+    "city_pl": "Tzaneen",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "ULD",
+    "name": "Prince Mangosuthu Buthelezi Airport",
+    "city_en": "Ulundi",
+    "city_pl": "Ulundi",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "UTN",
+    "name": "Pierre Van Ryneveld Airport",
+    "city_en": "Upington",
+    "city_pl": "Upington",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "UTT",
+    "name": "K. D. Matanzima Airport",
+    "city_en": "Umtata",
+    "city_pl": "Umtata",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "VRU",
+    "name": "Vryburg Airport",
+    "city_en": "Vryburg",
+    "city_pl": "Vryburg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "VIR",
+    "name": "Virginia Airport",
+    "city_en": "Durban",
+    "city_pl": "Durban",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "VRE",
+    "name": "Vredendal Airport",
+    "city_en": "Vredendal",
+    "city_pl": "Vredendal",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "PRY",
+    "name": "Wonderboom Airport",
+    "city_en": "Pretoria",
+    "city_pl": "Pretoria",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "WKF",
+    "name": "Waterkloof Air Force Base",
+    "city_en": "Waterkloof",
+    "city_pl": "Waterkloof",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "FRW",
+    "name": "Francistown Airport",
+    "city_en": "Francistown",
+    "city_pl": "Francistown",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "JWA",
+    "name": "Jwaneng Airport",
+    "city_en": "Jwaneng",
+    "city_pl": "Jwaneng",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "BBK",
+    "name": "Kasane Airport",
+    "city_en": "Kasane",
+    "city_pl": "Kasane",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "MUB",
+    "name": "Maun Airport",
+    "city_en": "Maun",
+    "city_pl": "Maun",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "GBE",
+    "name": "Sir Seretse Khama International Airport",
+    "city_en": "Gaberone",
+    "city_pl": "Gaberone",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "PKW",
+    "name": "Selebi Phikwe Airport",
+    "city_en": "Selebi-phikwe",
+    "city_pl": "Selebi-phikwe",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "BZV",
+    "name": "Maya-Maya Airport",
+    "city_en": "Brazzaville",
+    "city_pl": "Brazzaville",
+    "country_en": "Congo (Brazzaville)"
+  },
+  {
+    "code": "FTX",
+    "name": "Owando Airport",
+    "city_en": "Owando",
+    "city_pl": "Owando",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "OUE",
+    "name": "Ouesso Airport",
+    "city_en": "Ouesso",
+    "city_pl": "Ouesso",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "PNR",
+    "name": "Pointe Noire Airport",
+    "city_en": "Pointe-noire",
+    "city_pl": "Pointe-noire",
+    "country_en": "Congo (Brazzaville)"
+  },
+  {
+    "code": "MTS",
+    "name": "Matsapha Airport",
+    "city_en": "Manzini",
+    "city_pl": "Manzini",
+    "country_en": "Swaziland"
+  },
+  {
+    "code": "BGF",
+    "name": "Bangui M'Poko International Airport",
+    "city_en": "Bangui",
+    "city_pl": "Bangui",
+    "country_en": "Central African Republic"
+  },
+  {
+    "code": "BBT",
+    "name": "Berbérati Airport",
+    "city_en": "Berberati",
+    "city_pl": "Berberati",
+    "country_en": "Central African Republic"
+  },
+  {
+    "code": "BSG",
+    "name": "Bata Airport",
+    "city_en": "Bata",
+    "city_pl": "Bata",
+    "country_en": "Equatorial Guinea"
+  },
+  {
+    "code": "SSG",
+    "name": "Malabo Airport",
+    "city_en": "Malabo",
+    "city_pl": "Malabo",
+    "country_en": "Equatorial Guinea"
+  },
+  {
+    "code": "ASI",
+    "name": "RAF Ascension Island",
+    "city_en": "Wide Awake",
+    "city_pl": "Wide Awake",
+    "country_en": "Saint Helena"
+  },
+  {
+    "code": "MRU",
+    "name": "Sir Seewoosagur Ramgoolam International Airport",
+    "city_en": "Plaisance",
+    "city_pl": "Plaisance",
+    "country_en": "Mauritius"
+  },
+  {
+    "code": "RRG",
+    "name": "Sir Charles Gaetan Duval Airport",
+    "city_en": "Rodriguez Island",
+    "city_pl": "Rodriguez Island",
+    "country_en": "Mauritius"
+  },
+  {
+    "code": "NKW",
+    "name": "Diego Garcia Naval Support Facility",
+    "city_en": "Diego Garcia Island",
+    "city_pl": "Diego Garcia Island",
+    "country_en": "British Indian Ocean Territory"
+  },
+  {
+    "code": "TKC",
+    "name": "Tiko Airport",
+    "city_en": "Tiko",
+    "city_pl": "Tiko",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "DLA",
+    "name": "Douala International Airport",
+    "city_en": "Douala",
+    "city_pl": "Douala",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "MVR",
+    "name": "Salak Airport",
+    "city_en": "Maroua",
+    "city_pl": "Maroua",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "FOM",
+    "name": "Foumban Nkounja Airport",
+    "city_en": "Foumban",
+    "city_pl": "Foumban",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "NGE",
+    "name": "N'Gaoundéré Airport",
+    "city_en": "N'gaoundere",
+    "city_pl": "N'gaoundere",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "GOU",
+    "name": "Garoua International Airport",
+    "city_en": "Garoua",
+    "city_pl": "Garoua",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "BFX",
+    "name": "Bafoussam Airport",
+    "city_en": "Bafoussam",
+    "city_pl": "Bafoussam",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "BPC",
+    "name": "Bamenda Airport",
+    "city_en": "Bamenda",
+    "city_pl": "Bamenda",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "YAO",
+    "name": "Yaoundé Airport",
+    "city_en": "Yaounde",
+    "city_pl": "Yaounde",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "CGJ",
+    "name": "Kasompe Airport",
+    "city_en": "Kasompe",
+    "city_pl": "Kasompe",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "LVI",
+    "name": "Livingstone Airport",
+    "city_en": "Livingstone",
+    "city_pl": "Livingstone",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "LUN",
+    "name": "Kenneth Kaunda International Airport Lusaka",
+    "city_en": "Lusaka",
+    "city_pl": "Lusaka",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "MFU",
+    "name": "Mfuwe Airport",
+    "city_en": "Mfuwe",
+    "city_pl": "Mfuwe",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "MNR",
+    "name": "Mongu Airport",
+    "city_en": "Mongu",
+    "city_pl": "Mongu",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "NLA",
+    "name": "Simon Mwansa Kapwepwe International Airport",
+    "city_en": "Ndola",
+    "city_pl": "Ndola",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "KIW",
+    "name": "Southdowns Airport",
+    "city_en": "Southdowns",
+    "city_pl": "Southdowns",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "HAH",
+    "name": "Prince Said Ibrahim International Airport",
+    "city_en": "Moroni",
+    "city_pl": "Moroni",
+    "country_en": "Comoros"
+  },
+  {
+    "code": "NWA",
+    "name": "Mohéli Bandar Es Eslam Airport",
+    "city_en": "Moheli",
+    "city_pl": "Moheli",
+    "country_en": "Comoros"
+  },
+  {
+    "code": "AJN",
+    "name": "Ouani Airport",
+    "city_en": "Anjouan",
+    "city_pl": "Anjouan",
+    "country_en": "Comoros"
+  },
+  {
+    "code": "DZA",
+    "name": "Dzaoudzi Pamandzi International Airport",
+    "city_en": "Dzaoudzi",
+    "city_pl": "Dzaoudzi",
+    "country_en": "Mayotte"
+  },
+  {
+    "code": "RUN",
+    "name": "Roland Garros Airport",
+    "city_en": "St.-denis",
+    "city_pl": "St.-denis",
+    "country_en": "Reunion"
+  },
+  {
+    "code": "ZSE",
+    "name": "Pierrefonds Airport",
+    "city_en": "St.-pierre",
+    "city_pl": "St.-pierre",
+    "country_en": "Reunion"
+  },
+  {
+    "code": "TNR",
+    "name": "Ivato Airport",
+    "city_en": "Antananarivo",
+    "city_pl": "Antananarivo",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "ZVA",
+    "name": "Miandrivazo Airport",
+    "city_en": "Miandrivazo",
+    "city_pl": "Miandrivazo",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "SMS",
+    "name": "Sainte Marie Airport",
+    "city_en": "Sainte Marie",
+    "city_pl": "Sainte Marie",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "TMM",
+    "name": "Toamasina Airport",
+    "city_en": "Toamasina",
+    "city_pl": "Toamasina",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "MOQ",
+    "name": "Morondava Airport",
+    "city_en": "Morondava",
+    "city_pl": "Morondava",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "DIE",
+    "name": "Arrachart Airport",
+    "city_en": "Antsiranana",
+    "city_pl": "Antsiranana",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WMR",
+    "name": "Mananara Nord Airport",
+    "city_en": "Mananara",
+    "city_pl": "Mananara",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "ZWA",
+    "name": "Andapa Airport",
+    "city_en": "Andapa",
+    "city_pl": "Andapa",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "AMB",
+    "name": "Ambilobe Airport",
+    "city_en": "Ambilobe",
+    "city_pl": "Ambilobe",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "ANM",
+    "name": "Antsirabato Airport",
+    "city_en": "Antalaha",
+    "city_pl": "Antalaha",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "HVA",
+    "name": "Analalava Airport",
+    "city_en": "Analalava",
+    "city_pl": "Analalava",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "MJN",
+    "name": "Amborovy Airport",
+    "city_en": "Mahajanga",
+    "city_pl": "Mahajanga",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "NOS",
+    "name": "Fascene Airport",
+    "city_en": "Nosy-be",
+    "city_pl": "Nosy-be",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "BPY",
+    "name": "Besalampy Airport",
+    "city_en": "Besalampy",
+    "city_pl": "Besalampy",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WMN",
+    "name": "Maroantsetra Airport",
+    "city_en": "Maroantsetra",
+    "city_pl": "Maroantsetra",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "SVB",
+    "name": "Sambava Airport",
+    "city_en": "Sambava",
+    "city_pl": "Sambava",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "VOH",
+    "name": "Vohimarina Airport",
+    "city_en": "Vohemar",
+    "city_pl": "Vohemar",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WAI",
+    "name": "Ambalabe Airport",
+    "city_en": "Antsohihy",
+    "city_pl": "Antsohihy",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "IVA",
+    "name": "Ampampamena Airport",
+    "city_en": "Ampampamena",
+    "city_pl": "Ampampamena",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "FTU",
+    "name": "Tôlanaro Airport",
+    "city_en": "Tolagnaro",
+    "city_pl": "Tolagnaro",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WFI",
+    "name": "Fianarantsoa Airport",
+    "city_en": "Fianarantsoa",
+    "city_pl": "Fianarantsoa",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "RVA",
+    "name": "Farafangana Airport",
+    "city_en": "Farafangana",
+    "city_pl": "Farafangana",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WVK",
+    "name": "Manakara Airport",
+    "city_en": "Manakara",
+    "city_pl": "Manakara",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "MNJ",
+    "name": "Mananjary Airport",
+    "city_en": "Mananjary",
+    "city_pl": "Mananjary",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "MXM",
+    "name": "Morombe Airport",
+    "city_en": "Morombe",
+    "city_pl": "Morombe",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "TLE",
+    "name": "Toliara Airport",
+    "city_en": "Toliara",
+    "city_pl": "Toliara",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "SSY",
+    "name": "Mbanza Congo Airport",
+    "city_en": "M'banza-congo",
+    "city_pl": "M'banza-congo",
+    "country_en": "Angola"
+  },
+  {
+    "code": "BUG",
+    "name": "Benguela Airport",
+    "city_en": "Benguela",
+    "city_pl": "Benguela",
+    "country_en": "Angola"
+  },
+  {
+    "code": "CAB",
+    "name": "Cabinda Airport",
+    "city_en": "Cabinda",
+    "city_pl": "Cabinda",
+    "country_en": "Angola"
+  },
+  {
+    "code": "NOV",
+    "name": "Nova Lisboa Airport",
+    "city_en": "Huambo",
+    "city_pl": "Huambo",
+    "country_en": "Angola"
+  },
+  {
+    "code": "SVP",
+    "name": "Kuito Airport",
+    "city_en": "Kuito",
+    "city_pl": "Kuito",
+    "country_en": "Angola"
+  },
+  {
+    "code": "LAD",
+    "name": "Quatro de Fevereiro Airport",
+    "city_en": "Luanda",
+    "city_pl": "Luanda",
+    "country_en": "Angola"
+  },
+  {
+    "code": "MEG",
+    "name": "Malanje Airport",
+    "city_en": "Malanje",
+    "city_pl": "Malanje",
+    "country_en": "Angola"
+  },
+  {
+    "code": "SPP",
+    "name": "Menongue Airport",
+    "city_en": "Menongue",
+    "city_pl": "Menongue",
+    "country_en": "Angola"
+  },
+  {
+    "code": "GXG",
+    "name": "Negage Airport",
+    "city_en": "Negage",
+    "city_pl": "Negage",
+    "country_en": "Angola"
+  },
+  {
+    "code": "PBN",
+    "name": "Porto Amboim Airport",
+    "city_en": "Porto Amboim",
+    "city_pl": "Porto Amboim",
+    "country_en": "Angola"
+  },
+  {
+    "code": "VHC",
+    "name": "Saurimo Airport",
+    "city_en": "Saurimo",
+    "city_pl": "Saurimo",
+    "country_en": "Angola"
+  },
+  {
+    "code": "SZA",
+    "name": "Soyo Airport",
+    "city_en": "Soyo",
+    "city_pl": "Soyo",
+    "country_en": "Angola"
+  },
+  {
+    "code": "SDD",
+    "name": "Lubango Airport",
+    "city_en": "Lubango",
+    "city_pl": "Lubango",
+    "country_en": "Angola"
+  },
+  {
+    "code": "LUO",
+    "name": "Luena Airport",
+    "city_en": "Luena",
+    "city_pl": "Luena",
+    "country_en": "Angola"
+  },
+  {
+    "code": "UGO",
+    "name": "Uige Airport",
+    "city_en": "Uige",
+    "city_pl": "Uige",
+    "country_en": "Angola"
+  },
+  {
+    "code": "XGN",
+    "name": "Xangongo Airport",
+    "city_en": "Xangongo",
+    "city_pl": "Xangongo",
+    "country_en": "Angola"
+  },
+  {
+    "code": "OYE",
+    "name": "Oyem Airport",
+    "city_en": "Oyem",
+    "city_pl": "Oyem",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "OKN",
+    "name": "Okondja Airport",
+    "city_en": "Okondja",
+    "city_pl": "Okondja",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "LBQ",
+    "name": "Lambarene Airport",
+    "city_en": "Lambarene",
+    "city_pl": "Lambarene",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "BMM",
+    "name": "Bitam Airport",
+    "city_en": "Bitam",
+    "city_pl": "Bitam",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "POG",
+    "name": "Port Gentil Airport",
+    "city_en": "Port Gentil",
+    "city_pl": "Port Gentil",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "OMB",
+    "name": "Omboue Hopital Airport",
+    "city_en": "Omboue Hospial",
+    "city_pl": "Omboue Hospial",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "MKU",
+    "name": "Makokou Airport",
+    "city_en": "Makokou",
+    "city_pl": "Makokou",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "LBV",
+    "name": "Libreville Leon M'ba International Airport",
+    "city_en": "Libreville",
+    "city_pl": "Libreville",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "MVB",
+    "name": "M'Vengue El Hadj Omar Bongo Ondimba International Airport",
+    "city_en": "Franceville",
+    "city_pl": "Franceville",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "PCP",
+    "name": "Principe Airport",
+    "city_en": "Principe",
+    "city_pl": "Principe",
+    "country_en": "Sao Tome and Principe"
+  },
+  {
+    "code": "TMS",
+    "name": "São Tomé International Airport",
+    "city_en": "Sao Tome",
+    "city_pl": "Sao Tome",
+    "country_en": "Sao Tome and Principe"
+  },
+  {
+    "code": "BEW",
+    "name": "Beira Airport",
+    "city_en": "Beira",
+    "city_pl": "Beira",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "INH",
+    "name": "Inhambane Airport",
+    "city_en": "Inhambane",
+    "city_pl": "Inhambane",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "VXC",
+    "name": "Lichinga Airport",
+    "city_en": "Lichinga",
+    "city_pl": "Lichinga",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "LFB",
+    "name": "Lumbo Airport",
+    "city_en": "Lumbo",
+    "city_pl": "Lumbo",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "MPM",
+    "name": "Maputo Airport",
+    "city_en": "Maputo",
+    "city_pl": "Maputo",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "MUD",
+    "name": "Mueda Airport",
+    "city_en": "Mueda",
+    "city_pl": "Mueda",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "MZB",
+    "name": "Mocímboa da Praia Airport",
+    "city_en": "Mocimboa Da Praia",
+    "city_pl": "Mocimboa Da Praia",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "MNC",
+    "name": "Nacala Airport",
+    "city_en": "Nacala",
+    "city_pl": "Nacala",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "APL",
+    "name": "Nampula Airport",
+    "city_en": "Nampula",
+    "city_pl": "Nampula",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "POL",
+    "name": "Pemba Airport",
+    "city_en": "Pemba",
+    "city_pl": "Pemba",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "UEL",
+    "name": "Quelimane Airport",
+    "city_en": "Quelimane",
+    "city_pl": "Quelimane",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "TET",
+    "name": "Chingozi Airport",
+    "city_en": "Tete",
+    "city_pl": "Tete",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "VNX",
+    "name": "Vilankulo Airport",
+    "city_en": "Vilankulu",
+    "city_pl": "Vilankulu",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "DES",
+    "name": "Desroches Airport",
+    "city_en": "Desroches",
+    "city_pl": "Desroches",
+    "country_en": "Seychelles"
+  },
+  {
+    "code": "SEZ",
+    "name": "Seychelles International Airport",
+    "city_en": "Mahe",
+    "city_pl": "Mahe",
+    "country_en": "Seychelles"
+  },
+  {
+    "code": "PRI",
+    "name": "Praslin Airport",
+    "city_en": "Praslin",
+    "city_pl": "Praslin",
+    "country_en": "Seychelles"
+  },
+  {
+    "code": "AEH",
+    "name": "Abeche Airport",
+    "city_en": "Abeche",
+    "city_pl": "Abeche",
+    "country_en": "Chad"
+  },
+  {
+    "code": "MQQ",
+    "name": "Moundou Airport",
+    "city_en": "Moundou",
+    "city_pl": "Moundou",
+    "country_en": "Chad"
+  },
+  {
+    "code": "NDJ",
+    "name": "N'Djamena International Airport",
+    "city_en": "N'djamena",
+    "city_pl": "N'djamena",
+    "country_en": "Chad"
+  },
+  {
+    "code": "FYT",
+    "name": "Faya Largeau Airport",
+    "city_en": "Faya-largeau",
+    "city_pl": "Faya-largeau",
+    "country_en": "Chad"
+  },
+  {
+    "code": "BUQ",
+    "name": "Joshua Mqabuko Nkomo International Airport",
+    "city_en": "Bulawayo",
+    "city_pl": "Bulawayo",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "BFO",
+    "name": "Buffalo Range Airport",
+    "city_en": "Chiredzi",
+    "city_pl": "Chiredzi",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "VFA",
+    "name": "Victoria Falls International Airport",
+    "city_en": "Victoria Falls",
+    "city_pl": "Victoria Falls",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "HRE",
+    "name": "Robert Gabriel Mugabe International Airport",
+    "city_en": "Harare",
+    "city_pl": "Harare",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "KAB",
+    "name": "Kariba International Airport",
+    "city_en": "Kariba",
+    "city_pl": "Kariba",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "UTA",
+    "name": "Mutare Airport",
+    "city_en": "Mutare",
+    "city_pl": "Mutare",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "MVZ",
+    "name": "Masvingo International Airport",
+    "city_en": "Masvingo",
+    "city_pl": "Masvingo",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "GWE",
+    "name": "Thornhill Air Base",
+    "city_en": "Gwert",
+    "city_pl": "Gwert",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "HWN",
+    "name": "Hwange National Park Airport",
+    "city_en": "Hwange National Park",
+    "city_pl": "Hwange National Park",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "BLZ",
+    "name": "Chileka International Airport",
+    "city_en": "Blantyre",
+    "city_pl": "Blantyre",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "KGJ",
+    "name": "Karonga Airport",
+    "city_en": "Karonga",
+    "city_pl": "Karonga",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "KBQ",
+    "name": "Kasungu Airport",
+    "city_en": "Kasungu",
+    "city_pl": "Kasungu",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "LLW",
+    "name": "Lilongwe International Airport",
+    "city_en": "Lilongwe",
+    "city_pl": "Lilongwe",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "ZZU",
+    "name": "Mzuzu Airport",
+    "city_en": "Mzuzu",
+    "city_pl": "Mzuzu",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "MSU",
+    "name": "Moshoeshoe I International Airport",
+    "city_en": "Maseru",
+    "city_pl": "Maseru",
+    "country_en": "Lesotho"
+  },
+  {
+    "code": "FIH",
+    "name": "Ndjili International Airport",
+    "city_en": "Kinshasa",
+    "city_pl": "Kinshasa",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "NLO",
+    "name": "Ndolo Airport",
+    "city_en": "Kinshasa",
+    "city_pl": "Kinshasa",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "MNB",
+    "name": "Muanda Airport",
+    "city_en": "Muanda",
+    "city_pl": "Muanda",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "FDU",
+    "name": "Bandundu Airport",
+    "city_en": "Bandoundu",
+    "city_pl": "Bandoundu",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "KKW",
+    "name": "Kikwit Airport",
+    "city_en": "Kikwit",
+    "city_pl": "Kikwit",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "MDK",
+    "name": "Mbandaka Airport",
+    "city_en": "Mbandaka",
+    "city_pl": "Mbandaka",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "BDT",
+    "name": "Gbadolite Airport",
+    "city_en": "Gbadolite",
+    "city_pl": "Gbadolite",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "GMA",
+    "name": "Gemena Airport",
+    "city_en": "Gemena",
+    "city_pl": "Gemena",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "KLI",
+    "name": "Kotakoli Airport",
+    "city_en": "Kotakoli",
+    "city_pl": "Kotakoli",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "LIQ",
+    "name": "Lisala Airport",
+    "city_en": "Lisala",
+    "city_pl": "Lisala",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "FKI",
+    "name": "Bangoka International Airport",
+    "city_en": "Kisangani",
+    "city_pl": "Kisangani",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "IRP",
+    "name": "Matari Airport",
+    "city_en": "Isiro",
+    "city_pl": "Isiro",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "BUX",
+    "name": "Bunia Airport",
+    "city_en": "Bunia",
+    "city_pl": "Bunia",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "BZU",
+    "name": "Buta Zega Airport",
+    "city_en": "Buta Zega",
+    "city_pl": "Buta Zega",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "BKY",
+    "name": "Bukavu Kavumu Airport",
+    "city_en": "Bukavu/kavumu",
+    "city_pl": "Bukavu/kavumu",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "GOM",
+    "name": "Goma International Airport",
+    "city_en": "Goma",
+    "city_pl": "Goma",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "KND",
+    "name": "Kindu Airport",
+    "city_en": "Kindu",
+    "city_pl": "Kindu",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "FBM",
+    "name": "Lubumbashi International Airport",
+    "city_en": "Lubumashi",
+    "city_pl": "Lubumashi",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "KWZ",
+    "name": "Kolwezi Airport",
+    "city_en": "Kolwezi",
+    "city_pl": "Kolwezi",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "FMI",
+    "name": "Kalemie Airport",
+    "city_en": "Kalemie",
+    "city_pl": "Kalemie",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "KMN",
+    "name": "Kamina Base Airport",
+    "city_en": "Kamina Base",
+    "city_pl": "Kamina Base",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "KGA",
+    "name": "Kananga Airport",
+    "city_en": "Kananga",
+    "city_pl": "Kananga",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "MJM",
+    "name": "Mbuji Mayi Airport",
+    "city_en": "Mbuji-mayi",
+    "city_pl": "Mbuji-mayi",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "BKO",
+    "name": "Modibo Keita International Airport",
+    "city_en": "Bamako",
+    "city_pl": "Bamako",
+    "country_en": "Mali"
+  },
+  {
+    "code": "GAQ",
+    "name": "Gao Airport",
+    "city_en": "Gao",
+    "city_pl": "Gao",
+    "country_en": "Mali"
+  },
+  {
+    "code": "KYS",
+    "name": "Kayes Dag Dag Airport",
+    "city_en": "Kayes",
+    "city_pl": "Kayes",
+    "country_en": "Mali"
+  },
+  {
+    "code": "MZI",
+    "name": "Mopti Airport",
+    "city_en": "Mopti",
+    "city_pl": "Mopti",
+    "country_en": "Mali"
+  },
+  {
+    "code": "TOM",
+    "name": "Timbuktu Airport",
+    "city_en": "Tombouctou",
+    "city_pl": "Tombouctou",
+    "country_en": "Mali"
+  },
+  {
+    "code": "BJL",
+    "name": "Banjul International Airport",
+    "city_en": "Banjul",
+    "city_pl": "Banjul",
+    "country_en": "Gambia"
+  },
+  {
+    "code": "FUE",
+    "name": "Fuerteventura Airport",
+    "city_en": "Fuerteventura",
+    "city_pl": "Fuerteventura",
+    "country_en": "Spain"
+  },
+  {
+    "code": "VDE",
+    "name": "Hierro Airport",
+    "city_en": "Hierro",
+    "city_pl": "Hierro",
+    "country_en": "Spain"
+  },
+  {
+    "code": "SPC",
+    "name": "La Palma Airport",
+    "city_en": "Santa Cruz De La Palma",
+    "city_pl": "Santa Cruz De La Palma",
+    "country_en": "Spain"
+  },
+  {
+    "code": "LPA",
+    "name": "Gran Canaria Airport",
+    "city_en": "Gran Canaria",
+    "city_pl": "Gran Canaria",
+    "country_en": "Spain"
+  },
+  {
+    "code": "ACE",
+    "name": "Lanzarote Airport",
+    "city_en": "Arrecife",
+    "city_pl": "Arrecife",
+    "country_en": "Spain"
+  },
+  {
+    "code": "TFS",
+    "name": "Tenerife South Airport",
+    "city_en": "Tenerife",
+    "city_pl": "Tenerife",
+    "country_en": "Spain"
+  },
+  {
+    "code": "TFN",
+    "name": "Tenerife Norte Airport",
+    "city_en": "Tenerife",
+    "city_pl": "Tenerife",
+    "country_en": "Spain"
+  },
+  {
+    "code": "MLN",
+    "name": "Melilla Airport",
+    "city_en": "Melilla",
+    "city_pl": "Melilla",
+    "country_en": "Spain"
+  },
+  {
+    "code": "FNA",
+    "name": "Lungi International Airport",
+    "city_en": "Freetown",
+    "city_pl": "Freetown",
+    "country_en": "Sierra Leone"
+  },
+  {
+    "code": "MLW",
+    "name": "Spriggs Payne Airport",
+    "city_en": "Monrovia",
+    "city_pl": "Monrovia",
+    "country_en": "Liberia"
+  },
+  {
+    "code": "ROB",
+    "name": "Roberts International Airport",
+    "city_en": "Monrovia",
+    "city_pl": "Monrovia",
+    "country_en": "Liberia"
+  },
+  {
+    "code": "AGA",
+    "name": "Al Massira Airport",
+    "city_en": "Agadir",
+    "city_pl": "Agadir",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "TTA",
+    "name": "Tan Tan Airport",
+    "city_en": "Tan Tan",
+    "city_pl": "Tan Tan",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "FEZ",
+    "name": "Saïss Airport",
+    "city_en": "Fes",
+    "city_pl": "Fes",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "ERH",
+    "name": "Moulay Ali Cherif Airport",
+    "city_en": "Er-rachidia",
+    "city_pl": "Er-rachidia",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "MEK",
+    "name": "Bassatine Airport",
+    "city_en": "Meknes",
+    "city_pl": "Meknes",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "OUD",
+    "name": "Angads Airport",
+    "city_en": "Oujda",
+    "city_pl": "Oujda",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "GMD",
+    "name": "Ben Slimane Airport",
+    "city_en": "Ben Slimane",
+    "city_pl": "Ben Slimane",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "RBA",
+    "name": "Rabat-Salé Airport",
+    "city_en": "Rabat",
+    "city_pl": "Rabat",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "CMN",
+    "name": "Mohammed V International Airport",
+    "city_en": "Casablanca",
+    "city_pl": "Casablanca",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "RAK",
+    "name": "Menara Airport",
+    "city_en": "Marrakech",
+    "city_pl": "Marrakech",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "NNA",
+    "name": "Kenitra Airport",
+    "city_en": "Kentira",
+    "city_pl": "Kentira",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "OZZ",
+    "name": "Ouarzazate Airport",
+    "city_en": "Ouarzazate",
+    "city_pl": "Ouarzazate",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "AHU",
+    "name": "Cherif Al Idrissi Airport",
+    "city_en": "Al Hociema",
+    "city_pl": "Al Hociema",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "TTU",
+    "name": "Saniat R'mel Airport",
+    "city_en": "Tetouan",
+    "city_pl": "Tetouan",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "TNG",
+    "name": "Ibn Batouta Airport",
+    "city_en": "Tanger",
+    "city_pl": "Tanger",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "ZIG",
+    "name": "Ziguinchor Airport",
+    "city_en": "Ziguinchor",
+    "city_pl": "Ziguinchor",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "CSK",
+    "name": "Cap Skirring Airport",
+    "city_en": "Cap Skiring",
+    "city_pl": "Cap Skiring",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "KLC",
+    "name": "Kaolack Airport",
+    "city_en": "Kaolack",
+    "city_pl": "Kaolack",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "DKR",
+    "name": "Léopold Sédar Senghor International Airport",
+    "city_en": "Dakar",
+    "city_pl": "Dakar",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "XLS",
+    "name": "Saint Louis Airport",
+    "city_en": "St. Louis",
+    "city_pl": "St. Louis",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "BXE",
+    "name": "Bakel Airport",
+    "city_en": "Bakel",
+    "city_pl": "Bakel",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "KGG",
+    "name": "Kédougou Airport",
+    "city_en": "Kedougou",
+    "city_pl": "Kedougou",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "TUD",
+    "name": "Tambacounda Airport",
+    "city_en": "Tambacounda",
+    "city_pl": "Tambacounda",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "AEO",
+    "name": "Aioun el Atrouss Airport",
+    "city_en": "Aioun El Atrouss",
+    "city_pl": "Aioun El Atrouss",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "TIY",
+    "name": "Tidjikja Airport",
+    "city_en": "Tidjikja",
+    "city_pl": "Tidjikja",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "KFA",
+    "name": "Kiffa Airport",
+    "city_en": "Kiffa",
+    "city_pl": "Kiffa",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "EMN",
+    "name": "Néma Airport",
+    "city_en": "Nema",
+    "city_pl": "Nema",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "KED",
+    "name": "Kaédi Airport",
+    "city_en": "Kaedi",
+    "city_pl": "Kaedi",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "NKC",
+    "name": "Nouakchott–Oumtounsy International Airport",
+    "city_en": "Nouakschott",
+    "city_pl": "Nouakschott",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "SEY",
+    "name": "Sélibaby Airport",
+    "city_en": "Selibabi",
+    "city_pl": "Selibabi",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "ATR",
+    "name": "Atar International Airport",
+    "city_en": "Atar",
+    "city_pl": "Atar",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "NDB",
+    "name": "Nouadhibou International Airport",
+    "city_en": "Nouadhibou",
+    "city_pl": "Nouadhibou",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "FIG",
+    "name": "Fria Airport",
+    "city_en": "Fira",
+    "city_pl": "Fira",
+    "country_en": "Guinea"
+  },
+  {
+    "code": "FAA",
+    "name": "Faranah Airport",
+    "city_en": "Faranah",
+    "city_pl": "Faranah",
+    "country_en": "Guinea"
+  },
+  {
+    "code": "LEK",
+    "name": "Tata Airport",
+    "city_en": "Labe",
+    "city_pl": "Labe",
+    "country_en": "Guinea"
+  },
+  {
+    "code": "SID",
+    "name": "Amílcar Cabral International Airport",
+    "city_en": "Amilcar Cabral",
+    "city_pl": "Amilcar Cabral",
+    "country_en": "Cape Verde"
+  },
+  {
+    "code": "BVC",
+    "name": "Rabil Airport",
+    "city_en": "Boa Vista",
+    "city_pl": "Boa Vista",
+    "country_en": "Cape Verde"
+  },
+  {
+    "code": "MMO",
+    "name": "Maio Airport",
+    "city_en": "Maio",
+    "city_pl": "Maio",
+    "country_en": "Cape Verde"
+  },
+  {
+    "code": "SNE",
+    "name": "Preguiça Airport",
+    "city_en": "Sao Nocolau Island",
+    "city_pl": "Sao Nocolau Island",
+    "country_en": "Cape Verde"
+  },
+  {
+    "code": "VXE",
+    "name": "São Pedro Airport",
+    "city_en": "Sao Vicente Island",
+    "city_pl": "Sao Vicente Island",
+    "country_en": "Cape Verde"
+  },
+  {
+    "code": "ADD",
+    "name": "Addis Ababa Bole International Airport",
+    "city_en": "Addis Ababa",
+    "city_pl": "Addis Ababa",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "AMH",
+    "name": "Arba Minch Airport",
+    "city_en": "Arba Minch",
+    "city_pl": "Arba Minch",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "AXU",
+    "name": "Axum Airport",
+    "city_en": "Axum",
+    "city_pl": "Axum",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "BJR",
+    "name": "Bahir Dar Airport",
+    "city_en": "Bahar Dar",
+    "city_pl": "Bahar Dar",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "DIR",
+    "name": "Aba Tenna Dejazmach Yilma International Airport",
+    "city_en": "Dire Dawa",
+    "city_pl": "Dire Dawa",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "GMB",
+    "name": "Gambella Airport",
+    "city_en": "Gambella",
+    "city_pl": "Gambella",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "GDQ",
+    "name": "Gonder Airport",
+    "city_en": "Gondar",
+    "city_pl": "Gondar",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "JIM",
+    "name": "Jimma Airport",
+    "city_en": "Jimma",
+    "city_pl": "Jimma",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "LLI",
+    "name": "Lalibella Airport",
+    "city_en": "Lalibella",
+    "city_pl": "Lalibella",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "MQX",
+    "name": "Mekele Airport",
+    "city_en": "Makale",
+    "city_pl": "Makale",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "ASO",
+    "name": "Asosa Airport",
+    "city_en": "Asosa",
+    "city_pl": "Asosa",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "BJM",
+    "name": "Bujumbura International Airport",
+    "city_en": "Bujumbura",
+    "city_pl": "Bujumbura",
+    "country_en": "Burundi"
+  },
+  {
+    "code": "HGA",
+    "name": "Egal International Airport",
+    "city_en": "Hargeisa",
+    "city_pl": "Hargeisa",
+    "country_en": "Somalia"
+  },
+  {
+    "code": "BBO",
+    "name": "Berbera Airport",
+    "city_en": "Berbera",
+    "city_pl": "Berbera",
+    "country_en": "Somalia"
+  },
+  {
+    "code": "KMU",
+    "name": "Kisimayu Airport",
+    "city_en": "Kismayu",
+    "city_pl": "Kismayu",
+    "country_en": "Somalia"
+  },
+  {
+    "code": "ALY",
+    "name": "El Nouzha Airport",
+    "city_en": "Alexandria",
+    "city_pl": "Alexandria",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "ABS",
+    "name": "Abu Simbel Airport",
+    "city_en": "Abu Simbel",
+    "city_pl": "Abu Simbel",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "CAI",
+    "name": "Cairo International Airport",
+    "city_en": "Cairo",
+    "city_pl": "Kair",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "CWE",
+    "name": "Cairo West Airport",
+    "city_en": "Cairo",
+    "city_pl": "Kair",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "HRG",
+    "name": "Hurghada International Airport",
+    "city_en": "Hurghada",
+    "city_pl": "Hurghada",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "EGH",
+    "name": "El Gora Airport",
+    "city_en": "El Gorah",
+    "city_pl": "El Gorah",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "LXR",
+    "name": "Luxor International Airport",
+    "city_en": "Luxor",
+    "city_pl": "Luxor",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "MUH",
+    "name": "Mersa Matruh Airport",
+    "city_en": "Mersa-matruh",
+    "city_pl": "Mersa-matruh",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "PSD",
+    "name": "Port Said Airport",
+    "city_en": "Port Said",
+    "city_pl": "Port Said",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "SKV",
+    "name": "St Catherine International Airport",
+    "city_en": "St. Catherine",
+    "city_pl": "St. Catherine",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "ASW",
+    "name": "Aswan International Airport",
+    "city_en": "Aswan",
+    "city_pl": "Aswan",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "ELT",
+    "name": "El Tor Airport",
+    "city_en": "El-tor",
+    "city_pl": "El-tor",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "EDL",
+    "name": "Eldoret International Airport",
+    "city_en": "Eldoret",
+    "city_pl": "Eldoret",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "GGM",
+    "name": "Kakamega Airport",
+    "city_en": "Kakamega",
+    "city_pl": "Kakamega",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "KIS",
+    "name": "Kisumu Airport",
+    "city_en": "Kisumu",
+    "city_pl": "Kisumu",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "KTL",
+    "name": "Kitale Airport",
+    "city_en": "Kitale",
+    "city_pl": "Kitale",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "LOK",
+    "name": "Lodwar Airport",
+    "city_en": "Lodwar",
+    "city_pl": "Lodwar",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "LAU",
+    "name": "Manda Airstrip",
+    "city_en": "Lamu",
+    "city_pl": "Lamu",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "MBA",
+    "name": "Mombasa Moi International Airport",
+    "city_en": "Mombasa",
+    "city_pl": "Mombasa",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "WIL",
+    "name": "Nairobi Wilson Airport",
+    "city_en": "Nairobi",
+    "city_pl": "Nairobi",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "WJR",
+    "name": "Wajir Airport",
+    "city_en": "Wajir",
+    "city_pl": "Wajir",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "GHT",
+    "name": "Ghat Airport",
+    "city_en": "Ghat",
+    "city_pl": "Ghat",
+    "country_en": "Libya"
+  },
+  {
+    "code": "AKF",
+    "name": "Kufra Airport",
+    "city_en": "Kufra",
+    "city_pl": "Kufra",
+    "country_en": "Libya"
+  },
+  {
+    "code": "BEN",
+    "name": "Benina International Airport",
+    "city_en": "Benghazi",
+    "city_pl": "Benghazi",
+    "country_en": "Libya"
+  },
+  {
+    "code": "SEB",
+    "name": "Sabha Airport",
+    "city_en": "Sebha",
+    "city_pl": "Sebha",
+    "country_en": "Libya"
+  },
+  {
+    "code": "TIP",
+    "name": "Tripoli International Airport",
+    "city_en": "Tripoli",
+    "city_pl": "Tripoli",
+    "country_en": "Libya"
+  },
+  {
+    "code": "LMQ",
+    "name": "Marsa Brega Airport",
+    "city_en": "Marsa Brega",
+    "city_pl": "Marsa Brega",
+    "country_en": "Libya"
+  },
+  {
+    "code": "HUQ",
+    "name": "Hon Airport",
+    "city_en": "Hon",
+    "city_pl": "Hon",
+    "country_en": "Libya"
+  },
+  {
+    "code": "LTD",
+    "name": "Ghadames East Airport",
+    "city_en": "Ghadames",
+    "city_pl": "Ghadames",
+    "country_en": "Libya"
+  },
+  {
+    "code": "GYI",
+    "name": "Gisenyi Airport",
+    "city_en": "Gisenyi",
+    "city_pl": "Gisenyi",
+    "country_en": "Rwanda"
+  },
+  {
+    "code": "KGL",
+    "name": "Kigali International Airport",
+    "city_en": "Kigali",
+    "city_pl": "Kigali",
+    "country_en": "Rwanda"
+  },
+  {
+    "code": "KME",
+    "name": "Kamembe Airport",
+    "city_en": "Kamembe",
+    "city_pl": "Kamembe",
+    "country_en": "Rwanda"
+  },
+  {
+    "code": "DOG",
+    "name": "Dongola Airport",
+    "city_en": "Dongola",
+    "city_pl": "Dongola",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "RSS",
+    "name": "Damazin Airport",
+    "city_en": "Damazin",
+    "city_pl": "Damazin",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "ELF",
+    "name": "El Fasher Airport",
+    "city_en": "El Fasher",
+    "city_pl": "El Fasher",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "KSL",
+    "name": "Kassala Airport",
+    "city_en": "Kassala",
+    "city_pl": "Kassala",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "KDX",
+    "name": "Kadugli Airport",
+    "city_en": "Kadugli",
+    "city_pl": "Kadugli",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "EBD",
+    "name": "El Obeid Airport",
+    "city_en": "El Obeid",
+    "city_pl": "El Obeid",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "JUB",
+    "name": "Juba International Airport",
+    "city_en": "Juba",
+    "city_pl": "Juba",
+    "country_en": "South Sudan"
+  },
+  {
+    "code": "MAK",
+    "name": "Malakal Airport",
+    "city_en": "Malakal",
+    "city_pl": "Malakal",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "KRT",
+    "name": "Khartoum International Airport",
+    "city_en": "Khartoum",
+    "city_pl": "Khartoum",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "ARK",
+    "name": "Arusha Airport",
+    "city_en": "Arusha",
+    "city_pl": "Arusha",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "DAR",
+    "name": "Julius Nyerere International Airport",
+    "city_en": "Dar Es Salaam",
+    "city_pl": "Dar Es Salaam",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "DOD",
+    "name": "Dodoma Airport",
+    "city_en": "Dodoma",
+    "city_pl": "Dodoma",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "IRI",
+    "name": "Iringa Airport",
+    "city_en": "Iringa",
+    "city_pl": "Iringa",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "JRO",
+    "name": "Kilimanjaro International Airport",
+    "city_en": "Kilimanjaro",
+    "city_pl": "Kilimanjaro",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "LKY",
+    "name": "Lake Manyara Airport",
+    "city_en": "Lake Manyara",
+    "city_pl": "Lake Manyara",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "MYW",
+    "name": "Mtwara Airport",
+    "city_en": "Mtwara",
+    "city_pl": "Mtwara",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "MWZ",
+    "name": "Mwanza Airport",
+    "city_en": "Mwanza",
+    "city_pl": "Mwanza",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "PMA",
+    "name": "Pemba Airport",
+    "city_en": "Pemba",
+    "city_pl": "Pemba",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "TGT",
+    "name": "Tanga Airport",
+    "city_en": "Tanga",
+    "city_pl": "Tanga",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "ZNZ",
+    "name": "Abeid Amani Karume International Airport",
+    "city_en": "Zanzibar",
+    "city_pl": "Zanzibar",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "EBB",
+    "name": "Entebbe International Airport",
+    "city_en": "Entebbe",
+    "city_pl": "Entebbe",
+    "country_en": "Uganda"
+  },
+  {
+    "code": "SRT",
+    "name": "Soroti Airport",
+    "city_en": "Soroti",
+    "city_pl": "Soroti",
+    "country_en": "Uganda"
+  },
+  {
+    "code": "TIA",
+    "name": "Tirana International Airport Mother Teresa",
+    "city_en": "Tirana",
+    "city_pl": "Tirana",
+    "country_en": "Albania"
+  },
+  {
+    "code": "BOJ",
+    "name": "Burgas Airport",
+    "city_en": "Bourgas",
+    "city_pl": "Bourgas",
+    "country_en": "Bulgaria"
+  },
+  {
+    "code": "GOZ",
+    "name": "Gorna Oryahovitsa Airport",
+    "city_en": "Gorna Orechovica",
+    "city_pl": "Gorna Orechovica",
+    "country_en": "Bulgaria"
+  },
+  {
+    "code": "PDV",
+    "name": "Plovdiv International Airport",
+    "city_en": "Plovdiv",
+    "city_pl": "Plovdiv",
+    "country_en": "Bulgaria"
+  },
+  {
+    "code": "SOF",
+    "name": "Sofia Airport",
+    "city_en": "Sofia",
+    "city_pl": "Sofia",
+    "country_en": "Bulgaria"
+  },
+  {
+    "code": "SZR",
+    "name": "Stara Zagora Airport",
+    "city_en": "Stara Zagora",
+    "city_pl": "Stara Zagora",
+    "country_en": "Bulgaria"
+  },
+  {
+    "code": "VAR",
+    "name": "Varna Airport",
+    "city_en": "Varna",
+    "city_pl": "Varna",
+    "country_en": "Bulgaria"
+  },
+  {
+    "code": "LCA",
+    "name": "Larnaca International Airport",
+    "city_en": "Larnaca",
+    "city_pl": "Larnaca",
+    "country_en": "Cyprus"
+  },
+  {
+    "code": "PFO",
+    "name": "Paphos International Airport",
+    "city_en": "Paphos",
+    "city_pl": "Paphos",
+    "country_en": "Cyprus"
+  },
+  {
+    "code": "AKT",
+    "name": "RAF Akrotiri",
+    "city_en": "Akrotiri",
+    "city_pl": "Akrotiri",
+    "country_en": "Cyprus"
+  },
+  {
+    "code": "DBV",
+    "name": "Dubrovnik Airport",
+    "city_en": "Dubrovnik",
+    "city_pl": "Dubrovnik",
+    "country_en": "Croatia"
+  },
+  {
+    "code": "OSI",
+    "name": "Osijek Airport",
+    "city_en": "Osijek",
+    "city_pl": "Osijek",
+    "country_en": "Croatia"
+  },
+  {
+    "code": "PUY",
+    "name": "Pula Airport",
+    "city_en": "Pula",
+    "city_pl": "Pula",
+    "country_en": "Croatia"
+  },
+  {
+    "code": "RJK",
+    "name": "Rijeka Airport",
+    "city_en": "Rijeka",
+    "city_pl": "Rijeka",
+    "country_en": "Croatia"
+  },
+  {
+    "code": "SPU",
+    "name": "Split Airport",
+    "city_en": "Split",
+    "city_pl": "Split",
+    "country_en": "Croatia"
+  },
+  {
+    "code": "ZAG",
+    "name": "Zagreb Airport",
+    "city_en": "Zagreb",
+    "city_pl": "Zagreb",
+    "country_en": "Croatia"
+  },
+  {
+    "code": "ZAD",
+    "name": "Zadar Airport",
+    "city_en": "Zadar",
+    "city_pl": "Zadar",
+    "country_en": "Croatia"
+  },
+  {
+    "code": "ABC",
+    "name": "Albacete-Los Llanos Airport",
+    "city_en": "Albacete",
+    "city_pl": "Albacete",
+    "country_en": "Spain"
+  },
+  {
+    "code": "ALC",
+    "name": "Alicante International Airport",
+    "city_en": "Alicante",
+    "city_pl": "Alicante",
+    "country_en": "Spain"
+  },
+  {
+    "code": "LEI",
+    "name": "Almería International Airport",
+    "city_en": "Almeria",
+    "city_pl": "Almeria",
+    "country_en": "Spain"
+  },
+  {
+    "code": "OVD",
+    "name": "Asturias Airport",
+    "city_en": "Aviles",
+    "city_pl": "Aviles",
+    "country_en": "Spain"
+  },
+  {
+    "code": "ODB",
+    "name": "Córdoba Airport",
+    "city_en": "Cordoba",
+    "city_pl": "Cordoba",
+    "country_en": "Spain"
+  },
+  {
+    "code": "BIO",
+    "name": "Bilbao Airport",
+    "city_en": "Bilbao",
+    "city_pl": "Bilbao",
+    "country_en": "Spain"
+  },
+  {
+    "code": "BCN",
+    "name": "Barcelona International Airport",
+    "city_en": "Barcelona",
+    "city_pl": "Barcelona",
+    "country_en": "Spain"
+  },
+  {
+    "code": "BJZ",
+    "name": "Badajoz Airport",
+    "city_en": "Badajoz",
+    "city_pl": "Badajoz",
+    "country_en": "Spain"
+  },
+  {
+    "code": "LCG",
+    "name": "A Coruña Airport",
+    "city_en": "La Coruna",
+    "city_pl": "La Coruna",
+    "country_en": "Spain"
+  },
+  {
+    "code": "GRO",
+    "name": "Girona Airport",
+    "city_en": "Gerona",
+    "city_pl": "Gerona",
+    "country_en": "Spain"
+  },
+  {
+    "code": "GRX",
+    "name": "Federico Garcia Lorca Airport",
+    "city_en": "Granada",
+    "city_pl": "Granada",
+    "country_en": "Spain"
+  },
+  {
+    "code": "IBZ",
+    "name": "Ibiza Airport",
+    "city_en": "Ibiza",
+    "city_pl": "Ibiza",
+    "country_en": "Spain"
+  },
+  {
+    "code": "XRY",
+    "name": "Jerez Airport",
+    "city_en": "Jerez",
+    "city_pl": "Jerez",
+    "country_en": "Spain"
+  },
+  {
+    "code": "MJV",
+    "name": "San Javier Airport",
+    "city_en": "Murcia",
+    "city_pl": "Murcia",
+    "country_en": "Spain"
+  },
+  {
+    "code": "MAD",
+    "name": "Adolfo Suárez Madrid–Barajas Airport",
+    "city_en": "Madrid",
+    "city_pl": "Madryt",
+    "country_en": "Spain"
+  },
+  {
+    "code": "AGP",
+    "name": "Málaga Airport",
+    "city_en": "Malaga",
+    "city_pl": "Malaga",
+    "country_en": "Spain"
+  },
+  {
+    "code": "MAH",
+    "name": "Menorca Airport",
+    "city_en": "Menorca",
+    "city_pl": "Menorca",
+    "country_en": "Spain"
+  },
+  {
+    "code": "OZP",
+    "name": "Moron Air Base",
+    "city_en": "Sevilla",
+    "city_pl": "Sevilla",
+    "country_en": "Spain"
+  },
+  {
+    "code": "PNA",
+    "name": "Pamplona Airport",
+    "city_en": "Pamplona",
+    "city_pl": "Pamplona",
+    "country_en": "Spain"
+  },
+  {
+    "code": "REU",
+    "name": "Reus Air Base",
+    "city_en": "Reus",
+    "city_pl": "Reus",
+    "country_en": "Spain"
+  },
+  {
+    "code": "ROZ",
+    "name": "Rota Naval Station Airport",
+    "city_en": "Rota",
+    "city_pl": "Rota",
+    "country_en": "Spain"
+  },
+  {
+    "code": "SLM",
+    "name": "Salamanca Airport",
+    "city_en": "Salamanca",
+    "city_pl": "Salamanca",
+    "country_en": "Spain"
+  },
+  {
+    "code": "EAS",
+    "name": "San Sebastian Airport",
+    "city_en": "San Sebastian",
+    "city_pl": "San Sebastian",
+    "country_en": "Spain"
+  },
+  {
+    "code": "SCQ",
+    "name": "Santiago de Compostela Airport",
+    "city_en": "Santiago",
+    "city_pl": "Santiago",
+    "country_en": "Spain"
+  },
+  {
+    "code": "LEU",
+    "name": "Pirineus - la Seu d'Urgel Airport",
+    "city_en": "Seo De Urgel",
+    "city_pl": "Seo De Urgel",
+    "country_en": "Spain"
+  },
+  {
+    "code": "TOJ",
+    "name": "Torrejón Airport",
+    "city_en": "Madrid",
+    "city_pl": "Madryt",
+    "country_en": "Spain"
+  },
+  {
+    "code": "VLC",
+    "name": "Valencia Airport",
+    "city_en": "Valencia",
+    "city_pl": "Valencia",
+    "country_en": "Spain"
+  },
+  {
+    "code": "VLL",
+    "name": "Valladolid Airport",
+    "city_en": "Valladolid",
+    "city_pl": "Valladolid",
+    "country_en": "Spain"
+  },
+  {
+    "code": "VIT",
+    "name": "Vitoria/Foronda Airport",
+    "city_en": "Vitoria",
+    "city_pl": "Vitoria",
+    "country_en": "Spain"
+  },
+  {
+    "code": "VGO",
+    "name": "Vigo Airport",
+    "city_en": "Vigo",
+    "city_pl": "Vigo",
+    "country_en": "Spain"
+  },
+  {
+    "code": "SDR",
+    "name": "Santander Airport",
+    "city_en": "Santander",
+    "city_pl": "Santander",
+    "country_en": "Spain"
+  },
+  {
+    "code": "ZAZ",
+    "name": "Zaragoza Air Base",
+    "city_en": "Zaragoza",
+    "city_pl": "Zaragoza",
+    "country_en": "Spain"
+  },
+  {
+    "code": "SVQ",
+    "name": "Sevilla Airport",
+    "city_en": "Sevilla",
+    "city_pl": "Sevilla",
+    "country_en": "Spain"
+  },
+  {
+    "code": "CQF",
+    "name": "Calais-Dunkerque Airport",
+    "city_en": "Calais",
+    "city_pl": "Calais",
+    "country_en": "France"
+  },
+  {
+    "code": "BYF",
+    "name": "Albert-Bray Airport",
+    "city_en": "Albert",
+    "city_pl": "Albert",
+    "country_en": "France"
+  },
+  {
+    "code": "LTQ",
+    "name": "Le Touquet-Côte d'Opale Airport",
+    "city_en": "Le Tourquet",
+    "city_pl": "Le Tourquet",
+    "country_en": "France"
+  },
+  {
+    "code": "XVS",
+    "name": "Valenciennes-Denain Airport",
+    "city_en": "Valenciennes",
+    "city_pl": "Valenciennes",
+    "country_en": "France"
+  },
+  {
+    "code": "AGF",
+    "name": "Agen-La Garenne Airport",
+    "city_en": "Agen",
+    "city_pl": "Agen",
+    "country_en": "France"
+  },
+  {
+    "code": "BOD",
+    "name": "Bordeaux-Mérignac Airport",
+    "city_en": "Bordeaux",
+    "city_pl": "Bordeaux",
+    "country_en": "France"
+  },
+  {
+    "code": "EGC",
+    "name": "Bergerac-Roumanière Airport",
+    "city_en": "Bergerac",
+    "city_pl": "Bergerac",
+    "country_en": "France"
+  },
+  {
+    "code": "CNG",
+    "name": "Cognac-Châteaubernard (BA 709) Air Base",
+    "city_en": "Cognac",
+    "city_pl": "Cognac",
+    "country_en": "France"
+  },
+  {
+    "code": "PIS",
+    "name": "Poitiers-Biard Airport",
+    "city_en": "Poitiers",
+    "city_pl": "Poitiers",
+    "country_en": "France"
+  },
+  {
+    "code": "MCU",
+    "name": "Montluçon-Guéret Airport",
+    "city_en": "Montlucon-gueret",
+    "city_pl": "Montlucon-gueret",
+    "country_en": "France"
+  },
+  {
+    "code": "LIG",
+    "name": "Limoges Airport",
+    "city_en": "Limoges",
+    "city_pl": "Limoges",
+    "country_en": "France"
+  },
+  {
+    "code": "NIT",
+    "name": "Niort-Souché Airport",
+    "city_en": "Niort",
+    "city_pl": "Niort",
+    "country_en": "France"
+  },
+  {
+    "code": "TLS",
+    "name": "Toulouse-Blagnac Airport",
+    "city_en": "Toulouse",
+    "city_pl": "Toulouse",
+    "country_en": "France"
+  },
+  {
+    "code": "PUF",
+    "name": "Pau Pyrénées Airport",
+    "city_en": "Pau",
+    "city_pl": "Pau",
+    "country_en": "France"
+  },
+  {
+    "code": "LDE",
+    "name": "Tarbes-Lourdes-Pyrénées Airport",
+    "city_en": "Tarbes",
+    "city_pl": "Tarbes",
+    "country_en": "France"
+  },
+  {
+    "code": "ANG",
+    "name": "Angoulême-Brie-Champniers Airport",
+    "city_en": "Angouleme",
+    "city_pl": "Angouleme",
+    "country_en": "France"
+  },
+  {
+    "code": "BVE",
+    "name": "Brive Souillac Airport",
+    "city_en": "Brive",
+    "city_pl": "Brive",
+    "country_en": "France"
+  },
+  {
+    "code": "PGX",
+    "name": "Périgueux-Bassillac Airport",
+    "city_en": "Perigueux",
+    "city_pl": "Perigueux",
+    "country_en": "France"
+  },
+  {
+    "code": "BIQ",
+    "name": "Biarritz-Anglet-Bayonne Airport",
+    "city_en": "Biarritz-bayonne",
+    "city_pl": "Biarritz-bayonne",
+    "country_en": "France"
+  },
+  {
+    "code": "ZAO",
+    "name": "Cahors-Lalbenque Airport",
+    "city_en": "Cahors",
+    "city_pl": "Cahors",
+    "country_en": "France"
+  },
+  {
+    "code": "LBI",
+    "name": "Albi-Le Séquestre Airport",
+    "city_en": "Albi",
+    "city_pl": "Albi",
+    "country_en": "France"
+  },
+  {
+    "code": "DCM",
+    "name": "Castres-Mazamet Airport",
+    "city_en": "Castres",
+    "city_pl": "Castres",
+    "country_en": "France"
+  },
+  {
+    "code": "RDZ",
+    "name": "Rodez-Marcillac Airport",
+    "city_en": "Rodez",
+    "city_pl": "Rodez",
+    "country_en": "France"
+  },
+  {
+    "code": "RYN",
+    "name": "Royan-Médis Airport",
+    "city_en": "Royan",
+    "city_pl": "Royan",
+    "country_en": "France"
+  },
+  {
+    "code": "XMW",
+    "name": "Montauban Airport",
+    "city_en": "Montauban",
+    "city_pl": "Montauban",
+    "country_en": "France"
+  },
+  {
+    "code": "RCO",
+    "name": "Rochefort-Saint-Agnant (BA 721) Airport",
+    "city_en": "Rochefort",
+    "city_pl": "Rochefort",
+    "country_en": "France"
+  },
+  {
+    "code": "CMR",
+    "name": "Colmar-Houssen Airport",
+    "city_en": "Colmar",
+    "city_pl": "Colmar",
+    "country_en": "France"
+  },
+  {
+    "code": "DLE",
+    "name": "Dole-Tavaux Airport",
+    "city_en": "Dole",
+    "city_pl": "Dole",
+    "country_en": "France"
+  },
+  {
+    "code": "OBS",
+    "name": "Aubenas-Ardèche Méridional Airport",
+    "city_en": "Aubenas-vals-lanas",
+    "city_pl": "Aubenas-vals-lanas",
+    "country_en": "France"
+  },
+  {
+    "code": "LPY",
+    "name": "Le Puy-Loudes Airport",
+    "city_en": "Le Puy",
+    "city_pl": "Le Puy",
+    "country_en": "France"
+  },
+  {
+    "code": "ETZ",
+    "name": "Metz-Nancy-Lorraine Airport",
+    "city_en": "Metz",
+    "city_pl": "Metz",
+    "country_en": "France"
+  },
+  {
+    "code": "BIA",
+    "name": "Bastia-Poretta Airport",
+    "city_en": "Bastia",
+    "city_pl": "Bastia",
+    "country_en": "France"
+  },
+  {
+    "code": "CLY",
+    "name": "Calvi-Sainte-Catherine Airport",
+    "city_en": "Calvi",
+    "city_pl": "Calvi",
+    "country_en": "France"
+  },
+  {
+    "code": "FSC",
+    "name": "Figari Sud-Corse Airport",
+    "city_en": "Figari",
+    "city_pl": "Figari",
+    "country_en": "France"
+  },
+  {
+    "code": "AJA",
+    "name": "Ajaccio-Napoléon Bonaparte Airport",
+    "city_en": "Ajaccio",
+    "city_pl": "Ajaccio",
+    "country_en": "France"
+  },
+  {
+    "code": "PRP",
+    "name": "Propriano Airport",
+    "city_en": "Propriano",
+    "city_pl": "Propriano",
+    "country_en": "France"
+  },
+  {
+    "code": "SOZ",
+    "name": "Solenzara (BA 126) Air Base",
+    "city_en": "Solenzara",
+    "city_pl": "Solenzara",
+    "country_en": "France"
+  },
+  {
+    "code": "AUF",
+    "name": "Auxerre-Branches Airport",
+    "city_en": "Auxerre",
+    "city_pl": "Auxerre",
+    "country_en": "France"
+  },
+  {
+    "code": "CMF",
+    "name": "Chambéry-Savoie Airport",
+    "city_en": "Chambery",
+    "city_pl": "Chambery",
+    "country_en": "France"
+  },
+  {
+    "code": "CFE",
+    "name": "Clermont-Ferrand Auvergne Airport",
+    "city_en": "Clermont-Ferrand",
+    "city_pl": "Clermont-Ferrand",
+    "country_en": "France"
+  },
+  {
+    "code": "BOU",
+    "name": "Bourges Airport",
+    "city_en": "Bourges",
+    "city_pl": "Bourges",
+    "country_en": "France"
+  },
+  {
+    "code": "QNJ",
+    "name": "Annemasse Airport",
+    "city_en": "Annemasse",
+    "city_pl": "Annemasse",
+    "country_en": "France"
+  },
+  {
+    "code": "LYS",
+    "name": "Lyon Saint-Exupéry Airport",
+    "city_en": "Lyon",
+    "city_pl": "Lyon",
+    "country_en": "France"
+  },
+  {
+    "code": "SYT",
+    "name": "Saint-Yan Airport",
+    "city_en": "St.-yan",
+    "city_pl": "St.-yan",
+    "country_en": "France"
+  },
+  {
+    "code": "RNE",
+    "name": "Roanne-Renaison Airport",
+    "city_en": "Roanne",
+    "city_pl": "Roanne",
+    "country_en": "France"
+  },
+  {
+    "code": "NCY",
+    "name": "Annecy-Haute-Savoie-Mont Blanc Airport",
+    "city_en": "Annecy",
+    "city_pl": "Annecy",
+    "country_en": "France"
+  },
+  {
+    "code": "GNB",
+    "name": "Grenoble-Isère Airport",
+    "city_en": "Grenoble",
+    "city_pl": "Grenoble",
+    "country_en": "France"
+  },
+  {
+    "code": "VAF",
+    "name": "Valence-Chabeuil Airport",
+    "city_en": "Valence",
+    "city_pl": "Valence",
+    "country_en": "France"
+  },
+  {
+    "code": "VHY",
+    "name": "Vichy-Charmeil Airport",
+    "city_en": "Vichy",
+    "city_pl": "Vichy",
+    "country_en": "France"
+  },
+  {
+    "code": "AUR",
+    "name": "Aurillac Airport",
+    "city_en": "Aurillac",
+    "city_pl": "Aurillac",
+    "country_en": "France"
+  },
+  {
+    "code": "CHR",
+    "name": "Châteauroux-Déols Marcel Dassault Airport",
+    "city_en": "Chateauroux",
+    "city_pl": "Chateauroux",
+    "country_en": "France"
+  },
+  {
+    "code": "LYN",
+    "name": "Lyon-Bron Airport",
+    "city_en": "Lyon",
+    "city_pl": "Lyon",
+    "country_en": "France"
+  },
+  {
+    "code": "CEQ",
+    "name": "Cannes-Mandelieu Airport",
+    "city_en": "Cannes",
+    "city_pl": "Cannes",
+    "country_en": "France"
+  },
+  {
+    "code": "EBU",
+    "name": "Saint-Étienne-Bouthéon Airport",
+    "city_en": "St-Etienne",
+    "city_pl": "St-Etienne",
+    "country_en": "France"
+  },
+  {
+    "code": "CCF",
+    "name": "Carcassonne Airport",
+    "city_en": "Carcassonne",
+    "city_pl": "Carcassonne",
+    "country_en": "France"
+  },
+  {
+    "code": "MRS",
+    "name": "Marseille Provence Airport",
+    "city_en": "Marseille",
+    "city_pl": "Marseille",
+    "country_en": "France"
+  },
+  {
+    "code": "NCE",
+    "name": "Nice-Côte d'Azur Airport",
+    "city_en": "Nice",
+    "city_pl": "Nice",
+    "country_en": "France"
+  },
+  {
+    "code": "XOG",
+    "name": "Orange-Caritat (BA 115) Air Base",
+    "city_en": "Orange",
+    "city_pl": "Orange",
+    "country_en": "France"
+  },
+  {
+    "code": "PGF",
+    "name": "Perpignan-Rivesaltes (Llabanère) Airport",
+    "city_en": "Perpignan",
+    "city_pl": "Perpignan",
+    "country_en": "France"
+  },
+  {
+    "code": "CTT",
+    "name": "Le Castellet Airport",
+    "city_en": "Le Castellet",
+    "city_pl": "Le Castellet",
+    "country_en": "France"
+  },
+  {
+    "code": "MPL",
+    "name": "Montpellier-Méditerranée Airport",
+    "city_en": "Montpellier",
+    "city_pl": "Montpellier",
+    "country_en": "France"
+  },
+  {
+    "code": "BZR",
+    "name": "Béziers-Vias Airport",
+    "city_en": "Beziers",
+    "city_pl": "Beziers",
+    "country_en": "France"
+  },
+  {
+    "code": "AVN",
+    "name": "Avignon-Caumont Airport",
+    "city_en": "Avignon",
+    "city_pl": "Avignon",
+    "country_en": "France"
+  },
+  {
+    "code": "MEN",
+    "name": "Mende-Brenoux Airfield",
+    "city_en": "Mende",
+    "city_pl": "Mende",
+    "country_en": "France"
+  },
+  {
+    "code": "BVA",
+    "name": "Paris Beauvais Tillé Airport",
+    "city_en": "Beauvais",
+    "city_pl": "Beauvais",
+    "country_en": "France"
+  },
+  {
+    "code": "EVX",
+    "name": "Évreux-Fauville (BA 105) Air Base",
+    "city_en": "Evreux",
+    "city_pl": "Evreux",
+    "country_en": "France"
+  },
+  {
+    "code": "LEH",
+    "name": "Le Havre Octeville Airport",
+    "city_en": "Le Havre",
+    "city_pl": "Le Havre",
+    "country_en": "France"
+  },
+  {
+    "code": "XAB",
+    "name": "Abbeville",
+    "city_en": "Abbeville",
+    "city_pl": "Abbeville",
+    "country_en": "France"
+  },
+  {
+    "code": "ORE",
+    "name": "Orléans-Bricy (BA 123) Air Base",
+    "city_en": "Orleans",
+    "city_pl": "Orleans",
+    "country_en": "France"
+  },
+  {
+    "code": "XCR",
+    "name": "Châlons-Vatry Airport",
+    "city_en": "Chalons",
+    "city_pl": "Chalons",
+    "country_en": "France"
+  },
+  {
+    "code": "URO",
+    "name": "Rouen Airport",
+    "city_en": "Rouen",
+    "city_pl": "Rouen",
+    "country_en": "France"
+  },
+  {
+    "code": "TUF",
+    "name": "Tours-Val-de-Loire Airport",
+    "city_en": "Tours",
+    "city_pl": "Tours",
+    "country_en": "France"
+  },
+  {
+    "code": "CET",
+    "name": "Cholet Le Pontreau Airport",
+    "city_en": "Cholet",
+    "city_pl": "Cholet",
+    "country_en": "France"
+  },
+  {
+    "code": "LVA",
+    "name": "Laval-Entrammes Airport",
+    "city_en": "Laval",
+    "city_pl": "Laval",
+    "country_en": "France"
+  },
+  {
+    "code": "LBG",
+    "name": "Paris-Le Bourget Airport",
+    "city_en": "Paris",
+    "city_pl": "Paryż",
+    "country_en": "France"
+  },
+  {
+    "code": "CSF",
+    "name": "Creil Air Base",
+    "city_en": "Creil",
+    "city_pl": "Creil",
+    "country_en": "France"
+  },
+  {
+    "code": "CDG",
+    "name": "Charles de Gaulle International Airport",
+    "city_en": "Paris",
+    "city_pl": "Paryż",
+    "country_en": "France"
+  },
+  {
+    "code": "TNF",
+    "name": "Toussus-le-Noble Airport",
+    "city_en": "Toussous-le-noble",
+    "city_pl": "Toussous-le-noble",
+    "country_en": "France"
+  },
+  {
+    "code": "ORY",
+    "name": "Paris-Orly Airport",
+    "city_en": "Paris",
+    "city_pl": "Paryż",
+    "country_en": "France"
+  },
+  {
+    "code": "POX",
+    "name": "Pontoise - Cormeilles-en-Vexin Airport",
+    "city_en": "Pontoise",
+    "city_pl": "Pontoise",
+    "country_en": "France"
+  },
+  {
+    "code": "VIY",
+    "name": "Villacoublay-Vélizy (BA 107) Air Base",
+    "city_en": "Villacoublay",
+    "city_pl": "Villacoublay",
+    "country_en": "France"
+  },
+  {
+    "code": "NVS",
+    "name": "Nevers-Fourchambault Airport",
+    "city_en": "Nevers",
+    "city_pl": "Nevers",
+    "country_en": "France"
+  },
+  {
+    "code": "XME",
+    "name": "Maubeuge-Élesmes Airport",
+    "city_en": "Maubeuge",
+    "city_pl": "Maubeuge",
+    "country_en": "France"
+  },
+  {
+    "code": "LIL",
+    "name": "Lille-Lesquin Airport",
+    "city_en": "Lille",
+    "city_pl": "Lille",
+    "country_en": "France"
+  },
+  {
+    "code": "HZB",
+    "name": "Merville-Calonne Airport",
+    "city_en": "Merville",
+    "city_pl": "Merville",
+    "country_en": "France"
+  },
+  {
+    "code": "XCZ",
+    "name": "Charleville-Mézières Airport",
+    "city_en": "Charleville",
+    "city_pl": "Charleville",
+    "country_en": "France"
+  },
+  {
+    "code": "BES",
+    "name": "Brest Bretagne Airport",
+    "city_en": "Brest",
+    "city_pl": "Brest",
+    "country_en": "France"
+  },
+  {
+    "code": "CER",
+    "name": "Cherbourg-Maupertus Airport",
+    "city_en": "Cherbourg",
+    "city_pl": "Cherbourg",
+    "country_en": "France"
+  },
+  {
+    "code": "DNR",
+    "name": "Dinard-Pleurtuit-Saint-Malo Airport",
+    "city_en": "Dinard",
+    "city_pl": "Dinard",
+    "country_en": "France"
+  },
+  {
+    "code": "LBY",
+    "name": "La Baule-Escoublac Airport",
+    "city_en": "La Baule",
+    "city_pl": "La Baule",
+    "country_en": "France"
+  },
+  {
+    "code": "GFR",
+    "name": "Granville Airport",
+    "city_en": "Granville",
+    "city_pl": "Granville",
+    "country_en": "France"
+  },
+  {
+    "code": "DOL",
+    "name": "Deauville-Saint-Gatien Airport",
+    "city_en": "Deauville",
+    "city_pl": "Deauville",
+    "country_en": "France"
+  },
+  {
+    "code": "LRT",
+    "name": "Lorient South Brittany (Bretagne Sud) Airport",
+    "city_en": "Lorient",
+    "city_pl": "Lorient",
+    "country_en": "France"
+  },
+  {
+    "code": "EDM",
+    "name": "La Roche-sur-Yon Airport",
+    "city_en": "La Roche-sur-yon",
+    "city_pl": "La Roche-sur-yon",
+    "country_en": "France"
+  },
+  {
+    "code": "LDV",
+    "name": "Landivisiau Air Base",
+    "city_en": "Landivisiau",
+    "city_pl": "Landivisiau",
+    "country_en": "France"
+  },
+  {
+    "code": "CFR",
+    "name": "Caen-Carpiquet Airport",
+    "city_en": "Caen",
+    "city_pl": "Caen",
+    "country_en": "France"
+  },
+  {
+    "code": "LME",
+    "name": "Le Mans-Arnage Airport",
+    "city_en": "Le Mans",
+    "city_pl": "Le Mans",
+    "country_en": "France"
+  },
+  {
+    "code": "RNS",
+    "name": "Rennes-Saint-Jacques Airport",
+    "city_en": "Rennes",
+    "city_pl": "Rennes",
+    "country_en": "France"
+  },
+  {
+    "code": "LAI",
+    "name": "Lannion-Côte de Granit Airport",
+    "city_en": "Lannion",
+    "city_pl": "Lannion",
+    "country_en": "France"
+  },
+  {
+    "code": "UIP",
+    "name": "Quimper-Cornouaille Airport",
+    "city_en": "Quimper",
+    "city_pl": "Quimper",
+    "country_en": "France"
+  },
+  {
+    "code": "NTE",
+    "name": "Nantes Atlantique Airport",
+    "city_en": "Nantes",
+    "city_pl": "Nantes",
+    "country_en": "France"
+  },
+  {
+    "code": "SBK",
+    "name": "Saint-Brieuc-Armor Airport",
+    "city_en": "St.-brieuc Armor",
+    "city_pl": "St.-brieuc Armor",
+    "country_en": "France"
+  },
+  {
+    "code": "MXN",
+    "name": "Morlaix-Ploujean Airport",
+    "city_en": "Morlaix",
+    "city_pl": "Morlaix",
+    "country_en": "France"
+  },
+  {
+    "code": "VNE",
+    "name": "Vannes-Meucon Airport",
+    "city_en": "Vannes",
+    "city_pl": "Vannes",
+    "country_en": "France"
+  },
+  {
+    "code": "SNR",
+    "name": "Saint-Nazaire-Montoir Airport",
+    "city_en": "St.-nazaire",
+    "city_pl": "St.-nazaire",
+    "country_en": "France"
+  },
+  {
+    "code": "BSL",
+    "name": "EuroAirport Basel-Mulhouse-Freiburg Airport",
+    "city_en": "Mulhouse",
+    "city_pl": "Mulhouse",
+    "country_en": "France"
+  },
+  {
+    "code": "DIJ",
+    "name": "Dijon-Bourgogne Airport",
+    "city_en": "Dijon",
+    "city_pl": "Dijon",
+    "country_en": "France"
+  },
+  {
+    "code": "MZM",
+    "name": "Metz-Frescaty (BA 128) Air Base",
+    "city_en": "Metz",
+    "city_pl": "Metz",
+    "country_en": "France"
+  },
+  {
+    "code": "EPL",
+    "name": "Épinal-Mirecourt Airport",
+    "city_en": "Epinal",
+    "city_pl": "Epinal",
+    "country_en": "France"
+  },
+  {
+    "code": "ENC",
+    "name": "Nancy-Essey Airport",
+    "city_en": "Nancy",
+    "city_pl": "Nancy",
+    "country_en": "France"
+  },
+  {
+    "code": "RHE",
+    "name": "Reims-Champagne (BA 112) Air Base",
+    "city_en": "Reims",
+    "city_pl": "Reims",
+    "country_en": "France"
+  },
+  {
+    "code": "SXB",
+    "name": "Strasbourg Airport",
+    "city_en": "Strasbourg",
+    "city_pl": "Strasbourg",
+    "country_en": "France"
+  },
+  {
+    "code": "TLN",
+    "name": "Toulon-Hyères Airport",
+    "city_en": "Hyeres",
+    "city_pl": "Hyeres",
+    "country_en": "France"
+  },
+  {
+    "code": "FNI",
+    "name": "Nîmes-Arles-Camargue Airport",
+    "city_en": "Nimes",
+    "city_pl": "Nimes",
+    "country_en": "France"
+  },
+  {
+    "code": "MQC",
+    "name": "Miquelon Airport",
+    "city_en": "Miquelon",
+    "city_pl": "Miquelon",
+    "country_en": "Saint Pierre and Miquelon"
+  },
+  {
+    "code": "FSP",
+    "name": "St Pierre Airport",
+    "city_en": "St.-pierre",
+    "city_pl": "St.-pierre",
+    "country_en": "Saint Pierre and Miquelon"
+  },
+  {
+    "code": "PYR",
+    "name": "Andravida Air Base",
+    "city_en": "Andravida",
+    "city_pl": "Andravida",
+    "country_en": "Greece"
+  },
+  {
+    "code": "AGQ",
+    "name": "Agrinion Air Base",
+    "city_en": "Agrinion",
+    "city_pl": "Agrinion",
+    "country_en": "Greece"
+  },
+  {
+    "code": "AXD",
+    "name": "Dimokritos Airport",
+    "city_en": "Alexandroupolis",
+    "city_pl": "Alexandroupolis",
+    "country_en": "Greece"
+  },
+  {
+    "code": "VOL",
+    "name": "Nea Anchialos Airport",
+    "city_en": "Nea Anghialos",
+    "city_pl": "Nea Anghialos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "JKH",
+    "name": "Chios Island National Airport",
+    "city_en": "Chios",
+    "city_pl": "Chios",
+    "country_en": "Greece"
+  },
+  {
+    "code": "IOA",
+    "name": "Ioannina Airport",
+    "city_en": "Ioannina",
+    "city_pl": "Ioannina",
+    "country_en": "Greece"
+  },
+  {
+    "code": "HER",
+    "name": "Heraklion International Nikos Kazantzakis Airport",
+    "city_en": "Heraklion",
+    "city_pl": "Heraklion",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KSO",
+    "name": "Kastoria National Airport",
+    "city_en": "Kastoria",
+    "city_pl": "Kastoria",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KIT",
+    "name": "Kithira Airport",
+    "city_en": "Kithira",
+    "city_pl": "Kithira",
+    "country_en": "Greece"
+  },
+  {
+    "code": "EFL",
+    "name": "Kefallinia Airport",
+    "city_en": "Keffallinia",
+    "city_pl": "Keffallinia",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KLX",
+    "name": "Kalamata Airport",
+    "city_en": "Kalamata",
+    "city_pl": "Kalamata",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KGS",
+    "name": "Kos Airport",
+    "city_en": "Kos",
+    "city_pl": "Kos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "AOK",
+    "name": "Karpathos Airport",
+    "city_en": "Karpathos",
+    "city_pl": "Karpathos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "CFU",
+    "name": "Ioannis Kapodistrias International Airport",
+    "city_en": "Kerkyra/corfu",
+    "city_pl": "Kerkyra/corfu",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KSJ",
+    "name": "Kasos Airport",
+    "city_en": "Kasos",
+    "city_pl": "Kasos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KVA",
+    "name": "Alexander the Great International Airport",
+    "city_en": "Kavala",
+    "city_pl": "Kavala",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KZI",
+    "name": "Filippos Airport",
+    "city_en": "Kozani",
+    "city_pl": "Kozani",
+    "country_en": "Greece"
+  },
+  {
+    "code": "LRS",
+    "name": "Leros Airport",
+    "city_en": "Leros",
+    "city_pl": "Leros",
+    "country_en": "Greece"
+  },
+  {
+    "code": "LXS",
+    "name": "Limnos Airport",
+    "city_en": "Limnos",
+    "city_pl": "Limnos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "LRA",
+    "name": "Larisa Airport",
+    "city_en": "Larissa",
+    "city_pl": "Larissa",
+    "country_en": "Greece"
+  },
+  {
+    "code": "JMK",
+    "name": "Mikonos Airport",
+    "city_en": "Mykonos",
+    "city_pl": "Mykonos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "MJT",
+    "name": "Mytilene International Airport",
+    "city_en": "Mytilini",
+    "city_pl": "Mytilini",
+    "country_en": "Greece"
+  },
+  {
+    "code": "PVK",
+    "name": "Aktion National Airport",
+    "city_en": "Preveza",
+    "city_pl": "Preveza",
+    "country_en": "Greece"
+  },
+  {
+    "code": "RHO",
+    "name": "Diagoras Airport",
+    "city_en": "Rhodos",
+    "city_pl": "Rhodos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "GPA",
+    "name": "Araxos Airport",
+    "city_en": "Patras",
+    "city_pl": "Patras",
+    "country_en": "Greece"
+  },
+  {
+    "code": "CHQ",
+    "name": "Chania International Airport",
+    "city_en": "Chania",
+    "city_pl": "Chania",
+    "country_en": "Greece"
+  },
+  {
+    "code": "JSI",
+    "name": "Skiathos Island National Airport",
+    "city_en": "Skiathos",
+    "city_pl": "Skiathos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "SMI",
+    "name": "Samos Airport",
+    "city_en": "Samos",
+    "city_pl": "Samos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "SPJ",
+    "name": "Sparti Airport",
+    "city_en": "Sparti",
+    "city_pl": "Sparti",
+    "country_en": "Greece"
+  },
+  {
+    "code": "JTR",
+    "name": "Santorini Airport",
+    "city_en": "Thira",
+    "city_pl": "Thira",
+    "country_en": "Greece"
+  },
+  {
+    "code": "JSH",
+    "name": "Sitia Airport",
+    "city_en": "Sitia",
+    "city_pl": "Sitia",
+    "country_en": "Greece"
+  },
+  {
+    "code": "SKU",
+    "name": "Skiros Airport",
+    "city_en": "Skiros",
+    "city_pl": "Skiros",
+    "country_en": "Greece"
+  },
+  {
+    "code": "SKG",
+    "name": "Thessaloniki Macedonia International Airport",
+    "city_en": "Thessaloniki",
+    "city_pl": "Saloniki",
+    "country_en": "Greece"
+  },
+  {
+    "code": "ZTH",
+    "name": "Zakynthos International Airport Dionysios Solomos",
+    "city_en": "Zakynthos",
+    "city_pl": "Zakynthos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "BUD",
+    "name": "Budapest Liszt Ferenc International Airport",
+    "city_en": "Budapest",
+    "city_pl": "Budapeszt",
+    "country_en": "Hungary"
+  },
+  {
+    "code": "DEB",
+    "name": "Debrecen International Airport",
+    "city_en": "Debrecen",
+    "city_pl": "Debrecen",
+    "country_en": "Hungary"
+  },
+  {
+    "code": "CRV",
+    "name": "Crotone Airport",
+    "city_en": "Crotone",
+    "city_pl": "Crotone",
+    "country_en": "Italy"
+  },
+  {
+    "code": "BRI",
+    "name": "Bari Karol Wojtyła Airport",
+    "city_en": "Bari",
+    "city_pl": "Bari",
+    "country_en": "Italy"
+  },
+  {
+    "code": "FOG",
+    "name": "Foggia Gino Lisa Airport",
+    "city_en": "Foggia",
+    "city_pl": "Foggia",
+    "country_en": "Italy"
+  },
+  {
+    "code": "TAR",
+    "name": "Taranto-Grottaglie Marcello Arlotta Airport",
+    "city_en": "Grottaglie",
+    "city_pl": "Grottaglie",
+    "country_en": "Italy"
+  },
+  {
+    "code": "LCC",
+    "name": "Lecce Galatina Air Base",
+    "city_en": "Lecce",
+    "city_pl": "Lecce",
+    "country_en": "Italy"
+  },
+  {
+    "code": "PSR",
+    "name": "Pescara International Airport",
+    "city_en": "Pescara",
+    "city_pl": "Pescara",
+    "country_en": "Italy"
+  },
+  {
+    "code": "BDS",
+    "name": "Brindisi – Salento Airport",
+    "city_en": "Brindisi",
+    "city_pl": "Brindisi",
+    "country_en": "Italy"
+  },
+  {
+    "code": "SUF",
+    "name": "Lamezia Terme Airport",
+    "city_en": "Lamezia",
+    "city_pl": "Lamezia",
+    "country_en": "Italy"
+  },
+  {
+    "code": "CTA",
+    "name": "Catania-Fontanarossa Airport",
+    "city_en": "Catania",
+    "city_pl": "Catania",
+    "country_en": "Italy"
+  },
+  {
+    "code": "LMP",
+    "name": "Lampedusa Airport",
+    "city_en": "Lampedusa",
+    "city_pl": "Lampedusa",
+    "country_en": "Italy"
+  },
+  {
+    "code": "PNL",
+    "name": "Pantelleria Airport",
+    "city_en": "Pantelleria",
+    "city_pl": "Pantelleria",
+    "country_en": "Italy"
+  },
+  {
+    "code": "PMO",
+    "name": "Falcone–Borsellino Airport",
+    "city_en": "Palermo",
+    "city_pl": "Palermo",
+    "country_en": "Italy"
+  },
+  {
+    "code": "REG",
+    "name": "Reggio Calabria Airport",
+    "city_en": "Reggio Calabria",
+    "city_pl": "Reggio Calabria",
+    "country_en": "Italy"
+  },
+  {
+    "code": "TPS",
+    "name": "Vincenzo Florio Airport Trapani-Birgi",
+    "city_en": "Trapani",
+    "city_pl": "Trapani",
+    "country_en": "Italy"
+  },
+  {
+    "code": "NSY",
+    "name": "Sigonella Navy Air Base",
+    "city_en": "Sigonella",
+    "city_pl": "Sigonella",
+    "country_en": "Italy"
+  },
+  {
+    "code": "AHO",
+    "name": "Alghero-Fertilia Airport",
+    "city_en": "Alghero",
+    "city_pl": "Alghero",
+    "country_en": "Italy"
+  },
+  {
+    "code": "DCI",
+    "name": "Decimomannu Air Base",
+    "city_en": "Decimomannu",
+    "city_pl": "Decimomannu",
+    "country_en": "Italy"
+  },
+  {
+    "code": "CAG",
+    "name": "Cagliari Elmas Airport",
+    "city_en": "Cagliari",
+    "city_pl": "Cagliari",
+    "country_en": "Italy"
+  },
+  {
+    "code": "OLB",
+    "name": "Olbia Costa Smeralda Airport",
+    "city_en": "Olbia",
+    "city_pl": "Olbia",
+    "country_en": "Italy"
+  },
+  {
+    "code": "TTB",
+    "name": "Tortolì Airport",
+    "city_en": "Tortoli",
+    "city_pl": "Tortoli",
+    "country_en": "Italy"
+  },
+  {
+    "code": "MXP",
+    "name": "Malpensa International Airport",
+    "city_en": "Milano",
+    "city_pl": "Milano",
+    "country_en": "Italy"
+  },
+  {
+    "code": "BGY",
+    "name": "Il Caravaggio International Airport",
+    "city_en": "Bergamo",
+    "city_pl": "Bergamo",
+    "country_en": "Italy"
+  },
+  {
+    "code": "TRN",
+    "name": "Turin Airport",
+    "city_en": "Torino",
+    "city_pl": "Torino",
+    "country_en": "Italy"
+  },
+  {
+    "code": "ALL",
+    "name": "Villanova D'Albenga International Airport",
+    "city_en": "Albenga",
+    "city_pl": "Albenga",
+    "country_en": "Italy"
+  },
+  {
+    "code": "GOA",
+    "name": "Genoa Cristoforo Colombo Airport",
+    "city_en": "Genoa",
+    "city_pl": "Genoa",
+    "country_en": "Italy"
+  },
+  {
+    "code": "LIN",
+    "name": "Milano Linate Airport",
+    "city_en": "Milan",
+    "city_pl": "Mediolan",
+    "country_en": "Italy"
+  },
+  {
+    "code": "PMF",
+    "name": "Parma Airport",
+    "city_en": "Parma",
+    "city_pl": "Parma",
+    "country_en": "Italy"
+  },
+  {
+    "code": "CUF",
+    "name": "Cuneo International Airport",
+    "city_en": "Cuneo",
+    "city_pl": "Cuneo",
+    "country_en": "Italy"
+  },
+  {
+    "code": "AVB",
+    "name": "Aviano Air Base",
+    "city_en": "Aviano",
+    "city_pl": "Aviano",
+    "country_en": "Italy"
+  },
+  {
+    "code": "BZO",
+    "name": "Bolzano Airport",
+    "city_en": "Bolzano",
+    "city_pl": "Bolzano",
+    "country_en": "Italy"
+  },
+  {
+    "code": "BLQ",
+    "name": "Bologna Guglielmo Marconi Airport",
+    "city_en": "Bologna",
+    "city_pl": "Bologna",
+    "country_en": "Italy"
+  },
+  {
+    "code": "TSF",
+    "name": "Treviso-Sant'Angelo Airport",
+    "city_en": "Treviso",
+    "city_pl": "Treviso",
+    "country_en": "Italy"
+  },
+  {
+    "code": "FRL",
+    "name": "Forlì Airport",
+    "city_en": "Forli",
+    "city_pl": "Forli",
+    "country_en": "Italy"
+  },
+  {
+    "code": "VBS",
+    "name": "Brescia Airport",
+    "city_en": "Brescia",
+    "city_pl": "Brescia",
+    "country_en": "Italy"
+  },
+  {
+    "code": "TRS",
+    "name": "Trieste–Friuli Venezia Giulia Airport",
+    "city_en": "Ronchi De Legionari",
+    "city_pl": "Ronchi De Legionari",
+    "country_en": "Italy"
+  },
+  {
+    "code": "RMI",
+    "name": "Federico Fellini International Airport",
+    "city_en": "Rimini",
+    "city_pl": "Rimini",
+    "country_en": "Italy"
+  },
+  {
+    "code": "VIC",
+    "name": "Vicenza Airport",
+    "city_en": "Vicenza",
+    "city_pl": "Vicenza",
+    "country_en": "Italy"
+  },
+  {
+    "code": "QPA",
+    "name": "Padova Airport",
+    "city_en": "Padova",
+    "city_pl": "Padova",
+    "country_en": "Italy"
+  },
+  {
+    "code": "VRN",
+    "name": "Verona Villafranca Airport",
+    "city_en": "Villafranca",
+    "city_pl": "Villafranca",
+    "country_en": "Italy"
+  },
+  {
+    "code": "VCE",
+    "name": "Venice Marco Polo Airport",
+    "city_en": "Venice",
+    "city_pl": "Wenecja",
+    "country_en": "Italy"
+  },
+  {
+    "code": "SAY",
+    "name": "Siena-Ampugnano Airport",
+    "city_en": "Siena",
+    "city_pl": "Siena",
+    "country_en": "Italy"
+  },
+  {
+    "code": "CIA",
+    "name": "Ciampino–G. B. Pastine International Airport",
+    "city_en": "Rome",
+    "city_pl": "Rzym",
+    "country_en": "Italy"
+  },
+  {
+    "code": "FCO",
+    "name": "Leonardo da Vinci–Fiumicino Airport",
+    "city_en": "Rome",
+    "city_pl": "Rzym",
+    "country_en": "Italy"
+  },
+  {
+    "code": "EBA",
+    "name": "Marina Di Campo Airport",
+    "city_en": "Marina Di Campo",
+    "city_pl": "Marina Di Campo",
+    "country_en": "Italy"
+  },
+  {
+    "code": "QLT",
+    "name": "Latina Air Base",
+    "city_en": "Latina",
+    "city_pl": "Latina",
+    "country_en": "Italy"
+  },
+  {
+    "code": "NAP",
+    "name": "Naples International Airport",
+    "city_en": "Naples",
+    "city_pl": "Naples",
+    "country_en": "Italy"
+  },
+  {
+    "code": "PSA",
+    "name": "Pisa International Airport",
+    "city_en": "Pisa",
+    "city_pl": "Pisa",
+    "country_en": "Italy"
+  },
+  {
+    "code": "FLR",
+    "name": "Peretola Airport",
+    "city_en": "Florence",
+    "city_pl": "Florence",
+    "country_en": "Italy"
+  },
+  {
+    "code": "GRS",
+    "name": "Grosseto Air Base",
+    "city_en": "Grosseto",
+    "city_pl": "Grosseto",
+    "country_en": "Italy"
+  },
+  {
+    "code": "PEG",
+    "name": "Perugia San Francesco d'Assisi – Umbria International Airport",
+    "city_en": "Perugia",
+    "city_pl": "Perugia",
+    "country_en": "Italy"
+  },
+  {
+    "code": "LJU",
+    "name": "Ljubljana Jože Pučnik Airport",
+    "city_en": "Ljubljana",
+    "city_pl": "Ljubljana",
+    "country_en": "Slovenia"
+  },
+  {
+    "code": "MBX",
+    "name": "Maribor Airport",
+    "city_en": "Maribor",
+    "city_pl": "Maribor",
+    "country_en": "Slovenia"
+  },
+  {
+    "code": "POW",
+    "name": "Portoroz Airport",
+    "city_en": "Portoroz",
+    "city_pl": "Portoroz",
+    "country_en": "Slovenia"
+  },
+  {
+    "code": "UHE",
+    "name": "Kunovice Airport",
+    "city_en": "Kunovice",
+    "city_pl": "Kunovice",
+    "country_en": "Czech Republic"
+  },
+  {
+    "code": "KLV",
+    "name": "Karlovy Vary International Airport",
+    "city_en": "Karlovy Vary",
+    "city_pl": "Karlovy Vary",
+    "country_en": "Czech Republic"
+  },
+  {
+    "code": "OSR",
+    "name": "Ostrava Leos Janáček Airport",
+    "city_en": "Ostrava",
+    "city_pl": "Ostrava",
+    "country_en": "Czech Republic"
+  },
+  {
+    "code": "PED",
+    "name": "Pardubice Airport",
+    "city_en": "Pardubice",
+    "city_pl": "Pardubice",
+    "country_en": "Czech Republic"
+  },
+  {
+    "code": "PRV",
+    "name": "Přerov Air Base",
+    "city_en": "Prerov",
+    "city_pl": "Prerov",
+    "country_en": "Czech Republic"
+  },
+  {
+    "code": "PRG",
+    "name": "Václav Havel Airport Prague",
+    "city_en": "Prague",
+    "city_pl": "Praga",
+    "country_en": "Czech Republic"
+  },
+  {
+    "code": "BRQ",
+    "name": "Brno-Tuřany Airport",
+    "city_en": "Brno",
+    "city_pl": "Brno",
+    "country_en": "Czech Republic"
+  },
+  {
+    "code": "VOD",
+    "name": "Vodochody Airport",
+    "city_en": "Vodochody",
+    "city_pl": "Vodochody",
+    "country_en": "Czech Republic"
+  },
+  {
+    "code": "TLV",
+    "name": "Ben Gurion International Airport",
+    "city_en": "Tel-aviv",
+    "city_pl": "Tel-aviv",
+    "country_en": "Israel"
+  },
+  {
+    "code": "BEV",
+    "name": "Beersheba (Teyman) Airport",
+    "city_en": "Beer-sheba",
+    "city_pl": "Beer-sheba",
+    "country_en": "Israel"
+  },
+  {
+    "code": "ETH",
+    "name": "Eilat Airport",
+    "city_en": "Elat",
+    "city_pl": "Elat",
+    "country_en": "Israel"
+  },
+  {
+    "code": "EIY",
+    "name": "Ein Yahav Airfield",
+    "city_en": "Eyn-yahav",
+    "city_pl": "Eyn-yahav",
+    "country_en": "Israel"
+  },
+  {
+    "code": "HFA",
+    "name": "Haifa International Airport",
+    "city_en": "Haifa",
+    "city_pl": "Haifa",
+    "country_en": "Israel"
+  },
+  {
+    "code": "RPN",
+    "name": "Ben Ya'akov Airport",
+    "city_en": "Rosh Pina",
+    "city_pl": "Rosh Pina",
+    "country_en": "Israel"
+  },
+  {
+    "code": "MTZ",
+    "name": "Bar Yehuda Airfield",
+    "city_en": "Metzada",
+    "city_pl": "Metzada",
+    "country_en": "Israel"
+  },
+  {
+    "code": "VTM",
+    "name": "Nevatim Air Base",
+    "city_en": "Nevatim",
+    "city_pl": "Nevatim",
+    "country_en": "Israel"
+  },
+  {
+    "code": "VDA",
+    "name": "Ovda International Airport",
+    "city_en": "Ovda",
+    "city_pl": "Ovda",
+    "country_en": "Israel"
+  },
+  {
+    "code": "MIP",
+    "name": "Ramon Air Base",
+    "city_en": "Ramon",
+    "city_pl": "Ramon",
+    "country_en": "Israel"
+  },
+  {
+    "code": "SDV",
+    "name": "Sde Dov Airport",
+    "city_en": "Tel-aviv",
+    "city_pl": "Tel-aviv",
+    "country_en": "Israel"
+  },
+  {
+    "code": "MLA",
+    "name": "Malta International Airport",
+    "city_en": "Malta",
+    "city_pl": "Malta",
+    "country_en": "Malta"
+  },
+  {
+    "code": "GRZ",
+    "name": "Graz Airport",
+    "city_en": "Graz",
+    "city_pl": "Graz",
+    "country_en": "Austria"
+  },
+  {
+    "code": "INN",
+    "name": "Innsbruck Airport",
+    "city_en": "Innsbruck",
+    "city_pl": "Innsbruck",
+    "country_en": "Austria"
+  },
+  {
+    "code": "LNZ",
+    "name": "Linz Hörsching Airport",
+    "city_en": "Linz",
+    "city_pl": "Linz",
+    "country_en": "Austria"
+  },
+  {
+    "code": "SZG",
+    "name": "Salzburg Airport",
+    "city_en": "Salzburg",
+    "city_pl": "Salzburg",
+    "country_en": "Austria"
+  },
+  {
+    "code": "VIE",
+    "name": "Vienna International Airport",
+    "city_en": "Vienna",
+    "city_pl": "Wiedeń",
+    "country_en": "Austria"
+  },
+  {
+    "code": "AVR",
+    "name": "Alverca Air Base",
+    "city_en": "Alverca",
+    "city_pl": "Alverca",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "SMA",
+    "name": "Santa Maria Airport",
+    "city_en": "Santa Maria (island)",
+    "city_pl": "Santa Maria (island)",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "BGC",
+    "name": "Bragança Airport",
+    "city_en": "Braganca",
+    "city_pl": "Braganca",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "BYJ",
+    "name": "Beja Airport / Airbase",
+    "city_en": "Beja (madeira)",
+    "city_pl": "Beja (madeira)",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "BGZ",
+    "name": "Braga Municipal Aerodrome",
+    "city_en": "Braga",
+    "city_pl": "Braga",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "CAT",
+    "name": "Cascais Airport",
+    "city_en": "Cascais",
+    "city_pl": "Cascais",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "FLW",
+    "name": "Flores Airport",
+    "city_en": "Flores",
+    "city_pl": "Flores",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "FAO",
+    "name": "Faro Airport",
+    "city_en": "Faro",
+    "city_pl": "Faro",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "GRW",
+    "name": "Graciosa Airport",
+    "city_en": "Graciosa Island",
+    "city_pl": "Graciosa Island",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "HOR",
+    "name": "Horta Airport",
+    "city_en": "Horta",
+    "city_pl": "Horta",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "TER",
+    "name": "Lajes Airport",
+    "city_en": "Lajes (terceira Island)",
+    "city_pl": "Lajes (terceira Island)",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "QLR",
+    "name": "Monte Real Air Base",
+    "city_en": "Monte Real",
+    "city_pl": "Monte Real",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "PDL",
+    "name": "João Paulo II Airport",
+    "city_en": "Ponta Delgada",
+    "city_pl": "Ponta Delgada",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "PIX",
+    "name": "Pico Airport",
+    "city_en": "Pico",
+    "city_pl": "Pico",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "PRM",
+    "name": "Portimão Airport",
+    "city_en": "Portimao",
+    "city_pl": "Portimao",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "OPO",
+    "name": "Francisco de Sá Carneiro Airport",
+    "city_en": "Porto",
+    "city_pl": "Porto",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "PXO",
+    "name": "Porto Santo Airport",
+    "city_en": "Porto Santo",
+    "city_pl": "Porto Santo",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "LIS",
+    "name": "Humberto Delgado Airport (Lisbon Portela Airport)",
+    "city_en": "Lisbon",
+    "city_pl": "Lizbona",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "SJZ",
+    "name": "São Jorge Airport",
+    "city_en": "Sao Jorge Island",
+    "city_pl": "Sao Jorge Island",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "VRL",
+    "name": "Vila Real Airport",
+    "city_en": "Vila Real",
+    "city_pl": "Vila Real",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "VSE",
+    "name": "Aerodromo Goncalves Lobato (Viseu Airport)",
+    "city_en": "Viseu",
+    "city_pl": "Viseu",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "OMO",
+    "name": "Mostar International Airport",
+    "city_en": "Mostar",
+    "city_pl": "Mostar",
+    "country_en": "Bosnia and Herzegovina"
+  },
+  {
+    "code": "SJJ",
+    "name": "Sarajevo International Airport",
+    "city_en": "Sarajevo",
+    "city_pl": "Sarajevo",
+    "country_en": "Bosnia and Herzegovina"
+  },
+  {
+    "code": "ARW",
+    "name": "Arad International Airport",
+    "city_en": "Arad",
+    "city_pl": "Arad",
+    "country_en": "Romania"
+  },
+  {
+    "code": "BCM",
+    "name": "Bacău Airport",
+    "city_en": "Bacau",
+    "city_pl": "Bacau",
+    "country_en": "Romania"
+  },
+  {
+    "code": "BAY",
+    "name": "Tautii Magheraus Airport",
+    "city_en": "Baia Mare",
+    "city_pl": "Baia Mare",
+    "country_en": "Romania"
+  },
+  {
+    "code": "BBU",
+    "name": "Băneasa International Airport",
+    "city_en": "Bucharest",
+    "city_pl": "Bucharest",
+    "country_en": "Romania"
+  },
+  {
+    "code": "CND",
+    "name": "Mihail Kogălniceanu International Airport",
+    "city_en": "Constanta",
+    "city_pl": "Constanta",
+    "country_en": "Romania"
+  },
+  {
+    "code": "CLJ",
+    "name": "Cluj-Napoca International Airport",
+    "city_en": "Cluj-napoca",
+    "city_pl": "Cluj-napoca",
+    "country_en": "Romania"
+  },
+  {
+    "code": "CSB",
+    "name": "Caransebeş Airport",
+    "city_en": "Caransebes",
+    "city_pl": "Caransebes",
+    "country_en": "Romania"
+  },
+  {
+    "code": "CRA",
+    "name": "Craiova Airport",
+    "city_en": "Craiova",
+    "city_pl": "Craiova",
+    "country_en": "Romania"
+  },
+  {
+    "code": "IAS",
+    "name": "Iaşi Airport",
+    "city_en": "Iasi",
+    "city_pl": "Iasi",
+    "country_en": "Romania"
+  },
+  {
+    "code": "OMR",
+    "name": "Oradea International Airport",
+    "city_en": "Oradea",
+    "city_pl": "Oradea",
+    "country_en": "Romania"
+  },
+  {
+    "code": "OTP",
+    "name": "Henri Coandă International Airport",
+    "city_en": "Bucharest",
+    "city_pl": "Bucharest",
+    "country_en": "Romania"
+  },
+  {
+    "code": "SBZ",
+    "name": "Sibiu International Airport",
+    "city_en": "Sibiu",
+    "city_pl": "Sibiu",
+    "country_en": "Romania"
+  },
+  {
+    "code": "SUJ",
+    "name": "Satu Mare Airport",
+    "city_en": "Satu Mare",
+    "city_pl": "Satu Mare",
+    "country_en": "Romania"
+  },
+  {
+    "code": "SCV",
+    "name": "Suceava Stefan cel Mare Airport",
+    "city_en": "Suceava",
+    "city_pl": "Suceava",
+    "country_en": "Romania"
+  },
+  {
+    "code": "TCE",
+    "name": "Tulcea Airport",
+    "city_en": "Tulcea",
+    "city_pl": "Tulcea",
+    "country_en": "Romania"
+  },
+  {
+    "code": "TGM",
+    "name": "Transilvania Târgu Mureş International Airport",
+    "city_en": "Tirgu Mures",
+    "city_pl": "Tirgu Mures",
+    "country_en": "Romania"
+  },
+  {
+    "code": "TSR",
+    "name": "Timişoara Traian Vuia Airport",
+    "city_en": "Timisoara",
+    "city_pl": "Timisoara",
+    "country_en": "Romania"
+  },
+  {
+    "code": "GVA",
+    "name": "Geneva Cointrin International Airport",
+    "city_en": "Geneva",
+    "city_pl": "Genewa",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "SIR",
+    "name": "Sion Airport",
+    "city_en": "Sion",
+    "city_pl": "Sion",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "EML",
+    "name": "Emmen Air Base",
+    "city_en": "Emmen",
+    "city_pl": "Emmen",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "LUG",
+    "name": "Lugano Airport",
+    "city_en": "Lugano",
+    "city_pl": "Lugano",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "BRN",
+    "name": "Bern Belp Airport",
+    "city_en": "Bern",
+    "city_pl": "Bern",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "ZHI",
+    "name": "Grenchen Airport",
+    "city_en": "Grenchen",
+    "city_pl": "Grenchen",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "ZRH",
+    "name": "Zürich Airport",
+    "city_en": "Zurich",
+    "city_pl": "Zurych",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "ACH",
+    "name": "St Gallen Altenrhein Airport",
+    "city_en": "Altenrhein",
+    "city_pl": "Altenrhein",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "SMV",
+    "name": "Samedan Airport",
+    "city_en": "Samedan",
+    "city_pl": "Samedan",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "ESB",
+    "name": "Esenboğa International Airport",
+    "city_en": "Ankara",
+    "city_pl": "Ankara",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ANK",
+    "name": "Etimesgut Air Base",
+    "city_en": "Ankara",
+    "city_pl": "Ankara",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ADA",
+    "name": "Adana Airport",
+    "city_en": "Adana",
+    "city_pl": "Adana",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "UAB",
+    "name": "İncirlik Air Base",
+    "city_en": "Adana",
+    "city_pl": "Adana",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "AFY",
+    "name": "Afyon Airport",
+    "city_en": "Afyon",
+    "city_pl": "Afyon",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "AYT",
+    "name": "Antalya International Airport",
+    "city_en": "Antalya",
+    "city_pl": "Antalya",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "GZT",
+    "name": "Gaziantep International Airport",
+    "city_en": "Gaziantep",
+    "city_pl": "Gaziantep",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "KYA",
+    "name": "Konya Airport",
+    "city_en": "Konya",
+    "city_pl": "Konya",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "MZH",
+    "name": "Amasya Merzifon Airport",
+    "city_en": "Merzifon",
+    "city_pl": "Merzifon",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "VAS",
+    "name": "Sivas Nuri Demirağ Airport",
+    "city_en": "Sivas",
+    "city_pl": "Sivas",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "MLX",
+    "name": "Malatya Erhaç Airport",
+    "city_en": "Malatya",
+    "city_pl": "Malatya",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ASR",
+    "name": "Kayseri Erkilet Airport",
+    "city_en": "Kayseri",
+    "city_pl": "Kayseri",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "TJK",
+    "name": "Tokat Airport",
+    "city_en": "Tokat",
+    "city_pl": "Tokat",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "DNZ",
+    "name": "Çardak Airport",
+    "city_en": "Denizli",
+    "city_pl": "Denizli",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ISL",
+    "name": "Atatürk International Airport",
+    "city_en": "Istanbul",
+    "city_pl": "Stambuł",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "BZI",
+    "name": "Balıkesir Merkez Airport",
+    "city_en": "Balikesir",
+    "city_pl": "Balikesir",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "BDM",
+    "name": "Bandırma Airport",
+    "city_en": "Bandirma",
+    "city_pl": "Bandirma",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ESK",
+    "name": "Eskişehir Air Base",
+    "city_en": "Eskisehir",
+    "city_pl": "Eskisehir",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ADB",
+    "name": "Adnan Menderes International Airport",
+    "city_en": "Izmir",
+    "city_pl": "Izmir",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "IGL",
+    "name": "Çiğli Airport",
+    "city_en": "Izmir",
+    "city_pl": "Izmir",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "KCO",
+    "name": "Cengiz Topel Airport",
+    "city_en": "Topel",
+    "city_pl": "Topel",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "DLM",
+    "name": "Dalaman International Airport",
+    "city_en": "Dalaman",
+    "city_pl": "Dalaman",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "BXN",
+    "name": "Imsık Airport",
+    "city_en": "Bodrum",
+    "city_pl": "Bodrum",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "EZS",
+    "name": "Elazığ Airport",
+    "city_en": "Elazig",
+    "city_pl": "Elazig",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "DIY",
+    "name": "Diyarbakir Airport",
+    "city_en": "Diyabakir",
+    "city_pl": "Diyabakir",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ERC",
+    "name": "Erzincan Airport",
+    "city_en": "Erzincan",
+    "city_pl": "Erzincan",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ERZ",
+    "name": "Erzurum International Airport",
+    "city_en": "Erzurum",
+    "city_pl": "Erzurum",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "TZX",
+    "name": "Trabzon International Airport",
+    "city_en": "Trabzon",
+    "city_pl": "Trabzon",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "VAN",
+    "name": "Van Ferit Melen Airport",
+    "city_en": "Van",
+    "city_pl": "Van",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "BAL",
+    "name": "Batman Airport",
+    "city_en": "Batman",
+    "city_pl": "Batman",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "SXZ",
+    "name": "Siirt Airport",
+    "city_en": "Siirt",
+    "city_pl": "Siirt",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "BZY",
+    "name": "Bălți International Airport",
+    "city_en": "Saltsy",
+    "city_pl": "Saltsy",
+    "country_en": "Moldova"
+  },
+  {
+    "code": "KIV",
+    "name": "Chişinău International Airport",
+    "city_en": "Chisinau",
+    "city_pl": "Chisinau",
+    "country_en": "Moldova"
+  },
+  {
+    "code": "OHD",
+    "name": "Ohrid St. Paul the Apostle Airport",
+    "city_en": "Ohrid",
+    "city_pl": "Ohrid",
+    "country_en": "Macedonia"
+  },
+  {
+    "code": "SKP",
+    "name": "Skopje Alexander the Great Airport",
+    "city_en": "Skopje",
+    "city_pl": "Skopje",
+    "country_en": "Macedonia"
+  },
+  {
+    "code": "GIB",
+    "name": "Gibraltar Airport",
+    "city_en": "Gibraltar",
+    "city_pl": "Gibraltar",
+    "country_en": "Gibraltar"
+  },
+  {
+    "code": "BEG",
+    "name": "Belgrade Nikola Tesla Airport",
+    "city_en": "Belgrade",
+    "city_pl": "Belgrade",
+    "country_en": "Serbia"
+  },
+  {
+    "code": "INI",
+    "name": "Nis Airport",
+    "city_en": "Nis",
+    "city_pl": "Nis",
+    "country_en": "Serbia"
+  },
+  {
+    "code": "TGD",
+    "name": "Podgorica Airport",
+    "city_en": "Podgorica",
+    "city_pl": "Podgorica",
+    "country_en": "Montenegro"
+  },
+  {
+    "code": "PRN",
+    "name": "Priština International Airport",
+    "city_en": "Pristina",
+    "city_pl": "Pristina",
+    "country_en": "Serbia"
+  },
+  {
+    "code": "TIV",
+    "name": "Tivat Airport",
+    "city_en": "Tivat",
+    "city_pl": "Tivat",
+    "country_en": "Montenegro"
+  },
+  {
+    "code": "BTS",
+    "name": "M. R. Štefánik Airport",
+    "city_en": "Bratislava",
+    "city_pl": "Bratislava",
+    "country_en": "Slovakia"
+  },
+  {
+    "code": "KSC",
+    "name": "Košice Airport",
+    "city_en": "Kosice",
+    "city_pl": "Kosice",
+    "country_en": "Slovakia"
+  },
+  {
+    "code": "PZY",
+    "name": "Piešťany Airport",
+    "city_en": "Piestany",
+    "city_pl": "Piestany",
+    "country_en": "Slovakia"
+  },
+  {
+    "code": "SLD",
+    "name": "Sliač Airport",
+    "city_en": "Sliac",
+    "city_pl": "Sliac",
+    "country_en": "Slovakia"
+  },
+  {
+    "code": "TAT",
+    "name": "Poprad-Tatry Airport",
+    "city_en": "Poprad",
+    "city_pl": "Poprad",
+    "country_en": "Slovakia"
+  },
+  {
+    "code": "NCA",
+    "name": "North Caicos Airport",
+    "city_en": "North Caicos",
+    "city_pl": "North Caicos",
+    "country_en": "Turks and Caicos Islands"
+  },
+  {
+    "code": "PLS",
+    "name": "Providenciales Airport",
+    "city_en": "Providenciales",
+    "city_pl": "Providenciales",
+    "country_en": "Turks and Caicos Islands"
+  },
+  {
+    "code": "XSC",
+    "name": "South Caicos Airport",
+    "city_en": "South Caicos",
+    "city_pl": "South Caicos",
+    "country_en": "Turks and Caicos Islands"
+  },
+  {
+    "code": "BRX",
+    "name": "Maria Montez International Airport",
+    "city_en": "Barahona",
+    "city_pl": "Barahona",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "CBJ",
+    "name": "Cabo Rojo Airport",
+    "city_en": "Cabo Rojo",
+    "city_pl": "Cabo Rojo",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "LRM",
+    "name": "Casa De Campo International Airport",
+    "city_en": "La Romana",
+    "city_pl": "La Romana",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "PUJ",
+    "name": "Punta Cana International Airport",
+    "city_en": "Punta Cana",
+    "city_pl": "Punta Cana",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "POP",
+    "name": "Gregorio Luperon International Airport",
+    "city_en": "Puerto Plata",
+    "city_pl": "Puerto Plata",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "SDQ",
+    "name": "Las Américas International Airport",
+    "city_en": "Santo Domingo",
+    "city_pl": "Santo Domingo",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "STI",
+    "name": "Cibao International Airport",
+    "city_en": "Santiago",
+    "city_pl": "Santiago",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "CBV",
+    "name": "Coban Airport",
+    "city_en": "Coban",
+    "city_pl": "Coban",
+    "country_en": "Guatemala"
+  },
+  {
+    "code": "GUA",
+    "name": "La Aurora Airport",
+    "city_en": "Guatemala City",
+    "city_pl": "Guatemala City",
+    "country_en": "Guatemala"
+  },
+  {
+    "code": "RER",
+    "name": "Retalhuleu Airport",
+    "city_en": "Retalhuleu",
+    "city_pl": "Retalhuleu",
+    "country_en": "Guatemala"
+  },
+  {
+    "code": "GSJ",
+    "name": "San José Airport",
+    "city_en": "San Jose",
+    "city_pl": "San Jose",
+    "country_en": "Guatemala"
+  },
+  {
+    "code": "LCE",
+    "name": "Goloson International Airport",
+    "city_en": "La Ceiba",
+    "city_pl": "La Ceiba",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "SAP",
+    "name": "Ramón Villeda Morales International Airport",
+    "city_en": "San Pedro Sula",
+    "city_pl": "San Pedro Sula",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "GJA",
+    "name": "La Laguna Airport",
+    "city_en": "Guanaja",
+    "city_pl": "Guanaja",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "RTB",
+    "name": "Juan Manuel Galvez International Airport",
+    "city_en": "Roatan",
+    "city_pl": "Roatan",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "TEA",
+    "name": "Tela Airport",
+    "city_en": "Tela",
+    "city_pl": "Tela",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "TGU",
+    "name": "Toncontín International Airport",
+    "city_en": "Tegucigalpa",
+    "city_pl": "Tegucigalpa",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "TJI",
+    "name": "Trujillo Airport",
+    "city_en": "Trujillo",
+    "city_pl": "Trujillo",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "OCJ",
+    "name": "Boscobel Aerodrome",
+    "city_en": "Ocho Rios",
+    "city_pl": "Ocho Rios",
+    "country_en": "Jamaica"
+  },
+  {
+    "code": "KIN",
+    "name": "Norman Manley International Airport",
+    "city_en": "Kingston",
+    "city_pl": "Kingston",
+    "country_en": "Jamaica"
+  },
+  {
+    "code": "MBJ",
+    "name": "Sangster International Airport",
+    "city_en": "Montego Bay",
+    "city_pl": "Montego Bay",
+    "country_en": "Jamaica"
+  },
+  {
+    "code": "POT",
+    "name": "Ken Jones Airport",
+    "city_en": "Port Antonio",
+    "city_pl": "Port Antonio",
+    "country_en": "Jamaica"
+  },
+  {
+    "code": "KTP",
+    "name": "Tinson Pen Airport",
+    "city_en": "Kingston",
+    "city_pl": "Kingston",
+    "country_en": "Jamaica"
+  },
+  {
+    "code": "ACA",
+    "name": "General Juan N Alvarez International Airport",
+    "city_en": "Acapulco",
+    "city_pl": "Acapulco",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "NTR",
+    "name": "Del Norte International Airport",
+    "city_en": "Monterrey",
+    "city_pl": "Monterrey",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "AGU",
+    "name": "Jesús Terán Paredo International Airport",
+    "city_en": "Aguascalientes",
+    "city_pl": "Aguascalientes",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "HUX",
+    "name": "Bahías de Huatulco International Airport",
+    "city_en": "Huatulco",
+    "city_pl": "Huatulco",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CVJ",
+    "name": "General Mariano Matamoros Airport",
+    "city_en": "Cuernavaca",
+    "city_pl": "Cuernavaca",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "ACN",
+    "name": "Ciudad Acuña New International Airport",
+    "city_en": "Ciudad Acuna",
+    "city_pl": "Ciudad Acuna",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CME",
+    "name": "Ciudad del Carmen International Airport",
+    "city_en": "Ciudad Del Carmen",
+    "city_pl": "Ciudad Del Carmen",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "NCG",
+    "name": "Nuevo Casas Grandes Airport",
+    "city_en": "Nuevo Casas Grandes",
+    "city_pl": "Nuevo Casas Grandes",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CUL",
+    "name": "Bachigualato Federal International Airport",
+    "city_en": "Culiacan",
+    "city_pl": "Culiacan",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CTM",
+    "name": "Chetumal International Airport",
+    "city_en": "Chetumal",
+    "city_pl": "Chetumal",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CEN",
+    "name": "Ciudad Obregón International Airport",
+    "city_en": "Ciudad Obregon",
+    "city_pl": "Ciudad Obregon",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CPE",
+    "name": "Ingeniero Alberto Acuña Ongay International Airport",
+    "city_en": "Campeche",
+    "city_pl": "Campeche",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CJS",
+    "name": "Abraham González International Airport",
+    "city_en": "Ciudad Juarez",
+    "city_pl": "Ciudad Juarez",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CUU",
+    "name": "General Roberto Fierro Villalobos International Airport",
+    "city_en": "Chihuahua",
+    "city_pl": "Chihuahua",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CVM",
+    "name": "General Pedro Jose Mendez International Airport",
+    "city_en": "Ciudad Victoria",
+    "city_pl": "Ciudad Victoria",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CZM",
+    "name": "Cozumel International Airport",
+    "city_en": "Cozumel",
+    "city_pl": "Cozumel",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "DGO",
+    "name": "General Guadalupe Victoria International Airport",
+    "city_en": "Durango",
+    "city_pl": "Durango",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "TPQ",
+    "name": "Amado Nervo National Airport",
+    "city_en": "Tepic",
+    "city_pl": "Tepic",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "ESE",
+    "name": "Ensenada International Airport",
+    "city_en": "Ensenada",
+    "city_pl": "Ensenada",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "GDL",
+    "name": "Don Miguel Hidalgo Y Costilla International Airport",
+    "city_en": "Guadalajara",
+    "city_pl": "Guadalajara",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "GYM",
+    "name": "General José María Yáñez International Airport",
+    "city_en": "Guaymas",
+    "city_pl": "Guaymas",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "TCN",
+    "name": "Tehuacan Airport",
+    "city_en": "Tehuacan",
+    "city_pl": "Tehuacan",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "HMO",
+    "name": "General Ignacio P. Garcia International Airport",
+    "city_en": "Hermosillo",
+    "city_pl": "Hermosillo",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CLQ",
+    "name": "Licenciado Miguel de la Madrid Airport",
+    "city_en": "Colima",
+    "city_pl": "Colima",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "ISJ",
+    "name": "Isla Mujeres Airport",
+    "city_en": "Isla Mujeres",
+    "city_pl": "Isla Mujeres",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "SLW",
+    "name": "Plan De Guadalupe International Airport",
+    "city_en": "Saltillo",
+    "city_pl": "Saltillo",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "IZT",
+    "name": "Ixtepec Airport",
+    "city_en": "Iztepec",
+    "city_pl": "Iztepec",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "LZC",
+    "name": "Lázaro Cárdenas Airport",
+    "city_en": "Lazard Cardenas",
+    "city_pl": "Lazard Cardenas",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "LMM",
+    "name": "Valle del Fuerte International Airport",
+    "city_en": "Los Mochis",
+    "city_pl": "Los Mochis",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "BJX",
+    "name": "Del Bajío International Airport",
+    "city_en": "Del Bajio",
+    "city_pl": "Del Bajio",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "LAP",
+    "name": "Manuel Márquez de León International Airport",
+    "city_en": "La Paz",
+    "city_pl": "La Paz",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "LTO",
+    "name": "Loreto International Airport",
+    "city_en": "Loreto",
+    "city_pl": "Loreto",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "MAM",
+    "name": "General Servando Canales International Airport",
+    "city_en": "Matamoros",
+    "city_pl": "Matamoros",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "MID",
+    "name": "Licenciado Manuel Crescencio Rejon Int Airport",
+    "city_en": "Merida",
+    "city_pl": "Merida",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "MXL",
+    "name": "General Rodolfo Sánchez Taboada International Airport",
+    "city_en": "Mexicali",
+    "city_pl": "Mexicali",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "MLM",
+    "name": "General Francisco J. Mujica International Airport",
+    "city_en": "Morelia",
+    "city_pl": "Morelia",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "MTT",
+    "name": "Minatitlán/Coatzacoalcos National Airport",
+    "city_en": "Minatitlan",
+    "city_pl": "Minatitlan",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "LOV",
+    "name": "Monclova International Airport",
+    "city_en": "Monclova",
+    "city_pl": "Monclova",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "MEX",
+    "name": "Licenciado Benito Juarez International Airport",
+    "city_en": "Mexico City",
+    "city_pl": "Meksyk",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "MTY",
+    "name": "General Mariano Escobedo International Airport",
+    "city_en": "Monterrey",
+    "city_pl": "Monterrey",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "MZT",
+    "name": "General Rafael Buelna International Airport",
+    "city_en": "Mazatlan",
+    "city_pl": "Mazatlan",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "NOG",
+    "name": "Nogales International Airport",
+    "city_en": "Nogales",
+    "city_pl": "Nogales",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "NLD",
+    "name": "Quetzalcóatl International Airport",
+    "city_en": "Nuevo Laredo",
+    "city_pl": "Nuevo Laredo",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "OAX",
+    "name": "Xoxocotlán International Airport",
+    "city_en": "Oaxaca",
+    "city_pl": "Oaxaca",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "PAZ",
+    "name": "El Tajín National Airport",
+    "city_en": "Poza Rico",
+    "city_pl": "Poza Rico",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "PBC",
+    "name": "Hermanos Serdán International Airport",
+    "city_en": "Puebla",
+    "city_pl": "Puebla",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "PPE",
+    "name": "Mar de Cortés International Airport",
+    "city_en": "Punta Penasco",
+    "city_pl": "Punta Penasco",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "PDS",
+    "name": "Piedras Negras International Airport",
+    "city_en": "Piedras Negras",
+    "city_pl": "Piedras Negras",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "UPN",
+    "name": "Licenciado y General Ignacio Lopez Rayon Airport",
+    "city_en": "Uruapan",
+    "city_pl": "Uruapan",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "PVR",
+    "name": "Licenciado Gustavo Díaz Ordaz International Airport",
+    "city_en": "Puerto Vallarta",
+    "city_pl": "Puerto Vallarta",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "PXM",
+    "name": "Puerto Escondido International Airport",
+    "city_en": "Puerto Escondido",
+    "city_pl": "Puerto Escondido",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "QRO",
+    "name": "Querétaro Intercontinental Airport",
+    "city_en": "Queretaro",
+    "city_pl": "Queretaro",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "REX",
+    "name": "General Lucio Blanco International Airport",
+    "city_en": "Reynosa",
+    "city_pl": "Reynosa",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "SJD",
+    "name": "Los Cabos International Airport",
+    "city_en": "San Jose Del Cabo",
+    "city_pl": "San Jose Del Cabo",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "SFH",
+    "name": "San Felipe International Airport",
+    "city_en": "San Filipe",
+    "city_pl": "San Filipe",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "SLP",
+    "name": "Ponciano Arriaga International Airport",
+    "city_en": "San Luis Potosi",
+    "city_pl": "San Luis Potosi",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "TRC",
+    "name": "Francisco Sarabia International Airport",
+    "city_en": "Torreon",
+    "city_pl": "Torreon",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "TGZ",
+    "name": "Angel Albino Corzo International Airport",
+    "city_en": "Tuxtla Gutierrez",
+    "city_pl": "Tuxtla Gutierrez",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "TIJ",
+    "name": "General Abelardo L. Rodríguez International Airport",
+    "city_en": "Tijuana",
+    "city_pl": "Tijuana",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "TAM",
+    "name": "General Francisco Javier Mina International Airport",
+    "city_en": "Tampico",
+    "city_pl": "Tampico",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "TSL",
+    "name": "Tamuin Airport",
+    "city_en": "Tamuin",
+    "city_pl": "Tamuin",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "TLC",
+    "name": "Licenciado Adolfo Lopez Mateos International Airport",
+    "city_en": "Toluca",
+    "city_pl": "Toluca",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "TAP",
+    "name": "Tapachula International Airport",
+    "city_en": "Tapachula",
+    "city_pl": "Tapachula",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CUN",
+    "name": "Cancún International Airport",
+    "city_en": "Cancun",
+    "city_pl": "Cancún",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "VSA",
+    "name": "Carlos Rovirosa Pérez International Airport",
+    "city_en": "Villahermosa",
+    "city_pl": "Villahermosa",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "VER",
+    "name": "General Heriberto Jara International Airport",
+    "city_en": "Vera Cruz",
+    "city_pl": "Vera Cruz",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "ZCL",
+    "name": "General Leobardo C. Ruiz International Airport",
+    "city_en": "Zacatecas",
+    "city_pl": "Zacatecas",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "ZIH",
+    "name": "Ixtapa Zihuatanejo International Airport",
+    "city_en": "Zihuatanejo",
+    "city_pl": "Zihuatanejo",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "ZMM",
+    "name": "Zamora Airport",
+    "city_en": "Zamora",
+    "city_pl": "Zamora",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "ZLO",
+    "name": "Playa De Oro International Airport",
+    "city_en": "Manzanillo",
+    "city_pl": "Manzanillo",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "BEF",
+    "name": "Bluefields Airport",
+    "city_en": "Bluefields",
+    "city_pl": "Bluefields",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "MGA",
+    "name": "Augusto C. Sandino (Managua) International Airport",
+    "city_en": "Managua",
+    "city_pl": "Managua",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "PUZ",
+    "name": "Puerto Cabezas Airport",
+    "city_en": "Puerto Cabezas",
+    "city_pl": "Puerto Cabezas",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "BOC",
+    "name": "Bocas Del Toro International Airport",
+    "city_en": "Bocas Del Toro",
+    "city_pl": "Bocas Del Toro",
+    "country_en": "Panama"
+  },
+  {
+    "code": "CHX",
+    "name": "Cap Manuel Niño International Airport",
+    "city_en": "Changuinola",
+    "city_pl": "Changuinola",
+    "country_en": "Panama"
+  },
+  {
+    "code": "DAV",
+    "name": "Enrique Malek International Airport",
+    "city_en": "David",
+    "city_pl": "David",
+    "country_en": "Panama"
+  },
+  {
+    "code": "BLB",
+    "name": "Panama Pacific International Airport",
+    "city_en": "Howard",
+    "city_pl": "Howard",
+    "country_en": "Panama"
+  },
+  {
+    "code": "PAC",
+    "name": "Marcos A. Gelabert International Airport",
+    "city_en": "Panama",
+    "city_pl": "Panama",
+    "country_en": "Panama"
+  },
+  {
+    "code": "SYP",
+    "name": "Ruben Cantu Airport",
+    "city_en": "Santiago",
+    "city_pl": "Santiago",
+    "country_en": "Panama"
+  },
+  {
+    "code": "PTY",
+    "name": "Tocumen International Airport",
+    "city_en": "Panama City",
+    "city_pl": "Panama City",
+    "country_en": "Panama"
+  },
+  {
+    "code": "BAI",
+    "name": "Buenos Aires Airport",
+    "city_en": "Buenos Aires",
+    "city_pl": "Buenos Aires",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "OTR",
+    "name": "Coto 47 Airport",
+    "city_en": "Coto 47",
+    "city_pl": "Coto 47",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "JAP",
+    "name": "Chacarita Airport",
+    "city_en": "Chacarita",
+    "city_pl": "Chacarita",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "GLF",
+    "name": "Golfito Airport",
+    "city_en": "Golfito",
+    "city_pl": "Golfito",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "GPL",
+    "name": "Guapiles Airport",
+    "city_en": "Guapiles",
+    "city_pl": "Guapiles",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "LIR",
+    "name": "Daniel Oduber Quiros International Airport",
+    "city_en": "Liberia",
+    "city_pl": "Liberia",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "LSL",
+    "name": "Los Chiles Airport",
+    "city_en": "Los Chiles",
+    "city_pl": "Los Chiles",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "LIO",
+    "name": "Limon International Airport",
+    "city_en": "Limon",
+    "city_pl": "Limon",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "NOB",
+    "name": "Nosara Airport",
+    "city_en": "Nosara Beach",
+    "city_pl": "Nosara Beach",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "SJO",
+    "name": "Juan Santamaria International Airport",
+    "city_en": "San Jose",
+    "city_pl": "San Jose",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "PMZ",
+    "name": "Palmar Sur Airport",
+    "city_en": "Palmar Sur",
+    "city_pl": "Palmar Sur",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "XQP",
+    "name": "Quepos Managua Airport",
+    "city_en": "Quepos",
+    "city_pl": "Quepos",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "TOO",
+    "name": "San Vito De Java Airport",
+    "city_en": "San Vito De Jaba",
+    "city_pl": "San Vito De Jaba",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "SAL",
+    "name": "Monseñor Óscar Arnulfo Romero International Airport",
+    "city_en": "San Salvador",
+    "city_pl": "San Salvador",
+    "country_en": "El Salvador"
+  },
+  {
+    "code": "CYA",
+    "name": "Les Cayes Airport",
+    "city_en": "Cayes",
+    "city_pl": "Cayes",
+    "country_en": "Haiti"
+  },
+  {
+    "code": "CAP",
+    "name": "Cap Haitien International Airport",
+    "city_en": "Cap Haitien",
+    "city_pl": "Cap Haitien",
+    "country_en": "Haiti"
+  },
+  {
+    "code": "JAK",
+    "name": "Jacmel Airport",
+    "city_en": "Jacmel",
+    "city_pl": "Jacmel",
+    "country_en": "Haiti"
+  },
+  {
+    "code": "PAP",
+    "name": "Toussaint Louverture International Airport",
+    "city_en": "Port-au-prince",
+    "city_pl": "Port-au-prince",
+    "country_en": "Haiti"
+  },
+  {
+    "code": "BCA",
+    "name": "Gustavo Rizo Airport",
+    "city_en": "Baracoa Playa",
+    "city_pl": "Baracoa Playa",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "BYM",
+    "name": "Carlos Manuel de Cespedes Airport",
+    "city_en": "Bayamo",
+    "city_pl": "Bayamo",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "AVI",
+    "name": "Maximo Gomez Airport",
+    "city_en": "Ciego De Avila",
+    "city_pl": "Ciego De Avila",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "CCC",
+    "name": "Jardines Del Rey Airport",
+    "city_en": "Cunagua",
+    "city_pl": "Cunagua",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "CFG",
+    "name": "Jaime Gonzalez Airport",
+    "city_en": "Cienfuegos",
+    "city_pl": "Cienfuegos",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "CYO",
+    "name": "Vilo Acuña International Airport",
+    "city_en": "Cayo Largo del Sur",
+    "city_pl": "Cayo Largo del Sur",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "CMW",
+    "name": "Ignacio Agramonte International Airport",
+    "city_en": "Camaguey",
+    "city_pl": "Camaguey",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "SCU",
+    "name": "Antonio Maceo International Airport",
+    "city_en": "Santiago De Cuba",
+    "city_pl": "Santiago De Cuba",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "NBW",
+    "name": "Leeward Point Field",
+    "city_en": "Guantanamo",
+    "city_pl": "Guantanamo",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "GAO",
+    "name": "Mariana Grajales Airport",
+    "city_en": "Guantanamo",
+    "city_pl": "Guantanamo",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "HAV",
+    "name": "José Martí International Airport",
+    "city_en": "Havana",
+    "city_pl": "Havana",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "HOG",
+    "name": "Frank Pais International Airport",
+    "city_en": "Holguin",
+    "city_pl": "Holguin",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "LCL",
+    "name": "La Coloma Airport",
+    "city_en": "La Coloma",
+    "city_pl": "La Coloma",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "MOA",
+    "name": "Orestes Acosta Airport",
+    "city_en": "Moa",
+    "city_pl": "Moa",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "MZO",
+    "name": "Sierra Maestra Airport",
+    "city_en": "Manzanillo",
+    "city_pl": "Manzanillo",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "GER",
+    "name": "Rafael Cabrera Airport",
+    "city_en": "Nueva Gerona",
+    "city_pl": "Nueva Gerona",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "UPB",
+    "name": "Playa Baracoa Airport",
+    "city_en": "Baracoa Playa",
+    "city_pl": "Baracoa Playa",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "QPD",
+    "name": "Pinar Del Rio Airport",
+    "city_en": "Pinar Del Rio Norte",
+    "city_pl": "Pinar Del Rio Norte",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "SNU",
+    "name": "Abel Santamaria Airport",
+    "city_en": "Santa Clara",
+    "city_pl": "Santa Clara",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "SZJ",
+    "name": "Siguanea Airport",
+    "city_en": "Siguanea",
+    "city_pl": "Siguanea",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "USS",
+    "name": "Sancti Spiritus Airport",
+    "city_en": "Sancti Spiritus",
+    "city_pl": "Sancti Spiritus",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "VRA",
+    "name": "Juan Gualberto Gomez International Airport",
+    "city_en": "Varadero",
+    "city_pl": "Varadero",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "VTU",
+    "name": "Hermanos Ameijeiras Airport",
+    "city_en": "Las Tunas",
+    "city_pl": "Las Tunas",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "CYB",
+    "name": "Gerrard Smith International Airport",
+    "city_en": "Cayman Brac",
+    "city_pl": "Cayman Brac",
+    "country_en": "Cayman Islands"
+  },
+  {
+    "code": "GCM",
+    "name": "Owen Roberts International Airport",
+    "city_en": "Georgetown",
+    "city_pl": "Georgetown",
+    "country_en": "Cayman Islands"
+  },
+  {
+    "code": "MAY",
+    "name": "Clarence A. Bain Airport",
+    "city_en": "Clarence Bain",
+    "city_pl": "Clarence Bain",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "ASD",
+    "name": "Andros Town Airport",
+    "city_en": "Andros Town",
+    "city_pl": "Andros Town",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "MHH",
+    "name": "Leonard M Thompson International Airport",
+    "city_en": "Marsh Harbor",
+    "city_pl": "Marsh Harbor",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "SAQ",
+    "name": "San Andros Airport",
+    "city_en": "San Andros",
+    "city_pl": "San Andros",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "AXP",
+    "name": "Spring Point Airport",
+    "city_en": "Spring Point",
+    "city_pl": "Spring Point",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "TCB",
+    "name": "Treasure Cay Airport",
+    "city_en": "Treasure Cay",
+    "city_pl": "Treasure Cay",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "CCZ",
+    "name": "Chub Cay Airport",
+    "city_en": "Chub Cay",
+    "city_pl": "Chub Cay",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "GHC",
+    "name": "Great Harbour Cay Airport",
+    "city_en": "Bullocks Harbour",
+    "city_pl": "Bullocks Harbour",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "BIM",
+    "name": "South Bimini Airport",
+    "city_en": "Alice Town",
+    "city_pl": "Alice Town",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "GGT",
+    "name": "Exuma International Airport",
+    "city_en": "Great Exuma",
+    "city_pl": "Great Exuma",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "ELH",
+    "name": "North Eleuthera Airport",
+    "city_en": "North Eleuthera",
+    "city_pl": "North Eleuthera",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "GHB",
+    "name": "Governor's Harbour Airport",
+    "city_en": "Governor's Harbor",
+    "city_pl": "Governor's Harbor",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "NMC",
+    "name": "Normans Cay Airport",
+    "city_en": "Norman's Cay",
+    "city_pl": "Norman's Cay",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "RSD",
+    "name": "Rock Sound Airport",
+    "city_en": "Rock Sound",
+    "city_pl": "Rock Sound",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "TYM",
+    "name": "Staniel Cay Airport",
+    "city_en": "Staniel Cay",
+    "city_pl": "Staniel Cay",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "FPO",
+    "name": "Grand Bahama International Airport",
+    "city_en": "Freeport",
+    "city_pl": "Freeport",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "IGA",
+    "name": "Inagua Airport",
+    "city_en": "Matthew Town",
+    "city_pl": "Matthew Town",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "LGI",
+    "name": "Deadman's Cay Airport",
+    "city_en": "Dead Man's Cay",
+    "city_pl": "Dead Man's Cay",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "SML",
+    "name": "Stella Maris Airport",
+    "city_en": "Stella Maris",
+    "city_pl": "Stella Maris",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "MYG",
+    "name": "Mayaguana Airport",
+    "city_en": "Mayaguana",
+    "city_pl": "Mayaguana",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "NAS",
+    "name": "Lynden Pindling International Airport",
+    "city_en": "Nassau",
+    "city_pl": "Nassau",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "DCT",
+    "name": "Duncan Town Airport",
+    "city_en": "Duncan Town",
+    "city_pl": "Duncan Town",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "RCY",
+    "name": "Rum Cay Airport",
+    "city_en": "Port Nelson",
+    "city_pl": "Port Nelson",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "ZSA",
+    "name": "San Salvador Airport",
+    "city_en": "Cockburn Town",
+    "city_pl": "Cockburn Town",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "BZE",
+    "name": "Philip S. W. Goldson International Airport",
+    "city_en": "Belize City",
+    "city_pl": "Belize City",
+    "country_en": "Belize"
+  },
+  {
+    "code": "AIT",
+    "name": "Aitutaki Airport",
+    "city_en": "Aitutaki",
+    "city_pl": "Aitutaki",
+    "country_en": "Cook Islands"
+  },
+  {
+    "code": "RAR",
+    "name": "Rarotonga International Airport",
+    "city_en": "Avarua",
+    "city_pl": "Avarua",
+    "country_en": "Cook Islands"
+  },
+  {
+    "code": "NAN",
+    "name": "Nadi International Airport",
+    "city_en": "Nandi",
+    "city_pl": "Nandi",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "SUV",
+    "name": "Nausori International Airport",
+    "city_en": "Nausori",
+    "city_pl": "Nausori",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "TBU",
+    "name": "Fua'amotu International Airport",
+    "city_en": "Tongatapu",
+    "city_pl": "Tongatapu",
+    "country_en": "Tonga"
+  },
+  {
+    "code": "VAV",
+    "name": "Vava'u International Airport",
+    "city_en": "Vava'u",
+    "city_pl": "Vava'u",
+    "country_en": "Tonga"
+  },
+  {
+    "code": "TRW",
+    "name": "Bonriki International Airport",
+    "city_en": "Tarawa",
+    "city_pl": "Tarawa",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "TBF",
+    "name": "Tabiteuea North Airport",
+    "city_en": "Tabiteuea North",
+    "city_pl": "Tabiteuea North",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "WLS",
+    "name": "Hihifo Airport",
+    "city_en": "Wallis",
+    "city_pl": "Wallis",
+    "country_en": "Wallis and Futuna"
+  },
+  {
+    "code": "APW",
+    "name": "Faleolo International Airport",
+    "city_en": "Faleolo",
+    "city_pl": "Faleolo",
+    "country_en": "Samoa"
+  },
+  {
+    "code": "PPG",
+    "name": "Pago Pago International Airport",
+    "city_en": "Pago Pago",
+    "city_pl": "Pago Pago",
+    "country_en": "American Samoa"
+  },
+  {
+    "code": "RUR",
+    "name": "Rurutu Airport",
+    "city_en": "Rurutu",
+    "city_pl": "Rurutu",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "TUB",
+    "name": "Tubuai Airport",
+    "city_en": "Tubuai",
+    "city_pl": "Tubuai",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "AAA",
+    "name": "Anaa Airport",
+    "city_en": "Anaa",
+    "city_pl": "Anaa",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "FGU",
+    "name": "Fangatau Airport",
+    "city_en": "Fangatau",
+    "city_pl": "Fangatau",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "TIH",
+    "name": "Tikehau Airport",
+    "city_en": "Tikehau",
+    "city_pl": "Tikehau",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "REA",
+    "name": "Reao Airport",
+    "city_en": "Reao",
+    "city_pl": "Reao",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "FAV",
+    "name": "Fakarava Airport",
+    "city_en": "Fakarava",
+    "city_pl": "Fakarava",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "XMH",
+    "name": "Manihi Airport",
+    "city_en": "Manihi",
+    "city_pl": "Manihi",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "GMR",
+    "name": "Totegegie Airport",
+    "city_en": "Totegegie",
+    "city_pl": "Totegegie",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "KKR",
+    "name": "Kaukura Airport",
+    "city_en": "Kaukura Atoll",
+    "city_pl": "Kaukura Atoll",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "MKP",
+    "name": "Makemo Airport",
+    "city_en": "Makemo",
+    "city_pl": "Makemo",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "PKP",
+    "name": "Puka Puka Airport",
+    "city_en": "Puka Puka",
+    "city_pl": "Puka Puka",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "TKP",
+    "name": "Takapoto Airport",
+    "city_en": "Takapoto",
+    "city_pl": "Takapoto",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "AXR",
+    "name": "Arutua Airport",
+    "city_en": "Arutua",
+    "city_pl": "Arutua",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "MVT",
+    "name": "Mataiva Airport",
+    "city_en": "Mataiva",
+    "city_pl": "Mataiva",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "TKX",
+    "name": "Takaroa Airport",
+    "city_en": "Takaroa",
+    "city_pl": "Takaroa",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "NHV",
+    "name": "Nuku Hiva Airport",
+    "city_en": "Nuku Hiva",
+    "city_pl": "Nuku Hiva",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "BOB",
+    "name": "Bora Bora Airport",
+    "city_en": "Bora Bora",
+    "city_pl": "Bora Bora",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "RGI",
+    "name": "Rangiroa Airport",
+    "city_en": "Rangiroa",
+    "city_pl": "Rangiroa",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "HUH",
+    "name": "Huahine-Fare Airport",
+    "city_en": "Huahine Island",
+    "city_pl": "Huahine Island",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "MOZ",
+    "name": "Moorea Airport",
+    "city_en": "Moorea",
+    "city_pl": "Moorea",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "HOI",
+    "name": "Hao Airport",
+    "city_en": "Hao Island",
+    "city_pl": "Hao Island",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "MAU",
+    "name": "Maupiti Airport",
+    "city_en": "Maupiti",
+    "city_pl": "Maupiti",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "RFP",
+    "name": "Raiatea Airport",
+    "city_en": "Raiatea Island",
+    "city_pl": "Raiatea Island",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "VLI",
+    "name": "Bauerfield International Airport",
+    "city_en": "Port-vila",
+    "city_pl": "Port-vila",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "KNQ",
+    "name": "Koné Airport",
+    "city_en": "Kone",
+    "city_pl": "Kone",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "KOC",
+    "name": "Koumac Airport",
+    "city_en": "Koumac",
+    "city_pl": "Koumac",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "LIF",
+    "name": "Lifou Airport",
+    "city_en": "Lifou",
+    "city_pl": "Lifou",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "GEA",
+    "name": "Nouméa Magenta Airport",
+    "city_en": "Noumea",
+    "city_pl": "Noumea",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "MEE",
+    "name": "Maré Airport",
+    "city_en": "Mare",
+    "city_pl": "Mare",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "TOU",
+    "name": "Touho Airport",
+    "city_en": "Touho",
+    "city_pl": "Touho",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "UVE",
+    "name": "Ouvéa Airport",
+    "city_en": "Ouvea",
+    "city_pl": "Ouvea",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "NOU",
+    "name": "La Tontouta International Airport",
+    "city_en": "Noumea",
+    "city_pl": "Noumea",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "AKL",
+    "name": "Auckland International Airport",
+    "city_en": "Auckland",
+    "city_pl": "Auckland",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "TUO",
+    "name": "Taupo Airport",
+    "city_en": "Taupo",
+    "city_pl": "Taupo",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "AMZ",
+    "name": "Ardmore Airport",
+    "city_en": "Ardmore",
+    "city_pl": "Ardmore",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "CHC",
+    "name": "Christchurch International Airport",
+    "city_en": "Christchurch",
+    "city_pl": "Christchurch",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "CHT",
+    "name": "Chatham Islands-Tuuta Airport",
+    "city_en": "Chatham Island",
+    "city_pl": "Chatham Island",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "DUD",
+    "name": "Dunedin Airport",
+    "city_en": "Dunedin",
+    "city_pl": "Dunedin",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "GIS",
+    "name": "Gisborne Airport",
+    "city_en": "Gisborne",
+    "city_pl": "Gisborne",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "GTN",
+    "name": "Glentanner Airport",
+    "city_en": "Glentanner",
+    "city_pl": "Glentanner",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "HKK",
+    "name": "Hokitika Airfield",
+    "city_en": "Hokitika",
+    "city_pl": "Hokitika",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "HLZ",
+    "name": "Hamilton International Airport",
+    "city_en": "Hamilton",
+    "city_pl": "Hamilton",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "KKE",
+    "name": "Kerikeri Airport",
+    "city_en": "Kerikeri",
+    "city_pl": "Kerikeri",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "KAT",
+    "name": "Kaitaia Airport",
+    "city_en": "Kaitaia",
+    "city_pl": "Kaitaia",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "ALR",
+    "name": "Alexandra Airport",
+    "city_en": "Alexandra",
+    "city_pl": "Alexandra",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "MON",
+    "name": "Mount Cook Airport",
+    "city_en": "Mount Cook",
+    "city_pl": "Mount Cook",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "TEU",
+    "name": "Manapouri Airport",
+    "city_en": "Manapouri",
+    "city_pl": "Manapouri",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "MRO",
+    "name": "Hood Airport",
+    "city_en": "Masterton",
+    "city_pl": "Masterton",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "NPL",
+    "name": "New Plymouth Airport",
+    "city_en": "New Plymouth",
+    "city_pl": "New Plymouth",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "NSN",
+    "name": "Nelson Airport",
+    "city_en": "Nelson",
+    "city_pl": "Nelson",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "IVC",
+    "name": "Invercargill Airport",
+    "city_en": "Invercargill",
+    "city_pl": "Invercargill",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "OHA",
+    "name": "RNZAF Base Ohakea",
+    "city_en": "Ohakea",
+    "city_pl": "Ohakea",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "OAM",
+    "name": "Oamaru Airport",
+    "city_en": "Oamaru",
+    "city_pl": "Oamaru",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "PMR",
+    "name": "Palmerston North Airport",
+    "city_en": "Palmerston North",
+    "city_pl": "Palmerston North",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "PPQ",
+    "name": "Paraparaumu Airport",
+    "city_en": "Paraparaumu",
+    "city_pl": "Paraparaumu",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "ZQN",
+    "name": "Queenstown International Airport",
+    "city_en": "Queenstown International",
+    "city_pl": "Queenstown International",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "ROT",
+    "name": "Rotorua Regional Airport",
+    "city_en": "Rotorua",
+    "city_pl": "Rotorua",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "TRG",
+    "name": "Tauranga Airport",
+    "city_en": "Tauranga",
+    "city_pl": "Tauranga",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "TIU",
+    "name": "Timaru Airport",
+    "city_en": "Timaru",
+    "city_pl": "Timaru",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "TWZ",
+    "name": "Pukaki Airport",
+    "city_en": "Pukaki",
+    "city_pl": "Pukaki",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "BHE",
+    "name": "Woodbourne Airport",
+    "city_en": "Woodbourne",
+    "city_pl": "Woodbourne",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "WKA",
+    "name": "Wanaka Airport",
+    "city_en": "Wanaka",
+    "city_pl": "Wanaka",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "WHK",
+    "name": "Whakatane Airport",
+    "city_en": "Whakatane",
+    "city_pl": "Whakatane",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "WLG",
+    "name": "Wellington International Airport",
+    "city_en": "Wellington",
+    "city_pl": "Wellington",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "WIR",
+    "name": "Wairoa Airport",
+    "city_en": "Wairoa",
+    "city_pl": "Wairoa",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "WRE",
+    "name": "Whangarei Airport",
+    "city_en": "Whangarei",
+    "city_pl": "Whangarei",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "WSZ",
+    "name": "Westport Airport",
+    "city_en": "Westport",
+    "city_pl": "Westport",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "WAG",
+    "name": "Wanganui Airport",
+    "city_en": "Wanganui",
+    "city_pl": "Wanganui",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "HEA",
+    "name": "Herat Airport",
+    "city_en": "Herat",
+    "city_pl": "Herat",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "JAA",
+    "name": "Jalalabad Airport",
+    "city_en": "Jalalabad",
+    "city_pl": "Jalalabad",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "KBL",
+    "name": "Hamid Karzai International Airport",
+    "city_en": "Kabul",
+    "city_pl": "Kabul",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "KDH",
+    "name": "Kandahar Airport",
+    "city_en": "Kandahar",
+    "city_pl": "Kandahar",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "MMZ",
+    "name": "Maimana Airport",
+    "city_en": "Maimama",
+    "city_pl": "Maimama",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "MZR",
+    "name": "Mazar I Sharif Airport",
+    "city_en": "Mazar-i-sharif",
+    "city_pl": "Mazar-i-sharif",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "OAH",
+    "name": "Shindand Airport",
+    "city_en": "Shindand",
+    "city_pl": "Shindand",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "UND",
+    "name": "Konduz Airport",
+    "city_en": "Kunduz",
+    "city_pl": "Kunduz",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "BAH",
+    "name": "Bahrain International Airport",
+    "city_en": "Bahrain",
+    "city_pl": "Bahrain",
+    "country_en": "Bahrain"
+  },
+  {
+    "code": "AHB",
+    "name": "Abha Regional Airport",
+    "city_en": "Abha",
+    "city_pl": "Abha",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "HOF",
+    "name": "Al Ahsa Airport",
+    "city_en": "Al-ahsa",
+    "city_pl": "Al-ahsa",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "ABT",
+    "name": "Al Baha Airport",
+    "city_en": "El-baha",
+    "city_pl": "El-baha",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "BHH",
+    "name": "Bisha Airport",
+    "city_en": "Bisha",
+    "city_pl": "Bisha",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "DMM",
+    "name": "King Fahd International Airport",
+    "city_en": "Dammam",
+    "city_pl": "Dammam",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "DHA",
+    "name": "King Abdulaziz Air Base",
+    "city_en": "Dhahran",
+    "city_pl": "Dhahran",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "GIZ",
+    "name": "Jizan Regional Airport",
+    "city_en": "Gizan",
+    "city_pl": "Gizan",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "ELQ",
+    "name": "Gassim Airport",
+    "city_en": "Gassim",
+    "city_pl": "Gassim",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "URY",
+    "name": "Gurayat Domestic Airport",
+    "city_en": "Guriat",
+    "city_pl": "Guriat",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "HAS",
+    "name": "Ha'il Airport",
+    "city_en": "Hail",
+    "city_pl": "Hail",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "QJB",
+    "name": "Jubail Airport",
+    "city_en": "Jubail",
+    "city_pl": "Jubail",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "JED",
+    "name": "King Abdulaziz International Airport",
+    "city_en": "Jeddah",
+    "city_pl": "Jeddah",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "KMC",
+    "name": "King Khaled Military City Airport",
+    "city_en": "King Khalid Mil.city",
+    "city_pl": "King Khalid Mil.city",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "MED",
+    "name": "Prince Mohammad Bin Abdulaziz Airport",
+    "city_en": "Madinah",
+    "city_pl": "Madinah",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "EAM",
+    "name": "Nejran Airport",
+    "city_en": "Nejran",
+    "city_pl": "Nejran",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "AQI",
+    "name": "Al Qaisumah/Hafr Al Batin Airport",
+    "city_en": "Hafr Al-batin",
+    "city_pl": "Hafr Al-batin",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "RAH",
+    "name": "Rafha Domestic Airport",
+    "city_en": "Rafha",
+    "city_pl": "Rafha",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "RUH",
+    "name": "King Khaled International Airport",
+    "city_en": "Riyadh",
+    "city_pl": "Riyadh",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "RAE",
+    "name": "Arar Domestic Airport",
+    "city_en": "Arar",
+    "city_pl": "Arar",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "SHW",
+    "name": "Sharurah Airport",
+    "city_en": "Sharurah",
+    "city_pl": "Sharurah",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "SLF",
+    "name": "Sulayel Airport",
+    "city_en": "Sulayel",
+    "city_pl": "Sulayel",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "TUU",
+    "name": "Tabuk Airport",
+    "city_en": "Tabuk",
+    "city_pl": "Tabuk",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "TIF",
+    "name": "Ta’if Regional Airport",
+    "city_en": "Taif",
+    "city_pl": "Taif",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "TUI",
+    "name": "Turaif Domestic Airport",
+    "city_en": "Turaif",
+    "city_pl": "Turaif",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "EJH",
+    "name": "Al Wajh Domestic Airport",
+    "city_en": "Wejh",
+    "city_pl": "Wejh",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "YNB",
+    "name": "Prince Abdulmohsin Bin Abdulaziz Airport",
+    "city_en": "Yenbo",
+    "city_pl": "Yenbo",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "ABD",
+    "name": "Abadan Airport",
+    "city_en": "Abadan",
+    "city_pl": "Abadan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "DEF",
+    "name": "Dezful Airport",
+    "city_en": "Dezful",
+    "city_pl": "Dezful",
+    "country_en": "Iran"
+  },
+  {
+    "code": "AKW",
+    "name": "Aghajari Airport",
+    "city_en": "Aghajari",
+    "city_pl": "Aghajari",
+    "country_en": "Iran"
+  },
+  {
+    "code": "GCH",
+    "name": "Gachsaran Airport",
+    "city_en": "Gachsaran",
+    "city_pl": "Gachsaran",
+    "country_en": "Iran"
+  },
+  {
+    "code": "OMI",
+    "name": "Omidiyeh Airport",
+    "city_en": "Omidyeh",
+    "city_pl": "Omidyeh",
+    "country_en": "Iran"
+  },
+  {
+    "code": "MRX",
+    "name": "Mahshahr Airport",
+    "city_en": "Bandar Mahshahr",
+    "city_pl": "Bandar Mahshahr",
+    "country_en": "Iran"
+  },
+  {
+    "code": "AWZ",
+    "name": "Ahwaz Airport",
+    "city_en": "Ahwaz",
+    "city_pl": "Ahwaz",
+    "country_en": "Iran"
+  },
+  {
+    "code": "AEU",
+    "name": "Abu Musa Island Airport",
+    "city_en": "Abumusa I.",
+    "city_pl": "Abumusa I.",
+    "country_en": "Iran"
+  },
+  {
+    "code": "BUZ",
+    "name": "Bushehr Airport",
+    "city_en": "Bushehr",
+    "city_pl": "Bushehr",
+    "country_en": "Iran"
+  },
+  {
+    "code": "KIH",
+    "name": "Kish International Airport",
+    "city_en": "Kish Island",
+    "city_pl": "Kish Island",
+    "country_en": "Iran"
+  },
+  {
+    "code": "BDH",
+    "name": "Bandar Lengeh Airport",
+    "city_en": "Bandar Lengeh",
+    "city_pl": "Bandar Lengeh",
+    "country_en": "Iran"
+  },
+  {
+    "code": "KHK",
+    "name": "Khark Island Airport",
+    "city_en": "Khark Island",
+    "city_pl": "Khark Island",
+    "country_en": "Iran"
+  },
+  {
+    "code": "SXI",
+    "name": "Sirri Island Airport",
+    "city_en": "Siri Island",
+    "city_pl": "Siri Island",
+    "country_en": "Iran"
+  },
+  {
+    "code": "LVP",
+    "name": "Lavan Island Airport",
+    "city_en": "Lavan Island",
+    "city_pl": "Lavan Island",
+    "country_en": "Iran"
+  },
+  {
+    "code": "KSH",
+    "name": "Shahid Ashrafi Esfahani Airport",
+    "city_en": "Bakhtaran",
+    "city_pl": "Bakhtaran",
+    "country_en": "Iran"
+  },
+  {
+    "code": "SDG",
+    "name": "Sanandaj Airport",
+    "city_en": "Sanandaj",
+    "city_pl": "Sanandaj",
+    "country_en": "Iran"
+  },
+  {
+    "code": "IFH",
+    "name": "Hesa Airport",
+    "city_en": "Daran",
+    "city_pl": "Daran",
+    "country_en": "Iran"
+  },
+  {
+    "code": "KKS",
+    "name": "Kashan Airport",
+    "city_en": "Kashan",
+    "city_pl": "Kashan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "IFN",
+    "name": "Esfahan Shahid Beheshti International Airport",
+    "city_en": "Esfahan",
+    "city_pl": "Esfahan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "RAS",
+    "name": "Sardar-e-Jangal Airport",
+    "city_en": "Rasht",
+    "city_pl": "Rasht",
+    "country_en": "Iran"
+  },
+  {
+    "code": "AJK",
+    "name": "Arak Airport",
+    "city_en": "Arak",
+    "city_pl": "Arak",
+    "country_en": "Iran"
+  },
+  {
+    "code": "THR",
+    "name": "Mehrabad International Airport",
+    "city_en": "Teheran",
+    "city_pl": "Teheran",
+    "country_en": "Iran"
+  },
+  {
+    "code": "GZW",
+    "name": "Qazvin Airport",
+    "city_en": "Ghazvin",
+    "city_pl": "Ghazvin",
+    "country_en": "Iran"
+  },
+  {
+    "code": "BND",
+    "name": "Bandar Abbas International Airport",
+    "city_en": "Bandar Abbas",
+    "city_pl": "Bandar Abbas",
+    "country_en": "Iran"
+  },
+  {
+    "code": "JYR",
+    "name": "Jiroft Airport",
+    "city_en": "Jiroft",
+    "city_pl": "Jiroft",
+    "country_en": "Iran"
+  },
+  {
+    "code": "KER",
+    "name": "Kerman Airport",
+    "city_en": "Kerman",
+    "city_pl": "Kerman",
+    "country_en": "Iran"
+  },
+  {
+    "code": "HDR",
+    "name": "Havadarya Airport",
+    "city_en": "Bandar Abbas",
+    "city_pl": "Bandar Abbas",
+    "country_en": "Iran"
+  },
+  {
+    "code": "SYJ",
+    "name": "Sirjan Airport",
+    "city_en": "Sirjan",
+    "city_pl": "Sirjan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "XBJ",
+    "name": "Birjand Airport",
+    "city_en": "Birjand",
+    "city_pl": "Birjand",
+    "country_en": "Iran"
+  },
+  {
+    "code": "CKT",
+    "name": "Sarakhs Airport",
+    "city_en": "Sarakhs",
+    "city_pl": "Sarakhs",
+    "country_en": "Iran"
+  },
+  {
+    "code": "RUD",
+    "name": "Shahroud Airport",
+    "city_en": "Emam Shahr",
+    "city_pl": "Emam Shahr",
+    "country_en": "Iran"
+  },
+  {
+    "code": "TCX",
+    "name": "Tabas Airport",
+    "city_en": "Tabas",
+    "city_pl": "Tabas",
+    "country_en": "Iran"
+  },
+  {
+    "code": "KLM",
+    "name": "Kalaleh Airport",
+    "city_en": "Kalaleh",
+    "city_pl": "Kalaleh",
+    "country_en": "Iran"
+  },
+  {
+    "code": "RZR",
+    "name": "Ramsar Airport",
+    "city_en": "Ramsar",
+    "city_pl": "Ramsar",
+    "country_en": "Iran"
+  },
+  {
+    "code": "FAZ",
+    "name": "Fasa Airport",
+    "city_en": "Fasa",
+    "city_pl": "Fasa",
+    "country_en": "Iran"
+  },
+  {
+    "code": "JAR",
+    "name": "Jahrom Airport",
+    "city_en": "Jahrom",
+    "city_pl": "Jahrom",
+    "country_en": "Iran"
+  },
+  {
+    "code": "LFM",
+    "name": "Lamerd Airport",
+    "city_en": "Lamerd",
+    "city_pl": "Lamerd",
+    "country_en": "Iran"
+  },
+  {
+    "code": "SYZ",
+    "name": "Shiraz Shahid Dastghaib International Airport",
+    "city_en": "Shiraz",
+    "city_pl": "Shiraz",
+    "country_en": "Iran"
+  },
+  {
+    "code": "KHY",
+    "name": "Khoy Airport",
+    "city_en": "Khoy",
+    "city_pl": "Khoy",
+    "country_en": "Iran"
+  },
+  {
+    "code": "TBZ",
+    "name": "Tabriz International Airport",
+    "city_en": "Tabriz",
+    "city_pl": "Tabriz",
+    "country_en": "Iran"
+  },
+  {
+    "code": "JWN",
+    "name": "Zanjan Airport",
+    "city_en": "Zanjan",
+    "city_pl": "Zanjan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "AZD",
+    "name": "Shahid Sadooghi Airport",
+    "city_en": "Yazd",
+    "city_pl": "Yazd",
+    "country_en": "Iran"
+  },
+  {
+    "code": "ACZ",
+    "name": "Zabol Airport",
+    "city_en": "Zabol",
+    "city_pl": "Zabol",
+    "country_en": "Iran"
+  },
+  {
+    "code": "ZBR",
+    "name": "Konarak Airport",
+    "city_en": "Chah Bahar",
+    "city_pl": "Chah Bahar",
+    "country_en": "Iran"
+  },
+  {
+    "code": "ZAH",
+    "name": "Zahedan International Airport",
+    "city_en": "Zahedan",
+    "city_pl": "Zahedan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "IHR",
+    "name": "Iran Shahr Airport",
+    "city_en": "Iran Shahr",
+    "city_pl": "Iran Shahr",
+    "country_en": "Iran"
+  },
+  {
+    "code": "AMM",
+    "name": "Queen Alia International Airport",
+    "city_en": "Amman",
+    "city_pl": "Amman",
+    "country_en": "Jordan"
+  },
+  {
+    "code": "ADJ",
+    "name": "Amman-Marka International Airport",
+    "city_en": "Amman",
+    "city_pl": "Amman",
+    "country_en": "Jordan"
+  },
+  {
+    "code": "AQJ",
+    "name": "Aqaba King Hussein International Airport",
+    "city_en": "Aqaba",
+    "city_pl": "Aqaba",
+    "country_en": "Jordan"
+  },
+  {
+    "code": "OMF",
+    "name": "King Hussein Air College",
+    "city_en": "Mafraq",
+    "city_pl": "Mafraq",
+    "country_en": "Jordan"
+  },
+  {
+    "code": "KWI",
+    "name": "Kuwait International Airport",
+    "city_en": "Kuwait",
+    "city_pl": "Kuwait",
+    "country_en": "Kuwait"
+  },
+  {
+    "code": "BEY",
+    "name": "Beirut Rafic Hariri International Airport",
+    "city_en": "Beirut",
+    "city_pl": "Beirut",
+    "country_en": "Lebanon"
+  },
+  {
+    "code": "KYE",
+    "name": "Rene Mouawad Air Base",
+    "city_en": "Kleiat",
+    "city_pl": "Kleiat",
+    "country_en": "Lebanon"
+  },
+  {
+    "code": "AUH",
+    "name": "Abu Dhabi International Airport",
+    "city_en": "Abu Dhabi",
+    "city_pl": "Abu Zabi",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "AZI",
+    "name": "Bateen Airport",
+    "city_en": "Abu Dhabi",
+    "city_pl": "Abu Zabi",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "DHF",
+    "name": "Al Dhafra Air Base",
+    "city_en": "Abu Dhabi",
+    "city_pl": "Abu Zabi",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "DXB",
+    "name": "Dubai International Airport",
+    "city_en": "Dubai",
+    "city_pl": "Dubaj",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "FJR",
+    "name": "Fujairah International Airport",
+    "city_en": "Fujeirah",
+    "city_pl": "Fujeirah",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "RKT",
+    "name": "Ras Al Khaimah International Airport",
+    "city_en": "Ras Al Khaimah",
+    "city_pl": "Ras Al Khaimah",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "SHJ",
+    "name": "Sharjah International Airport",
+    "city_en": "Sharjah",
+    "city_pl": "Sharjah",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "KHS",
+    "name": "Khasab Air Base",
+    "city_en": "Khasab",
+    "city_pl": "Khasab",
+    "country_en": "Oman"
+  },
+  {
+    "code": "MSH",
+    "name": "Masirah Air Base",
+    "city_en": "Masirah",
+    "city_pl": "Masirah",
+    "country_en": "Oman"
+  },
+  {
+    "code": "MCT",
+    "name": "Muscat International Airport",
+    "city_en": "Muscat",
+    "city_pl": "Muscat",
+    "country_en": "Oman"
+  },
+  {
+    "code": "SLL",
+    "name": "Salalah Airport",
+    "city_en": "Salalah",
+    "city_pl": "Salalah",
+    "country_en": "Oman"
+  },
+  {
+    "code": "TTH",
+    "name": "Thumrait Air Base",
+    "city_en": "Thumrait",
+    "city_pl": "Thumrait",
+    "country_en": "Oman"
+  },
+  {
+    "code": "BHW",
+    "name": "Bhagatanwala Airport",
+    "city_en": "Bhagtanwala",
+    "city_pl": "Bhagtanwala",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "LYP",
+    "name": "Faisalabad International Airport",
+    "city_en": "Faisalabad",
+    "city_pl": "Faisalabad",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "GWD",
+    "name": "Gwadar International Airport",
+    "city_en": "Gwadar",
+    "city_pl": "Gwadar",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "GIL",
+    "name": "Gilgit Airport",
+    "city_en": "Gilgit",
+    "city_pl": "Gilgit",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "JAG",
+    "name": "Shahbaz Air Base",
+    "city_en": "Jacobsbad",
+    "city_pl": "Jacobsbad",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "KHI",
+    "name": "Jinnah International Airport",
+    "city_en": "Karachi",
+    "city_pl": "Karachi",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "LHE",
+    "name": "Alama Iqbal International Airport",
+    "city_en": "Lahore",
+    "city_pl": "Lahore",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "XJM",
+    "name": "Mangla Airport",
+    "city_en": "Mangla",
+    "city_pl": "Mangla",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "MFG",
+    "name": "Muzaffarabad Airport",
+    "city_en": "Muzaffarabad",
+    "city_pl": "Muzaffarabad",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "MWD",
+    "name": "Mianwali Air Base",
+    "city_en": "Mianwali",
+    "city_pl": "Mianwali",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "MJD",
+    "name": "Moenjodaro Airport",
+    "city_en": "Moenjodaro",
+    "city_pl": "Moenjodaro",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "MUX",
+    "name": "Multan International Airport",
+    "city_en": "Multan",
+    "city_pl": "Multan",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "WNS",
+    "name": "Shaheed Benazirabad Airport",
+    "city_en": "Nawabshah",
+    "city_pl": "Nawabshah",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "PJG",
+    "name": "Panjgur Airport",
+    "city_en": "Panjgur",
+    "city_pl": "Panjgur",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "PSI",
+    "name": "Pasni Airport",
+    "city_en": "Pasni",
+    "city_pl": "Pasni",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "PEW",
+    "name": "Peshawar International Airport",
+    "city_en": "Peshawar",
+    "city_pl": "Peshawar",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "UET",
+    "name": "Quetta International Airport",
+    "city_en": "Quetta",
+    "city_pl": "Quetta",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "RYK",
+    "name": "Shaikh Zaid Airport",
+    "city_en": "Rahim Yar Khan",
+    "city_pl": "Rahim Yar Khan",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "RAZ",
+    "name": "Rawalakot Airport",
+    "city_en": "Rawala Kot",
+    "city_pl": "Rawala Kot",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "SKZ",
+    "name": "Sukkur Airport",
+    "city_en": "Sukkur",
+    "city_pl": "Sukkur",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "SDT",
+    "name": "Saidu Sharif Airport",
+    "city_en": "Saidu Sharif",
+    "city_pl": "Saidu Sharif",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "SUL",
+    "name": "Sui Airport",
+    "city_en": "Sui",
+    "city_pl": "Sui",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "BDN",
+    "name": "Talhar Airport",
+    "city_en": "Talhar",
+    "city_pl": "Talhar",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "WAF",
+    "name": "Wana Airport",
+    "city_en": "Wana",
+    "city_pl": "Wana",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "PZH",
+    "name": "Zhob Airport",
+    "city_en": "Zhob",
+    "city_pl": "Zhob",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "BSR",
+    "name": "Basrah International Airport",
+    "city_en": "Basrah",
+    "city_pl": "Basrah",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "ALP",
+    "name": "Aleppo International Airport",
+    "city_en": "Aleppo",
+    "city_pl": "Aleppo",
+    "country_en": "Syria"
+  },
+  {
+    "code": "DAM",
+    "name": "Damascus International Airport",
+    "city_en": "Damascus",
+    "city_pl": "Damascus",
+    "country_en": "Syria"
+  },
+  {
+    "code": "DEZ",
+    "name": "Deir ez-Zor Air Base",
+    "city_en": "Deire Zor",
+    "city_pl": "Deire Zor",
+    "country_en": "Syria"
+  },
+  {
+    "code": "LTK",
+    "name": "Bassel Al-Assad International Airport",
+    "city_en": "Latakia",
+    "city_pl": "Latakia",
+    "country_en": "Syria"
+  },
+  {
+    "code": "PMS",
+    "name": "Palmyra Airport",
+    "city_en": "Palmyra",
+    "city_pl": "Palmyra",
+    "country_en": "Syria"
+  },
+  {
+    "code": "DIA",
+    "name": "Doha International Airport",
+    "city_en": "Doha",
+    "city_pl": "Ad-Dauha",
+    "country_en": "Qatar"
+  },
+  {
+    "code": "CIS",
+    "name": "Canton Island Airport",
+    "city_en": "Canton Island",
+    "city_pl": "Canton Island",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "ROP",
+    "name": "Rota International Airport",
+    "city_en": "Rota",
+    "city_pl": "Rota",
+    "country_en": "Northern Mariana Islands"
+  },
+  {
+    "code": "SPN",
+    "name": "Saipan International Airport",
+    "city_en": "Saipan",
+    "city_pl": "Saipan",
+    "country_en": "Northern Mariana Islands"
+  },
+  {
+    "code": "UAM",
+    "name": "Andersen Air Force Base",
+    "city_en": "Andersen",
+    "city_pl": "Andersen",
+    "country_en": "Guam"
+  },
+  {
+    "code": "GUM",
+    "name": "Antonio B. Won Pat International Airport",
+    "city_en": "Agana",
+    "city_pl": "Agana",
+    "country_en": "Guam"
+  },
+  {
+    "code": "TIQ",
+    "name": "Tinian International Airport",
+    "city_en": "West Tinian",
+    "city_pl": "West Tinian",
+    "country_en": "Northern Mariana Islands"
+  },
+  {
+    "code": "MAJ",
+    "name": "Marshall Islands International Airport",
+    "city_en": "Majuro",
+    "city_pl": "Majuro",
+    "country_en": "Marshall Islands"
+  },
+  {
+    "code": "KWA",
+    "name": "Bucholz Army Air Field",
+    "city_en": "Kwajalein",
+    "city_pl": "Kwajalein",
+    "country_en": "Marshall Islands"
+  },
+  {
+    "code": "CXI",
+    "name": "Cassidy International Airport",
+    "city_en": "Kiritimati",
+    "city_pl": "Kiritimati",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "MDY",
+    "name": "Henderson Field",
+    "city_en": "Midway",
+    "city_pl": "Midway",
+    "country_en": "Midway Islands"
+  },
+  {
+    "code": "TKK",
+    "name": "Chuuk International Airport",
+    "city_en": "Chuuk",
+    "city_pl": "Chuuk",
+    "country_en": "Micronesia"
+  },
+  {
+    "code": "PNI",
+    "name": "Pohnpei International Airport",
+    "city_en": "Pohnpei",
+    "city_pl": "Pohnpei",
+    "country_en": "Micronesia"
+  },
+  {
+    "code": "ROR",
+    "name": "Babelthuap Airport",
+    "city_en": "Babelthuap",
+    "city_pl": "Babelthuap",
+    "country_en": "Palau"
+  },
+  {
+    "code": "KSA",
+    "name": "Kosrae International Airport",
+    "city_en": "Kosrae",
+    "city_pl": "Kosrae",
+    "country_en": "Micronesia"
+  },
+  {
+    "code": "YAP",
+    "name": "Yap International Airport",
+    "city_en": "Yap",
+    "city_pl": "Yap",
+    "country_en": "Micronesia"
+  },
+  {
+    "code": "KNH",
+    "name": "Kinmen Airport",
+    "city_en": "Kinmen",
+    "city_pl": "Kinmen",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "TTT",
+    "name": "Taitung Airport",
+    "city_en": "Fengnin",
+    "city_pl": "Fengnin",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "GNI",
+    "name": "Lyudao Airport",
+    "city_en": "Green Island",
+    "city_pl": "Green Island",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "KHH",
+    "name": "Kaohsiung International Airport",
+    "city_en": "Kaohsiung",
+    "city_pl": "Kaohsiung",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "CYI",
+    "name": "Chiayi Airport",
+    "city_en": "Chiayi",
+    "city_pl": "Chiayi",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "KYD",
+    "name": "Lanyu Airport",
+    "city_en": "Lanyu",
+    "city_pl": "Lanyu",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "RMQ",
+    "name": "Taichung Ching Chuang Kang Airport",
+    "city_en": "Taichung",
+    "city_pl": "Taichung",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "TNN",
+    "name": "Tainan Airport",
+    "city_en": "Tainan",
+    "city_pl": "Tainan",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "HSZ",
+    "name": "Hsinchu Air Base",
+    "city_en": "Hsinchu",
+    "city_pl": "Hsinchu",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "MZG",
+    "name": "Makung Airport",
+    "city_en": "Makung",
+    "city_pl": "Makung",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "PIF",
+    "name": "Pingtung North Airport",
+    "city_en": "Pingtung",
+    "city_pl": "Pingtung",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "TSA",
+    "name": "Taipei Songshan Airport",
+    "city_en": "Taipei",
+    "city_pl": "Taipei",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "TPE",
+    "name": "Taiwan Taoyuan International Airport",
+    "city_en": "Taipei",
+    "city_pl": "Taipei",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "WOT",
+    "name": "Wang-an Airport",
+    "city_en": "Wang An",
+    "city_pl": "Wang An",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "HUN",
+    "name": "Hualien Airport",
+    "city_en": "Hualien",
+    "city_pl": "Hualien",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "NRT",
+    "name": "Narita International Airport",
+    "city_en": "Tokyo",
+    "city_pl": "Tokio",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MMJ",
+    "name": "Matsumoto Airport",
+    "city_en": "Matsumoto",
+    "city_pl": "Matsumoto",
+    "country_en": "Japan"
+  },
+  {
+    "code": "IBR",
+    "name": "Hyakuri Airport",
+    "city_en": "Ibaraki",
+    "city_pl": "Ibaraki",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MUS",
+    "name": "Minami Torishima Airport",
+    "city_en": "Minami Tori Shima",
+    "city_pl": "Minami Tori Shima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "IWO",
+    "name": "Iwo Jima Airport",
+    "city_en": "Iwojima",
+    "city_pl": "Iwojima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "SHM",
+    "name": "Nanki Shirahama Airport",
+    "city_en": "Nanki-shirahama",
+    "city_pl": "Nanki-shirahama",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OBO",
+    "name": "Tokachi-Obihiro Airport",
+    "city_en": "Obihiro",
+    "city_pl": "Obihiro",
+    "country_en": "Japan"
+  },
+  {
+    "code": "CTS",
+    "name": "New Chitose Airport",
+    "city_en": "Sapporo",
+    "city_pl": "Sapporo",
+    "country_en": "Japan"
+  },
+  {
+    "code": "HKD",
+    "name": "Hakodate Airport",
+    "city_en": "Hakodate",
+    "city_pl": "Hakodate",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MMB",
+    "name": "Memanbetsu Airport",
+    "city_en": "Memanbetsu",
+    "city_pl": "Memanbetsu",
+    "country_en": "Japan"
+  },
+  {
+    "code": "SHB",
+    "name": "Nakashibetsu Airport",
+    "city_en": "Nakashibetsu",
+    "city_pl": "Nakashibetsu",
+    "country_en": "Japan"
+  },
+  {
+    "code": "WKJ",
+    "name": "Wakkanai Airport",
+    "city_en": "Wakkanai",
+    "city_pl": "Wakkanai",
+    "country_en": "Japan"
+  },
+  {
+    "code": "IKI",
+    "name": "Iki Airport",
+    "city_en": "Iki",
+    "city_pl": "Iki",
+    "country_en": "Japan"
+  },
+  {
+    "code": "UBJ",
+    "name": "Yamaguchi Ube Airport",
+    "city_en": "Yamaguchi",
+    "city_pl": "Yamaguchi",
+    "country_en": "Japan"
+  },
+  {
+    "code": "TSJ",
+    "name": "Tsushima Airport",
+    "city_en": "Tsushima",
+    "city_pl": "Tsushima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MBE",
+    "name": "Monbetsu Airport",
+    "city_en": "Monbetsu",
+    "city_pl": "Monbetsu",
+    "country_en": "Japan"
+  },
+  {
+    "code": "AKJ",
+    "name": "Asahikawa Airport",
+    "city_en": "Asahikawa",
+    "city_pl": "Asahikawa",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OIR",
+    "name": "Okushiri Airport",
+    "city_en": "Okushiri",
+    "city_pl": "Okushiri",
+    "country_en": "Japan"
+  },
+  {
+    "code": "RIS",
+    "name": "Rishiri Airport",
+    "city_en": "Rishiri Island",
+    "city_pl": "Rishiri Island",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KUM",
+    "name": "Yakushima Airport",
+    "city_en": "Yakushima",
+    "city_pl": "Yakushima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "FUJ",
+    "name": "Fukue Airport",
+    "city_en": "Fukue",
+    "city_pl": "Fukue",
+    "country_en": "Japan"
+  },
+  {
+    "code": "FUK",
+    "name": "Fukuoka Airport",
+    "city_en": "Fukuoka",
+    "city_pl": "Fukuoka",
+    "country_en": "Japan"
+  },
+  {
+    "code": "TNE",
+    "name": "New Tanegashima Airport",
+    "city_en": "Tanegashima",
+    "city_pl": "Tanegashima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KOJ",
+    "name": "Kagoshima Airport",
+    "city_en": "Kagoshima",
+    "city_pl": "Kagoshima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KMI",
+    "name": "Miyazaki Airport",
+    "city_en": "Miyazaki",
+    "city_pl": "Miyazaki",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OIT",
+    "name": "Oita Airport",
+    "city_en": "Oita",
+    "city_pl": "Oita",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KKJ",
+    "name": "Kitakyūshū Airport",
+    "city_en": "Kitakyushu",
+    "city_pl": "Kitakyushu",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KMJ",
+    "name": "Kumamoto Airport",
+    "city_en": "Kumamoto",
+    "city_pl": "Kumamoto",
+    "country_en": "Japan"
+  },
+  {
+    "code": "NGS",
+    "name": "Nagasaki Airport",
+    "city_en": "Nagasaki",
+    "city_pl": "Nagasaki",
+    "country_en": "Japan"
+  },
+  {
+    "code": "ASJ",
+    "name": "Amami Airport",
+    "city_en": "Amami",
+    "city_pl": "Amami",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OKE",
+    "name": "Okierabu Airport",
+    "city_en": "Okierabu",
+    "city_pl": "Okierabu",
+    "country_en": "Japan"
+  },
+  {
+    "code": "TKN",
+    "name": "Tokunoshima Airport",
+    "city_en": "Tokunoshima",
+    "city_pl": "Tokunoshima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "FKJ",
+    "name": "Fukui Airport",
+    "city_en": "Fukui",
+    "city_pl": "Fukui",
+    "country_en": "Japan"
+  },
+  {
+    "code": "QGU",
+    "name": "Gifu Airport",
+    "city_en": "Gifu",
+    "city_pl": "Gifu",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KMQ",
+    "name": "Komatsu Airport",
+    "city_en": "Kanazawa",
+    "city_pl": "Kanazawa",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OKI",
+    "name": "Oki Airport",
+    "city_en": "Oki Island",
+    "city_pl": "Oki Island",
+    "country_en": "Japan"
+  },
+  {
+    "code": "TOY",
+    "name": "Toyama Airport",
+    "city_en": "Toyama",
+    "city_pl": "Toyama",
+    "country_en": "Japan"
+  },
+  {
+    "code": "HIJ",
+    "name": "Hiroshima Airport",
+    "city_en": "Hiroshima",
+    "city_pl": "Hiroshima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OKJ",
+    "name": "Okayama Airport",
+    "city_en": "Okayama",
+    "city_pl": "Okayama",
+    "country_en": "Japan"
+  },
+  {
+    "code": "IZO",
+    "name": "Izumo Airport",
+    "city_en": "Izumo",
+    "city_pl": "Izumo",
+    "country_en": "Japan"
+  },
+  {
+    "code": "YGJ",
+    "name": "Miho Yonago Airport",
+    "city_en": "Miho",
+    "city_pl": "Miho",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KCZ",
+    "name": "Kōchi Ryōma Airport",
+    "city_en": "Kochi",
+    "city_pl": "Kochi",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MYJ",
+    "name": "Matsuyama Airport",
+    "city_en": "Matsuyama",
+    "city_pl": "Matsuyama",
+    "country_en": "Japan"
+  },
+  {
+    "code": "ITM",
+    "name": "Osaka International Airport",
+    "city_en": "Osaka",
+    "city_pl": "Osaka",
+    "country_en": "Japan"
+  },
+  {
+    "code": "TTJ",
+    "name": "Tottori Airport",
+    "city_en": "Tottori",
+    "city_pl": "Tottori",
+    "country_en": "Japan"
+  },
+  {
+    "code": "TKS",
+    "name": "Tokushima Airport/JMSDF Air Base",
+    "city_en": "Tokushima",
+    "city_pl": "Tokushima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "TAK",
+    "name": "Takamatsu Airport",
+    "city_en": "Takamatsu",
+    "city_pl": "Takamatsu",
+    "country_en": "Japan"
+  },
+  {
+    "code": "AOJ",
+    "name": "Aomori Airport",
+    "city_en": "Aomori",
+    "city_pl": "Aomori",
+    "country_en": "Japan"
+  },
+  {
+    "code": "GAJ",
+    "name": "Yamagata Airport",
+    "city_en": "Yamagata",
+    "city_pl": "Yamagata",
+    "country_en": "Japan"
+  },
+  {
+    "code": "SDS",
+    "name": "Sado Airport",
+    "city_en": "Sado",
+    "city_pl": "Sado",
+    "country_en": "Japan"
+  },
+  {
+    "code": "HHE",
+    "name": "Hachinohe Airport",
+    "city_en": "Hachinoe",
+    "city_pl": "Hachinoe",
+    "country_en": "Japan"
+  },
+  {
+    "code": "HNA",
+    "name": "Hanamaki Airport",
+    "city_en": "Hanamaki",
+    "city_pl": "Hanamaki",
+    "country_en": "Japan"
+  },
+  {
+    "code": "AXT",
+    "name": "Akita Airport",
+    "city_en": "Akita",
+    "city_pl": "Akita",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MSJ",
+    "name": "Misawa Air Base",
+    "city_en": "Misawa",
+    "city_pl": "Misawa",
+    "country_en": "Japan"
+  },
+  {
+    "code": "SDJ",
+    "name": "Sendai Airport",
+    "city_en": "Sendai",
+    "city_pl": "Sendai",
+    "country_en": "Japan"
+  },
+  {
+    "code": "NJA",
+    "name": "Atsugi Naval Air Facility",
+    "city_en": "Atsugi",
+    "city_pl": "Atsugi",
+    "country_en": "Japan"
+  },
+  {
+    "code": "HAC",
+    "name": "Hachijojima Airport",
+    "city_en": "Hachijojima",
+    "city_pl": "Hachijojima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OIM",
+    "name": "Oshima Airport",
+    "city_en": "Oshima",
+    "city_pl": "Oshima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "HND",
+    "name": "Tokyo Haneda International Airport",
+    "city_en": "Tokyo",
+    "city_pl": "Tokio",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OKO",
+    "name": "Yokota Air Base",
+    "city_en": "Yokota",
+    "city_pl": "Yokota",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KWJ",
+    "name": "Gwangju Airport",
+    "city_en": "Kwangju",
+    "city_pl": "Kwangju",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "CHN",
+    "name": "Jeon Ju Airport (G-703)",
+    "city_en": "Jhunju",
+    "city_pl": "Jhunju",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "RSU",
+    "name": "Yeosu Airport",
+    "city_en": "Yeosu",
+    "city_pl": "Yeosu",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "KAG",
+    "name": "Gangneung Airport (K-18)",
+    "city_en": "Kangnung",
+    "city_pl": "Kangnung",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "CJU",
+    "name": "Jeju International Airport",
+    "city_en": "Cheju",
+    "city_pl": "Cheju",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "CHF",
+    "name": "Jinhae Airbase/Airport (G-813/K-10)",
+    "city_en": "Chinhae",
+    "city_pl": "Chinhae",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "PUS",
+    "name": "Gimhae International Airport",
+    "city_en": "Busan",
+    "city_pl": "Busan",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "USN",
+    "name": "Ulsan Airport",
+    "city_en": "Ulsan",
+    "city_pl": "Ulsan",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "SSN",
+    "name": "Seoul Air Base (K-16)",
+    "city_en": "Seoul East",
+    "city_pl": "Seoul East",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "OSN",
+    "name": "Osan Air Base",
+    "city_en": "Osan",
+    "city_pl": "Osan",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "GMP",
+    "name": "Gimpo International Airport",
+    "city_en": "Seoul",
+    "city_pl": "Seul",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "SWU",
+    "name": "Suwon Airport",
+    "city_en": "Suwon",
+    "city_pl": "Suwon",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "KPO",
+    "name": "Pohang Airport (G-815/K-3)",
+    "city_en": "Pohang",
+    "city_pl": "Pohang",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "TAE",
+    "name": "Daegu Airport",
+    "city_en": "Taegu",
+    "city_pl": "Taegu",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "YEC",
+    "name": "Yecheon Airbase",
+    "city_en": "Yechon",
+    "city_pl": "Yechon",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "OKA",
+    "name": "Naha Airport",
+    "city_en": "Okinawa",
+    "city_pl": "Okinawa",
+    "country_en": "Japan"
+  },
+  {
+    "code": "DNA",
+    "name": "Kadena Air Base",
+    "city_en": "Kadena",
+    "city_pl": "Kadena",
+    "country_en": "Japan"
+  },
+  {
+    "code": "ISG",
+    "name": "New Ishigaki Airport",
+    "city_en": "Ishigaki",
+    "city_pl": "Ishigaki",
+    "country_en": "Japan"
+  },
+  {
+    "code": "UEO",
+    "name": "Kumejima Airport",
+    "city_en": "Kumejima",
+    "city_pl": "Kumejima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MMD",
+    "name": "Minami-Daito Airport",
+    "city_en": "Minami Daito",
+    "city_pl": "Minami Daito",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MMY",
+    "name": "Miyako Airport",
+    "city_en": "Miyako",
+    "city_pl": "Miyako",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KTD",
+    "name": "Kitadaito Airport",
+    "city_en": "Kitadaito",
+    "city_pl": "Kitadaito",
+    "country_en": "Japan"
+  },
+  {
+    "code": "SHI",
+    "name": "Shimojishima Airport",
+    "city_en": "Shimojishima",
+    "city_pl": "Shimojishima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "TRA",
+    "name": "Tarama Airport",
+    "city_en": "Tarama",
+    "city_pl": "Tarama",
+    "country_en": "Japan"
+  },
+  {
+    "code": "RNJ",
+    "name": "Yoron Airport",
+    "city_en": "Yoron",
+    "city_pl": "Yoron",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OGN",
+    "name": "Yonaguni Airport",
+    "city_en": "Yonaguni Jima",
+    "city_pl": "Yonaguni Jima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MNL",
+    "name": "Ninoy Aquino International Airport",
+    "city_en": "Manila",
+    "city_pl": "Manila",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "CBO",
+    "name": "Awang Airport",
+    "city_en": "Cotabato",
+    "city_pl": "Cotabato",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "PAG",
+    "name": "Pagadian Airport",
+    "city_en": "Pagadian",
+    "city_pl": "Pagadian",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "GES",
+    "name": "General Santos International Airport",
+    "city_en": "Romblon",
+    "city_pl": "Romblon",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "ZAM",
+    "name": "Zamboanga International Airport",
+    "city_en": "Zamboanga",
+    "city_pl": "Zamboanga",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "BAG",
+    "name": "Loakan Airport",
+    "city_en": "Baguio",
+    "city_pl": "Baguio",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "DTE",
+    "name": "Daet Airport",
+    "city_en": "Daet",
+    "city_pl": "Daet",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "SJI",
+    "name": "San Jose Airport",
+    "city_en": "San Jose",
+    "city_pl": "San Jose",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "MBO",
+    "name": "Mamburao Airport",
+    "city_en": "Mamburao",
+    "city_pl": "Mamburao",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "BQA",
+    "name": "Dr.Juan C. Angara Airport",
+    "city_en": "Baler",
+    "city_pl": "Baler",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "TAC",
+    "name": "Daniel Z. Romualdez Airport",
+    "city_en": "Tacloban",
+    "city_pl": "Tacloban",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "BCD",
+    "name": "Bacolod-Silay Airport",
+    "city_en": "Bacolod",
+    "city_pl": "Bacolod",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "DGT",
+    "name": "Sibulan Airport",
+    "city_en": "Dumaguete",
+    "city_pl": "Dumaguete",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "MPH",
+    "name": "Godofredo P. Ramos Airport",
+    "city_en": "Caticlan",
+    "city_pl": "Caticlan",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "ILO",
+    "name": "Iloilo International Airport",
+    "city_en": "Iloilo",
+    "city_pl": "Iloilo",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "KLO",
+    "name": "Kalibo International Airport",
+    "city_en": "Kalibo",
+    "city_pl": "Kalibo",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "PPS",
+    "name": "Puerto Princesa Airport",
+    "city_en": "Puerto Princesa",
+    "city_pl": "Puerto Princesa",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "EUQ",
+    "name": "Evelio Javier Airport",
+    "city_en": "San Jose",
+    "city_pl": "San Jose",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "COC",
+    "name": "Comodoro Pierrestegui Airport",
+    "city_en": "Concordia",
+    "city_pl": "Concordia",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "GHU",
+    "name": "Gualeguaychu Airport",
+    "city_en": "Gualeguaychu",
+    "city_pl": "Gualeguaychu",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "JNI",
+    "name": "Junin Airport",
+    "city_en": "Junin",
+    "city_pl": "Junin",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "PRA",
+    "name": "General Urquiza Airport",
+    "city_en": "Parana",
+    "city_pl": "Parana",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "ROS",
+    "name": "Islas Malvinas Airport",
+    "city_en": "Rosario",
+    "city_pl": "Rosario",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "SFN",
+    "name": "Sauce Viejo Airport",
+    "city_en": "Santa Fe",
+    "city_pl": "Santa Fe",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "AEP",
+    "name": "Jorge Newbery Airpark",
+    "city_en": "Buenos Aires",
+    "city_pl": "Buenos Aires",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "COR",
+    "name": "Ingeniero Ambrosio Taravella Airport",
+    "city_en": "Cordoba",
+    "city_pl": "Cordoba",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "FDO",
+    "name": "San Fernando Airport",
+    "city_en": "San Fernando",
+    "city_pl": "San Fernando",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "LPG",
+    "name": "La Plata Airport",
+    "city_en": "La Plata",
+    "city_pl": "La Plata",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "EPA",
+    "name": "El Palomar Airport",
+    "city_en": "El Palomar",
+    "city_pl": "El Palomar",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "HOS",
+    "name": "Chos Malal Airport",
+    "city_en": "Chosmadal",
+    "city_pl": "Chosmadal",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "GNR",
+    "name": "Dr. Arturo H. Illia Airport",
+    "city_en": "Fuerte Gral Roca",
+    "city_pl": "Fuerte Gral Roca",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "MDZ",
+    "name": "El Plumerillo Airport",
+    "city_en": "Mendoza",
+    "city_pl": "Mendoza",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "LGS",
+    "name": "Comodoro D.R. Salomón Airport",
+    "city_en": "Malargue",
+    "city_pl": "Malargue",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "AFA",
+    "name": "Suboficial Ay Santiago Germano Airport",
+    "city_en": "San Rafael",
+    "city_pl": "San Rafael",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "CTC",
+    "name": "Catamarca Airport",
+    "city_en": "Catamarca",
+    "city_pl": "Catamarca",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "SDE",
+    "name": "Vicecomodoro Angel D. La Paz Aragonés Airport",
+    "city_en": "Santiago Del Estero",
+    "city_pl": "Santiago Del Estero",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "IRJ",
+    "name": "Capitan V A Almonacid Airport",
+    "city_en": "La Rioja",
+    "city_pl": "La Rioja",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "TUC",
+    "name": "Teniente Benjamin Matienzo Airport",
+    "city_en": "Tucuman",
+    "city_pl": "Tucuman",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "UAQ",
+    "name": "Domingo Faustino Sarmiento Airport",
+    "city_en": "San Juan",
+    "city_pl": "San Juan",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "RCU",
+    "name": "Area De Material Airport",
+    "city_en": "Rio Cuarto",
+    "city_pl": "Rio Cuarto",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "VDR",
+    "name": "Villa Dolores Airport",
+    "city_en": "Villa Dolores",
+    "city_pl": "Villa Dolores",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "VME",
+    "name": "Villa Reynolds Airport",
+    "city_en": "Villa Reynolds",
+    "city_pl": "Villa Reynolds",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "LUQ",
+    "name": "Brigadier Mayor D Cesar Raul Ojeda Airport",
+    "city_en": "San Luis",
+    "city_pl": "San Luis",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "CNQ",
+    "name": "Corrientes Airport",
+    "city_en": "Corrientes",
+    "city_pl": "Corrientes",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "RES",
+    "name": "Resistencia International Airport",
+    "city_en": "Resistencia",
+    "city_pl": "Resistencia",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "FMA",
+    "name": "Formosa Airport",
+    "city_en": "Formosa",
+    "city_pl": "Formosa",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "IGR",
+    "name": "Cataratas Del Iguazú International Airport",
+    "city_en": "Iguazu Falls",
+    "city_pl": "Iguazu Falls",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "AOL",
+    "name": "Paso De Los Libres Airport",
+    "city_en": "Paso De Los Libres",
+    "city_pl": "Paso De Los Libres",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "MCS",
+    "name": "Monte Caseros Airport",
+    "city_en": "Monte Caseros",
+    "city_pl": "Monte Caseros",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "PSS",
+    "name": "Libertador Gral D Jose De San Martin Airport",
+    "city_en": "Posadas",
+    "city_pl": "Posadas",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "PRQ",
+    "name": "Termal Airport",
+    "city_en": "Presidencia R.s.pena",
+    "city_pl": "Presidencia R.s.pena",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "SLA",
+    "name": "Martin Miguel De Guemes International Airport",
+    "city_en": "Salta",
+    "city_pl": "Salta",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "JUJ",
+    "name": "Gobernador Horacio Guzman International Airport",
+    "city_en": "Jujuy",
+    "city_pl": "Jujuy",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "ORA",
+    "name": "Orán Airport",
+    "city_en": "Oran",
+    "city_pl": "Oran",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "ELO",
+    "name": "El Dorado Airport",
+    "city_en": "El Dorado",
+    "city_pl": "El Dorado",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "OYA",
+    "name": "Goya Airport",
+    "city_en": "Goya",
+    "city_pl": "Goya",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "RCQ",
+    "name": "Reconquista Airport",
+    "city_en": "Reconquista",
+    "city_pl": "Reconquista",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "UZU",
+    "name": "Curuzu Cuatia Airport",
+    "city_en": "Curuzu Cuatia",
+    "city_pl": "Curuzu Cuatia",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "EHL",
+    "name": "El Bolson Airport",
+    "city_en": "El Bolson",
+    "city_pl": "El Bolson",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "CRD",
+    "name": "General E. Mosconi Airport",
+    "city_en": "Comodoro Rivadavia",
+    "city_pl": "Comodoro Rivadavia",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "EQS",
+    "name": "Brigadier Antonio Parodi Airport",
+    "city_en": "Esquel",
+    "city_pl": "Esquel",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "REL",
+    "name": "Almirante Marco Andres Zar Airport",
+    "city_en": "Trelew",
+    "city_pl": "Trelew",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "VDM",
+    "name": "Gobernador Castello Airport",
+    "city_en": "Viedma",
+    "city_pl": "Viedma",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "PMY",
+    "name": "El Tehuelche Airport",
+    "city_en": "Puerto Madryn",
+    "city_pl": "Puerto Madryn",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "PUD",
+    "name": "Puerto Deseado Airport",
+    "city_en": "Puerto Deseado",
+    "city_pl": "Puerto Deseado",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "RGA",
+    "name": "Hermes Quijada International Airport",
+    "city_en": "Rio Grande",
+    "city_pl": "Rio Grande",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "RGL",
+    "name": "Piloto Civil N. Fernández Airport",
+    "city_en": "Rio Gallegos",
+    "city_pl": "Rio Gallegos",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "USH",
+    "name": "Malvinas Argentinas Airport",
+    "city_en": "Ushuaia",
+    "city_pl": "Ushuaia",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "ULA",
+    "name": "Capitan D Daniel Vazquez Airport",
+    "city_en": "San Julian",
+    "city_pl": "San Julian",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "PMQ",
+    "name": "Perito Moreno Airport",
+    "city_en": "Perito Moreno",
+    "city_pl": "Perito Moreno",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "RZA",
+    "name": "Santa Cruz Airport",
+    "city_en": "Santa Cruz",
+    "city_pl": "Santa Cruz",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "BHI",
+    "name": "Comandante Espora Airport",
+    "city_en": "Bahia Blanca",
+    "city_pl": "Bahia Blanca",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "CSZ",
+    "name": "Brigadier D.H.E. Ruiz Airport",
+    "city_en": "Colonel Suarez",
+    "city_pl": "Colonel Suarez",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "OVR",
+    "name": "Olavarria Airport",
+    "city_en": "Olavarria",
+    "city_pl": "Olavarria",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "GPO",
+    "name": "General Pico Airport",
+    "city_en": "General Pico",
+    "city_pl": "General Pico",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "OYO",
+    "name": "Tres Arroyos Airport",
+    "city_en": "Tres Arroyos",
+    "city_pl": "Tres Arroyos",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "MDQ",
+    "name": "Ástor Piazzola International Airport",
+    "city_en": "Mar Del Plata",
+    "city_pl": "Mar Del Plata",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "NQN",
+    "name": "Presidente Peron Airport",
+    "city_en": "Neuquen",
+    "city_pl": "Neuquen",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "PEH",
+    "name": "Comodoro Pedro Zanni Airport",
+    "city_en": "Pehuajo",
+    "city_pl": "Pehuajo",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "RSA",
+    "name": "Santa Rosa Airport",
+    "city_en": "Santa Rosa",
+    "city_pl": "Santa Rosa",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "BRC",
+    "name": "San Carlos De Bariloche Airport",
+    "city_en": "San Carlos De Bariloche",
+    "city_pl": "San Carlos De Bariloche",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "TDL",
+    "name": "Héroes De Malvinas Airport",
+    "city_en": "Tandil",
+    "city_pl": "Tandil",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "VLG",
+    "name": "Villa Gesell Airport",
+    "city_en": "Villa Gesell",
+    "city_pl": "Villa Gesell",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "CUT",
+    "name": "Cutral-Co Airport",
+    "city_en": "Cutralco",
+    "city_pl": "Cutralco",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "CPC",
+    "name": "Aviador C. Campos Airport",
+    "city_en": "San Martin Des Andes",
+    "city_pl": "San Martin Des Andes",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "CDJ",
+    "name": "Conceição do Araguaia Airport",
+    "city_en": "Conceicao Do Araguaia",
+    "city_pl": "Conceicao Do Araguaia",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "AQA",
+    "name": "Araraquara Airport",
+    "city_en": "Araracuara",
+    "city_pl": "Araracuara",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "AJU",
+    "name": "Santa Maria Airport",
+    "city_en": "Aracaju",
+    "city_pl": "Aracaju",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "AFL",
+    "name": "Piloto Osvaldo Marques Dias Airport",
+    "city_en": "Alta Floresta",
+    "city_pl": "Alta Floresta",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ARU",
+    "name": "Araçatuba Airport",
+    "city_en": "Aracatuba",
+    "city_pl": "Aracatuba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BEL",
+    "name": "Val de Cans/Júlio Cezar Ribeiro International Airport",
+    "city_en": "Belem",
+    "city_pl": "Belem",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BGX",
+    "name": "Comandante Gustavo Kraemer Airport",
+    "city_en": "Bage",
+    "city_pl": "Bage",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PLU",
+    "name": "Pampulha - Carlos Drummond de Andrade Airport",
+    "city_en": "Belo Horizonte",
+    "city_pl": "Belo Horizonte",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BFH",
+    "name": "Bacacheri Airport",
+    "city_en": "Curitiba",
+    "city_pl": "Curitiba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BSB",
+    "name": "Presidente Juscelino Kubistschek International Airport",
+    "city_en": "Brasilia",
+    "city_pl": "Brasilia",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BAU",
+    "name": "Bauru Airport",
+    "city_en": "Bauru",
+    "city_pl": "Bauru",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BVB",
+    "name": "Atlas Brasil Cantanhede Airport",
+    "city_en": "Boa Vista",
+    "city_pl": "Boa Vista",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BPG",
+    "name": "Barra do Garças Airport",
+    "city_en": "Barra Do Garcas",
+    "city_pl": "Barra Do Garcas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CAC",
+    "name": "Cascavel Airport",
+    "city_en": "Cascavel",
+    "city_pl": "Cascavel",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CNF",
+    "name": "Tancredo Neves International Airport",
+    "city_en": "Belo Horizonte",
+    "city_pl": "Belo Horizonte",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CGR",
+    "name": "Campo Grande Airport",
+    "city_en": "Campo Grande",
+    "city_pl": "Campo Grande",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "XAP",
+    "name": "Serafin Enoss Bertaso Airport",
+    "city_en": "Chapeco",
+    "city_pl": "Chapeco",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CLN",
+    "name": "Brig. Lysias Augusto Rodrigues Airport",
+    "city_en": "Carolina",
+    "city_pl": "Carolina",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CCM",
+    "name": "Diomício Freitas Airport",
+    "city_en": "Criciuma",
+    "city_pl": "Criciuma",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CAW",
+    "name": "Bartolomeu Lisandro Airport",
+    "city_en": "Campos",
+    "city_pl": "Campos",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CMG",
+    "name": "Corumbá International Airport",
+    "city_en": "Corumba",
+    "city_pl": "Corumba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CWB",
+    "name": "Afonso Pena Airport",
+    "city_en": "Curitiba",
+    "city_pl": "Curitiba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CRQ",
+    "name": "Caravelas Airport",
+    "city_en": "Caravelas",
+    "city_pl": "Caravelas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CXJ",
+    "name": "Hugo Cantergiani Regional Airport",
+    "city_en": "Caxias Do Sul",
+    "city_pl": "Caxias Do Sul",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CGB",
+    "name": "Marechal Rondon Airport",
+    "city_en": "Cuiaba",
+    "city_pl": "Cuiaba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CZS",
+    "name": "Cruzeiro do Sul Airport",
+    "city_en": "Cruzeiro do Sul",
+    "city_pl": "Cruzeiro do Sul",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PPB",
+    "name": "Presidente Prudente Airport",
+    "city_en": "President Prudente",
+    "city_pl": "President Prudente",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MAO",
+    "name": "Eduardo Gomes International Airport",
+    "city_en": "Manaus",
+    "city_pl": "Manaus",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "JCR",
+    "name": "Jacareacanga Airport",
+    "city_en": "Jacare-acanga",
+    "city_pl": "Jacare-acanga",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "IGU",
+    "name": "Cataratas International Airport",
+    "city_en": "Foz Do Iguacu",
+    "city_pl": "Foz Do Iguacu",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "FLN",
+    "name": "Hercílio Luz International Airport",
+    "city_en": "Florianopolis",
+    "city_pl": "Florianopolis",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "FEN",
+    "name": "Fernando de Noronha Airport",
+    "city_en": "Fernando Do Noronha",
+    "city_pl": "Fernando Do Noronha",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "FOR",
+    "name": "Pinto Martins International Airport",
+    "city_en": "Fortaleza",
+    "city_pl": "Fortaleza",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GIG",
+    "name": "Rio Galeão – Tom Jobim International Airport",
+    "city_en": "Rio De Janeiro",
+    "city_pl": "Rio De Janeiro",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GJM",
+    "name": "Guajará-Mirim Airport",
+    "city_en": "Guajara-mirim",
+    "city_pl": "Guajara-mirim",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GYN",
+    "name": "Santa Genoveva Airport",
+    "city_en": "Goiania",
+    "city_pl": "Goiania",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GRU",
+    "name": "Guarulhos - Governador André Franco Montoro International Airport",
+    "city_en": "Sao Paulo",
+    "city_pl": "São Paulo",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GUJ",
+    "name": "Guaratinguetá Airport",
+    "city_en": "Guaratingueta",
+    "city_pl": "Guaratingueta",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ATM",
+    "name": "Altamira Airport",
+    "city_en": "Altamira",
+    "city_pl": "Altamira",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ITA",
+    "name": "Itacoatiara Airport",
+    "city_en": "Itaituba",
+    "city_pl": "Itaituba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ITB",
+    "name": "Itaituba Airport",
+    "city_en": "Itaituba",
+    "city_pl": "Itaituba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "IOS",
+    "name": "Bahia - Jorge Amado Airport",
+    "city_en": "Ilheus",
+    "city_pl": "Ilheus",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "IPN",
+    "name": "Usiminas Airport",
+    "city_en": "Ipatinga",
+    "city_pl": "Ipatinga",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ITR",
+    "name": "Francisco Vilela do Amaral Airport",
+    "city_en": "Itumbiara",
+    "city_pl": "Itumbiara",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "IMP",
+    "name": "Prefeito Renato Moreira Airport",
+    "city_en": "Imperatriz",
+    "city_pl": "Imperatriz",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "JDF",
+    "name": "Francisco de Assis Airport",
+    "city_en": "Juiz De Fora",
+    "city_pl": "Juiz De Fora",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "JPA",
+    "name": "Presidente Castro Pinto International Airport",
+    "city_en": "Joao Pessoa",
+    "city_pl": "Joao Pessoa",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "JOI",
+    "name": "Lauro Carneiro de Loyola Airport",
+    "city_en": "Joinville",
+    "city_pl": "Joinville",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CPV",
+    "name": "Presidente João Suassuna Airport",
+    "city_en": "Campina Grande",
+    "city_pl": "Campina Grande",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "VCP",
+    "name": "Viracopos International Airport",
+    "city_en": "Campinas",
+    "city_pl": "Campinas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "LAJ",
+    "name": "Lages Airport",
+    "city_en": "Lajes",
+    "city_pl": "Lajes",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "LIP",
+    "name": "Lins Airport",
+    "city_en": "Lins",
+    "city_pl": "Lins",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "LDB",
+    "name": "Governador José Richa Airport",
+    "city_en": "Londrina",
+    "city_pl": "Londrina",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "LAZ",
+    "name": "Bom Jesus da Lapa Airport",
+    "city_en": "Bom Jesus Da Lapa",
+    "city_pl": "Bom Jesus Da Lapa",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MAB",
+    "name": "João Correa da Rocha Airport",
+    "city_en": "Maraba",
+    "city_pl": "Maraba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MEU",
+    "name": "Monte Dourado Airport",
+    "city_en": "Almeirim",
+    "city_pl": "Almeirim",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MGF",
+    "name": "Regional de Maringá - Sílvio Nane Junior Airport",
+    "city_en": "Maringa",
+    "city_pl": "Maringa",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MOC",
+    "name": "Mário Ribeiro Airport",
+    "city_en": "Montes Claros",
+    "city_pl": "Montes Claros",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PLL",
+    "name": "Ponta Pelada Airport",
+    "city_en": "Manaus",
+    "city_pl": "Manaus",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MCZ",
+    "name": "Zumbi dos Palmares Airport",
+    "city_en": "Maceio",
+    "city_pl": "Maceio",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MCP",
+    "name": "Alberto Alcolumbre Airport",
+    "city_en": "Macapa",
+    "city_pl": "Macapa",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MVF",
+    "name": "Dix-Sept Rosado Airport",
+    "city_en": "Mocord",
+    "city_pl": "Mocord",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MNX",
+    "name": "Manicoré Airport",
+    "city_en": "Manicore",
+    "city_pl": "Manicore",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "NVT",
+    "name": "Ministro Victor Konder International Airport",
+    "city_en": "Navegantes",
+    "city_pl": "Navegantes",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GEL",
+    "name": "Santo Ângelo Airport",
+    "city_en": "Santo Angelo",
+    "city_pl": "Santo Angelo",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "NAT",
+    "name": "Governador Aluízio Alves International Airport",
+    "city_en": "Natal",
+    "city_pl": "Natal",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "OYK",
+    "name": "Oiapoque Airport",
+    "city_en": "Oioiapoque",
+    "city_pl": "Oioiapoque",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "POA",
+    "name": "Salgado Filho Airport",
+    "city_en": "Porto Alegre",
+    "city_pl": "Porto Alegre",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PHB",
+    "name": "Prefeito Doutor João Silva Filho Airport",
+    "city_en": "Parnaiba",
+    "city_pl": "Parnaiba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "POO",
+    "name": "Poços de Caldas - Embaixador Walther Moreira Salles Airport",
+    "city_en": "Pocos De Caldas",
+    "city_pl": "Pocos De Caldas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PFB",
+    "name": "Lauro Kurtz Airport",
+    "city_en": "Passo Fundo",
+    "city_pl": "Passo Fundo",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PET",
+    "name": "João Simões Lopes Neto International Airport",
+    "city_en": "Pelotas",
+    "city_pl": "Pelotas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PNZ",
+    "name": "Senador Nilo Coelho Airport",
+    "city_en": "Petrolina",
+    "city_pl": "Petrolina",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PNB",
+    "name": "Porto Nacional Airport",
+    "city_en": "Porto Nacional",
+    "city_pl": "Porto Nacional",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PMG",
+    "name": "Ponta Porã Airport",
+    "city_en": "Ponta Pora",
+    "city_pl": "Ponta Pora",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PVH",
+    "name": "Governador Jorge Teixeira de Oliveira Airport",
+    "city_en": "Porto Velho",
+    "city_pl": "Porto Velho",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "RBR",
+    "name": "Plácido de Castro Airport",
+    "city_en": "Rio Branco",
+    "city_pl": "Rio Branco",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "REC",
+    "name": "Guararapes - Gilberto Freyre International Airport",
+    "city_en": "Recife",
+    "city_pl": "Recife",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SDU",
+    "name": "Santos Dumont Airport",
+    "city_en": "Rio De Janeiro",
+    "city_pl": "Rio De Janeiro",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "RAO",
+    "name": "Leite Lopes Airport",
+    "city_en": "Ribeirao Preto",
+    "city_pl": "Ribeirao Preto",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SNZ",
+    "name": "Santa Cruz Air Force Base",
+    "city_en": "Rio De Janeiro",
+    "city_pl": "Rio De Janeiro",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SJK",
+    "name": "Professor Urbano Ernesto Stumpf Airport",
+    "city_en": "Sao Jose Dos Campos",
+    "city_pl": "Sao Jose Dos Campos",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SLZ",
+    "name": "Marechal Cunha Machado International Airport",
+    "city_en": "Sao Luis",
+    "city_pl": "Sao Luis",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CGH",
+    "name": "Congonhas Airport",
+    "city_en": "Sao Paulo",
+    "city_pl": "São Paulo",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SJP",
+    "name": "Prof. Eribelto Manoel Reino State Airport",
+    "city_en": "Sao Jose Do Rio Preto",
+    "city_pl": "Sao Jose Do Rio Preto",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SSZ",
+    "name": "Base Aérea de Santos Airport",
+    "city_en": "Santos",
+    "city_pl": "Santos",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SSA",
+    "name": "Deputado Luiz Eduardo Magalhães International Airport",
+    "city_en": "Salvador",
+    "city_pl": "Salvador",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TMT",
+    "name": "Trombetas Airport",
+    "city_en": "Oriximina",
+    "city_pl": "Oriximina",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "THE",
+    "name": "Senador Petrônio Portela Airport",
+    "city_en": "Teresina",
+    "city_pl": "Teresina",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TFF",
+    "name": "Tefé Airport",
+    "city_en": "Tefe",
+    "city_pl": "Tefe",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TRQ",
+    "name": "Tarauacá Airport",
+    "city_en": "Tarauaca",
+    "city_pl": "Tarauaca",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TEC",
+    "name": "Telêmaco Borba Airport",
+    "city_en": "Telemaco Borba",
+    "city_pl": "Telemaco Borba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TBT",
+    "name": "Tabatinga Airport",
+    "city_en": "Tabatinga",
+    "city_pl": "Tabatinga",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TUR",
+    "name": "Tucuruí Airport",
+    "city_en": "Tucurui",
+    "city_pl": "Tucurui",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SJL",
+    "name": "São Gabriel da Cachoeira Airport",
+    "city_en": "Sao Gabriel",
+    "city_pl": "Sao Gabriel",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PAV",
+    "name": "Paulo Afonso Airport",
+    "city_en": "Paulo Alfonso",
+    "city_pl": "Paulo Alfonso",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "URG",
+    "name": "Rubem Berta Airport",
+    "city_en": "Uruguaiana",
+    "city_pl": "Uruguaiana",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "UDI",
+    "name": "Ten. Cel. Aviador César Bombonato Airport",
+    "city_en": "Uberlandia",
+    "city_pl": "Uberlandia",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "UBA",
+    "name": "Mário de Almeida Franco Airport",
+    "city_en": "Uberaba",
+    "city_pl": "Uberaba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "VAG",
+    "name": "Major Brigadeiro Trompowsky Airport",
+    "city_en": "Varginha",
+    "city_pl": "Varginha",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BVH",
+    "name": "Brigadeiro Camarão Airport",
+    "city_en": "Vilhena",
+    "city_pl": "Vilhena",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "VIX",
+    "name": "Eurico de Aguiar Salles Airport",
+    "city_en": "Vitoria",
+    "city_pl": "Vitoria",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "QPS",
+    "name": "Campo Fontenelle Airport",
+    "city_en": "Piracununga",
+    "city_pl": "Piracununga",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ARI",
+    "name": "Chacalluta Airport",
+    "city_en": "Arica",
+    "city_pl": "Arica",
+    "country_en": "Chile"
+  },
+  {
+    "code": "BBA",
+    "name": "Balmaceda Airport",
+    "city_en": "Balmaceda",
+    "city_pl": "Balmaceda",
+    "country_en": "Chile"
+  },
+  {
+    "code": "CCH",
+    "name": "Chile Chico Airport",
+    "city_en": "Chile Chico",
+    "city_pl": "Chile Chico",
+    "country_en": "Chile"
+  },
+  {
+    "code": "CJC",
+    "name": "El Loa Airport",
+    "city_en": "Calama",
+    "city_pl": "Calama",
+    "country_en": "Chile"
+  },
+  {
+    "code": "YAI",
+    "name": "Gral. Bernardo O´Higgins Airport",
+    "city_en": "Chillan",
+    "city_pl": "Chillan",
+    "country_en": "Chile"
+  },
+  {
+    "code": "PUQ",
+    "name": "Pdte. Carlos Ibañez del Campo Airport",
+    "city_en": "Punta Arenas",
+    "city_pl": "Punta Arenas",
+    "country_en": "Chile"
+  },
+  {
+    "code": "GXQ",
+    "name": "Teniente Vidal Airport",
+    "city_en": "Coyhaique",
+    "city_pl": "Coyhaique",
+    "country_en": "Chile"
+  },
+  {
+    "code": "IQQ",
+    "name": "Diego Aracena Airport",
+    "city_en": "Iquique",
+    "city_pl": "Iquique",
+    "country_en": "Chile"
+  },
+  {
+    "code": "SCL",
+    "name": "Comodoro Arturo Merino Benítez International Airport",
+    "city_en": "Santiago",
+    "city_pl": "Santiago",
+    "country_en": "Chile"
+  },
+  {
+    "code": "ANF",
+    "name": "Andrés Sabella Gálvez International Airport",
+    "city_en": "Antofagasta",
+    "city_pl": "Antofagasta",
+    "country_en": "Chile"
+  },
+  {
+    "code": "WPR",
+    "name": "Capitan Fuentes Martinez Airport Airport",
+    "city_en": "Porvenir",
+    "city_pl": "Porvenir",
+    "country_en": "Chile"
+  },
+  {
+    "code": "FFU",
+    "name": "Futaleufú Airport",
+    "city_en": "Futaleufu",
+    "city_pl": "Futaleufu",
+    "country_en": "Chile"
+  },
+  {
+    "code": "LSQ",
+    "name": "María Dolores Airport",
+    "city_en": "Los Angeles",
+    "city_pl": "Los Angeles",
+    "country_en": "Chile"
+  },
+  {
+    "code": "WPU",
+    "name": "Guardiamarina Zañartu Airport",
+    "city_en": "Puerto Williams",
+    "city_pl": "Puerto Williams",
+    "country_en": "Chile"
+  },
+  {
+    "code": "CCP",
+    "name": "Carriel Sur Airport",
+    "city_en": "Concepcion",
+    "city_pl": "Concepcion",
+    "country_en": "Chile"
+  },
+  {
+    "code": "IPC",
+    "name": "Mataveri Airport",
+    "city_en": "Easter Island",
+    "city_pl": "Easter Island",
+    "country_en": "Chile"
+  },
+  {
+    "code": "ZOS",
+    "name": "Cañal Bajo Carlos - Hott Siebert Airport",
+    "city_en": "Osorno",
+    "city_pl": "Osorno",
+    "country_en": "Chile"
+  },
+  {
+    "code": "VLR",
+    "name": "Vallenar Airport",
+    "city_en": "Vallenar",
+    "city_pl": "Vallenar",
+    "country_en": "Chile"
+  },
+  {
+    "code": "QRC",
+    "name": "De La Independencia Airport",
+    "city_en": "Rancagua",
+    "city_pl": "Rancagua",
+    "country_en": "Chile"
+  },
+  {
+    "code": "TNM",
+    "name": "Teniente Rodolfo Marsh Martin Base",
+    "city_en": "Isla Rey Jorge",
+    "city_pl": "Isla Rey Jorge",
+    "country_en": "Antarctica"
+  },
+  {
+    "code": "LSC",
+    "name": "La Florida Airport",
+    "city_en": "La Serena",
+    "city_pl": "La Serena",
+    "country_en": "Chile"
+  },
+  {
+    "code": "PZS",
+    "name": "Maquehue Airport",
+    "city_en": "Temuco",
+    "city_pl": "Temuco",
+    "country_en": "Chile"
+  },
+  {
+    "code": "PMC",
+    "name": "El Tepual Airport",
+    "city_en": "Puerto Montt",
+    "city_pl": "Puerto Montt",
+    "country_en": "Chile"
+  },
+  {
+    "code": "WCH",
+    "name": "Chaitén Airport",
+    "city_en": "Chaiten",
+    "city_pl": "Chaiten",
+    "country_en": "Chile"
+  },
+  {
+    "code": "ZAL",
+    "name": "Pichoy Airport",
+    "city_en": "Valdivia",
+    "city_pl": "Valdivia",
+    "country_en": "Chile"
+  },
+  {
+    "code": "ATF",
+    "name": "Chachoán Airport",
+    "city_en": "Ambato",
+    "city_pl": "Ambato",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "OCC",
+    "name": "Francisco De Orellana Airport",
+    "city_en": "Coca",
+    "city_pl": "Coca",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "CUE",
+    "name": "Mariscal Lamar Airport",
+    "city_en": "Cuenca",
+    "city_pl": "Cuenca",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "GPS",
+    "name": "Seymour Airport",
+    "city_en": "Galapagos",
+    "city_pl": "Galapagos",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "GYE",
+    "name": "José Joaquín de Olmedo International Airport",
+    "city_en": "Guayaquil",
+    "city_pl": "Guayaquil",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "LTX",
+    "name": "Cotopaxi International Airport",
+    "city_en": "Latacunga",
+    "city_pl": "Latacunga",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "MRR",
+    "name": "Jose Maria Velasco Ibarra Airport",
+    "city_en": "Macara",
+    "city_pl": "Macara",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "XMS",
+    "name": "Coronel E Carvajal Airport",
+    "city_en": "Macas",
+    "city_pl": "Macas",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "MCH",
+    "name": "General Manuel Serrano Airport",
+    "city_en": "Machala",
+    "city_pl": "Machala",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "MEC",
+    "name": "Eloy Alfaro International Airport",
+    "city_en": "Manta",
+    "city_pl": "Manta",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "PVO",
+    "name": "Reales Tamarindos Airport",
+    "city_en": "Portoviejo",
+    "city_pl": "Portoviejo",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "UIO",
+    "name": "Mariscal Sucre International Airport",
+    "city_en": "Quito",
+    "city_pl": "Quito",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "ETR",
+    "name": "Santa Rosa International Airport",
+    "city_en": "Santa Rosa",
+    "city_pl": "Santa Rosa",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "SNC",
+    "name": "General Ulpiano Paez Airport",
+    "city_en": "Salinas",
+    "city_pl": "Salinas",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "TPC",
+    "name": "Tarapoa Airport",
+    "city_en": "Tarapoa",
+    "city_pl": "Tarapoa",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "TUA",
+    "name": "Teniente Coronel Luis a Mantilla Airport",
+    "city_en": "Tulcan",
+    "city_pl": "Tulcan",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "ASU",
+    "name": "Silvio Pettirossi International Airport",
+    "city_en": "Asuncion",
+    "city_pl": "Asuncion",
+    "country_en": "Paraguay"
+  },
+  {
+    "code": "AYO",
+    "name": "Juan De Ayolas Airport",
+    "city_en": "Ayolas",
+    "city_pl": "Ayolas",
+    "country_en": "Paraguay"
+  },
+  {
+    "code": "CIO",
+    "name": "Teniente Col Carmelo Peralta Airport",
+    "city_en": "Conception",
+    "city_pl": "Conception",
+    "country_en": "Paraguay"
+  },
+  {
+    "code": "ESG",
+    "name": "Dr. Luis Maria Argaña International Airport",
+    "city_en": "Mariscal Estigarribia",
+    "city_pl": "Mariscal Estigarribia",
+    "country_en": "Paraguay"
+  },
+  {
+    "code": "PIL",
+    "name": "Carlos Miguel Gimenez Airport",
+    "city_en": "Pilar",
+    "city_pl": "Pilar",
+    "country_en": "Paraguay"
+  },
+  {
+    "code": "AXM",
+    "name": "El Eden Airport",
+    "city_en": "Armenia",
+    "city_pl": "Armenia",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PUU",
+    "name": "Tres De Mayo Airport",
+    "city_en": "Puerto Asis",
+    "city_pl": "Puerto Asis",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "ELB",
+    "name": "Las Flores Airport",
+    "city_en": "El Banco",
+    "city_pl": "El Banco",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "BGA",
+    "name": "Palonegro Airport",
+    "city_en": "Bucaramanga",
+    "city_pl": "Bucaramanga",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "BOG",
+    "name": "El Dorado International Airport",
+    "city_en": "Bogota",
+    "city_pl": "Bogota",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "BAQ",
+    "name": "Ernesto Cortissoz International Airport",
+    "city_en": "Barranquilla",
+    "city_pl": "Barranquilla",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "BSC",
+    "name": "José Celestino Mutis Airport",
+    "city_en": "Bahia Solano",
+    "city_pl": "Bahia Solano",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "BUN",
+    "name": "Gerardo Tobar López Airport",
+    "city_en": "Buenaventura",
+    "city_pl": "Buenaventura",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "CUC",
+    "name": "Camilo Daza International Airport",
+    "city_en": "Cucuta",
+    "city_pl": "Cucuta",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "CTG",
+    "name": "Rafael Nuñez International Airport",
+    "city_en": "Cartagena",
+    "city_pl": "Cartagena",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "CLO",
+    "name": "Alfonso Bonilla Aragon International Airport",
+    "city_en": "Cali",
+    "city_pl": "Cali",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "TCO",
+    "name": "La Florida Airport",
+    "city_en": "Tumaco",
+    "city_pl": "Tumaco",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "CZU",
+    "name": "Las Brujas Airport",
+    "city_en": "Corozal",
+    "city_pl": "Corozal",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "EJA",
+    "name": "Yariguíes Airport",
+    "city_en": "Barrancabermeja",
+    "city_pl": "Barrancabermeja",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "FLA",
+    "name": "Gustavo Artunduaga Paredes Airport",
+    "city_en": "Florencia",
+    "city_pl": "Florencia",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "GIR",
+    "name": "Santiago Vila Airport",
+    "city_en": "Girardot",
+    "city_pl": "Girardot",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "GPI",
+    "name": "Juan Casiano Airport",
+    "city_en": "Guapi",
+    "city_pl": "Guapi",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "IBE",
+    "name": "Perales Airport",
+    "city_en": "Ibague",
+    "city_pl": "Ibague",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "IPI",
+    "name": "San Luis Airport",
+    "city_en": "Ipiales",
+    "city_pl": "Ipiales",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "APO",
+    "name": "Antonio Roldan Betancourt Airport",
+    "city_en": "Carepa",
+    "city_pl": "Carepa",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "MCJ",
+    "name": "Jorge Isaac Airport",
+    "city_en": "La Mina",
+    "city_pl": "La Mina",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "LET",
+    "name": "Alfredo Vásquez Cobo International Airport",
+    "city_en": "Leticia",
+    "city_pl": "Leticia",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "EOH",
+    "name": "Enrique Olaya Herrera Airport",
+    "city_en": "Medellin",
+    "city_pl": "Medellin",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "MGN",
+    "name": "Baracoa Airport",
+    "city_en": "Magangue",
+    "city_pl": "Magangue",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "MTR",
+    "name": "Los Garzones Airport",
+    "city_en": "Monteria",
+    "city_pl": "Monteria",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "MVP",
+    "name": "Fabio Alberto Leon Bentley Airport",
+    "city_en": "Mitu",
+    "city_pl": "Mitu",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "MZL",
+    "name": "La Nubia Airport",
+    "city_en": "Manizales",
+    "city_pl": "Manizales",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "NVA",
+    "name": "Benito Salas Airport",
+    "city_en": "Neiva",
+    "city_pl": "Neiva",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "OCV",
+    "name": "Aguas Claras Airport",
+    "city_en": "Ocana",
+    "city_pl": "Ocana",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "OTU",
+    "name": "Otu Airport",
+    "city_en": "Otu",
+    "city_pl": "Otu",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PCR",
+    "name": "German Olano Airport",
+    "city_en": "Puerto Carreno",
+    "city_pl": "Puerto Carreno",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PEI",
+    "name": "Matecaña International Airport",
+    "city_en": "Pereira",
+    "city_pl": "Pereira",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PTX",
+    "name": "Pitalito Airport",
+    "city_en": "Pitalito",
+    "city_pl": "Pitalito",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PPN",
+    "name": "Guillermo León Valencia Airport",
+    "city_en": "Popayan",
+    "city_pl": "Popayan",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PSO",
+    "name": "Antonio Narino Airport",
+    "city_en": "Pasto",
+    "city_pl": "Pasto",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PVA",
+    "name": "El Embrujo Airport",
+    "city_en": "Providencia",
+    "city_pl": "Providencia",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "MQU",
+    "name": "Mariquita Airport",
+    "city_en": "Mariquita",
+    "city_pl": "Mariquita",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "MDE",
+    "name": "Jose Maria Córdova International Airport",
+    "city_en": "Rio Negro",
+    "city_pl": "Rio Negro",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "RCH",
+    "name": "Almirante Padilla Airport",
+    "city_en": "Rio Hacha",
+    "city_pl": "Rio Hacha",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "SJE",
+    "name": "Jorge E. Gonzalez Torres Airport",
+    "city_en": "San Jose Del Guaviare",
+    "city_pl": "San Jose Del Guaviare",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "SMR",
+    "name": "Simón Bolívar International Airport",
+    "city_en": "Santa Marta",
+    "city_pl": "Santa Marta",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "ADZ",
+    "name": "Gustavo Rojas Pinilla International Airport",
+    "city_en": "San Andres Island",
+    "city_pl": "San Andres Island",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "SVI",
+    "name": "Eduardo Falla Solano Airport",
+    "city_en": "San Vincente De Caguan",
+    "city_pl": "San Vincente De Caguan",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "TME",
+    "name": "Gustavo Vargas Airport",
+    "city_en": "Tame",
+    "city_pl": "Tame",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "AUC",
+    "name": "Santiago Perez Airport",
+    "city_en": "Arauca",
+    "city_pl": "Arauca",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "UIB",
+    "name": "El Caraño Airport",
+    "city_en": "Quibdo",
+    "city_pl": "Quibdo",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "ULQ",
+    "name": "Heriberto Gíl Martínez Airport",
+    "city_en": "Tulua",
+    "city_pl": "Tulua",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "VUP",
+    "name": "Alfonso López Pumarejo Airport",
+    "city_en": "Valledupar",
+    "city_pl": "Valledupar",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "VVC",
+    "name": "Vanguardia Airport",
+    "city_en": "Villavicencio",
+    "city_pl": "Villavicencio",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "BJO",
+    "name": "Bermejo Airport",
+    "city_en": "Bermejo",
+    "city_pl": "Bermejo",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "CBB",
+    "name": "Jorge Wilsterman International Airport",
+    "city_en": "Cochabamba",
+    "city_pl": "Cochabamba",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "CCA",
+    "name": "Chimore Airport",
+    "city_en": "Chapacura",
+    "city_pl": "Chapacura",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "CIJ",
+    "name": "Capitán Aníbal Arab Airport",
+    "city_en": "Cobija",
+    "city_pl": "Cobija",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "LPB",
+    "name": "El Alto International Airport",
+    "city_en": "La Paz",
+    "city_pl": "La Paz",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "ORU",
+    "name": "Juan Mendoza Airport",
+    "city_en": "Oruro",
+    "city_pl": "Oruro",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "POI",
+    "name": "Capitan Nicolas Rojas Airport",
+    "city_en": "Potosi",
+    "city_pl": "Potosi",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "PSZ",
+    "name": "Capitán Av. Salvador Ogaya G. airport",
+    "city_en": "Puerto Suarez",
+    "city_pl": "Puerto Suarez",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "SBL",
+    "name": "Santa Ana Del Yacuma Airport",
+    "city_en": "Santa Ana",
+    "city_pl": "Santa Ana",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "SRE",
+    "name": "Juana Azurduy De Padilla Airport",
+    "city_en": "Sucre",
+    "city_pl": "Sucre",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "TJA",
+    "name": "Capitan Oriel Lea Plaza Airport",
+    "city_en": "Tarija",
+    "city_pl": "Tarija",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "TDD",
+    "name": "Teniente Av. Jorge Henrich Arauz Airport",
+    "city_en": "Trinidad",
+    "city_pl": "Trinidad",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "VLM",
+    "name": "Teniente Coronel Rafael Pabón Airport",
+    "city_en": "Villa Montes",
+    "city_pl": "Villa Montes",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "VVI",
+    "name": "Viru Viru International Airport",
+    "city_en": "Santa Cruz",
+    "city_pl": "Santa Cruz",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "BYC",
+    "name": "Yacuiba Airport",
+    "city_en": "Yacuiba",
+    "city_pl": "Yacuiba",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "PBM",
+    "name": "Johan Adolf Pengel International Airport",
+    "city_en": "Zandery",
+    "city_pl": "Zandery",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "CAY",
+    "name": "Cayenne-Rochambeau Airport",
+    "city_en": "Cayenne",
+    "city_pl": "Cayenne",
+    "country_en": "French Guiana"
+  },
+  {
+    "code": "OYP",
+    "name": "Saint-Georges-de-l'Oyapock Airport",
+    "city_en": "St.-georges Oyapock",
+    "city_pl": "St.-georges Oyapock",
+    "country_en": "French Guiana"
+  },
+  {
+    "code": "AOP",
+    "name": "Alferez FAP Alfredo Vladimir Sara Bauer Airport",
+    "city_en": "Andoas",
+    "city_pl": "Andoas",
+    "country_en": "Peru"
+  },
+  {
+    "code": "IBP",
+    "name": "Iberia Airport",
+    "city_en": "Iberia",
+    "city_pl": "Iberia",
+    "country_en": "Peru"
+  },
+  {
+    "code": "PCL",
+    "name": "Cap FAP David Abenzur Rengifo International Airport",
+    "city_en": "Pucallpa",
+    "city_pl": "Pucallpa",
+    "country_en": "Peru"
+  },
+  {
+    "code": "CHM",
+    "name": "Teniente FAP Jaime A De Montreuil Morales Airport",
+    "city_en": "Chimbote",
+    "city_pl": "Chimbote",
+    "country_en": "Peru"
+  },
+  {
+    "code": "CIX",
+    "name": "Capitan FAP Jose A Quinones Gonzales International Airport",
+    "city_en": "Chiclayo",
+    "city_pl": "Chiclayo",
+    "country_en": "Peru"
+  },
+  {
+    "code": "AYP",
+    "name": "Coronel FAP Alfredo Mendivil Duarte Airport",
+    "city_en": "Ayacucho",
+    "city_pl": "Ayacucho",
+    "country_en": "Peru"
+  },
+  {
+    "code": "ANS",
+    "name": "Andahuaylas Airport",
+    "city_en": "Andahuaylas",
+    "city_pl": "Andahuaylas",
+    "country_en": "Peru"
+  },
+  {
+    "code": "ATA",
+    "name": "Comandante FAP German Arias Graziani Airport",
+    "city_en": "Anta",
+    "city_pl": "Anta",
+    "country_en": "Peru"
+  },
+  {
+    "code": "LIM",
+    "name": "Jorge Chávez International Airport",
+    "city_en": "Lima",
+    "city_pl": "Lima",
+    "country_en": "Peru"
+  },
+  {
+    "code": "JJI",
+    "name": "Juanjui Airport",
+    "city_en": "Juanjui",
+    "city_pl": "Juanjui",
+    "country_en": "Peru"
+  },
+  {
+    "code": "JAU",
+    "name": "Francisco Carle Airport",
+    "city_en": "Jauja",
+    "city_pl": "Jauja",
+    "country_en": "Peru"
+  },
+  {
+    "code": "JUL",
+    "name": "Inca Manco Capac International Airport",
+    "city_en": "Juliaca",
+    "city_pl": "Juliaca",
+    "country_en": "Peru"
+  },
+  {
+    "code": "ILQ",
+    "name": "Ilo Airport",
+    "city_en": "Ilo",
+    "city_pl": "Ilo",
+    "country_en": "Peru"
+  },
+  {
+    "code": "TBP",
+    "name": "Capitan FAP Pedro Canga Rodriguez Airport",
+    "city_en": "Tumbes",
+    "city_pl": "Tumbes",
+    "country_en": "Peru"
+  },
+  {
+    "code": "YMS",
+    "name": "Moises Benzaquen Rengifo Airport",
+    "city_en": "Yurimaguas",
+    "city_pl": "Yurimaguas",
+    "country_en": "Peru"
+  },
+  {
+    "code": "CHH",
+    "name": "Chachapoyas Airport",
+    "city_en": "Chachapoyas",
+    "city_pl": "Chachapoyas",
+    "country_en": "Peru"
+  },
+  {
+    "code": "IQT",
+    "name": "Coronel FAP Francisco Secada Vignetta International Airport",
+    "city_en": "Iquitos",
+    "city_pl": "Iquitos",
+    "country_en": "Peru"
+  },
+  {
+    "code": "AQP",
+    "name": "Rodríguez Ballón International Airport",
+    "city_en": "Arequipa",
+    "city_pl": "Arequipa",
+    "country_en": "Peru"
+  },
+  {
+    "code": "TRU",
+    "name": "Capitan FAP Carlos Martinez De Pinillos International Airport",
+    "city_en": "Trujillo",
+    "city_pl": "Trujillo",
+    "country_en": "Peru"
+  },
+  {
+    "code": "PIO",
+    "name": "Capitán FAP Renán Elías Olivera International Airport",
+    "city_en": "Pisco",
+    "city_pl": "Pisco",
+    "country_en": "Peru"
+  },
+  {
+    "code": "TPP",
+    "name": "Cadete FAP Guillermo Del Castillo Paredes Airport",
+    "city_en": "Tarapoto",
+    "city_pl": "Tarapoto",
+    "country_en": "Peru"
+  },
+  {
+    "code": "TCQ",
+    "name": "Coronel FAP Carlos Ciriani Santa Rosa International Airport",
+    "city_en": "Tacna",
+    "city_pl": "Tacna",
+    "country_en": "Peru"
+  },
+  {
+    "code": "PEM",
+    "name": "Padre Aldamiz International Airport",
+    "city_en": "Puerto Maldonado",
+    "city_pl": "Puerto Maldonado",
+    "country_en": "Peru"
+  },
+  {
+    "code": "PIU",
+    "name": "Capitán FAP Guillermo Concha Iberico International Airport",
+    "city_en": "Piura",
+    "city_pl": "Piura",
+    "country_en": "Peru"
+  },
+  {
+    "code": "TYL",
+    "name": "Capitan Montes Airport",
+    "city_en": "Talara",
+    "city_pl": "Talara",
+    "country_en": "Peru"
+  },
+  {
+    "code": "CUZ",
+    "name": "Alejandro Velasco Astete International Airport",
+    "city_en": "Cuzco",
+    "city_pl": "Cuzco",
+    "country_en": "Peru"
+  },
+  {
+    "code": "DZO",
+    "name": "Santa Bernardina International Airport",
+    "city_en": "Durazno",
+    "city_pl": "Durazno",
+    "country_en": "Uruguay"
+  },
+  {
+    "code": "MVD",
+    "name": "Carrasco International /General C L Berisso Airport",
+    "city_en": "Montevideo",
+    "city_pl": "Montevideo",
+    "country_en": "Uruguay"
+  },
+  {
+    "code": "STY",
+    "name": "Nueva Hesperides International Airport",
+    "city_en": "Salto",
+    "city_pl": "Salto",
+    "country_en": "Uruguay"
+  },
+  {
+    "code": "AGV",
+    "name": "Oswaldo Guevara Mujica Airport",
+    "city_en": "Acarigua",
+    "city_pl": "Acarigua",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "AAO",
+    "name": "Anaco Airport",
+    "city_en": "Anaco",
+    "city_pl": "Anaco",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "BLA",
+    "name": "General José Antonio Anzoategui International Airport",
+    "city_en": "Barcelona",
+    "city_pl": "Barcelona",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "BNS",
+    "name": "Barinas Airport",
+    "city_en": "Barinas",
+    "city_pl": "Barinas",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "BRM",
+    "name": "Barquisimeto International Airport",
+    "city_en": "Barquisimeto",
+    "city_pl": "Barquisimeto",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "CBL",
+    "name": "Aeropuerto General Tomas de Heres. Ciudad Bolivar",
+    "city_en": "Ciudad Bolivar",
+    "city_pl": "Ciudad Bolivar",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "CXA",
+    "name": "Caicara del Orinoco Airport",
+    "city_en": "Caicara De Orinoco",
+    "city_pl": "Caicara De Orinoco",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "CLZ",
+    "name": "Calabozo Airport",
+    "city_en": "Calabozo",
+    "city_pl": "Calabozo",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "CAJ",
+    "name": "Canaima Airport",
+    "city_en": "Canaima",
+    "city_pl": "Canaima",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "VCR",
+    "name": "Carora Airport",
+    "city_en": "Carora",
+    "city_pl": "Carora",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "CUP",
+    "name": "General Francisco Bermúdez Airport",
+    "city_en": "Carupano",
+    "city_pl": "Carupano",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "CZE",
+    "name": "José Leonardo Chirinos Airport",
+    "city_en": "Coro",
+    "city_pl": "Coro",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "CUM",
+    "name": "Cumaná (Antonio José de Sucre) Airport",
+    "city_en": "Cumana",
+    "city_pl": "Cumana",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "EOR",
+    "name": "El Dorado Airport",
+    "city_en": "El Dorado",
+    "city_pl": "El Dorado",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "EOZ",
+    "name": "Elorza Airport",
+    "city_en": "Elorza",
+    "city_pl": "Elorza",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "GDO",
+    "name": "Guasdalito Airport",
+    "city_en": "Guasdualito",
+    "city_pl": "Guasdualito",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "GUI",
+    "name": "Guiria Airport",
+    "city_en": "Guiria",
+    "city_pl": "Guiria",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "GUQ",
+    "name": "Guanare Airport",
+    "city_en": "Guanare",
+    "city_pl": "Guanare",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "HGE",
+    "name": "Higuerote Airport",
+    "city_en": "Higuerote",
+    "city_pl": "Higuerote",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "ICC",
+    "name": "Andrés Miguel Salazar Marcano Airport",
+    "city_en": "Isla De Coche",
+    "city_pl": "Isla De Coche",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "LSP",
+    "name": "Josefa Camejo International Airport",
+    "city_en": "Paraguana",
+    "city_pl": "Paraguana",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "LFR",
+    "name": "La Fria Airport",
+    "city_en": "La Fria",
+    "city_pl": "La Fria",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "MAR",
+    "name": "La Chinita International Airport",
+    "city_en": "Maracaibo",
+    "city_pl": "Maracaibo",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "MRD",
+    "name": "Alberto Carnevalli Airport",
+    "city_en": "Merida",
+    "city_pl": "Merida",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "PMV",
+    "name": "Del Caribe Santiago Mariño International Airport",
+    "city_en": "Porlamar",
+    "city_pl": "Porlamar",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "CCS",
+    "name": "Simón Bolívar International Airport",
+    "city_en": "Caracas",
+    "city_pl": "Caracas",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "MUN",
+    "name": "Maturín Airport",
+    "city_en": "Maturin",
+    "city_pl": "Maturin",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "PYH",
+    "name": "Cacique Aramare Airport",
+    "city_en": "Puerto Ayacucho",
+    "city_pl": "Puerto Ayacucho",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "PBL",
+    "name": "General Bartolome Salom International Airport",
+    "city_en": "Puerto Cabello",
+    "city_pl": "Puerto Cabello",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "SCI",
+    "name": "Paramillo Airport",
+    "city_en": "San Cristobal",
+    "city_pl": "San Cristobal",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "PZO",
+    "name": "General Manuel Carlos Piar International Airport",
+    "city_en": "Guayana",
+    "city_pl": "Guayana",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "PTM",
+    "name": "Palmarito Airport",
+    "city_en": "Palmarito",
+    "city_pl": "Palmarito",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "SVZ",
+    "name": "San Antonio Del Tachira Airport",
+    "city_en": "San Antonio",
+    "city_pl": "San Antonio",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "SBB",
+    "name": "Santa Bárbara de Barinas Airport",
+    "city_en": "Santa Barbara",
+    "city_pl": "Santa Barbara",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "SNV",
+    "name": "Santa Elena de Uairen Airport",
+    "city_en": "Santa Ana De Uairen",
+    "city_pl": "Santa Ana De Uairen",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "STD",
+    "name": "Mayor Buenaventura Vivas International Airport",
+    "city_en": "Santo Domingo",
+    "city_pl": "Santo Domingo",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "SNF",
+    "name": "Sub Teniente Nestor Arias Airport",
+    "city_en": "San Felipe",
+    "city_pl": "San Felipe",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "SFD",
+    "name": "San Fernando De Apure Airport",
+    "city_en": "San Fernando De Apure",
+    "city_pl": "San Fernando De Apure",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "SOM",
+    "name": "San Tomé Airport",
+    "city_en": "San Tome",
+    "city_pl": "San Tome",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "STB",
+    "name": "Santa Bárbara del Zulia Airport",
+    "city_en": "Santa Barbara",
+    "city_pl": "Santa Barbara",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "TUV",
+    "name": "Tucupita Airport",
+    "city_en": "Tucupita",
+    "city_pl": "Tucupita",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "TMO",
+    "name": "Tumeremo Airport",
+    "city_en": "Tumeremo",
+    "city_pl": "Tumeremo",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "VLN",
+    "name": "Arturo Michelena International Airport",
+    "city_en": "Valencia",
+    "city_pl": "Valencia",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "VLV",
+    "name": "Dr. Antonio Nicolás Briceño Airport",
+    "city_en": "Valera",
+    "city_pl": "Valera",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "VDP",
+    "name": "Valle de La Pascua Airport",
+    "city_en": "Valle De La Pascua",
+    "city_pl": "Valle De La Pascua",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "LTM",
+    "name": "Lethem Airport",
+    "city_en": "Lethem",
+    "city_pl": "Lethem",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "ANU",
+    "name": "V.C. Bird International Airport",
+    "city_en": "Antigua",
+    "city_pl": "Antigua",
+    "country_en": "Antigua and Barbuda"
+  },
+  {
+    "code": "BGI",
+    "name": "Sir Grantley Adams International Airport",
+    "city_en": "Bridgetown",
+    "city_pl": "Bridgetown",
+    "country_en": "Barbados"
+  },
+  {
+    "code": "DCF",
+    "name": "Canefield Airport",
+    "city_en": "Canefield",
+    "city_pl": "Canefield",
+    "country_en": "Dominica"
+  },
+  {
+    "code": "DOM",
+    "name": "Douglas-Charles Airport",
+    "city_en": "Dominica",
+    "city_pl": "Dominica",
+    "country_en": "Dominica"
+  },
+  {
+    "code": "FDF",
+    "name": "Martinique Aimé Césaire International Airport",
+    "city_en": "Fort-de-france",
+    "city_pl": "Fort-de-france",
+    "country_en": "Martinique"
+  },
+  {
+    "code": "SFG",
+    "name": "L'Espérance Airport",
+    "city_en": "St. Martin",
+    "city_pl": "St. Martin",
+    "country_en": "Guadeloupe"
+  },
+  {
+    "code": "PTP",
+    "name": "Pointe-à-Pitre Le Raizet",
+    "city_en": "Pointe-a-pitre",
+    "city_pl": "Pointe-a-pitre",
+    "country_en": "Guadeloupe"
+  },
+  {
+    "code": "GND",
+    "name": "Point Salines International Airport",
+    "city_en": "Point Salines",
+    "city_pl": "Point Salines",
+    "country_en": "Grenada"
+  },
+  {
+    "code": "STT",
+    "name": "Cyril E. King Airport",
+    "city_en": "St. Thomas",
+    "city_pl": "St. Thomas",
+    "country_en": "Virgin Islands"
+  },
+  {
+    "code": "STX",
+    "name": "Henry E Rohlsen Airport",
+    "city_en": "St. Croix Island",
+    "city_pl": "St. Croix Island",
+    "country_en": "Virgin Islands"
+  },
+  {
+    "code": "BQN",
+    "name": "Rafael Hernandez Airport",
+    "city_en": "Aguadilla",
+    "city_pl": "Aguadilla",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "FAJ",
+    "name": "Diego Jimenez Torres Airport",
+    "city_en": "Fajardo",
+    "city_pl": "Fajardo",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "SIG",
+    "name": "Fernando Luis Ribas Dominicci Airport",
+    "city_en": "San Juan",
+    "city_pl": "San Juan",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "MAZ",
+    "name": "Eugenio Maria De Hostos Airport",
+    "city_en": "Mayaguez",
+    "city_pl": "Mayaguez",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "PSE",
+    "name": "Mercedita Airport",
+    "city_en": "Ponce",
+    "city_pl": "Ponce",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "SJU",
+    "name": "Luis Munoz Marin International Airport",
+    "city_en": "San Juan",
+    "city_pl": "San Juan",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "SKB",
+    "name": "Robert L. Bradshaw International Airport",
+    "city_en": "Basse Terre",
+    "city_pl": "Basse Terre",
+    "country_en": "Saint Kitts and Nevis"
+  },
+  {
+    "code": "SLU",
+    "name": "George F. L. Charles Airport",
+    "city_en": "Castries",
+    "city_pl": "Castries",
+    "country_en": "Saint Lucia"
+  },
+  {
+    "code": "UVF",
+    "name": "Hewanorra International Airport",
+    "city_en": "Hewandorra",
+    "city_pl": "Hewandorra",
+    "country_en": "Saint Lucia"
+  },
+  {
+    "code": "AUA",
+    "name": "Queen Beatrix International Airport",
+    "city_en": "Oranjestad",
+    "city_pl": "Oranjestad",
+    "country_en": "Aruba"
+  },
+  {
+    "code": "BON",
+    "name": "Flamingo International Airport",
+    "city_en": "Kralendijk",
+    "city_pl": "Kralendijk",
+    "country_en": "Netherlands Antilles"
+  },
+  {
+    "code": "CUR",
+    "name": "Hato International Airport",
+    "city_en": "Willemstad",
+    "city_pl": "Willemstad",
+    "country_en": "Netherlands Antilles"
+  },
+  {
+    "code": "EUX",
+    "name": "F. D. Roosevelt Airport",
+    "city_en": "Oranjestad",
+    "city_pl": "Oranjestad",
+    "country_en": "Netherlands Antilles"
+  },
+  {
+    "code": "SXM",
+    "name": "Princess Juliana International Airport",
+    "city_en": "Philipsburg",
+    "city_pl": "Philipsburg",
+    "country_en": "Netherlands Antilles"
+  },
+  {
+    "code": "AXA",
+    "name": "Clayton J Lloyd International Airport",
+    "city_en": "The Valley",
+    "city_pl": "The Valley",
+    "country_en": "Anguilla"
+  },
+  {
+    "code": "TAB",
+    "name": "Tobago-Crown Point Airport",
+    "city_en": "Scarborough",
+    "city_pl": "Scarborough",
+    "country_en": "Trinidad and Tobago"
+  },
+  {
+    "code": "POS",
+    "name": "Piarco International Airport",
+    "city_en": "Port-of-spain",
+    "city_pl": "Port-of-spain",
+    "country_en": "Trinidad and Tobago"
+  },
+  {
+    "code": "EIS",
+    "name": "Terrance B. Lettsome International Airport",
+    "city_en": "Tortola",
+    "city_pl": "Tortola",
+    "country_en": "British Virgin Islands"
+  },
+  {
+    "code": "CIW",
+    "name": "Canouan Airport",
+    "city_en": "Canouan Island",
+    "city_pl": "Canouan Island",
+    "country_en": "Saint Vincent and the Grenadines"
+  },
+  {
+    "code": "MQS",
+    "name": "Mustique Airport",
+    "city_en": "Mustique",
+    "city_pl": "Mustique",
+    "country_en": "Saint Vincent and the Grenadines"
+  },
+  {
+    "code": "SVD",
+    "name": "Argyle International Airport",
+    "city_en": "Kingstown",
+    "city_pl": "Kingstown",
+    "country_en": "Saint Vincent and the Grenadines"
+  },
+  {
+    "code": "ALA",
+    "name": "Almaty Airport",
+    "city_en": "Alma-ata",
+    "city_pl": "Alma-ata",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "BXH",
+    "name": "Balkhash Airport",
+    "city_en": "Balkhash",
+    "city_pl": "Balkhash",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "TSE",
+    "name": "Astana International Airport",
+    "city_en": "Tselinograd",
+    "city_pl": "Tselinograd",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "DMB",
+    "name": "Taraz Airport",
+    "city_en": "Dzhambul",
+    "city_pl": "Dzhambul",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "FRU",
+    "name": "Manas International Airport",
+    "city_en": "Bishkek",
+    "city_pl": "Bishkek",
+    "country_en": "Kyrgyzstan"
+  },
+  {
+    "code": "OSS",
+    "name": "Osh Airport",
+    "city_en": "Osh",
+    "city_pl": "Osh",
+    "country_en": "Kyrgyzstan"
+  },
+  {
+    "code": "CIT",
+    "name": "Shymkent Airport",
+    "city_en": "Chimkent",
+    "city_pl": "Chimkent",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "URA",
+    "name": "Uralsk Airport",
+    "city_en": "Uralsk",
+    "city_pl": "Uralsk",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "PWQ",
+    "name": "Pavlodar Airport",
+    "city_en": "Pavlodar",
+    "city_pl": "Pavlodar",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "PLX",
+    "name": "Semipalatinsk Airport",
+    "city_en": "Semiplatinsk",
+    "city_pl": "Semiplatinsk",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "AKX",
+    "name": "Aktobe Airport",
+    "city_en": "Aktyubinsk",
+    "city_pl": "Aktyubinsk",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "GYD",
+    "name": "Heydar Aliyev International Airport",
+    "city_en": "Baku",
+    "city_pl": "Baku",
+    "country_en": "Azerbaijan"
+  },
+  {
+    "code": "YKS",
+    "name": "Yakutsk Airport",
+    "city_en": "Yakutsk",
+    "city_pl": "Yakutsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "MJZ",
+    "name": "Mirny Airport",
+    "city_en": "Mirnyj",
+    "city_pl": "Mirnyj",
+    "country_en": "Russia"
+  },
+  {
+    "code": "BQS",
+    "name": "Ignatyevo Airport",
+    "city_en": "Blagoveschensk",
+    "city_pl": "Blagoveschensk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KHV",
+    "name": "Khabarovsk-Novy Airport",
+    "city_en": "Khabarovsk",
+    "city_pl": "Khabarovsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PVS",
+    "name": "Provideniya Bay Airport",
+    "city_en": "Provideniya Bay",
+    "city_pl": "Provideniya Bay",
+    "country_en": "Russia"
+  },
+  {
+    "code": "GDX",
+    "name": "Sokol Airport",
+    "city_en": "Magadan",
+    "city_pl": "Magadan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PWE",
+    "name": "Pevek Airport",
+    "city_en": "Pevek",
+    "city_pl": "Pevek",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PKC",
+    "name": "Yelizovo Airport",
+    "city_en": "Petropavlovsk",
+    "city_pl": "Petropavlovsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "UUS",
+    "name": "Yuzhno-Sakhalinsk Airport",
+    "city_en": "Yuzhno-sakhalinsk",
+    "city_pl": "Yuzhno-sakhalinsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "VVO",
+    "name": "Vladivostok International Airport",
+    "city_en": "Vladivostok",
+    "city_pl": "Vladivostok",
+    "country_en": "Russia"
+  },
+  {
+    "code": "HTA",
+    "name": "Chita-Kadala Airport",
+    "city_en": "Chita",
+    "city_pl": "Chita",
+    "country_en": "Russia"
+  },
+  {
+    "code": "BTK",
+    "name": "Bratsk Airport",
+    "city_en": "Bratsk",
+    "city_pl": "Bratsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "IKT",
+    "name": "Irkutsk Airport",
+    "city_en": "Irkutsk",
+    "city_pl": "Irkutsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "UUD",
+    "name": "Ulan-Ude Airport (Mukhino)",
+    "city_en": "Ulan-ude",
+    "city_pl": "Ulan-ude",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KBP",
+    "name": "Boryspil International Airport",
+    "city_en": "Kiev",
+    "city_pl": "Kiev",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "DOK",
+    "name": "Donetsk International Airport",
+    "city_en": "Donetsk",
+    "city_pl": "Donetsk",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "DNK",
+    "name": "Dnipropetrovsk International Airport",
+    "city_en": "Dnepropetrovsk",
+    "city_pl": "Dnepropetrovsk",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "SIP",
+    "name": "Simferopol International Airport",
+    "city_en": "Simferopol",
+    "city_pl": "Simferopol",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "IEV",
+    "name": "Kiev Zhuliany International Airport",
+    "city_en": "Kiev",
+    "city_pl": "Kiev",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "LWO",
+    "name": "Lviv International Airport",
+    "city_en": "Lvov",
+    "city_pl": "Lvov",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "ODS",
+    "name": "Odessa International Airport",
+    "city_en": "Odessa",
+    "city_pl": "Odessa",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "LED",
+    "name": "Pulkovo Airport",
+    "city_en": "St. Petersburg",
+    "city_pl": "St. Petersburg",
+    "country_en": "Russia"
+  },
+  {
+    "code": "MMK",
+    "name": "Murmansk Airport",
+    "city_en": "Murmansk",
+    "city_pl": "Murmansk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "GME",
+    "name": "Gomel Airport",
+    "city_en": "Gomel",
+    "city_pl": "Gomel",
+    "country_en": "Belarus"
+  },
+  {
+    "code": "VTB",
+    "name": "Vitebsk Vostochny Airport",
+    "city_en": "Vitebsk",
+    "city_pl": "Vitebsk",
+    "country_en": "Belarus"
+  },
+  {
+    "code": "KGD",
+    "name": "Khrabrovo Airport",
+    "city_en": "Kaliningrad",
+    "city_pl": "Kaliningrad",
+    "country_en": "Russia"
+  },
+  {
+    "code": "MHP",
+    "name": "Minsk 1 Airport",
+    "city_en": "Minsk",
+    "city_pl": "Minsk",
+    "country_en": "Belarus"
+  },
+  {
+    "code": "MSQ",
+    "name": "Minsk National Airport",
+    "city_en": "Minsk 2",
+    "city_pl": "Minsk 2",
+    "country_en": "Belarus"
+  },
+  {
+    "code": "ABA",
+    "name": "Abakan Airport",
+    "city_en": "Abakan",
+    "city_pl": "Abakan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "BAX",
+    "name": "Barnaul Airport",
+    "city_en": "Barnaul",
+    "city_pl": "Barnaul",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KEJ",
+    "name": "Kemerovo Airport",
+    "city_en": "Kemorovo",
+    "city_pl": "Kemorovo",
+    "country_en": "Russia"
+  },
+  {
+    "code": "OMS",
+    "name": "Omsk Central Airport",
+    "city_en": "Omsk",
+    "city_pl": "Omsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KRR",
+    "name": "Krasnodar Pashkovsky International Airport",
+    "city_en": "Krasnodar",
+    "city_pl": "Krasnodar",
+    "country_en": "Russia"
+  },
+  {
+    "code": "MCX",
+    "name": "Uytash Airport",
+    "city_en": "Makhachkala",
+    "city_pl": "Makhachkala",
+    "country_en": "Russia"
+  },
+  {
+    "code": "MRV",
+    "name": "Mineralnyye Vody Airport",
+    "city_en": "Mineralnye Vody",
+    "city_pl": "Mineralnye Vody",
+    "country_en": "Russia"
+  },
+  {
+    "code": "STW",
+    "name": "Stavropol Shpakovskoye Airport",
+    "city_en": "Stavropol",
+    "city_pl": "Stavropol",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ROV",
+    "name": "Platov International Airport",
+    "city_en": "Rostov",
+    "city_pl": "Rostov",
+    "country_en": "Russia"
+  },
+  {
+    "code": "AER",
+    "name": "Sochi International Airport",
+    "city_en": "Sochi",
+    "city_pl": "Sochi",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ASF",
+    "name": "Astrakhan Airport",
+    "city_en": "Astrakhan",
+    "city_pl": "Astrakhan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "VOG",
+    "name": "Volgograd International Airport",
+    "city_en": "Volgograd",
+    "city_pl": "Volgograd",
+    "country_en": "Russia"
+  },
+  {
+    "code": "CEK",
+    "name": "Chelyabinsk Balandino Airport",
+    "city_en": "Chelyabinsk",
+    "city_pl": "Chelyabinsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "MQF",
+    "name": "Magnitogorsk International Airport",
+    "city_en": "Magnetiogorsk",
+    "city_pl": "Magnetiogorsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NJC",
+    "name": "Nizhnevartovsk Airport",
+    "city_en": "Nizhnevartovsk",
+    "city_pl": "Nizhnevartovsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PEE",
+    "name": "Bolshoye Savino Airport",
+    "city_en": "Perm",
+    "city_pl": "Perm",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SGC",
+    "name": "Surgut Airport",
+    "city_en": "Surgut",
+    "city_pl": "Surgut",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SVX",
+    "name": "Koltsovo Airport",
+    "city_en": "Yekaterinburg",
+    "city_pl": "Yekaterinburg",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ASB",
+    "name": "Ashgabat International Airport",
+    "city_en": "Ashkhabad",
+    "city_pl": "Ashkhabad",
+    "country_en": "Turkmenistan"
+  },
+  {
+    "code": "KRW",
+    "name": "Turkmenbashi Airport",
+    "city_en": "Krasnovodsk",
+    "city_pl": "Krasnovodsk",
+    "country_en": "Turkmenistan"
+  },
+  {
+    "code": "CRZ",
+    "name": "Turkmenabat Airport",
+    "city_en": "Chardzhou",
+    "city_pl": "Chardzhou",
+    "country_en": "Turkmenistan"
+  },
+  {
+    "code": "DYU",
+    "name": "Dushanbe Airport",
+    "city_en": "Dushanbe",
+    "city_pl": "Dushanbe",
+    "country_en": "Tajikistan"
+  },
+  {
+    "code": "BHK",
+    "name": "Bukhara Airport",
+    "city_en": "Bukhara",
+    "city_pl": "Bukhara",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "SKD",
+    "name": "Samarkand Airport",
+    "city_en": "Samarkand",
+    "city_pl": "Samarkand",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "TAS",
+    "name": "Tashkent International Airport",
+    "city_en": "Tashkent",
+    "city_pl": "Tashkent",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "BZK",
+    "name": "Bryansk Airport",
+    "city_en": "Bryansk",
+    "city_pl": "Bryansk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SVO",
+    "name": "Sheremetyevo International Airport",
+    "city_en": "Moscow",
+    "city_pl": "Moscow",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KLD",
+    "name": "Migalovo Air Base",
+    "city_en": "Tver",
+    "city_pl": "Tver",
+    "country_en": "Russia"
+  },
+  {
+    "code": "VOZ",
+    "name": "Voronezh International Airport",
+    "city_en": "Voronezh",
+    "city_pl": "Voronezh",
+    "country_en": "Russia"
+  },
+  {
+    "code": "VKO",
+    "name": "Vnukovo International Airport",
+    "city_en": "Moscow",
+    "city_pl": "Moscow",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SCW",
+    "name": "Syktyvkar Airport",
+    "city_en": "Syktyvkar",
+    "city_pl": "Syktyvkar",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KZN",
+    "name": "Kazan International Airport",
+    "city_en": "Kazan",
+    "city_pl": "Kazan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "REN",
+    "name": "Orenburg Central Airport",
+    "city_en": "Orenburg",
+    "city_pl": "Orenburg",
+    "country_en": "Russia"
+  },
+  {
+    "code": "UFA",
+    "name": "Ufa International Airport",
+    "city_en": "Ufa",
+    "city_pl": "Ufa",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KUF",
+    "name": "Kurumoch International Airport",
+    "city_en": "Samara",
+    "city_pl": "Samara",
+    "country_en": "Russia"
+  },
+  {
+    "code": "AMD",
+    "name": "Sardar Vallabhbhai Patel International Airport",
+    "city_en": "Ahmedabad",
+    "city_pl": "Ahmedabad",
+    "country_en": "India"
+  },
+  {
+    "code": "AKD",
+    "name": "Akola Airport",
+    "city_en": "Akola",
+    "city_pl": "Akola",
+    "country_en": "India"
+  },
+  {
+    "code": "IXU",
+    "name": "Aurangabad Airport",
+    "city_en": "Aurangabad",
+    "city_pl": "Aurangabad",
+    "country_en": "India"
+  },
+  {
+    "code": "BOM",
+    "name": "Chhatrapati Shivaji International Airport",
+    "city_en": "Mumbai",
+    "city_pl": "Mumbai",
+    "country_en": "India"
+  },
+  {
+    "code": "PAB",
+    "name": "Bilaspur Airport",
+    "city_en": "Bilaspur",
+    "city_pl": "Bilaspur",
+    "country_en": "India"
+  },
+  {
+    "code": "BHJ",
+    "name": "Bhuj Airport",
+    "city_en": "Bhuj",
+    "city_pl": "Bhuj",
+    "country_en": "India"
+  },
+  {
+    "code": "IXG",
+    "name": "Belgaum Airport",
+    "city_en": "Belgaum",
+    "city_pl": "Belgaum",
+    "country_en": "India"
+  },
+  {
+    "code": "BDQ",
+    "name": "Vadodara Airport",
+    "city_en": "Baroda",
+    "city_pl": "Baroda",
+    "country_en": "India"
+  },
+  {
+    "code": "BHO",
+    "name": "Raja Bhoj International Airport",
+    "city_en": "Bhopal",
+    "city_pl": "Bhopal",
+    "country_en": "India"
+  },
+  {
+    "code": "BHU",
+    "name": "Bhavnagar Airport",
+    "city_en": "Bhaunagar",
+    "city_pl": "Bhaunagar",
+    "country_en": "India"
+  },
+  {
+    "code": "NMB",
+    "name": "Daman Airport",
+    "city_en": "Daman",
+    "city_pl": "Daman",
+    "country_en": "India"
+  },
+  {
+    "code": "GUX",
+    "name": "Guna Airport",
+    "city_en": "Guna",
+    "city_pl": "Guna",
+    "country_en": "India"
+  },
+  {
+    "code": "GOI",
+    "name": "Dabolim Airport",
+    "city_en": "Goa",
+    "city_pl": "Goa",
+    "country_en": "India"
+  },
+  {
+    "code": "IDR",
+    "name": "Devi Ahilyabai Holkar Airport",
+    "city_en": "Indore",
+    "city_pl": "Indore",
+    "country_en": "India"
+  },
+  {
+    "code": "JLR",
+    "name": "Jabalpur Airport",
+    "city_en": "Jabalpur",
+    "city_pl": "Jabalpur",
+    "country_en": "India"
+  },
+  {
+    "code": "JGA",
+    "name": "Jamnagar Airport",
+    "city_en": "Jamnagar",
+    "city_pl": "Jamnagar",
+    "country_en": "India"
+  },
+  {
+    "code": "IXY",
+    "name": "Kandla Airport",
+    "city_en": "Kandla",
+    "city_pl": "Kandla",
+    "country_en": "India"
+  },
+  {
+    "code": "HJR",
+    "name": "Khajuraho Airport",
+    "city_en": "Khajuraho",
+    "city_pl": "Khajuraho",
+    "country_en": "India"
+  },
+  {
+    "code": "KLH",
+    "name": "Kolhapur Airport",
+    "city_en": "Kolhapur",
+    "city_pl": "Kolhapur",
+    "country_en": "India"
+  },
+  {
+    "code": "IXK",
+    "name": "Keshod Airport",
+    "city_en": "Keshod",
+    "city_pl": "Keshod",
+    "country_en": "India"
+  },
+  {
+    "code": "NAG",
+    "name": "Dr. Babasaheb Ambedkar International Airport",
+    "city_en": "Nagpur",
+    "city_pl": "Nagpur",
+    "country_en": "India"
+  },
+  {
+    "code": "ISK",
+    "name": "Nashik Airport",
+    "city_en": "Nasik Road",
+    "city_pl": "Nasik Road",
+    "country_en": "India"
+  },
+  {
+    "code": "PNQ",
+    "name": "Pune Airport",
+    "city_en": "Pune",
+    "city_pl": "Pune",
+    "country_en": "India"
+  },
+  {
+    "code": "PBD",
+    "name": "Porbandar Airport",
+    "city_en": "Porbandar",
+    "city_pl": "Porbandar",
+    "country_en": "India"
+  },
+  {
+    "code": "RAJ",
+    "name": "Rajkot Airport",
+    "city_en": "Rajkot",
+    "city_pl": "Rajkot",
+    "country_en": "India"
+  },
+  {
+    "code": "RPR",
+    "name": "Raipur Airport",
+    "city_en": "Raipur",
+    "city_pl": "Raipur",
+    "country_en": "India"
+  },
+  {
+    "code": "SSE",
+    "name": "Solapur Airport",
+    "city_en": "Sholapur",
+    "city_pl": "Sholapur",
+    "country_en": "India"
+  },
+  {
+    "code": "STV",
+    "name": "Surat Airport",
+    "city_en": "Surat",
+    "city_pl": "Surat",
+    "country_en": "India"
+  },
+  {
+    "code": "UDR",
+    "name": "Maharana Pratap Airport",
+    "city_en": "Udaipur",
+    "city_pl": "Udaipur",
+    "country_en": "India"
+  },
+  {
+    "code": "CMB",
+    "name": "Bandaranaike International Colombo Airport",
+    "city_en": "Colombo",
+    "city_pl": "Colombo",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "ACJ",
+    "name": "Anuradhapura Air Force Base",
+    "city_en": "Anuradhapura",
+    "city_pl": "Anuradhapura",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "BTC",
+    "name": "Batticaloa Airport",
+    "city_en": "Batticaloa",
+    "city_pl": "Batticaloa",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "RML",
+    "name": "Colombo Ratmalana Airport",
+    "city_en": "Colombo",
+    "city_pl": "Colombo",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "ADP",
+    "name": "Ampara Airport",
+    "city_en": "Galoya",
+    "city_pl": "Galoya",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "JAF",
+    "name": "Kankesanturai Airport",
+    "city_en": "Jaffna",
+    "city_pl": "Jaffna",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "TRR",
+    "name": "China Bay Airport",
+    "city_en": "Trinciomalee",
+    "city_pl": "Trinciomalee",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "KZC",
+    "name": "Kampong Chhnang Airport",
+    "city_en": "Kompong Chnang",
+    "city_pl": "Kompong Chnang",
+    "country_en": "Cambodia"
+  },
+  {
+    "code": "PNH",
+    "name": "Phnom Penh International Airport",
+    "city_en": "Phnom-penh",
+    "city_pl": "Phnom-penh",
+    "country_en": "Cambodia"
+  },
+  {
+    "code": "REP",
+    "name": "Siem Reap International Airport",
+    "city_en": "Siem-reap",
+    "city_pl": "Siem-reap",
+    "country_en": "Cambodia"
+  },
+  {
+    "code": "TNX",
+    "name": "Stung Treng Airport",
+    "city_en": "Stung Treng",
+    "city_pl": "Stung Treng",
+    "country_en": "Cambodia"
+  },
+  {
+    "code": "IXV",
+    "name": "Along Airport",
+    "city_en": "Along",
+    "city_pl": "Along",
+    "country_en": "India"
+  },
+  {
+    "code": "IXA",
+    "name": "Agartala Airport",
+    "city_en": "Agartala",
+    "city_pl": "Agartala",
+    "country_en": "India"
+  },
+  {
+    "code": "AJL",
+    "name": "Lengpui Airport",
+    "city_en": "Aizwal",
+    "city_pl": "Aizwal",
+    "country_en": "India"
+  },
+  {
+    "code": "IXB",
+    "name": "Bagdogra Airport",
+    "city_en": "Baghdogra",
+    "city_pl": "Baghdogra",
+    "country_en": "India"
+  },
+  {
+    "code": "BBI",
+    "name": "Biju Patnaik Airport",
+    "city_en": "Bhubaneswar",
+    "city_pl": "Bhubaneswar",
+    "country_en": "India"
+  },
+  {
+    "code": "CCU",
+    "name": "Netaji Subhash Chandra Bose International Airport",
+    "city_en": "Kolkata",
+    "city_pl": "Kolkata",
+    "country_en": "India"
+  },
+  {
+    "code": "COH",
+    "name": "Cooch Behar Airport",
+    "city_en": "Cooch-behar",
+    "city_pl": "Cooch-behar",
+    "country_en": "India"
+  },
+  {
+    "code": "DBD",
+    "name": "Dhanbad Airport",
+    "city_en": "Dhanbad",
+    "city_pl": "Dhanbad",
+    "country_en": "India"
+  },
+  {
+    "code": "GAY",
+    "name": "Gaya Airport",
+    "city_en": "Gaya",
+    "city_pl": "Gaya",
+    "country_en": "India"
+  },
+  {
+    "code": "IMF",
+    "name": "Imphal Airport",
+    "city_en": "Imphal",
+    "city_pl": "Imphal",
+    "country_en": "India"
+  },
+  {
+    "code": "IXW",
+    "name": "Sonari Airport",
+    "city_en": "Jamshedpur",
+    "city_pl": "Jamshedpur",
+    "country_en": "India"
+  },
+  {
+    "code": "JRH",
+    "name": "Jorhat Airport",
+    "city_en": "Jorhat",
+    "city_pl": "Jorhat",
+    "country_en": "India"
+  },
+  {
+    "code": "IXH",
+    "name": "Kailashahar Airport",
+    "city_en": "Kailashahar",
+    "city_pl": "Kailashahar",
+    "country_en": "India"
+  },
+  {
+    "code": "IXS",
+    "name": "Silchar Airport",
+    "city_en": "Silchar",
+    "city_pl": "Silchar",
+    "country_en": "India"
+  },
+  {
+    "code": "IXI",
+    "name": "North Lakhimpur Airport",
+    "city_en": "Lilabari",
+    "city_pl": "Lilabari",
+    "country_en": "India"
+  },
+  {
+    "code": "DIB",
+    "name": "Dibrugarh Airport",
+    "city_en": "Mohanbari",
+    "city_pl": "Mohanbari",
+    "country_en": "India"
+  },
+  {
+    "code": "MZU",
+    "name": "Muzaffarpur Airport",
+    "city_en": "Mazuffarpur",
+    "city_pl": "Mazuffarpur",
+    "country_en": "India"
+  },
+  {
+    "code": "PAT",
+    "name": "Lok Nayak Jayaprakash Airport",
+    "city_en": "Patina",
+    "city_pl": "Patina",
+    "country_en": "India"
+  },
+  {
+    "code": "IXR",
+    "name": "Birsa Munda Airport",
+    "city_en": "Ranchi",
+    "city_pl": "Ranchi",
+    "country_en": "India"
+  },
+  {
+    "code": "RRK",
+    "name": "Rourkela Airport",
+    "city_en": "Rourkela",
+    "city_pl": "Rourkela",
+    "country_en": "India"
+  },
+  {
+    "code": "VTZ",
+    "name": "Vishakhapatnam Airport",
+    "city_en": "Vishakhapatnam",
+    "city_pl": "Vishakhapatnam",
+    "country_en": "India"
+  },
+  {
+    "code": "ZER",
+    "name": "Ziro Airport",
+    "city_en": "Zero",
+    "city_pl": "Zero",
+    "country_en": "India"
+  },
+  {
+    "code": "CXB",
+    "name": "Cox's Bazar Airport",
+    "city_en": "Cox's Bazar",
+    "city_pl": "Cox's Bazar",
+    "country_en": "Bangladesh"
+  },
+  {
+    "code": "CGP",
+    "name": "Shah Amanat International Airport",
+    "city_en": "Chittagong",
+    "city_pl": "Chittagong",
+    "country_en": "Bangladesh"
+  },
+  {
+    "code": "IRD",
+    "name": "Ishurdi Airport",
+    "city_en": "Ishurdi",
+    "city_pl": "Ishurdi",
+    "country_en": "Bangladesh"
+  },
+  {
+    "code": "JSR",
+    "name": "Jessore Airport",
+    "city_en": "Jessore",
+    "city_pl": "Jessore",
+    "country_en": "Bangladesh"
+  },
+  {
+    "code": "RJH",
+    "name": "Shah Mokhdum Airport",
+    "city_en": "Rajshahi",
+    "city_pl": "Rajshahi",
+    "country_en": "Bangladesh"
+  },
+  {
+    "code": "SPD",
+    "name": "Saidpur Airport",
+    "city_en": "Saidpur",
+    "city_pl": "Saidpur",
+    "country_en": "Bangladesh"
+  },
+  {
+    "code": "ZYL",
+    "name": "Osmany International Airport",
+    "city_en": "Sylhet Osmani",
+    "city_pl": "Sylhet Osmani",
+    "country_en": "Bangladesh"
+  },
+  {
+    "code": "DAC",
+    "name": "Hazrat Shahjalal International Airport",
+    "city_en": "Dhaka",
+    "city_pl": "Dhaka",
+    "country_en": "Bangladesh"
+  },
+  {
+    "code": "HKG",
+    "name": "Hong Kong International Airport",
+    "city_en": "Hong Kong",
+    "city_pl": "Hongkong",
+    "country_en": "Hong Kong"
+  },
+  {
+    "code": "AGR",
+    "name": "Agra Airport",
+    "city_en": "Agra",
+    "city_pl": "Agra",
+    "country_en": "India"
+  },
+  {
+    "code": "IXD",
+    "name": "Allahabad Airport",
+    "city_en": "Allahabad",
+    "city_pl": "Allahabad",
+    "country_en": "India"
+  },
+  {
+    "code": "ATQ",
+    "name": "Sri Guru Ram Dass Jee International Airport",
+    "city_en": "Amritsar",
+    "city_pl": "Amritsar",
+    "country_en": "India"
+  },
+  {
+    "code": "BKB",
+    "name": "Nal Airport",
+    "city_en": "Bikaner",
+    "city_pl": "Bikaner",
+    "country_en": "India"
+  },
+  {
+    "code": "VNS",
+    "name": "Lal Bahadur Shastri Airport",
+    "city_en": "Varanasi",
+    "city_pl": "Varanasi",
+    "country_en": "India"
+  },
+  {
+    "code": "KUU",
+    "name": "Kullu Manali Airport",
+    "city_en": "Kulu",
+    "city_pl": "Kulu",
+    "country_en": "India"
+  },
+  {
+    "code": "BUP",
+    "name": "Bhatinda Air Force Station",
+    "city_en": "Bhatinda",
+    "city_pl": "Bhatinda",
+    "country_en": "India"
+  },
+  {
+    "code": "BEK",
+    "name": "Bareilly Air Force Station",
+    "city_en": "Bareilly",
+    "city_pl": "Bareilly",
+    "country_en": "India"
+  },
+  {
+    "code": "IXC",
+    "name": "Chandigarh Airport",
+    "city_en": "Chandigarh",
+    "city_pl": "Chandigarh",
+    "country_en": "India"
+  },
+  {
+    "code": "KNU",
+    "name": "Kanpur Airport",
+    "city_en": "Kanpur",
+    "city_pl": "Kanpur",
+    "country_en": "India"
+  },
+  {
+    "code": "DED",
+    "name": "Dehradun Airport",
+    "city_en": "Dehra Dun",
+    "city_pl": "Dehra Dun",
+    "country_en": "India"
+  },
+  {
+    "code": "DEL",
+    "name": "Indira Gandhi International Airport",
+    "city_en": "Delhi",
+    "city_pl": "Delhi",
+    "country_en": "India"
+  },
+  {
+    "code": "GWL",
+    "name": "Gwalior Airport",
+    "city_en": "Gwalior",
+    "city_pl": "Gwalior",
+    "country_en": "India"
+  },
+  {
+    "code": "HSS",
+    "name": "Hissar Airport",
+    "city_en": "Hissar",
+    "city_pl": "Hissar",
+    "country_en": "India"
+  },
+  {
+    "code": "JDH",
+    "name": "Jodhpur Airport",
+    "city_en": "Jodhpur",
+    "city_pl": "Jodhpur",
+    "country_en": "India"
+  },
+  {
+    "code": "JAI",
+    "name": "Jaipur International Airport",
+    "city_en": "Jaipur",
+    "city_pl": "Jaipur",
+    "country_en": "India"
+  },
+  {
+    "code": "JSA",
+    "name": "Jaisalmer Airport",
+    "city_en": "Jaisalmer",
+    "city_pl": "Jaisalmer",
+    "country_en": "India"
+  },
+  {
+    "code": "IXJ",
+    "name": "Jammu Airport",
+    "city_en": "Jammu",
+    "city_pl": "Jammu",
+    "country_en": "India"
+  },
+  {
+    "code": "KTU",
+    "name": "Kota Airport",
+    "city_en": "Kota",
+    "city_pl": "Kota",
+    "country_en": "India"
+  },
+  {
+    "code": "LUH",
+    "name": "Ludhiana Airport",
+    "city_en": "Ludhiaha",
+    "city_pl": "Ludhiaha",
+    "country_en": "India"
+  },
+  {
+    "code": "IXL",
+    "name": "Leh Kushok Bakula Rimpochee Airport",
+    "city_en": "Leh",
+    "city_pl": "Leh",
+    "country_en": "India"
+  },
+  {
+    "code": "LKO",
+    "name": "Chaudhary Charan Singh International Airport",
+    "city_en": "Lucknow",
+    "city_pl": "Lucknow",
+    "country_en": "India"
+  },
+  {
+    "code": "IXP",
+    "name": "Pathankot Airport",
+    "city_en": "Pathankot",
+    "city_pl": "Pathankot",
+    "country_en": "India"
+  },
+  {
+    "code": "PGH",
+    "name": "Pantnagar Airport",
+    "city_en": "Nainital",
+    "city_pl": "Nainital",
+    "country_en": "India"
+  },
+  {
+    "code": "SXR",
+    "name": "Sheikh ul Alam Airport",
+    "city_en": "Srinagar",
+    "city_pl": "Srinagar",
+    "country_en": "India"
+  },
+  {
+    "code": "TNI",
+    "name": "Satna Airport",
+    "city_en": "Satna",
+    "city_pl": "Satna",
+    "country_en": "India"
+  },
+  {
+    "code": "LPQ",
+    "name": "Luang Phabang International Airport",
+    "city_en": "Luang Prabang",
+    "city_pl": "Luang Prabang",
+    "country_en": "Laos"
+  },
+  {
+    "code": "PKZ",
+    "name": "Pakse International Airport",
+    "city_en": "Pakse",
+    "city_pl": "Pakse",
+    "country_en": "Laos"
+  },
+  {
+    "code": "ZVK",
+    "name": "Savannakhet Airport",
+    "city_en": "Savannakhet",
+    "city_pl": "Savannakhet",
+    "country_en": "Laos"
+  },
+  {
+    "code": "NEU",
+    "name": "Sam Neua Airport",
+    "city_en": "Sam Neua",
+    "city_pl": "Sam Neua",
+    "country_en": "Laos"
+  },
+  {
+    "code": "VTE",
+    "name": "Wattay International Airport",
+    "city_en": "Vientiane",
+    "city_pl": "Vientiane",
+    "country_en": "Laos"
+  },
+  {
+    "code": "MFM",
+    "name": "Macau International Airport",
+    "city_en": "Macau",
+    "city_pl": "Macau",
+    "country_en": "Macau"
+  },
+  {
+    "code": "BWA",
+    "name": "Gautam Buddha Airport",
+    "city_en": "Bhairawa",
+    "city_pl": "Bhairawa",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "JKR",
+    "name": "Janakpur Airport",
+    "city_en": "Janakpur",
+    "city_pl": "Janakpur",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "KTM",
+    "name": "Tribhuvan International Airport",
+    "city_en": "Kathmandu",
+    "city_pl": "Kathmandu",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "PKR",
+    "name": "Pokhara Airport",
+    "city_en": "Pokhara",
+    "city_pl": "Pokhara",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "SIF",
+    "name": "Simara Airport",
+    "city_en": "Simara",
+    "city_pl": "Simara",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "BIR",
+    "name": "Biratnagar Airport",
+    "city_en": "Biratnagar",
+    "city_pl": "Biratnagar",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "AGX",
+    "name": "Agatti Airport",
+    "city_en": "Agatti Island",
+    "city_pl": "Agatti Island",
+    "country_en": "India"
+  },
+  {
+    "code": "BLR",
+    "name": "Kempegowda International Airport",
+    "city_en": "Bangalore",
+    "city_pl": "Bangalore",
+    "country_en": "India"
+  },
+  {
+    "code": "BEP",
+    "name": "Bellary Airport",
+    "city_en": "Bellary",
+    "city_pl": "Bellary",
+    "country_en": "India"
+  },
+  {
+    "code": "VGA",
+    "name": "Vijayawada Airport",
+    "city_en": "Vijayawada",
+    "city_pl": "Vijayawada",
+    "country_en": "India"
+  },
+  {
+    "code": "CJB",
+    "name": "Coimbatore International Airport",
+    "city_en": "Coimbatore",
+    "city_pl": "Coimbatore",
+    "country_en": "India"
+  },
+  {
+    "code": "COK",
+    "name": "Cochin International Airport",
+    "city_en": "Kochi",
+    "city_pl": "Kochi",
+    "country_en": "India"
+  },
+  {
+    "code": "CCJ",
+    "name": "Calicut International Airport",
+    "city_en": "Calicut",
+    "city_pl": "Calicut",
+    "country_en": "India"
+  },
+  {
+    "code": "CDP",
+    "name": "Kadapa Airport",
+    "city_en": "Cuddapah",
+    "city_pl": "Cuddapah",
+    "country_en": "India"
+  },
+  {
+    "code": "CBD",
+    "name": "Car Nicobar Air Force Station",
+    "city_en": "Carnicobar",
+    "city_pl": "Carnicobar",
+    "country_en": "India"
+  },
+  {
+    "code": "BPM",
+    "name": "Begumpet Airport",
+    "city_en": "Hyderabad",
+    "city_pl": "Hyderabad",
+    "country_en": "India"
+  },
+  {
+    "code": "IXM",
+    "name": "Madurai Airport",
+    "city_en": "Madurai",
+    "city_pl": "Madurai",
+    "country_en": "India"
+  },
+  {
+    "code": "IXE",
+    "name": "Mangalore International Airport",
+    "city_en": "Mangalore",
+    "city_pl": "Mangalore",
+    "country_en": "India"
+  },
+  {
+    "code": "MAA",
+    "name": "Chennai International Airport",
+    "city_en": "Madras",
+    "city_pl": "Madras",
+    "country_en": "India"
+  },
+  {
+    "code": "IXZ",
+    "name": "Vir Savarkar International Airport",
+    "city_en": "Port Blair",
+    "city_pl": "Port Blair",
+    "country_en": "India"
+  },
+  {
+    "code": "PNY",
+    "name": "Pondicherry Airport",
+    "city_en": "Pendicherry",
+    "city_pl": "Pendicherry",
+    "country_en": "India"
+  },
+  {
+    "code": "RJA",
+    "name": "Rajahmundry Airport",
+    "city_en": "Rajahmundry",
+    "city_pl": "Rajahmundry",
+    "country_en": "India"
+  },
+  {
+    "code": "SXV",
+    "name": "Salem Airport",
+    "city_en": "Salem",
+    "city_pl": "Salem",
+    "country_en": "India"
+  },
+  {
+    "code": "TJV",
+    "name": "Tanjore Air Force Base",
+    "city_en": "Tanjore",
+    "city_pl": "Tanjore",
+    "country_en": "India"
+  },
+  {
+    "code": "TIR",
+    "name": "Tirupati Airport",
+    "city_en": "Tirupeti",
+    "city_pl": "Tirupeti",
+    "country_en": "India"
+  },
+  {
+    "code": "TRZ",
+    "name": "Tiruchirapally Civil Airport Airport",
+    "city_en": "Tiruchirappalli",
+    "city_pl": "Tiruchirappalli",
+    "country_en": "India"
+  },
+  {
+    "code": "TRV",
+    "name": "Trivandrum International Airport",
+    "city_en": "Trivandrum",
+    "city_pl": "Trivandrum",
+    "country_en": "India"
+  },
+  {
+    "code": "PBH",
+    "name": "Paro Airport",
+    "city_en": "Thimphu",
+    "city_pl": "Thimphu",
+    "country_en": "Bhutan"
+  },
+  {
+    "code": "MLE",
+    "name": "Malé International Airport",
+    "city_en": "Male",
+    "city_pl": "Male",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "DMK",
+    "name": "Don Mueang International Airport",
+    "city_en": "Bangkok",
+    "city_pl": "Bangkok",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "KDT",
+    "name": "Kamphaeng Saen Airport",
+    "city_en": "Nakhon Pathom",
+    "city_pl": "Nakhon Pathom",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "UTP",
+    "name": "U-Tapao International Airport",
+    "city_en": "Pattaya",
+    "city_pl": "Pattaya",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "LPT",
+    "name": "Lampang Airport",
+    "city_en": "Lampang",
+    "city_pl": "Lampang",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "PRH",
+    "name": "Phrae Airport",
+    "city_en": "Phrae",
+    "city_pl": "Phrae",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "HHQ",
+    "name": "Hua Hin Airport",
+    "city_en": "Prachuap Khiri Khan",
+    "city_pl": "Prachuap Khiri Khan",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "TKH",
+    "name": "Takhli Airport",
+    "city_en": "Nakhon Sawan",
+    "city_pl": "Nakhon Sawan",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "PHS",
+    "name": "Phitsanulok Airport",
+    "city_en": "Phitsanulok",
+    "city_pl": "Phitsanulok",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "NAW",
+    "name": "Narathiwat Airport",
+    "city_en": "Narathiwat",
+    "city_pl": "Narathiwat",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "KBV",
+    "name": "Krabi Airport",
+    "city_en": "Krabi",
+    "city_pl": "Krabi",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "SGZ",
+    "name": "Songkhla Airport",
+    "city_en": "Songkhla",
+    "city_pl": "Songkhla",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "PAN",
+    "name": "Pattani Airport",
+    "city_en": "Pattani",
+    "city_pl": "Pattani",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "USM",
+    "name": "Samui Airport",
+    "city_en": "Ko Samui",
+    "city_pl": "Ko Samui",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "HKT",
+    "name": "Phuket International Airport",
+    "city_en": "Phuket",
+    "city_pl": "Phuket",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "UNN",
+    "name": "Ranong Airport",
+    "city_en": "Ranong",
+    "city_pl": "Ranong",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "HDY",
+    "name": "Hat Yai International Airport",
+    "city_en": "Hat Yai",
+    "city_pl": "Hat Yai",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "TST",
+    "name": "Trang Airport",
+    "city_en": "Trang",
+    "city_pl": "Trang",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "UTH",
+    "name": "Udon Thani Airport",
+    "city_en": "Udon Thani",
+    "city_pl": "Udon Thani",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "SNO",
+    "name": "Sakon Nakhon Airport",
+    "city_en": "Sakon Nakhon",
+    "city_pl": "Sakon Nakhon",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "PXR",
+    "name": "Surin Airport",
+    "city_en": "Surin",
+    "city_pl": "Surin",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "LOE",
+    "name": "Loei Airport",
+    "city_en": "Loei",
+    "city_pl": "Loei",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "DAD",
+    "name": "Da Nang International Airport",
+    "city_en": "Danang",
+    "city_pl": "Danang",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "HAN",
+    "name": "Noi Bai International Airport",
+    "city_en": "Hanoi",
+    "city_pl": "Hanoi",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "NHA",
+    "name": "Nha Trang Air Base",
+    "city_en": "Nhatrang",
+    "city_pl": "Nhatrang",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "HUI",
+    "name": "Phu Bai Airport",
+    "city_en": "Hue",
+    "city_pl": "Hue",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "PQC",
+    "name": "Phu Quoc International Airport",
+    "city_en": "Phuquoc",
+    "city_pl": "Phuquoc",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "SGN",
+    "name": "Tan Son Nhat International Airport",
+    "city_en": "Ho Chi Minh City",
+    "city_pl": "Ho Chi Minh City",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "VBA",
+    "name": "Ann Airport",
+    "city_en": "Ann",
+    "city_pl": "Ann",
+    "country_en": "Burma"
+  },
+  {
+    "code": "NYU",
+    "name": "Bagan Airport",
+    "city_en": "Bagan",
+    "city_pl": "Bagan",
+    "country_en": "Burma"
+  },
+  {
+    "code": "HEH",
+    "name": "Heho Airport",
+    "city_en": "Heho",
+    "city_pl": "Heho",
+    "country_en": "Burma"
+  },
+  {
+    "code": "HOX",
+    "name": "Hommalinn Airport",
+    "city_en": "Hommalin",
+    "city_pl": "Hommalin",
+    "country_en": "Burma"
+  },
+  {
+    "code": "KET",
+    "name": "Kengtung Airport",
+    "city_en": "Kengtung",
+    "city_pl": "Kengtung",
+    "country_en": "Burma"
+  },
+  {
+    "code": "KYP",
+    "name": "Kyaukpyu Airport",
+    "city_en": "Kyaukpyu",
+    "city_pl": "Kyaukpyu",
+    "country_en": "Burma"
+  },
+  {
+    "code": "LSH",
+    "name": "Lashio Airport",
+    "city_en": "Lashio",
+    "city_pl": "Lashio",
+    "country_en": "Burma"
+  },
+  {
+    "code": "MDL",
+    "name": "Mandalay International Airport",
+    "city_en": "Mandalay",
+    "city_pl": "Mandalay",
+    "country_en": "Burma"
+  },
+  {
+    "code": "MGZ",
+    "name": "Myeik Airport",
+    "city_en": "Myeik",
+    "city_pl": "Myeik",
+    "country_en": "Burma"
+  },
+  {
+    "code": "MYT",
+    "name": "Myitkyina Airport",
+    "city_en": "Myitkyina",
+    "city_pl": "Myitkyina",
+    "country_en": "Burma"
+  },
+  {
+    "code": "MOE",
+    "name": "Momeik Airport",
+    "city_en": "Momeik",
+    "city_pl": "Momeik",
+    "country_en": "Burma"
+  },
+  {
+    "code": "MOG",
+    "name": "Mong Hsat Airport",
+    "city_en": "Mong Hsat",
+    "city_pl": "Mong Hsat",
+    "country_en": "Burma"
+  },
+  {
+    "code": "NMS",
+    "name": "Namsang Airport",
+    "city_en": "Namsang",
+    "city_pl": "Namsang",
+    "country_en": "Burma"
+  },
+  {
+    "code": "PAA",
+    "name": "Hpa-N Airport",
+    "city_en": "Hpa-an",
+    "city_pl": "Hpa-an",
+    "country_en": "Burma"
+  },
+  {
+    "code": "PBU",
+    "name": "Putao Airport",
+    "city_en": "Putao",
+    "city_pl": "Putao",
+    "country_en": "Burma"
+  },
+  {
+    "code": "PRU",
+    "name": "Pyay Airport",
+    "city_en": "Pyay",
+    "city_pl": "Pyay",
+    "country_en": "Burma"
+  },
+  {
+    "code": "AKY",
+    "name": "Sittwe Airport",
+    "city_en": "Sittwe",
+    "city_pl": "Sittwe",
+    "country_en": "Burma"
+  },
+  {
+    "code": "SNW",
+    "name": "Thandwe Airport",
+    "city_en": "Thandwe",
+    "city_pl": "Thandwe",
+    "country_en": "Burma"
+  },
+  {
+    "code": "THL",
+    "name": "Tachileik Airport",
+    "city_en": "Tachilek",
+    "city_pl": "Tachilek",
+    "country_en": "Burma"
+  },
+  {
+    "code": "RGN",
+    "name": "Yangon International Airport",
+    "city_en": "Yangon",
+    "city_pl": "Yangon",
+    "country_en": "Burma"
+  },
+  {
+    "code": "UPG",
+    "name": "Hasanuddin International Airport",
+    "city_en": "Ujung Pandang",
+    "city_pl": "Ujung Pandang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BIK",
+    "name": "Frans Kaisiepo Airport",
+    "city_en": "Biak",
+    "city_pl": "Biak",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NBX",
+    "name": "Nabire Airport",
+    "city_en": "Nabire",
+    "city_pl": "Nabire",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TIM",
+    "name": "Moses Kilangin Airport",
+    "city_en": "Timika",
+    "city_pl": "Timika",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "DJJ",
+    "name": "Sentani International Airport",
+    "city_en": "Jayapura",
+    "city_pl": "Jayapura",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "WMX",
+    "name": "Wamena Airport",
+    "city_en": "Wamena",
+    "city_pl": "Wamena",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MKQ",
+    "name": "Mopah Airport",
+    "city_en": "Merauke",
+    "city_pl": "Merauke",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "GTO",
+    "name": "Jalaluddin Airport",
+    "city_en": "Gorontalo",
+    "city_pl": "Gorontalo",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PLW",
+    "name": "Mutiara Airport",
+    "city_en": "Palu",
+    "city_pl": "Palu",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MDC",
+    "name": "Sam Ratulangi Airport",
+    "city_en": "Manado",
+    "city_pl": "Manado",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PSJ",
+    "name": "Kasiguncu Airport",
+    "city_en": "Poso",
+    "city_pl": "Poso",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "OTI",
+    "name": "Pitu Airport",
+    "city_en": "Morotai Island",
+    "city_pl": "Morotai Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TTE",
+    "name": "Sultan Khairun Babullah Airport",
+    "city_en": "Ternate",
+    "city_pl": "Ternate",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "LUW",
+    "name": "Syukuran Aminuddin Amir Airport",
+    "city_en": "Luwuk",
+    "city_pl": "Luwuk",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "AMQ",
+    "name": "Pattimura Airport, Ambon",
+    "city_en": "Ambon",
+    "city_pl": "Ambon",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "FKQ",
+    "name": "Fakfak Airport",
+    "city_en": "Fak Fak",
+    "city_pl": "Fak Fak",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "KNG",
+    "name": "Kaimana Airport",
+    "city_en": "Kaimana",
+    "city_pl": "Kaimana",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BXB",
+    "name": "Babo Airport",
+    "city_en": "Babo",
+    "city_pl": "Babo",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MKW",
+    "name": "Rendani Airport",
+    "city_en": "Manokwari",
+    "city_pl": "Manokwari",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SOQ",
+    "name": "Dominique Edward Osok Airport",
+    "city_en": "Sorong",
+    "city_pl": "Sorong",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BTU",
+    "name": "Bintulu Airport",
+    "city_en": "Bintulu",
+    "city_pl": "Bintulu",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "KCH",
+    "name": "Kuching International Airport",
+    "city_en": "Kuching",
+    "city_pl": "Kuching",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "LMN",
+    "name": "Limbang Airport",
+    "city_en": "Limbang",
+    "city_pl": "Limbang",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "MUR",
+    "name": "Marudi Airport",
+    "city_en": "Marudi",
+    "city_pl": "Marudi",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "MYY",
+    "name": "Miri Airport",
+    "city_en": "Miri",
+    "city_pl": "Miri",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "SBW",
+    "name": "Sibu Airport",
+    "city_en": "Sibu",
+    "city_pl": "Sibu",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "LDU",
+    "name": "Lahad Datu Airport",
+    "city_en": "Lahad Datu",
+    "city_pl": "Lahad Datu",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "BKI",
+    "name": "Kota Kinabalu International Airport",
+    "city_en": "Kota Kinabalu",
+    "city_pl": "Kota Kinabalu",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "LBU",
+    "name": "Labuan Airport",
+    "city_en": "Labuan",
+    "city_pl": "Labuan",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "TWU",
+    "name": "Tawau Airport",
+    "city_en": "Tawau",
+    "city_pl": "Tawau",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "BWN",
+    "name": "Brunei International Airport",
+    "city_en": "Bandar Seri Begawan",
+    "city_pl": "Bandar Seri Begawan",
+    "country_en": "Brunei"
+  },
+  {
+    "code": "PKU",
+    "name": "Sultan Syarif Kasim Ii (Simpang Tiga) Airport",
+    "city_en": "Pekanbaru",
+    "city_pl": "Pekanbaru",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "DUM",
+    "name": "Pinang Kampai Airport",
+    "city_en": "Dumai",
+    "city_pl": "Dumai",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "CGK",
+    "name": "Soekarno-Hatta International Airport",
+    "city_en": "Jakarta",
+    "city_pl": "Jakarta",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "GNS",
+    "name": "Binaka Airport",
+    "city_en": "Gunung Sitoli",
+    "city_pl": "Gunung Sitoli",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "AEG",
+    "name": "Aek Godang Airport",
+    "city_en": "Padang Sidempuan",
+    "city_pl": "Padang Sidempuan",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PDG",
+    "name": "Minangkabau International Airport",
+    "city_en": "Padang",
+    "city_pl": "Padang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MES",
+    "name": "Soewondo Air Force Base",
+    "city_en": "Medan",
+    "city_pl": "Medan",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "FLZ",
+    "name": "Dr Ferdinand Lumban Tobing Airport",
+    "city_en": "Sibolga",
+    "city_pl": "Sibolga",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NPO",
+    "name": "Nanga Pinoh Airport",
+    "city_en": "Nangapinoh",
+    "city_pl": "Nangapinoh",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "KTG",
+    "name": "Ketapang(Rahadi Usman) Airport",
+    "city_en": "Ketapang",
+    "city_pl": "Ketapang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PNK",
+    "name": "Supadio Airport",
+    "city_en": "Pontianak",
+    "city_pl": "Pontianak",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "DJB",
+    "name": "Sultan Thaha Airport",
+    "city_en": "Jambi",
+    "city_pl": "Jambi",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BKS",
+    "name": "Fatmawati Soekarno Airport",
+    "city_en": "Bengkulu",
+    "city_pl": "Bengkulu",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PLM",
+    "name": "Sultan Mahmud Badaruddin II Airport",
+    "city_en": "Palembang",
+    "city_pl": "Palembang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "RGT",
+    "name": "Japura Airport",
+    "city_en": "Rengat",
+    "city_pl": "Rengat",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "LSX",
+    "name": "Lhok Sukon Airport",
+    "city_en": "Lhok Sukon",
+    "city_pl": "Lhok Sukon",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BTJ",
+    "name": "Sultan Iskandar Muda International Airport",
+    "city_en": "Banda Aceh",
+    "city_pl": "Banda Aceh",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "AOR",
+    "name": "Sultan Abdul Halim Airport",
+    "city_en": "Alor Setar",
+    "city_pl": "Alor Setar",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "BWH",
+    "name": "Butterworth Airport",
+    "city_en": "Butterworth",
+    "city_pl": "Butterworth",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "KBR",
+    "name": "Sultan Ismail Petra Airport",
+    "city_en": "Kota Bahru",
+    "city_pl": "Kota Bahru",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "KUA",
+    "name": "Kuantan Airport",
+    "city_en": "Kuantan",
+    "city_pl": "Kuantan",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "KTE",
+    "name": "Kerteh Airport",
+    "city_en": "Kerteh",
+    "city_pl": "Kerteh",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "IPH",
+    "name": "Sultan Azlan Shah Airport",
+    "city_en": "Ipoh",
+    "city_pl": "Ipoh",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "JHB",
+    "name": "Senai International Airport",
+    "city_en": "Johor Bahru",
+    "city_pl": "Johor Bahru",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "KUL",
+    "name": "Kuala Lumpur International Airport",
+    "city_en": "Kuala Lumpur",
+    "city_pl": "Kuala Lumpur",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "LGK",
+    "name": "Langkawi International Airport",
+    "city_en": "Langkawi",
+    "city_pl": "Langkawi",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "MKZ",
+    "name": "Malacca Airport",
+    "city_en": "Malacca",
+    "city_pl": "Malacca",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "TGG",
+    "name": "Sultan Mahmud Airport",
+    "city_en": "Kuala Terengganu",
+    "city_pl": "Kuala Terengganu",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "PEN",
+    "name": "Penang International Airport",
+    "city_en": "Penang",
+    "city_pl": "Penang",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "UAI",
+    "name": "Suai Airport",
+    "city_en": "Suai",
+    "city_pl": "Suai",
+    "country_en": "East Timor"
+  },
+  {
+    "code": "DIL",
+    "name": "Presidente Nicolau Lobato International Airport",
+    "city_en": "Dili",
+    "city_pl": "Dili",
+    "country_en": "East Timor"
+  },
+  {
+    "code": "BCH",
+    "name": "Cakung Airport",
+    "city_en": "Baucau",
+    "city_pl": "Baucau",
+    "country_en": "East Timor"
+  },
+  {
+    "code": "QPG",
+    "name": "Paya Lebar Air Base",
+    "city_en": "Paya Lebar",
+    "city_pl": "Paya Lebar",
+    "country_en": "Singapore"
+  },
+  {
+    "code": "TGA",
+    "name": "Tengah Air Base",
+    "city_en": "Tengah",
+    "city_pl": "Tengah",
+    "country_en": "Singapore"
+  },
+  {
+    "code": "XSP",
+    "name": "Seletar Airport",
+    "city_en": "Singapore",
+    "city_pl": "Singapur",
+    "country_en": "Singapore"
+  },
+  {
+    "code": "SIN",
+    "name": "Singapore Changi Airport",
+    "city_en": "Singapore",
+    "city_pl": "Singapur",
+    "country_en": "Singapore"
+  },
+  {
+    "code": "ACF",
+    "name": "Brisbane Archerfield Airport",
+    "city_en": "Brisbane",
+    "city_pl": "Brisbane",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ABM",
+    "name": "Northern Peninsula Airport",
+    "city_en": "Amberley",
+    "city_pl": "Amberley",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ASP",
+    "name": "Alice Springs Airport",
+    "city_en": "Alice Springs",
+    "city_pl": "Alice Springs",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BNE",
+    "name": "Brisbane International Airport",
+    "city_en": "Brisbane",
+    "city_pl": "Brisbane",
+    "country_en": "Australia"
+  },
+  {
+    "code": "OOL",
+    "name": "Gold Coast Airport",
+    "city_en": "Coolangatta",
+    "city_pl": "Coolangatta",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CNS",
+    "name": "Cairns International Airport",
+    "city_en": "Cairns",
+    "city_pl": "Cairns",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CTL",
+    "name": "Charleville Airport",
+    "city_en": "Charlieville",
+    "city_pl": "Charlieville",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ISA",
+    "name": "Mount Isa Airport",
+    "city_en": "Mount Isa",
+    "city_pl": "Mount Isa",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MCY",
+    "name": "Sunshine Coast Airport",
+    "city_en": "Maroochydore",
+    "city_pl": "Maroochydore",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MKY",
+    "name": "Mackay Airport",
+    "city_en": "Mackay",
+    "city_pl": "Mackay",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PPP",
+    "name": "Proserpine Whitsunday Coast Airport",
+    "city_en": "Prosserpine",
+    "city_pl": "Prosserpine",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ROK",
+    "name": "Rockhampton Airport",
+    "city_en": "Rockhampton",
+    "city_pl": "Rockhampton",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TSV",
+    "name": "Townsville Airport",
+    "city_en": "Townsville",
+    "city_pl": "Townsville",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WEI",
+    "name": "Weipa Airport",
+    "city_en": "Weipa",
+    "city_pl": "Weipa",
+    "country_en": "Australia"
+  },
+  {
+    "code": "AVV",
+    "name": "Avalon Airport",
+    "city_en": "Avalon",
+    "city_pl": "Avalon",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ABX",
+    "name": "Albury Airport",
+    "city_en": "Albury",
+    "city_pl": "Albury",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MEB",
+    "name": "Melbourne Essendon Airport",
+    "city_en": "Melbourne",
+    "city_pl": "Melbourne",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HBA",
+    "name": "Hobart International Airport",
+    "city_en": "Hobart",
+    "city_pl": "Hobart",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LST",
+    "name": "Launceston Airport",
+    "city_en": "Launceston",
+    "city_pl": "Launceston",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MBW",
+    "name": "Melbourne Moorabbin Airport",
+    "city_en": "Melbourne",
+    "city_pl": "Melbourne",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MEL",
+    "name": "Melbourne International Airport",
+    "city_en": "Melbourne",
+    "city_pl": "Melbourne",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ADL",
+    "name": "Adelaide International Airport",
+    "city_en": "Adelaide",
+    "city_pl": "Adelaide",
+    "country_en": "Australia"
+  },
+  {
+    "code": "JAD",
+    "name": "Perth Jandakot Airport",
+    "city_en": "Perth",
+    "city_pl": "Perth",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KTA",
+    "name": "Karratha Airport",
+    "city_en": "Karratha",
+    "city_pl": "Karratha",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KGI",
+    "name": "Kalgoorlie Boulder Airport",
+    "city_en": "Kalgoorlie",
+    "city_pl": "Kalgoorlie",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KNX",
+    "name": "Kununurra Airport",
+    "city_en": "Kununurra",
+    "city_pl": "Kununurra",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LEA",
+    "name": "Learmonth Airport",
+    "city_en": "Learmonth",
+    "city_pl": "Learmonth",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PHE",
+    "name": "Port Hedland International Airport",
+    "city_en": "Port Hedland",
+    "city_pl": "Port Hedland",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PER",
+    "name": "Perth International Airport",
+    "city_en": "Perth",
+    "city_pl": "Perth",
+    "country_en": "Australia"
+  },
+  {
+    "code": "UMR",
+    "name": "Woomera Airfield",
+    "city_en": "Woomera",
+    "city_pl": "Woomera",
+    "country_en": "Australia"
+  },
+  {
+    "code": "XCH",
+    "name": "Christmas Island Airport",
+    "city_en": "Christmas Island",
+    "city_pl": "Christmas Island",
+    "country_en": "Christmas Island"
+  },
+  {
+    "code": "BWU",
+    "name": "Sydney Bankstown Airport",
+    "city_en": "Sydney",
+    "city_pl": "Sydney",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CBR",
+    "name": "Canberra International Airport",
+    "city_en": "Canberra",
+    "city_pl": "Canberra",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CFS",
+    "name": "Coffs Harbour Airport",
+    "city_en": "Coff's Harbour",
+    "city_pl": "Coff's Harbour",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CDU",
+    "name": "Camden Airport",
+    "city_en": "Camden",
+    "city_pl": "Camden",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DBO",
+    "name": "Dubbo City Regional Airport",
+    "city_en": "Dubbo",
+    "city_pl": "Dubbo",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NLK",
+    "name": "Norfolk Island International Airport",
+    "city_en": "Norfolk Island",
+    "city_pl": "Norfolk Island",
+    "country_en": "Norfolk Island"
+  },
+  {
+    "code": "XRH",
+    "name": "RAAF Base Richmond",
+    "city_en": "Richmond",
+    "city_pl": "Richmond",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SYD",
+    "name": "Sydney Kingsford Smith International Airport",
+    "city_en": "Sydney",
+    "city_pl": "Sydney",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TMW",
+    "name": "Tamworth Airport",
+    "city_en": "Tamworth",
+    "city_pl": "Tamworth",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WGA",
+    "name": "Wagga Wagga City Airport",
+    "city_en": "Wagga Wagga",
+    "city_pl": "Wagga Wagga",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PEK",
+    "name": "Beijing Capital International Airport",
+    "city_en": "Beijing",
+    "city_pl": "Pekin",
+    "country_en": "China"
+  },
+  {
+    "code": "HLD",
+    "name": "Dongshan Airport",
+    "city_en": "Hailar",
+    "city_pl": "Hailar",
+    "country_en": "China"
+  },
+  {
+    "code": "TSN",
+    "name": "Tianjin Binhai International Airport",
+    "city_en": "Tianjin",
+    "city_pl": "Tianjin",
+    "country_en": "China"
+  },
+  {
+    "code": "TYN",
+    "name": "Taiyuan Wusu Airport",
+    "city_en": "Taiyuan",
+    "city_pl": "Taiyuan",
+    "country_en": "China"
+  },
+  {
+    "code": "CAN",
+    "name": "Guangzhou Baiyun International Airport",
+    "city_en": "Guangzhou",
+    "city_pl": "Guangzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "CSX",
+    "name": "Changsha Huanghua International Airport",
+    "city_en": "Changcha",
+    "city_pl": "Changcha",
+    "country_en": "China"
+  },
+  {
+    "code": "KWL",
+    "name": "Guilin Liangjiang International Airport",
+    "city_en": "Guilin",
+    "city_pl": "Guilin",
+    "country_en": "China"
+  },
+  {
+    "code": "NNG",
+    "name": "Nanning Wuxu Airport",
+    "city_en": "Nanning",
+    "city_pl": "Nanning",
+    "country_en": "China"
+  },
+  {
+    "code": "SZX",
+    "name": "Shenzhen Bao'an International Airport",
+    "city_en": "Shenzhen",
+    "city_pl": "Shenzhen",
+    "country_en": "China"
+  },
+  {
+    "code": "CGO",
+    "name": "Zhengzhou Xinzheng International Airport",
+    "city_en": "Zhengzhou",
+    "city_pl": "Zhengzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "WUH",
+    "name": "Wuhan Tianhe International Airport",
+    "city_en": "Wuhan",
+    "city_pl": "Wuhan",
+    "country_en": "China"
+  },
+  {
+    "code": "FNJ",
+    "name": "Pyongyang Sunan International Airport",
+    "city_en": "Pyongyang",
+    "city_pl": "Pyongyang",
+    "country_en": "North Korea"
+  },
+  {
+    "code": "LHW",
+    "name": "Lanzhou Zhongchuan Airport",
+    "city_en": "Lanzhou",
+    "city_pl": "Lanzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "XIY",
+    "name": "Xi'an Xianyang International Airport",
+    "city_en": "Xi'an",
+    "city_pl": "Xi'an",
+    "country_en": "China"
+  },
+  {
+    "code": "ULN",
+    "name": "Chinggis Khaan International Airport",
+    "city_en": "Ulan Bator",
+    "city_pl": "Ulan Bator",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "JHG",
+    "name": "Xishuangbanna Gasa Airport",
+    "city_en": "Jinghonggasa",
+    "city_pl": "Jinghonggasa",
+    "country_en": "China"
+  },
+  {
+    "code": "KMG",
+    "name": "Kunming Changshui International Airport",
+    "city_en": "Kunming",
+    "city_pl": "Kunming",
+    "country_en": "China"
+  },
+  {
+    "code": "XMN",
+    "name": "Xiamen Gaoqi International Airport",
+    "city_en": "Xiamen",
+    "city_pl": "Xiamen",
+    "country_en": "China"
+  },
+  {
+    "code": "KHN",
+    "name": "Nanchang Changbei International Airport",
+    "city_en": "Nanchang",
+    "city_pl": "Nanchang",
+    "country_en": "China"
+  },
+  {
+    "code": "FOC",
+    "name": "Fuzhou Changle International Airport",
+    "city_en": "Fuzhou",
+    "city_pl": "Fuzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "HGH",
+    "name": "Hangzhou Xiaoshan International Airport",
+    "city_en": "Hangzhou",
+    "city_pl": "Hangzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "NGB",
+    "name": "Ningbo Lishe International Airport",
+    "city_en": "Ninbo",
+    "city_pl": "Ninbo",
+    "country_en": "China"
+  },
+  {
+    "code": "NKG",
+    "name": "Nanjing Lukou Airport",
+    "city_en": "Nanjing",
+    "city_pl": "Nanjing",
+    "country_en": "China"
+  },
+  {
+    "code": "HFE",
+    "name": "Hefei Luogang International Airport",
+    "city_en": "Hefei",
+    "city_pl": "Hefei",
+    "country_en": "China"
+  },
+  {
+    "code": "TAO",
+    "name": "Liuting Airport",
+    "city_en": "Qingdao",
+    "city_pl": "Qingdao",
+    "country_en": "China"
+  },
+  {
+    "code": "SHA",
+    "name": "Shanghai Hongqiao International Airport",
+    "city_en": "Shanghai",
+    "city_pl": "Szanghaj",
+    "country_en": "China"
+  },
+  {
+    "code": "YNT",
+    "name": "Yantai Laishan Airport",
+    "city_en": "Yantai",
+    "city_pl": "Yantai",
+    "country_en": "China"
+  },
+  {
+    "code": "CKG",
+    "name": "Chongqing Jiangbei International Airport",
+    "city_en": "Chongqing",
+    "city_pl": "Chongqing",
+    "country_en": "China"
+  },
+  {
+    "code": "KWE",
+    "name": "Longdongbao Airport",
+    "city_en": "Guiyang",
+    "city_pl": "Guiyang",
+    "country_en": "China"
+  },
+  {
+    "code": "CTU",
+    "name": "Chengdu Shuangliu International Airport",
+    "city_en": "Chengdu",
+    "city_pl": "Chengdu",
+    "country_en": "China"
+  },
+  {
+    "code": "XIC",
+    "name": "Xichang Qingshan Airport",
+    "city_en": "Xichang",
+    "city_pl": "Xichang",
+    "country_en": "China"
+  },
+  {
+    "code": "KHG",
+    "name": "Kashgar Airport",
+    "city_en": "Kashi",
+    "city_pl": "Kashi",
+    "country_en": "China"
+  },
+  {
+    "code": "HTN",
+    "name": "Hotan Airport",
+    "city_en": "Hotan",
+    "city_pl": "Hotan",
+    "country_en": "China"
+  },
+  {
+    "code": "URC",
+    "name": "Ürümqi Diwopu International Airport",
+    "city_en": "Urumqi",
+    "city_pl": "Urumqi",
+    "country_en": "China"
+  },
+  {
+    "code": "HRB",
+    "name": "Taiping Airport",
+    "city_en": "Harbin",
+    "city_pl": "Harbin",
+    "country_en": "China"
+  },
+  {
+    "code": "MDG",
+    "name": "Mudanjiang Hailang International Airport",
+    "city_en": "Mudanjiang",
+    "city_pl": "Mudanjiang",
+    "country_en": "China"
+  },
+  {
+    "code": "DLC",
+    "name": "Zhoushuizi Airport",
+    "city_en": "Dalian",
+    "city_pl": "Dalian",
+    "country_en": "China"
+  },
+  {
+    "code": "PVG",
+    "name": "Shanghai Pudong International Airport",
+    "city_en": "Shanghai",
+    "city_pl": "Szanghaj",
+    "country_en": "China"
+  },
+  {
+    "code": "TOD",
+    "name": "Pulau Tioman Airport",
+    "city_en": "Tioman",
+    "city_pl": "Tioman",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "SZB",
+    "name": "Sultan Abdul Aziz Shah International Airport",
+    "city_en": "Kuala Lumpur",
+    "city_pl": "Kuala Lumpur",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "NTQ",
+    "name": "Noto Airport",
+    "city_en": "Wajima",
+    "city_pl": "Wajima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "HBE",
+    "name": "Borg El Arab International Airport",
+    "city_en": "Alexandria",
+    "city_pl": "Alexandria",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "BTI",
+    "name": "Barter Island LRRS Airport",
+    "city_en": "Barter Island",
+    "city_pl": "Barter Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "LUR",
+    "name": "Cape Lisburne LRRS Airport",
+    "city_en": "Cape Lisburne",
+    "city_pl": "Cape Lisburne",
+    "country_en": "United States"
+  },
+  {
+    "code": "PIZ",
+    "name": "Point Lay LRRS Airport",
+    "city_en": "Point Lay",
+    "city_pl": "Point Lay",
+    "country_en": "United States"
+  },
+  {
+    "code": "ITO",
+    "name": "Hilo International Airport",
+    "city_en": "Hilo",
+    "city_pl": "Hilo",
+    "country_en": "United States"
+  },
+  {
+    "code": "ORL",
+    "name": "Orlando Executive Airport",
+    "city_en": "Orlando",
+    "city_pl": "Orlando",
+    "country_en": "United States"
+  },
+  {
+    "code": "BTT",
+    "name": "Bettles Airport",
+    "city_en": "Bettles",
+    "city_pl": "Bettles",
+    "country_en": "United States"
+  },
+  {
+    "code": "UTO",
+    "name": "Indian Mountain LRRS Airport",
+    "city_en": "Indian Mountains",
+    "city_pl": "Indian Mountains",
+    "country_en": "United States"
+  },
+  {
+    "code": "FYU",
+    "name": "Fort Yukon Airport",
+    "city_en": "Fort Yukon",
+    "city_pl": "Fort Yukon",
+    "country_en": "United States"
+  },
+  {
+    "code": "SVW",
+    "name": "Sparrevohn LRRS Airport",
+    "city_en": "Sparrevohn",
+    "city_pl": "Sparrevohn",
+    "country_en": "United States"
+  },
+  {
+    "code": "FRN",
+    "name": "Bryant Army Heliport",
+    "city_en": "Fort Richardson",
+    "city_pl": "Fort Richardson",
+    "country_en": "United States"
+  },
+  {
+    "code": "TLJ",
+    "name": "Tatalina LRRS Airport",
+    "city_en": "Tatalina",
+    "city_pl": "Tatalina",
+    "country_en": "United States"
+  },
+  {
+    "code": "CZF",
+    "name": "Cape Romanzof LRRS Airport",
+    "city_en": "Cape Romanzof",
+    "city_pl": "Cape Romanzof",
+    "country_en": "United States"
+  },
+  {
+    "code": "BED",
+    "name": "Laurence G Hanscom Field",
+    "city_en": "Bedford",
+    "city_pl": "Bedford",
+    "country_en": "United States"
+  },
+  {
+    "code": "SNP",
+    "name": "St Paul Island Airport",
+    "city_en": "St. Paul Island",
+    "city_pl": "St. Paul Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "EHM",
+    "name": "Cape Newenham LRRS Airport",
+    "city_en": "Cape Newenham",
+    "city_pl": "Cape Newenham",
+    "country_en": "United States"
+  },
+  {
+    "code": "STG",
+    "name": "St George Airport",
+    "city_en": "Point Barrow",
+    "city_pl": "Point Barrow",
+    "country_en": "United States"
+  },
+  {
+    "code": "ILI",
+    "name": "Iliamna Airport",
+    "city_en": "Iliamna",
+    "city_pl": "Iliamna",
+    "country_en": "United States"
+  },
+  {
+    "code": "PTU",
+    "name": "Platinum Airport",
+    "city_en": "Port Moller",
+    "city_pl": "Port Moller",
+    "country_en": "United States"
+  },
+  {
+    "code": "BMX",
+    "name": "Big Mountain Airport",
+    "city_en": "Big Mountain",
+    "city_pl": "Big Mountain",
+    "country_en": "United States"
+  },
+  {
+    "code": "OSC",
+    "name": "Oscoda Wurtsmith Airport",
+    "city_en": "Oscoda",
+    "city_pl": "Oscoda",
+    "country_en": "United States"
+  },
+  {
+    "code": "OAR",
+    "name": "Marina Municipal Airport",
+    "city_en": "Fort Ord",
+    "city_pl": "Fort Ord",
+    "country_en": "United States"
+  },
+  {
+    "code": "MHR",
+    "name": "Sacramento Mather Airport",
+    "city_en": "Sacramento",
+    "city_pl": "Sacramento",
+    "country_en": "United States"
+  },
+  {
+    "code": "BYS",
+    "name": "Bicycle Lake Army Air Field",
+    "city_en": "Fort Irwin",
+    "city_pl": "Fort Irwin",
+    "country_en": "United States"
+  },
+  {
+    "code": "FSM",
+    "name": "Fort Smith Regional Airport",
+    "city_en": "Fort Smith",
+    "city_pl": "Fort Smith",
+    "country_en": "United States"
+  },
+  {
+    "code": "MRI",
+    "name": "Merrill Field",
+    "city_en": "Anchorage",
+    "city_pl": "Anchorage",
+    "country_en": "United States"
+  },
+  {
+    "code": "GNT",
+    "name": "Grants-Milan Municipal Airport",
+    "city_en": "Grants",
+    "city_pl": "Grants",
+    "country_en": "United States"
+  },
+  {
+    "code": "PNC",
+    "name": "Ponca City Regional Airport",
+    "city_en": "Ponca City",
+    "city_pl": "Ponca City",
+    "country_en": "United States"
+  },
+  {
+    "code": "SVN",
+    "name": "Hunter Army Air Field",
+    "city_en": "Hunter Aaf",
+    "city_pl": "Hunter Aaf",
+    "country_en": "United States"
+  },
+  {
+    "code": "GFK",
+    "name": "Grand Forks International Airport",
+    "city_en": "Grand Forks",
+    "city_pl": "Grand Forks",
+    "country_en": "United States"
+  },
+  {
+    "code": "PBF",
+    "name": "Pine Bluff Regional Airport, Grider Field",
+    "city_en": "Pine Bluff",
+    "city_pl": "Pine Bluff",
+    "country_en": "United States"
+  },
+  {
+    "code": "NSE",
+    "name": "Whiting Field Naval Air Station - North",
+    "city_en": "Milton",
+    "city_pl": "Milton",
+    "country_en": "United States"
+  },
+  {
+    "code": "HNM",
+    "name": "Hana Airport",
+    "city_en": "Hana",
+    "city_pl": "Hana",
+    "country_en": "United States"
+  },
+  {
+    "code": "PRC",
+    "name": "Ernest A. Love Field",
+    "city_en": "Prescott",
+    "city_pl": "Prescott",
+    "country_en": "United States"
+  },
+  {
+    "code": "TTN",
+    "name": "Trenton Mercer Airport",
+    "city_en": "Trenton",
+    "city_pl": "Trenton",
+    "country_en": "United States"
+  },
+  {
+    "code": "BOS",
+    "name": "General Edward Lawrence Logan International Airport",
+    "city_en": "Boston",
+    "city_pl": "Boston",
+    "country_en": "United States"
+  },
+  {
+    "code": "SUU",
+    "name": "Travis Air Force Base",
+    "city_en": "Fairfield",
+    "city_pl": "Fairfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "RME",
+    "name": "Griffiss International Airport",
+    "city_en": "Rome",
+    "city_pl": "Rzym",
+    "country_en": "United States"
+  },
+  {
+    "code": "ENV",
+    "name": "Wendover Airport",
+    "city_en": "Wendover",
+    "city_pl": "Wendover",
+    "country_en": "United States"
+  },
+  {
+    "code": "BFM",
+    "name": "Mobile Downtown Airport",
+    "city_en": "Mobile",
+    "city_pl": "Mobile",
+    "country_en": "United States"
+  },
+  {
+    "code": "OAK",
+    "name": "Metropolitan Oakland International Airport",
+    "city_en": "Oakland",
+    "city_pl": "Oakland",
+    "country_en": "United States"
+  },
+  {
+    "code": "OMA",
+    "name": "Eppley Airfield",
+    "city_en": "Omaha",
+    "city_pl": "Omaha",
+    "country_en": "United States"
+  },
+  {
+    "code": "OGG",
+    "name": "Kahului Airport",
+    "city_en": "Kahului",
+    "city_pl": "Kahului",
+    "country_en": "United States"
+  },
+  {
+    "code": "ICT",
+    "name": "Wichita Eisenhower National Airport",
+    "city_en": "Wichita",
+    "city_pl": "Wichita",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCI",
+    "name": "Kansas City International Airport",
+    "city_en": "Kansas City",
+    "city_pl": "Kansas City",
+    "country_en": "United States"
+  },
+  {
+    "code": "MSN",
+    "name": "Dane County Regional Truax Field",
+    "city_en": "Madison",
+    "city_pl": "Madison",
+    "country_en": "United States"
+  },
+  {
+    "code": "DLG",
+    "name": "Dillingham Airport",
+    "city_en": "Dillingham",
+    "city_pl": "Dillingham",
+    "country_en": "United States"
+  },
+  {
+    "code": "HRO",
+    "name": "Boone County Airport",
+    "city_en": "Harrison",
+    "city_pl": "Harrison",
+    "country_en": "United States"
+  },
+  {
+    "code": "PHX",
+    "name": "Phoenix Sky Harbor International Airport",
+    "city_en": "Phoenix",
+    "city_pl": "Phoenix",
+    "country_en": "United States"
+  },
+  {
+    "code": "BGR",
+    "name": "Bangor International Airport",
+    "city_en": "Bangor",
+    "city_pl": "Bangor",
+    "country_en": "United States"
+  },
+  {
+    "code": "FXE",
+    "name": "Fort Lauderdale Executive Airport",
+    "city_en": "Fort Lauderdale",
+    "city_pl": "Fort Lauderdale",
+    "country_en": "United States"
+  },
+  {
+    "code": "GGG",
+    "name": "East Texas Regional Airport",
+    "city_en": "Longview",
+    "city_pl": "Longview",
+    "country_en": "United States"
+  },
+  {
+    "code": "AND",
+    "name": "Anderson Regional Airport",
+    "city_en": "Andersen",
+    "city_pl": "Andersen",
+    "country_en": "United States"
+  },
+  {
+    "code": "GEG",
+    "name": "Spokane International Airport",
+    "city_en": "Spokane",
+    "city_pl": "Spokane",
+    "country_en": "United States"
+  },
+  {
+    "code": "HWO",
+    "name": "North Perry Airport",
+    "city_en": "Hollywood",
+    "city_pl": "Hollywood",
+    "country_en": "United States"
+  },
+  {
+    "code": "SFO",
+    "name": "San Francisco International Airport",
+    "city_en": "San Francisco",
+    "city_pl": "San Francisco",
+    "country_en": "United States"
+  },
+  {
+    "code": "CTB",
+    "name": "Cut Bank International Airport",
+    "city_en": "Cutbank",
+    "city_pl": "Cutbank",
+    "country_en": "United States"
+  },
+  {
+    "code": "ARA",
+    "name": "Acadiana Regional Airport",
+    "city_en": "Louisiana",
+    "city_pl": "Louisiana",
+    "country_en": "United States"
+  },
+  {
+    "code": "GNV",
+    "name": "Gainesville Regional Airport",
+    "city_en": "Gainesville",
+    "city_pl": "Gainesville",
+    "country_en": "United States"
+  },
+  {
+    "code": "MEM",
+    "name": "Memphis International Airport",
+    "city_en": "Memphis",
+    "city_pl": "Memphis",
+    "country_en": "United States"
+  },
+  {
+    "code": "DUG",
+    "name": "Bisbee Douglas International Airport",
+    "city_en": "Douglas",
+    "city_pl": "Douglas",
+    "country_en": "United States"
+  },
+  {
+    "code": "BIG",
+    "name": "Allen Army Airfield",
+    "city_en": "Delta Junction",
+    "city_pl": "Delta Junction",
+    "country_en": "United States"
+  },
+  {
+    "code": "CNW",
+    "name": "TSTC Waco Airport",
+    "city_en": "Waco",
+    "city_pl": "Waco",
+    "country_en": "United States"
+  },
+  {
+    "code": "ANN",
+    "name": "Annette Island Airport",
+    "city_en": "Annette Island",
+    "city_pl": "Annette Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "CAR",
+    "name": "Caribou Municipal Airport",
+    "city_en": "Caribou",
+    "city_pl": "Caribou",
+    "country_en": "United States"
+  },
+  {
+    "code": "LRF",
+    "name": "Little Rock Air Force Base",
+    "city_en": "Jacksonville",
+    "city_pl": "Jacksonville",
+    "country_en": "United States"
+  },
+  {
+    "code": "HUA",
+    "name": "Redstone Army Air Field",
+    "city_en": "Redstone",
+    "city_pl": "Redstone",
+    "country_en": "United States"
+  },
+  {
+    "code": "POB",
+    "name": "Pope Field",
+    "city_en": "Fort Bragg",
+    "city_pl": "Fort Bragg",
+    "country_en": "United States"
+  },
+  {
+    "code": "DHT",
+    "name": "Dalhart Municipal Airport",
+    "city_en": "Dalhart",
+    "city_pl": "Dalhart",
+    "country_en": "United States"
+  },
+  {
+    "code": "DLF",
+    "name": "DLF Airport",
+    "city_en": "Del Rio",
+    "city_pl": "Del Rio",
+    "country_en": "United States"
+  },
+  {
+    "code": "LAX",
+    "name": "Los Angeles International Airport",
+    "city_en": "Los Angeles",
+    "city_pl": "Los Angeles",
+    "country_en": "United States"
+  },
+  {
+    "code": "ANB",
+    "name": "Anniston Regional Airport",
+    "city_en": "Anniston",
+    "city_pl": "Anniston",
+    "country_en": "United States"
+  },
+  {
+    "code": "CLE",
+    "name": "Cleveland Hopkins International Airport",
+    "city_en": "Cleveland",
+    "city_pl": "Cleveland",
+    "country_en": "United States"
+  },
+  {
+    "code": "DOV",
+    "name": "Dover Air Force Base",
+    "city_en": "Dover",
+    "city_pl": "Dover",
+    "country_en": "United States"
+  },
+  {
+    "code": "CVG",
+    "name": "Cincinnati Northern Kentucky International Airport",
+    "city_en": "Cincinnati",
+    "city_pl": "Cincinnati",
+    "country_en": "United States"
+  },
+  {
+    "code": "FME",
+    "name": "Tipton Airport",
+    "city_en": "Fort Meade",
+    "city_pl": "Fort Meade",
+    "country_en": "United States"
+  },
+  {
+    "code": "HON",
+    "name": "Huron Regional Airport",
+    "city_en": "Huron",
+    "city_pl": "Huron",
+    "country_en": "United States"
+  },
+  {
+    "code": "JNU",
+    "name": "Juneau International Airport",
+    "city_en": "Juneau",
+    "city_pl": "Juneau",
+    "country_en": "United States"
+  },
+  {
+    "code": "LFT",
+    "name": "Lafayette Regional Airport",
+    "city_en": "Lafayette",
+    "city_pl": "Lafayette",
+    "country_en": "United States"
+  },
+  {
+    "code": "EWR",
+    "name": "Newark Liberty International Airport",
+    "city_en": "Newark",
+    "city_pl": "Newark",
+    "country_en": "United States"
+  },
+  {
+    "code": "BOI",
+    "name": "Boise Air Terminal/Gowen Field",
+    "city_en": "Boise",
+    "city_pl": "Boise",
+    "country_en": "United States"
+  },
+  {
+    "code": "INS",
+    "name": "Creech Air Force Base",
+    "city_en": "Indian Springs",
+    "city_pl": "Indian Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "GCK",
+    "name": "Garden City Regional Airport",
+    "city_en": "Garden City",
+    "city_pl": "Garden City",
+    "country_en": "United States"
+  },
+  {
+    "code": "MOT",
+    "name": "Minot International Airport",
+    "city_en": "Minot",
+    "city_pl": "Minot",
+    "country_en": "United States"
+  },
+  {
+    "code": "HHI",
+    "name": "Wheeler Army Airfield",
+    "city_en": "Wahiawa",
+    "city_pl": "Wahiawa",
+    "country_en": "United States"
+  },
+  {
+    "code": "MXF",
+    "name": "Maxwell Air Force Base",
+    "city_en": "Montgomery",
+    "city_pl": "Montgomery",
+    "country_en": "United States"
+  },
+  {
+    "code": "DAL",
+    "name": "Dallas Love Field",
+    "city_en": "Dallas",
+    "city_pl": "Dallas",
+    "country_en": "United States"
+  },
+  {
+    "code": "FCS",
+    "name": "Butts AAF (Fort Carson) Air Field",
+    "city_en": "Fort Carson",
+    "city_pl": "Fort Carson",
+    "country_en": "United States"
+  },
+  {
+    "code": "HLN",
+    "name": "Helena Regional Airport",
+    "city_en": "Helena",
+    "city_pl": "Helena",
+    "country_en": "United States"
+  },
+  {
+    "code": "NKX",
+    "name": "Miramar Marine Corps Air Station - Mitscher Field",
+    "city_en": "Miramar",
+    "city_pl": "Miramar",
+    "country_en": "United States"
+  },
+  {
+    "code": "LUF",
+    "name": "Luke Air Force Base",
+    "city_en": "Phoenix",
+    "city_pl": "Phoenix",
+    "country_en": "United States"
+  },
+  {
+    "code": "HHR",
+    "name": "Jack Northrop Field Hawthorne Municipal Airport",
+    "city_en": "Hawthorne",
+    "city_pl": "Hawthorne",
+    "country_en": "United States"
+  },
+  {
+    "code": "HUL",
+    "name": "Houlton International Airport",
+    "city_en": "Houlton",
+    "city_pl": "Houlton",
+    "country_en": "United States"
+  },
+  {
+    "code": "END",
+    "name": "Vance Air Force Base",
+    "city_en": "Enid",
+    "city_pl": "Enid",
+    "country_en": "United States"
+  },
+  {
+    "code": "NTD",
+    "name": "Point Mugu Naval Air Station (Naval Base Ventura Co)",
+    "city_en": "Point Mugu",
+    "city_pl": "Point Mugu",
+    "country_en": "United States"
+  },
+  {
+    "code": "EDW",
+    "name": "Edwards Air Force Base",
+    "city_en": "Edwards Afb",
+    "city_pl": "Edwards Afb",
+    "country_en": "United States"
+  },
+  {
+    "code": "LCH",
+    "name": "Lake Charles Regional Airport",
+    "city_en": "Lake Charles",
+    "city_pl": "Lake Charles",
+    "country_en": "United States"
+  },
+  {
+    "code": "KOA",
+    "name": "Ellison Onizuka Kona International At Keahole Airport",
+    "city_en": "Kona",
+    "city_pl": "Kona",
+    "country_en": "United States"
+  },
+  {
+    "code": "MYR",
+    "name": "Myrtle Beach International Airport",
+    "city_en": "Myrtle Beach",
+    "city_pl": "Myrtle Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "NLC",
+    "name": "Lemoore Naval Air Station (Reeves Field) Airport",
+    "city_en": "Lemoore",
+    "city_pl": "Lemoore",
+    "country_en": "United States"
+  },
+  {
+    "code": "ACK",
+    "name": "Nantucket Memorial Airport",
+    "city_en": "Nantucket",
+    "city_pl": "Nantucket",
+    "country_en": "United States"
+  },
+  {
+    "code": "FAF",
+    "name": "Felker Army Air Field",
+    "city_en": "Fort Eustis",
+    "city_pl": "Fort Eustis",
+    "country_en": "United States"
+  },
+  {
+    "code": "HOP",
+    "name": "Campbell AAF (Fort Campbell) Air Field",
+    "city_en": "Hopkinsville",
+    "city_pl": "Hopkinsville",
+    "country_en": "United States"
+  },
+  {
+    "code": "DCA",
+    "name": "Ronald Reagan Washington National Airport",
+    "city_en": "Washington",
+    "city_pl": "Waszyngton",
+    "country_en": "United States"
+  },
+  {
+    "code": "NHK",
+    "name": "Patuxent River Naval Air Station (Trapnell Field)",
+    "city_en": "Patuxent River",
+    "city_pl": "Patuxent River",
+    "country_en": "United States"
+  },
+  {
+    "code": "PSX",
+    "name": "Palacios Municipal Airport",
+    "city_en": "Palacios",
+    "city_pl": "Palacios",
+    "country_en": "United States"
+  },
+  {
+    "code": "BYH",
+    "name": "Arkansas International Airport",
+    "city_en": "Blytheville",
+    "city_pl": "Blytheville",
+    "country_en": "United States"
+  },
+  {
+    "code": "ACY",
+    "name": "Atlantic City International Airport",
+    "city_en": "Atlantic City",
+    "city_pl": "Atlantic City",
+    "country_en": "United States"
+  },
+  {
+    "code": "TIK",
+    "name": "Tinker Air Force Base",
+    "city_en": "Oklahoma City",
+    "city_pl": "Oklahoma City",
+    "country_en": "United States"
+  },
+  {
+    "code": "ECG",
+    "name": "Elizabeth City Regional Airport & Coast Guard Air Station",
+    "city_en": "Elizabeth City",
+    "city_pl": "Elizabeth City",
+    "country_en": "United States"
+  },
+  {
+    "code": "PUB",
+    "name": "Pueblo Memorial Airport",
+    "city_en": "Pueblo",
+    "city_pl": "Pueblo",
+    "country_en": "United States"
+  },
+  {
+    "code": "PQI",
+    "name": "Northern Maine Regional Airport at Presque Isle",
+    "city_en": "Presque Isle",
+    "city_pl": "Presque Isle",
+    "country_en": "United States"
+  },
+  {
+    "code": "GRF",
+    "name": "Gray Army Air Field",
+    "city_en": "Fort Lewis",
+    "city_pl": "Fort Lewis",
+    "country_en": "United States"
+  },
+  {
+    "code": "ADQ",
+    "name": "Kodiak Airport",
+    "city_en": "Kodiak",
+    "city_pl": "Kodiak",
+    "country_en": "United States"
+  },
+  {
+    "code": "UPP",
+    "name": "Upolu Airport",
+    "city_en": "Opolu",
+    "city_pl": "Opolu",
+    "country_en": "United States"
+  },
+  {
+    "code": "FLL",
+    "name": "Fort Lauderdale Hollywood International Airport",
+    "city_en": "Fort Lauderdale",
+    "city_pl": "Fort Lauderdale",
+    "country_en": "United States"
+  },
+  {
+    "code": "INL",
+    "name": "Falls International Airport",
+    "city_en": "International Falls",
+    "city_pl": "International Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "SLC",
+    "name": "Salt Lake City International Airport",
+    "city_en": "Salt Lake City",
+    "city_pl": "Salt Lake City",
+    "country_en": "United States"
+  },
+  {
+    "code": "CDS",
+    "name": "Childress Municipal Airport",
+    "city_en": "Childress",
+    "city_pl": "Childress",
+    "country_en": "United States"
+  },
+  {
+    "code": "BIX",
+    "name": "Keesler Air Force Base",
+    "city_en": "Biloxi",
+    "city_pl": "Biloxi",
+    "country_en": "United States"
+  },
+  {
+    "code": "LSF",
+    "name": "Lawson Army Air Field (Fort Benning)",
+    "city_en": "Fort Benning",
+    "city_pl": "Fort Benning",
+    "country_en": "United States"
+  },
+  {
+    "code": "NQI",
+    "name": "Kingsville Naval Air Station",
+    "city_en": "Kingsville",
+    "city_pl": "Kingsville",
+    "country_en": "United States"
+  },
+  {
+    "code": "FRI",
+    "name": "Marshall Army Air Field",
+    "city_en": "Fort Riley",
+    "city_pl": "Fort Riley",
+    "country_en": "United States"
+  },
+  {
+    "code": "MDT",
+    "name": "Harrisburg International Airport",
+    "city_en": "Harrisburg",
+    "city_pl": "Harrisburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "LNK",
+    "name": "Lincoln Airport",
+    "city_en": "Lincoln",
+    "city_pl": "Lincoln",
+    "country_en": "United States"
+  },
+  {
+    "code": "LAN",
+    "name": "Capital City Airport",
+    "city_en": "Lansing",
+    "city_pl": "Lansing",
+    "country_en": "United States"
+  },
+  {
+    "code": "MUE",
+    "name": "Waimea Kohala Airport",
+    "city_en": "Kamuela",
+    "city_pl": "Kamuela",
+    "country_en": "United States"
+  },
+  {
+    "code": "MSS",
+    "name": "Massena International Richards Field",
+    "city_en": "Massena",
+    "city_pl": "Massena",
+    "country_en": "United States"
+  },
+  {
+    "code": "HKY",
+    "name": "Hickory Regional Airport",
+    "city_en": "Hickory",
+    "city_pl": "Hickory",
+    "country_en": "United States"
+  },
+  {
+    "code": "SPG",
+    "name": "Albert Whitted Airport",
+    "city_en": "St. Petersburg",
+    "city_pl": "St. Petersburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "FMY",
+    "name": "Page Field",
+    "city_en": "Fort Myers",
+    "city_pl": "Fort Myers",
+    "country_en": "United States"
+  },
+  {
+    "code": "IAH",
+    "name": "George Bush Intercontinental Houston Airport",
+    "city_en": "Houston",
+    "city_pl": "Houston",
+    "country_en": "United States"
+  },
+  {
+    "code": "ADW",
+    "name": "Joint Base Andrews",
+    "city_en": "Camp Springs",
+    "city_pl": "Camp Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "INT",
+    "name": "Smith Reynolds Airport",
+    "city_en": "Winston-salem",
+    "city_pl": "Winston-salem",
+    "country_en": "United States"
+  },
+  {
+    "code": "VCV",
+    "name": "Southern California Logistics Airport",
+    "city_en": "Victorville",
+    "city_pl": "Victorville",
+    "country_en": "United States"
+  },
+  {
+    "code": "CEW",
+    "name": "Bob Sikes Airport",
+    "city_en": "Crestview",
+    "city_pl": "Crestview",
+    "country_en": "United States"
+  },
+  {
+    "code": "PHN",
+    "name": "St Clair County International Airport",
+    "city_en": "Port Huron",
+    "city_pl": "Port Huron",
+    "country_en": "United States"
+  },
+  {
+    "code": "BFL",
+    "name": "Meadows Field",
+    "city_en": "Bakersfield",
+    "city_pl": "Bakersfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "ELP",
+    "name": "El Paso International Airport",
+    "city_en": "El Paso",
+    "city_pl": "El Paso",
+    "country_en": "United States"
+  },
+  {
+    "code": "HRL",
+    "name": "Valley International Airport",
+    "city_en": "Harlingen",
+    "city_pl": "Harlingen",
+    "country_en": "United States"
+  },
+  {
+    "code": "CAE",
+    "name": "Columbia Metropolitan Airport",
+    "city_en": "Columbia",
+    "city_pl": "Columbia",
+    "country_en": "United States"
+  },
+  {
+    "code": "DMA",
+    "name": "Davis Monthan Air Force Base",
+    "city_en": "Tucson",
+    "city_pl": "Tucson",
+    "country_en": "United States"
+  },
+  {
+    "code": "NPA",
+    "name": "Pensacola Naval Air Station/Forrest Sherman Field",
+    "city_en": "Pensacola",
+    "city_pl": "Pensacola",
+    "country_en": "United States"
+  },
+  {
+    "code": "PNS",
+    "name": "Pensacola Regional Airport",
+    "city_en": "Pensacola",
+    "city_pl": "Pensacola",
+    "country_en": "United States"
+  },
+  {
+    "code": "RDR",
+    "name": "Grand Forks Air Force Base",
+    "city_en": "Red River",
+    "city_pl": "Red River",
+    "country_en": "United States"
+  },
+  {
+    "code": "HOU",
+    "name": "William P Hobby Airport",
+    "city_en": "Houston",
+    "city_pl": "Houston",
+    "country_en": "United States"
+  },
+  {
+    "code": "BFK",
+    "name": "Buckley Air Force Base",
+    "city_en": "Buckley",
+    "city_pl": "Buckley",
+    "country_en": "United States"
+  },
+  {
+    "code": "ORT",
+    "name": "Northway Airport",
+    "city_en": "Northway",
+    "city_pl": "Northway",
+    "country_en": "United States"
+  },
+  {
+    "code": "PAQ",
+    "name": "Warren Bud Woods Palmer Municipal Airport",
+    "city_en": "Palmer",
+    "city_pl": "Palmer",
+    "country_en": "United States"
+  },
+  {
+    "code": "PIT",
+    "name": "Pittsburgh International Airport",
+    "city_en": "Pittsburgh",
+    "city_pl": "Pittsburgh",
+    "country_en": "United States"
+  },
+  {
+    "code": "BRW",
+    "name": "Wiley Post Will Rogers Memorial Airport",
+    "city_en": "Barrow",
+    "city_pl": "Barrow",
+    "country_en": "United States"
+  },
+  {
+    "code": "EFD",
+    "name": "Ellington Airport",
+    "city_en": "Houston",
+    "city_pl": "Houston",
+    "country_en": "United States"
+  },
+  {
+    "code": "NUW",
+    "name": "Whidbey Island Naval Air Station (Ault Field)",
+    "city_en": "Whidbey Island",
+    "city_pl": "Whidbey Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "ALI",
+    "name": "Alice International Airport",
+    "city_en": "Alice",
+    "city_pl": "Alice",
+    "country_en": "United States"
+  },
+  {
+    "code": "VAD",
+    "name": "Moody Air Force Base",
+    "city_en": "Valdosta",
+    "city_pl": "Valdosta",
+    "country_en": "United States"
+  },
+  {
+    "code": "MIA",
+    "name": "Miami International Airport",
+    "city_en": "Miami",
+    "city_pl": "Miami",
+    "country_en": "United States"
+  },
+  {
+    "code": "SEA",
+    "name": "Seattle Tacoma International Airport",
+    "city_en": "Seattle",
+    "city_pl": "Seattle",
+    "country_en": "United States"
+  },
+  {
+    "code": "CHA",
+    "name": "Lovell Field",
+    "city_en": "Chattanooga",
+    "city_pl": "Chattanooga",
+    "country_en": "United States"
+  },
+  {
+    "code": "BDR",
+    "name": "Igor I Sikorsky Memorial Airport",
+    "city_en": "Stratford",
+    "city_pl": "Stratford",
+    "country_en": "United States"
+  },
+  {
+    "code": "JAN",
+    "name": "Jackson-Medgar Wiley Evers International Airport",
+    "city_en": "Jackson",
+    "city_pl": "Jackson",
+    "country_en": "United States"
+  },
+  {
+    "code": "GLS",
+    "name": "Scholes International At Galveston Airport",
+    "city_en": "Galveston",
+    "city_pl": "Galveston",
+    "country_en": "United States"
+  },
+  {
+    "code": "LGB",
+    "name": "Long Beach /Daugherty Field/ Airport",
+    "city_en": "Long Beach",
+    "city_pl": "Long Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "HDH",
+    "name": "Dillingham Airfield",
+    "city_en": "Dillingham",
+    "city_pl": "Dillingham",
+    "country_en": "United States"
+  },
+  {
+    "code": "IPT",
+    "name": "Williamsport Regional Airport",
+    "city_en": "Williamsport",
+    "city_pl": "Williamsport",
+    "country_en": "United States"
+  },
+  {
+    "code": "IND",
+    "name": "Indianapolis International Airport",
+    "city_en": "Indianapolis",
+    "city_pl": "Indianapolis",
+    "country_en": "United States"
+  },
+  {
+    "code": "SZL",
+    "name": "Whiteman Air Force Base",
+    "city_en": "Knobnoster",
+    "city_pl": "Knobnoster",
+    "country_en": "United States"
+  },
+  {
+    "code": "AKC",
+    "name": "Akron Fulton International Airport",
+    "city_en": "Akron",
+    "city_pl": "Akron",
+    "country_en": "United States"
+  },
+  {
+    "code": "GWO",
+    "name": "Greenwood–Leflore Airport",
+    "city_en": "Greenwood",
+    "city_pl": "Greenwood",
+    "country_en": "United States"
+  },
+  {
+    "code": "HPN",
+    "name": "Westchester County Airport",
+    "city_en": "White Plains",
+    "city_pl": "White Plains",
+    "country_en": "United States"
+  },
+  {
+    "code": "FOK",
+    "name": "Francis S Gabreski Airport",
+    "city_en": "West Hampton Beach",
+    "city_pl": "West Hampton Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "JBR",
+    "name": "Jonesboro Municipal Airport",
+    "city_en": "Jonesboro",
+    "city_pl": "Jonesboro",
+    "country_en": "United States"
+  },
+  {
+    "code": "XSD",
+    "name": "Tonopah Test Range Airport",
+    "city_en": "Tonopah",
+    "city_pl": "Tonopah",
+    "country_en": "United States"
+  },
+  {
+    "code": "LNA",
+    "name": "Palm Beach County Park Airport",
+    "city_en": "West Palm Beach",
+    "city_pl": "West Palm Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "NZY",
+    "name": "North Island Naval Air Station-Halsey Field",
+    "city_en": "San Diego",
+    "city_pl": "San Diego",
+    "country_en": "United States"
+  },
+  {
+    "code": "BIF",
+    "name": "Biggs Army Air Field (Fort Bliss)",
+    "city_en": "El Paso",
+    "city_pl": "El Paso",
+    "country_en": "United States"
+  },
+  {
+    "code": "YUM",
+    "name": "Yuma MCAS/Yuma International Airport",
+    "city_en": "Yuma",
+    "city_pl": "Yuma",
+    "country_en": "United States"
+  },
+  {
+    "code": "CNM",
+    "name": "Cavern City Air Terminal",
+    "city_en": "Carlsbad",
+    "city_pl": "Carlsbad",
+    "country_en": "United States"
+  },
+  {
+    "code": "DLH",
+    "name": "Duluth International Airport",
+    "city_en": "Duluth",
+    "city_pl": "Duluth",
+    "country_en": "United States"
+  },
+  {
+    "code": "BET",
+    "name": "Bethel Airport",
+    "city_en": "Bethel",
+    "city_pl": "Bethel",
+    "country_en": "United States"
+  },
+  {
+    "code": "LOU",
+    "name": "Bowman Field",
+    "city_en": "Louisville",
+    "city_pl": "Louisville",
+    "country_en": "United States"
+  },
+  {
+    "code": "FHU",
+    "name": "Sierra Vista Municipal Libby Army Air Field",
+    "city_en": "Fort Huachuca",
+    "city_pl": "Fort Huachuca",
+    "country_en": "United States"
+  },
+  {
+    "code": "LIH",
+    "name": "Lihue Airport",
+    "city_en": "Lihue",
+    "city_pl": "Lihue",
+    "country_en": "United States"
+  },
+  {
+    "code": "HUF",
+    "name": "Terre Haute Regional Airport, Hulman Field",
+    "city_en": "Terre Haute",
+    "city_pl": "Terre Haute",
+    "country_en": "United States"
+  },
+  {
+    "code": "HVR",
+    "name": "Havre City County Airport",
+    "city_en": "Havre",
+    "city_pl": "Havre",
+    "country_en": "United States"
+  },
+  {
+    "code": "MWH",
+    "name": "Grant County International Airport",
+    "city_en": "Grant County Airport",
+    "city_pl": "Grant County Airport",
+    "country_en": "United States"
+  },
+  {
+    "code": "MPV",
+    "name": "Edward F Knapp State Airport",
+    "city_en": "Montpelier",
+    "city_pl": "Montpelier",
+    "country_en": "United States"
+  },
+  {
+    "code": "RIC",
+    "name": "Richmond International Airport",
+    "city_en": "Richmond",
+    "city_pl": "Richmond",
+    "country_en": "United States"
+  },
+  {
+    "code": "SHV",
+    "name": "Shreveport Regional Airport",
+    "city_en": "Shreveport",
+    "city_pl": "Shreveport",
+    "country_en": "United States"
+  },
+  {
+    "code": "CDV",
+    "name": "Merle K (Mudhole) Smith Airport",
+    "city_en": "Cordova",
+    "city_pl": "Cordova",
+    "country_en": "United States"
+  },
+  {
+    "code": "ORF",
+    "name": "Norfolk International Airport",
+    "city_en": "Norfolk",
+    "city_pl": "Norfolk",
+    "country_en": "United States"
+  },
+  {
+    "code": "BPT",
+    "name": "Southeast Texas Regional Airport",
+    "city_en": "Beaumont",
+    "city_pl": "Beaumont",
+    "country_en": "United States"
+  },
+  {
+    "code": "SAV",
+    "name": "Savannah Hilton Head International Airport",
+    "city_en": "Savannah",
+    "city_pl": "Savannah",
+    "country_en": "United States"
+  },
+  {
+    "code": "HIF",
+    "name": "Hill Air Force Base",
+    "city_en": "Ogden",
+    "city_pl": "Ogden",
+    "country_en": "United States"
+  },
+  {
+    "code": "OME",
+    "name": "Nome Airport",
+    "city_en": "Nome",
+    "city_pl": "Nome",
+    "country_en": "United States"
+  },
+  {
+    "code": "PIE",
+    "name": "St Petersburg Clearwater International Airport",
+    "city_en": "St. Petersburg",
+    "city_pl": "St. Petersburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "MNM",
+    "name": "Menominee Regional Airport",
+    "city_en": "Macon",
+    "city_pl": "Macon",
+    "country_en": "United States"
+  },
+  {
+    "code": "CXO",
+    "name": "Conroe-North Houston Regional Airport",
+    "city_en": "Conroe",
+    "city_pl": "Conroe",
+    "country_en": "United States"
+  },
+  {
+    "code": "SCC",
+    "name": "Deadhorse Airport",
+    "city_en": "Deadhorse",
+    "city_pl": "Deadhorse",
+    "country_en": "United States"
+  },
+  {
+    "code": "SAT",
+    "name": "San Antonio International Airport",
+    "city_en": "San Antonio",
+    "city_pl": "San Antonio",
+    "country_en": "United States"
+  },
+  {
+    "code": "ROC",
+    "name": "Greater Rochester International Airport",
+    "city_en": "Rochester",
+    "city_pl": "Rochester",
+    "country_en": "United States"
+  },
+  {
+    "code": "COF",
+    "name": "Patrick Air Force Base",
+    "city_en": "Coco Beach",
+    "city_pl": "Coco Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "TEB",
+    "name": "Teterboro Airport",
+    "city_en": "Teterboro",
+    "city_pl": "Teterboro",
+    "country_en": "United States"
+  },
+  {
+    "code": "RCA",
+    "name": "Ellsworth Air Force Base",
+    "city_en": "Rapid City",
+    "city_pl": "Rapid City",
+    "country_en": "United States"
+  },
+  {
+    "code": "RDU",
+    "name": "Raleigh Durham International Airport",
+    "city_en": "Raleigh-durham",
+    "city_pl": "Raleigh-durham",
+    "country_en": "United States"
+  },
+  {
+    "code": "DAY",
+    "name": "James M Cox Dayton International Airport",
+    "city_en": "Dayton",
+    "city_pl": "Dayton",
+    "country_en": "United States"
+  },
+  {
+    "code": "ENA",
+    "name": "Kenai Municipal Airport",
+    "city_en": "Kenai",
+    "city_pl": "Kenai",
+    "country_en": "United States"
+  },
+  {
+    "code": "MLC",
+    "name": "Mc Alester Regional Airport",
+    "city_en": "Mcalester",
+    "city_pl": "Mcalester",
+    "country_en": "United States"
+  },
+  {
+    "code": "IAG",
+    "name": "Niagara Falls International Airport",
+    "city_en": "Niagara Falls",
+    "city_pl": "Niagara Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "CFD",
+    "name": "Coulter Field",
+    "city_en": "Bryan",
+    "city_pl": "Bryan",
+    "country_en": "United States"
+  },
+  {
+    "code": "LIY",
+    "name": "Wright AAF (Fort Stewart)/Midcoast Regional Airport",
+    "city_en": "Wright",
+    "city_pl": "Wright",
+    "country_en": "United States"
+  },
+  {
+    "code": "PHF",
+    "name": "Newport News Williamsburg International Airport",
+    "city_en": "Newport News",
+    "city_pl": "Newport News",
+    "country_en": "United States"
+  },
+  {
+    "code": "ESF",
+    "name": "Esler Regional Airport",
+    "city_en": "Alexandria",
+    "city_pl": "Alexandria",
+    "country_en": "United States"
+  },
+  {
+    "code": "LTS",
+    "name": "Altus Air Force Base",
+    "city_en": "Altus",
+    "city_pl": "Altus",
+    "country_en": "United States"
+  },
+  {
+    "code": "TUS",
+    "name": "Tucson International Airport",
+    "city_en": "Tucson",
+    "city_pl": "Tucson",
+    "country_en": "United States"
+  },
+  {
+    "code": "MIB",
+    "name": "Minot Air Force Base",
+    "city_en": "Minot",
+    "city_pl": "Minot",
+    "country_en": "United States"
+  },
+  {
+    "code": "BAB",
+    "name": "Beale Air Force Base",
+    "city_en": "Marysville",
+    "city_pl": "Marysville",
+    "country_en": "United States"
+  },
+  {
+    "code": "IKK",
+    "name": "Greater Kankakee Airport",
+    "city_en": "Kankakee",
+    "city_pl": "Kankakee",
+    "country_en": "United States"
+  },
+  {
+    "code": "GSB",
+    "name": "Seymour Johnson Air Force Base",
+    "city_en": "Goldsboro",
+    "city_pl": "Goldsboro",
+    "country_en": "United States"
+  },
+  {
+    "code": "PVD",
+    "name": "Theodore Francis Green State Airport",
+    "city_en": "Providence",
+    "city_pl": "Providence",
+    "country_en": "United States"
+  },
+  {
+    "code": "SBY",
+    "name": "Salisbury Ocean City Wicomico Regional Airport",
+    "city_en": "Salisbury",
+    "city_pl": "Salisbury",
+    "country_en": "United States"
+  },
+  {
+    "code": "BUR",
+    "name": "Bob Hope Airport",
+    "city_en": "Burbank",
+    "city_pl": "Burbank",
+    "country_en": "United States"
+  },
+  {
+    "code": "DTW",
+    "name": "Detroit Metropolitan Wayne County Airport",
+    "city_en": "Detroit",
+    "city_pl": "Detroit",
+    "country_en": "United States"
+  },
+  {
+    "code": "TPA",
+    "name": "Tampa International Airport",
+    "city_en": "Tampa",
+    "city_pl": "Tampa",
+    "country_en": "United States"
+  },
+  {
+    "code": "PMB",
+    "name": "Pembina Municipal Airport",
+    "city_en": "Pembina",
+    "city_pl": "Pembina",
+    "country_en": "United States"
+  },
+  {
+    "code": "POE",
+    "name": "Polk Army Air Field",
+    "city_en": "Fort Polk",
+    "city_pl": "Fort Polk",
+    "country_en": "United States"
+  },
+  {
+    "code": "EIL",
+    "name": "Eielson Air Force Base",
+    "city_en": "Fairbanks",
+    "city_pl": "Fairbanks",
+    "country_en": "United States"
+  },
+  {
+    "code": "HIB",
+    "name": "Range Regional Airport",
+    "city_en": "Hibbing",
+    "city_pl": "Hibbing",
+    "country_en": "United States"
+  },
+  {
+    "code": "LFK",
+    "name": "Angelina County Airport",
+    "city_en": "Lufkin",
+    "city_pl": "Lufkin",
+    "country_en": "United States"
+  },
+  {
+    "code": "MAF",
+    "name": "Midland International Airport",
+    "city_en": "Midland",
+    "city_pl": "Midland",
+    "country_en": "United States"
+  },
+  {
+    "code": "GRB",
+    "name": "Austin Straubel International Airport",
+    "city_en": "Green Bay",
+    "city_pl": "Green Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "ADM",
+    "name": "Ardmore Municipal Airport",
+    "city_en": "Ardmore",
+    "city_pl": "Ardmore",
+    "country_en": "United States"
+  },
+  {
+    "code": "WRI",
+    "name": "Mc Guire Air Force Base",
+    "city_en": "Wrightstown",
+    "city_pl": "Wrightstown",
+    "country_en": "United States"
+  },
+  {
+    "code": "AGS",
+    "name": "Augusta Regional At Bush Field",
+    "city_en": "Bush Field",
+    "city_pl": "Bush Field",
+    "country_en": "United States"
+  },
+  {
+    "code": "ISN",
+    "name": "Sloulin Field International Airport",
+    "city_en": "Williston",
+    "city_pl": "Williston",
+    "country_en": "United States"
+  },
+  {
+    "code": "LIT",
+    "name": "Bill & Hillary Clinton National Airport/Adams Field",
+    "city_en": "Little Rock",
+    "city_pl": "Little Rock",
+    "country_en": "United States"
+  },
+  {
+    "code": "SWF",
+    "name": "Stewart International Airport",
+    "city_en": "Newburgh",
+    "city_pl": "Newburgh",
+    "country_en": "United States"
+  },
+  {
+    "code": "BDE",
+    "name": "Baudette International Airport",
+    "city_en": "Baudette",
+    "city_pl": "Baudette",
+    "country_en": "United States"
+  },
+  {
+    "code": "SAC",
+    "name": "Sacramento Executive Airport",
+    "city_en": "Sacramento",
+    "city_pl": "Sacramento",
+    "country_en": "United States"
+  },
+  {
+    "code": "HOM",
+    "name": "Homer Airport",
+    "city_en": "Homer",
+    "city_pl": "Homer",
+    "country_en": "United States"
+  },
+  {
+    "code": "TBN",
+    "name": "Waynesville-St. Robert Regional Forney field",
+    "city_en": "Fort Leonardwood",
+    "city_pl": "Fort Leonardwood",
+    "country_en": "United States"
+  },
+  {
+    "code": "MGE",
+    "name": "Dobbins Air Reserve Base",
+    "city_en": "Marietta",
+    "city_pl": "Marietta",
+    "country_en": "United States"
+  },
+  {
+    "code": "SKA",
+    "name": "Fairchild Air Force Base",
+    "city_en": "Spokane",
+    "city_pl": "Spokane",
+    "country_en": "United States"
+  },
+  {
+    "code": "HTL",
+    "name": "Roscommon County - Blodgett Memorial Airport",
+    "city_en": "Houghton Lake",
+    "city_pl": "Houghton Lake",
+    "country_en": "United States"
+  },
+  {
+    "code": "PAM",
+    "name": "Tyndall Air Force Base",
+    "city_en": "Panama City",
+    "city_pl": "Panama City",
+    "country_en": "United States"
+  },
+  {
+    "code": "DFW",
+    "name": "Dallas Fort Worth International Airport",
+    "city_en": "Dallas-Fort Worth",
+    "city_pl": "Dallas-Fort Worth",
+    "country_en": "United States"
+  },
+  {
+    "code": "MLB",
+    "name": "Melbourne International Airport",
+    "city_en": "Melbourne",
+    "city_pl": "Melbourne",
+    "country_en": "United States"
+  },
+  {
+    "code": "TCM",
+    "name": "McChord Air Force Base",
+    "city_en": "Tacoma",
+    "city_pl": "Tacoma",
+    "country_en": "United States"
+  },
+  {
+    "code": "AUS",
+    "name": "Austin Bergstrom International Airport",
+    "city_en": "Austin",
+    "city_pl": "Austin",
+    "country_en": "United States"
+  },
+  {
+    "code": "LCK",
+    "name": "Rickenbacker International Airport",
+    "city_en": "Columbus",
+    "city_pl": "Columbus",
+    "country_en": "United States"
+  },
+  {
+    "code": "MQT",
+    "name": "Sawyer International Airport",
+    "city_en": "Gwinn",
+    "city_pl": "Gwinn",
+    "country_en": "United States"
+  },
+  {
+    "code": "TYS",
+    "name": "McGhee Tyson Airport",
+    "city_en": "Knoxville",
+    "city_pl": "Knoxville",
+    "country_en": "United States"
+  },
+  {
+    "code": "HLR",
+    "name": "Hood Army Air Field",
+    "city_en": "Fort Hood",
+    "city_pl": "Fort Hood",
+    "country_en": "United States"
+  },
+  {
+    "code": "STL",
+    "name": "St Louis Lambert International Airport",
+    "city_en": "St. Louis",
+    "city_pl": "St. Louis",
+    "country_en": "United States"
+  },
+  {
+    "code": "MIV",
+    "name": "Millville Municipal Airport",
+    "city_en": "Millville",
+    "city_pl": "Millville",
+    "country_en": "United States"
+  },
+  {
+    "code": "SPS",
+    "name": "Sheppard Air Force Base-Wichita Falls Municipal Airport",
+    "city_en": "Wichita Falls",
+    "city_pl": "Wichita Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "LUK",
+    "name": "Cincinnati Municipal Airport Lunken Field",
+    "city_en": "Cincinnati",
+    "city_pl": "Cincinnati",
+    "country_en": "United States"
+  },
+  {
+    "code": "ATL",
+    "name": "Hartsfield Jackson Atlanta International Airport",
+    "city_en": "Atlanta",
+    "city_pl": "Atlanta",
+    "country_en": "United States"
+  },
+  {
+    "code": "MER",
+    "name": "Castle Airport",
+    "city_en": "Merced",
+    "city_pl": "Merced",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCC",
+    "name": "Mc Clellan Airfield",
+    "city_en": "Sacramento",
+    "city_pl": "Sacramento",
+    "country_en": "United States"
+  },
+  {
+    "code": "GRR",
+    "name": "Gerald R. Ford International Airport",
+    "city_en": "Grand Rapids",
+    "city_pl": "Grand Rapids",
+    "country_en": "United States"
+  },
+  {
+    "code": "INK",
+    "name": "Winkler County Airport",
+    "city_en": "Wink",
+    "city_pl": "Wink",
+    "country_en": "United States"
+  },
+  {
+    "code": "FAT",
+    "name": "Fresno Yosemite International Airport",
+    "city_en": "Fresno",
+    "city_pl": "Fresno",
+    "country_en": "United States"
+  },
+  {
+    "code": "VRB",
+    "name": "Vero Beach Regional Airport",
+    "city_en": "Vero Beach",
+    "city_pl": "Vero Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "IPL",
+    "name": "Imperial County Airport",
+    "city_en": "Imperial",
+    "city_pl": "Imperial",
+    "country_en": "United States"
+  },
+  {
+    "code": "BNA",
+    "name": "Nashville International Airport",
+    "city_en": "Nashville",
+    "city_pl": "Nashville",
+    "country_en": "United States"
+  },
+  {
+    "code": "LRD",
+    "name": "Laredo International Airport",
+    "city_en": "Laredo",
+    "city_pl": "Laredo",
+    "country_en": "United States"
+  },
+  {
+    "code": "EDF",
+    "name": "Elmendorf Air Force Base",
+    "city_en": "Anchorage",
+    "city_pl": "Anchorage",
+    "country_en": "United States"
+  },
+  {
+    "code": "OTZ",
+    "name": "Ralph Wien Memorial Airport",
+    "city_en": "Kotzebue",
+    "city_pl": "Kotzebue",
+    "country_en": "United States"
+  },
+  {
+    "code": "AOO",
+    "name": "Altoona Blair County Airport",
+    "city_en": "Altoona",
+    "city_pl": "Altoona",
+    "country_en": "United States"
+  },
+  {
+    "code": "DYS",
+    "name": "Dyess Air Force Base",
+    "city_en": "Abilene",
+    "city_pl": "Abilene",
+    "country_en": "United States"
+  },
+  {
+    "code": "ELD",
+    "name": "South Arkansas Regional At Goodwin Field",
+    "city_en": "El Dorado",
+    "city_pl": "El Dorado",
+    "country_en": "United States"
+  },
+  {
+    "code": "LGA",
+    "name": "La Guardia Airport",
+    "city_en": "New York",
+    "city_pl": "Nowy Jork",
+    "country_en": "United States"
+  },
+  {
+    "code": "TLH",
+    "name": "Tallahassee Regional Airport",
+    "city_en": "Tallahassee",
+    "city_pl": "Tallahassee",
+    "country_en": "United States"
+  },
+  {
+    "code": "DPA",
+    "name": "Dupage Airport",
+    "city_en": "West Chicago",
+    "city_pl": "West Chicago",
+    "country_en": "United States"
+  },
+  {
+    "code": "ACT",
+    "name": "Waco Regional Airport",
+    "city_en": "Waco",
+    "city_pl": "Waco",
+    "country_en": "United States"
+  },
+  {
+    "code": "AUG",
+    "name": "Augusta State Airport",
+    "city_en": "Augusta",
+    "city_pl": "Augusta",
+    "country_en": "United States"
+  },
+  {
+    "code": "NIP",
+    "name": "Jacksonville Naval Air Station (Towers Field)",
+    "city_en": "Jacksonville",
+    "city_pl": "Jacksonville",
+    "country_en": "United States"
+  },
+  {
+    "code": "MKL",
+    "name": "McKellar-Sipes Regional Airport",
+    "city_en": "Jackson",
+    "city_pl": "Jackson",
+    "country_en": "United States"
+  },
+  {
+    "code": "MKK",
+    "name": "Molokai Airport",
+    "city_en": "Molokai",
+    "city_pl": "Molokai",
+    "country_en": "United States"
+  },
+  {
+    "code": "FTK",
+    "name": "Godman Army Air Field",
+    "city_en": "Fort Knox",
+    "city_pl": "Fort Knox",
+    "country_en": "United States"
+  },
+  {
+    "code": "SJT",
+    "name": "San Angelo Regional Mathis Field",
+    "city_en": "San Angelo",
+    "city_pl": "San Angelo",
+    "country_en": "United States"
+  },
+  {
+    "code": "CXL",
+    "name": "Calexico International Airport",
+    "city_en": "Calexico",
+    "city_pl": "Calexico",
+    "country_en": "United States"
+  },
+  {
+    "code": "CIC",
+    "name": "Chico Municipal Airport",
+    "city_en": "Chico",
+    "city_pl": "Chico",
+    "country_en": "United States"
+  },
+  {
+    "code": "BTV",
+    "name": "Burlington International Airport",
+    "city_en": "Burlington",
+    "city_pl": "Burlington",
+    "country_en": "United States"
+  },
+  {
+    "code": "JAX",
+    "name": "Jacksonville International Airport",
+    "city_en": "Jacksonville",
+    "city_pl": "Jacksonville",
+    "country_en": "United States"
+  },
+  {
+    "code": "DRO",
+    "name": "Durango La Plata County Airport",
+    "city_en": "Durango",
+    "city_pl": "Durango",
+    "country_en": "United States"
+  },
+  {
+    "code": "IAD",
+    "name": "Washington Dulles International Airport",
+    "city_en": "Washington",
+    "city_pl": "Waszyngton",
+    "country_en": "United States"
+  },
+  {
+    "code": "CLL",
+    "name": "Easterwood Field",
+    "city_en": "College Station",
+    "city_pl": "College Station",
+    "country_en": "United States"
+  },
+  {
+    "code": "SFF",
+    "name": "Felts Field",
+    "city_en": "Spokane",
+    "city_pl": "Spokane",
+    "country_en": "United States"
+  },
+  {
+    "code": "MKE",
+    "name": "General Mitchell International Airport",
+    "city_en": "Milwaukee",
+    "city_pl": "Milwaukee",
+    "country_en": "United States"
+  },
+  {
+    "code": "ABI",
+    "name": "Abilene Regional Airport",
+    "city_en": "Abilene",
+    "city_pl": "Abilene",
+    "country_en": "United States"
+  },
+  {
+    "code": "COU",
+    "name": "Columbia Regional Airport",
+    "city_en": "Columbia",
+    "city_pl": "Columbia",
+    "country_en": "United States"
+  },
+  {
+    "code": "PDX",
+    "name": "Portland International Airport",
+    "city_en": "Portland",
+    "city_pl": "Portland",
+    "country_en": "United States"
+  },
+  {
+    "code": "TNT",
+    "name": "Dade Collier Training and Transition Airport",
+    "city_en": "Miami",
+    "city_pl": "Miami",
+    "country_en": "United States"
+  },
+  {
+    "code": "PBI",
+    "name": "Palm Beach International Airport",
+    "city_en": "West Palm Beach",
+    "city_pl": "West Palm Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "FTW",
+    "name": "Fort Worth Meacham International Airport",
+    "city_en": "Fort Worth",
+    "city_pl": "Fort Worth",
+    "country_en": "United States"
+  },
+  {
+    "code": "OGS",
+    "name": "Ogdensburg International Airport",
+    "city_en": "Ogdensburg",
+    "city_pl": "Ogdensburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "FMH",
+    "name": "Cape Cod Coast Guard Air Station",
+    "city_en": "Falmouth",
+    "city_pl": "Falmouth",
+    "country_en": "United States"
+  },
+  {
+    "code": "BFI",
+    "name": "Boeing Field King County International Airport",
+    "city_en": "Seattle",
+    "city_pl": "Seattle",
+    "country_en": "United States"
+  },
+  {
+    "code": "SKF",
+    "name": "Lackland Air Force Base",
+    "city_en": "San Antonio",
+    "city_pl": "San Antonio",
+    "country_en": "United States"
+  },
+  {
+    "code": "HNL",
+    "name": "Daniel K Inouye International Airport",
+    "city_en": "Honolulu",
+    "city_pl": "Honolulu",
+    "country_en": "United States"
+  },
+  {
+    "code": "DSM",
+    "name": "Des Moines International Airport",
+    "city_en": "Des Moines",
+    "city_pl": "Des Moines",
+    "country_en": "United States"
+  },
+  {
+    "code": "EWN",
+    "name": "Coastal Carolina Regional Airport",
+    "city_en": "New Bern",
+    "city_pl": "New Bern",
+    "country_en": "United States"
+  },
+  {
+    "code": "SAN",
+    "name": "San Diego International Airport",
+    "city_en": "San Diego",
+    "city_pl": "San Diego",
+    "country_en": "United States"
+  },
+  {
+    "code": "MLU",
+    "name": "Monroe Regional Airport",
+    "city_en": "Monroe",
+    "city_pl": "Monroe",
+    "country_en": "United States"
+  },
+  {
+    "code": "SSC",
+    "name": "Shaw Air Force Base",
+    "city_en": "Sumter",
+    "city_pl": "Sumter",
+    "country_en": "United States"
+  },
+  {
+    "code": "ONT",
+    "name": "Ontario International Airport",
+    "city_en": "Ontario",
+    "city_pl": "Ontario",
+    "country_en": "United States"
+  },
+  {
+    "code": "GVT",
+    "name": "Majors Airport",
+    "city_en": "Greenvile",
+    "city_pl": "Greenvile",
+    "country_en": "United States"
+  },
+  {
+    "code": "ROW",
+    "name": "Roswell International Air Center Airport",
+    "city_en": "Roswell",
+    "city_pl": "Roswell",
+    "country_en": "United States"
+  },
+  {
+    "code": "DET",
+    "name": "Coleman A. Young Municipal Airport",
+    "city_en": "Detroit",
+    "city_pl": "Detroit",
+    "country_en": "United States"
+  },
+  {
+    "code": "BRO",
+    "name": "Brownsville South Padre Island International Airport",
+    "city_en": "Brownsville",
+    "city_pl": "Brownsville",
+    "country_en": "United States"
+  },
+  {
+    "code": "DHN",
+    "name": "Dothan Regional Airport",
+    "city_en": "Dothan",
+    "city_pl": "Dothan",
+    "country_en": "United States"
+  },
+  {
+    "code": "WWD",
+    "name": "Cape May County Airport",
+    "city_en": "Wildwood",
+    "city_pl": "Wildwood",
+    "country_en": "United States"
+  },
+  {
+    "code": "NFL",
+    "name": "Fallon Naval Air Station",
+    "city_en": "Fallon",
+    "city_pl": "Fallon",
+    "country_en": "United States"
+  },
+  {
+    "code": "MTC",
+    "name": "Selfridge Air National Guard Base Airport",
+    "city_en": "Mount Clemens",
+    "city_pl": "Mount Clemens",
+    "country_en": "United States"
+  },
+  {
+    "code": "FMN",
+    "name": "Four Corners Regional Airport",
+    "city_en": "Farmington",
+    "city_pl": "Farmington",
+    "country_en": "United States"
+  },
+  {
+    "code": "CRP",
+    "name": "Corpus Christi International Airport",
+    "city_en": "Corpus Christi",
+    "city_pl": "Corpus Christi",
+    "country_en": "United States"
+  },
+  {
+    "code": "SYR",
+    "name": "Syracuse Hancock International Airport",
+    "city_en": "Syracuse",
+    "city_pl": "Syracuse",
+    "country_en": "United States"
+  },
+  {
+    "code": "NQX",
+    "name": "Naval Air Station Key West/Boca Chica Field",
+    "city_en": "Key West",
+    "city_pl": "Key West",
+    "country_en": "United States"
+  },
+  {
+    "code": "MDW",
+    "name": "Chicago Midway International Airport",
+    "city_en": "Chicago",
+    "city_pl": "Chicago",
+    "country_en": "United States"
+  },
+  {
+    "code": "SJC",
+    "name": "Norman Y. Mineta San Jose International Airport",
+    "city_en": "San Jose",
+    "city_pl": "San Jose",
+    "country_en": "United States"
+  },
+  {
+    "code": "HOB",
+    "name": "Lea County Regional Airport",
+    "city_en": "Hobbs",
+    "city_pl": "Hobbs",
+    "country_en": "United States"
+  },
+  {
+    "code": "PNE",
+    "name": "Northeast Philadelphia Airport",
+    "city_en": "Philadelphia",
+    "city_pl": "Philadelphia",
+    "country_en": "United States"
+  },
+  {
+    "code": "DEN",
+    "name": "Denver International Airport",
+    "city_en": "Denver",
+    "city_pl": "Denver",
+    "country_en": "United States"
+  },
+  {
+    "code": "PHL",
+    "name": "Philadelphia International Airport",
+    "city_en": "Philadelphia",
+    "city_pl": "Philadelphia",
+    "country_en": "United States"
+  },
+  {
+    "code": "SUX",
+    "name": "Sioux Gateway Col. Bud Day Field",
+    "city_en": "Sioux City",
+    "city_pl": "Sioux City",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCN",
+    "name": "Middle Georgia Regional Airport",
+    "city_en": "Macon",
+    "city_pl": "Macon",
+    "country_en": "United States"
+  },
+  {
+    "code": "TCS",
+    "name": "Truth Or Consequences Municipal Airport",
+    "city_en": "Truth Or Consequences",
+    "city_pl": "Truth Or Consequences",
+    "country_en": "United States"
+  },
+  {
+    "code": "PMD",
+    "name": "Palmdale Regional/USAF Plant 42 Airport",
+    "city_en": "Palmdale",
+    "city_pl": "Palmdale",
+    "country_en": "United States"
+  },
+  {
+    "code": "RND",
+    "name": "Randolph Air Force Base",
+    "city_en": "San Antonio",
+    "city_pl": "San Antonio",
+    "country_en": "United States"
+  },
+  {
+    "code": "NJK",
+    "name": "El Centro NAF Airport (Vraciu Field)",
+    "city_en": "El Centro",
+    "city_pl": "El Centro",
+    "country_en": "United States"
+  },
+  {
+    "code": "CMH",
+    "name": "John Glenn Columbus International Airport",
+    "city_en": "Columbus",
+    "city_pl": "Columbus",
+    "country_en": "United States"
+  },
+  {
+    "code": "FYV",
+    "name": "Drake Field",
+    "city_en": "Fayetteville",
+    "city_pl": "Fayetteville",
+    "country_en": "United States"
+  },
+  {
+    "code": "FSI",
+    "name": "Henry Post Army Air Field (Fort Sill)",
+    "city_en": "Fort Sill",
+    "city_pl": "Fort Sill",
+    "country_en": "United States"
+  },
+  {
+    "code": "FFO",
+    "name": "Wright-Patterson Air Force Base",
+    "city_en": "Dayton",
+    "city_pl": "Dayton",
+    "country_en": "United States"
+  },
+  {
+    "code": "GAL",
+    "name": "Edward G. Pitka Sr Airport",
+    "city_en": "Galena",
+    "city_pl": "Galena",
+    "country_en": "United States"
+  },
+  {
+    "code": "MWL",
+    "name": "Mineral Wells Airport",
+    "city_en": "Mineral Wells",
+    "city_pl": "Mineral Wells",
+    "country_en": "United States"
+  },
+  {
+    "code": "IAB",
+    "name": "Mc Connell Air Force Base",
+    "city_en": "Wichita",
+    "city_pl": "Wichita",
+    "country_en": "United States"
+  },
+  {
+    "code": "NBG",
+    "name": "New Orleans NAS JRB/Alvin Callender Field",
+    "city_en": "New Orleans",
+    "city_pl": "New Orleans",
+    "country_en": "United States"
+  },
+  {
+    "code": "BFT",
+    "name": "Beaufort County Airport",
+    "city_en": "Beaufort",
+    "city_pl": "Beaufort",
+    "country_en": "United States"
+  },
+  {
+    "code": "TXK",
+    "name": "Texarkana Regional Webb Field",
+    "city_en": "Texarkana",
+    "city_pl": "Texarkana",
+    "country_en": "United States"
+  },
+  {
+    "code": "PBG",
+    "name": "Plattsburgh International Airport",
+    "city_en": "Plattsburgh",
+    "city_pl": "Plattsburgh",
+    "country_en": "United States"
+  },
+  {
+    "code": "APG",
+    "name": "Phillips Army Air Field",
+    "city_en": "Aberdeen",
+    "city_pl": "Aberdeen",
+    "country_en": "United States"
+  },
+  {
+    "code": "TCC",
+    "name": "Tucumcari Municipal Airport",
+    "city_en": "Tucumcari",
+    "city_pl": "Tucumcari",
+    "country_en": "United States"
+  },
+  {
+    "code": "ANC",
+    "name": "Ted Stevens Anchorage International Airport",
+    "city_en": "Anchorage",
+    "city_pl": "Anchorage",
+    "country_en": "United States"
+  },
+  {
+    "code": "GRK",
+    "name": "Robert Gray  Army Air Field Airport",
+    "city_en": "Killeen",
+    "city_pl": "Killeen",
+    "country_en": "United States"
+  },
+  {
+    "code": "BLI",
+    "name": "Bellingham International Airport",
+    "city_en": "Bellingham",
+    "city_pl": "Bellingham",
+    "country_en": "United States"
+  },
+  {
+    "code": "NQA",
+    "name": "Millington-Memphis Airport",
+    "city_en": "Millington",
+    "city_pl": "Millington",
+    "country_en": "United States"
+  },
+  {
+    "code": "EKN",
+    "name": "Elkins-Randolph Co-Jennings Randolph Field",
+    "city_en": "Elkins",
+    "city_pl": "Elkins",
+    "country_en": "United States"
+  },
+  {
+    "code": "HFD",
+    "name": "Hartford Brainard Airport",
+    "city_en": "Hartford",
+    "city_pl": "Hartford",
+    "country_en": "United States"
+  },
+  {
+    "code": "SFZ",
+    "name": "North Central State Airport",
+    "city_en": "Smithfield",
+    "city_pl": "Smithfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "MOB",
+    "name": "Mobile Regional Airport",
+    "city_en": "Mobile",
+    "city_pl": "Mobile",
+    "country_en": "United States"
+  },
+  {
+    "code": "NUQ",
+    "name": "Moffett Federal Airfield",
+    "city_en": "Mountain View",
+    "city_pl": "Mountain View",
+    "country_en": "United States"
+  },
+  {
+    "code": "SAF",
+    "name": "Santa Fe Municipal Airport",
+    "city_en": "Santa Fe",
+    "city_pl": "Santa Fe",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKH",
+    "name": "Barking Sands Airport",
+    "city_en": "Barking Sands",
+    "city_pl": "Barking Sands",
+    "country_en": "United States"
+  },
+  {
+    "code": "DRI",
+    "name": "Beauregard Regional Airport",
+    "city_en": "Deridder",
+    "city_pl": "Deridder",
+    "country_en": "United States"
+  },
+  {
+    "code": "BSF",
+    "name": "Bradshaw Army Airfield",
+    "city_en": "Bradshaw Field",
+    "city_pl": "Bradshaw Field",
+    "country_en": "United States"
+  },
+  {
+    "code": "OLS",
+    "name": "Nogales International Airport",
+    "city_en": "Nogales",
+    "city_pl": "Nogales",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCF",
+    "name": "Mac Dill Air Force Base",
+    "city_en": "Tampa",
+    "city_pl": "Tampa",
+    "country_en": "United States"
+  },
+  {
+    "code": "BLV",
+    "name": "Scott AFB/Midamerica Airport",
+    "city_en": "Belleville",
+    "city_pl": "Belleville",
+    "country_en": "United States"
+  },
+  {
+    "code": "OPF",
+    "name": "Opa-locka Executive Airport",
+    "city_en": "Miami",
+    "city_pl": "Miami",
+    "country_en": "United States"
+  },
+  {
+    "code": "DRT",
+    "name": "Del Rio International Airport",
+    "city_en": "Del Rio",
+    "city_pl": "Del Rio",
+    "country_en": "United States"
+  },
+  {
+    "code": "RSW",
+    "name": "Southwest Florida International Airport",
+    "city_en": "Fort Myers",
+    "city_pl": "Fort Myers",
+    "country_en": "United States"
+  },
+  {
+    "code": "AKN",
+    "name": "King Salmon Airport",
+    "city_en": "King Salmon",
+    "city_pl": "King Salmon",
+    "country_en": "United States"
+  },
+  {
+    "code": "MUI",
+    "name": "Muir Army Air Field (Fort Indiantown Gap) Airport",
+    "city_en": "Muir",
+    "city_pl": "Muir",
+    "country_en": "United States"
+  },
+  {
+    "code": "JHM",
+    "name": "Kapalua Airport",
+    "city_en": "Lahania-kapalua",
+    "city_pl": "Lahania-kapalua",
+    "country_en": "United States"
+  },
+  {
+    "code": "JFK",
+    "name": "John F Kennedy International Airport",
+    "city_en": "New York",
+    "city_pl": "Nowy Jork",
+    "country_en": "United States"
+  },
+  {
+    "code": "HST",
+    "name": "Homestead ARB Airport",
+    "city_en": "Homestead",
+    "city_pl": "Homestead",
+    "country_en": "United States"
+  },
+  {
+    "code": "RAL",
+    "name": "Riverside Municipal Airport",
+    "city_en": "Riverside",
+    "city_pl": "Riverside",
+    "country_en": "United States"
+  },
+  {
+    "code": "FLV",
+    "name": "Sherman Army Air Field",
+    "city_en": "Fort Leavenworth",
+    "city_pl": "Fort Leavenworth",
+    "country_en": "United States"
+  },
+  {
+    "code": "WAL",
+    "name": "Wallops Flight Facility Airport",
+    "city_en": "Wallops Island",
+    "city_pl": "Wallops Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "HMN",
+    "name": "Holloman Air Force Base",
+    "city_en": "Alamogordo",
+    "city_pl": "Alamogordo",
+    "country_en": "United States"
+  },
+  {
+    "code": "NXX",
+    "name": "Willow Grove Naval Air Station/Joint Reserve Base",
+    "city_en": "Willow Grove",
+    "city_pl": "Willow Grove",
+    "country_en": "United States"
+  },
+  {
+    "code": "CYS",
+    "name": "Cheyenne Regional Jerry Olson Field",
+    "city_en": "Cheyenne",
+    "city_pl": "Cheyenne",
+    "country_en": "United States"
+  },
+  {
+    "code": "SCK",
+    "name": "Stockton Metropolitan Airport",
+    "city_en": "Stockton",
+    "city_pl": "Stockton",
+    "country_en": "United States"
+  },
+  {
+    "code": "CHS",
+    "name": "Charleston Air Force Base-International Airport",
+    "city_en": "Charleston",
+    "city_pl": "Charleston",
+    "country_en": "United States"
+  },
+  {
+    "code": "RNO",
+    "name": "Reno Tahoe International Airport",
+    "city_en": "Reno",
+    "city_pl": "Reno",
+    "country_en": "United States"
+  },
+  {
+    "code": "KTN",
+    "name": "Ketchikan International Airport",
+    "city_en": "Ketchikan",
+    "city_pl": "Ketchikan",
+    "country_en": "United States"
+  },
+  {
+    "code": "YIP",
+    "name": "Willow Run Airport",
+    "city_en": "Detroit",
+    "city_pl": "Detroit",
+    "country_en": "United States"
+  },
+  {
+    "code": "VBG",
+    "name": "Vandenberg Air Force Base",
+    "city_en": "Lompoc",
+    "city_pl": "Lompoc",
+    "country_en": "United States"
+  },
+  {
+    "code": "BHM",
+    "name": "Birmingham-Shuttlesworth International Airport",
+    "city_en": "Birmingham",
+    "city_pl": "Birmingham",
+    "country_en": "United States"
+  },
+  {
+    "code": "NEL",
+    "name": "Lakehurst Maxfield Field Airport",
+    "city_en": "Lakehurst",
+    "city_pl": "Lakehurst",
+    "country_en": "United States"
+  },
+  {
+    "code": "SYA",
+    "name": "Eareckson Air Station",
+    "city_en": "Shemya",
+    "city_pl": "Shemya",
+    "country_en": "United States"
+  },
+  {
+    "code": "LSV",
+    "name": "Nellis Air Force Base",
+    "city_en": "Las Vegas",
+    "city_pl": "Las Vegas",
+    "country_en": "United States"
+  },
+  {
+    "code": "RIV",
+    "name": "March ARB Airport",
+    "city_en": "Riverside",
+    "city_pl": "Riverside",
+    "country_en": "United States"
+  },
+  {
+    "code": "MOD",
+    "name": "Modesto City Co-Harry Sham Field",
+    "city_en": "Modesto",
+    "city_pl": "Modesto",
+    "country_en": "United States"
+  },
+  {
+    "code": "SMF",
+    "name": "Sacramento International Airport",
+    "city_en": "Sacramento",
+    "city_pl": "Sacramento",
+    "country_en": "United States"
+  },
+  {
+    "code": "UGN",
+    "name": "Waukegan National Airport",
+    "city_en": "Chicago",
+    "city_pl": "Chicago",
+    "country_en": "United States"
+  },
+  {
+    "code": "COS",
+    "name": "City of Colorado Springs Municipal Airport",
+    "city_en": "Colorado Springs",
+    "city_pl": "Colorado Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "BUF",
+    "name": "Buffalo Niagara International Airport",
+    "city_en": "Buffalo",
+    "city_pl": "Buffalo",
+    "country_en": "United States"
+  },
+  {
+    "code": "SKY",
+    "name": "Griffing Sandusky Airport",
+    "city_en": "Sandusky",
+    "city_pl": "Sandusky",
+    "country_en": "United States"
+  },
+  {
+    "code": "PAE",
+    "name": "Snohomish County (Paine Field) Airport",
+    "city_en": "Everett",
+    "city_pl": "Everett",
+    "country_en": "United States"
+  },
+  {
+    "code": "MUO",
+    "name": "Mountain Home Air Force Base",
+    "city_en": "Mountain Home",
+    "city_pl": "Mountain Home",
+    "country_en": "United States"
+  },
+  {
+    "code": "CDC",
+    "name": "Cedar City Regional Airport",
+    "city_en": "Cedar City",
+    "city_pl": "Cedar City",
+    "country_en": "United States"
+  },
+  {
+    "code": "BDL",
+    "name": "Bradley International Airport",
+    "city_en": "Windsor Locks",
+    "city_pl": "Windsor Locks",
+    "country_en": "United States"
+  },
+  {
+    "code": "MFE",
+    "name": "Mc Allen Miller International Airport",
+    "city_en": "Mcallen",
+    "city_pl": "Mcallen",
+    "country_en": "United States"
+  },
+  {
+    "code": "NGU",
+    "name": "Norfolk Naval Station (Chambers Field)",
+    "city_en": "Norfolk",
+    "city_pl": "Norfolk",
+    "country_en": "United States"
+  },
+  {
+    "code": "CEF",
+    "name": "Westover ARB/Metropolitan Airport",
+    "city_en": "Chicopee Falls",
+    "city_pl": "Chicopee Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "LBB",
+    "name": "Lubbock Preston Smith International Airport",
+    "city_en": "Lubbock",
+    "city_pl": "Lubbock",
+    "country_en": "United States"
+  },
+  {
+    "code": "ORD",
+    "name": "Chicago O'Hare International Airport",
+    "city_en": "Chicago",
+    "city_pl": "Chicago",
+    "country_en": "United States"
+  },
+  {
+    "code": "BCT",
+    "name": "Boca Raton Airport",
+    "city_en": "Boca Raton",
+    "city_pl": "Boca Raton",
+    "country_en": "United States"
+  },
+  {
+    "code": "FAI",
+    "name": "Fairbanks International Airport",
+    "city_en": "Fairbanks",
+    "city_pl": "Fairbanks",
+    "country_en": "United States"
+  },
+  {
+    "code": "CVS",
+    "name": "Cannon Air Force Base",
+    "city_en": "Clovis",
+    "city_pl": "Clovis",
+    "country_en": "United States"
+  },
+  {
+    "code": "NGF",
+    "name": "Kaneohe Bay MCAS (Marion E. Carl Field) Airport",
+    "city_en": "Kaneohe Bay",
+    "city_pl": "Kaneohe Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "OFF",
+    "name": "Offutt Air Force Base",
+    "city_en": "Omaha",
+    "city_pl": "Omaha",
+    "country_en": "United States"
+  },
+  {
+    "code": "GKN",
+    "name": "Gulkana Airport",
+    "city_en": "Gulkana",
+    "city_pl": "Gulkana",
+    "country_en": "United States"
+  },
+  {
+    "code": "ART",
+    "name": "Watertown International Airport",
+    "city_en": "Watertown",
+    "city_pl": "Watertown",
+    "country_en": "United States"
+  },
+  {
+    "code": "PSP",
+    "name": "Palm Springs International Airport",
+    "city_en": "Palm Springs",
+    "city_pl": "Palm Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "AMA",
+    "name": "Rick Husband Amarillo International Airport",
+    "city_en": "Amarillo",
+    "city_pl": "Amarillo",
+    "country_en": "United States"
+  },
+  {
+    "code": "FOD",
+    "name": "Fort Dodge Regional Airport",
+    "city_en": "Fort Dodge",
+    "city_pl": "Fort Dodge",
+    "country_en": "United States"
+  },
+  {
+    "code": "BAD",
+    "name": "Barksdale Air Force Base",
+    "city_en": "Shreveport",
+    "city_pl": "Shreveport",
+    "country_en": "United States"
+  },
+  {
+    "code": "FOE",
+    "name": "Topeka Regional Airport - Forbes Field",
+    "city_en": "Topeka",
+    "city_pl": "Topeka",
+    "country_en": "United States"
+  },
+  {
+    "code": "COT",
+    "name": "Cotulla-La Salle County Airport",
+    "city_en": "Cotulla",
+    "city_pl": "Cotulla",
+    "country_en": "United States"
+  },
+  {
+    "code": "ILM",
+    "name": "Wilmington International Airport",
+    "city_en": "Wilmington",
+    "city_pl": "Wilmington",
+    "country_en": "United States"
+  },
+  {
+    "code": "BTR",
+    "name": "Baton Rouge Metropolitan Airport",
+    "city_en": "Baton Rouge",
+    "city_pl": "Baton Rouge",
+    "country_en": "United States"
+  },
+  {
+    "code": "TYR",
+    "name": "Tyler Pounds Regional Airport",
+    "city_en": "Tyler",
+    "city_pl": "Tyler",
+    "country_en": "United States"
+  },
+  {
+    "code": "BWI",
+    "name": "Baltimore/Washington International Thurgood Marshall Airport",
+    "city_en": "Baltimore",
+    "city_pl": "Baltimore",
+    "country_en": "United States"
+  },
+  {
+    "code": "HBR",
+    "name": "Hobart Regional Airport",
+    "city_en": "Hobart",
+    "city_pl": "Hobart",
+    "country_en": "United States"
+  },
+  {
+    "code": "LNY",
+    "name": "Lanai Airport",
+    "city_en": "Lanai",
+    "city_pl": "Lanai",
+    "country_en": "United States"
+  },
+  {
+    "code": "AEX",
+    "name": "Alexandria International Airport",
+    "city_en": "Alexandria",
+    "city_pl": "Alexandria",
+    "country_en": "United States"
+  },
+  {
+    "code": "WSD",
+    "name": "Condron Army Air Field",
+    "city_en": "White Sands",
+    "city_pl": "White Sands",
+    "country_en": "United States"
+  },
+  {
+    "code": "CDB",
+    "name": "Cold Bay Airport",
+    "city_en": "Cold Bay",
+    "city_pl": "Cold Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "TUL",
+    "name": "Tulsa International Airport",
+    "city_en": "Tulsa",
+    "city_pl": "Tulsa",
+    "country_en": "United States"
+  },
+  {
+    "code": "SIT",
+    "name": "Sitka Rocky Gutierrez Airport",
+    "city_en": "Sitka",
+    "city_pl": "Sitka",
+    "country_en": "United States"
+  },
+  {
+    "code": "ISP",
+    "name": "Long Island Mac Arthur Airport",
+    "city_en": "Islip",
+    "city_pl": "Islip",
+    "country_en": "United States"
+  },
+  {
+    "code": "MSP",
+    "name": "Minneapolis-St Paul International/Wold-Chamberlain Airport",
+    "city_en": "Minneapolis",
+    "city_pl": "Minneapolis",
+    "country_en": "United States"
+  },
+  {
+    "code": "ILG",
+    "name": "New Castle Airport",
+    "city_en": "Wilmington",
+    "city_pl": "Wilmington",
+    "country_en": "United States"
+  },
+  {
+    "code": "DUT",
+    "name": "Unalaska Airport",
+    "city_en": "Unalaska",
+    "city_pl": "Unalaska",
+    "country_en": "United States"
+  },
+  {
+    "code": "MSY",
+    "name": "Louis Armstrong New Orleans International Airport",
+    "city_en": "New Orleans",
+    "city_pl": "New Orleans",
+    "country_en": "United States"
+  },
+  {
+    "code": "PWM",
+    "name": "Portland International Jetport Airport",
+    "city_en": "Portland",
+    "city_pl": "Portland",
+    "country_en": "United States"
+  },
+  {
+    "code": "OKC",
+    "name": "Will Rogers World Airport",
+    "city_en": "Oklahoma City",
+    "city_pl": "Oklahoma City",
+    "country_en": "United States"
+  },
+  {
+    "code": "ALB",
+    "name": "Albany International Airport",
+    "city_en": "Albany",
+    "city_pl": "Albany",
+    "country_en": "United States"
+  },
+  {
+    "code": "VDZ",
+    "name": "Valdez Pioneer Field",
+    "city_en": "Valdez",
+    "city_pl": "Valdez",
+    "country_en": "United States"
+  },
+  {
+    "code": "LFI",
+    "name": "Langley Air Force Base",
+    "city_en": "Hampton",
+    "city_pl": "Hampton",
+    "country_en": "United States"
+  },
+  {
+    "code": "SNA",
+    "name": "John Wayne Airport-Orange County Airport",
+    "city_en": "Santa Ana",
+    "city_pl": "Santa Ana",
+    "country_en": "United States"
+  },
+  {
+    "code": "CBM",
+    "name": "Columbus Air Force Base",
+    "city_en": "Colombus",
+    "city_pl": "Colombus",
+    "country_en": "United States"
+  },
+  {
+    "code": "TMB",
+    "name": "Kendall-Tamiami Executive Airport",
+    "city_en": "Kendall-tamiami",
+    "city_pl": "Kendall-tamiami",
+    "country_en": "United States"
+  },
+  {
+    "code": "NTU",
+    "name": "Oceana Naval Air Station",
+    "city_en": "Oceana",
+    "city_pl": "Oceana",
+    "country_en": "United States"
+  },
+  {
+    "code": "GUS",
+    "name": "Grissom Air Reserve Base",
+    "city_en": "Peru",
+    "city_pl": "Peru",
+    "country_en": "United States"
+  },
+  {
+    "code": "CPR",
+    "name": "Casper-Natrona County International Airport",
+    "city_en": "Casper",
+    "city_pl": "Casper",
+    "country_en": "United States"
+  },
+  {
+    "code": "VPS",
+    "name": "Destin-Ft Walton Beach Airport",
+    "city_en": "Valparaiso",
+    "city_pl": "Valparaiso",
+    "country_en": "United States"
+  },
+  {
+    "code": "SEM",
+    "name": "Craig Field",
+    "city_en": "Selma",
+    "city_pl": "Selma",
+    "country_en": "United States"
+  },
+  {
+    "code": "EYW",
+    "name": "Key West International Airport",
+    "city_en": "Key West",
+    "city_pl": "Key West",
+    "country_en": "United States"
+  },
+  {
+    "code": "CLT",
+    "name": "Charlotte Douglas International Airport",
+    "city_en": "Charlotte",
+    "city_pl": "Charlotte",
+    "country_en": "United States"
+  },
+  {
+    "code": "LAS",
+    "name": "McCarran International Airport",
+    "city_en": "Las Vegas",
+    "city_pl": "Las Vegas",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCO",
+    "name": "Orlando International Airport",
+    "city_en": "Orlando",
+    "city_pl": "Orlando",
+    "country_en": "United States"
+  },
+  {
+    "code": "FLO",
+    "name": "Florence Regional Airport",
+    "city_en": "Florence",
+    "city_pl": "Florence",
+    "country_en": "United States"
+  },
+  {
+    "code": "GTF",
+    "name": "Great Falls International Airport",
+    "city_en": "Great Falls",
+    "city_pl": "Great Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "YNG",
+    "name": "Youngstown Warren Regional Airport",
+    "city_en": "Youngstown",
+    "city_pl": "Youngstown",
+    "country_en": "United States"
+  },
+  {
+    "code": "FBK",
+    "name": "Ladd AAF Airfield",
+    "city_en": "Fort Wainwright",
+    "city_pl": "Fort Wainwright",
+    "country_en": "United States"
+  },
+  {
+    "code": "WRB",
+    "name": "Robins Air Force Base",
+    "city_en": "Macon",
+    "city_pl": "Macon",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKK",
+    "name": "Suvarnabhumi Airport",
+    "city_en": "Bangkok",
+    "city_pl": "Bangkok",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "NAH",
+    "name": "Naha Airport",
+    "city_en": "Naha",
+    "city_pl": "Naha",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MXB",
+    "name": "Andi Jemma Airport",
+    "city_en": "Masamba",
+    "city_pl": "Masamba",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SQR",
+    "name": "Soroako Airport",
+    "city_en": "Soroako",
+    "city_pl": "Soroako",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TTR",
+    "name": "Pongtiku Airport",
+    "city_en": "Makale",
+    "city_pl": "Makale",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "KDI",
+    "name": "Wolter Monginsidi Airport",
+    "city_en": "Kendari",
+    "city_pl": "Kendari",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SBG",
+    "name": "Maimun Saleh Airport",
+    "city_en": "Sabang",
+    "city_pl": "Sabang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TSY",
+    "name": "Cibeureum Airport",
+    "city_en": "Tasikmalaya",
+    "city_pl": "Tasikmalaya",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MLG",
+    "name": "Abdul Rachman Saleh Airport",
+    "city_en": "Malang",
+    "city_pl": "Malang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BDO",
+    "name": "Husein Sastranegara International Airport",
+    "city_en": "Bandung",
+    "city_pl": "Bandung",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "CBN",
+    "name": "Penggung Airport",
+    "city_en": "Cirebon",
+    "city_pl": "Cirebon",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "JOG",
+    "name": "Adi Sutjipto International Airport",
+    "city_en": "Yogyakarta",
+    "city_pl": "Yogyakarta",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "CXP",
+    "name": "Tunggul Wulung Airport",
+    "city_en": "Cilacap",
+    "city_pl": "Cilacap",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PCB",
+    "name": "Pondok Cabe Air Base",
+    "city_en": "Jakarta",
+    "city_pl": "Jakarta",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SRG",
+    "name": "Achmad Yani Airport",
+    "city_en": "Semarang",
+    "city_pl": "Semarang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BTH",
+    "name": "Hang Nadim International Airport",
+    "city_en": "Batam",
+    "city_pl": "Batam",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TJQ",
+    "name": "Buluh Tumbang (H A S Hanandjoeddin) Airport",
+    "city_en": "Tanjung Pandan",
+    "city_pl": "Tanjung Pandan",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PGK",
+    "name": "Pangkal Pinang (Depati Amir) Airport",
+    "city_en": "Pangkal Pinang",
+    "city_pl": "Pangkal Pinang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TNJ",
+    "name": "Raja Haji Fisabilillah International Airport",
+    "city_en": "Tanjung Pinang",
+    "city_pl": "Tanjung Pinang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SIQ",
+    "name": "Dabo Airport",
+    "city_en": "Singkep",
+    "city_pl": "Singkep",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BDJ",
+    "name": "Syamsudin Noor Airport",
+    "city_en": "Banjarmasin",
+    "city_pl": "Banjarmasin",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BTW",
+    "name": "Batu Licin Airport",
+    "city_en": "Batu Licin",
+    "city_pl": "Batu Licin",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PKN",
+    "name": "Iskandar Airport",
+    "city_en": "Pangkalan Bun",
+    "city_pl": "Pangkalan Bun",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PKY",
+    "name": "Tjilik Riwut Airport",
+    "city_en": "Palangkaraya",
+    "city_pl": "Palangkaraya",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MOF",
+    "name": "Maumere(Wai Oti) Airport",
+    "city_en": "Maumere",
+    "city_pl": "Maumere",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "ENE",
+    "name": "Ende (H Hasan Aroeboesman) Airport",
+    "city_en": "Ende",
+    "city_pl": "Ende",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "RTG",
+    "name": "Frans Sales Lega Airport",
+    "city_en": "Ruteng",
+    "city_pl": "Ruteng",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "KOE",
+    "name": "El Tari Airport",
+    "city_en": "Kupang",
+    "city_pl": "Kupang",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "LBJ",
+    "name": "Komodo Airport",
+    "city_en": "Labuhan Bajo",
+    "city_pl": "Labuhan Bajo",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BPN",
+    "name": "Sultan Aji Muhamad Sulaiman Airport",
+    "city_en": "Balikpapan",
+    "city_pl": "Balikpapan",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TRK",
+    "name": "Juwata Airport",
+    "city_en": "Taraken",
+    "city_pl": "Taraken",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SRI",
+    "name": "Temindung Airport",
+    "city_en": "Samarinda",
+    "city_pl": "Samarinda",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TSX",
+    "name": "Tanjung Santan Airport",
+    "city_en": "Tanjung Santan",
+    "city_pl": "Tanjung Santan",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "AMI",
+    "name": "Selaparang Airport",
+    "city_en": "Mataram",
+    "city_pl": "Mataram",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BMU",
+    "name": "Muhammad Salahuddin Airport",
+    "city_en": "Bima",
+    "city_pl": "Bima",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "WGP",
+    "name": "Umbu Mehang Kunda Airport",
+    "city_en": "Waingapu",
+    "city_pl": "Waingapu",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SUB",
+    "name": "Juanda International Airport",
+    "city_en": "Surabaya",
+    "city_pl": "Surabaya",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SOC",
+    "name": "Adi Sumarmo Wiryokusumo Airport",
+    "city_en": "Solo City",
+    "city_pl": "Solo City",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "ICN",
+    "name": "Incheon International Airport",
+    "city_en": "Seoul",
+    "city_pl": "Seul",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "CNX",
+    "name": "Chiang Mai International Airport",
+    "city_en": "Chiang Mai",
+    "city_pl": "Chiang Mai",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "CEI",
+    "name": "Chiang Rai International Airport",
+    "city_en": "Chiang Rai",
+    "city_pl": "Chiang Rai",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "NST",
+    "name": "Nakhon Si Thammarat Airport",
+    "city_en": "Nakhon Si Thammarat",
+    "city_pl": "Nakhon Si Thammarat",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "NAK",
+    "name": "Nakhon Ratchasima Airport",
+    "city_en": "Nakhon Ratchasima",
+    "city_pl": "Nakhon Ratchasima",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "KOP",
+    "name": "Nakhon Phanom Airport",
+    "city_en": "Nakhon Phanom",
+    "city_pl": "Nakhon Phanom",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "UBP",
+    "name": "Ubon Ratchathani Airport",
+    "city_en": "Ubon Ratchathani",
+    "city_pl": "Ubon Ratchathani",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "KKC",
+    "name": "Khon Kaen Airport",
+    "city_en": "Khon Kaen",
+    "city_pl": "Khon Kaen",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "THS",
+    "name": "Sukhothai Airport",
+    "city_en": "Sukhothai",
+    "city_pl": "Sukhothai",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "DPS",
+    "name": "Ngurah Rai (Bali) International Airport",
+    "city_en": "Denpasar",
+    "city_pl": "Denpasar",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "ATH",
+    "name": "Eleftherios Venizelos International Airport",
+    "city_en": "Athens",
+    "city_pl": "Ateny",
+    "country_en": "Greece"
+  },
+  {
+    "code": "NGO",
+    "name": "Chubu Centrair International Airport",
+    "city_en": "Nagoya",
+    "city_pl": "Nagoya",
+    "country_en": "Japan"
+  },
+  {
+    "code": "UKB",
+    "name": "Kobe Airport",
+    "city_en": "Kobe",
+    "city_pl": "Kobe",
+    "country_en": "Japan"
+  },
+  {
+    "code": "PUW",
+    "name": "Pullman Moscow Regional Airport",
+    "city_en": "Pullman",
+    "city_pl": "Pullman",
+    "country_en": "United States"
+  },
+  {
+    "code": "LWS",
+    "name": "Lewiston Nez Perce County Airport",
+    "city_en": "Lewiston",
+    "city_pl": "Lewiston",
+    "country_en": "United States"
+  },
+  {
+    "code": "ELM",
+    "name": "Elmira Corning Regional Airport",
+    "city_en": "Elmira",
+    "city_pl": "Elmira",
+    "country_en": "United States"
+  },
+  {
+    "code": "ITH",
+    "name": "Ithaca Tompkins Regional Airport",
+    "city_en": "Ithaca",
+    "city_pl": "Ithaca",
+    "country_en": "United States"
+  },
+  {
+    "code": "MRY",
+    "name": "Monterey Peninsula Airport",
+    "city_en": "Monterey",
+    "city_pl": "Monterey",
+    "country_en": "United States"
+  },
+  {
+    "code": "SBA",
+    "name": "Santa Barbara Municipal Airport",
+    "city_en": "Santa Barbara",
+    "city_pl": "Santa Barbara",
+    "country_en": "United States"
+  },
+  {
+    "code": "DAB",
+    "name": "Daytona Beach International Airport",
+    "city_en": "Daytona Beach",
+    "city_pl": "Daytona Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "LPX",
+    "name": "Liepāja International Airport",
+    "city_en": "Liepaja",
+    "city_pl": "Liepaja",
+    "country_en": "Latvia"
+  },
+  {
+    "code": "RIX",
+    "name": "Riga International Airport",
+    "city_en": "Riga",
+    "city_pl": "Riga",
+    "country_en": "Latvia"
+  },
+  {
+    "code": "SQQ",
+    "name": "Šiauliai International Airport",
+    "city_en": "Siauliai",
+    "city_pl": "Siauliai",
+    "country_en": "Lithuania"
+  },
+  {
+    "code": "HLJ",
+    "name": "Barysiai Airport",
+    "city_en": "Barysiai",
+    "city_pl": "Barysiai",
+    "country_en": "Lithuania"
+  },
+  {
+    "code": "KUN",
+    "name": "Kaunas International Airport",
+    "city_en": "Kaunas",
+    "city_pl": "Kaunas",
+    "country_en": "Lithuania"
+  },
+  {
+    "code": "PLQ",
+    "name": "Palanga International Airport",
+    "city_en": "Palanga",
+    "city_pl": "Palanga",
+    "country_en": "Lithuania"
+  },
+  {
+    "code": "VNO",
+    "name": "Vilnius International Airport",
+    "city_en": "Vilnius",
+    "city_pl": "Vilnius",
+    "country_en": "Lithuania"
+  },
+  {
+    "code": "PNV",
+    "name": "Panevėžys Air Base",
+    "city_en": "Panevezys",
+    "city_pl": "Panevezys",
+    "country_en": "Lithuania"
+  },
+  {
+    "code": "EVN",
+    "name": "Zvartnots International Airport",
+    "city_en": "Yerevan",
+    "city_pl": "Yerevan",
+    "country_en": "Armenia"
+  },
+  {
+    "code": "LWN",
+    "name": "Gyumri Shirak Airport",
+    "city_en": "Gyumri",
+    "city_pl": "Gyumri",
+    "country_en": "Armenia"
+  },
+  {
+    "code": "ASA",
+    "name": "Assab International Airport",
+    "city_en": "Assab",
+    "city_pl": "Assab",
+    "country_en": "Eritrea"
+  },
+  {
+    "code": "ASM",
+    "name": "Asmara International Airport",
+    "city_en": "Asmara",
+    "city_pl": "Asmara",
+    "country_en": "Eritrea"
+  },
+  {
+    "code": "MSW",
+    "name": "Massawa International Airport",
+    "city_en": "Massawa",
+    "city_pl": "Massawa",
+    "country_en": "Eritrea"
+  },
+  {
+    "code": "GZA",
+    "name": "Yasser Arafat International Airport",
+    "city_en": "Gaza",
+    "city_pl": "Gaza",
+    "country_en": "Palestine"
+  },
+  {
+    "code": "BUS",
+    "name": "Batumi International Airport",
+    "city_en": "Batumi",
+    "city_pl": "Batumi",
+    "country_en": "Georgia"
+  },
+  {
+    "code": "KUT",
+    "name": "Kopitnari Airport",
+    "city_en": "Kutaisi",
+    "city_pl": "Kutaisi",
+    "country_en": "Georgia"
+  },
+  {
+    "code": "TBS",
+    "name": "Tbilisi International Airport",
+    "city_en": "Tbilisi",
+    "city_pl": "Tbilisi",
+    "country_en": "Georgia"
+  },
+  {
+    "code": "RIY",
+    "name": "Mukalla International Airport",
+    "city_en": "Mukalla",
+    "city_pl": "Mukalla",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "TAI",
+    "name": "Ta'izz International Airport",
+    "city_en": "Taiz",
+    "city_pl": "Taiz",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "HOD",
+    "name": "Hodeidah International Airport",
+    "city_en": "Hodeidah",
+    "city_pl": "Hodeidah",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "ADE",
+    "name": "Aden International Airport",
+    "city_en": "Aden",
+    "city_pl": "Aden",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "AXK",
+    "name": "Ataq Airport",
+    "city_en": "Ataq",
+    "city_pl": "Ataq",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "AAY",
+    "name": "Al Ghaidah International Airport",
+    "city_en": "Al Ghaidah Intl",
+    "city_pl": "Al Ghaidah Intl",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "SAH",
+    "name": "Sana'a International Airport",
+    "city_en": "Sanaa",
+    "city_pl": "Sanaa",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "BHN",
+    "name": "Beihan Airport",
+    "city_en": "Beihan",
+    "city_pl": "Beihan",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "SCT",
+    "name": "Socotra International Airport",
+    "city_en": "Socotra",
+    "city_pl": "Socotra",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "FMM",
+    "name": "Memmingen Allgau Airport",
+    "city_en": "Memmingen",
+    "city_pl": "Memmingen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "NAV",
+    "name": "Nevşehir Kapadokya Airport",
+    "city_en": "Nevsehir",
+    "city_pl": "Nevsehir",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "EZE",
+    "name": "Ministro Pistarini International Airport",
+    "city_en": "Buenos Aires",
+    "city_pl": "Buenos Aires",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "EBL",
+    "name": "Erbil International Airport",
+    "city_en": "Erbil",
+    "city_pl": "Erbil",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "EMD",
+    "name": "Emerald Airport",
+    "city_en": "Emerald",
+    "city_pl": "Emerald",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HEW",
+    "name": "Athen Helenikon Airport",
+    "city_en": "Athens",
+    "city_pl": "Ateny",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KIX",
+    "name": "Kansai International Airport",
+    "city_en": "Osaka",
+    "city_pl": "Osaka",
+    "country_en": "Japan"
+  },
+  {
+    "code": "JRB",
+    "name": "Downtown-Manhattan/Wall St Heliport",
+    "city_en": "New York",
+    "city_pl": "Nowy Jork",
+    "country_en": "United States"
+  },
+  {
+    "code": "TAG",
+    "name": "Tagbilaran Airport",
+    "city_en": "Tagbilaran",
+    "city_pl": "Tagbilaran",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "JAV",
+    "name": "Ilulissat Airport",
+    "city_en": "Ilulissat",
+    "city_pl": "Ilulissat",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JCH",
+    "name": "Qasigiannguit Heliport",
+    "city_en": "Qasigiannguit",
+    "city_pl": "Qasigiannguit",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JEG",
+    "name": "Aasiaat Airport",
+    "city_en": "Aasiaat",
+    "city_pl": "Aasiaat",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "PMI",
+    "name": "Palma De Mallorca Airport",
+    "city_en": "Palma de Mallorca",
+    "city_pl": "Palma de Mallorca",
+    "country_en": "Spain"
+  },
+  {
+    "code": "DRW",
+    "name": "Darwin International Airport",
+    "city_en": "Darwin",
+    "city_pl": "Darwin",
+    "country_en": "Australia"
+  },
+  {
+    "code": "URT",
+    "name": "Surat Thani Airport",
+    "city_en": "Surat Thani",
+    "city_pl": "Surat Thani",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "TKA",
+    "name": "Talkeetna Airport",
+    "city_en": "Talkeetna",
+    "city_pl": "Talkeetna",
+    "country_en": "United States"
+  },
+  {
+    "code": "GZM",
+    "name": "Xewkija Heliport",
+    "city_en": "Gozo",
+    "city_pl": "Gozo",
+    "country_en": "Malta"
+  },
+  {
+    "code": "HVN",
+    "name": "Tweed New Haven Airport",
+    "city_en": "New Haven",
+    "city_pl": "New Haven",
+    "country_en": "United States"
+  },
+  {
+    "code": "AVL",
+    "name": "Asheville Regional Airport",
+    "city_en": "Asheville",
+    "city_pl": "Asheville",
+    "country_en": "United States"
+  },
+  {
+    "code": "GSO",
+    "name": "Piedmont Triad International Airport",
+    "city_en": "Greensboro",
+    "city_pl": "Greensboro",
+    "country_en": "United States"
+  },
+  {
+    "code": "FSD",
+    "name": "Joe Foss Field Airport",
+    "city_en": "Sioux Falls",
+    "city_pl": "Sioux Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "AYQ",
+    "name": "Ayers Rock Connellan Airport",
+    "city_en": "Uluru",
+    "city_pl": "Uluru",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MHT",
+    "name": "Manchester-Boston Regional Airport",
+    "city_en": "Manchester NH",
+    "city_pl": "Manchester NH",
+    "country_en": "United States"
+  },
+  {
+    "code": "APF",
+    "name": "Naples Municipal Airport",
+    "city_en": "Naples",
+    "city_pl": "Naples",
+    "country_en": "United States"
+  },
+  {
+    "code": "RDN",
+    "name": "LTS Pulau Redang Airport",
+    "city_en": "Redang",
+    "city_pl": "Redang",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "SDF",
+    "name": "Louisville International Standiford Field",
+    "city_en": "Louisville",
+    "city_pl": "Louisville",
+    "country_en": "United States"
+  },
+  {
+    "code": "CHO",
+    "name": "Charlottesville Albemarle Airport",
+    "city_en": "Charlottesville VA",
+    "city_pl": "Charlottesville VA",
+    "country_en": "United States"
+  },
+  {
+    "code": "ROA",
+    "name": "Roanoke–Blacksburg Regional Airport",
+    "city_en": "Roanoke VA",
+    "city_pl": "Roanoke VA",
+    "country_en": "United States"
+  },
+  {
+    "code": "LEX",
+    "name": "Blue Grass Airport",
+    "city_en": "Lexington KY",
+    "city_pl": "Lexington KY",
+    "country_en": "United States"
+  },
+  {
+    "code": "EVV",
+    "name": "Evansville Regional Airport",
+    "city_en": "Evansville",
+    "city_pl": "Evansville",
+    "country_en": "United States"
+  },
+  {
+    "code": "ABQ",
+    "name": "Albuquerque International Sunport",
+    "city_en": "Albuquerque",
+    "city_pl": "Albuquerque",
+    "country_en": "United States"
+  },
+  {
+    "code": "BZN",
+    "name": "Gallatin Field",
+    "city_en": "Bozeman",
+    "city_pl": "Bozeman",
+    "country_en": "United States"
+  },
+  {
+    "code": "BIL",
+    "name": "Billings Logan International Airport",
+    "city_en": "Billings",
+    "city_pl": "Billings",
+    "country_en": "United States"
+  },
+  {
+    "code": "BTM",
+    "name": "Bert Mooney Airport",
+    "city_en": "Butte",
+    "city_pl": "Butte",
+    "country_en": "United States"
+  },
+  {
+    "code": "TVC",
+    "name": "Cherry Capital Airport",
+    "city_en": "Traverse City",
+    "city_pl": "Traverse City",
+    "country_en": "United States"
+  },
+  {
+    "code": "FRS",
+    "name": "Mundo Maya International Airport",
+    "city_en": "Flores",
+    "city_pl": "Flores",
+    "country_en": "Guatemala"
+  },
+  {
+    "code": "BHB",
+    "name": "Hancock County-Bar Harbor Airport",
+    "city_en": "Bar Harbor",
+    "city_pl": "Bar Harbor",
+    "country_en": "United States"
+  },
+  {
+    "code": "RKD",
+    "name": "Knox County Regional Airport",
+    "city_en": "Rockland",
+    "city_pl": "Rockland",
+    "country_en": "United States"
+  },
+  {
+    "code": "JAC",
+    "name": "Jackson Hole Airport",
+    "city_en": "Jacksn Hole",
+    "city_pl": "Jacksn Hole",
+    "country_en": "United States"
+  },
+  {
+    "code": "RFD",
+    "name": "Chicago Rockford International Airport",
+    "city_en": "Rockford",
+    "city_pl": "Rockford",
+    "country_en": "United States"
+  },
+  {
+    "code": "DME",
+    "name": "Domodedovo International Airport",
+    "city_en": "Moscow",
+    "city_pl": "Moscow",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SYX",
+    "name": "Sanya Phoenix International Airport",
+    "city_en": "Sanya",
+    "city_pl": "Sanya",
+    "country_en": "China"
+  },
+  {
+    "code": "MFN",
+    "name": "Milford Sound Airport",
+    "city_en": "Milford Sound",
+    "city_pl": "Milford Sound",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "LJG",
+    "name": "Lijiang Airport",
+    "city_en": "Lijiang",
+    "city_pl": "Lijiang",
+    "country_en": "China"
+  },
+  {
+    "code": "GSP",
+    "name": "Greenville Spartanburg International Airport",
+    "city_en": "Greenville",
+    "city_pl": "Greenville",
+    "country_en": "United States"
+  },
+  {
+    "code": "BMI",
+    "name": "Central Illinois Regional Airport at Bloomington-Normal",
+    "city_en": "Bloomington",
+    "city_pl": "Bloomington",
+    "country_en": "United States"
+  },
+  {
+    "code": "GPT",
+    "name": "Gulfport Biloxi International Airport",
+    "city_en": "Gulfport",
+    "city_pl": "Gulfport",
+    "country_en": "United States"
+  },
+  {
+    "code": "AZO",
+    "name": "Kalamazoo Battle Creek International Airport",
+    "city_en": "Kalamazoo",
+    "city_pl": "Kalamazoo",
+    "country_en": "United States"
+  },
+  {
+    "code": "TOL",
+    "name": "Toledo Express Airport",
+    "city_en": "Toledo",
+    "city_pl": "Toledo",
+    "country_en": "United States"
+  },
+  {
+    "code": "FWA",
+    "name": "Fort Wayne International Airport",
+    "city_en": "Fort Wayne",
+    "city_pl": "Fort Wayne",
+    "country_en": "United States"
+  },
+  {
+    "code": "DEC",
+    "name": "Decatur Airport",
+    "city_en": "Decatur",
+    "city_pl": "Decatur",
+    "country_en": "United States"
+  },
+  {
+    "code": "CID",
+    "name": "The Eastern Iowa Airport",
+    "city_en": "Cedar Rapids",
+    "city_pl": "Cedar Rapids",
+    "country_en": "United States"
+  },
+  {
+    "code": "LSE",
+    "name": "La Crosse Municipal Airport",
+    "city_en": "La Crosse",
+    "city_pl": "La Crosse",
+    "country_en": "United States"
+  },
+  {
+    "code": "CWA",
+    "name": "Central Wisconsin Airport",
+    "city_en": "Wassau",
+    "city_pl": "Wassau",
+    "country_en": "United States"
+  },
+  {
+    "code": "PIA",
+    "name": "General Wayne A. Downing Peoria International Airport",
+    "city_en": "Peoria",
+    "city_pl": "Peoria",
+    "country_en": "United States"
+  },
+  {
+    "code": "ATW",
+    "name": "Appleton International Airport",
+    "city_en": "Appleton",
+    "city_pl": "Appleton",
+    "country_en": "United States"
+  },
+  {
+    "code": "RST",
+    "name": "Rochester International Airport",
+    "city_en": "Rochester",
+    "city_pl": "Rochester",
+    "country_en": "United States"
+  },
+  {
+    "code": "CMI",
+    "name": "University of Illinois Willard Airport",
+    "city_en": "Champaign",
+    "city_pl": "Champaign",
+    "country_en": "United States"
+  },
+  {
+    "code": "MHK",
+    "name": "Manhattan Regional Airport",
+    "city_en": "Manhattan",
+    "city_pl": "Manhattan",
+    "country_en": "United States"
+  },
+  {
+    "code": "KGC",
+    "name": "Kingscote Airport",
+    "city_en": "Kingscote",
+    "city_pl": "Kingscote",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HVB",
+    "name": "Hervey Bay Airport",
+    "city_en": "Hervey Bay",
+    "city_pl": "Hervey Bay",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DLU",
+    "name": "Dali Airport",
+    "city_en": "Dali",
+    "city_pl": "Dali",
+    "country_en": "China"
+  },
+  {
+    "code": "MZV",
+    "name": "Mulu Airport",
+    "city_en": "Mulu",
+    "city_pl": "Mulu",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "SSH",
+    "name": "Sharm El Sheikh International Airport",
+    "city_en": "Sharm El Sheikh",
+    "city_pl": "Sharm El Sheikh",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "FKL",
+    "name": "Venango Regional Airport",
+    "city_en": "Franklin",
+    "city_pl": "Franklin",
+    "country_en": "United States"
+  },
+  {
+    "code": "NBO",
+    "name": "Jomo Kenyatta International Airport",
+    "city_en": "Nairobi",
+    "city_pl": "Nairobi",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "SEU",
+    "name": "Seronera Airport",
+    "city_en": "Seronera",
+    "city_pl": "Seronera",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "FTE",
+    "name": "El Calafate Airport",
+    "city_en": "El Calafate",
+    "city_pl": "El Calafate",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "ARM",
+    "name": "Armidale Airport",
+    "city_en": "Armidale",
+    "city_pl": "Armidale",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GJT",
+    "name": "Grand Junction Regional Airport",
+    "city_en": "Grand Junction",
+    "city_pl": "Grand Junction",
+    "country_en": "United States"
+  },
+  {
+    "code": "SGU",
+    "name": "St George Municipal Airport",
+    "city_en": "Saint George",
+    "city_pl": "Saint George",
+    "country_en": "United States"
+  },
+  {
+    "code": "DWH",
+    "name": "David Wayne Hooks Memorial Airport",
+    "city_en": "Houston",
+    "city_pl": "Houston",
+    "country_en": "United States"
+  },
+  {
+    "code": "SRQ",
+    "name": "Sarasota Bradenton International Airport",
+    "city_en": "Sarasota",
+    "city_pl": "Sarasota",
+    "country_en": "United States"
+  },
+  {
+    "code": "BDA",
+    "name": "L.F. Wade International International Airport",
+    "city_en": "Bermuda",
+    "city_pl": "Bermuda",
+    "country_en": "Bermuda"
+  },
+  {
+    "code": "VNY",
+    "name": "Van Nuys Airport",
+    "city_en": "Van Nuys",
+    "city_pl": "Van Nuys",
+    "country_en": "United States"
+  },
+  {
+    "code": "MLI",
+    "name": "Quad City International Airport",
+    "city_en": "Moline",
+    "city_pl": "Moline",
+    "country_en": "United States"
+  },
+  {
+    "code": "PFN",
+    "name": "Panama City-Bay Co International Airport",
+    "city_en": "Panama City",
+    "city_pl": "Panama City",
+    "country_en": "United States"
+  },
+  {
+    "code": "HIR",
+    "name": "Honiara International Airport",
+    "city_en": "Honiara",
+    "city_pl": "Honiara",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "PPT",
+    "name": "Faa'a International Airport",
+    "city_en": "Papeete",
+    "city_pl": "Papeete",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "INU",
+    "name": "Nauru International Airport",
+    "city_en": "Nauru",
+    "city_pl": "Nauru",
+    "country_en": "Nauru"
+  },
+  {
+    "code": "FUN",
+    "name": "Funafuti International Airport",
+    "city_en": "Funafuti",
+    "city_pl": "Funafuti",
+    "country_en": "Tuvalu"
+  },
+  {
+    "code": "OVB",
+    "name": "Tolmachevo Airport",
+    "city_en": "Novosibirsk",
+    "city_pl": "Novosibirsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "XKH",
+    "name": "Xieng Khouang Airport",
+    "city_en": "Phon Savan",
+    "city_pl": "Phon Savan",
+    "country_en": "Laos"
+  },
+  {
+    "code": "BIS",
+    "name": "Bismarck Municipal Airport",
+    "city_en": "Bismarck",
+    "city_pl": "Bismarck",
+    "country_en": "United States"
+  },
+  {
+    "code": "TEX",
+    "name": "Telluride Regional Airport",
+    "city_en": "Telluride",
+    "city_pl": "Telluride",
+    "country_en": "United States"
+  },
+  {
+    "code": "HGN",
+    "name": "Mae Hong Son Airport",
+    "city_en": "Mae Hong Son",
+    "city_pl": "Mae Hong Son",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "RAP",
+    "name": "Rapid City Regional Airport",
+    "city_en": "Rapid City",
+    "city_pl": "Rapid City",
+    "country_en": "United States"
+  },
+  {
+    "code": "CLD",
+    "name": "Mc Clellan-Palomar Airport",
+    "city_en": "Carlsbad",
+    "city_pl": "Carlsbad",
+    "country_en": "United States"
+  },
+  {
+    "code": "FNT",
+    "name": "Bishop International Airport",
+    "city_en": "Flint",
+    "city_pl": "Flint",
+    "country_en": "United States"
+  },
+  {
+    "code": "DVO",
+    "name": "Francisco Bangoy International Airport",
+    "city_en": "Davao",
+    "city_pl": "Davao",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "FNC",
+    "name": "Madeira Airport",
+    "city_en": "Funchal",
+    "city_pl": "Funchal",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "STM",
+    "name": "Maestro Wilson Fonseca Airport",
+    "city_en": "Santarem",
+    "city_pl": "Santarem",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "KOS",
+    "name": "Sihanoukville International Airport",
+    "city_en": "Sihanoukville",
+    "city_pl": "Sihanoukville",
+    "country_en": "Cambodia"
+  },
+  {
+    "code": "YOA",
+    "name": "Ekati Airport",
+    "city_en": "Ekati",
+    "city_pl": "Ekati",
+    "country_en": "Canada"
+  },
+  {
+    "code": "NPE",
+    "name": "Hawke's Bay Airport",
+    "city_en": "NAPIER",
+    "city_pl": "NAPIER",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "LEV",
+    "name": "Levuka Airfield",
+    "city_en": "Levuka",
+    "city_pl": "Levuka",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "LXA",
+    "name": "Lhasa Gonggar Airport",
+    "city_en": "Lhasa",
+    "city_pl": "Lhasa",
+    "country_en": "China"
+  },
+  {
+    "code": "RDD",
+    "name": "Redding Municipal Airport",
+    "city_en": "Redding",
+    "city_pl": "Redding",
+    "country_en": "United States"
+  },
+  {
+    "code": "EUG",
+    "name": "Mahlon Sweet Field",
+    "city_en": "Eugene",
+    "city_pl": "Eugene",
+    "country_en": "United States"
+  },
+  {
+    "code": "IDA",
+    "name": "Idaho Falls Regional Airport",
+    "city_en": "Idaho Falls",
+    "city_pl": "Idaho Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "MFR",
+    "name": "Rogue Valley International Medford Airport",
+    "city_en": "Medford",
+    "city_pl": "Medford",
+    "country_en": "United States"
+  },
+  {
+    "code": "KBZ",
+    "name": "Kaikoura Airport",
+    "city_en": "Kaikoura",
+    "city_pl": "Kaikoura",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "RDM",
+    "name": "Roberts Field",
+    "city_en": "Redmond-Bend",
+    "city_pl": "Redmond-Bend",
+    "country_en": "United States"
+  },
+  {
+    "code": "PCN",
+    "name": "Picton Aerodrome",
+    "city_en": "Picton",
+    "city_pl": "Picton",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "WDH",
+    "name": "Hosea Kutako International Airport",
+    "city_en": "Windhoek",
+    "city_pl": "Windhoek",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "YWH",
+    "name": "Victoria Harbour Seaplane Base",
+    "city_en": "Victoria",
+    "city_pl": "Victoria",
+    "country_en": "Canada"
+  },
+  {
+    "code": "TNA",
+    "name": "Yaoqiang Airport",
+    "city_en": "Jinan",
+    "city_pl": "Jinan",
+    "country_en": "China"
+  },
+  {
+    "code": "CZX",
+    "name": "Changzhou Benniu Airport",
+    "city_en": "Changzhou",
+    "city_pl": "Changzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "YBP",
+    "name": "Yibin Caiba Airport",
+    "city_en": "Yibin",
+    "city_pl": "Yibin",
+    "country_en": "China"
+  },
+  {
+    "code": "TJM",
+    "name": "Roshchino International Airport",
+    "city_en": "Tyumen",
+    "city_pl": "Tyumen",
+    "country_en": "Russia"
+  },
+  {
+    "code": "CAK",
+    "name": "Akron Canton Regional Airport",
+    "city_en": "Akron",
+    "city_pl": "Akron",
+    "country_en": "United States"
+  },
+  {
+    "code": "HSV",
+    "name": "Huntsville International Carl T Jones Field",
+    "city_en": "Huntsville",
+    "city_pl": "Huntsville",
+    "country_en": "United States"
+  },
+  {
+    "code": "PKB",
+    "name": "Mid Ohio Valley Regional Airport",
+    "city_en": "PARKERSBURG",
+    "city_pl": "PARKERSBURG",
+    "country_en": "United States"
+  },
+  {
+    "code": "MGM",
+    "name": "Montgomery Regional (Dannelly Field) Airport",
+    "city_en": "MONTGOMERY",
+    "city_pl": "MONTGOMERY",
+    "country_en": "United States"
+  },
+  {
+    "code": "TRI",
+    "name": "Tri-Cities Regional TN/VA Airport",
+    "city_en": "BRISTOL",
+    "city_pl": "BRISTOL",
+    "country_en": "United States"
+  },
+  {
+    "code": "PAH",
+    "name": "Barkley Regional Airport",
+    "city_en": "PADUCAH",
+    "city_pl": "PADUCAH",
+    "country_en": "United States"
+  },
+  {
+    "code": "JIB",
+    "name": "Djibouti-Ambouli Airport",
+    "city_en": "Djibouti",
+    "city_pl": "Djibouti",
+    "country_en": "Djibouti"
+  },
+  {
+    "code": "HAK",
+    "name": "Haikou Meilan International Airport",
+    "city_en": "Haikou",
+    "city_pl": "Haikou",
+    "country_en": "China"
+  },
+  {
+    "code": "MFA",
+    "name": "Mafia Island Airport",
+    "city_en": "Mafia Island",
+    "city_pl": "Mafia Island",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "PGA",
+    "name": "Page Municipal Airport",
+    "city_en": "Page",
+    "city_pl": "Page",
+    "country_en": "United States"
+  },
+  {
+    "code": "UII",
+    "name": "Utila Airport",
+    "city_en": "Utila",
+    "city_pl": "Utila",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "FCA",
+    "name": "Glacier Park International Airport",
+    "city_en": "Kalispell",
+    "city_pl": "Kalispell",
+    "country_en": "United States"
+  },
+  {
+    "code": "MBS",
+    "name": "MBS International Airport",
+    "city_en": "Saginaw",
+    "city_pl": "Saginaw",
+    "country_en": "United States"
+  },
+  {
+    "code": "BGM",
+    "name": "Greater Binghamton/Edwin A Link field",
+    "city_en": "Binghamton",
+    "city_pl": "Binghamton",
+    "country_en": "United States"
+  },
+  {
+    "code": "BGW",
+    "name": "Baghdad International Airport",
+    "city_en": "Baghdad",
+    "city_pl": "Baghdad",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "NNT",
+    "name": "Nan Airport",
+    "city_en": "Nan",
+    "city_pl": "Nan",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "ROI",
+    "name": "Roi Et Airport",
+    "city_en": "Roi Et",
+    "city_pl": "Roi Et",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "BFV",
+    "name": "Buri Ram Airport",
+    "city_en": "Buri Ram",
+    "city_pl": "Buri Ram",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "TDX",
+    "name": "Trat Airport",
+    "city_en": "Trat",
+    "city_pl": "Trat",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "BLH",
+    "name": "Blythe Airport",
+    "city_en": "Blythe",
+    "city_pl": "Blythe",
+    "country_en": "United States"
+  },
+  {
+    "code": "IQA",
+    "name": "Al Asad Air Base",
+    "city_en": "Al Asad",
+    "city_pl": "Al Asad",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "TQD",
+    "name": "Al Taqaddum Air Base",
+    "city_en": "Al Taqaddum",
+    "city_pl": "Al Taqaddum",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "XQC",
+    "name": "Joint Base Balad",
+    "city_en": "Al Bakr",
+    "city_pl": "Al Bakr",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "CRK",
+    "name": "Diosdado Macapagal International Airport",
+    "city_en": "Angeles City",
+    "city_pl": "Angeles City",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "SDK",
+    "name": "Sandakan Airport",
+    "city_en": "Sandakan",
+    "city_pl": "Sandakan",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "LXG",
+    "name": "Luang Namtha Airport",
+    "city_en": "Luang Namtha",
+    "city_pl": "Luang Namtha",
+    "country_en": "Laos"
+  },
+  {
+    "code": "ODY",
+    "name": "Oudomsay Airport",
+    "city_en": "Muang Xay",
+    "city_pl": "Muang Xay",
+    "country_en": "Laos"
+  },
+  {
+    "code": "SHE",
+    "name": "Taoxian Airport",
+    "city_en": "Shenyang",
+    "city_pl": "Shenyang",
+    "country_en": "China"
+  },
+  {
+    "code": "DOY",
+    "name": "Dongying Shengli Airport",
+    "city_en": "Dongying",
+    "city_pl": "Dongying",
+    "country_en": "China"
+  },
+  {
+    "code": "MNI",
+    "name": "John A. Osborne Airport",
+    "city_en": "Geralds",
+    "city_pl": "Geralds",
+    "country_en": "Montserrat"
+  },
+  {
+    "code": "PSG",
+    "name": "Petersburg James A Johnson Airport",
+    "city_en": "Petersburg",
+    "city_pl": "Petersburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "LYA",
+    "name": "Luoyang Airport",
+    "city_en": "Luoyang",
+    "city_pl": "Luoyang",
+    "country_en": "China"
+  },
+  {
+    "code": "XUZ",
+    "name": "Xuzhou Guanyin Airport",
+    "city_en": "Xuzhou",
+    "city_pl": "Xuzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "MWQ",
+    "name": "Magway Airport",
+    "city_en": "Magwe",
+    "city_pl": "Magwe",
+    "country_en": "Burma"
+  },
+  {
+    "code": "KHM",
+    "name": "Kanti Airport",
+    "city_en": "Khamti",
+    "city_pl": "Khamti",
+    "country_en": "Burma"
+  },
+  {
+    "code": "DLI",
+    "name": "Lien Khuong Airport",
+    "city_en": "Dalat",
+    "city_pl": "Dalat",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "VDH",
+    "name": "Dong Hoi Airport",
+    "city_en": "Dong Hoi",
+    "city_pl": "Dong Hoi",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "VKG",
+    "name": "Rach Gia Airport",
+    "city_en": "Rach Gia",
+    "city_pl": "Rach Gia",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "CAH",
+    "name": "Cà Mau Airport",
+    "city_en": "Ca Mau",
+    "city_pl": "Ca Mau",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "VCL",
+    "name": "Chu Lai International Airport",
+    "city_en": "Chu Lai",
+    "city_pl": "Chu Lai",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "TBB",
+    "name": "Dong Tac Airport",
+    "city_en": "Tuy Hoa",
+    "city_pl": "Tuy Hoa",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "PYY",
+    "name": "Mae Hong Son Airport",
+    "city_en": "Pai",
+    "city_pl": "Pai",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "BWK",
+    "name": "Bol Airport",
+    "city_en": "Brac",
+    "city_pl": "Brac",
+    "country_en": "Croatia"
+  },
+  {
+    "code": "NSI",
+    "name": "Yaoundé Nsimalen International Airport",
+    "city_en": "Yaounde",
+    "city_pl": "Yaounde",
+    "country_en": "Cameroon"
+  },
+  {
+    "code": "CKY",
+    "name": "Conakry International Airport",
+    "city_en": "Conakry",
+    "city_pl": "Conakry",
+    "country_en": "Guinea"
+  },
+  {
+    "code": "AAH",
+    "name": "Aachen-Merzbrück Airport",
+    "city_en": "Aachen",
+    "city_pl": "Aachen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "FKB",
+    "name": "Karlsruhe Baden-Baden Airport",
+    "city_en": "Karlsruhe/Baden-Baden",
+    "city_pl": "Karlsruhe/Baden-Baden",
+    "country_en": "Germany"
+  },
+  {
+    "code": "SFB",
+    "name": "Orlando Sanford International Airport",
+    "city_en": "Sanford",
+    "city_pl": "Sanford",
+    "country_en": "United States"
+  },
+  {
+    "code": "JST",
+    "name": "John Murtha Johnstown Cambria County Airport",
+    "city_en": "Johnstown",
+    "city_pl": "Johnstown",
+    "country_en": "United States"
+  },
+  {
+    "code": "LUA",
+    "name": "Lukla Airport",
+    "city_en": "Lukla",
+    "city_pl": "Lukla",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "BHP",
+    "name": "Bhojpur Airport",
+    "city_en": "Bhojpur",
+    "city_pl": "Bhojpur",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "LDN",
+    "name": "Lamidanda Airport",
+    "city_en": "Lamidanda",
+    "city_pl": "Lamidanda",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "JMO",
+    "name": "Jomsom Airport",
+    "city_en": "Jomsom",
+    "city_pl": "Jomsom",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "NGX",
+    "name": "Manang Airport",
+    "city_en": "Manang",
+    "city_pl": "Manang",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "PPL",
+    "name": "Phaplu Airport",
+    "city_en": "Phaplu",
+    "city_pl": "Phaplu",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "RUM",
+    "name": "Rumjatar Airport",
+    "city_en": "Rumjatar",
+    "city_pl": "Rumjatar",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "DNP",
+    "name": "Tulsipur Airport",
+    "city_en": "Dang",
+    "city_pl": "Dang",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "RUK",
+    "name": "Rukum Chaurjahari Airport",
+    "city_en": "Rukumkot",
+    "city_pl": "Rukumkot",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "JUM",
+    "name": "Jumla Airport",
+    "city_en": "Jumla",
+    "city_pl": "Jumla",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "TPJ",
+    "name": "Taplejung Airport",
+    "city_en": "Taplejung",
+    "city_pl": "Taplejung",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "TMI",
+    "name": "Tumling Tar Airport",
+    "city_en": "Tumling Tar",
+    "city_pl": "Tumling Tar",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "SKH",
+    "name": "Surkhet Airport",
+    "city_en": "Surkhet",
+    "city_pl": "Surkhet",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "IMK",
+    "name": "Simikot Airport",
+    "city_en": "Simikot",
+    "city_pl": "Simikot",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "DOP",
+    "name": "Dolpa Airport",
+    "city_en": "Dolpa",
+    "city_pl": "Dolpa",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "BJH",
+    "name": "Bajhang Airport",
+    "city_en": "Bajhang",
+    "city_pl": "Bajhang",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "DHI",
+    "name": "Dhangarhi Airport",
+    "city_en": "Dhangarhi",
+    "city_pl": "Dhangarhi",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "MWX",
+    "name": "Muan International Airport",
+    "city_en": "Muan",
+    "city_pl": "Muan",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "JTY",
+    "name": "Astypalaia Airport",
+    "city_en": "Astypalaia",
+    "city_pl": "Astypalaia",
+    "country_en": "Greece"
+  },
+  {
+    "code": "JIK",
+    "name": "Ikaria Airport",
+    "city_en": "Ikaria",
+    "city_pl": "Ikaria",
+    "country_en": "Greece"
+  },
+  {
+    "code": "JKL",
+    "name": "Kalymnos Airport",
+    "city_en": "Kalymnos",
+    "city_pl": "Kalymnos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "MLO",
+    "name": "Milos Airport",
+    "city_en": "Milos",
+    "city_pl": "Milos",
+    "country_en": "Greece"
+  },
+  {
+    "code": "JNX",
+    "name": "Naxos Airport",
+    "city_en": "Cyclades Islands",
+    "city_pl": "Cyclades Islands",
+    "country_en": "Greece"
+  },
+  {
+    "code": "PAS",
+    "name": "Paros National Airport",
+    "city_en": "Paros",
+    "city_pl": "Paros",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KZS",
+    "name": "Kastelorizo Airport",
+    "city_en": "Kastelorizo",
+    "city_pl": "Kastelorizo",
+    "country_en": "Greece"
+  },
+  {
+    "code": "RMF",
+    "name": "Marsa Alam International Airport",
+    "city_en": "Marsa Alam",
+    "city_pl": "Marsa Alam",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "NRN",
+    "name": "Weeze Airport",
+    "city_en": "Weeze",
+    "city_pl": "Weeze",
+    "country_en": "Germany"
+  },
+  {
+    "code": "USU",
+    "name": "Francisco B. Reyes Airport",
+    "city_en": "Busuanga",
+    "city_pl": "Busuanga",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "BXU",
+    "name": "Bancasi Airport",
+    "city_en": "Butuan",
+    "city_pl": "Butuan",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "DPL",
+    "name": "Dipolog Airport",
+    "city_en": "Dipolog",
+    "city_pl": "Dipolog",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "LAO",
+    "name": "Laoag International Airport",
+    "city_en": "Laoag",
+    "city_pl": "Laoag",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "LGP",
+    "name": "Legazpi City International Airport",
+    "city_en": "Legazpi",
+    "city_pl": "Legazpi",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "OZC",
+    "name": "Labo Airport",
+    "city_en": "Ozamis",
+    "city_pl": "Ozamis",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "CEB",
+    "name": "Mactan Cebu International Airport",
+    "city_en": "Cebu",
+    "city_pl": "Cebu",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "NOD",
+    "name": "Norden-Norddeich Airport",
+    "city_en": "Norden",
+    "city_pl": "Norden",
+    "country_en": "Germany"
+  },
+  {
+    "code": "JUI",
+    "name": "Juist Airport",
+    "city_en": "Juist",
+    "city_pl": "Juist",
+    "country_en": "Germany"
+  },
+  {
+    "code": "BPS",
+    "name": "Porto Seguro Airport",
+    "city_en": "Porto Seguro",
+    "city_pl": "Porto Seguro",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "QIG",
+    "name": "Iguatu Airport",
+    "city_en": "Iguatu",
+    "city_pl": "Iguatu",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PMW",
+    "name": "Brigadeiro Lysias Rodrigues Airport",
+    "city_en": "Palmas",
+    "city_pl": "Palmas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CLV",
+    "name": "Nelson Ribeiro Guimarães Airport",
+    "city_en": "Caldas Novas",
+    "city_pl": "Caldas Novas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MSO",
+    "name": "Missoula International Airport",
+    "city_en": "Missoula",
+    "city_pl": "Missoula",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKQ",
+    "name": "Blackall Airport",
+    "city_en": "Blackall",
+    "city_pl": "Blackall",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BDB",
+    "name": "Bundaberg Airport",
+    "city_en": "Bundaberg",
+    "city_pl": "Bundaberg",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GCN",
+    "name": "Grand Canyon National Park Airport",
+    "city_en": "Grand Canyon",
+    "city_pl": "Grand Canyon",
+    "country_en": "United States"
+  },
+  {
+    "code": "SGR",
+    "name": "Sugar Land Regional Airport",
+    "city_en": "Sugar Land",
+    "city_pl": "Sugar Land",
+    "country_en": "United States"
+  },
+  {
+    "code": "APA",
+    "name": "Centennial Airport",
+    "city_en": "Denver",
+    "city_pl": "Denver",
+    "country_en": "United States"
+  },
+  {
+    "code": "CVN",
+    "name": "Clovis Municipal Airport",
+    "city_en": "Clovis",
+    "city_pl": "Clovis",
+    "country_en": "United States"
+  },
+  {
+    "code": "FST",
+    "name": "Fort Stockton Pecos County Airport",
+    "city_en": "Fort Stockton",
+    "city_pl": "Fort Stockton",
+    "country_en": "United States"
+  },
+  {
+    "code": "LVS",
+    "name": "Las Vegas Municipal Airport",
+    "city_en": "Las Vegas",
+    "city_pl": "Las Vegas",
+    "country_en": "United States"
+  },
+  {
+    "code": "IWS",
+    "name": "West Houston Airport",
+    "city_en": "Houston",
+    "city_pl": "Houston",
+    "country_en": "United States"
+  },
+  {
+    "code": "LRU",
+    "name": "Las Cruces International Airport",
+    "city_en": "Las Cruces",
+    "city_pl": "Las Cruces",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKD",
+    "name": "Stephens County Airport",
+    "city_en": "Breckenridge",
+    "city_pl": "Breckenridge",
+    "country_en": "United States"
+  },
+  {
+    "code": "TPL",
+    "name": "Draughon Miller Central Texas Regional Airport",
+    "city_en": "Temple",
+    "city_pl": "Temple",
+    "country_en": "United States"
+  },
+  {
+    "code": "OZA",
+    "name": "Ozona Municipal Airport",
+    "city_en": "Ozona",
+    "city_pl": "Ozona",
+    "country_en": "United States"
+  },
+  {
+    "code": "KDM",
+    "name": "Kaadedhdhoo Airport",
+    "city_en": "Kaadedhdhoo",
+    "city_pl": "Kaadedhdhoo",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "LAK",
+    "name": "Aklavik/Freddie Carmichael Airport",
+    "city_en": "Aklavik",
+    "city_pl": "Aklavik",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YWJ",
+    "name": "Déline Airport",
+    "city_en": "Deline",
+    "city_pl": "Deline",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZFN",
+    "name": "Tulita Airport",
+    "city_en": "Tulita",
+    "city_pl": "Tulita",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGH",
+    "name": "Fort Good Hope Airport",
+    "city_en": "Fort Good Hope",
+    "city_pl": "Fort Good Hope",
+    "country_en": "Canada"
+  },
+  {
+    "code": "TAH",
+    "name": "Tanna Airport",
+    "city_en": "Tanna",
+    "city_pl": "Tanna",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "YPC",
+    "name": "Paulatuk (Nora Aliqatchialuk Ruben) Airport",
+    "city_en": "Paulatuk",
+    "city_pl": "Paulatuk",
+    "country_en": "Canada"
+  },
+  {
+    "code": "SRZ",
+    "name": "El Trompillo Airport",
+    "city_en": "Santa Cruz",
+    "city_pl": "Santa Cruz",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "SAB",
+    "name": "Juancho E. Yrausquin Airport",
+    "city_en": "Saba",
+    "city_pl": "Saba",
+    "country_en": "Netherlands Antilles"
+  },
+  {
+    "code": "EGE",
+    "name": "Eagle County Regional Airport",
+    "city_en": "Vail",
+    "city_pl": "Vail",
+    "country_en": "United States"
+  },
+  {
+    "code": "SKN",
+    "name": "Stokmarknes Skagen Airport",
+    "city_en": "Stokmarknes",
+    "city_pl": "Stokmarknes",
+    "country_en": "Norway"
+  },
+  {
+    "code": "CGF",
+    "name": "Cuyahoga County Airport",
+    "city_en": "Richmond Heights",
+    "city_pl": "Richmond Heights",
+    "country_en": "United States"
+  },
+  {
+    "code": "MFD",
+    "name": "Mansfield Lahm Regional Airport",
+    "city_en": "Mansfield",
+    "city_pl": "Mansfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "CSG",
+    "name": "Columbus Metropolitan Airport",
+    "city_en": "Columbus",
+    "city_pl": "Columbus",
+    "country_en": "United States"
+  },
+  {
+    "code": "LAW",
+    "name": "Lawton Fort Sill Regional Airport",
+    "city_en": "Lawton",
+    "city_pl": "Lawton",
+    "country_en": "United States"
+  },
+  {
+    "code": "FNL",
+    "name": "Northern Colorado Regional Airport",
+    "city_en": "Fort Collins",
+    "city_pl": "Fort Collins",
+    "country_en": "United States"
+  },
+  {
+    "code": "FLG",
+    "name": "Flagstaff Pulliam Airport",
+    "city_en": "Flagstaff",
+    "city_pl": "Flagstaff",
+    "country_en": "United States"
+  },
+  {
+    "code": "TVL",
+    "name": "Lake Tahoe Airport",
+    "city_en": "South Lake Tahoe",
+    "city_pl": "South Lake Tahoe",
+    "country_en": "United States"
+  },
+  {
+    "code": "TWF",
+    "name": "Joslin Field Magic Valley Regional Airport",
+    "city_en": "Twin Falls",
+    "city_pl": "Twin Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "MVY",
+    "name": "Martha's Vineyard Airport",
+    "city_en": "Vineyard Haven MA",
+    "city_pl": "Vineyard Haven MA",
+    "country_en": "United States"
+  },
+  {
+    "code": "CON",
+    "name": "Concord Municipal Airport",
+    "city_en": "Concord NH",
+    "city_pl": "Concord NH",
+    "country_en": "United States"
+  },
+  {
+    "code": "GON",
+    "name": "Groton New London Airport",
+    "city_en": "Groton CT",
+    "city_pl": "Groton CT",
+    "country_en": "United States"
+  },
+  {
+    "code": "STC",
+    "name": "St Cloud Regional Airport",
+    "city_en": "Saint Cloud",
+    "city_pl": "Saint Cloud",
+    "country_en": "United States"
+  },
+  {
+    "code": "BPE",
+    "name": "Qinhuangdao Beidaihe Airport",
+    "city_en": "Bagan",
+    "city_pl": "Bagan",
+    "country_en": "Burma"
+  },
+  {
+    "code": "GTR",
+    "name": "Golden Triangle Regional Airport",
+    "city_en": "Columbus Mississippi",
+    "city_pl": "Columbus Mississippi",
+    "country_en": "United States"
+  },
+  {
+    "code": "GOJ",
+    "name": "Nizhny Novgorod Strigino International Airport",
+    "city_en": "Nizhniy Novgorod",
+    "city_pl": "Nizhniy Novgorod",
+    "country_en": "Russia"
+  },
+  {
+    "code": "HQM",
+    "name": "Bowerman Airport",
+    "city_en": "Hoquiam",
+    "city_pl": "Hoquiam",
+    "country_en": "United States"
+  },
+  {
+    "code": "ERI",
+    "name": "Erie International Tom Ridge Field",
+    "city_en": "Erie",
+    "city_pl": "Erie",
+    "country_en": "United States"
+  },
+  {
+    "code": "HYA",
+    "name": "Barnstable Municipal Boardman Polando Field",
+    "city_en": "Barnstable",
+    "city_pl": "Barnstable",
+    "country_en": "United States"
+  },
+  {
+    "code": "SPR",
+    "name": "San Pedro Airport",
+    "city_en": "San Pedro",
+    "city_pl": "San Pedro",
+    "country_en": "Belize"
+  },
+  {
+    "code": "SDX",
+    "name": "Sedona Airport",
+    "city_en": "Sedona",
+    "city_pl": "Sedona",
+    "country_en": "United States"
+  },
+  {
+    "code": "MGW",
+    "name": "Morgantown Municipal Walter L. Bill Hart Field",
+    "city_en": "Morgantown",
+    "city_pl": "Morgantown",
+    "country_en": "United States"
+  },
+  {
+    "code": "CRW",
+    "name": "Yeager Airport",
+    "city_en": "Charleston",
+    "city_pl": "Charleston",
+    "country_en": "United States"
+  },
+  {
+    "code": "AVP",
+    "name": "Wilkes Barre Scranton International Airport",
+    "city_en": "Scranton",
+    "city_pl": "Scranton",
+    "country_en": "United States"
+  },
+  {
+    "code": "BJI",
+    "name": "Bemidji Regional Airport",
+    "city_en": "Bemidji",
+    "city_pl": "Bemidji",
+    "country_en": "United States"
+  },
+  {
+    "code": "THG",
+    "name": "Thangool Airport",
+    "city_en": "Biloela",
+    "city_pl": "Biloela",
+    "country_en": "Australia"
+  },
+  {
+    "code": "FGI",
+    "name": "Fagali'i Airport",
+    "city_en": "Apia",
+    "city_pl": "Apia",
+    "country_en": "Samoa"
+  },
+  {
+    "code": "BNK",
+    "name": "Ballina Byron Gateway Airport",
+    "city_en": "Ballina Byron Bay",
+    "city_pl": "Ballina Byron Bay",
+    "country_en": "Australia"
+  },
+  {
+    "code": "FAR",
+    "name": "Hector International Airport",
+    "city_en": "Fargo",
+    "city_pl": "Fargo",
+    "country_en": "United States"
+  },
+  {
+    "code": "MKC",
+    "name": "Charles B. Wheeler Downtown Airport",
+    "city_en": "Kansas City",
+    "city_pl": "Kansas City",
+    "country_en": "United States"
+  },
+  {
+    "code": "RBE",
+    "name": "Ratanakiri Airport",
+    "city_en": "Ratanakiri",
+    "city_pl": "Ratanakiri",
+    "country_en": "Cambodia"
+  },
+  {
+    "code": "GCC",
+    "name": "Gillette Campbell County Airport",
+    "city_en": "Gillette",
+    "city_pl": "Gillette",
+    "country_en": "United States"
+  },
+  {
+    "code": "TOF",
+    "name": "Bogashevo Airport",
+    "city_en": "Tomsk",
+    "city_pl": "Tomsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NZJ",
+    "name": "El Toro Marine Corps Air Station",
+    "city_en": "Santa Ana",
+    "city_pl": "Santa Ana",
+    "country_en": "United States"
+  },
+  {
+    "code": "PHY",
+    "name": "Phetchabun Airport",
+    "city_en": "Phetchabun",
+    "city_pl": "Phetchabun",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "CJM",
+    "name": "Chumphon Airport",
+    "city_en": "Chumphon",
+    "city_pl": "Chumphon",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "JZH",
+    "name": "Jiuzhai Huanglong Airport",
+    "city_en": "Jiuzhaigou",
+    "city_pl": "Jiuzhaigou",
+    "country_en": "China"
+  },
+  {
+    "code": "SWA",
+    "name": "Jieyang Chaoshan International Airport",
+    "city_en": "Shantou",
+    "city_pl": "Shantou",
+    "country_en": "China"
+  },
+  {
+    "code": "GEO",
+    "name": "Cheddi Jagan International Airport",
+    "city_en": "Georgetown",
+    "city_pl": "Georgetown",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "AGT",
+    "name": "Guarani International Airport",
+    "city_en": "Ciudad del Este",
+    "city_pl": "Ciudad del Este",
+    "country_en": "Paraguay"
+  },
+  {
+    "code": "OGL",
+    "name": "Eugene F. Correira International Airport",
+    "city_en": "Georgetown",
+    "city_pl": "Georgetown",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "KAI",
+    "name": "Kaieteur International Airport",
+    "city_en": "Kaieteur",
+    "city_pl": "Kaieteur",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "DNH",
+    "name": "Dunhuang Airport",
+    "city_en": "Dunhuang",
+    "city_pl": "Dunhuang",
+    "country_en": "China"
+  },
+  {
+    "code": "AOI",
+    "name": "Ancona Falconara Airport",
+    "city_en": "Ancona",
+    "city_pl": "Ancona",
+    "country_en": "Italy"
+  },
+  {
+    "code": "TCP",
+    "name": "Taba International Airport",
+    "city_en": "Taba",
+    "city_pl": "Taba",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "LYB",
+    "name": "Edward Bodden Airfield",
+    "city_en": "Little Cayman",
+    "city_pl": "Little Cayman",
+    "country_en": "Cayman Islands"
+  },
+  {
+    "code": "BJV",
+    "name": "Milas Bodrum International Airport",
+    "city_en": "Bodrum",
+    "city_pl": "Bodrum",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "TBJ",
+    "name": "Tabarka 7 Novembre Airport",
+    "city_en": "Tabarka",
+    "city_pl": "Tabarka",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "SAW",
+    "name": "Sabiha Gökçen International Airport",
+    "city_en": "Istanbul",
+    "city_pl": "Stambuł",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "SCE",
+    "name": "University Park Airport",
+    "city_en": "State College Pennsylvania",
+    "city_pl": "State College Pennsylvania",
+    "country_en": "United States"
+  },
+  {
+    "code": "BME",
+    "name": "Broome International Airport",
+    "city_en": "Broome",
+    "city_pl": "Broome",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NTL",
+    "name": "Newcastle Airport",
+    "city_en": "Newcastle",
+    "city_pl": "Newcastle",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KLU",
+    "name": "Klagenfurt Airport",
+    "city_en": "Klagenfurt",
+    "city_pl": "Klagenfurt",
+    "country_en": "Austria"
+  },
+  {
+    "code": "HFT",
+    "name": "Hammerfest Airport",
+    "city_en": "Hammerfest",
+    "city_pl": "Hammerfest",
+    "country_en": "Norway"
+  },
+  {
+    "code": "HVG",
+    "name": "Valan Airport",
+    "city_en": "Honningsvag",
+    "city_pl": "Honningsvag",
+    "country_en": "Norway"
+  },
+  {
+    "code": "MEH",
+    "name": "Mehamn Airport",
+    "city_en": "Mehamn",
+    "city_pl": "Mehamn",
+    "country_en": "Norway"
+  },
+  {
+    "code": "VDS",
+    "name": "Vadsø Airport",
+    "city_en": "Vadsø",
+    "city_pl": "Vadsø",
+    "country_en": "Norway"
+  },
+  {
+    "code": "IKA",
+    "name": "Imam Khomeini International Airport",
+    "city_en": "Tehran",
+    "city_pl": "Tehran",
+    "country_en": "Iran"
+  },
+  {
+    "code": "MHD",
+    "name": "Mashhad International Airport",
+    "city_en": "Mashhad",
+    "city_pl": "Mashhad",
+    "country_en": "Iran"
+  },
+  {
+    "code": "UIK",
+    "name": "Ust-Ilimsk Airport",
+    "city_en": "Ust Ilimsk",
+    "city_pl": "Ust Ilimsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "MEI",
+    "name": "Key Field",
+    "city_en": "Meridian",
+    "city_pl": "Meridian",
+    "country_en": "United States"
+  },
+  {
+    "code": "SPI",
+    "name": "Abraham Lincoln Capital Airport",
+    "city_en": "Springfield",
+    "city_pl": "Springfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "CEZ",
+    "name": "Cortez Municipal Airport",
+    "city_en": "Cortez",
+    "city_pl": "Cortez",
+    "country_en": "United States"
+  },
+  {
+    "code": "HDN",
+    "name": "Yampa Valley Airport",
+    "city_en": "Hayden",
+    "city_pl": "Hayden",
+    "country_en": "United States"
+  },
+  {
+    "code": "GUP",
+    "name": "Gallup Municipal Airport",
+    "city_en": "Gallup",
+    "city_pl": "Gallup",
+    "country_en": "United States"
+  },
+  {
+    "code": "LBL",
+    "name": "Liberal Mid-America Regional Airport",
+    "city_en": "Liberal",
+    "city_pl": "Liberal",
+    "country_en": "United States"
+  },
+  {
+    "code": "LAA",
+    "name": "Lamar Municipal Airport",
+    "city_en": "Lamar",
+    "city_pl": "Lamar",
+    "country_en": "United States"
+  },
+  {
+    "code": "GLD",
+    "name": "Renner Field-Goodland Municipal Airport",
+    "city_en": "Goodland",
+    "city_pl": "Goodland",
+    "country_en": "United States"
+  },
+  {
+    "code": "COD",
+    "name": "Yellowstone Regional Airport",
+    "city_en": "Cody",
+    "city_pl": "Cody",
+    "country_en": "United States"
+  },
+  {
+    "code": "HOV",
+    "name": "Ørsta-Volda Airport, Hovden",
+    "city_en": "Orsta-Volda",
+    "city_pl": "Orsta-Volda",
+    "country_en": "Norway"
+  },
+  {
+    "code": "ISC",
+    "name": "St. Mary's Airport",
+    "city_en": "ST MARY\\\\'S",
+    "city_pl": "ST MARY\\\\'S",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SGF",
+    "name": "Springfield Branson National Airport",
+    "city_en": "Springfield",
+    "city_pl": "Springfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "NVK",
+    "name": "Narvik Framnes Airport",
+    "city_en": "Narvik",
+    "city_pl": "Narvik",
+    "country_en": "Norway"
+  },
+  {
+    "code": "BVG",
+    "name": "Berlevåg Airport",
+    "city_en": "Berlevag",
+    "city_pl": "Berlevag",
+    "country_en": "Norway"
+  },
+  {
+    "code": "FBU",
+    "name": "Oslo, Fornebu Airport",
+    "city_en": "Oslo",
+    "city_pl": "Oslo",
+    "country_en": "Norway"
+  },
+  {
+    "code": "NSK",
+    "name": "Norilsk-Alykel Airport",
+    "city_en": "Norilsk",
+    "city_pl": "Norilsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "AAQ",
+    "name": "Anapa Vityazevo Airport",
+    "city_en": "Anapa",
+    "city_pl": "Anapa",
+    "country_en": "Russia"
+  },
+  {
+    "code": "JLN",
+    "name": "Joplin Regional Airport",
+    "city_en": "Joplin",
+    "city_pl": "Joplin",
+    "country_en": "United States"
+  },
+  {
+    "code": "ABE",
+    "name": "Lehigh Valley International Airport",
+    "city_en": "Allentown",
+    "city_pl": "Allentown",
+    "country_en": "United States"
+  },
+  {
+    "code": "XNA",
+    "name": "Northwest Arkansas Regional Airport",
+    "city_en": "Bentonville",
+    "city_pl": "Bentonville",
+    "country_en": "United States"
+  },
+  {
+    "code": "GUW",
+    "name": "Atyrau Airport",
+    "city_en": "Atyrau",
+    "city_pl": "Atyrau",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "KZO",
+    "name": "Kzyl-Orda Southwest Airport",
+    "city_en": "Kzyl-Orda",
+    "city_pl": "Kzyl-Orda",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "SBN",
+    "name": "South Bend Regional Airport",
+    "city_en": "South Bend",
+    "city_pl": "South Bend",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKA",
+    "name": "Bykovo Airport",
+    "city_en": "Moscow",
+    "city_pl": "Moscow",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ARH",
+    "name": "Talagi Airport",
+    "city_en": "Arkhangelsk",
+    "city_pl": "Arkhangelsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "RTW",
+    "name": "Saratov Central Airport",
+    "city_en": "Saratov",
+    "city_pl": "Saratov",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NUX",
+    "name": "Novy Urengoy Airport",
+    "city_en": "Novy Urengoy",
+    "city_pl": "Novy Urengoy",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NOJ",
+    "name": "Noyabrsk Airport",
+    "city_en": "Noyabrsk",
+    "city_pl": "Noyabrsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SCO",
+    "name": "Aktau Airport",
+    "city_en": "Aktau",
+    "city_pl": "Aktau",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "UCT",
+    "name": "Ukhta Airport",
+    "city_en": "Ukhta",
+    "city_pl": "Ukhta",
+    "country_en": "Russia"
+  },
+  {
+    "code": "USK",
+    "name": "Usinsk Airport",
+    "city_en": "Usinsk",
+    "city_pl": "Usinsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PEX",
+    "name": "Pechora Airport",
+    "city_en": "Pechora",
+    "city_pl": "Pechora",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NNM",
+    "name": "Naryan Mar Airport",
+    "city_en": "Naryan-Mar",
+    "city_pl": "Naryan-Mar",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PKV",
+    "name": "Pskov Airport",
+    "city_en": "Pskov",
+    "city_pl": "Pskov",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KGP",
+    "name": "Kogalym International Airport",
+    "city_en": "Kogalym",
+    "city_pl": "Kogalym",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KJA",
+    "name": "Yemelyanovo Airport",
+    "city_en": "Krasnoyarsk",
+    "city_pl": "Krasnoyarsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KGF",
+    "name": "Sary-Arka Airport",
+    "city_en": "Karaganda",
+    "city_pl": "Karaganda",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "URJ",
+    "name": "Uray Airport",
+    "city_en": "Uraj",
+    "city_pl": "Uraj",
+    "country_en": "Russia"
+  },
+  {
+    "code": "IWA",
+    "name": "Ivanovo South Airport",
+    "city_en": "Ivanovo",
+    "city_pl": "Ivanovo",
+    "country_en": "Russia"
+  },
+  {
+    "code": "CGQ",
+    "name": "Longjia Airport",
+    "city_en": "Changchun",
+    "city_pl": "Changchun",
+    "country_en": "China"
+  },
+  {
+    "code": "KIJ",
+    "name": "Niigata Airport",
+    "city_en": "Niigata",
+    "city_pl": "Niigata",
+    "country_en": "Japan"
+  },
+  {
+    "code": "JON",
+    "name": "Johnston Atoll Airport",
+    "city_en": "Johnston Island",
+    "city_pl": "Johnston Island",
+    "country_en": "Johnston Atoll"
+  },
+  {
+    "code": "SMD",
+    "name": "Smith Field",
+    "city_en": "Fort Wayne IN",
+    "city_pl": "Fort Wayne IN",
+    "country_en": "United States"
+  },
+  {
+    "code": "ACV",
+    "name": "California Redwood Coast-Humboldt County Airport",
+    "city_en": "Arcata CA",
+    "city_pl": "Arcata CA",
+    "country_en": "United States"
+  },
+  {
+    "code": "OAJ",
+    "name": "Albert J Ellis Airport",
+    "city_en": "Jacksonville NC",
+    "city_pl": "Jacksonville NC",
+    "country_en": "United States"
+  },
+  {
+    "code": "TCL",
+    "name": "Tuscaloosa Regional Airport",
+    "city_en": "Tuscaloosa AL",
+    "city_pl": "Tuscaloosa AL",
+    "country_en": "United States"
+  },
+  {
+    "code": "DBQ",
+    "name": "Dubuque Regional Airport",
+    "city_en": "Dubuque IA",
+    "city_pl": "Dubuque IA",
+    "country_en": "United States"
+  },
+  {
+    "code": "HHP",
+    "name": "Shun Tak Heliport",
+    "city_en": "Hong Kong",
+    "city_pl": "Hongkong",
+    "country_en": "Hong Kong"
+  },
+  {
+    "code": "ATD",
+    "name": "Uru Harbour Airport",
+    "city_en": "Atoifi",
+    "city_pl": "Atoifi",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "AKS",
+    "name": "Gwaunaru'u Airport",
+    "city_en": "Auki",
+    "city_pl": "Auki",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "BAS",
+    "name": "Ballalae Airport",
+    "city_en": "Ballalae",
+    "city_pl": "Ballalae",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "FRE",
+    "name": "Fera/Maringe Airport",
+    "city_en": "Fera Island",
+    "city_pl": "Fera Island",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "MBU",
+    "name": "Babanakira Airport",
+    "city_en": "Mbambanakira",
+    "city_pl": "Mbambanakira",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "IRA",
+    "name": "Ngorangora Airport",
+    "city_en": "Kirakira",
+    "city_pl": "Kirakira",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "SCZ",
+    "name": "Santa Cruz/Graciosa Bay/Luova Airport",
+    "city_en": "Santa Cruz/Graciosa Bay/Luova",
+    "city_pl": "Santa Cruz/Graciosa Bay/Luova",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "MUA",
+    "name": "Munda Airport",
+    "city_en": "Munda",
+    "city_pl": "Munda",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "GZO",
+    "name": "Nusatupe Airport",
+    "city_en": "Gizo",
+    "city_pl": "Gizo",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "MNY",
+    "name": "Mono Airport",
+    "city_en": "Stirling Island",
+    "city_pl": "Stirling Island",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "RNL",
+    "name": "Rennell/Tingoa Airport",
+    "city_en": "Rennell Island",
+    "city_pl": "Rennell Island",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "RUS",
+    "name": "Marau Airport",
+    "city_en": "Marau",
+    "city_pl": "Marau",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "VAO",
+    "name": "Suavanao Airport",
+    "city_en": "Suavanao",
+    "city_pl": "Suavanao",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "KGE",
+    "name": "Kaghau Airport",
+    "city_en": "Kagau Island",
+    "city_pl": "Kagau Island",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "RBV",
+    "name": "Ramata Airport",
+    "city_en": "Ramata",
+    "city_pl": "Ramata",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "BUA",
+    "name": "Buka Airport",
+    "city_en": "Buka Island",
+    "city_pl": "Buka Island",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "CMU",
+    "name": "Chimbu Airport",
+    "city_en": "Kundiawa",
+    "city_pl": "Kundiawa",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "DAU",
+    "name": "Daru Airport",
+    "city_en": "Daru",
+    "city_pl": "Daru",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "GUR",
+    "name": "Gurney Airport",
+    "city_en": "Gurney",
+    "city_pl": "Gurney",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "PNP",
+    "name": "Girua Airport",
+    "city_en": "Girua",
+    "city_pl": "Girua",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "HKN",
+    "name": "Kimbe Airport",
+    "city_en": "Hoskins",
+    "city_pl": "Hoskins",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "UNG",
+    "name": "Kiunga Airport",
+    "city_en": "Kiunga",
+    "city_pl": "Kiunga",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "KRI",
+    "name": "Kikori Airport",
+    "city_en": "Kikori",
+    "city_pl": "Kikori",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "KMA",
+    "name": "Kerema Airport",
+    "city_en": "Kerema",
+    "city_pl": "Kerema",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "KVG",
+    "name": "Kavieng Airport",
+    "city_en": "Kavieng",
+    "city_pl": "Kavieng",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "MDU",
+    "name": "Mendi Airport",
+    "city_en": "Mendi",
+    "city_pl": "Mendi",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "MAS",
+    "name": "Momote Airport",
+    "city_en": "Momote",
+    "city_pl": "Momote",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "MXH",
+    "name": "Moro Airport",
+    "city_en": "Moro",
+    "city_pl": "Moro",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "MIS",
+    "name": "Misima Island Airport",
+    "city_en": "Misima Island",
+    "city_pl": "Misima Island",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "TIZ",
+    "name": "Tari Airport",
+    "city_en": "Tari",
+    "city_pl": "Tari",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "TBG",
+    "name": "Tabubil Airport",
+    "city_en": "Tabubil",
+    "city_pl": "Tabubil",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "RAB",
+    "name": "Tokua Airport",
+    "city_en": "Tokua",
+    "city_pl": "Tokua",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "VAI",
+    "name": "Vanimo Airport",
+    "city_en": "Vanimo",
+    "city_pl": "Vanimo",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "WBM",
+    "name": "Wapenamanda Airport",
+    "city_en": "Wapenamanda",
+    "city_pl": "Wapenamanda",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "LLU",
+    "name": "Alluitsup Paa Heliport",
+    "city_en": "Alluitsup Paa",
+    "city_pl": "Alluitsup Paa",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "CNP",
+    "name": "Neerlerit Inaat Airport",
+    "city_en": "Neerlerit Inaat",
+    "city_pl": "Neerlerit Inaat",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JFR",
+    "name": "Paamiut Heliport",
+    "city_en": "Paamiut",
+    "city_pl": "Paamiut",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JGO",
+    "name": "Qeqertarsuaq Heliport",
+    "city_en": "Qeqertarsuaq Airport",
+    "city_pl": "Qeqertarsuaq Airport",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JJU",
+    "name": "Qaqortoq Heliport",
+    "city_en": "Qaqortoq",
+    "city_pl": "Qaqortoq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JSU",
+    "name": "Maniitsoq Airport",
+    "city_en": "Maniitsoq",
+    "city_pl": "Maniitsoq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JNN",
+    "name": "Nanortalik Heliport",
+    "city_en": "Nanortalik",
+    "city_pl": "Nanortalik",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JNS",
+    "name": "Narsaq Heliport",
+    "city_en": "Narsaq",
+    "city_pl": "Narsaq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "NAQ",
+    "name": "Qaanaaq Airport",
+    "city_en": "Qaanaaq",
+    "city_pl": "Qaanaaq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JHS",
+    "name": "Sisimiut Airport",
+    "city_en": "Sisimiut",
+    "city_pl": "Sisimiut",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JUV",
+    "name": "Upernavik Airport",
+    "city_en": "Upernavik",
+    "city_pl": "Upernavik",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "JQA",
+    "name": "Qaarsut Airport",
+    "city_en": "Uummannaq",
+    "city_pl": "Uummannaq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "GRY",
+    "name": "Grímsey Airport",
+    "city_en": "Grímsey",
+    "city_pl": "Grímsey",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "THO",
+    "name": "Thorshofn Airport",
+    "city_en": "Thorshofn",
+    "city_pl": "Thorshofn",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "VPN",
+    "name": "Vopnafjörður Airport",
+    "city_en": "Vopnafjörður",
+    "city_pl": "Vopnafjörður",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "YWS",
+    "name": "Whistler/Green Lake Water Aerodrome",
+    "city_en": "Whistler",
+    "city_pl": "Whistler",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAA",
+    "name": "Anahim Lake Airport",
+    "city_en": "Anahim Lake",
+    "city_pl": "Anahim Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YWM",
+    "name": "Williams Harbour Airport",
+    "city_en": "Williams Harbour",
+    "city_pl": "Williams Harbour",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFX",
+    "name": "St. Lewis (Fox Harbour) Airport",
+    "city_en": "St. Lewis",
+    "city_pl": "St. Lewis",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHA",
+    "name": "Port Hope Simpson Airport",
+    "city_en": "Port Hope Simpson",
+    "city_pl": "Port Hope Simpson",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRG",
+    "name": "Rigolet Airport",
+    "city_en": "Rigolet",
+    "city_pl": "Rigolet",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCK",
+    "name": "Colville Lake Airport",
+    "city_en": "Colville Lake",
+    "city_pl": "Colville Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLE",
+    "name": "Whatì Airport",
+    "city_en": "Whatì",
+    "city_pl": "Whatì",
+    "country_en": "Canada"
+  },
+  {
+    "code": "SUR",
+    "name": "Summer Beaver Airport",
+    "city_en": "Summer Beaver",
+    "city_pl": "Summer Beaver",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAX",
+    "name": "Wapekeka Airport",
+    "city_en": "Angling Lake",
+    "city_pl": "Angling Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "WNN",
+    "name": "Wunnumin Lake Airport",
+    "city_en": "Wunnumin Lake",
+    "city_pl": "Wunnumin Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YNO",
+    "name": "North Spirit Lake Airport",
+    "city_en": "North Spirit Lake",
+    "city_pl": "North Spirit Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "XBE",
+    "name": "Bearskin Lake Airport",
+    "city_en": "Bearskin Lake",
+    "city_pl": "Bearskin Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "KIF",
+    "name": "Kingfisher Lake Airport",
+    "city_en": "Kingfisher Lake",
+    "city_pl": "Kingfisher Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YOG",
+    "name": "Ogoki Post Airport",
+    "city_en": "Ogoki Post",
+    "city_pl": "Ogoki Post",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHP",
+    "name": "Poplar Hill Airport",
+    "city_en": "Poplar Hill",
+    "city_pl": "Poplar Hill",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKU",
+    "name": "Chisasibi Airport",
+    "city_en": "Chisasibi",
+    "city_pl": "Chisasibi",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZTB",
+    "name": "Tête-à-la-Baleine Airport",
+    "city_en": "Tête-à-la-Baleine",
+    "city_pl": "Tête-à-la-Baleine",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZLT",
+    "name": "La Tabatière Airport",
+    "city_en": "La Tabatière",
+    "city_pl": "La Tabatière",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAC",
+    "name": "Cat Lake Airport",
+    "city_en": "Cat Lake",
+    "city_pl": "Cat Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAG",
+    "name": "Fort Frances Municipal Airport",
+    "city_en": "Fort Frances",
+    "city_pl": "Fort Frances",
+    "country_en": "Canada"
+  },
+  {
+    "code": "XKS",
+    "name": "Kasabonika Airport",
+    "city_en": "Kasabonika",
+    "city_pl": "Kasabonika",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKG",
+    "name": "Kangirsuk Airport",
+    "city_en": "Kangirsuk",
+    "city_pl": "Kangirsuk",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAT",
+    "name": "Attawapiskat Airport",
+    "city_en": "Attawapiskat",
+    "city_pl": "Attawapiskat",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBE",
+    "name": "Uranium City Airport",
+    "city_en": "Uranium City",
+    "city_pl": "Uranium City",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBX",
+    "name": "Lourdes de Blanc Sablon Airport",
+    "city_en": "Lourdes-De-Blanc-Sablon",
+    "city_pl": "Lourdes-De-Blanc-Sablon",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRF",
+    "name": "Cartwright Airport",
+    "city_en": "Cartwright",
+    "city_pl": "Cartwright",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCS",
+    "name": "Chesterfield Inlet Airport",
+    "city_en": "Chesterfield Inlet",
+    "city_pl": "Chesterfield Inlet",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDP",
+    "name": "Nain Airport",
+    "city_en": "Nain",
+    "city_pl": "Nain",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YER",
+    "name": "Fort Severn Airport",
+    "city_en": "Fort Severn",
+    "city_pl": "Fort Severn",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFA",
+    "name": "Fort Albany Airport",
+    "city_en": "Fort Albany",
+    "city_pl": "Fort Albany",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFH",
+    "name": "Fort Hope Airport",
+    "city_en": "Fort Hope",
+    "city_pl": "Fort Hope",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMN",
+    "name": "Makkovik Airport",
+    "city_en": "Makkovik",
+    "city_pl": "Makkovik",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGB",
+    "name": "Texada Gillies Bay Airport",
+    "city_en": "Texada",
+    "city_pl": "Texada",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGO",
+    "name": "Gods Lake Narrows Airport",
+    "city_en": "Gods Lake Narrows",
+    "city_pl": "Gods Lake Narrows",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGT",
+    "name": "Igloolik Airport",
+    "city_en": "Igloolik",
+    "city_pl": "Igloolik",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGW",
+    "name": "Kuujjuarapik Airport",
+    "city_en": "Kuujjuarapik",
+    "city_pl": "Kuujjuarapik",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGX",
+    "name": "Gillam Airport",
+    "city_en": "Gillam",
+    "city_pl": "Gillam",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGZ",
+    "name": "Grise Fiord Airport",
+    "city_en": "Grise Fiord",
+    "city_pl": "Grise Fiord",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQC",
+    "name": "Quaqtaq Airport",
+    "city_en": "Quaqtaq",
+    "city_pl": "Quaqtaq",
+    "country_en": "Canada"
+  },
+  {
+    "code": "CXH",
+    "name": "Vancouver Harbour Water Aerodrome",
+    "city_en": "Vancouver",
+    "city_pl": "Vancouver",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YNS",
+    "name": "Nemiscau Airport",
+    "city_en": "Nemiscau",
+    "city_pl": "Nemiscau",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHO",
+    "name": "Hopedale Airport",
+    "city_en": "Hopedale",
+    "city_pl": "Hopedale",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHR",
+    "name": "Chevery Airport",
+    "city_en": "Chevery",
+    "city_pl": "Chevery",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YIK",
+    "name": "Ivujivik Airport",
+    "city_en": "Ivujivik",
+    "city_pl": "Ivujivik",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YIV",
+    "name": "Island Lake Airport",
+    "city_en": "Island Lake",
+    "city_pl": "Island Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "AKV",
+    "name": "Akulivik Airport",
+    "city_en": "Akulivik",
+    "city_pl": "Akulivik",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKQ",
+    "name": "Waskaganish Airport",
+    "city_en": "Waskaganish",
+    "city_pl": "Waskaganish",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPJ",
+    "name": "Aupaluk Airport",
+    "city_en": "Aupaluk",
+    "city_pl": "Aupaluk",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLC",
+    "name": "Kimmirut Airport",
+    "city_en": "Kimmirut",
+    "city_pl": "Kimmirut",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLH",
+    "name": "Lansdowne House Airport",
+    "city_en": "Lansdowne House",
+    "city_pl": "Lansdowne House",
+    "country_en": "Canada"
+  },
+  {
+    "code": "XGR",
+    "name": "Kangiqsualujjuaq (Georges River) Airport",
+    "city_en": "Kangiqsualujjuaq",
+    "city_pl": "Kangiqsualujjuaq",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMH",
+    "name": "Mary's Harbour Airport",
+    "city_en": "Mary's Harbour",
+    "city_pl": "Mary's Harbour",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMT",
+    "name": "Chapais Airport",
+    "city_en": "Chibougamau",
+    "city_pl": "Chibougamau",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YUD",
+    "name": "Umiujaq Airport",
+    "city_en": "Umiujaq",
+    "city_pl": "Umiujaq",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YNC",
+    "name": "Wemindji Airport",
+    "city_en": "Wemindji",
+    "city_pl": "Wemindji",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YNE",
+    "name": "Norway House Airport",
+    "city_en": "Norway House",
+    "city_pl": "Norway House",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YNL",
+    "name": "Points North Landing Airport",
+    "city_en": "Points North Landing",
+    "city_pl": "Points North Landing",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YOH",
+    "name": "Oxford House Airport",
+    "city_en": "Oxford House",
+    "city_pl": "Oxford House",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPH",
+    "name": "Inukjuak Airport",
+    "city_en": "Inukjuak",
+    "city_pl": "Inukjuak",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPM",
+    "name": "Pikangikum Airport",
+    "city_en": "Pikangikum",
+    "city_pl": "Pikangikum",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPO",
+    "name": "Peawanuck Airport",
+    "city_en": "Peawanuck",
+    "city_pl": "Peawanuck",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPW",
+    "name": "Powell River Airport",
+    "city_en": "Powell River",
+    "city_pl": "Powell River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQD",
+    "name": "The Pas Airport",
+    "city_en": "The Pas",
+    "city_pl": "The Pas",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQN",
+    "name": "Nakina Airport",
+    "city_en": "Nakina",
+    "city_pl": "Nakina",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRA",
+    "name": "Rae Lakes Airport",
+    "city_en": "Gamètì",
+    "city_pl": "Gamètì",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRL",
+    "name": "Red Lake Airport",
+    "city_en": "Red Lake",
+    "city_pl": "Red Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSF",
+    "name": "Stony Rapids Airport",
+    "city_en": "Stony Rapids",
+    "city_pl": "Stony Rapids",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSK",
+    "name": "Sanikiluaq Airport",
+    "city_en": "Sanikiluaq",
+    "city_pl": "Sanikiluaq",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YST",
+    "name": "St. Theresa Point Airport",
+    "city_en": "St. Theresa Point",
+    "city_pl": "St. Theresa Point",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YTL",
+    "name": "Big Trout Lake Airport",
+    "city_en": "Big Trout Lake",
+    "city_pl": "Big Trout Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVZ",
+    "name": "Deer Lake Airport",
+    "city_en": "Deer Lake",
+    "city_pl": "Deer Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YWP",
+    "name": "Webequie Airport",
+    "city_en": "Webequie",
+    "city_pl": "Webequie",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXN",
+    "name": "Whale Cove Airport",
+    "city_en": "Whale Cove",
+    "city_pl": "Whale Cove",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YZG",
+    "name": "Salluit Airport",
+    "city_en": "Salluit",
+    "city_pl": "Salluit",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZAC",
+    "name": "York Landing Airport",
+    "city_en": "York Landing",
+    "city_pl": "York Landing",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ILF",
+    "name": "Ilford Airport",
+    "city_en": "Ilford",
+    "city_pl": "Ilford",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZBF",
+    "name": "Bathurst Airport",
+    "city_en": "Bathurst",
+    "city_pl": "Bathurst",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZEM",
+    "name": "Eastmain River Airport",
+    "city_en": "Eastmain River",
+    "city_pl": "Eastmain River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZFD",
+    "name": "Fond-Du-Lac Airport",
+    "city_en": "Fond-Du-Lac",
+    "city_pl": "Fond-Du-Lac",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZGI",
+    "name": "Gods River Airport",
+    "city_en": "Gods River",
+    "city_pl": "Gods River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZJN",
+    "name": "Swan River Airport",
+    "city_en": "Swan River",
+    "city_pl": "Swan River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZKE",
+    "name": "Kashechewan Airport",
+    "city_en": "Kashechewan",
+    "city_pl": "Kashechewan",
+    "country_en": "Canada"
+  },
+  {
+    "code": "MSA",
+    "name": "Muskrat Dam Airport",
+    "city_en": "Muskrat Dam",
+    "city_pl": "Muskrat Dam",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZMT",
+    "name": "Masset Airport",
+    "city_en": "Masset",
+    "city_pl": "Masset",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZPB",
+    "name": "Sachigo Lake Airport",
+    "city_en": "Sachigo Lake",
+    "city_pl": "Sachigo Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZRJ",
+    "name": "Round Lake (Weagamow Lake) Airport",
+    "city_en": "Round Lake",
+    "city_pl": "Round Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZSJ",
+    "name": "Sandy Lake Airport",
+    "city_en": "Sandy Lake",
+    "city_pl": "Sandy Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZTM",
+    "name": "Shamattawa Airport",
+    "city_en": "Shamattawa",
+    "city_pl": "Shamattawa",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZUM",
+    "name": "Churchill Falls Airport",
+    "city_en": "Churchill Falls",
+    "city_pl": "Churchill Falls",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZWL",
+    "name": "Wollaston Lake Airport",
+    "city_en": "Wollaston Lake",
+    "city_pl": "Wollaston Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "BLJ",
+    "name": "Batna Airport",
+    "city_en": "Batna",
+    "city_pl": "Batna",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "CBH",
+    "name": "Béchar Boudghene Ben Ali Lotfi Airport",
+    "city_en": "Béchar",
+    "city_pl": "Béchar",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "BMW",
+    "name": "Bordj Badji Mokhtar Airport",
+    "city_en": "Bordj Badji Mokhtar",
+    "city_pl": "Bordj Badji Mokhtar",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "ELU",
+    "name": "Guemar Airport",
+    "city_en": "Guemar",
+    "city_pl": "Guemar",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "KMS",
+    "name": "Kumasi Airport",
+    "city_en": "Kumasi",
+    "city_pl": "Kumasi",
+    "country_en": "Ghana"
+  },
+  {
+    "code": "HDF",
+    "name": "Heringsdorf Airport",
+    "city_en": "Heringsdorf",
+    "city_pl": "Heringsdorf",
+    "country_en": "Germany"
+  },
+  {
+    "code": "HEI",
+    "name": "Heide-Büsum Airport",
+    "city_en": "Büsum",
+    "city_pl": "Büsum",
+    "country_en": "Germany"
+  },
+  {
+    "code": "HGL",
+    "name": "Helgoland-Düne Airport",
+    "city_en": "Helgoland",
+    "city_pl": "Helgoland",
+    "country_en": "Germany"
+  },
+  {
+    "code": "SJY",
+    "name": "Seinäjoki Airport",
+    "city_en": "Seinäjoki / Ilmajoki",
+    "city_pl": "Seinäjoki / Ilmajoki",
+    "country_en": "Finland"
+  },
+  {
+    "code": "NQT",
+    "name": "Nottingham Airport",
+    "city_en": "Nottingham",
+    "city_pl": "Nottingham",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "DSA",
+    "name": "Robin Hood Doncaster Sheffield Airport",
+    "city_en": "Doncaster, Sheffield",
+    "city_pl": "Doncaster, Sheffield",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "CAL",
+    "name": "Campbeltown Airport",
+    "city_en": "Campbeltown",
+    "city_pl": "Campbeltown",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "EOI",
+    "name": "Eday Airport",
+    "city_en": "Eday",
+    "city_pl": "Eday",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "FIE",
+    "name": "Fair Isle Airport",
+    "city_en": "Fair Isle",
+    "city_pl": "Fair Isle",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "NRL",
+    "name": "North Ronaldsay Airport",
+    "city_en": "North Ronaldsay",
+    "city_pl": "North Ronaldsay",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "PPW",
+    "name": "Papa Westray Airport",
+    "city_en": "Papa Westray",
+    "city_pl": "Papa Westray",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SOY",
+    "name": "Stronsay Airport",
+    "city_en": "Stronsay",
+    "city_pl": "Stronsay",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "NDY",
+    "name": "Sanday Airport",
+    "city_en": "Sanday",
+    "city_pl": "Sanday",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LWK",
+    "name": "Lerwick / Tingwall Airport",
+    "city_en": "Lerwick",
+    "city_pl": "Lerwick",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "WRY",
+    "name": "Westray Airport",
+    "city_en": "Westray",
+    "city_pl": "Westray",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "LEQ",
+    "name": "Land's End Airport",
+    "city_en": "Land's End",
+    "city_pl": "Land's End",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "PZE",
+    "name": "Penzance Heliport",
+    "city_en": "Penzance",
+    "city_pl": "Penzance",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "VLY",
+    "name": "Anglesey Airport",
+    "city_en": "Angelsey",
+    "city_pl": "Angelsey",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BRR",
+    "name": "Barra Airport",
+    "city_en": "Barra",
+    "city_pl": "Barra",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "CFN",
+    "name": "Donegal Airport",
+    "city_en": "Dongloe",
+    "city_pl": "Dongloe",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "CNL",
+    "name": "Sindal Airport",
+    "city_en": "Sindal",
+    "city_pl": "Sindal",
+    "country_en": "Denmark"
+  },
+  {
+    "code": "LKN",
+    "name": "Leknes Airport",
+    "city_en": "Leknes",
+    "city_pl": "Leknes",
+    "country_en": "Norway"
+  },
+  {
+    "code": "OSY",
+    "name": "Namsos Høknesøra Airport",
+    "city_en": "Namsos",
+    "city_pl": "Namsos",
+    "country_en": "Norway"
+  },
+  {
+    "code": "MQN",
+    "name": "Mo i Rana Airport, Røssvoll",
+    "city_en": "Mo i Rana",
+    "city_pl": "Mo i Rana",
+    "country_en": "Norway"
+  },
+  {
+    "code": "RVK",
+    "name": "Rørvik Airport, Ryum",
+    "city_en": "Rørvik",
+    "city_pl": "Rørvik",
+    "country_en": "Norway"
+  },
+  {
+    "code": "RET",
+    "name": "Røst Airport",
+    "city_en": "Røst",
+    "city_pl": "Røst",
+    "country_en": "Norway"
+  },
+  {
+    "code": "SDN",
+    "name": "Sandane Airport (Anda)",
+    "city_en": "Sandane",
+    "city_pl": "Sandane",
+    "country_en": "Norway"
+  },
+  {
+    "code": "SOG",
+    "name": "Sogndal Airport",
+    "city_en": "Sogndal",
+    "city_pl": "Sogndal",
+    "country_en": "Norway"
+  },
+  {
+    "code": "SVJ",
+    "name": "Svolvær Helle Airport",
+    "city_en": "Svolvær",
+    "city_pl": "Svolvær",
+    "country_en": "Norway"
+  },
+  {
+    "code": "SOJ",
+    "name": "Sørkjosen Airport",
+    "city_en": "Sorkjosen",
+    "city_pl": "Sorkjosen",
+    "country_en": "Norway"
+  },
+  {
+    "code": "VAW",
+    "name": "Vardø Airport, Svartnes",
+    "city_en": "Vardø",
+    "city_pl": "Vardø",
+    "country_en": "Norway"
+  },
+  {
+    "code": "VRY",
+    "name": "Værøy Heliport",
+    "city_en": "Værøy",
+    "city_pl": "Værøy",
+    "country_en": "Norway"
+  },
+  {
+    "code": "BZG",
+    "name": "Bydgoszcz Ignacy Jan Paderewski Airport",
+    "city_en": "Bydgoszcz",
+    "city_pl": "Bydgoszcz",
+    "country_en": "Poland"
+  },
+  {
+    "code": "LCJ",
+    "name": "Łódź Władysław Reymont Airport",
+    "city_en": "Lodz",
+    "city_pl": "Lodz",
+    "country_en": "Poland"
+  },
+  {
+    "code": "OSD",
+    "name": "Åre Östersund Airport",
+    "city_en": "Östersund",
+    "city_pl": "Östersund",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "HFS",
+    "name": "Hagfors Airport",
+    "city_en": "Hagfors",
+    "city_pl": "Hagfors",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "KSD",
+    "name": "Karlstad Airport",
+    "city_en": "Karlstad",
+    "city_pl": "Karlstad",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "TYF",
+    "name": "Torsby Airport",
+    "city_en": "Torsby",
+    "city_pl": "Torsby",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "AGH",
+    "name": "Ängelholm-Helsingborg Airport",
+    "city_en": "Ängelholm",
+    "city_pl": "Ängelholm",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "SQO",
+    "name": "Storuman Airport",
+    "city_en": "Mohed",
+    "city_pl": "Mohed",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "HMV",
+    "name": "Hemavan Airport",
+    "city_en": "Hemavan",
+    "city_pl": "Hemavan",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "VNT",
+    "name": "Ventspils International Airport",
+    "city_en": "Ventspils",
+    "city_pl": "Ventspils",
+    "country_en": "Latvia"
+  },
+  {
+    "code": "QRA",
+    "name": "Rand Airport",
+    "city_en": "Johannesburg",
+    "city_pl": "Johanesburg",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "MQP",
+    "name": "Kruger Mpumalanga International Airport",
+    "city_en": "Mpumalanga",
+    "city_pl": "Mpumalanga",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "AAM",
+    "name": "Malamala Airport",
+    "city_en": "Malamala",
+    "city_pl": "Malamala",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "MBD",
+    "name": "Mmabatho International Airport",
+    "city_en": "Mafeking",
+    "city_pl": "Mafeking",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "GNZ",
+    "name": "Ghanzi Airport",
+    "city_en": "Ghanzi",
+    "city_pl": "Ghanzi",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "ORP",
+    "name": "Orapa Airport",
+    "city_en": "Orapa",
+    "city_pl": "Orapa",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "SWX",
+    "name": "Shakawe Airport",
+    "city_en": "Shakawe",
+    "city_pl": "Shakawe",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "TLD",
+    "name": "Limpopo Valley Airport",
+    "city_en": "Tuli Lodge",
+    "city_pl": "Tuli Lodge",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "DIS",
+    "name": "Ngot Nzoungou Airport",
+    "city_en": "Loubomo",
+    "city_pl": "Loubomo",
+    "country_en": "Congo (Brazzaville)"
+  },
+  {
+    "code": "CIP",
+    "name": "Chipata Airport",
+    "city_en": "Chipata",
+    "city_pl": "Chipata",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "YVA",
+    "name": "Iconi Airport",
+    "city_en": "Moroni",
+    "city_pl": "Moroni",
+    "country_en": "Comoros"
+  },
+  {
+    "code": "WAQ",
+    "name": "Antsalova Airport",
+    "city_en": "Antsalova",
+    "city_pl": "Antsalova",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "JVA",
+    "name": "Ankavandra Airport",
+    "city_en": "Ankavandra",
+    "city_pl": "Ankavandra",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "BMD",
+    "name": "Belo sur Tsiribihina Airport",
+    "city_en": "Belo sur Tsiribihina",
+    "city_pl": "Belo sur Tsiribihina",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "MXT",
+    "name": "Maintirano Airport",
+    "city_en": "Maintirano",
+    "city_pl": "Maintirano",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "TVA",
+    "name": "Morafenobe Airport",
+    "city_en": "Morafenobe",
+    "city_pl": "Morafenobe",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WTA",
+    "name": "Tambohorano Airport",
+    "city_en": "Tambohorano",
+    "city_pl": "Tambohorano",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WTS",
+    "name": "Tsiroanomandidy Airport",
+    "city_en": "Tsiroanomandidy",
+    "city_pl": "Tsiroanomandidy",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WAM",
+    "name": "Ambatondrazaka Airport",
+    "city_en": "Ambatondrazaka",
+    "city_pl": "Ambatondrazaka",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WPB",
+    "name": "Port Bergé Airport",
+    "city_en": "Port Bergé",
+    "city_pl": "Port Bergé",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "DWB",
+    "name": "Soalala Airport",
+    "city_en": "Soalala",
+    "city_pl": "Soalala",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WMP",
+    "name": "Mampikony Airport",
+    "city_en": "Mampikony",
+    "city_pl": "Mampikony",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "WMA",
+    "name": "Mandritsara Airport",
+    "city_en": "Mandritsara",
+    "city_pl": "Mandritsara",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "MJA",
+    "name": "Manja Airport",
+    "city_en": "Manja",
+    "city_pl": "Manja",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "CBT",
+    "name": "Catumbela Airport",
+    "city_en": "Catumbela",
+    "city_pl": "Catumbela",
+    "country_en": "Angola"
+  },
+  {
+    "code": "DUE",
+    "name": "Dundo Airport",
+    "city_en": "Dundo",
+    "city_pl": "Dundo",
+    "country_en": "Angola"
+  },
+  {
+    "code": "VPE",
+    "name": "Ngjiva Pereira Airport",
+    "city_en": "Ondjiva",
+    "city_pl": "Ondjiva",
+    "country_en": "Angola"
+  },
+  {
+    "code": "MSZ",
+    "name": "Namibe Airport",
+    "city_en": "Mocamedes",
+    "city_pl": "Mocamedes",
+    "country_en": "Angola"
+  },
+  {
+    "code": "KOU",
+    "name": "Koulamoutou Mabimbi Airport",
+    "city_en": "Koulamoutou",
+    "city_pl": "Koulamoutou",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "MJL",
+    "name": "Mouilla Ville Airport",
+    "city_en": "Mouila",
+    "city_pl": "Mouila",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "TCH",
+    "name": "Tchibanga Airport",
+    "city_en": "Tchibanga",
+    "city_pl": "Tchibanga",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "VPY",
+    "name": "Chimoio Airport",
+    "city_en": "Chimoio",
+    "city_pl": "Chimoio",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "SRH",
+    "name": "Sarh Airport",
+    "city_en": "Sarh",
+    "city_pl": "Sarh",
+    "country_en": "Chad"
+  },
+  {
+    "code": "CMK",
+    "name": "Club Makokola Airport",
+    "city_en": "Club Makokola",
+    "city_pl": "Club Makokola",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "LUD",
+    "name": "Luderitz Airport",
+    "city_en": "Luderitz",
+    "city_pl": "Luderitz",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "OND",
+    "name": "Ondangwa Airport",
+    "city_en": "Ondangwa",
+    "city_pl": "Ondangwa",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "OMD",
+    "name": "Oranjemund Airport",
+    "city_en": "Oranjemund",
+    "city_pl": "Oranjemund",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "SWP",
+    "name": "Swakopmund Airport",
+    "city_en": "Swakopmund",
+    "city_pl": "Swakopmund",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "ERS",
+    "name": "Eros Airport",
+    "city_en": "Windhoek",
+    "city_pl": "Windhoek",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "BOA",
+    "name": "Boma Airport",
+    "city_en": "Boma",
+    "city_pl": "Boma",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "MAT",
+    "name": "Tshimpi Airport",
+    "city_en": "Matadi",
+    "city_pl": "Matadi",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "INO",
+    "name": "Inongo Airport",
+    "city_en": "Inongo",
+    "city_pl": "Inongo",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "NIO",
+    "name": "Nioki Airport",
+    "city_en": "Nioki",
+    "city_pl": "Nioki",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "KRZ",
+    "name": "Basango Mboliasa Airport",
+    "city_en": "Kiri",
+    "city_pl": "Kiri",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "BSU",
+    "name": "Basankusu Airport",
+    "city_en": "Basankusu",
+    "city_pl": "Basankusu",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "TSH",
+    "name": "Tshikapa Airport",
+    "city_en": "Tshikapa",
+    "city_pl": "Tshikapa",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "LJA",
+    "name": "Lodja Airport",
+    "city_en": "Lodja",
+    "city_pl": "Lodja",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "PFR",
+    "name": "Ilebo Airport",
+    "city_en": "Ilebo",
+    "city_pl": "Ilebo",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "OUK",
+    "name": "Outer Skerries Airport",
+    "city_en": "Outer Skerries",
+    "city_pl": "Outer Skerries",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "GMZ",
+    "name": "La Gomera Airport",
+    "city_en": "La Gomera",
+    "city_pl": "La Gomera",
+    "country_en": "Spain"
+  },
+  {
+    "code": "BTE",
+    "name": "Sherbro International Airport",
+    "city_en": "Bonthe",
+    "city_pl": "Bonthe",
+    "country_en": "Sierra Leone"
+  },
+  {
+    "code": "KBS",
+    "name": "Bo Airport",
+    "city_en": "Bo",
+    "city_pl": "Bo",
+    "country_en": "Sierra Leone"
+  },
+  {
+    "code": "KEN",
+    "name": "Kenema Airport",
+    "city_en": "Kenema",
+    "city_pl": "Kenema",
+    "country_en": "Sierra Leone"
+  },
+  {
+    "code": "OXB",
+    "name": "Osvaldo Vieira International Airport",
+    "city_en": "Bissau",
+    "city_pl": "Bissau",
+    "country_en": "Guinea-Bissau"
+  },
+  {
+    "code": "SMW",
+    "name": "Smara Airport",
+    "city_en": "Smara",
+    "city_pl": "Smara",
+    "country_en": "Western Sahara"
+  },
+  {
+    "code": "VIL",
+    "name": "Dakhla Airport",
+    "city_en": "Dakhla",
+    "city_pl": "Dakhla",
+    "country_en": "Western Sahara"
+  },
+  {
+    "code": "ESU",
+    "name": "Mogador Airport",
+    "city_en": "Essadouira",
+    "city_pl": "Essadouira",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "EUN",
+    "name": "Hassan I Airport",
+    "city_en": "El Aaiún",
+    "city_pl": "El Aaiún",
+    "country_en": "Western Sahara"
+  },
+  {
+    "code": "NDR",
+    "name": "Nador International Airport",
+    "city_en": "El Aroui",
+    "city_pl": "El Aroui",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "RAI",
+    "name": "Praia International Airport",
+    "city_en": "Praia, Santiago Island",
+    "city_pl": "Praia, Santiago Island",
+    "country_en": "Cape Verde"
+  },
+  {
+    "code": "SFL",
+    "name": "São Filipe Airport",
+    "city_en": "Sao Filipe, Fogo Island",
+    "city_pl": "Sao Filipe, Fogo Island",
+    "country_en": "Cape Verde"
+  },
+  {
+    "code": "BCO",
+    "name": "Baco Airport",
+    "city_en": "Baco",
+    "city_pl": "Baco",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "BEI",
+    "name": "Beica Airport",
+    "city_en": "Beica",
+    "city_pl": "Beica",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "DSE",
+    "name": "Combolcha Airport",
+    "city_en": "Dessie",
+    "city_pl": "Dessie",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "DEM",
+    "name": "Dembidollo Airport",
+    "city_en": "Dembidollo",
+    "city_pl": "Dembidollo",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "GDE",
+    "name": "Gode Airport",
+    "city_en": "Gode",
+    "city_pl": "Gode",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "GOR",
+    "name": "Gore Airport",
+    "city_en": "Gore",
+    "city_pl": "Gore",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "ABK",
+    "name": "Kabri Dehar Airport",
+    "city_en": "Kabri Dehar",
+    "city_pl": "Kabri Dehar",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "MTF",
+    "name": "Mizan Teferi Airport",
+    "city_en": "Mizan Teferi",
+    "city_pl": "Mizan Teferi",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "TIE",
+    "name": "Tippi Airport",
+    "city_en": "Tippi",
+    "city_pl": "Tippi",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "ALU",
+    "name": "Alula Airport",
+    "city_en": "Alula",
+    "city_pl": "Alula",
+    "country_en": "Somalia"
+  },
+  {
+    "code": "BSA",
+    "name": "Bosaso Airport",
+    "city_en": "Bosaso",
+    "city_pl": "Bosaso",
+    "country_en": "Somalia"
+  },
+  {
+    "code": "MGQ",
+    "name": "Aden Adde International Airport",
+    "city_en": "Mogadishu",
+    "city_pl": "Mogadishu",
+    "country_en": "Somalia"
+  },
+  {
+    "code": "GLK",
+    "name": "Galcaio Airport",
+    "city_en": "Galcaio",
+    "city_pl": "Galcaio",
+    "country_en": "Somalia"
+  },
+  {
+    "code": "BUO",
+    "name": "Burao Airport",
+    "city_en": "Burao",
+    "city_pl": "Burao",
+    "country_en": "Somalia"
+  },
+  {
+    "code": "AAC",
+    "name": "El Arish International Airport",
+    "city_en": "El Arish",
+    "city_pl": "El Arish",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "ATZ",
+    "name": "Assiut International Airport",
+    "city_en": "Asyut",
+    "city_pl": "Asyut",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "ASV",
+    "name": "Amboseli Airport",
+    "city_en": "Amboseli National Park",
+    "city_pl": "Amboseli National Park",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "LKG",
+    "name": "Lokichoggio Airport",
+    "city_en": "Lokichoggio",
+    "city_pl": "Lokichoggio",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "MYD",
+    "name": "Malindi Airport",
+    "city_en": "Malindi",
+    "city_pl": "Malindi",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "NYK",
+    "name": "Nanyuki Airport",
+    "city_en": "Nanyuki",
+    "city_pl": "Nanyuki",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "SRX",
+    "name": "Gardabya Airport",
+    "city_en": "Sirt",
+    "city_pl": "Sirt",
+    "country_en": "Libya"
+  },
+  {
+    "code": "TOB",
+    "name": "Gamal Abdel Nasser Airport",
+    "city_en": "Tobruk",
+    "city_pl": "Tobruk",
+    "country_en": "Libya"
+  },
+  {
+    "code": "MJI",
+    "name": "Mitiga Airport",
+    "city_en": "Tripoli",
+    "city_pl": "Tripoli",
+    "country_en": "Libya"
+  },
+  {
+    "code": "LAQ",
+    "name": "La Abraq Airport",
+    "city_en": "Al Bayda'",
+    "city_pl": "Al Bayda'",
+    "country_en": "Libya"
+  },
+  {
+    "code": "ATB",
+    "name": "Atbara Airport",
+    "city_en": "Atbara",
+    "city_pl": "Atbara",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "UYL",
+    "name": "Nyala Airport",
+    "city_en": "Nyala",
+    "city_pl": "Nyala",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "PZU",
+    "name": "Port Sudan New International Airport",
+    "city_en": "Port Sudan",
+    "city_pl": "Port Sudan",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "BKZ",
+    "name": "Bukoba Airport",
+    "city_en": "Bukoba",
+    "city_pl": "Bukoba",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "TKQ",
+    "name": "Kigoma Airport",
+    "city_en": "Kigoma",
+    "city_pl": "Kigoma",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "LDI",
+    "name": "Lindi Airport",
+    "city_en": "Lindi",
+    "city_pl": "Lindi",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "MUZ",
+    "name": "Musoma Airport",
+    "city_en": "Musoma",
+    "city_pl": "Musoma",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "SHY",
+    "name": "Shinyanga Airport",
+    "city_en": "Shinyanga",
+    "city_pl": "Shinyanga",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "TBO",
+    "name": "Tabora Airport",
+    "city_en": "Tabora",
+    "city_pl": "Tabora",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "RUA",
+    "name": "Arua Airport",
+    "city_en": "Arua",
+    "city_pl": "Arua",
+    "country_en": "Uganda"
+  },
+  {
+    "code": "ULU",
+    "name": "Gulu Airport",
+    "city_en": "Gulu",
+    "city_pl": "Gulu",
+    "country_en": "Uganda"
+  },
+  {
+    "code": "DIU",
+    "name": "Diu Airport",
+    "city_en": "Diu",
+    "city_pl": "Diu",
+    "country_en": "India"
+  },
+  {
+    "code": "ABR",
+    "name": "Aberdeen Regional Airport",
+    "city_en": "Aberdeen",
+    "city_pl": "Aberdeen",
+    "country_en": "United States"
+  },
+  {
+    "code": "ABY",
+    "name": "Southwest Georgia Regional Airport",
+    "city_en": "Albany",
+    "city_pl": "Albany",
+    "country_en": "United States"
+  },
+  {
+    "code": "AHN",
+    "name": "Athens Ben Epps Airport",
+    "city_en": "Athens",
+    "city_pl": "Ateny",
+    "country_en": "United States"
+  },
+  {
+    "code": "ALM",
+    "name": "Alamogordo White Sands Regional Airport",
+    "city_en": "Alamogordo",
+    "city_pl": "Alamogordo",
+    "country_en": "United States"
+  },
+  {
+    "code": "ALO",
+    "name": "Waterloo Regional Airport",
+    "city_en": "Waterloo",
+    "city_pl": "Waterloo",
+    "country_en": "United States"
+  },
+  {
+    "code": "ALW",
+    "name": "Walla Walla Regional Airport",
+    "city_en": "Walla Walla",
+    "city_pl": "Walla Walla",
+    "country_en": "United States"
+  },
+  {
+    "code": "APN",
+    "name": "Alpena County Regional Airport",
+    "city_en": "Alpena",
+    "city_pl": "Alpena",
+    "country_en": "United States"
+  },
+  {
+    "code": "ATY",
+    "name": "Watertown Regional Airport",
+    "city_en": "Watertown",
+    "city_pl": "Watertown",
+    "country_en": "United States"
+  },
+  {
+    "code": "BFD",
+    "name": "Bradford Regional Airport",
+    "city_en": "Bradford",
+    "city_pl": "Bradford",
+    "country_en": "United States"
+  },
+  {
+    "code": "BFF",
+    "name": "Western Neb. Rgnl/William B. Heilig Airport",
+    "city_en": "Scottsbluff",
+    "city_pl": "Scottsbluff",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKW",
+    "name": "Raleigh County Memorial Airport",
+    "city_en": "Beckley",
+    "city_pl": "Beckley",
+    "country_en": "United States"
+  },
+  {
+    "code": "BQK",
+    "name": "Brunswick Golden Isles Airport",
+    "city_en": "Brunswick",
+    "city_pl": "Brunswick",
+    "country_en": "United States"
+  },
+  {
+    "code": "BRL",
+    "name": "Southeast Iowa Regional Airport",
+    "city_en": "Burlington",
+    "city_pl": "Burlington",
+    "country_en": "United States"
+  },
+  {
+    "code": "CEC",
+    "name": "Jack Mc Namara Field Airport",
+    "city_en": "Crescent City",
+    "city_pl": "Crescent City",
+    "country_en": "United States"
+  },
+  {
+    "code": "CGI",
+    "name": "Cape Girardeau Regional Airport",
+    "city_en": "Cape Girardeau",
+    "city_pl": "Cape Girardeau",
+    "country_en": "United States"
+  },
+  {
+    "code": "CIU",
+    "name": "Chippewa County International Airport",
+    "city_en": "Sault Ste Marie",
+    "city_pl": "Sault Ste Marie",
+    "country_en": "United States"
+  },
+  {
+    "code": "CKB",
+    "name": "North Central West Virginia Airport",
+    "city_en": "Clarksburg",
+    "city_pl": "Clarksburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "CLM",
+    "name": "William R Fairchild International Airport",
+    "city_en": "Port Angeles",
+    "city_pl": "Port Angeles",
+    "country_en": "United States"
+  },
+  {
+    "code": "CMX",
+    "name": "Houghton County Memorial Airport",
+    "city_en": "Hancock",
+    "city_pl": "Hancock",
+    "country_en": "United States"
+  },
+  {
+    "code": "DDC",
+    "name": "Dodge City Regional Airport",
+    "city_en": "Dodge City",
+    "city_pl": "Dodge City",
+    "country_en": "United States"
+  },
+  {
+    "code": "DUJ",
+    "name": "DuBois Regional Airport",
+    "city_en": "Du Bois",
+    "city_pl": "Du Bois",
+    "country_en": "United States"
+  },
+  {
+    "code": "EAU",
+    "name": "Chippewa Valley Regional Airport",
+    "city_en": "Eau Claire",
+    "city_pl": "Eau Claire",
+    "country_en": "United States"
+  },
+  {
+    "code": "EKO",
+    "name": "Elko Regional Airport",
+    "city_en": "Elko",
+    "city_pl": "Elko",
+    "country_en": "United States"
+  },
+  {
+    "code": "EWB",
+    "name": "New Bedford Regional Airport",
+    "city_en": "New Bedford",
+    "city_pl": "New Bedford",
+    "country_en": "United States"
+  },
+  {
+    "code": "FAY",
+    "name": "Fayetteville Regional Grannis Field",
+    "city_en": "Fayetteville",
+    "city_pl": "Fayetteville",
+    "country_en": "United States"
+  },
+  {
+    "code": "GGW",
+    "name": "Wokal Field Glasgow International Airport",
+    "city_en": "Glasgow",
+    "city_pl": "Glasgow",
+    "country_en": "United States"
+  },
+  {
+    "code": "GRI",
+    "name": "Central Nebraska Regional Airport",
+    "city_en": "Grand Island",
+    "city_pl": "Grand Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "HOT",
+    "name": "Memorial Field",
+    "city_en": "Hot Springs",
+    "city_pl": "Hot Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "HTS",
+    "name": "Tri-State/Milton J. Ferguson Field",
+    "city_en": "Huntington",
+    "city_pl": "Huntington",
+    "country_en": "United States"
+  },
+  {
+    "code": "KIO",
+    "name": "Kili Airport",
+    "city_en": "Kili Island",
+    "city_pl": "Kili Island",
+    "country_en": "Marshall Islands"
+  },
+  {
+    "code": "IRK",
+    "name": "Kirksville Regional Airport",
+    "city_en": "Kirksville",
+    "city_pl": "Kirksville",
+    "country_en": "United States"
+  },
+  {
+    "code": "JMS",
+    "name": "Jamestown Regional Airport",
+    "city_en": "Jamestown",
+    "city_pl": "Jamestown",
+    "country_en": "United States"
+  },
+  {
+    "code": "LAR",
+    "name": "Laramie Regional Airport",
+    "city_en": "Laramie",
+    "city_pl": "Laramie",
+    "country_en": "United States"
+  },
+  {
+    "code": "LBE",
+    "name": "Arnold Palmer Regional Airport",
+    "city_en": "Latrobe",
+    "city_pl": "Latrobe",
+    "country_en": "United States"
+  },
+  {
+    "code": "LBF",
+    "name": "North Platte Regional Airport Lee Bird Field",
+    "city_en": "North Platte",
+    "city_pl": "North Platte",
+    "country_en": "United States"
+  },
+  {
+    "code": "LEB",
+    "name": "Lebanon Municipal Airport",
+    "city_en": "Lebanon",
+    "city_pl": "Lebanon",
+    "country_en": "United States"
+  },
+  {
+    "code": "LMT",
+    "name": "Crater Lake-Klamath Regional Airport",
+    "city_en": "Klamath Falls",
+    "city_pl": "Klamath Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "LNS",
+    "name": "Lancaster Airport",
+    "city_en": "Lancaster",
+    "city_pl": "Lancaster",
+    "country_en": "United States"
+  },
+  {
+    "code": "LWT",
+    "name": "Lewistown Municipal Airport",
+    "city_en": "Lewistown",
+    "city_pl": "Lewistown",
+    "country_en": "United States"
+  },
+  {
+    "code": "LYH",
+    "name": "Lynchburg Regional Preston Glenn Field",
+    "city_en": "Lynchburg",
+    "city_pl": "Lynchburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "MKG",
+    "name": "Muskegon County Airport",
+    "city_en": "Muskegon",
+    "city_pl": "Muskegon",
+    "country_en": "United States"
+  },
+  {
+    "code": "MLS",
+    "name": "Frank Wiley Field",
+    "city_en": "Miles City",
+    "city_pl": "Miles City",
+    "country_en": "United States"
+  },
+  {
+    "code": "MSL",
+    "name": "Northwest Alabama Regional Airport",
+    "city_en": "Muscle Shoals",
+    "city_pl": "Muscle Shoals",
+    "country_en": "United States"
+  },
+  {
+    "code": "OTH",
+    "name": "Southwest Oregon Regional Airport",
+    "city_en": "North Bend",
+    "city_pl": "North Bend",
+    "country_en": "United States"
+  },
+  {
+    "code": "OWB",
+    "name": "Owensboro Daviess County Airport",
+    "city_en": "Owensboro",
+    "city_pl": "Owensboro",
+    "country_en": "United States"
+  },
+  {
+    "code": "PIB",
+    "name": "Hattiesburg Laurel Regional Airport",
+    "city_en": "Hattiesburg/Laurel",
+    "city_pl": "Hattiesburg/Laurel",
+    "country_en": "United States"
+  },
+  {
+    "code": "PIH",
+    "name": "Pocatello Regional Airport",
+    "city_en": "Pocatello",
+    "city_pl": "Pocatello",
+    "country_en": "United States"
+  },
+  {
+    "code": "PIR",
+    "name": "Pierre Regional Airport",
+    "city_en": "Pierre",
+    "city_pl": "Pierre",
+    "country_en": "United States"
+  },
+  {
+    "code": "PLN",
+    "name": "Pellston Regional Airport of Emmet County Airport",
+    "city_en": "Pellston",
+    "city_pl": "Pellston",
+    "country_en": "United States"
+  },
+  {
+    "code": "PSM",
+    "name": "Portsmouth International at Pease Airport",
+    "city_en": "Portsmouth",
+    "city_pl": "Portsmouth",
+    "country_en": "United States"
+  },
+  {
+    "code": "RDG",
+    "name": "Reading Regional Carl A Spaatz Field",
+    "city_en": "Reading",
+    "city_pl": "Reading",
+    "country_en": "United States"
+  },
+  {
+    "code": "RHI",
+    "name": "Rhinelander Oneida County Airport",
+    "city_en": "Rhinelander",
+    "city_pl": "Rhinelander",
+    "country_en": "United States"
+  },
+  {
+    "code": "RKS",
+    "name": "Southwest Wyoming Regional Airport",
+    "city_en": "Rock Springs",
+    "city_pl": "Rock Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "RUT",
+    "name": "Rutland - Southern Vermont Regional Airport",
+    "city_en": "Rutland",
+    "city_pl": "Rutland",
+    "country_en": "United States"
+  },
+  {
+    "code": "SBP",
+    "name": "San Luis County Regional Airport",
+    "city_en": "San Luis Obispo",
+    "city_pl": "San Luis Obispo",
+    "country_en": "United States"
+  },
+  {
+    "code": "SHR",
+    "name": "Sheridan County Airport",
+    "city_en": "Sheridan",
+    "city_pl": "Sheridan",
+    "country_en": "United States"
+  },
+  {
+    "code": "SLK",
+    "name": "Adirondack Regional Airport",
+    "city_en": "Saranac Lake",
+    "city_pl": "Saranac Lake",
+    "country_en": "United States"
+  },
+  {
+    "code": "SLN",
+    "name": "Salina Municipal Airport",
+    "city_en": "Salina",
+    "city_pl": "Salina",
+    "country_en": "United States"
+  },
+  {
+    "code": "SMX",
+    "name": "Santa Maria Pub/Capt G Allan Hancock Field",
+    "city_en": "Santa Maria",
+    "city_pl": "Santa Maria",
+    "country_en": "United States"
+  },
+  {
+    "code": "TUP",
+    "name": "Tupelo Regional Airport",
+    "city_en": "Tupelo",
+    "city_pl": "Tupelo",
+    "country_en": "United States"
+  },
+  {
+    "code": "UIN",
+    "name": "Quincy Regional Baldwin Field",
+    "city_en": "Quincy",
+    "city_pl": "Quincy",
+    "country_en": "United States"
+  },
+  {
+    "code": "VCT",
+    "name": "Victoria Regional Airport",
+    "city_en": "Victoria",
+    "city_pl": "Victoria",
+    "country_en": "United States"
+  },
+  {
+    "code": "VLD",
+    "name": "Valdosta Regional Airport",
+    "city_en": "Valdosta",
+    "city_pl": "Valdosta",
+    "country_en": "United States"
+  },
+  {
+    "code": "WRL",
+    "name": "Worland Municipal Airport",
+    "city_en": "Worland",
+    "city_pl": "Worland",
+    "country_en": "United States"
+  },
+  {
+    "code": "YKM",
+    "name": "Yakima Air Terminal McAllister Field",
+    "city_en": "Yakima",
+    "city_pl": "Yakima",
+    "country_en": "United States"
+  },
+  {
+    "code": "ECN",
+    "name": "Ercan International Airport",
+    "city_en": "Nicosia",
+    "city_pl": "Nicosia",
+    "country_en": "Cyprus"
+  },
+  {
+    "code": "RJL",
+    "name": "Logroño-Agoncillo Airport",
+    "city_en": "Logroño-Agoncillo",
+    "city_pl": "Logroño-Agoncillo",
+    "country_en": "Spain"
+  },
+  {
+    "code": "IDY",
+    "name": "Île d'Yeu Airport",
+    "city_en": "Île d'Yeu",
+    "city_pl": "Île d'Yeu",
+    "country_en": "France"
+  },
+  {
+    "code": "ANE",
+    "name": "Angers-Loire Airport",
+    "city_en": "Angers/Marcé",
+    "city_pl": "Angers/Marcé",
+    "country_en": "France"
+  },
+  {
+    "code": "LTT",
+    "name": "La Môle Airport",
+    "city_en": "La Môle",
+    "city_pl": "La Môle",
+    "country_en": "France"
+  },
+  {
+    "code": "JSY",
+    "name": "Syros Airport",
+    "city_en": "Syros Island",
+    "city_pl": "Syros Island",
+    "country_en": "Greece"
+  },
+  {
+    "code": "PEV",
+    "name": "Pécs-Pogány Airport",
+    "city_en": "Pécs-Pogány",
+    "city_pl": "Pécs-Pogány",
+    "country_en": "Hungary"
+  },
+  {
+    "code": "SOB",
+    "name": "Sármellék International Airport",
+    "city_en": "Sármellék",
+    "city_pl": "Sármellék",
+    "country_en": "Hungary"
+  },
+  {
+    "code": "AOT",
+    "name": "Aosta Airport",
+    "city_en": "Aosta",
+    "city_pl": "Aosta",
+    "country_en": "Italy"
+  },
+  {
+    "code": "QSR",
+    "name": "Salerno Costa d'Amalfi Airport",
+    "city_en": "Salerno",
+    "city_pl": "Salerno",
+    "country_en": "Italy"
+  },
+  {
+    "code": "CVU",
+    "name": "Corvo Airport",
+    "city_en": "Corvo",
+    "city_pl": "Corvo",
+    "country_en": "Portugal"
+  },
+  {
+    "code": "BNX",
+    "name": "Banja Luka International Airport",
+    "city_en": "Banja Luka",
+    "city_pl": "Banja Luka",
+    "country_en": "Bosnia and Herzegovina"
+  },
+  {
+    "code": "USQ",
+    "name": "Uşak Airport",
+    "city_en": "Usak",
+    "city_pl": "Usak",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "KSY",
+    "name": "Kars Airport",
+    "city_en": "Kars",
+    "city_pl": "Kars",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "SFQ",
+    "name": "Şanlıurfa Airport",
+    "city_en": "Sanliurfa",
+    "city_pl": "Sanliurfa",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "KCM",
+    "name": "Kahramanmaraş Airport",
+    "city_en": "Kahramanmaras",
+    "city_pl": "Kahramanmaras",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "AJI",
+    "name": "Ağrı Airport",
+    "city_en": "Agri",
+    "city_pl": "Agri",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ADF",
+    "name": "Adıyaman Airport",
+    "city_en": "Adiyaman",
+    "city_pl": "Adiyaman",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ISE",
+    "name": "Süleyman Demirel International Airport",
+    "city_en": "Isparta",
+    "city_pl": "Isparta",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "EDO",
+    "name": "Balıkesir Körfez Airport",
+    "city_en": "Balikesir Korfez",
+    "city_pl": "Balikesir Korfez",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "SZF",
+    "name": "Samsun Çarşamba Airport",
+    "city_en": "Samsun",
+    "city_pl": "Samsun",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "ILZ",
+    "name": "Žilina Airport",
+    "city_en": "Žilina",
+    "city_pl": "Žilina",
+    "country_en": "Slovakia"
+  },
+  {
+    "code": "GDT",
+    "name": "JAGS McCartney International Airport",
+    "city_en": "Cockburn Town",
+    "city_pl": "Cockburn Town",
+    "country_en": "Turks and Caicos Islands"
+  },
+  {
+    "code": "MDS",
+    "name": "Middle Caicos Airport",
+    "city_en": "Middle Caicos",
+    "city_pl": "Middle Caicos",
+    "country_en": "Turks and Caicos Islands"
+  },
+  {
+    "code": "SLX",
+    "name": "Salt Cay Airport",
+    "city_en": "Salt Cay",
+    "city_pl": "Salt Cay",
+    "country_en": "Turks and Caicos Islands"
+  },
+  {
+    "code": "AZS",
+    "name": "Samaná El Catey International Airport",
+    "city_en": "Samana",
+    "city_pl": "Samana",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "JBQ",
+    "name": "La Isabela International Airport",
+    "city_en": "La Isabela",
+    "city_pl": "La Isabela",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "PBR",
+    "name": "Puerto Barrios Airport",
+    "city_en": "Puerto Barrios",
+    "city_pl": "Puerto Barrios",
+    "country_en": "Guatemala"
+  },
+  {
+    "code": "AAZ",
+    "name": "Quezaltenango Airport",
+    "city_en": "Quezaltenango",
+    "city_pl": "Quezaltenango",
+    "country_en": "Guatemala"
+  },
+  {
+    "code": "UTK",
+    "name": "Utirik Airport",
+    "city_en": "Utirik Island",
+    "city_pl": "Utirik Island",
+    "country_en": "Marshall Islands"
+  },
+  {
+    "code": "AHS",
+    "name": "Ahuas Airport",
+    "city_en": "Ahuas",
+    "city_pl": "Ahuas",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "PEU",
+    "name": "Puerto Lempira Airport",
+    "city_en": "Puerto Lempira",
+    "city_pl": "Puerto Lempira",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "MIJ",
+    "name": "Mili Island Airport",
+    "city_en": "Mili Island",
+    "city_pl": "Mili Island",
+    "country_en": "Marshall Islands"
+  },
+  {
+    "code": "CYW",
+    "name": "Captain Rogelio Castillo National Airport",
+    "city_en": "Celaya",
+    "city_pl": "Celaya",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CUA",
+    "name": "Ciudad Constitución Airport",
+    "city_en": "Ciudad Constitución",
+    "city_pl": "Ciudad Constitución",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "GUB",
+    "name": "Guerrero Negro Airport",
+    "city_en": "Guerrero Negro",
+    "city_pl": "Guerrero Negro",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "JAL",
+    "name": "El Lencero Airport",
+    "city_en": "Jalapa",
+    "city_pl": "Jalapa",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CTD",
+    "name": "Alonso Valderrama Airport",
+    "city_en": "Chitré",
+    "city_pl": "Chitré",
+    "country_en": "Panama"
+  },
+  {
+    "code": "ONX",
+    "name": "Enrique Adolfo Jimenez Airport",
+    "city_en": "Colón",
+    "city_pl": "Colón",
+    "country_en": "Panama"
+  },
+  {
+    "code": "JQE",
+    "name": "Jaqué Airport",
+    "city_en": "Jaqué",
+    "city_pl": "Jaqué",
+    "country_en": "Panama"
+  },
+  {
+    "code": "PLP",
+    "name": "Captain Ramon Xatruch Airport",
+    "city_en": "La Palma",
+    "city_pl": "La Palma",
+    "country_en": "Panama"
+  },
+  {
+    "code": "TTQ",
+    "name": "Aerotortuguero Airport",
+    "city_en": "Roxana",
+    "city_pl": "Roxana",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "BCL",
+    "name": "Barra del Colorado Airport",
+    "city_en": "Pococi",
+    "city_pl": "Pococi",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "PBP",
+    "name": "Islita Airport",
+    "city_en": "Nandayure",
+    "city_pl": "Nandayure",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "PJM",
+    "name": "Puerto Jimenez Airport",
+    "city_en": "Puerto Jimenez",
+    "city_pl": "Puerto Jimenez",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "SYQ",
+    "name": "Tobias Bolanos International Airport",
+    "city_en": "San Jose",
+    "city_pl": "San Jose",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "JEE",
+    "name": "Jérémie Airport",
+    "city_en": "Jeremie",
+    "city_pl": "Jeremie",
+    "country_en": "Haiti"
+  },
+  {
+    "code": "PAX",
+    "name": "Port-de-Paix Airport",
+    "city_en": "Port-de-Paix",
+    "city_pl": "Port-de-Paix",
+    "country_en": "Haiti"
+  },
+  {
+    "code": "TND",
+    "name": "Alberto Delgado Airport",
+    "city_en": "Trinidad",
+    "city_pl": "Trinidad",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "COX",
+    "name": "Congo Town Airport",
+    "city_en": "Andros",
+    "city_pl": "Andros",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "ATC",
+    "name": "Arthur's Town Airport",
+    "city_en": "Arthur's Town",
+    "city_pl": "Arthur's Town",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "TBI",
+    "name": "New Bight Airport",
+    "city_en": "Cat Island",
+    "city_pl": "Cat Island",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "CRI",
+    "name": "Colonel Hill Airport",
+    "city_en": "Colonel Hill",
+    "city_pl": "Colonel Hill",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "PID",
+    "name": "Nassau Paradise Island Airport",
+    "city_en": "Nassau",
+    "city_pl": "Nassau",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "AIU",
+    "name": "Enua Airport",
+    "city_en": "Atiu Island",
+    "city_pl": "Atiu Island",
+    "country_en": "Cook Islands"
+  },
+  {
+    "code": "MGS",
+    "name": "Mangaia Island Airport",
+    "city_en": "Mangaia Island",
+    "city_pl": "Mangaia Island",
+    "country_en": "Cook Islands"
+  },
+  {
+    "code": "MHX",
+    "name": "Manihiki Island Airport",
+    "city_en": "Manihiki Island",
+    "city_pl": "Manihiki Island",
+    "country_en": "Cook Islands"
+  },
+  {
+    "code": "MUK",
+    "name": "Mauke Airport",
+    "city_en": "Mauke Island",
+    "city_pl": "Mauke Island",
+    "country_en": "Cook Islands"
+  },
+  {
+    "code": "MOI",
+    "name": "Mitiaro Island Airport",
+    "city_en": "Mitiaro Island",
+    "city_pl": "Mitiaro Island",
+    "country_en": "Cook Islands"
+  },
+  {
+    "code": "PYE",
+    "name": "Tongareva Airport",
+    "city_en": "Penrhyn Island",
+    "city_pl": "Penrhyn Island",
+    "country_en": "Cook Islands"
+  },
+  {
+    "code": "ICI",
+    "name": "Cicia Airport",
+    "city_en": "Cicia",
+    "city_pl": "Cicia",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "PTF",
+    "name": "Malolo Lailai Island Airport",
+    "city_en": "Malolo Lailai Island",
+    "city_pl": "Malolo Lailai Island",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "KDV",
+    "name": "Vunisea Airport",
+    "city_en": "Vunisea",
+    "city_pl": "Vunisea",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "MNF",
+    "name": "Mana Island Airport",
+    "city_en": "Mana Island",
+    "city_pl": "Mana Island",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "MFJ",
+    "name": "Moala Airport",
+    "city_en": "Moala",
+    "city_pl": "Moala",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "NGI",
+    "name": "Ngau Airport",
+    "city_en": "Ngau",
+    "city_pl": "Ngau",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "LKB",
+    "name": "Lakeba Island Airport",
+    "city_en": "Lakeba Island",
+    "city_pl": "Lakeba Island",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "LBS",
+    "name": "Labasa Airport",
+    "city_en": "Lambasa",
+    "city_pl": "Lambasa",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "TVU",
+    "name": "Matei Airport",
+    "city_en": "Matei",
+    "city_pl": "Matei",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "KXF",
+    "name": "Koro Island Airport",
+    "city_en": "Koro Island",
+    "city_pl": "Koro Island",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "RTA",
+    "name": "Rotuma Airport",
+    "city_en": "Rotuma",
+    "city_pl": "Rotuma",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "SVU",
+    "name": "Savusavu Airport",
+    "city_en": "Savusavu",
+    "city_pl": "Savusavu",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "EUA",
+    "name": "Kaufana Airport",
+    "city_en": "Eua Island",
+    "city_pl": "Eua Island",
+    "country_en": "Tonga"
+  },
+  {
+    "code": "HPA",
+    "name": "Lifuka Island Airport",
+    "city_en": "Lifuka",
+    "city_pl": "Lifuka",
+    "country_en": "Tonga"
+  },
+  {
+    "code": "NFO",
+    "name": "Mata'aho Airport",
+    "city_en": "Angaha, Niuafo'ou Island",
+    "city_pl": "Angaha, Niuafo'ou Island",
+    "country_en": "Tonga"
+  },
+  {
+    "code": "NTT",
+    "name": "Kuini Lavenia Airport",
+    "city_en": "Niuatoputapu",
+    "city_pl": "Niuatoputapu",
+    "country_en": "Tonga"
+  },
+  {
+    "code": "VBV",
+    "name": "Vanua Balavu Airport",
+    "city_en": "Vanua Balavu",
+    "city_pl": "Vanua Balavu",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "IUE",
+    "name": "Niue International Airport",
+    "city_en": "Alofi",
+    "city_pl": "Alofi",
+    "country_en": "Niue"
+  },
+  {
+    "code": "FUT",
+    "name": "Pointe Vele Airport",
+    "city_en": "Futuna Island",
+    "city_pl": "Futuna Island",
+    "country_en": "Wallis and Futuna"
+  },
+  {
+    "code": "MXS",
+    "name": "Maota Airport",
+    "city_en": "Savaii Island",
+    "city_pl": "Savaii Island",
+    "country_en": "Samoa"
+  },
+  {
+    "code": "APK",
+    "name": "Apataki Airport",
+    "city_en": "Apataki",
+    "city_pl": "Apataki",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "AHE",
+    "name": "Ahe Airport",
+    "city_en": "Ahe",
+    "city_pl": "Ahe",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "AUQ",
+    "name": "Hiva Oa-Atuona Airport",
+    "city_en": "Hiva-oa",
+    "city_pl": "Hiva-oa",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "UAP",
+    "name": "Ua Pou Airport",
+    "city_en": "Ua Pou",
+    "city_pl": "Ua Pou",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "UAH",
+    "name": "Ua Huka Airport",
+    "city_en": "Ua Huka",
+    "city_pl": "Ua Huka",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "MTV",
+    "name": "Mota Lava Airport",
+    "city_en": "Ablow",
+    "city_pl": "Ablow",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "SLH",
+    "name": "Sola Airport",
+    "city_en": "Sola",
+    "city_pl": "Sola",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "TOH",
+    "name": "Torres Airstrip",
+    "city_en": "Loh/Linua",
+    "city_pl": "Loh/Linua",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "EAE",
+    "name": "Siwo Airport",
+    "city_en": "Sangafa",
+    "city_pl": "Sangafa",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "CCV",
+    "name": "Craig Cove Airport",
+    "city_en": "Craig Cove",
+    "city_pl": "Craig Cove",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "LOD",
+    "name": "Longana Airport",
+    "city_en": "Longana",
+    "city_pl": "Longana",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "SSR",
+    "name": "Sara Airport",
+    "city_en": "Pentecost Island",
+    "city_pl": "Pentecost Island",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "PBJ",
+    "name": "Tavie Airport",
+    "city_en": "Paama Island",
+    "city_pl": "Paama Island",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "LPM",
+    "name": "Lamap Airport",
+    "city_en": "Lamap",
+    "city_pl": "Lamap",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "LNB",
+    "name": "Lamen Bay Airport",
+    "city_en": "Lamen Bay",
+    "city_pl": "Lamen Bay",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "MWF",
+    "name": "Maewo-Naone Airport",
+    "city_en": "Maewo Island",
+    "city_pl": "Maewo Island",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "LNE",
+    "name": "Lonorore Airport",
+    "city_en": "Lonorore",
+    "city_pl": "Lonorore",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "NUS",
+    "name": "Norsup Airport",
+    "city_en": "Norsup",
+    "city_pl": "Norsup",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "ZGU",
+    "name": "Gaua Island Airport",
+    "city_en": "Gaua Island",
+    "city_pl": "Gaua Island",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "RCL",
+    "name": "Redcliffe Airport",
+    "city_en": "Redcliffe",
+    "city_pl": "Redcliffe",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "SON",
+    "name": "Santo Pekoa International Airport",
+    "city_en": "Santo",
+    "city_pl": "Santo",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "TGH",
+    "name": "Tongoa Airport",
+    "city_en": "Tongoa Island",
+    "city_pl": "Tongoa Island",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "ULB",
+    "name": "Uléi Airport",
+    "city_en": "Ambryn Island",
+    "city_pl": "Ambryn Island",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "VLS",
+    "name": "Valesdir Airport",
+    "city_en": "Valesdir",
+    "city_pl": "Valesdir",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "SWJ",
+    "name": "Southwest Bay Airport",
+    "city_en": "Malekula Island",
+    "city_pl": "Malekula Island",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "OLJ",
+    "name": "North West Santo Airport",
+    "city_en": "Olpoi",
+    "city_pl": "Olpoi",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "AUY",
+    "name": "Aneityum Airport",
+    "city_en": "Anelghowhat",
+    "city_pl": "Anelghowhat",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "AWD",
+    "name": "Aniwa Airport",
+    "city_en": "Aniwa",
+    "city_pl": "Aniwa",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "DLY",
+    "name": "Dillon's Bay Airport",
+    "city_en": "Dillon's Bay",
+    "city_pl": "Dillon's Bay",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "FTA",
+    "name": "Futuna Airport",
+    "city_en": "Futuna Island",
+    "city_pl": "Futuna Island",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "IPA",
+    "name": "Ipota Airport",
+    "city_en": "Ipota",
+    "city_pl": "Ipota",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "TGJ",
+    "name": "Tiga Airport",
+    "city_en": "Tiga",
+    "city_pl": "Tiga",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "BMY",
+    "name": "Île Art - Waala Airport",
+    "city_en": "Waala",
+    "city_pl": "Waala",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "ILP",
+    "name": "Île des Pins Airport",
+    "city_en": "Île des Pins",
+    "city_pl": "Île des Pins",
+    "country_en": "New Caledonia"
+  },
+  {
+    "code": "FBD",
+    "name": "Fayzabad Airport",
+    "city_en": "Faizabad",
+    "city_pl": "Faizabad",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "AJF",
+    "name": "Al-Jawf Domestic Airport",
+    "city_en": "Al-Jawf",
+    "city_pl": "Al-Jawf",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "WAE",
+    "name": "Wadi Al Dawasir Airport",
+    "city_en": "Wadi-al-dawasir",
+    "city_pl": "Wadi-al-dawasir",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "KHD",
+    "name": "Khoram Abad Airport",
+    "city_en": "Khorram Abad",
+    "city_pl": "Khorram Abad",
+    "country_en": "Iran"
+  },
+  {
+    "code": "BXR",
+    "name": "Bam Airport",
+    "city_en": "Bam",
+    "city_pl": "Bam",
+    "country_en": "Iran"
+  },
+  {
+    "code": "RJN",
+    "name": "Rafsanjan Airport",
+    "city_en": "Rafsanjan",
+    "city_pl": "Rafsanjan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "BJB",
+    "name": "Bojnord Airport",
+    "city_en": "Bojnourd",
+    "city_pl": "Bojnourd",
+    "country_en": "Iran"
+  },
+  {
+    "code": "AFZ",
+    "name": "Sabzevar National Airport",
+    "city_en": "Sabzevar",
+    "city_pl": "Sabzevar",
+    "country_en": "Iran"
+  },
+  {
+    "code": "NSH",
+    "name": "Noshahr Airport",
+    "city_en": "Noshahr",
+    "city_pl": "Noshahr",
+    "country_en": "Iran"
+  },
+  {
+    "code": "SRY",
+    "name": "Dasht-e Naz Airport",
+    "city_en": "Dasht-e-naz",
+    "city_pl": "Dasht-e-naz",
+    "country_en": "Iran"
+  },
+  {
+    "code": "LRR",
+    "name": "Lar Airport",
+    "city_en": "Lar",
+    "city_pl": "Lar",
+    "country_en": "Iran"
+  },
+  {
+    "code": "ADU",
+    "name": "Ardabil Airport",
+    "city_en": "Ardabil",
+    "city_pl": "Ardabil",
+    "country_en": "Iran"
+  },
+  {
+    "code": "OMH",
+    "name": "Urmia Airport",
+    "city_en": "Uromiyeh",
+    "city_pl": "Uromiyeh",
+    "country_en": "Iran"
+  },
+  {
+    "code": "AAN",
+    "name": "Al Ain International Airport",
+    "city_en": "Al Ain",
+    "city_pl": "Al Ain",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "BNP",
+    "name": "Bannu Airport",
+    "city_en": "Bannu",
+    "city_pl": "Bannu",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "BHV",
+    "name": "Bahawalpur Airport",
+    "city_en": "Bahawalpur",
+    "city_pl": "Bahawalpur",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "CJL",
+    "name": "Chitral Airport",
+    "city_en": "Chitral",
+    "city_pl": "Chitral",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "DBA",
+    "name": "Dalbandin Airport",
+    "city_en": "Dalbandin",
+    "city_pl": "Dalbandin",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "DEA",
+    "name": "Dera Ghazi Khan Airport",
+    "city_en": "Dera Ghazi Khan",
+    "city_pl": "Dera Ghazi Khan",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "DSK",
+    "name": "Dera Ismael Khan Airport",
+    "city_en": "Dera Ismael Khan",
+    "city_pl": "Dera Ismael Khan",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "JIW",
+    "name": "Jiwani Airport",
+    "city_en": "Jiwani",
+    "city_pl": "Jiwani",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "HDD",
+    "name": "Hyderabad Airport",
+    "city_en": "Hyderabad",
+    "city_pl": "Hyderabad",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "KDD",
+    "name": "Khuzdar Airport",
+    "city_en": "Khuzdar",
+    "city_pl": "Khuzdar",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "ORW",
+    "name": "Ormara Airport",
+    "city_en": "Ormara Raik",
+    "city_pl": "Ormara Raik",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "PAJ",
+    "name": "Parachinar Airport",
+    "city_en": "Parachinar",
+    "city_pl": "Parachinar",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "KDU",
+    "name": "Skardu Airport",
+    "city_en": "Skardu",
+    "city_pl": "Skardu",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "SYW",
+    "name": "Sehwan Sharif Airport",
+    "city_en": "Sehwan Sharif",
+    "city_pl": "Sehwan Sharif",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "TUK",
+    "name": "Turbat International Airport",
+    "city_en": "Turbat",
+    "city_pl": "Turbat",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "ISU",
+    "name": "Sulaymaniyah International Airport",
+    "city_en": "Sulaymaniyah",
+    "city_pl": "Sulaymaniyah",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "KAC",
+    "name": "Kamishly Airport",
+    "city_en": "Kamishly",
+    "city_pl": "Kamishly",
+    "country_en": "Syria"
+  },
+  {
+    "code": "GXF",
+    "name": "Sayun International Airport",
+    "city_en": "Sayun Intl",
+    "city_pl": "Sayun Intl",
+    "country_en": "Yemen"
+  },
+  {
+    "code": "ADK",
+    "name": "Adak Airport",
+    "city_en": "Adak Island",
+    "city_pl": "Adak Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "GST",
+    "name": "Gustavus Airport",
+    "city_en": "Gustavus",
+    "city_pl": "Gustavus",
+    "country_en": "United States"
+  },
+  {
+    "code": "SGY",
+    "name": "Skagway Airport",
+    "city_en": "Skagway",
+    "city_pl": "Skagway",
+    "country_en": "United States"
+  },
+  {
+    "code": "HCR",
+    "name": "Holy Cross Airport",
+    "city_en": "Holy Cross",
+    "city_pl": "Holy Cross",
+    "country_en": "United States"
+  },
+  {
+    "code": "HNS",
+    "name": "Haines Airport",
+    "city_en": "Haines",
+    "city_pl": "Haines",
+    "country_en": "United States"
+  },
+  {
+    "code": "KLG",
+    "name": "Kalskag Airport",
+    "city_en": "Kalskag",
+    "city_pl": "Kalskag",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCG",
+    "name": "McGrath Airport",
+    "city_en": "Mcgrath",
+    "city_pl": "Mcgrath",
+    "country_en": "United States"
+  },
+  {
+    "code": "MOU",
+    "name": "Mountain Village Airport",
+    "city_en": "Mountain Village",
+    "city_pl": "Mountain Village",
+    "country_en": "United States"
+  },
+  {
+    "code": "ANI",
+    "name": "Aniak Airport",
+    "city_en": "Aniak",
+    "city_pl": "Aniak",
+    "country_en": "United States"
+  },
+  {
+    "code": "VAK",
+    "name": "Chevak Airport",
+    "city_en": "Chevak",
+    "city_pl": "Chevak",
+    "country_en": "United States"
+  },
+  {
+    "code": "WRG",
+    "name": "Wrangell Airport",
+    "city_en": "Wrangell",
+    "city_pl": "Wrangell",
+    "country_en": "United States"
+  },
+  {
+    "code": "OPU",
+    "name": "Balimo Airport",
+    "city_en": "Balimo",
+    "city_pl": "Balimo",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "VMU",
+    "name": "Baimuru Airport",
+    "city_en": "Baimuru",
+    "city_pl": "Baimuru",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "LUP",
+    "name": "Kalaupapa Airport",
+    "city_en": "Molokai",
+    "city_pl": "Molokai",
+    "country_en": "United States"
+  },
+  {
+    "code": "ENT",
+    "name": "Eniwetok Airport",
+    "city_en": "Eniwetok Atoll",
+    "city_pl": "Eniwetok Atoll",
+    "country_en": "Marshall Islands"
+  },
+  {
+    "code": "LZN",
+    "name": "Matsu Nangan Airport",
+    "city_en": "Matsu Islands",
+    "city_pl": "Matsu Islands",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "HCN",
+    "name": "Hengchun Airport",
+    "city_en": "Hengchun",
+    "city_pl": "Hengchun",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "MFK",
+    "name": "Matsu Beigan Airport",
+    "city_en": "Matsu Islands",
+    "city_pl": "Matsu Islands",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "KUH",
+    "name": "Kushiro Airport",
+    "city_en": "Kushiro",
+    "city_pl": "Kushiro",
+    "country_en": "Japan"
+  },
+  {
+    "code": "OKD",
+    "name": "Okadama Airport",
+    "city_en": "Sapporo",
+    "city_pl": "Sapporo",
+    "country_en": "Japan"
+  },
+  {
+    "code": "HSG",
+    "name": "Saga Airport",
+    "city_en": "Saga",
+    "city_pl": "Saga",
+    "country_en": "Japan"
+  },
+  {
+    "code": "NKM",
+    "name": "Nagoya Airport",
+    "city_en": "Nagoya",
+    "city_pl": "Nagoya",
+    "country_en": "Japan"
+  },
+  {
+    "code": "IWJ",
+    "name": "Iwami Airport",
+    "city_en": "Iwami",
+    "city_pl": "Iwami",
+    "country_en": "Japan"
+  },
+  {
+    "code": "FKS",
+    "name": "Fukushima Airport",
+    "city_en": "Fukushima",
+    "city_pl": "Fukushima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "ONJ",
+    "name": "Odate Noshiro Airport",
+    "city_en": "Odate Noshiro",
+    "city_pl": "Odate Noshiro",
+    "country_en": "Japan"
+  },
+  {
+    "code": "SYO",
+    "name": "Shonai Airport",
+    "city_en": "Shonai",
+    "city_pl": "Shonai",
+    "country_en": "Japan"
+  },
+  {
+    "code": "MYE",
+    "name": "Miyakejima Airport",
+    "city_en": "Miyakejima",
+    "city_pl": "Miyakejima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KUV",
+    "name": "Kunsan Air Base",
+    "city_en": "Kunsan",
+    "city_pl": "Kunsan",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "MPK",
+    "name": "Mokpo Heliport",
+    "city_en": "Mokpo",
+    "city_pl": "Mokpo",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "WJU",
+    "name": "Wonju/Hoengseong Air Base (K-38/K-46)",
+    "city_en": "Wonju",
+    "city_pl": "Wonju",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "YNY",
+    "name": "Yangyang International Airport",
+    "city_en": "Sokcho / Gangneung",
+    "city_pl": "Sokcho / Gangneung",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "HIN",
+    "name": "Sacheon Air Base/Airport",
+    "city_en": "Sacheon",
+    "city_pl": "Sacheon",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "CJJ",
+    "name": "Cheongju International Airport/Cheongju Air Base (K-59/G-513)",
+    "city_en": "Chongju",
+    "city_pl": "Chongju",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "SFS",
+    "name": "Subic Bay International Airport",
+    "city_en": "Olongapo City",
+    "city_pl": "Olongapo City",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "CYU",
+    "name": "Cuyo Airport",
+    "city_en": "Cuyo",
+    "city_pl": "Cuyo",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "CGM",
+    "name": "Camiguin Airport",
+    "city_en": "Camiguin",
+    "city_pl": "Camiguin",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "JOL",
+    "name": "Jolo Airport",
+    "city_en": "Jolo",
+    "city_pl": "Jolo",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "TWT",
+    "name": "Sanga Sanga Airport",
+    "city_en": "Sanga Sanga",
+    "city_pl": "Sanga Sanga",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "SUG",
+    "name": "Surigao Airport",
+    "city_en": "Sangley Point",
+    "city_pl": "Sangley Point",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "TDG",
+    "name": "Tandag Airport",
+    "city_en": "Tandag",
+    "city_pl": "Tandag",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "WNP",
+    "name": "Naga Airport",
+    "city_en": "Naga",
+    "city_pl": "Naga",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "BSO",
+    "name": "Basco Airport",
+    "city_en": "Basco",
+    "city_pl": "Basco",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "SFE",
+    "name": "San Fernando Airport",
+    "city_en": "San Fernando",
+    "city_pl": "San Fernando",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "TUG",
+    "name": "Tuguegarao Airport",
+    "city_en": "Tuguegarao",
+    "city_pl": "Tuguegarao",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "VRC",
+    "name": "Virac Airport",
+    "city_en": "Virac",
+    "city_pl": "Virac",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "CYP",
+    "name": "Calbayog Airport",
+    "city_en": "Calbayog City",
+    "city_pl": "Calbayog City",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "CRM",
+    "name": "Catarman National Airport",
+    "city_en": "Catarman",
+    "city_pl": "Catarman",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "MBT",
+    "name": "Moises R. Espinosa Airport",
+    "city_en": "Masbate",
+    "city_pl": "Masbate",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "RXS",
+    "name": "Roxas Airport",
+    "city_en": "Roxas City",
+    "city_pl": "Roxas City",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "TTG",
+    "name": "General Enrique Mosconi Airport",
+    "city_en": "Tartagal",
+    "city_pl": "Tartagal",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "LHS",
+    "name": "Las Heras Airport",
+    "city_en": "Las Heras",
+    "city_pl": "Las Heras",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "OES",
+    "name": "Antoine de Saint Exupéry Airport",
+    "city_en": "San Antonio Oeste",
+    "city_pl": "San Antonio Oeste",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "ING",
+    "name": "Lago Argentino Airport",
+    "city_en": "El Calafate",
+    "city_pl": "El Calafate",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "GGS",
+    "name": "Gobernador Gregores Airport",
+    "city_en": "Gobernador Gregores",
+    "city_pl": "Gobernador Gregores",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "SST",
+    "name": "Santa Teresita Airport",
+    "city_en": "Santa Teresita",
+    "city_pl": "Santa Teresita",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "NEC",
+    "name": "Necochea Airport",
+    "city_en": "Necochea",
+    "city_pl": "Necochea",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "JDO",
+    "name": "Orlando Bezerra de Menezes Airport",
+    "city_en": "Juazeiro Do Norte",
+    "city_pl": "Juazeiro Do Norte",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "LEC",
+    "name": "Coronel Horácio de Mattos Airport",
+    "city_en": "Lençóis",
+    "city_pl": "Lençóis",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MEA",
+    "name": "Macaé Airport",
+    "city_en": "Macaé",
+    "city_pl": "Macaé",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MII",
+    "name": "Frank Miloye Milenkowichi–Marília State Airport",
+    "city_en": "Marília",
+    "city_pl": "Marília",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "VDC",
+    "name": "Vitória da Conquista Airport",
+    "city_en": "Vitória Da Conquista",
+    "city_pl": "Vitória Da Conquista",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "RIA",
+    "name": "Santa Maria Airport",
+    "city_en": "Santa Maria",
+    "city_pl": "Santa Maria",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TOW",
+    "name": "Toledo Airport",
+    "city_en": "Toledo",
+    "city_pl": "Toledo",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ESR",
+    "name": "Ricardo García Posada Airport",
+    "city_en": "El Salvador",
+    "city_pl": "El Salvador",
+    "country_en": "Chile"
+  },
+  {
+    "code": "ZPC",
+    "name": "Pucón Airport",
+    "city_en": "Pucon",
+    "city_pl": "Pucon",
+    "country_en": "Chile"
+  },
+  {
+    "code": "SOD",
+    "name": "Sorocaba Airport",
+    "city_en": "Sorocaba",
+    "city_pl": "Sorocaba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SCY",
+    "name": "San Cristóbal Airport",
+    "city_en": "San Cristóbal",
+    "city_pl": "San Cristóbal",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "LOH",
+    "name": "Camilo Ponce Enriquez Airport",
+    "city_en": "La Toma (Catamayo)",
+    "city_pl": "La Toma (Catamayo)",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "ESM",
+    "name": "General Rivadeneira Airport",
+    "city_en": "Esmeraldas",
+    "city_pl": "Esmeraldas",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "PSY",
+    "name": "Port Stanley Airport",
+    "city_en": "Stanley",
+    "city_pl": "Stanley",
+    "country_en": "Falkland Islands"
+  },
+  {
+    "code": "CRC",
+    "name": "Santa Ana Airport",
+    "city_en": "Cartago",
+    "city_pl": "Cartago",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "LQM",
+    "name": "Caucaya Airport",
+    "city_en": "Puerto Leguízamo",
+    "city_pl": "Puerto Leguízamo",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "LPD",
+    "name": "La Pedrera Airport",
+    "city_en": "La Pedrera",
+    "city_pl": "La Pedrera",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "NQU",
+    "name": "Reyes Murillo Airport",
+    "city_en": "Nuquí",
+    "city_pl": "Nuquí",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PDA",
+    "name": "Obando Airport",
+    "city_en": "Puerto Inírida",
+    "city_pl": "Puerto Inírida",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "EYP",
+    "name": "El Yopal Airport",
+    "city_en": "Yopal",
+    "city_pl": "Yopal",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "GYA",
+    "name": "Capitán de Av. Emilio Beltrán Airport",
+    "city_en": "Guayaramerín",
+    "city_pl": "Guayaramerín",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "PUR",
+    "name": "Puerto Rico Airport",
+    "city_en": "Puerto Rico/Manuripi",
+    "city_pl": "Puerto Rico/Manuripi",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "RIB",
+    "name": "Capitán Av. Selin Zeitun Lopez Airport",
+    "city_en": "Riberalta",
+    "city_pl": "Riberalta",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "REY",
+    "name": "Reyes Airport",
+    "city_en": "Reyes",
+    "city_pl": "Reyes",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "SRJ",
+    "name": "Capitán Av. German Quiroga G. Airport",
+    "city_en": "San Borja",
+    "city_pl": "San Borja",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "ORG",
+    "name": "Zorg en Hoop Airport",
+    "city_en": "Paramaribo",
+    "city_pl": "Paramaribo",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "MVS",
+    "name": "Mucuri Airport",
+    "city_en": "Mucuri",
+    "city_pl": "Mucuri",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CJA",
+    "name": "Mayor General FAP Armando Revoredo Iglesias Airport",
+    "city_en": "Cajamarca",
+    "city_pl": "Cajamarca",
+    "country_en": "Peru"
+  },
+  {
+    "code": "HUU",
+    "name": "Alferez Fap David Figueroa Fernandini Airport",
+    "city_en": "Huánuco",
+    "city_pl": "Huánuco",
+    "country_en": "Peru"
+  },
+  {
+    "code": "NZC",
+    "name": "Maria Reiche Neuman Airport",
+    "city_en": "Nazca",
+    "city_pl": "Nazca",
+    "country_en": "Peru"
+  },
+  {
+    "code": "SRA",
+    "name": "Santa Rosa Airport",
+    "city_en": "Santa Rosa",
+    "city_pl": "Santa Rosa",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MYC",
+    "name": "Escuela Mariscal Sucre Airport",
+    "city_en": "Maracay",
+    "city_pl": "Maracay",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "VIG",
+    "name": "Juan Pablo Pérez Alfonso Airport",
+    "city_en": "El Vigía",
+    "city_pl": "El Vigía",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "JPR",
+    "name": "Ji-Paraná Airport",
+    "city_en": "Ji-Paraná",
+    "city_pl": "Ji-Paraná",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BBQ",
+    "name": "Codrington Airport",
+    "city_en": "Codrington",
+    "city_pl": "Codrington",
+    "country_en": "Antigua and Barbuda"
+  },
+  {
+    "code": "DSD",
+    "name": "La Désirade Airport",
+    "city_en": "Grande Anse",
+    "city_pl": "Grande Anse",
+    "country_en": "Guadeloupe"
+  },
+  {
+    "code": "BBR",
+    "name": "Baillif Airport",
+    "city_en": "Basse Terre",
+    "city_pl": "Basse Terre",
+    "country_en": "Guadeloupe"
+  },
+  {
+    "code": "SFC",
+    "name": "St-François Airport",
+    "city_en": "St-François",
+    "city_pl": "St-François",
+    "country_en": "Guadeloupe"
+  },
+  {
+    "code": "GBJ",
+    "name": "Les Bases Airport",
+    "city_en": "Grand Bourg",
+    "city_pl": "Grand Bourg",
+    "country_en": "Guadeloupe"
+  },
+  {
+    "code": "NEV",
+    "name": "Vance W. Amory International Airport",
+    "city_en": "Charlestown",
+    "city_pl": "Charlestown",
+    "country_en": "Saint Kitts and Nevis"
+  },
+  {
+    "code": "VIJ",
+    "name": "Virgin Gorda Airport",
+    "city_en": "Spanish Town",
+    "city_pl": "Spanish Town",
+    "country_en": "British Virgin Islands"
+  },
+  {
+    "code": "BQU",
+    "name": "J F Mitchell Airport",
+    "city_en": "Bequia",
+    "city_pl": "Bequia",
+    "country_en": "Saint Vincent and the Grenadines"
+  },
+  {
+    "code": "UNI",
+    "name": "Union Island International Airport",
+    "city_en": "Union Island",
+    "city_pl": "Union Island",
+    "country_en": "Saint Vincent and the Grenadines"
+  },
+  {
+    "code": "KOV",
+    "name": "Kokshetau Airport",
+    "city_en": "Kokshetau",
+    "city_pl": "Kokshetau",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "PPK",
+    "name": "Petropavlosk South Airport",
+    "city_en": "Petropavlosk",
+    "city_pl": "Petropavlosk",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "DZN",
+    "name": "Zhezkazgan Airport",
+    "city_en": "Zhezkazgan",
+    "city_pl": "Zhezkazgan",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "UKK",
+    "name": "Ust-Kamennogorsk Airport",
+    "city_en": "Ust Kamenogorsk",
+    "city_pl": "Ust Kamenogorsk",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "KSN",
+    "name": "Kostanay West Airport",
+    "city_en": "Kostanay",
+    "city_pl": "Kostanay",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "KVD",
+    "name": "Ganja Airport",
+    "city_en": "Ganja",
+    "city_pl": "Ganja",
+    "country_en": "Azerbaijan"
+  },
+  {
+    "code": "NAJ",
+    "name": "Nakhchivan Airport",
+    "city_en": "Nakhchivan",
+    "city_pl": "Nakhchivan",
+    "country_en": "Azerbaijan"
+  },
+  {
+    "code": "NER",
+    "name": "Chulman Airport",
+    "city_en": "Neryungri",
+    "city_pl": "Neryungri",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PYJ",
+    "name": "Polyarny Airport",
+    "city_en": "Yakutia",
+    "city_pl": "Yakutia",
+    "country_en": "Russia"
+  },
+  {
+    "code": "CKH",
+    "name": "Chokurdakh Airport",
+    "city_en": "Chokurdah",
+    "city_pl": "Chokurdah",
+    "country_en": "Russia"
+  },
+  {
+    "code": "CYX",
+    "name": "Cherskiy Airport",
+    "city_en": "Cherskiy",
+    "city_pl": "Cherskiy",
+    "country_en": "Russia"
+  },
+  {
+    "code": "IKS",
+    "name": "Tiksi Airport",
+    "city_en": "Tiksi",
+    "city_pl": "Tiksi",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KXK",
+    "name": "Komsomolsk-on-Amur Airport",
+    "city_en": "Komsomolsk-on-Amur",
+    "city_pl": "Komsomolsk-on-Amur",
+    "country_en": "Russia"
+  },
+  {
+    "code": "DYR",
+    "name": "Ugolny Airport",
+    "city_en": "Anadyr",
+    "city_pl": "Anadyr",
+    "country_en": "Russia"
+  },
+  {
+    "code": "OHO",
+    "name": "Okhotsk Airport",
+    "city_en": "Okhotsk",
+    "city_pl": "Okhotsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "UJE",
+    "name": "Ujae Atoll Airport",
+    "city_en": "Ujae Atoll",
+    "city_pl": "Ujae Atoll",
+    "country_en": "Marshall Islands"
+  },
+  {
+    "code": "MPW",
+    "name": "Mariupol International Airport",
+    "city_en": "Mariupol International",
+    "city_pl": "Mariupol International",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "VSG",
+    "name": "Luhansk International Airport",
+    "city_en": "Lugansk",
+    "city_pl": "Lugansk",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "OZH",
+    "name": "Zaporizhzhia International Airport",
+    "city_en": "Zaporozhye",
+    "city_pl": "Zaporozhye",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "KWG",
+    "name": "Kryvyi Rih International Airport",
+    "city_en": "Krivoy Rog",
+    "city_pl": "Krivoy Rog",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "HRK",
+    "name": "Kharkiv International Airport",
+    "city_en": "Kharkov",
+    "city_pl": "Kharkov",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "IFO",
+    "name": "Ivano-Frankivsk International Airport",
+    "city_en": "Ivano-Frankivsk",
+    "city_pl": "Ivano-Frankivsk",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "CWC",
+    "name": "Chernivtsi International Airport",
+    "city_en": "Chernovtsk",
+    "city_pl": "Chernovtsk",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "RWN",
+    "name": "Rivne International Airport",
+    "city_en": "Rivne",
+    "city_pl": "Rivne",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "UDJ",
+    "name": "Uzhhorod International Airport",
+    "city_en": "Uzhgorod",
+    "city_pl": "Uzhgorod",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "CSH",
+    "name": "Solovki Airport",
+    "city_en": "Solovetsky Islands",
+    "city_pl": "Solovetsky Islands",
+    "country_en": "Russia"
+  },
+  {
+    "code": "CEE",
+    "name": "Cherepovets Airport",
+    "city_en": "Cherepovets",
+    "city_pl": "Cherepovets",
+    "country_en": "Russia"
+  },
+  {
+    "code": "AMV",
+    "name": "Amderma Airport",
+    "city_en": "Amderma",
+    "city_pl": "Amderma",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KSZ",
+    "name": "Kotlas Airport",
+    "city_en": "Kotlas",
+    "city_pl": "Kotlas",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PES",
+    "name": "Petrozavodsk Airport",
+    "city_en": "Petrozavodsk",
+    "city_pl": "Petrozavodsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "GNA",
+    "name": "Hrodna Airport",
+    "city_en": "Hrodna",
+    "city_pl": "Hrodna",
+    "country_en": "Belarus"
+  },
+  {
+    "code": "MVQ",
+    "name": "Mogilev Airport",
+    "city_en": "Mogilev",
+    "city_pl": "Mogilev",
+    "country_en": "Belarus"
+  },
+  {
+    "code": "EIE",
+    "name": "Yeniseysk Airport",
+    "city_en": "Yeniseysk",
+    "city_pl": "Yeniseysk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KYZ",
+    "name": "Kyzyl Airport",
+    "city_en": "Kyzyl",
+    "city_pl": "Kyzyl",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NOZ",
+    "name": "Spichenkovo Airport",
+    "city_en": "Novokuznetsk",
+    "city_pl": "Novokuznetsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "HTG",
+    "name": "Khatanga Airport",
+    "city_en": "Khatanga",
+    "city_pl": "Khatanga",
+    "country_en": "Russia"
+  },
+  {
+    "code": "IAA",
+    "name": "Igarka Airport",
+    "city_en": "Igarka",
+    "city_pl": "Igarka",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NAL",
+    "name": "Nalchik Airport",
+    "city_en": "Nalchik",
+    "city_pl": "Nalchik",
+    "country_en": "Russia"
+  },
+  {
+    "code": "OGZ",
+    "name": "Beslan Airport",
+    "city_en": "Beslan",
+    "city_pl": "Beslan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ESL",
+    "name": "Elista Airport",
+    "city_en": "Elista",
+    "city_pl": "Elista",
+    "country_en": "Russia"
+  },
+  {
+    "code": "WKK",
+    "name": "Aleknagik / New Airport",
+    "city_en": "Aleknagik",
+    "city_pl": "Aleknagik",
+    "country_en": "United States"
+  },
+  {
+    "code": "BLF",
+    "name": "Mercer County Airport",
+    "city_en": "Bluefield",
+    "city_pl": "Bluefield",
+    "country_en": "United States"
+  },
+  {
+    "code": "GLH",
+    "name": "Mid Delta Regional Airport",
+    "city_en": "Greenville",
+    "city_pl": "Greenville",
+    "country_en": "United States"
+  },
+  {
+    "code": "PSC",
+    "name": "Tri Cities Airport",
+    "city_en": "Pasco",
+    "city_pl": "Pasco",
+    "country_en": "United States"
+  },
+  {
+    "code": "KQA",
+    "name": "Akutan Seaplane Base",
+    "city_en": "Akutan",
+    "city_pl": "Akutan",
+    "country_en": "United States"
+  },
+  {
+    "code": "LPS",
+    "name": "Lopez Island Airport",
+    "city_en": "Lopez",
+    "city_pl": "Lopez",
+    "country_en": "United States"
+  },
+  {
+    "code": "SLY",
+    "name": "Salekhard Airport",
+    "city_en": "Salekhard",
+    "city_pl": "Salekhard",
+    "country_en": "Russia"
+  },
+  {
+    "code": "HMA",
+    "name": "Khanty Mansiysk Airport",
+    "city_en": "Khanty-Mansiysk",
+    "city_pl": "Khanty-Mansiysk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NYA",
+    "name": "Nyagan Airport",
+    "city_en": "Nyagan",
+    "city_pl": "Nyagan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "OVS",
+    "name": "Sovetskiy Airport",
+    "city_en": "Sovetskiy",
+    "city_pl": "Sovetskiy",
+    "country_en": "Russia"
+  },
+  {
+    "code": "IJK",
+    "name": "Izhevsk Airport",
+    "city_en": "Izhevsk",
+    "city_pl": "Izhevsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KVX",
+    "name": "Pobedilovo Airport",
+    "city_en": "Kirov",
+    "city_pl": "Kirov",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NYM",
+    "name": "Nadym Airport",
+    "city_en": "Nadym",
+    "city_pl": "Nadym",
+    "country_en": "Russia"
+  },
+  {
+    "code": "RAT",
+    "name": "Raduzhny Airport",
+    "city_en": "Raduzhnyi",
+    "city_pl": "Raduzhnyi",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NFG",
+    "name": "Nefteyugansk Airport",
+    "city_en": "Nefteyugansk",
+    "city_pl": "Nefteyugansk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KRO",
+    "name": "Kurgan Airport",
+    "city_en": "Kurgan",
+    "city_pl": "Kurgan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "LBD",
+    "name": "Khudzhand Airport",
+    "city_en": "Khudzhand",
+    "city_pl": "Khudzhand",
+    "country_en": "Tajikistan"
+  },
+  {
+    "code": "AZN",
+    "name": "Andizhan Airport",
+    "city_en": "Andizhan",
+    "city_pl": "Andizhan",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "FEG",
+    "name": "Fergana International Airport",
+    "city_en": "Fergana",
+    "city_pl": "Fergana",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "NMA",
+    "name": "Namangan Airport",
+    "city_en": "Namangan",
+    "city_pl": "Namangan",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "NCU",
+    "name": "Nukus Airport",
+    "city_en": "Nukus",
+    "city_pl": "Nukus",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "UGC",
+    "name": "Urgench Airport",
+    "city_en": "Urgench",
+    "city_pl": "Urgench",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "KSQ",
+    "name": "Karshi Khanabad Airport",
+    "city_en": "Khanabad",
+    "city_pl": "Khanabad",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "TMJ",
+    "name": "Termez Airport",
+    "city_en": "Termez",
+    "city_pl": "Termez",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "RYB",
+    "name": "Staroselye Airport",
+    "city_en": "Rybinsk",
+    "city_pl": "Rybinsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "EGO",
+    "name": "Belgorod International Airport",
+    "city_en": "Belgorod",
+    "city_pl": "Belgorod",
+    "country_en": "Russia"
+  },
+  {
+    "code": "URS",
+    "name": "Kursk East Airport",
+    "city_en": "Kursk",
+    "city_pl": "Kursk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "LPK",
+    "name": "Lipetsk Airport",
+    "city_en": "Lipetsk",
+    "city_pl": "Lipetsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "VKT",
+    "name": "Vorkuta Airport",
+    "city_en": "Vorkuta",
+    "city_pl": "Vorkuta",
+    "country_en": "Russia"
+  },
+  {
+    "code": "UUA",
+    "name": "Bugulma Airport",
+    "city_en": "Bugulma",
+    "city_pl": "Bugulma",
+    "country_en": "Russia"
+  },
+  {
+    "code": "JOK",
+    "name": "Yoshkar-Ola Airport",
+    "city_en": "Yoshkar-Ola",
+    "city_pl": "Yoshkar-Ola",
+    "country_en": "Russia"
+  },
+  {
+    "code": "CSY",
+    "name": "Cheboksary Airport",
+    "city_en": "Cheboksary",
+    "city_pl": "Cheboksary",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ULY",
+    "name": "Ulyanovsk East Airport",
+    "city_en": "Ulyanovsk",
+    "city_pl": "Ulyanovsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "OSW",
+    "name": "Orsk Airport",
+    "city_en": "Orsk",
+    "city_pl": "Orsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PEZ",
+    "name": "Penza Airport",
+    "city_en": "Penza",
+    "city_pl": "Penza",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SKX",
+    "name": "Saransk Airport",
+    "city_en": "Saransk",
+    "city_pl": "Saransk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "BWO",
+    "name": "Balakovo Airport",
+    "city_en": "Balakovo",
+    "city_pl": "Balakovo",
+    "country_en": "Russia"
+  },
+  {
+    "code": "HBX",
+    "name": "Hubli Airport",
+    "city_en": "Hubli",
+    "city_pl": "Hubli",
+    "country_en": "India"
+  },
+  {
+    "code": "KCT",
+    "name": "Koggala Airport",
+    "city_en": "Koggala",
+    "city_pl": "Koggala",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "WRZ",
+    "name": "Weerawila Airport",
+    "city_en": "Wirawila",
+    "city_pl": "Wirawila",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "BBM",
+    "name": "Battambang Airport",
+    "city_en": "Battambang",
+    "city_pl": "Battambang",
+    "country_en": "Cambodia"
+  },
+  {
+    "code": "SHL",
+    "name": "Shillong Airport",
+    "city_en": "Shillong",
+    "city_pl": "Shillong",
+    "country_en": "India"
+  },
+  {
+    "code": "GAU",
+    "name": "Lokpriya Gopinath Bordoloi International Airport",
+    "city_en": "Guwahati",
+    "city_pl": "Guwahati",
+    "country_en": "India"
+  },
+  {
+    "code": "DMU",
+    "name": "Dimapur Airport",
+    "city_en": "Dimapur",
+    "city_pl": "Dimapur",
+    "country_en": "India"
+  },
+  {
+    "code": "TEZ",
+    "name": "Tezpur Airport",
+    "city_en": "Tezpur",
+    "city_pl": "Tezpur",
+    "country_en": "India"
+  },
+  {
+    "code": "BZL",
+    "name": "Barisal Airport",
+    "city_en": "Barisal",
+    "city_pl": "Barisal",
+    "country_en": "Bangladesh"
+  },
+  {
+    "code": "HOE",
+    "name": "Ban Huoeisay Airport",
+    "city_en": "Huay Xai",
+    "city_pl": "Huay Xai",
+    "country_en": "Laos"
+  },
+  {
+    "code": "BHR",
+    "name": "Bharatpur Airport",
+    "city_en": "Bharatpur",
+    "city_pl": "Bharatpur",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "BDP",
+    "name": "Bhadrapur Airport",
+    "city_en": "Chandragarhi",
+    "city_pl": "Chandragarhi",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "MEY",
+    "name": "Meghauli Airport",
+    "city_en": "Meghauli",
+    "city_pl": "Meghauli",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "KEP",
+    "name": "Nepalgunj Airport",
+    "city_en": "Nepalgunj",
+    "city_pl": "Nepalgunj",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "GAN",
+    "name": "Gan International Airport",
+    "city_en": "Gan Island",
+    "city_pl": "Gan Island",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "HAQ",
+    "name": "Hanimaadhoo Airport",
+    "city_en": "Haa Dhaalu Atoll",
+    "city_pl": "Haa Dhaalu Atoll",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "KDO",
+    "name": "Kadhdhoo Airport",
+    "city_en": "Laamu Atoll",
+    "city_pl": "Laamu Atoll",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "MAQ",
+    "name": "Mae Sot Airport",
+    "city_en": "Tak",
+    "city_pl": "Tak",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "BMV",
+    "name": "Buon Ma Thuot Airport",
+    "city_en": "Buonmethuot",
+    "city_pl": "Buonmethuot",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "HPH",
+    "name": "Cat Bi International Airport",
+    "city_en": "Haiphong",
+    "city_pl": "Haiphong",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "CXR",
+    "name": "Cam Ranh Airport",
+    "city_en": "Nha Trang",
+    "city_pl": "Nha Trang",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "VCS",
+    "name": "Co Ong Airport",
+    "city_en": "Conson",
+    "city_pl": "Conson",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "VCA",
+    "name": "Can Tho International Airport",
+    "city_en": "Can Tho",
+    "city_pl": "Can Tho",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "DIN",
+    "name": "Dien Bien Phu Airport",
+    "city_en": "Dienbienphu",
+    "city_pl": "Dienbienphu",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "UIH",
+    "name": "Phu Cat Airport",
+    "city_en": "Phucat",
+    "city_pl": "Phucat",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "PXU",
+    "name": "Pleiku Airport",
+    "city_en": "Pleiku",
+    "city_pl": "Pleiku",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "VII",
+    "name": "Vinh Airport",
+    "city_en": "Vinh",
+    "city_pl": "Vinh",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "BMO",
+    "name": "Banmaw Airport",
+    "city_en": "Banmaw",
+    "city_pl": "Banmaw",
+    "country_en": "Burma"
+  },
+  {
+    "code": "TVY",
+    "name": "Dawei Airport",
+    "city_en": "Dawei",
+    "city_pl": "Dawei",
+    "country_en": "Burma"
+  },
+  {
+    "code": "KAW",
+    "name": "Kawthoung Airport",
+    "city_en": "Kawthoung",
+    "city_pl": "Kawthoung",
+    "country_en": "Burma"
+  },
+  {
+    "code": "LIW",
+    "name": "Loikaw Airport",
+    "city_en": "Loikaw",
+    "city_pl": "Loikaw",
+    "country_en": "Burma"
+  },
+  {
+    "code": "MNU",
+    "name": "Mawlamyine Airport",
+    "city_en": "Mawlamyine",
+    "city_pl": "Mawlamyine",
+    "country_en": "Burma"
+  },
+  {
+    "code": "BSX",
+    "name": "Pathein Airport",
+    "city_en": "Pathein",
+    "city_pl": "Pathein",
+    "country_en": "Burma"
+  },
+  {
+    "code": "PKK",
+    "name": "Pakhokku Airport",
+    "city_en": "Pakhokku",
+    "city_pl": "Pakhokku",
+    "country_en": "Burma"
+  },
+  {
+    "code": "SWQ",
+    "name": "Sumbawa Besar Airport",
+    "city_en": "Sumbawa Island",
+    "city_pl": "Sumbawa Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TMC",
+    "name": "Tambolaka Airport",
+    "city_en": "Waikabubak-Sumba Island",
+    "city_pl": "Waikabubak-Sumba Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BUI",
+    "name": "Bokondini Airport",
+    "city_en": "Bokondini-Papua Island",
+    "city_pl": "Bokondini-Papua Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SEH",
+    "name": "Senggeh Airport",
+    "city_en": "Senggeh-Papua Island",
+    "city_pl": "Senggeh-Papua Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TJS",
+    "name": "Tanjung Harapan Airport",
+    "city_en": "Tanjung Selor-Borneo Island",
+    "city_pl": "Tanjung Selor-Borneo Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "DTD",
+    "name": "Datadawai Airport",
+    "city_en": "Datadawai-Borneo Island",
+    "city_pl": "Datadawai-Borneo Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BEJ",
+    "name": "Kalimarau Airport",
+    "city_en": "Tanjung Redep-Borneo Island",
+    "city_pl": "Tanjung Redep-Borneo Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TJG",
+    "name": "Warukin Airport",
+    "city_en": "Tanjung-Borneo Island",
+    "city_pl": "Tanjung-Borneo Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SMQ",
+    "name": "Sampit(Hasan) Airport",
+    "city_en": "Sampit-Borneo Island",
+    "city_pl": "Sampit-Borneo Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "LUV",
+    "name": "Dumatumbun Airport",
+    "city_en": "Langgur-Kei Islands",
+    "city_pl": "Langgur-Kei Islands",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "ARD",
+    "name": "Mali Airport",
+    "city_en": "Alor Island",
+    "city_pl": "Alor Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BLG",
+    "name": "Belaga Airport",
+    "city_en": "Belaga",
+    "city_pl": "Belaga",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "LGL",
+    "name": "Long Lellang Airport",
+    "city_en": "Long Datih",
+    "city_pl": "Long Datih",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "ODN",
+    "name": "Long Seridan Airport",
+    "city_en": "Long Seridan",
+    "city_pl": "Long Seridan",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "MKM",
+    "name": "Mukah Airport",
+    "city_en": "Mukah",
+    "city_pl": "Mukah",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "BKM",
+    "name": "Bakalalan Airport",
+    "city_en": "Bakalalan",
+    "city_pl": "Bakalalan",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "LWY",
+    "name": "Lawas Airport",
+    "city_en": "Lawas",
+    "city_pl": "Lawas",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "BBN",
+    "name": "Bario Airport",
+    "city_en": "Bario",
+    "city_pl": "Bario",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "TMG",
+    "name": "Tomanggong Airport",
+    "city_en": "Tomanggong",
+    "city_pl": "Tomanggong",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "KUD",
+    "name": "Kudat Airport",
+    "city_en": "Kudat",
+    "city_pl": "Kudat",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "TKG",
+    "name": "Radin Inten II (Branti) Airport",
+    "city_en": "Bandar Lampung-Sumatra Island",
+    "city_pl": "Bandar Lampung-Sumatra Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "HLP",
+    "name": "Halim Perdanakusuma International Airport",
+    "city_en": "Jakarta",
+    "city_pl": "Jakarta",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NTX",
+    "name": "Ranai Airport",
+    "city_en": "Ranai-Natuna Besar Island",
+    "city_pl": "Ranai-Natuna Besar Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PSU",
+    "name": "Pangsuma Airport",
+    "city_en": "Putussibau-Borneo Island",
+    "city_pl": "Putussibau-Borneo Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SQG",
+    "name": "Sintang(Susilo) Airport",
+    "city_en": "Sintang-Borneo Island",
+    "city_pl": "Sintang-Borneo Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PDO",
+    "name": "Pendopo Airport",
+    "city_en": "Talang Gudang-Sumatra Island",
+    "city_pl": "Talang Gudang-Sumatra Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "LSW",
+    "name": "Malikus Saleh Airport",
+    "city_en": "Lhok Seumawe-Sumatra Island",
+    "city_pl": "Lhok Seumawe-Sumatra Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PKG",
+    "name": "Pulau Pangkor Airport",
+    "city_en": "Pangkor Island",
+    "city_pl": "Pangkor Island",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "LBW",
+    "name": "Long Bawan Airport",
+    "city_en": "Long Bawan-Borneo Island",
+    "city_pl": "Long Bawan-Borneo Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NNX",
+    "name": "Nunukan Airport",
+    "city_en": "Nunukan-Nunukan Island",
+    "city_pl": "Nunukan-Nunukan Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "LPU",
+    "name": "Long Apung Airport",
+    "city_en": "Long Apung-Borneo Island",
+    "city_pl": "Long Apung-Borneo Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "ALH",
+    "name": "Albany Airport",
+    "city_en": "Albany",
+    "city_pl": "Albany",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GYL",
+    "name": "Argyle Airport",
+    "city_en": "Argyle",
+    "city_pl": "Argyle",
+    "country_en": "Australia"
+  },
+  {
+    "code": "AUU",
+    "name": "Aurukun Airport",
+    "city_en": "Aurukun",
+    "city_pl": "Aurukun",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BCI",
+    "name": "Barcaldine Airport",
+    "city_en": "Barcaldine",
+    "city_pl": "Barcaldine",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BDD",
+    "name": "Badu Island Airport",
+    "city_en": "Badu Island",
+    "city_pl": "Badu Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BVI",
+    "name": "Birdsville Airport",
+    "city_en": "Birdsville",
+    "city_pl": "Birdsville",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BHQ",
+    "name": "Broken Hill Airport",
+    "city_en": "Broken Hill",
+    "city_pl": "Broken Hill",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HTI",
+    "name": "Hamilton Island Airport",
+    "city_en": "Hamilton Island",
+    "city_pl": "Hamilton Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BEU",
+    "name": "Bedourie Airport",
+    "city_en": "Bedourie",
+    "city_pl": "Bedourie",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BRK",
+    "name": "Bourke Airport",
+    "city_en": "Bourke",
+    "city_pl": "Bourke",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BUC",
+    "name": "Burketown Airport",
+    "city_en": "Burketown",
+    "city_pl": "Burketown",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GIC",
+    "name": "Boigu Airport",
+    "city_en": "Boigu",
+    "city_pl": "Boigu",
+    "country_en": "Australia"
+  },
+  {
+    "code": "OKY",
+    "name": "Oakey Airport",
+    "city_en": "Oakey",
+    "city_pl": "Oakey",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BQL",
+    "name": "Boulia Airport",
+    "city_en": "Boulia",
+    "city_pl": "Boulia",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BHS",
+    "name": "Bathurst Airport",
+    "city_en": "Bathurst",
+    "city_pl": "Bathurst",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BLT",
+    "name": "Blackwater Airport",
+    "city_en": "Blackwater",
+    "city_pl": "Blackwater",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CVQ",
+    "name": "Carnarvon Airport",
+    "city_en": "Carnarvon",
+    "city_pl": "Carnarvon",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CAZ",
+    "name": "Cobar Airport",
+    "city_en": "Cobar",
+    "city_pl": "Cobar",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CPD",
+    "name": "Coober Pedy Airport",
+    "city_en": "Coober Pedy",
+    "city_pl": "Coober Pedy",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CNC",
+    "name": "Coconut Island Airport",
+    "city_en": "Coconut Island",
+    "city_pl": "Coconut Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CNJ",
+    "name": "Cloncurry Airport",
+    "city_en": "Cloncurry",
+    "city_pl": "Cloncurry",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CED",
+    "name": "Ceduna Airport",
+    "city_en": "Ceduna",
+    "city_pl": "Ceduna",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CTN",
+    "name": "Cooktown Airport",
+    "city_en": "Cooktown",
+    "city_pl": "Cooktown",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CMA",
+    "name": "Cunnamulla Airport",
+    "city_en": "Cunnamulla",
+    "city_pl": "Cunnamulla",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CNB",
+    "name": "Coonamble Airport",
+    "city_en": "Coonamble",
+    "city_pl": "Coonamble",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CUQ",
+    "name": "Coen Airport",
+    "city_en": "Coen",
+    "city_pl": "Coen",
+    "country_en": "Australia"
+  },
+  {
+    "code": "OOM",
+    "name": "Cooma Snowy Mountains Airport",
+    "city_en": "Cooma",
+    "city_pl": "Cooma",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DMD",
+    "name": "Doomadgee Airport",
+    "city_en": "Doomadgee",
+    "city_pl": "Doomadgee",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NLF",
+    "name": "Darnley Island Airport",
+    "city_en": "Darnley Island",
+    "city_pl": "Darnley Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DPO",
+    "name": "Devonport Airport",
+    "city_en": "Devonport",
+    "city_pl": "Devonport",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ELC",
+    "name": "Elcho Island Airport",
+    "city_en": "Elcho Island",
+    "city_pl": "Elcho Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "EPR",
+    "name": "Esperance Airport",
+    "city_en": "Esperance",
+    "city_pl": "Esperance",
+    "country_en": "Australia"
+  },
+  {
+    "code": "FLS",
+    "name": "Flinders Island Airport",
+    "city_en": "Flinders Island",
+    "city_pl": "Flinders Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GET",
+    "name": "Geraldton Airport",
+    "city_en": "Geraldton",
+    "city_pl": "Geraldton",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GLT",
+    "name": "Gladstone Airport",
+    "city_en": "Gladstone",
+    "city_pl": "Gladstone",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GTE",
+    "name": "Groote Eylandt Airport",
+    "city_en": "Groote Eylandt",
+    "city_pl": "Groote Eylandt",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GFF",
+    "name": "Griffith Airport",
+    "city_en": "Griffith",
+    "city_pl": "Griffith",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HID",
+    "name": "Horn Island Airport",
+    "city_en": "Horn Island",
+    "city_pl": "Horn Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HOK",
+    "name": "Hooker Creek Airport",
+    "city_en": "Hooker Creek",
+    "city_pl": "Hooker Creek",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MHU",
+    "name": "Mount Hotham Airport",
+    "city_en": "Mount Hotham",
+    "city_pl": "Mount Hotham",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HGD",
+    "name": "Hughenden Airport",
+    "city_en": "Hughenden",
+    "city_pl": "Hughenden",
+    "country_en": "Australia"
+  },
+  {
+    "code": "JCK",
+    "name": "Julia Creek Airport",
+    "city_en": "Julia Creek",
+    "city_pl": "Julia Creek",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KAX",
+    "name": "Kalbarri Airport",
+    "city_en": "Kalbarri",
+    "city_pl": "Kalbarri",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KNS",
+    "name": "King Island Airport",
+    "city_en": "King Island",
+    "city_pl": "King Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KFG",
+    "name": "Kalkgurung Airport",
+    "city_en": "Kalkgurung",
+    "city_pl": "Kalkgurung",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KRB",
+    "name": "Karumba Airport",
+    "city_en": "Karumba",
+    "city_pl": "Karumba",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KWM",
+    "name": "Kowanyama Airport",
+    "city_en": "Kowanyama",
+    "city_pl": "Kowanyama",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KUG",
+    "name": "Kubin Airport",
+    "city_en": "Kubin",
+    "city_pl": "Kubin",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LNO",
+    "name": "Leonora Airport",
+    "city_en": "Leonora",
+    "city_pl": "Leonora",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LEL",
+    "name": "Lake Evella Airport",
+    "city_en": "Lake Evella",
+    "city_pl": "Lake Evella",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LDH",
+    "name": "Lord Howe Island Airport",
+    "city_en": "Lord Howe Island",
+    "city_pl": "Lord Howe Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "IRG",
+    "name": "Lockhart River Airport",
+    "city_en": "Lockhart River",
+    "city_pl": "Lockhart River",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LSY",
+    "name": "Lismore Airport",
+    "city_en": "Lismore",
+    "city_pl": "Lismore",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LHG",
+    "name": "Lightning Ridge Airport",
+    "city_en": "Lightning Ridge",
+    "city_pl": "Lightning Ridge",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LRE",
+    "name": "Longreach Airport",
+    "city_en": "Longreach",
+    "city_pl": "Longreach",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LER",
+    "name": "Leinster Airport",
+    "city_en": "Leinster",
+    "city_pl": "Leinster",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LVO",
+    "name": "Laverton Airport",
+    "city_en": "Laverton",
+    "city_pl": "Laverton",
+    "country_en": "Australia"
+  },
+  {
+    "code": "UBB",
+    "name": "Mabuiag Island Airport",
+    "city_en": "Mabuiag Island",
+    "city_pl": "Mabuiag Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MKR",
+    "name": "Meekatharra Airport",
+    "city_en": "Meekatharra",
+    "city_pl": "Meekatharra",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MIM",
+    "name": "Merimbula Airport",
+    "city_en": "Merimbula",
+    "city_pl": "Merimbula",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MGT",
+    "name": "Milingimbi Airport",
+    "city_en": "Milingimbi",
+    "city_pl": "Milingimbi",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MNG",
+    "name": "Maningrida Airport",
+    "city_en": "Maningrida",
+    "city_pl": "Maningrida",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MCV",
+    "name": "McArthur River Mine Airport",
+    "city_en": "McArthur River Mine",
+    "city_pl": "McArthur River Mine",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MQL",
+    "name": "Mildura Airport",
+    "city_en": "Mildura",
+    "city_pl": "Mildura",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MMG",
+    "name": "Mount Magnet Airport",
+    "city_en": "Mount Magnet",
+    "city_pl": "Mount Magnet",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MRZ",
+    "name": "Moree Airport",
+    "city_en": "Moree",
+    "city_pl": "Moree",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MOV",
+    "name": "Moranbah Airport",
+    "city_en": "Moranbah",
+    "city_pl": "Moranbah",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MYA",
+    "name": "Moruya Airport",
+    "city_en": "Moruya",
+    "city_pl": "Moruya",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MGB",
+    "name": "Mount Gambier Airport",
+    "city_en": "Mount Gambier",
+    "city_pl": "Mount Gambier",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ONG",
+    "name": "Mornington Island Airport",
+    "city_en": "Mornington Island",
+    "city_pl": "Mornington Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MYI",
+    "name": "Murray Island Airport",
+    "city_en": "Murray Island",
+    "city_pl": "Murray Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MBH",
+    "name": "Maryborough Airport",
+    "city_en": "Maryborough",
+    "city_pl": "Maryborough",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NRA",
+    "name": "Narrandera Airport",
+    "city_en": "Narrandera",
+    "city_pl": "Narrandera",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NAA",
+    "name": "Narrabri Airport",
+    "city_en": "Narrabri",
+    "city_pl": "Narrabri",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NTN",
+    "name": "Normanton Airport",
+    "city_en": "Normanton",
+    "city_pl": "Normanton",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ZNE",
+    "name": "Newman Airport",
+    "city_en": "Newman",
+    "city_pl": "Newman",
+    "country_en": "Australia"
+  },
+  {
+    "code": "OLP",
+    "name": "Olympic Dam Airport",
+    "city_en": "Olympic Dam",
+    "city_pl": "Olympic Dam",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PUG",
+    "name": "Port Augusta Airport",
+    "city_en": "Argyle",
+    "city_pl": "Argyle",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PMK",
+    "name": "Palm Island Airport",
+    "city_en": "Palm Island",
+    "city_pl": "Palm Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PBO",
+    "name": "Paraburdoo Airport",
+    "city_en": "Paraburdoo",
+    "city_pl": "Paraburdoo",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CCK",
+    "name": "Cocos (Keeling) Islands Airport",
+    "city_en": "Cocos Keeling Island",
+    "city_pl": "Cocos Keeling Island",
+    "country_en": "Cocos (Keeling) Islands"
+  },
+  {
+    "code": "GOV",
+    "name": "Gove Airport",
+    "city_en": "Gove",
+    "city_pl": "Gove",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PKE",
+    "name": "Parkes Airport",
+    "city_en": "Parkes",
+    "city_pl": "Parkes",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PLO",
+    "name": "Port Lincoln Airport",
+    "city_en": "Port Lincoln",
+    "city_pl": "Port Lincoln",
+    "country_en": "Australia"
+  },
+  {
+    "code": "EDR",
+    "name": "Pormpuraaw Airport",
+    "city_en": "Pormpuraaw",
+    "city_pl": "Pormpuraaw",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PQQ",
+    "name": "Port Macquarie Airport",
+    "city_en": "Port Macquarie",
+    "city_pl": "Port Macquarie",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PTJ",
+    "name": "Portland Airport",
+    "city_en": "Portland",
+    "city_pl": "Portland",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ULP",
+    "name": "Quilpie Airport",
+    "city_en": "Quilpie",
+    "city_pl": "Quilpie",
+    "country_en": "Australia"
+  },
+  {
+    "code": "RAM",
+    "name": "Ramingining Airport",
+    "city_en": "Ramingining",
+    "city_pl": "Ramingining",
+    "country_en": "Australia"
+  },
+  {
+    "code": "RMA",
+    "name": "Roma Airport",
+    "city_en": "Roma",
+    "city_pl": "Roma",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SGO",
+    "name": "St George Airport",
+    "city_en": "St George",
+    "city_pl": "St George",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MJK",
+    "name": "Shark Bay Airport",
+    "city_en": "Shark Bay",
+    "city_pl": "Shark Bay",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SBR",
+    "name": "Saibai Island Airport",
+    "city_en": "Saibai Island",
+    "city_pl": "Saibai Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SRN",
+    "name": "Strahan Airport",
+    "city_en": "Strahan",
+    "city_pl": "Strahan",
+    "country_en": "Australia"
+  },
+  {
+    "code": "XTG",
+    "name": "Thargomindah Airport",
+    "city_en": "Thargomindah",
+    "city_pl": "Thargomindah",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TCA",
+    "name": "Tennant Creek Airport",
+    "city_en": "Tennant Creek",
+    "city_pl": "Tennant Creek",
+    "country_en": "Australia"
+  },
+  {
+    "code": "VCD",
+    "name": "Victoria River Downs Airport",
+    "city_en": "Victoria River Downs",
+    "city_pl": "Victoria River Downs",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SYU",
+    "name": "Warraber Island Airport",
+    "city_en": "Sue Islet",
+    "city_pl": "Sue Islet",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WNR",
+    "name": "Windorah Airport",
+    "city_en": "Windorah",
+    "city_pl": "Windorah",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WYA",
+    "name": "Whyalla Airport",
+    "city_en": "Whyalla",
+    "city_pl": "Whyalla",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WUN",
+    "name": "Wiluna Airport",
+    "city_en": "Wiluna",
+    "city_pl": "Wiluna",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WOL",
+    "name": "Wollongong Airport",
+    "city_en": "Wollongong",
+    "city_pl": "Wollongong",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WIN",
+    "name": "Winton Airport",
+    "city_en": "Winton",
+    "city_pl": "Winton",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BWT",
+    "name": "Wynyard Airport",
+    "city_en": "Burnie",
+    "city_pl": "Burnie",
+    "country_en": "Australia"
+  },
+  {
+    "code": "OKR",
+    "name": "Yorke Island Airport",
+    "city_en": "Yorke Island",
+    "city_pl": "Yorke Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "XMY",
+    "name": "Yam Island Airport",
+    "city_en": "Yam Island",
+    "city_pl": "Yam Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NAY",
+    "name": "Beijing Nanyuan Airport",
+    "city_en": "Beijing",
+    "city_pl": "Pekin",
+    "country_en": "China"
+  },
+  {
+    "code": "CIF",
+    "name": "Chifeng Airport",
+    "city_en": "Chifeng",
+    "city_pl": "Chifeng",
+    "country_en": "China"
+  },
+  {
+    "code": "CIH",
+    "name": "Changzhi Airport",
+    "city_en": "Changzhi",
+    "city_pl": "Changzhi",
+    "country_en": "China"
+  },
+  {
+    "code": "DAT",
+    "name": "Datong Airport",
+    "city_en": "Datong",
+    "city_pl": "Datong",
+    "country_en": "China"
+  },
+  {
+    "code": "HET",
+    "name": "Baita International Airport",
+    "city_en": "Hohhot",
+    "city_pl": "Hohhot",
+    "country_en": "China"
+  },
+  {
+    "code": "BAV",
+    "name": "Baotou Airport",
+    "city_en": "Baotou",
+    "city_pl": "Baotou",
+    "country_en": "China"
+  },
+  {
+    "code": "SJW",
+    "name": "Shijiazhuang Daguocun International Airport",
+    "city_en": "Shijiazhuang",
+    "city_pl": "Shijiazhuang",
+    "country_en": "China"
+  },
+  {
+    "code": "TGO",
+    "name": "Tongliao Airport",
+    "city_en": "Tongliao",
+    "city_pl": "Tongliao",
+    "country_en": "China"
+  },
+  {
+    "code": "HLH",
+    "name": "Ulanhot Airport",
+    "city_en": "Ulanhot",
+    "city_pl": "Ulanhot",
+    "country_en": "China"
+  },
+  {
+    "code": "XIL",
+    "name": "Xilinhot Airport",
+    "city_en": "Xilinhot",
+    "city_pl": "Xilinhot",
+    "country_en": "China"
+  },
+  {
+    "code": "BHY",
+    "name": "Beihai Airport",
+    "city_en": "Beihai",
+    "city_pl": "Beihai",
+    "country_en": "China"
+  },
+  {
+    "code": "CGD",
+    "name": "Changde Airport",
+    "city_en": "Changde",
+    "city_pl": "Changde",
+    "country_en": "China"
+  },
+  {
+    "code": "DYG",
+    "name": "Dayong Airport",
+    "city_en": "Dayong",
+    "city_pl": "Dayong",
+    "country_en": "China"
+  },
+  {
+    "code": "MXZ",
+    "name": "Meixian Airport",
+    "city_en": "Meixian",
+    "city_pl": "Meixian",
+    "country_en": "China"
+  },
+  {
+    "code": "ZUH",
+    "name": "Zhuhai Jinwan Airport",
+    "city_en": "Zhuhai",
+    "city_pl": "Zhuhai",
+    "country_en": "China"
+  },
+  {
+    "code": "LZH",
+    "name": "Liuzhou Bailian Airport",
+    "city_en": "Liuzhou",
+    "city_pl": "Liuzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "ZHA",
+    "name": "Zhanjiang Airport",
+    "city_en": "Zhanjiang",
+    "city_pl": "Zhanjiang",
+    "country_en": "China"
+  },
+  {
+    "code": "ENH",
+    "name": "Enshi Airport",
+    "city_en": "Enshi",
+    "city_pl": "Enshi",
+    "country_en": "China"
+  },
+  {
+    "code": "NNY",
+    "name": "Nanyang Jiangying Airport",
+    "city_en": "Nanyang",
+    "city_pl": "Nanyang",
+    "country_en": "China"
+  },
+  {
+    "code": "XFN",
+    "name": "Xiangyang Liuji Airport",
+    "city_en": "Xiangfan",
+    "city_pl": "Xiangfan",
+    "country_en": "China"
+  },
+  {
+    "code": "YIH",
+    "name": "Yichang Sanxia Airport",
+    "city_en": "Yichang",
+    "city_pl": "Yichang",
+    "country_en": "China"
+  },
+  {
+    "code": "AKA",
+    "name": "Ankang Wulipu Airport",
+    "city_en": "Ankang",
+    "city_pl": "Ankang",
+    "country_en": "China"
+  },
+  {
+    "code": "GOQ",
+    "name": "Golmud Airport",
+    "city_en": "Golmud",
+    "city_pl": "Golmud",
+    "country_en": "China"
+  },
+  {
+    "code": "HZG",
+    "name": "Hanzhong Chenggu Airport",
+    "city_en": "Hanzhong",
+    "city_pl": "Hanzhong",
+    "country_en": "China"
+  },
+  {
+    "code": "IQN",
+    "name": "Qingyang Airport",
+    "city_en": "Qingyang",
+    "city_pl": "Qingyang",
+    "country_en": "China"
+  },
+  {
+    "code": "XNN",
+    "name": "Xining Caojiabu Airport",
+    "city_en": "Xining",
+    "city_pl": "Xining",
+    "country_en": "China"
+  },
+  {
+    "code": "ENY",
+    "name": "Yan'an Ershilipu Airport",
+    "city_en": "Yan'an",
+    "city_pl": "Yan'an",
+    "country_en": "China"
+  },
+  {
+    "code": "UYN",
+    "name": "Yulin Yuyang Airport",
+    "city_en": "Yulin",
+    "city_pl": "Yulin",
+    "country_en": "China"
+  },
+  {
+    "code": "AVK",
+    "name": "Arvaikheer Airport",
+    "city_en": "Arvaikheer",
+    "city_pl": "Arvaikheer",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "LTI",
+    "name": "Altai Airport",
+    "city_en": "Altai",
+    "city_pl": "Altai",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "BYN",
+    "name": "Bayankhongor Airport",
+    "city_en": "Bayankhongor",
+    "city_pl": "Bayankhongor",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "DLZ",
+    "name": "Dalanzadgad Airport",
+    "city_en": "Dalanzadgad",
+    "city_pl": "Dalanzadgad",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "HVD",
+    "name": "Khovd Airport",
+    "city_en": "Khovd",
+    "city_pl": "Khovd",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "MXV",
+    "name": "Mörön Airport",
+    "city_en": "Muren",
+    "city_pl": "Muren",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "DIG",
+    "name": "Diqing Airport",
+    "city_en": "Shangri-La",
+    "city_pl": "Shangri-La",
+    "country_en": "China"
+  },
+  {
+    "code": "LUM",
+    "name": "Mangshi Airport",
+    "city_en": "Luxi",
+    "city_pl": "Luxi",
+    "country_en": "China"
+  },
+  {
+    "code": "SYM",
+    "name": "Pu'er Simao Airport",
+    "city_en": "Simao",
+    "city_pl": "Simao",
+    "country_en": "China"
+  },
+  {
+    "code": "ZAT",
+    "name": "Zhaotong Airport",
+    "city_en": "Zhaotong",
+    "city_pl": "Zhaotong",
+    "country_en": "China"
+  },
+  {
+    "code": "KOW",
+    "name": "Ganzhou Airport",
+    "city_en": "Ganzhou",
+    "city_pl": "Ganzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "JDZ",
+    "name": "Jingdezhen Airport",
+    "city_en": "Jingdezhen",
+    "city_pl": "Jingdezhen",
+    "country_en": "China"
+  },
+  {
+    "code": "JIU",
+    "name": "Jiujiang Lushan Airport",
+    "city_en": "Jiujiang",
+    "city_pl": "Jiujiang",
+    "country_en": "China"
+  },
+  {
+    "code": "JUZ",
+    "name": "Quzhou Airport",
+    "city_en": "Quzhou",
+    "city_pl": "Quzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "LYG",
+    "name": "Lianyungang Airport",
+    "city_en": "Lianyungang",
+    "city_pl": "Lianyungang",
+    "country_en": "China"
+  },
+  {
+    "code": "HYN",
+    "name": "Huangyan Luqiao Airport",
+    "city_en": "Huangyan",
+    "city_pl": "Huangyan",
+    "country_en": "China"
+  },
+  {
+    "code": "LYI",
+    "name": "Shubuling Airport",
+    "city_en": "Linyi",
+    "city_pl": "Linyi",
+    "country_en": "China"
+  },
+  {
+    "code": "JJN",
+    "name": "Quanzhou Jinjiang International Airport",
+    "city_en": "Quanzhou",
+    "city_pl": "Quanzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "TXN",
+    "name": "Tunxi International Airport",
+    "city_en": "Huangshan",
+    "city_pl": "Huangshan",
+    "country_en": "China"
+  },
+  {
+    "code": "WEF",
+    "name": "Weifang Airport",
+    "city_en": "Weifang",
+    "city_pl": "Weifang",
+    "country_en": "China"
+  },
+  {
+    "code": "WEH",
+    "name": "Weihai Airport",
+    "city_en": "Weihai",
+    "city_pl": "Weihai",
+    "country_en": "China"
+  },
+  {
+    "code": "WUX",
+    "name": "Sunan Shuofang International Airport",
+    "city_en": "Wuxi",
+    "city_pl": "Wuxi",
+    "country_en": "China"
+  },
+  {
+    "code": "WUS",
+    "name": "Nanping Wuyishan Airport",
+    "city_en": "Wuyishan",
+    "city_pl": "Wuyishan",
+    "country_en": "China"
+  },
+  {
+    "code": "WNZ",
+    "name": "Wenzhou Longwan International Airport",
+    "city_en": "Wenzhou",
+    "city_pl": "Wenzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "YNZ",
+    "name": "Yancheng Airport",
+    "city_en": "Yancheng",
+    "city_pl": "Yancheng",
+    "country_en": "China"
+  },
+  {
+    "code": "YIW",
+    "name": "Yiwu Airport",
+    "city_en": "Yiwu",
+    "city_pl": "Yiwu",
+    "country_en": "China"
+  },
+  {
+    "code": "HSN",
+    "name": "Zhoushan Airport",
+    "city_en": "Zhoushan",
+    "city_pl": "Zhoushan",
+    "country_en": "China"
+  },
+  {
+    "code": "BPX",
+    "name": "Qamdo Bangda Airport",
+    "city_en": "Bangda",
+    "city_pl": "Bangda",
+    "country_en": "China"
+  },
+  {
+    "code": "DAX",
+    "name": "Dachuan Airport",
+    "city_en": "Dazhou",
+    "city_pl": "Dazhou",
+    "country_en": "China"
+  },
+  {
+    "code": "GYS",
+    "name": "Guangyuan Airport",
+    "city_en": "Guangyuan",
+    "city_pl": "Guangyuan",
+    "country_en": "China"
+  },
+  {
+    "code": "LZO",
+    "name": "Luzhou Airport",
+    "city_en": "Luzhou",
+    "city_pl": "Luzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "MIG",
+    "name": "Mianyang Airport",
+    "city_en": "Mianyang",
+    "city_pl": "Mianyang",
+    "country_en": "China"
+  },
+  {
+    "code": "NAO",
+    "name": "Nanchong Airport",
+    "city_en": "Nanchong",
+    "city_pl": "Nanchong",
+    "country_en": "China"
+  },
+  {
+    "code": "LZY",
+    "name": "Nyingchi Airport",
+    "city_en": "Nyingchi",
+    "city_pl": "Nyingchi",
+    "country_en": "China"
+  },
+  {
+    "code": "WXN",
+    "name": "Wanxian Airport",
+    "city_en": "Wanxian",
+    "city_pl": "Wanxian",
+    "country_en": "China"
+  },
+  {
+    "code": "AKU",
+    "name": "Aksu Airport",
+    "city_en": "Aksu",
+    "city_pl": "Aksu",
+    "country_en": "China"
+  },
+  {
+    "code": "IQM",
+    "name": "Qiemo Yudu Airport",
+    "city_en": "Qiemo",
+    "city_pl": "Qiemo",
+    "country_en": "China"
+  },
+  {
+    "code": "KCA",
+    "name": "Kuqa Airport",
+    "city_en": "Kuqa",
+    "city_pl": "Kuqa",
+    "country_en": "China"
+  },
+  {
+    "code": "KRL",
+    "name": "Korla Airport",
+    "city_en": "Korla",
+    "city_pl": "Korla",
+    "country_en": "China"
+  },
+  {
+    "code": "KRY",
+    "name": "Karamay Airport",
+    "city_en": "Karamay",
+    "city_pl": "Karamay",
+    "country_en": "China"
+  },
+  {
+    "code": "YIN",
+    "name": "Yining Airport",
+    "city_en": "Yining",
+    "city_pl": "Yining",
+    "country_en": "China"
+  },
+  {
+    "code": "HEK",
+    "name": "Heihe Airport",
+    "city_en": "Heihe",
+    "city_pl": "Heihe",
+    "country_en": "China"
+  },
+  {
+    "code": "JMU",
+    "name": "Jiamusi Airport",
+    "city_en": "Jiamusi",
+    "city_pl": "Jiamusi",
+    "country_en": "China"
+  },
+  {
+    "code": "JNZ",
+    "name": "Jinzhou Airport",
+    "city_en": "Jinzhou",
+    "city_pl": "Jinzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "NDG",
+    "name": "Qiqihar Sanjiazi Airport",
+    "city_en": "Qiqihar",
+    "city_pl": "Qiqihar",
+    "country_en": "China"
+  },
+  {
+    "code": "YNJ",
+    "name": "Yanji Chaoyangchuan Airport",
+    "city_en": "Yanji",
+    "city_pl": "Yanji",
+    "country_en": "China"
+  },
+  {
+    "code": "WKL",
+    "name": "Waikoloa Heliport",
+    "city_en": "Waikoloa Village",
+    "city_pl": "Waikoloa Village",
+    "country_en": "United States"
+  },
+  {
+    "code": "WME",
+    "name": "Mount Keith Airport",
+    "city_en": "Mount Keith",
+    "city_pl": "Mount Keith",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LRV",
+    "name": "Los Roques Airport",
+    "city_en": "Los Roques",
+    "city_pl": "Los Roques",
+    "country_en": "Venezuela"
+  },
+  {
+    "code": "IOR",
+    "name": "Inishmore Aerodrome",
+    "city_en": "Inis Mor",
+    "city_pl": "Inis Mor",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "NNR",
+    "name": "Connemara Regional Airport",
+    "city_en": "Indreabhan",
+    "city_pl": "Indreabhan",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "GTI",
+    "name": "Rügen Airport",
+    "city_en": "Ruegen",
+    "city_pl": "Ruegen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "EZV",
+    "name": "Berezovo Airport",
+    "city_en": "Berezovo",
+    "city_pl": "Berezovo",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ORH",
+    "name": "Worcester Regional Airport",
+    "city_en": "Worcester",
+    "city_pl": "Worcester",
+    "country_en": "United States"
+  },
+  {
+    "code": "AQG",
+    "name": "Anqing Tianzhushan Airport",
+    "city_en": "Anqing",
+    "city_pl": "Anqing",
+    "country_en": "China"
+  },
+  {
+    "code": "SHP",
+    "name": "Shanhaiguan Airport",
+    "city_en": "Qinhuangdao",
+    "city_pl": "Qinhuangdao",
+    "country_en": "China"
+  },
+  {
+    "code": "YCU",
+    "name": "Yuncheng Guangong Airport",
+    "city_en": "Yuncheng",
+    "city_pl": "Yuncheng",
+    "country_en": "China"
+  },
+  {
+    "code": "JGN",
+    "name": "Jiayuguan Airport",
+    "city_en": "Jiayuguan",
+    "city_pl": "Jiayuguan",
+    "country_en": "China"
+  },
+  {
+    "code": "DDG",
+    "name": "Dandong Airport",
+    "city_en": "Dandong",
+    "city_pl": "Dandong",
+    "country_en": "China"
+  },
+  {
+    "code": "DSN",
+    "name": "Ordos Ejin Horo Airport",
+    "city_en": "Dongsheng",
+    "city_pl": "Dongsheng",
+    "country_en": "China"
+  },
+  {
+    "code": "PZI",
+    "name": "Bao'anying Airport",
+    "city_en": "Panzhihua",
+    "city_pl": "Panzhihua",
+    "country_en": "China"
+  },
+  {
+    "code": "PWT",
+    "name": "Bremerton National Airport",
+    "city_en": "Bremerton",
+    "city_pl": "Bremerton",
+    "country_en": "United States"
+  },
+  {
+    "code": "SPW",
+    "name": "Spencer Municipal Airport",
+    "city_en": "Spencer",
+    "city_pl": "Spencer",
+    "country_en": "United States"
+  },
+  {
+    "code": "JEF",
+    "name": "Jefferson City Memorial Airport",
+    "city_en": "Jefferson City",
+    "city_pl": "Jefferson City",
+    "country_en": "United States"
+  },
+  {
+    "code": "UNT",
+    "name": "Unst Airport",
+    "city_en": "Unst",
+    "city_pl": "Unst",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "PVC",
+    "name": "Provincetown Municipal Airport",
+    "city_en": "Provincetown",
+    "city_pl": "Provincetown",
+    "country_en": "United States"
+  },
+  {
+    "code": "SBH",
+    "name": "Gustaf III Airport",
+    "city_en": "Gustavia",
+    "city_pl": "Gustavia",
+    "country_en": "France"
+  },
+  {
+    "code": "KMW",
+    "name": "Kostroma Sokerkino Airport",
+    "city_en": "Kostroma",
+    "city_pl": "Kostroma",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SUI",
+    "name": "Sukhumi Dranda Airport",
+    "city_en": "Sukhumi",
+    "city_pl": "Sukhumi",
+    "country_en": "Georgia"
+  },
+  {
+    "code": "TBW",
+    "name": "Donskoye Airport",
+    "city_en": "Tambow",
+    "city_pl": "Tambow",
+    "country_en": "Russia"
+  },
+  {
+    "code": "OBN",
+    "name": "Oban Airport",
+    "city_en": "North Connel",
+    "city_pl": "North Connel",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "ERM",
+    "name": "Erechim Airport",
+    "city_en": "Erechim",
+    "city_pl": "Erechim",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CVF",
+    "name": "Courchevel Airport",
+    "city_en": "Courcheval",
+    "city_pl": "Courcheval",
+    "country_en": "France"
+  },
+  {
+    "code": "FUL",
+    "name": "Fullerton Municipal Airport",
+    "city_en": "Fullerton",
+    "city_pl": "Fullerton",
+    "country_en": "United States"
+  },
+  {
+    "code": "USA",
+    "name": "Concord-Padgett Regional Airport",
+    "city_en": "Concord",
+    "city_pl": "Concord",
+    "country_en": "United States"
+  },
+  {
+    "code": "NVI",
+    "name": "Navoi Airport",
+    "city_en": "Navoi",
+    "city_pl": "Navoi",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "QSF",
+    "name": "Ain Arnat Airport",
+    "city_en": "Setif",
+    "city_pl": "Setif",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "LRH",
+    "name": "La Rochelle-Île de Ré Airport",
+    "city_en": "La Rochelle",
+    "city_pl": "La Rochelle",
+    "country_en": "France"
+  },
+  {
+    "code": "SUN",
+    "name": "Friedman Memorial Airport",
+    "city_en": "Hailey",
+    "city_pl": "Hailey",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCW",
+    "name": "Mason City Municipal Airport",
+    "city_en": "Mason City",
+    "city_pl": "Mason City",
+    "country_en": "United States"
+  },
+  {
+    "code": "AZA",
+    "name": "Phoenix-Mesa-Gateway Airport",
+    "city_en": "Mesa",
+    "city_pl": "Mesa",
+    "country_en": "United States"
+  },
+  {
+    "code": "XAU",
+    "name": "Saúl Airport",
+    "city_en": "Saul",
+    "city_pl": "Saul",
+    "country_en": "French Guiana"
+  },
+  {
+    "code": "AKP",
+    "name": "Anaktuvuk Pass Airport",
+    "city_en": "Anaktuvuk Pass",
+    "city_pl": "Anaktuvuk Pass",
+    "country_en": "United States"
+  },
+  {
+    "code": "ANV",
+    "name": "Anvik Airport",
+    "city_en": "Anvik",
+    "city_pl": "Anvik",
+    "country_en": "United States"
+  },
+  {
+    "code": "ATK",
+    "name": "Atqasuk Edward Burnell Sr Memorial Airport",
+    "city_en": "Atqasuk",
+    "city_pl": "Atqasuk",
+    "country_en": "United States"
+  },
+  {
+    "code": "GAM",
+    "name": "Gambell Airport",
+    "city_en": "Gambell",
+    "city_pl": "Gambell",
+    "country_en": "United States"
+  },
+  {
+    "code": "HPB",
+    "name": "Hooper Bay Airport",
+    "city_en": "Hooper Bay",
+    "city_pl": "Hooper Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "KAL",
+    "name": "Kaltag Airport",
+    "city_en": "Kaltag",
+    "city_pl": "Kaltag",
+    "country_en": "United States"
+  },
+  {
+    "code": "KSM",
+    "name": "St Mary's Airport",
+    "city_en": "St Mary's",
+    "city_pl": "St Mary's",
+    "country_en": "United States"
+  },
+  {
+    "code": "KVL",
+    "name": "Kivalina Airport",
+    "city_en": "Kivalina",
+    "city_pl": "Kivalina",
+    "country_en": "United States"
+  },
+  {
+    "code": "MYU",
+    "name": "Mekoryuk Airport",
+    "city_en": "Mekoryuk",
+    "city_pl": "Mekoryuk",
+    "country_en": "United States"
+  },
+  {
+    "code": "RBY",
+    "name": "Ruby Airport",
+    "city_en": "Ruby",
+    "city_pl": "Ruby",
+    "country_en": "United States"
+  },
+  {
+    "code": "SHH",
+    "name": "Shishmaref Airport",
+    "city_en": "Shishmaref",
+    "city_pl": "Shishmaref",
+    "country_en": "United States"
+  },
+  {
+    "code": "SVA",
+    "name": "Savoonga Airport",
+    "city_en": "Savoonga",
+    "city_pl": "Savoonga",
+    "country_en": "United States"
+  },
+  {
+    "code": "WTK",
+    "name": "Noatak Airport",
+    "city_en": "Noatak",
+    "city_pl": "Noatak",
+    "country_en": "United States"
+  },
+  {
+    "code": "OMC",
+    "name": "Ormoc Airport",
+    "city_en": "Ormoc City",
+    "city_pl": "Ormoc City",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "YPX",
+    "name": "Puvirnituq Airport",
+    "city_en": "Puvirnituq",
+    "city_pl": "Puvirnituq",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YTQ",
+    "name": "Tasiujaq Airport",
+    "city_en": "Tasiujaq",
+    "city_pl": "Tasiujaq",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ARC",
+    "name": "Arctic Village Airport",
+    "city_en": "Arctic Village",
+    "city_pl": "Arctic Village",
+    "country_en": "United States"
+  },
+  {
+    "code": "QOW",
+    "name": "Sam Mbakwe International Airport",
+    "city_en": "Imo",
+    "city_pl": "Imo",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "FON",
+    "name": "Arenal Airport",
+    "city_en": "La Fortuna/San Carlos",
+    "city_pl": "La Fortuna/San Carlos",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "TMU",
+    "name": "Tambor Airport",
+    "city_en": "Nicoya",
+    "city_pl": "Nicoya",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "CYZ",
+    "name": "Cauayan Airport",
+    "city_en": "Cauayan",
+    "city_pl": "Cauayan",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "KVK",
+    "name": "Kirovsk-Apatity Airport",
+    "city_en": "Apatity",
+    "city_pl": "Apatity",
+    "country_en": "Russia"
+  },
+  {
+    "code": "GVR",
+    "name": "Coronel Altino Machado de Oliveira Airport",
+    "city_en": "Governador Valadares",
+    "city_pl": "Governador Valadares",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "KPC",
+    "name": "Port Clarence Coast Guard Station",
+    "city_en": "Port Clarence",
+    "city_pl": "Port Clarence",
+    "country_en": "United States"
+  },
+  {
+    "code": "PJA",
+    "name": "Pajala Airport",
+    "city_en": "Pajala",
+    "city_pl": "Pajala",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "QBC",
+    "name": "Bella Coola Airport",
+    "city_en": "Bella Coola",
+    "city_pl": "Bella Coola",
+    "country_en": "Canada"
+  },
+  {
+    "code": "HGR",
+    "name": "Hagerstown Regional Richard A Henson Field",
+    "city_en": "Hagerstown",
+    "city_pl": "Hagerstown",
+    "country_en": "United States"
+  },
+  {
+    "code": "ACR",
+    "name": "Araracuara Airport",
+    "city_en": "Araracuara",
+    "city_pl": "Araracuara",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "GOP",
+    "name": "Gorakhpur Airport",
+    "city_en": "Gorakhpur",
+    "city_pl": "Gorakhpur",
+    "country_en": "India"
+  },
+  {
+    "code": "SDP",
+    "name": "Sand Point Airport",
+    "city_en": "Sand Point",
+    "city_pl": "Sand Point",
+    "country_en": "United States"
+  },
+  {
+    "code": "HMI",
+    "name": "Hami Airport",
+    "city_en": "Hami",
+    "city_pl": "Hami",
+    "country_en": "China"
+  },
+  {
+    "code": "WUZ",
+    "name": "Wuzhou Changzhoudao Airport",
+    "city_en": "Wuzhou",
+    "city_pl": "Wuzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "TBH",
+    "name": "Tugdan Airport",
+    "city_en": "Romblon",
+    "city_pl": "Romblon",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "ACP",
+    "name": "Sahand Airport",
+    "city_en": "Maragheh",
+    "city_pl": "Maragheh",
+    "country_en": "Iran"
+  },
+  {
+    "code": "GBT",
+    "name": "Gorgan Airport",
+    "city_en": "Gorgan",
+    "city_pl": "Gorgan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "IIL",
+    "name": "Ilam Airport",
+    "city_en": "Ilam",
+    "city_pl": "Ilam",
+    "country_en": "Iran"
+  },
+  {
+    "code": "PFQ",
+    "name": "Parsabade Moghan Airport",
+    "city_en": "Parsabad",
+    "city_pl": "Parsabad",
+    "country_en": "Iran"
+  },
+  {
+    "code": "TCG",
+    "name": "Tacheng Airport",
+    "city_en": "Tacheng",
+    "city_pl": "Tacheng",
+    "country_en": "China"
+  },
+  {
+    "code": "MQM",
+    "name": "Mardin Airport",
+    "city_en": "Mardin",
+    "city_pl": "Mardin",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "AFS",
+    "name": "Sugraly Airport",
+    "city_en": "Zarafshan",
+    "city_pl": "Zarafshan",
+    "country_en": "Uzbekistan"
+  },
+  {
+    "code": "DRG",
+    "name": "Deering Airport",
+    "city_en": "Deering",
+    "city_pl": "Deering",
+    "country_en": "United States"
+  },
+  {
+    "code": "LEN",
+    "name": "Leon Airport",
+    "city_en": "Leon",
+    "city_pl": "Leon",
+    "country_en": "Spain"
+  },
+  {
+    "code": "RGS",
+    "name": "Burgos Airport",
+    "city_en": "Burgos",
+    "city_pl": "Burgos",
+    "country_en": "Spain"
+  },
+  {
+    "code": "EGM",
+    "name": "Sege Airport",
+    "city_en": "Sege",
+    "city_pl": "Sege",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "CQD",
+    "name": "Shahrekord Airport",
+    "city_en": "Shahre Kord",
+    "city_pl": "Shahre Kord",
+    "country_en": "Iran"
+  },
+  {
+    "code": "DHM",
+    "name": "Kangra Airport",
+    "city_en": "Kangra",
+    "city_pl": "Kangra",
+    "country_en": "India"
+  },
+  {
+    "code": "NDC",
+    "name": "Nanded Airport",
+    "city_en": "Nanded",
+    "city_pl": "Nanded",
+    "country_en": "India"
+  },
+  {
+    "code": "SLV",
+    "name": "Shimla Airport",
+    "city_en": "Shimla",
+    "city_pl": "Shimla",
+    "country_en": "India"
+  },
+  {
+    "code": "IGG",
+    "name": "Igiugig Airport",
+    "city_en": "Igiugig",
+    "city_pl": "Igiugig",
+    "country_en": "United States"
+  },
+  {
+    "code": "KNW",
+    "name": "New Stuyahok Airport",
+    "city_en": "New Stuyahok",
+    "city_pl": "New Stuyahok",
+    "country_en": "United States"
+  },
+  {
+    "code": "KVC",
+    "name": "King Cove Airport",
+    "city_en": "King Cove",
+    "city_pl": "King Cove",
+    "country_en": "United States"
+  },
+  {
+    "code": "PTH",
+    "name": "Port Heiden Airport",
+    "city_en": "Port Heiden",
+    "city_pl": "Port Heiden",
+    "country_en": "United States"
+  },
+  {
+    "code": "TOG",
+    "name": "Togiak Airport",
+    "city_en": "Togiak Village",
+    "city_pl": "Togiak Village",
+    "country_en": "United States"
+  },
+  {
+    "code": "EGN",
+    "name": "Geneina Airport",
+    "city_en": "Geneina",
+    "city_pl": "Geneina",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "LKH",
+    "name": "Long Akah Airport",
+    "city_en": "Long Akah",
+    "city_pl": "Long Akah",
+    "country_en": "Malaysia"
+  },
+  {
+    "code": "WLH",
+    "name": "Walaha Airport",
+    "city_en": "Walaha",
+    "city_pl": "Walaha",
+    "country_en": "Vanuatu"
+  },
+  {
+    "code": "CHG",
+    "name": "Chaoyang Airport",
+    "city_en": "Chaoyang",
+    "city_pl": "Chaoyang",
+    "country_en": "China"
+  },
+  {
+    "code": "UAS",
+    "name": "Buffalo Spring",
+    "city_en": "Samburu South",
+    "city_pl": "Samburu South",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "BHG",
+    "name": "Brus Laguna Airport",
+    "city_en": "Brus Laguna",
+    "city_pl": "Brus Laguna",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "YVB",
+    "name": "Bonaventure Airport",
+    "city_en": "Bonaventure",
+    "city_pl": "Bonaventure",
+    "country_en": "Canada"
+  },
+  {
+    "code": "SKT",
+    "name": "Sialkot Airport",
+    "city_en": "Sialkot",
+    "city_pl": "Sialkot",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "PDP",
+    "name": "Capitan Corbeta CA Curbelo International Airport",
+    "city_en": "Punta del Este",
+    "city_pl": "Punta del Este",
+    "country_en": "Uruguay"
+  },
+  {
+    "code": "WVB",
+    "name": "Walvis Bay Airport",
+    "city_en": "Walvis Bay",
+    "city_pl": "Walvis Bay",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "MPA",
+    "name": "Katima Mulilo Airport",
+    "city_en": "Mpacha",
+    "city_pl": "Mpacha",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "AOE",
+    "name": "Anadolu Airport",
+    "city_en": "Eskissehir",
+    "city_pl": "Eskissehir",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "CKZ",
+    "name": "Çanakkale Airport",
+    "city_en": "Canakkale",
+    "city_pl": "Canakkale",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "MSR",
+    "name": "Muş Airport",
+    "city_en": "Mus",
+    "city_pl": "Mus",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "NOP",
+    "name": "Sinop Airport",
+    "city_en": "Sinop",
+    "city_pl": "Sinop",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "TEQ",
+    "name": "Tekirdağ Çorlu Airport",
+    "city_en": "Çorlu",
+    "city_pl": "Çorlu",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "YEI",
+    "name": "Bursa Yenişehir Airport",
+    "city_en": "Yenisehir",
+    "city_pl": "Yenisehir",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "LSS",
+    "name": "Terre-de-Haut Airport",
+    "city_en": "Les Saintes",
+    "city_pl": "Les Saintes",
+    "country_en": "Guadeloupe"
+  },
+  {
+    "code": "KMV",
+    "name": "Kalay Airport",
+    "city_en": "Kalemyo",
+    "city_pl": "Kalemyo",
+    "country_en": "Myanmar"
+  },
+  {
+    "code": "VQS",
+    "name": "Vieques Airport",
+    "city_en": "Vieques Island",
+    "city_pl": "Vieques Island",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "YIF",
+    "name": "St Augustin Airport",
+    "city_en": "St-Augustin",
+    "city_pl": "St-Augustin",
+    "country_en": "Canada"
+  },
+  {
+    "code": "HDM",
+    "name": "Hamadan Airport",
+    "city_en": "Hamadan",
+    "city_pl": "Hamadan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "MRQ",
+    "name": "Marinduque Airport",
+    "city_en": "Gasan",
+    "city_pl": "Gasan",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "GFN",
+    "name": "Grafton Airport",
+    "city_en": "Grafton",
+    "city_pl": "Grafton",
+    "country_en": "Australia"
+  },
+  {
+    "code": "OAG",
+    "name": "Orange Airport",
+    "city_en": "Orange",
+    "city_pl": "Orange",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TRO",
+    "name": "Taree Airport",
+    "city_en": "Taree",
+    "city_pl": "Taree",
+    "country_en": "Australia"
+  },
+  {
+    "code": "COQ",
+    "name": "Choibalsan Airport",
+    "city_en": "Choibalsan",
+    "city_pl": "Choibalsan",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "HOH",
+    "name": "Hohenems-Dornbirn Airport",
+    "city_en": "Hohenems",
+    "city_pl": "Hohenems",
+    "country_en": "Austria"
+  },
+  {
+    "code": "ESC",
+    "name": "Delta County Airport",
+    "city_en": "Escanaba",
+    "city_pl": "Escanaba",
+    "country_en": "United States"
+  },
+  {
+    "code": "YAK",
+    "name": "Yakutat Airport",
+    "city_en": "Yakutat",
+    "city_pl": "Yakutat",
+    "country_en": "United States"
+  },
+  {
+    "code": "GUL",
+    "name": "Goulburn Airport",
+    "city_en": "Goulburn",
+    "city_pl": "Goulburn",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CES",
+    "name": "Cessnock Airport",
+    "city_en": "Cessnock",
+    "city_pl": "Cessnock",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NSO",
+    "name": "Scone Airport",
+    "city_en": "Scone",
+    "city_pl": "Scone",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DGE",
+    "name": "Mudgee Airport",
+    "city_en": "Mudgee",
+    "city_pl": "Mudgee",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MTL",
+    "name": "Maitland Airport",
+    "city_en": "Maitland",
+    "city_pl": "Maitland",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CPX",
+    "name": "Benjamin Rivera Noriega Airport",
+    "city_en": "Culebra Island",
+    "city_pl": "Culebra Island",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "MWA",
+    "name": "Williamson County Regional Airport",
+    "city_en": "Marion",
+    "city_pl": "Marion",
+    "country_en": "United States"
+  },
+  {
+    "code": "OCN",
+    "name": "Oceanside Municipal Airport",
+    "city_en": "Fraser Island",
+    "city_pl": "Fraser Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KIK",
+    "name": "Kirkuk Air Base",
+    "city_en": "Kirkuk",
+    "city_pl": "Kirkuk",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "XJD",
+    "name": "Al Udeid Air Base",
+    "city_en": "Doha",
+    "city_pl": "Ad-Dauha",
+    "country_en": "Qatar"
+  },
+  {
+    "code": "GBZ",
+    "name": "Great Barrier Aerodrome",
+    "city_en": "Claris",
+    "city_pl": "Claris",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "IMT",
+    "name": "Ford Airport",
+    "city_en": "Iron Mountain",
+    "city_pl": "Iron Mountain",
+    "country_en": "United States"
+  },
+  {
+    "code": "AET",
+    "name": "Allakaket Airport",
+    "city_en": "Allakaket",
+    "city_pl": "Allakaket",
+    "country_en": "United States"
+  },
+  {
+    "code": "MGC",
+    "name": "Michigan City Municipal Airport",
+    "city_en": "Michigan City",
+    "city_pl": "Michigan City",
+    "country_en": "United States"
+  },
+  {
+    "code": "SWD",
+    "name": "Seward Airport",
+    "city_en": "Seward",
+    "city_pl": "Seward",
+    "country_en": "United States"
+  },
+  {
+    "code": "GRM",
+    "name": "Grand Marais Cook County Airport",
+    "city_en": "Grand Marais",
+    "city_pl": "Grand Marais",
+    "country_en": "United States"
+  },
+  {
+    "code": "AUW",
+    "name": "Wausau Downtown Airport",
+    "city_en": "Wausau",
+    "city_pl": "Wausau",
+    "country_en": "United States"
+  },
+  {
+    "code": "MYP",
+    "name": "Mary Airport",
+    "city_en": "Mary",
+    "city_pl": "Mary",
+    "country_en": "Turkmenistan"
+  },
+  {
+    "code": "MVA",
+    "name": "Reykjahlíð Airport",
+    "city_en": "Myvatn",
+    "city_pl": "Myvatn",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "QSA",
+    "name": "Sabadell Airport",
+    "city_en": "Sabadell",
+    "city_pl": "Sabadell",
+    "country_en": "Spain"
+  },
+  {
+    "code": "WSY",
+    "name": "Whitsunday Island Airport",
+    "city_en": "Airlie Beach",
+    "city_pl": "Airlie Beach",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MIE",
+    "name": "Delaware County Johnson Field",
+    "city_en": "Muncie",
+    "city_pl": "Muncie",
+    "country_en": "United States"
+  },
+  {
+    "code": "LAF",
+    "name": "Purdue University Airport",
+    "city_en": "Lafayette",
+    "city_pl": "Lafayette",
+    "country_en": "United States"
+  },
+  {
+    "code": "VGT",
+    "name": "North Las Vegas Airport",
+    "city_en": "Las Vegas",
+    "city_pl": "Las Vegas",
+    "country_en": "United States"
+  },
+  {
+    "code": "ENW",
+    "name": "Kenosha Regional Airport",
+    "city_en": "Kenosha",
+    "city_pl": "Kenosha",
+    "country_en": "United States"
+  },
+  {
+    "code": "MTJ",
+    "name": "Montrose Regional Airport",
+    "city_en": "Montrose CO",
+    "city_pl": "Montrose CO",
+    "country_en": "United States"
+  },
+  {
+    "code": "RIW",
+    "name": "Riverton Regional Airport",
+    "city_en": "Riverton WY",
+    "city_pl": "Riverton WY",
+    "country_en": "United States"
+  },
+  {
+    "code": "PDT",
+    "name": "Eastern Oregon Regional At Pendleton Airport",
+    "city_en": "Pendleton",
+    "city_pl": "Pendleton",
+    "country_en": "United States"
+  },
+  {
+    "code": "LYM",
+    "name": "Lympne Airport",
+    "city_en": "Lympne",
+    "city_pl": "Lympne",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "PKH",
+    "name": "Porto Cheli Airport",
+    "city_en": "Porto Heli",
+    "city_pl": "Porto Heli",
+    "country_en": "Greece"
+  },
+  {
+    "code": "KTR",
+    "name": "Tindal Airport",
+    "city_en": "Katherine",
+    "city_pl": "Katherine",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NOA",
+    "name": "Nowra Airport",
+    "city_en": "Nowra",
+    "city_pl": "Nowra",
+    "country_en": "Australia"
+  },
+  {
+    "code": "UCK",
+    "name": "Lutsk Airport",
+    "city_en": "Lutsk",
+    "city_pl": "Lutsk",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "CEJ",
+    "name": "Chernihiv Shestovitsa Airport",
+    "city_en": "Chernigov",
+    "city_pl": "Chernigov",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "BQT",
+    "name": "Brest Airport",
+    "city_en": "Brest",
+    "city_pl": "Brest",
+    "country_en": "Belarus"
+  },
+  {
+    "code": "OSH",
+    "name": "Wittman Regional Airport",
+    "city_en": "Oshkosh",
+    "city_pl": "Oshkosh",
+    "country_en": "United States"
+  },
+  {
+    "code": "AGE",
+    "name": "Wangerooge Airport",
+    "city_en": "Wangerooge",
+    "city_pl": "Wangerooge",
+    "country_en": "Germany"
+  },
+  {
+    "code": "BXG",
+    "name": "Bendigo Airport",
+    "city_en": "Bendigo",
+    "city_pl": "Bendigo",
+    "country_en": "Australia"
+  },
+  {
+    "code": "EAT",
+    "name": "Pangborn Memorial Airport",
+    "city_en": "Wenatchee",
+    "city_pl": "Wenatchee",
+    "country_en": "United States"
+  },
+  {
+    "code": "ARE",
+    "name": "Antonio Nery Juarbe Pol Airport",
+    "city_en": "Arecibo",
+    "city_pl": "Arecibo",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "RIN",
+    "name": "Ringi Cove Airport",
+    "city_en": "Ringi Cove",
+    "city_pl": "Ringi Cove",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "KCK",
+    "name": "Kirensk Airport",
+    "city_en": "Kirensk",
+    "city_pl": "Kirensk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "UKX",
+    "name": "Ust-Kut Airport",
+    "city_en": "Ust-Kut",
+    "city_pl": "Ust-Kut",
+    "country_en": "Russia"
+  },
+  {
+    "code": "RMT",
+    "name": "Rimatara Airport",
+    "city_en": "Rimatara",
+    "city_pl": "Rimatara",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "QLS",
+    "name": "Lausanne-Blécherette Airport",
+    "city_en": "Lausanne",
+    "city_pl": "Lausanne",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "ZJI",
+    "name": "Locarno Airport",
+    "city_en": "Locarno",
+    "city_pl": "Locarno",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "QNC",
+    "name": "Neuchatel Airport",
+    "city_en": "Neuchatel",
+    "city_pl": "Neuchatel",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "TGK",
+    "name": "Taganrog Yuzhny Airport",
+    "city_en": "Taganrog",
+    "city_pl": "Taganrog",
+    "country_en": "Russia"
+  },
+  {
+    "code": "GDZ",
+    "name": "Gelendzhik Airport",
+    "city_en": "Gelendzhik",
+    "city_pl": "Gelendzhik",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ZIA",
+    "name": "Zhukovsky International Airport",
+    "city_en": "Ramenskoe",
+    "city_pl": "Ramenskoe",
+    "country_en": "Russia"
+  },
+  {
+    "code": "IAR",
+    "name": "Tunoshna Airport",
+    "city_en": "Yaroslavl",
+    "city_pl": "Yaroslavl",
+    "country_en": "Russia"
+  },
+  {
+    "code": "OHE",
+    "name": "Gu-Lian Airport",
+    "city_en": "Mohe County",
+    "city_pl": "Mohe County",
+    "country_en": "China"
+  },
+  {
+    "code": "JNG",
+    "name": "Jining Qufu Airport",
+    "city_en": "Jining",
+    "city_pl": "Jining",
+    "country_en": "China"
+  },
+  {
+    "code": "DRK",
+    "name": "Drake Bay Airport",
+    "city_en": "Puntarenas",
+    "city_pl": "Puntarenas",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "AAT",
+    "name": "Altay Air Base",
+    "city_en": "Altay",
+    "city_pl": "Altay",
+    "country_en": "China"
+  },
+  {
+    "code": "TZL",
+    "name": "Tuzla International Airport",
+    "city_en": "Null",
+    "city_pl": "Null",
+    "country_en": "Bosnia and Herzegovina"
+  },
+  {
+    "code": "FWH",
+    "name": "NAS Fort Worth JRB/Carswell Field",
+    "city_en": "Dallas",
+    "city_pl": "Dallas",
+    "country_en": "United States"
+  },
+  {
+    "code": "NYT",
+    "name": "Naypyidaw Airport",
+    "city_en": "Naypyidaw",
+    "city_pl": "Naypyidaw",
+    "country_en": "Burma"
+  },
+  {
+    "code": "VBP",
+    "name": "Bokpyinn Airport",
+    "city_en": "Bokepyin",
+    "city_pl": "Bokepyin",
+    "country_en": "Burma"
+  },
+  {
+    "code": "NZH",
+    "name": "Manzhouli Xijiao Airport",
+    "city_en": "Manzhouli",
+    "city_pl": "Manzhouli",
+    "country_en": "China"
+  },
+  {
+    "code": "WUA",
+    "name": "Wuhai Airport",
+    "city_en": "Wuhai",
+    "city_pl": "Wuhai",
+    "country_en": "China"
+  },
+  {
+    "code": "GYY",
+    "name": "Gary Chicago International Airport",
+    "city_en": "Gary",
+    "city_pl": "Gary",
+    "country_en": "United States"
+  },
+  {
+    "code": "BRD",
+    "name": "Brainerd Lakes Regional Airport",
+    "city_en": "Brainerd",
+    "city_pl": "Brainerd",
+    "country_en": "United States"
+  },
+  {
+    "code": "LWB",
+    "name": "Greenbrier Valley Airport",
+    "city_en": "Lewisburg",
+    "city_pl": "Lewisburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "PGV",
+    "name": "Pitt Greenville Airport",
+    "city_en": "Greenville",
+    "city_pl": "Greenville",
+    "country_en": "United States"
+  },
+  {
+    "code": "CYF",
+    "name": "Chefornak Airport",
+    "city_en": "Chefornak",
+    "city_pl": "Chefornak",
+    "country_en": "United States"
+  },
+  {
+    "code": "OXR",
+    "name": "Oxnard Airport",
+    "city_en": "Oxnard",
+    "city_pl": "Oxnard",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKG",
+    "name": "Branson Airport",
+    "city_en": "Branson",
+    "city_pl": "Branson",
+    "country_en": "United States"
+  },
+  {
+    "code": "TEN",
+    "name": "Tongren Fenghuang Airport",
+    "city_en": "Tongren",
+    "city_pl": "Tongren",
+    "country_en": "China"
+  },
+  {
+    "code": "JGS",
+    "name": "Jinggangshan Airport",
+    "city_en": "Jian",
+    "city_pl": "Jian",
+    "country_en": "China"
+  },
+  {
+    "code": "NIU",
+    "name": "Naiu Airport",
+    "city_en": "Niau",
+    "city_pl": "Niau",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "SCH",
+    "name": "Schenectady County Airport",
+    "city_en": "Scotia NY",
+    "city_pl": "Scotia NY",
+    "country_en": "United States"
+  },
+  {
+    "code": "NBC",
+    "name": "Begishevo Airport",
+    "city_en": "Nizhnekamsk",
+    "city_pl": "Nizhnekamsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "QRW",
+    "name": "Warri Airport",
+    "city_en": "Osubi",
+    "city_pl": "Osubi",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "IAO",
+    "name": "Siargao Airport",
+    "city_en": "Siargao",
+    "city_pl": "Siargao",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "LGO",
+    "name": "Langeoog Airport",
+    "city_en": "Langeoog",
+    "city_pl": "Langeoog",
+    "country_en": "Germany"
+  },
+  {
+    "code": "NLP",
+    "name": "Nelspruit Airport",
+    "city_en": "Nelspruit",
+    "city_pl": "Nelspruit",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "CKC",
+    "name": "Cherkasy International Airport",
+    "city_en": "Cherkassy",
+    "city_pl": "Cherkassy",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "UST",
+    "name": "Northeast Florida Regional Airport",
+    "city_en": "St. Augustine Airport",
+    "city_pl": "St. Augustine Airport",
+    "country_en": "United States"
+  },
+  {
+    "code": "NLV",
+    "name": "Mykolaiv International Airport",
+    "city_en": "Nikolayev",
+    "city_pl": "Nikolayev",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "RHP",
+    "name": "Ramechhap Airport",
+    "city_en": "Ramechhap",
+    "city_pl": "Ramechhap",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "STS",
+    "name": "Charles M. Schulz Sonoma County Airport",
+    "city_en": "Santa Rosa",
+    "city_pl": "Santa Rosa",
+    "country_en": "United States"
+  },
+  {
+    "code": "ISM",
+    "name": "Kissimmee Gateway Airport",
+    "city_en": "Kissimmee",
+    "city_pl": "Kissimmee",
+    "country_en": "United States"
+  },
+  {
+    "code": "LCQ",
+    "name": "Lake City Gateway Airport",
+    "city_en": "Lake City",
+    "city_pl": "Lake City",
+    "country_en": "United States"
+  },
+  {
+    "code": "LGU",
+    "name": "Logan-Cache Airport",
+    "city_en": "Logan",
+    "city_pl": "Logan",
+    "country_en": "United States"
+  },
+  {
+    "code": "BMC",
+    "name": "Brigham City Regional Airport",
+    "city_en": "Brigham City",
+    "city_pl": "Brigham City",
+    "country_en": "United States"
+  },
+  {
+    "code": "ASE",
+    "name": "Aspen-Pitkin Co/Sardy Field",
+    "city_en": "Aspen",
+    "city_pl": "Aspen",
+    "country_en": "United States"
+  },
+  {
+    "code": "ULV",
+    "name": "Ulyanovsk Baratayevka Airport",
+    "city_en": "Ulyanovsk",
+    "city_pl": "Ulyanovsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ERV",
+    "name": "Kerrville Municipal Louis Schreiner Field",
+    "city_en": "Kerrville",
+    "city_pl": "Kerrville",
+    "country_en": "United States"
+  },
+  {
+    "code": "GED",
+    "name": "Sussex County Airport",
+    "city_en": "Georgetown",
+    "city_pl": "Georgetown",
+    "country_en": "United States"
+  },
+  {
+    "code": "ZSW",
+    "name": "Prince Rupert/Seal Cove Seaplane Base",
+    "city_en": "Prince Rupert",
+    "city_pl": "Prince Rupert",
+    "country_en": "Canada"
+  },
+  {
+    "code": "GBD",
+    "name": "Great Bend Municipal Airport",
+    "city_en": "Great Bend",
+    "city_pl": "Great Bend",
+    "country_en": "United States"
+  },
+  {
+    "code": "HYS",
+    "name": "Hays Regional Airport",
+    "city_en": "Hays",
+    "city_pl": "Hays",
+    "country_en": "United States"
+  },
+  {
+    "code": "SUS",
+    "name": "Spirit of St Louis Airport",
+    "city_en": "Null",
+    "city_pl": "Null",
+    "country_en": "United States"
+  },
+  {
+    "code": "LYU",
+    "name": "Ely Municipal Airport",
+    "city_en": "Ely",
+    "city_pl": "Ely",
+    "country_en": "United States"
+  },
+  {
+    "code": "GPZ",
+    "name": "Grand Rapids Itasca Co-Gordon Newstrom field",
+    "city_en": "Grand Rapids MN",
+    "city_pl": "Grand Rapids MN",
+    "country_en": "United States"
+  },
+  {
+    "code": "TVF",
+    "name": "Thief River Falls Regional Airport",
+    "city_en": "Thief River Falls",
+    "city_pl": "Thief River Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "EGV",
+    "name": "Eagle River Union Airport",
+    "city_en": "Eagle River",
+    "city_pl": "Eagle River",
+    "country_en": "United States"
+  },
+  {
+    "code": "ARV",
+    "name": "Lakeland-Noble F. Lee Memorial field",
+    "city_en": "Minocqua - Woodruff",
+    "city_pl": "Minocqua - Woodruff",
+    "country_en": "United States"
+  },
+  {
+    "code": "YBV",
+    "name": "Berens River Airport",
+    "city_en": "Berens River",
+    "city_pl": "Berens River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "AVX",
+    "name": "Catalina Airport",
+    "city_en": "Catalina Island",
+    "city_pl": "Catalina Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "MHV",
+    "name": "Mojave Airport",
+    "city_en": "Mojave",
+    "city_pl": "Mojave",
+    "country_en": "United States"
+  },
+  {
+    "code": "ZIN",
+    "name": "Interlaken Air Base",
+    "city_en": "Interlaken",
+    "city_pl": "Interlaken",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "INQ",
+    "name": "Inisheer Aerodrome",
+    "city_en": "Inisheer",
+    "city_pl": "Inisheer",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "SWT",
+    "name": "Strezhevoy Airport",
+    "city_en": "Strezhevoy",
+    "city_pl": "Strezhevoy",
+    "country_en": "Russia"
+  },
+  {
+    "code": "HUT",
+    "name": "Hutchinson Municipal Airport",
+    "city_en": "Hutchinson",
+    "city_pl": "Hutchinson",
+    "country_en": "United States"
+  },
+  {
+    "code": "OAI",
+    "name": "Bagram Air Base",
+    "city_en": "Kabul",
+    "city_pl": "Kabul",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "AKH",
+    "name": "Prince Sultan Air Base",
+    "city_en": "Al Kharj",
+    "city_pl": "Al Kharj",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "STJ",
+    "name": "Rosecrans Memorial Airport",
+    "city_en": "Rosecrans",
+    "city_pl": "Rosecrans",
+    "country_en": "United States"
+  },
+  {
+    "code": "VOK",
+    "name": "Volk Field",
+    "city_en": "Camp Douglas",
+    "city_pl": "Camp Douglas",
+    "country_en": "United States"
+  },
+  {
+    "code": "GUC",
+    "name": "Gunnison Crested Butte Regional Airport",
+    "city_en": "Gunnison",
+    "city_pl": "Gunnison",
+    "country_en": "United States"
+  },
+  {
+    "code": "SIA",
+    "name": "Xi'an Xiguan Airport",
+    "city_en": "Xi\\\\'AN",
+    "city_pl": "Xi\\\\'AN",
+    "country_en": "China"
+  },
+  {
+    "code": "TOA",
+    "name": "Zamperini Field",
+    "city_en": "Torrance",
+    "city_pl": "Torrance",
+    "country_en": "United States"
+  },
+  {
+    "code": "MBL",
+    "name": "Manistee Co Blacker Airport",
+    "city_en": "Manistee",
+    "city_pl": "Manistee",
+    "country_en": "United States"
+  },
+  {
+    "code": "PGD",
+    "name": "Charlotte County Airport",
+    "city_en": "Punta Gorda",
+    "city_pl": "Punta Gorda",
+    "country_en": "United States"
+  },
+  {
+    "code": "WFK",
+    "name": "Northern Aroostook Regional Airport",
+    "city_en": "Frenchville",
+    "city_pl": "Frenchville",
+    "country_en": "United States"
+  },
+  {
+    "code": "JHW",
+    "name": "Chautauqua County-Jamestown Airport",
+    "city_en": "Jamestown",
+    "city_pl": "Jamestown",
+    "country_en": "United States"
+  },
+  {
+    "code": "YTM",
+    "name": "La Macaza / Mont-Tremblant International Inc Airport",
+    "city_en": "Mont-Tremblant",
+    "city_pl": "Mont-Tremblant",
+    "country_en": "Canada"
+  },
+  {
+    "code": "SME",
+    "name": "Lake Cumberland Regional Airport",
+    "city_en": "Somerset",
+    "city_pl": "Somerset",
+    "country_en": "United States"
+  },
+  {
+    "code": "SHD",
+    "name": "Shenandoah Valley Regional Airport",
+    "city_en": "Weyers Cave",
+    "city_pl": "Weyers Cave",
+    "country_en": "United States"
+  },
+  {
+    "code": "DVL",
+    "name": "Devils Lake Regional Airport",
+    "city_en": "Devils Lake",
+    "city_pl": "Devils Lake",
+    "country_en": "United States"
+  },
+  {
+    "code": "DIK",
+    "name": "Dickinson Theodore Roosevelt Regional Airport",
+    "city_en": "Dickinson",
+    "city_pl": "Dickinson",
+    "country_en": "United States"
+  },
+  {
+    "code": "SDY",
+    "name": "Sidney - Richland Regional Airport",
+    "city_en": "Sidney",
+    "city_pl": "Sidney",
+    "country_en": "United States"
+  },
+  {
+    "code": "CDR",
+    "name": "Chadron Municipal Airport",
+    "city_en": "Chadron",
+    "city_pl": "Chadron",
+    "country_en": "United States"
+  },
+  {
+    "code": "AIA",
+    "name": "Alliance Municipal Airport",
+    "city_en": "Alliance",
+    "city_pl": "Alliance",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCK",
+    "name": "Mc Cook Ben Nelson Regional Airport",
+    "city_en": "McCook",
+    "city_pl": "McCook",
+    "country_en": "United States"
+  },
+  {
+    "code": "MTH",
+    "name": "The Florida Keys Marathon Airport",
+    "city_en": "Marathon",
+    "city_pl": "Marathon",
+    "country_en": "United States"
+  },
+  {
+    "code": "GDV",
+    "name": "Dawson Community Airport",
+    "city_en": "Glendive",
+    "city_pl": "Glendive",
+    "country_en": "United States"
+  },
+  {
+    "code": "OLF",
+    "name": "L M Clayton Airport",
+    "city_en": "Wolf Point",
+    "city_pl": "Wolf Point",
+    "country_en": "United States"
+  },
+  {
+    "code": "WYS",
+    "name": "Yellowstone Airport",
+    "city_en": "West Yellowstone",
+    "city_pl": "West Yellowstone",
+    "country_en": "United States"
+  },
+  {
+    "code": "ALS",
+    "name": "San Luis Valley Regional Bergman Field",
+    "city_en": "Alamosa",
+    "city_pl": "Alamosa",
+    "country_en": "United States"
+  },
+  {
+    "code": "CNY",
+    "name": "Canyonlands Field",
+    "city_en": "Moab",
+    "city_pl": "Moab",
+    "country_en": "United States"
+  },
+  {
+    "code": "ELY",
+    "name": "Ely Airport Yelland Field",
+    "city_en": "Ely",
+    "city_pl": "Ely",
+    "country_en": "United States"
+  },
+  {
+    "code": "VEL",
+    "name": "Vernal Regional Airport",
+    "city_en": "Vernal",
+    "city_pl": "Vernal",
+    "country_en": "United States"
+  },
+  {
+    "code": "RUI",
+    "name": "Sierra Blanca Regional Airport",
+    "city_en": "Ruidoso",
+    "city_pl": "Ruidoso",
+    "country_en": "United States"
+  },
+  {
+    "code": "SOW",
+    "name": "Show Low Regional Airport",
+    "city_en": "Show Low",
+    "city_pl": "Show Low",
+    "country_en": "United States"
+  },
+  {
+    "code": "MYL",
+    "name": "McCall Municipal Airport",
+    "city_en": "McCall",
+    "city_pl": "McCall",
+    "country_en": "United States"
+  },
+  {
+    "code": "SMN",
+    "name": "Lemhi County Airport",
+    "city_en": "Salmon",
+    "city_pl": "Salmon",
+    "country_en": "United States"
+  },
+  {
+    "code": "MMH",
+    "name": "Mammoth Yosemite Airport",
+    "city_en": "Mammoth Lakes",
+    "city_pl": "Mammoth Lakes",
+    "country_en": "United States"
+  },
+  {
+    "code": "FRD",
+    "name": "Friday Harbor Airport",
+    "city_en": "Friday Harbor",
+    "city_pl": "Friday Harbor",
+    "country_en": "United States"
+  },
+  {
+    "code": "ESD",
+    "name": "Orcas Island Airport",
+    "city_en": "Eastsound",
+    "city_pl": "Eastsound",
+    "country_en": "United States"
+  },
+  {
+    "code": "AST",
+    "name": "Astoria Regional Airport",
+    "city_en": "Astoria",
+    "city_pl": "Astoria",
+    "country_en": "United States"
+  },
+  {
+    "code": "ONP",
+    "name": "Newport Municipal Airport",
+    "city_en": "Newport",
+    "city_pl": "Newport",
+    "country_en": "United States"
+  },
+  {
+    "code": "EMK",
+    "name": "Emmonak Airport",
+    "city_en": "Emmonak",
+    "city_pl": "Emmonak",
+    "country_en": "United States"
+  },
+  {
+    "code": "UNK",
+    "name": "Unalakleet Airport",
+    "city_en": "Unalakleet",
+    "city_pl": "Unalakleet",
+    "country_en": "United States"
+  },
+  {
+    "code": "UUK",
+    "name": "Ugnu-Kuparuk Airport",
+    "city_en": "Kuparuk",
+    "city_pl": "Kuparuk",
+    "country_en": "United States"
+  },
+  {
+    "code": "SHX",
+    "name": "Shageluk Airport",
+    "city_en": "Shageluk",
+    "city_pl": "Shageluk",
+    "country_en": "United States"
+  },
+  {
+    "code": "CHU",
+    "name": "Chuathbaluk Airport",
+    "city_en": "Chuathbaluk",
+    "city_pl": "Chuathbaluk",
+    "country_en": "United States"
+  },
+  {
+    "code": "NUI",
+    "name": "Nuiqsut Airport",
+    "city_en": "Nuiqsut",
+    "city_pl": "Nuiqsut",
+    "country_en": "United States"
+  },
+  {
+    "code": "EEK",
+    "name": "Eek Airport",
+    "city_en": "Eek",
+    "city_pl": "Eek",
+    "country_en": "United States"
+  },
+  {
+    "code": "KUK",
+    "name": "Kasigluk Airport",
+    "city_en": "Kasigluk",
+    "city_pl": "Kasigluk",
+    "country_en": "United States"
+  },
+  {
+    "code": "KWT",
+    "name": "Kwethluk Airport",
+    "city_en": "Kwethluk",
+    "city_pl": "Kwethluk",
+    "country_en": "United States"
+  },
+  {
+    "code": "KWK",
+    "name": "Kwigillingok Airport",
+    "city_en": "Kwigillingok",
+    "city_pl": "Kwigillingok",
+    "country_en": "United States"
+  },
+  {
+    "code": "MLL",
+    "name": "Marshall Don Hunter Sr Airport",
+    "city_en": "Marshall",
+    "city_pl": "Marshall",
+    "country_en": "United States"
+  },
+  {
+    "code": "RSH",
+    "name": "Russian Mission Airport",
+    "city_en": "Russian Mission",
+    "city_pl": "Russian Mission",
+    "country_en": "United States"
+  },
+  {
+    "code": "KGK",
+    "name": "Koliganek Airport",
+    "city_en": "Koliganek",
+    "city_pl": "Koliganek",
+    "country_en": "United States"
+  },
+  {
+    "code": "KMO",
+    "name": "Manokotak Airport",
+    "city_en": "Manokotak",
+    "city_pl": "Manokotak",
+    "country_en": "United States"
+  },
+  {
+    "code": "CIK",
+    "name": "Chalkyitsik Airport",
+    "city_en": "Chalkyitsik",
+    "city_pl": "Chalkyitsik",
+    "country_en": "United States"
+  },
+  {
+    "code": "EAA",
+    "name": "Eagle Airport",
+    "city_en": "Eagle",
+    "city_pl": "Eagle",
+    "country_en": "United States"
+  },
+  {
+    "code": "HUS",
+    "name": "Hughes Airport",
+    "city_en": "Hughes",
+    "city_pl": "Hughes",
+    "country_en": "United States"
+  },
+  {
+    "code": "HSL",
+    "name": "Huslia Airport",
+    "city_en": "Huslia",
+    "city_pl": "Huslia",
+    "country_en": "United States"
+  },
+  {
+    "code": "NUL",
+    "name": "Nulato Airport",
+    "city_en": "Nulato",
+    "city_pl": "Nulato",
+    "country_en": "United States"
+  },
+  {
+    "code": "VEE",
+    "name": "Venetie Airport",
+    "city_en": "Venetie",
+    "city_pl": "Venetie",
+    "country_en": "United States"
+  },
+  {
+    "code": "WBQ",
+    "name": "Beaver Airport",
+    "city_en": "Beaver",
+    "city_pl": "Beaver",
+    "country_en": "United States"
+  },
+  {
+    "code": "CEM",
+    "name": "Central Airport",
+    "city_en": "Central",
+    "city_pl": "Central",
+    "country_en": "United States"
+  },
+  {
+    "code": "SHG",
+    "name": "Shungnak Airport",
+    "city_en": "Shungnak",
+    "city_pl": "Shungnak",
+    "country_en": "United States"
+  },
+  {
+    "code": "IYK",
+    "name": "Inyokern Airport",
+    "city_en": "Inyokern",
+    "city_pl": "Inyokern",
+    "country_en": "United States"
+  },
+  {
+    "code": "VIS",
+    "name": "Visalia Municipal Airport",
+    "city_en": "Visalia",
+    "city_pl": "Visalia",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCE",
+    "name": "Merced Regional Macready Field",
+    "city_en": "Merced",
+    "city_pl": "Merced",
+    "country_en": "United States"
+  },
+  {
+    "code": "CYR",
+    "name": "Laguna de Los Patos International Airport",
+    "city_en": "Colonia",
+    "city_pl": "Colonia",
+    "country_en": "Uruguay"
+  },
+  {
+    "code": "CPQ",
+    "name": "Amarais Airport",
+    "city_en": "Campinas",
+    "city_pl": "Campinas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GYR",
+    "name": "Phoenix Goodyear Airport",
+    "city_en": "Goodyear",
+    "city_pl": "Goodyear",
+    "country_en": "United States"
+  },
+  {
+    "code": "TWB",
+    "name": "Toowoomba Airport",
+    "city_en": "Toowoomba",
+    "city_pl": "Toowoomba",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BBL",
+    "name": "Ballera Airport",
+    "city_en": "Ballera",
+    "city_pl": "Ballera",
+    "country_en": "Australia"
+  },
+  {
+    "code": "AYK",
+    "name": "Arkalyk North Airport",
+    "city_en": "Arkalyk",
+    "city_pl": "Arkalyk",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "AGN",
+    "name": "Angoon Seaplane Base",
+    "city_en": "Angoon",
+    "city_pl": "Angoon",
+    "country_en": "United States"
+  },
+  {
+    "code": "ELV",
+    "name": "Elfin Cove Seaplane Base",
+    "city_en": "Elfin Cove",
+    "city_pl": "Elfin Cove",
+    "country_en": "United States"
+  },
+  {
+    "code": "FNR",
+    "name": "Funter Bay Seaplane Base",
+    "city_en": "Funter Bay",
+    "city_pl": "Funter Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "HNH",
+    "name": "Hoonah Airport",
+    "city_en": "Hoonah",
+    "city_pl": "Hoonah",
+    "country_en": "United States"
+  },
+  {
+    "code": "MTM",
+    "name": "Metlakatla Seaplane Base",
+    "city_en": "Metakatla",
+    "city_pl": "Metakatla",
+    "country_en": "United States"
+  },
+  {
+    "code": "HYG",
+    "name": "Hydaburg Seaplane Base",
+    "city_en": "Hydaburg",
+    "city_pl": "Hydaburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "EGX",
+    "name": "Egegik Airport",
+    "city_en": "Egegik",
+    "city_pl": "Egegik",
+    "country_en": "United States"
+  },
+  {
+    "code": "KPV",
+    "name": "Perryville Airport",
+    "city_en": "Perryville",
+    "city_pl": "Perryville",
+    "country_en": "United States"
+  },
+  {
+    "code": "PIP",
+    "name": "Pilot Point Airport",
+    "city_en": "Pilot Point",
+    "city_pl": "Pilot Point",
+    "country_en": "United States"
+  },
+  {
+    "code": "WSN",
+    "name": "South Naknek Nr 2 Airport",
+    "city_en": "South Naknek",
+    "city_pl": "South Naknek",
+    "country_en": "United States"
+  },
+  {
+    "code": "AKK",
+    "name": "Akhiok Airport",
+    "city_en": "Akhiok",
+    "city_pl": "Akhiok",
+    "country_en": "United States"
+  },
+  {
+    "code": "KYK",
+    "name": "Karluk Airport",
+    "city_en": "Karluk",
+    "city_pl": "Karluk",
+    "country_en": "United States"
+  },
+  {
+    "code": "KLN",
+    "name": "Larsen Bay Airport",
+    "city_en": "Larsen Bay",
+    "city_pl": "Larsen Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "ABL",
+    "name": "Ambler Airport",
+    "city_en": "Ambler",
+    "city_pl": "Ambler",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKC",
+    "name": "Buckland Airport",
+    "city_en": "Buckland",
+    "city_pl": "Buckland",
+    "country_en": "United States"
+  },
+  {
+    "code": "IAN",
+    "name": "Bob Baker Memorial Airport",
+    "city_en": "Kiana",
+    "city_pl": "Kiana",
+    "country_en": "United States"
+  },
+  {
+    "code": "OBU",
+    "name": "Kobuk Airport",
+    "city_en": "Kobuk",
+    "city_pl": "Kobuk",
+    "country_en": "United States"
+  },
+  {
+    "code": "ORV",
+    "name": "Robert (Bob) Curtis Memorial Airport",
+    "city_en": "Noorvik",
+    "city_pl": "Noorvik",
+    "country_en": "United States"
+  },
+  {
+    "code": "WLK",
+    "name": "Selawik Airport",
+    "city_en": "Selawik",
+    "city_pl": "Selawik",
+    "country_en": "United States"
+  },
+  {
+    "code": "KTS",
+    "name": "Brevig Mission Airport",
+    "city_en": "Brevig Mission",
+    "city_pl": "Brevig Mission",
+    "country_en": "United States"
+  },
+  {
+    "code": "ELI",
+    "name": "Elim Airport",
+    "city_en": "Elim",
+    "city_pl": "Elim",
+    "country_en": "United States"
+  },
+  {
+    "code": "GLV",
+    "name": "Golovin Airport",
+    "city_en": "Golovin",
+    "city_pl": "Golovin",
+    "country_en": "United States"
+  },
+  {
+    "code": "TLA",
+    "name": "Teller Airport",
+    "city_en": "Teller",
+    "city_pl": "Teller",
+    "country_en": "United States"
+  },
+  {
+    "code": "WAA",
+    "name": "Wales Airport",
+    "city_en": "Wales",
+    "city_pl": "Wales",
+    "country_en": "United States"
+  },
+  {
+    "code": "WMO",
+    "name": "White Mountain Airport",
+    "city_en": "White Mountain",
+    "city_pl": "White Mountain",
+    "country_en": "United States"
+  },
+  {
+    "code": "KKA",
+    "name": "Koyuk Alfred Adams Airport",
+    "city_en": "Koyuk",
+    "city_pl": "Koyuk",
+    "country_en": "United States"
+  },
+  {
+    "code": "SMK",
+    "name": "St Michael Airport",
+    "city_en": "St. Michael",
+    "city_pl": "St. Michael",
+    "country_en": "United States"
+  },
+  {
+    "code": "SKK",
+    "name": "Shaktoolik Airport",
+    "city_en": "Shaktoolik",
+    "city_pl": "Shaktoolik",
+    "country_en": "United States"
+  },
+  {
+    "code": "TNC",
+    "name": "Tin City Long Range Radar Station Airport",
+    "city_en": "Tin City",
+    "city_pl": "Tin City",
+    "country_en": "United States"
+  },
+  {
+    "code": "AKB",
+    "name": "Atka Airport",
+    "city_en": "Atka",
+    "city_pl": "Atka",
+    "country_en": "United States"
+  },
+  {
+    "code": "IKO",
+    "name": "Nikolski Air Station",
+    "city_en": "Nikolski",
+    "city_pl": "Nikolski",
+    "country_en": "United States"
+  },
+  {
+    "code": "CYT",
+    "name": "Yakataga Airport",
+    "city_en": "Yakataga",
+    "city_pl": "Yakataga",
+    "country_en": "United States"
+  },
+  {
+    "code": "AUK",
+    "name": "Alakanuk Airport",
+    "city_en": "Alakanuk",
+    "city_pl": "Alakanuk",
+    "country_en": "United States"
+  },
+  {
+    "code": "KPN",
+    "name": "Kipnuk Airport",
+    "city_en": "Kipnuk",
+    "city_pl": "Kipnuk",
+    "country_en": "United States"
+  },
+  {
+    "code": "KFP",
+    "name": "False Pass Airport",
+    "city_en": "False Pass",
+    "city_pl": "False Pass",
+    "country_en": "United States"
+  },
+  {
+    "code": "NLG",
+    "name": "Nelson Lagoon Airport",
+    "city_en": "Nelson Lagoon",
+    "city_pl": "Nelson Lagoon",
+    "country_en": "United States"
+  },
+  {
+    "code": "PML",
+    "name": "Port Moller Airport",
+    "city_en": "Cold Bay",
+    "city_pl": "Cold Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "KLW",
+    "name": "Klawock Airport",
+    "city_en": "Klawock",
+    "city_pl": "Klawock",
+    "country_en": "United States"
+  },
+  {
+    "code": "KWN",
+    "name": "Quinhagak Airport",
+    "city_en": "Quinhagak",
+    "city_pl": "Quinhagak",
+    "country_en": "United States"
+  },
+  {
+    "code": "KOT",
+    "name": "Kotlik Airport",
+    "city_en": "Kotlik",
+    "city_pl": "Kotlik",
+    "country_en": "United States"
+  },
+  {
+    "code": "KYU",
+    "name": "Koyukuk Airport",
+    "city_en": "Koyukuk",
+    "city_pl": "Koyukuk",
+    "country_en": "United States"
+  },
+  {
+    "code": "SCM",
+    "name": "Scammon Bay Airport",
+    "city_en": "Scammon Bay",
+    "city_pl": "Scammon Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "NNL",
+    "name": "Nondalton Airport",
+    "city_en": "Nondalton",
+    "city_pl": "Nondalton",
+    "country_en": "United States"
+  },
+  {
+    "code": "KKH",
+    "name": "Kongiganak Airport",
+    "city_en": "Kongiganak",
+    "city_pl": "Kongiganak",
+    "country_en": "United States"
+  },
+  {
+    "code": "NIB",
+    "name": "Nikolai Airport",
+    "city_en": "Nikolai",
+    "city_pl": "Nikolai",
+    "country_en": "United States"
+  },
+  {
+    "code": "AKI",
+    "name": "Akiak Airport",
+    "city_en": "Akiak",
+    "city_pl": "Akiak",
+    "country_en": "United States"
+  },
+  {
+    "code": "AIN",
+    "name": "Wainwright Airport",
+    "city_en": "Wainwright",
+    "city_pl": "Wainwright",
+    "country_en": "United States"
+  },
+  {
+    "code": "APZ",
+    "name": "Zapala Airport",
+    "city_en": "ZAPALA",
+    "city_pl": "ZAPALA",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "RDS",
+    "name": "Rincon De Los Sauces Airport",
+    "city_en": "Rincon de los Sauces",
+    "city_pl": "Rincon de los Sauces",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "PNT",
+    "name": "Tte. Julio Gallardo Airport",
+    "city_en": "Puerto Natales",
+    "city_pl": "Puerto Natales",
+    "country_en": "Chile"
+  },
+  {
+    "code": "SGV",
+    "name": "Sierra Grande Airport",
+    "city_en": "Sierra Grande",
+    "city_pl": "Sierra Grande",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "IGB",
+    "name": "Cabo F.A.A. H. R. Bordón Airport",
+    "city_en": "Ingeniero Jacobacci",
+    "city_pl": "Ingeniero Jacobacci",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "NCN",
+    "name": "Chenega Bay Airport",
+    "city_en": "Chenega",
+    "city_pl": "Chenega",
+    "country_en": "United States"
+  },
+  {
+    "code": "TKJ",
+    "name": "Tok Junction Airport",
+    "city_en": "Tok",
+    "city_pl": "Tok",
+    "country_en": "United States"
+  },
+  {
+    "code": "IRC",
+    "name": "Circle City /New/ Airport",
+    "city_en": "Circle",
+    "city_pl": "Circle",
+    "country_en": "United States"
+  },
+  {
+    "code": "SLQ",
+    "name": "Sleetmute Airport",
+    "city_en": "Sleetmute",
+    "city_pl": "Sleetmute",
+    "country_en": "United States"
+  },
+  {
+    "code": "LMA",
+    "name": "Minchumina Airport",
+    "city_en": "Lake Minchumina",
+    "city_pl": "Lake Minchumina",
+    "country_en": "United States"
+  },
+  {
+    "code": "MLY",
+    "name": "Manley Hot Springs Airport",
+    "city_en": "Manley Hot Springs",
+    "city_pl": "Manley Hot Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "YNP",
+    "name": "Natuashish Airport",
+    "city_en": "Natuashish",
+    "city_pl": "Natuashish",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSO",
+    "name": "Postville Airport",
+    "city_en": "Postville",
+    "city_pl": "Postville",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YWB",
+    "name": "Kangiqsujuaq (Wakeham Bay) Airport",
+    "city_en": "Kangiqsujuaq",
+    "city_pl": "Kangiqsujuaq",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YTF",
+    "name": "Alma Airport",
+    "city_en": "Alma",
+    "city_pl": "Alma",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGV",
+    "name": "Havre St Pierre Airport",
+    "city_en": "Havre-Saint-Pierre",
+    "city_pl": "Havre-Saint-Pierre",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXK",
+    "name": "Rimouski Airport",
+    "city_en": "Rimouski",
+    "city_pl": "Rimouski",
+    "country_en": "Canada"
+  },
+  {
+    "code": "XTL",
+    "name": "Tadoule Lake Airport",
+    "city_en": "Tadoule Lake",
+    "city_pl": "Tadoule Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "XLB",
+    "name": "Lac Brochet Airport",
+    "city_en": "Lac Brochet",
+    "city_pl": "Lac Brochet",
+    "country_en": "Canada"
+  },
+  {
+    "code": "XSI",
+    "name": "South Indian Lake Airport",
+    "city_en": "South Indian Lake",
+    "city_pl": "South Indian Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBT",
+    "name": "Brochet Airport",
+    "city_en": "Brochet",
+    "city_pl": "Brochet",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZGR",
+    "name": "Little Grand Rapids Airport",
+    "city_en": "Little Grand Rapids",
+    "city_pl": "Little Grand Rapids",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCR",
+    "name": "Cross Lake (Charlie Sinclair Memorial) Airport",
+    "city_en": "Cross Lake",
+    "city_pl": "Cross Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRS",
+    "name": "Red Sucker Lake Airport",
+    "city_en": "Red Sucker Lake",
+    "city_pl": "Red Sucker Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YOP",
+    "name": "Rainbow Lake Airport",
+    "city_en": "Rainbow Lake",
+    "city_pl": "Rainbow Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBY",
+    "name": "Bonnyville Airport",
+    "city_en": "Bonnyville",
+    "city_pl": "Bonnyville",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZNA",
+    "name": "Nanaimo Harbour Water Airport",
+    "city_en": "Nanaimo",
+    "city_pl": "Nanaimo",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YGG",
+    "name": "Ganges Seaplane Base",
+    "city_en": "Ganges",
+    "city_pl": "Ganges",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDT",
+    "name": "Boundary Bay Airport",
+    "city_en": "Boundary Bay",
+    "city_pl": "Boundary Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLY",
+    "name": "Langley Airport",
+    "city_en": "Langley Township",
+    "city_pl": "Langley Township",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YFJ",
+    "name": "Wekweètì Airport",
+    "city_en": "Wekweeti",
+    "city_pl": "Wekweeti",
+    "country_en": "Canada"
+  },
+  {
+    "code": "RNI",
+    "name": "Corn Island",
+    "city_en": "Corn Island",
+    "city_pl": "Corn Island",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "BZA",
+    "name": "San Pedro Airport",
+    "city_en": "Bonanza",
+    "city_pl": "Bonanza",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "RFS",
+    "name": "Rosita Airport",
+    "city_en": "Rosita",
+    "city_pl": "Rosita",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "SIU",
+    "name": "Siuna",
+    "city_en": "Siuna",
+    "city_pl": "Siuna",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "WSP",
+    "name": "Waspam Airport",
+    "city_en": "Waspam",
+    "city_pl": "Waspam",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "NCR",
+    "name": "San Carlos",
+    "city_en": "San Carlos",
+    "city_pl": "San Carlos",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "PLD",
+    "name": "Playa Samara/Carrillo Airport",
+    "city_en": "Carrillo",
+    "city_pl": "Carrillo",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "COZ",
+    "name": "Constanza - Expedición 14 de Junio National Airport",
+    "city_en": "Constanza",
+    "city_pl": "Constanza",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "NEG",
+    "name": "Negril Airport",
+    "city_en": "Negril",
+    "city_pl": "Negril",
+    "country_en": "Jamaica"
+  },
+  {
+    "code": "NRR",
+    "name": "José Aponte de la Torre Airport",
+    "city_en": "Ceiba",
+    "city_pl": "Ceiba",
+    "country_en": "Puerto Rico"
+  },
+  {
+    "code": "SPB",
+    "name": "Charlotte Amalie Harbor Seaplane Base",
+    "city_en": "Charlotte Amalie",
+    "city_pl": "Charlotte Amalie",
+    "country_en": "Virgin Islands"
+  },
+  {
+    "code": "ARR",
+    "name": "D. Casimiro Szlapelis Airport",
+    "city_en": "Alto Rio Senguer",
+    "city_pl": "Alto Rio Senguer",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "JSM",
+    "name": "Jose De San Martin Airport",
+    "city_en": "Jose de San Martin",
+    "city_pl": "Jose de San Martin",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "UYU",
+    "name": "Uyuni Airport",
+    "city_en": "Uyuni",
+    "city_pl": "Uyuni",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "RBQ",
+    "name": "Rurenabaque Airport",
+    "city_en": "Rerrenabaque",
+    "city_pl": "Rerrenabaque",
+    "country_en": "Bolivia"
+  },
+  {
+    "code": "ABF",
+    "name": "Abaiang Airport",
+    "city_en": "Abaiang Atoll",
+    "city_pl": "Abaiang Atoll",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "ABN",
+    "name": "Albina Airport",
+    "city_en": "Albina",
+    "city_pl": "Albina",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "DRJ",
+    "name": "Drietabbetje Airport",
+    "city_en": "Drietabbetje",
+    "city_pl": "Drietabbetje",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "MOJ",
+    "name": "Moengo Airstrip",
+    "city_en": "Moengo",
+    "city_pl": "Moengo",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "ICK",
+    "name": "Nieuw Nickerie Airport",
+    "city_en": "Nieuw Nickerie",
+    "city_pl": "Nieuw Nickerie",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "OEM",
+    "name": "Vincent Fayks Airport",
+    "city_en": "Paloemeu",
+    "city_pl": "Paloemeu",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "SMZ",
+    "name": "Stoelmanseiland Airport",
+    "city_en": "Stoelmans Eiland",
+    "city_pl": "Stoelmans Eiland",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "TOT",
+    "name": "Totness Airport",
+    "city_en": "Totness",
+    "city_pl": "Totness",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "AGI",
+    "name": "Wageningen Airstrip",
+    "city_en": "Wageningen",
+    "city_pl": "Wageningen",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "ORJ",
+    "name": "Orinduik Airport",
+    "city_en": "Orinduik",
+    "city_pl": "Orinduik",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "NAI",
+    "name": "Annai Airport",
+    "city_en": "Annai",
+    "city_pl": "Annai",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "IMB",
+    "name": "Imbaimadai Airport",
+    "city_en": "Imbaimadai",
+    "city_pl": "Imbaimadai",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "KAR",
+    "name": "Kamarang Airport",
+    "city_en": "Kamarang",
+    "city_pl": "Kamarang",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "USI",
+    "name": "Mabaruma Airport",
+    "city_en": "Mabaruma",
+    "city_pl": "Mabaruma",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "MHA",
+    "name": "Mahdia Airport",
+    "city_en": "Mahdia",
+    "city_pl": "Mahdia",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "PJC",
+    "name": "Dr Augusto Roberto Fuster International Airport",
+    "city_en": "Pedro Juan Caballero",
+    "city_pl": "Pedro Juan Caballero",
+    "country_en": "Paraguay"
+  },
+  {
+    "code": "ACD",
+    "name": "Alcides Fernández Airport",
+    "city_en": "Acandi",
+    "city_pl": "Acandi",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "RVE",
+    "name": "Los Colonizadores Airport",
+    "city_en": "Saravena",
+    "city_pl": "Saravena",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "BQJ",
+    "name": "Batagay Airport",
+    "city_en": "Batagay",
+    "city_pl": "Batagay",
+    "country_en": "Russia"
+  },
+  {
+    "code": "VGZ",
+    "name": "Villa Garzón Airport",
+    "city_en": "Villa Garzon",
+    "city_pl": "Villa Garzon",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "EBG",
+    "name": "El Bagre Airport",
+    "city_en": "El Bagre",
+    "city_pl": "El Bagre",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "CAQ",
+    "name": "Juan H White Airport",
+    "city_en": "Caucasia",
+    "city_pl": "Caucasia",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "COG",
+    "name": "Mandinga Airport",
+    "city_en": "Condoto",
+    "city_pl": "Condoto",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "TLU",
+    "name": "Golfo de Morrosquillo Airport",
+    "city_en": "Tolu",
+    "city_pl": "Tolu",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "CFB",
+    "name": "Cabo Frio Airport",
+    "city_en": "Cabo Frio",
+    "city_pl": "Cabo Frio",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "OPS",
+    "name": "Presidente João Batista Figueiredo Airport",
+    "city_en": "Sinop",
+    "city_pl": "Sinop",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GRP",
+    "name": "Gurupi Airport",
+    "city_en": "Gurupi",
+    "city_pl": "Gurupi",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CMP",
+    "name": "Santana do Araguaia Airport",
+    "city_en": "Santana do Araguaia",
+    "city_pl": "Santana do Araguaia",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BVS",
+    "name": "Breves Airport",
+    "city_en": "Breves",
+    "city_pl": "Breves",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SFK",
+    "name": "Soure Airport",
+    "city_en": "Soure",
+    "city_pl": "Soure",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PIN",
+    "name": "Parintins Airport",
+    "city_en": "Parintins",
+    "city_pl": "Parintins",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BRA",
+    "name": "Barreiras Airport",
+    "city_en": "Barreiras",
+    "city_pl": "Barreiras",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "STZ",
+    "name": "Santa Terezinha Airport",
+    "city_en": "Santa Terezinha",
+    "city_pl": "Santa Terezinha",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MQH",
+    "name": "Minaçu Airport",
+    "city_en": "Minacu",
+    "city_pl": "Minacu",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "AUX",
+    "name": "Araguaína Airport",
+    "city_en": "Araguaina",
+    "city_pl": "Araguaina",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "NVP",
+    "name": "Novo Aripuanã Airport",
+    "city_en": "Novo Aripuana",
+    "city_pl": "Novo Aripuana",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "FRC",
+    "name": "Tenente Lund Pressoto Airport",
+    "city_en": "Franca",
+    "city_pl": "Franca",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "DOU",
+    "name": "Dourados Airport",
+    "city_en": "Dourados",
+    "city_pl": "Dourados",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "LBR",
+    "name": "Lábrea Airport",
+    "city_en": "Labrea",
+    "city_pl": "Labrea",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ROO",
+    "name": "Maestro Marinho Franco Airport",
+    "city_en": "Rondonopolis",
+    "city_pl": "Rondonopolis",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GPB",
+    "name": "Tancredo Thomas de Faria Airport",
+    "city_en": "Guarapuava",
+    "city_pl": "Guarapuava",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "JCB",
+    "name": "Santa Terezinha Airport",
+    "city_en": "Joacaba",
+    "city_pl": "Joacaba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "RVD",
+    "name": "General Leite de Castro Airport",
+    "city_en": "Rio Verde",
+    "city_pl": "Rio Verde",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "AAX",
+    "name": "Romeu Zema Airport",
+    "city_en": "Araxa",
+    "city_pl": "Araxa",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MBZ",
+    "name": "Maués Airport",
+    "city_en": "Maues",
+    "city_pl": "Maues",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "RBB",
+    "name": "Borba Airport",
+    "city_en": "Borba",
+    "city_pl": "Borba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CIZ",
+    "name": "Coari Airport",
+    "city_en": "Coari",
+    "city_pl": "Coari",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BAZ",
+    "name": "Barcelos Airport",
+    "city_en": "Barcelos",
+    "city_pl": "Barcelos",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "DMT",
+    "name": "Diamantino Airport",
+    "city_en": "Diamantino",
+    "city_pl": "Diamantino",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "GNM",
+    "name": "Guanambi Airport",
+    "city_en": "Guanambi",
+    "city_pl": "Guanambi",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "QDJ",
+    "name": "Tsletsi Airport",
+    "city_en": "Djelfa",
+    "city_pl": "Djelfa",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "NZA",
+    "name": "Nzagi Airport",
+    "city_en": "Nzagi",
+    "city_pl": "Nzagi",
+    "country_en": "Angola"
+  },
+  {
+    "code": "LBZ",
+    "name": "Lucapa Airport",
+    "city_en": "Lucapa",
+    "city_pl": "Lucapa",
+    "country_en": "Angola"
+  },
+  {
+    "code": "KNP",
+    "name": "Capanda Airport",
+    "city_en": "Kapanda",
+    "city_pl": "Kapanda",
+    "country_en": "Angola"
+  },
+  {
+    "code": "AMC",
+    "name": "Am Timan Airport",
+    "city_en": "Am Timan",
+    "city_pl": "Am Timan",
+    "country_en": "Chad"
+  },
+  {
+    "code": "GSQ",
+    "name": "Shark El Oweinat International Airport",
+    "city_en": "Sharq Al-Owainat",
+    "city_pl": "Sharq Al-Owainat",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "MRB",
+    "name": "Eastern WV Regional Airport/Shepherd Field",
+    "city_en": "Martinsburg",
+    "city_pl": "Martinsburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "AWA",
+    "name": "Awassa Airport",
+    "city_en": "Awasa",
+    "city_pl": "Awasa",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "JIJ",
+    "name": "Wilwal International Airport",
+    "city_en": "Jijiga",
+    "city_pl": "Jijiga",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "MKS",
+    "name": "Mekane Selam Airport",
+    "city_en": "Mekane Selam",
+    "city_pl": "Mekane Selam",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "DBM",
+    "name": "Debra Marcos Airport",
+    "city_en": "Debre Marqos",
+    "city_pl": "Debre Marqos",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "DBT",
+    "name": "Debre Tabor Airport",
+    "city_en": "Debre Tabor",
+    "city_pl": "Debre Tabor",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "QHR",
+    "name": "Harar Meda Airport",
+    "city_en": "Debre Zeyit",
+    "city_pl": "Debre Zeyit",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "GOB",
+    "name": "Robe Airport",
+    "city_en": "Goba",
+    "city_pl": "Goba",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "MYB",
+    "name": "Mayumba Airport",
+    "city_en": "Mayumba",
+    "city_pl": "Mayumba",
+    "country_en": "Gabon"
+  },
+  {
+    "code": "MRE",
+    "name": "Mara Serena Lodge Airstrip",
+    "city_en": "Masai Mara",
+    "city_pl": "Masai Mara",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "JJM",
+    "name": "Mulika Lodge Airport",
+    "city_en": "Meru National Park",
+    "city_pl": "Meru National Park",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "RBX",
+    "name": "Rumbek Airport",
+    "city_en": "Rumbek",
+    "city_pl": "Rumbek",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "CPA",
+    "name": "Cape Palmas Airport",
+    "city_en": "Greenville",
+    "city_pl": "Greenville",
+    "country_en": "Liberia"
+  },
+  {
+    "code": "IHC",
+    "name": "Inhaca Airport",
+    "city_en": "Inhaca",
+    "city_pl": "Inhaca",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "MAX",
+    "name": "Ouro Sogui Airport",
+    "city_en": "Matam",
+    "city_pl": "Matam",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "BDI",
+    "name": "Bird Island Airport",
+    "city_en": "Bird Island",
+    "city_pl": "Bird Island",
+    "country_en": "Seychelles"
+  },
+  {
+    "code": "WHF",
+    "name": "Wadi Halfa Airport",
+    "city_en": "Wadi Halfa",
+    "city_pl": "Wadi Halfa",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "NBE",
+    "name": "Enfidha - Hammamet International Airport",
+    "city_en": "Enfidha",
+    "city_pl": "Enfidha",
+    "country_en": "Tunisia"
+  },
+  {
+    "code": "HTY",
+    "name": "Hatay Airport",
+    "city_en": "Hatay",
+    "city_pl": "Hatay",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "RVV",
+    "name": "Raivavae Airport",
+    "city_en": "Raivavae",
+    "city_pl": "Raivavae",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "FUO",
+    "name": "Foshan Shadi Airport",
+    "city_en": "Foshan",
+    "city_pl": "Foshan",
+    "country_en": "China"
+  },
+  {
+    "code": "HUZ",
+    "name": "Huizhou Airport",
+    "city_en": "Huizhou",
+    "city_pl": "Huizhou",
+    "country_en": "China"
+  },
+  {
+    "code": "ILD",
+    "name": "Lleida-Alguaire Airport",
+    "city_en": "Lleida",
+    "city_pl": "Lleida",
+    "country_en": "Spain"
+  },
+  {
+    "code": "BIU",
+    "name": "Bildudalur Airport",
+    "city_en": "Bildudalur",
+    "city_pl": "Bildudalur",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "GJR",
+    "name": "Gjögur Airport",
+    "city_en": "Gjogur",
+    "city_pl": "Gjogur",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "SAK",
+    "name": "Sauðárkrókur Airport",
+    "city_en": "Saudarkrokur",
+    "city_pl": "Saudarkrokur",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "IIA",
+    "name": "Inishmaan Aerodrome",
+    "city_en": "Inishmaan",
+    "city_pl": "Inishmaan",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "ULG",
+    "name": "Ulgii Mongolei Airport",
+    "city_en": "Olgii",
+    "city_pl": "Olgii",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "KQT",
+    "name": "Qurghonteppa International Airport",
+    "city_en": "Kurgan Tyube",
+    "city_pl": "Kurgan Tyube",
+    "country_en": "Tajikistan"
+  },
+  {
+    "code": "VGD",
+    "name": "Vologda Airport",
+    "city_en": "Vologda",
+    "city_pl": "Vologda",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ONK",
+    "name": "Olenyok Airport",
+    "city_en": "Olenyok",
+    "city_pl": "Olenyok",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SYS",
+    "name": "Saskylakh Airport",
+    "city_en": "Saskylakh",
+    "city_pl": "Saskylakh",
+    "country_en": "Russia"
+  },
+  {
+    "code": "LDG",
+    "name": "Leshukonskoye Airport",
+    "city_en": "Arkhangelsk",
+    "city_pl": "Arkhangelsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "HSK",
+    "name": "Huesca/Pirineos Airport",
+    "city_en": "Huesca",
+    "city_pl": "Huesca",
+    "country_en": "Spain"
+  },
+  {
+    "code": "CQM",
+    "name": "Ciudad Real Central Airport",
+    "city_en": "Ciudad Real",
+    "city_pl": "Ciudad Real",
+    "country_en": "Spain"
+  },
+  {
+    "code": "NJF",
+    "name": "Al Najaf International Airport",
+    "city_en": "Najaf",
+    "city_pl": "Najaf",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "CSA",
+    "name": "Colonsay Airstrip",
+    "city_en": "Colonsay",
+    "city_pl": "Colonsay",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "RKH",
+    "name": "Rock Hill - York County Airport",
+    "city_en": "Rock Hill",
+    "city_pl": "Rock Hill",
+    "country_en": "United States"
+  },
+  {
+    "code": "AGC",
+    "name": "Allegheny County Airport",
+    "city_en": "Pittsburgh",
+    "city_pl": "Pittsburgh",
+    "country_en": "United States"
+  },
+  {
+    "code": "VQQ",
+    "name": "Cecil Airport",
+    "city_en": "Jacksonville",
+    "city_pl": "Jacksonville",
+    "country_en": "United States"
+  },
+  {
+    "code": "FTY",
+    "name": "Fulton County Airport Brown Field",
+    "city_en": "Atlanta",
+    "city_pl": "Atlanta",
+    "country_en": "United States"
+  },
+  {
+    "code": "TII",
+    "name": "Tarin Kowt Airport",
+    "city_en": "Tarin Kowt",
+    "city_pl": "Tarin Kowt",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "ZAJ",
+    "name": "Zaranj Airport",
+    "city_en": "Zaranj",
+    "city_pl": "Zaranj",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "CCN",
+    "name": "Chakcharan Airport",
+    "city_en": "Chaghcharan",
+    "city_pl": "Chaghcharan",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "FUG",
+    "name": "Fuyang Xiguan Airport",
+    "city_en": "Fuyang",
+    "city_pl": "Fuyang",
+    "country_en": "China"
+  },
+  {
+    "code": "LCX",
+    "name": "Longyan Guanzhishan Airport",
+    "city_en": "Longyan",
+    "city_pl": "Longyan",
+    "country_en": "China"
+  },
+  {
+    "code": "BSD",
+    "name": "Baoshan Yunduan Airport",
+    "city_en": "Baoshan",
+    "city_pl": "Baoshan",
+    "country_en": "China"
+  },
+  {
+    "code": "ACX",
+    "name": "Xingyi Airport",
+    "city_en": "Xingyi",
+    "city_pl": "Xingyi",
+    "country_en": "China"
+  },
+  {
+    "code": "HZH",
+    "name": "Liping Airport",
+    "city_en": "Liping",
+    "city_pl": "Liping",
+    "country_en": "China"
+  },
+  {
+    "code": "OSU",
+    "name": "The Ohio State University Airport - Don Scott Field",
+    "city_en": "Columbus",
+    "city_pl": "Columbus",
+    "country_en": "United States"
+  },
+  {
+    "code": "ADS",
+    "name": "Addison Airport",
+    "city_en": "Addison",
+    "city_pl": "Addison",
+    "country_en": "United States"
+  },
+  {
+    "code": "DSI",
+    "name": "Destin Executive Airport",
+    "city_en": "Destin",
+    "city_pl": "Destin",
+    "country_en": "United States"
+  },
+  {
+    "code": "KHE",
+    "name": "Kherson International Airport",
+    "city_en": "Kherson",
+    "city_pl": "Kherson",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "SZS",
+    "name": "Ryan's Creek Aerodrome",
+    "city_en": "Stewart Island",
+    "city_pl": "Stewart Island",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "HJJ",
+    "name": "Zhijiang Airport",
+    "city_en": "Zhijiang",
+    "city_pl": "Zhijiang",
+    "country_en": "China"
+  },
+  {
+    "code": "YQI",
+    "name": "Yarmouth Airport",
+    "city_en": "Yarmouth",
+    "city_pl": "Yarmouth",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ISO",
+    "name": "Kinston Regional Jetport At Stallings Field",
+    "city_en": "Kinston",
+    "city_pl": "Kinston",
+    "country_en": "United States"
+  },
+  {
+    "code": "FFA",
+    "name": "First Flight Airport",
+    "city_en": "Kill Devil Hills",
+    "city_pl": "Kill Devil Hills",
+    "country_en": "United States"
+  },
+  {
+    "code": "LNJ",
+    "name": "Lintsang Airfield",
+    "city_en": "Lincang",
+    "city_pl": "Lincang",
+    "country_en": "China"
+  },
+  {
+    "code": "CKS",
+    "name": "Carajás Airport",
+    "city_en": "Parauapebas",
+    "city_pl": "Parauapebas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MWK",
+    "name": "Tarempa Airport",
+    "city_en": "Anambas Islands",
+    "city_pl": "Anambas Islands",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PGU",
+    "name": "Persian Gulf International Airport",
+    "city_en": "Khalije Fars",
+    "city_pl": "Khalije Fars",
+    "country_en": "Iran"
+  },
+  {
+    "code": "YES",
+    "name": "Yasouj Airport",
+    "city_en": "Yasuj",
+    "city_pl": "Yasuj",
+    "country_en": "Iran"
+  },
+  {
+    "code": "OSM",
+    "name": "Mosul International Airport",
+    "city_en": "Mosul",
+    "city_pl": "Mosul",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "TJH",
+    "name": "Tajima Airport",
+    "city_en": "Toyooka",
+    "city_pl": "Toyooka",
+    "country_en": "Japan"
+  },
+  {
+    "code": "AXJ",
+    "name": "Amakusa Airport",
+    "city_en": "Amakusa",
+    "city_pl": "Amakusa",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KKX",
+    "name": "Kikai Airport",
+    "city_en": "Kikai",
+    "city_pl": "Kikai",
+    "country_en": "Japan"
+  },
+  {
+    "code": "AGJ",
+    "name": "Aguni Airport",
+    "city_en": "Aguni",
+    "city_pl": "Aguni",
+    "country_en": "Japan"
+  },
+  {
+    "code": "ULZ",
+    "name": "Donoi Airport",
+    "city_en": "Uliastai",
+    "city_pl": "Uliastai",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "UGA",
+    "name": "Bulgan Airport",
+    "city_en": "Bulgan",
+    "city_pl": "Bulgan",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "ULO",
+    "name": "Ulaangom Airport",
+    "city_en": "Ulaangom",
+    "city_pl": "Ulaangom",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "LBX",
+    "name": "Lubang Airport",
+    "city_en": "Lubang",
+    "city_pl": "Lubang",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "TJU",
+    "name": "Kulob Airport",
+    "city_en": "Kulyab",
+    "city_pl": "Kulyab",
+    "country_en": "Tajikistan"
+  },
+  {
+    "code": "CMJ",
+    "name": "Chi Mei Airport",
+    "city_en": "Cimei",
+    "city_pl": "Cimei",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "TAZ",
+    "name": "Daşoguz Airport",
+    "city_en": "Dasoguz",
+    "city_pl": "Dasoguz",
+    "country_en": "Turkmenistan"
+  },
+  {
+    "code": "BWB",
+    "name": "Barrow Island Airport",
+    "city_en": "Barrow Island",
+    "city_pl": "Barrow Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DRB",
+    "name": "Derby Airport",
+    "city_en": "Derby",
+    "city_pl": "Derby",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WGE",
+    "name": "Walgett Airport",
+    "city_en": "Walgett",
+    "city_pl": "Walgett",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BRT",
+    "name": "Bathurst Island Airport",
+    "city_en": "Bathurst Island",
+    "city_pl": "Bathurst Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DKI",
+    "name": "Dunk Island Airport",
+    "city_en": "Dunk Island",
+    "city_pl": "Dunk Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LZR",
+    "name": "Lizard Island Airport",
+    "city_en": "Lizard Island",
+    "city_pl": "Lizard Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HLT",
+    "name": "Hamilton Airport",
+    "city_en": "Hamilton",
+    "city_pl": "Hamilton",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HCQ",
+    "name": "Halls Creek Airport",
+    "city_en": "Halls Creek",
+    "city_pl": "Halls Creek",
+    "country_en": "Australia"
+  },
+  {
+    "code": "FIZ",
+    "name": "Fitzroy Crossing Airport",
+    "city_en": "Fitzroy Crossing",
+    "city_pl": "Fitzroy Crossing",
+    "country_en": "Australia"
+  },
+  {
+    "code": "RVT",
+    "name": "Ravensthorpe Airport",
+    "city_en": "Ravensthorpe",
+    "city_pl": "Ravensthorpe",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PVU",
+    "name": "Provo Municipal Airport",
+    "city_en": "Provo",
+    "city_pl": "Provo",
+    "country_en": "United States"
+  },
+  {
+    "code": "SBS",
+    "name": "Steamboat Springs Bob Adams Field",
+    "city_en": "Steamboat Springs",
+    "city_pl": "Steamboat Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "DTA",
+    "name": "Delta Municipal Airport",
+    "city_en": "Delta",
+    "city_pl": "Delta",
+    "country_en": "United States"
+  },
+  {
+    "code": "PUC",
+    "name": "Carbon County Regional/Buck Davis Field",
+    "city_en": "Price",
+    "city_pl": "Price",
+    "country_en": "United States"
+  },
+  {
+    "code": "LAM",
+    "name": "Los Alamos Airport",
+    "city_en": "Los Alamos",
+    "city_pl": "Los Alamos",
+    "country_en": "United States"
+  },
+  {
+    "code": "HII",
+    "name": "Lake Havasu City Airport",
+    "city_en": "Lake Havasu City",
+    "city_pl": "Lake Havasu City",
+    "country_en": "United States"
+  },
+  {
+    "code": "INW",
+    "name": "Winslow Lindbergh Regional Airport",
+    "city_en": "Winslow",
+    "city_pl": "Winslow",
+    "country_en": "United States"
+  },
+  {
+    "code": "DGL",
+    "name": "Douglas Municipal Airport",
+    "city_en": "Douglas",
+    "city_pl": "Douglas",
+    "country_en": "United States"
+  },
+  {
+    "code": "MZK",
+    "name": "Marakei Airport",
+    "city_en": "Marakei",
+    "city_pl": "Marakei",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "AEA",
+    "name": "Abemama Atoll Airport",
+    "city_en": "Abemama",
+    "city_pl": "Abemama",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "AAK",
+    "name": "Buariki Airport",
+    "city_en": "Buariki",
+    "city_pl": "Buariki",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "KUC",
+    "name": "Kuria Airport",
+    "city_en": "Kuria",
+    "city_pl": "Kuria",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "AIS",
+    "name": "Arorae Island Airport",
+    "city_en": "Arorae",
+    "city_pl": "Arorae",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "TMN",
+    "name": "Tamana Island Airport",
+    "city_en": "Tamana",
+    "city_pl": "Tamana",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "BEZ",
+    "name": "Beru Airport",
+    "city_en": "Beru Island",
+    "city_pl": "Beru Island",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "NIG",
+    "name": "Nikunau Airport",
+    "city_en": "Nikunau",
+    "city_pl": "Nikunau",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "BBG",
+    "name": "Butaritari Atoll Airport",
+    "city_en": "Butaritari",
+    "city_pl": "Butaritari",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "MTK",
+    "name": "Makin Island Airport",
+    "city_en": "Makin",
+    "city_pl": "Makin",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "MNK",
+    "name": "Maiana Airport",
+    "city_en": "Maiana",
+    "city_pl": "Maiana",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "NON",
+    "name": "Nonouti Airport",
+    "city_en": "Nonouti",
+    "city_pl": "Nonouti",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "TSU",
+    "name": "Tabiteuea South Airport",
+    "city_en": "Tabiteuea",
+    "city_pl": "Tabiteuea",
+    "country_en": "Kiribati"
+  },
+  {
+    "code": "WTZ",
+    "name": "Whitianga Airport",
+    "city_en": "Whitianga",
+    "city_pl": "Whitianga",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "KTF",
+    "name": "Takaka Airport",
+    "city_en": "Takaka",
+    "city_pl": "Takaka",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "AFT",
+    "name": "Afutara Aerodrome",
+    "city_en": "Afutara",
+    "city_pl": "Afutara",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "RNA",
+    "name": "Ulawa Airport",
+    "city_en": "Ulawa",
+    "city_pl": "Ulawa",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "CHY",
+    "name": "Choiseul Bay Airport",
+    "city_en": "Choiseul Bay",
+    "city_pl": "Choiseul Bay",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "NNB",
+    "name": "Santa Ana Airport",
+    "city_en": "Santa Ana",
+    "city_pl": "Santa Ana",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "XYA",
+    "name": "Yandina Airport",
+    "city_en": "Yandina",
+    "city_pl": "Yandina",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "BPF",
+    "name": "Batuna Aerodrome",
+    "city_en": "Batuna",
+    "city_pl": "Batuna",
+    "country_en": "Solomon Islands"
+  },
+  {
+    "code": "BOW",
+    "name": "Bartow Municipal Airport",
+    "city_en": "Bartow",
+    "city_pl": "Bartow",
+    "country_en": "United States"
+  },
+  {
+    "code": "FTI",
+    "name": "Fitiuta Airport",
+    "city_en": "Fiti\\\\'uta",
+    "city_pl": "Fiti\\\\'uta",
+    "country_en": "American Samoa"
+  },
+  {
+    "code": "LVK",
+    "name": "Livermore Municipal Airport",
+    "city_en": "Livermore",
+    "city_pl": "Livermore",
+    "country_en": "United States"
+  },
+  {
+    "code": "RMY",
+    "name": "Mariposa Yosemite Airport",
+    "city_en": "Mariposa",
+    "city_pl": "Mariposa",
+    "country_en": "United States"
+  },
+  {
+    "code": "GFY",
+    "name": "Grootfontein Airport",
+    "city_en": "Grootfontein",
+    "city_pl": "Grootfontein",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "NDU",
+    "name": "Rundu Airport",
+    "city_en": "Rundu",
+    "city_pl": "Rundu",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "TRM",
+    "name": "Jacqueline Cochran Regional Airport",
+    "city_en": "Palm Springs",
+    "city_pl": "Palm Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "SMO",
+    "name": "Santa Monica Municipal Airport",
+    "city_en": "Santa Monica",
+    "city_pl": "Santa Monica",
+    "country_en": "United States"
+  },
+  {
+    "code": "UDD",
+    "name": "Bermuda Dunes Airport",
+    "city_en": "Palm Springs",
+    "city_pl": "Palm Springs",
+    "country_en": "United States"
+  },
+  {
+    "code": "SCF",
+    "name": "Scottsdale Airport",
+    "city_en": "Scottsdale",
+    "city_pl": "Scottsdale",
+    "country_en": "United States"
+  },
+  {
+    "code": "OLM",
+    "name": "Olympia Regional Airport",
+    "city_en": "Olympia",
+    "city_pl": "Olympia",
+    "country_en": "United States"
+  },
+  {
+    "code": "RIL",
+    "name": "Garfield County Regional Airport",
+    "city_en": "Rifle",
+    "city_pl": "Rifle",
+    "country_en": "United States"
+  },
+  {
+    "code": "SAA",
+    "name": "Shively Field",
+    "city_en": "SARATOGA",
+    "city_pl": "SARATOGA",
+    "country_en": "United States"
+  },
+  {
+    "code": "PDK",
+    "name": "DeKalb Peachtree Airport",
+    "city_en": "Atlanta",
+    "city_pl": "Atlanta",
+    "country_en": "United States"
+  },
+  {
+    "code": "BMG",
+    "name": "Monroe County Airport",
+    "city_en": "Bloomington",
+    "city_pl": "Bloomington",
+    "country_en": "United States"
+  },
+  {
+    "code": "SUA",
+    "name": "Witham Field",
+    "city_en": "Stuart",
+    "city_pl": "Stuart",
+    "country_en": "United States"
+  },
+  {
+    "code": "MMU",
+    "name": "Morristown Municipal Airport",
+    "city_en": "Morristown",
+    "city_pl": "Morristown",
+    "country_en": "United States"
+  },
+  {
+    "code": "APC",
+    "name": "Napa County Airport",
+    "city_en": "Napa",
+    "city_pl": "Napa",
+    "country_en": "United States"
+  },
+  {
+    "code": "SDM",
+    "name": "Brown Field Municipal Airport",
+    "city_en": "San Diego",
+    "city_pl": "San Diego",
+    "country_en": "United States"
+  },
+  {
+    "code": "VNC",
+    "name": "Venice Municipal Airport",
+    "city_en": "Venice",
+    "city_pl": "Wenecja",
+    "country_en": "United States"
+  },
+  {
+    "code": "PHK",
+    "name": "Palm Beach County Glades Airport",
+    "city_en": "Pahokee",
+    "city_pl": "Pahokee",
+    "country_en": "United States"
+  },
+  {
+    "code": "ECP",
+    "name": "Northwest Florida Beaches International Airport",
+    "city_en": "Panama City",
+    "city_pl": "Panama City",
+    "country_en": "United States"
+  },
+  {
+    "code": "SBD",
+    "name": "San Bernardino International Airport",
+    "city_en": "San Bernardino",
+    "city_pl": "San Bernardino",
+    "country_en": "United States"
+  },
+  {
+    "code": "VAL",
+    "name": "Valença Airport",
+    "city_en": "Valenca",
+    "city_pl": "Valenca",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CAU",
+    "name": "Caruaru Airport",
+    "city_en": "Caruaru",
+    "city_pl": "Caruaru",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "AWK",
+    "name": "Wake Island Airfield",
+    "city_en": "Wake island",
+    "city_pl": "Wake island",
+    "country_en": "Wake Island"
+  },
+  {
+    "code": "QNV",
+    "name": "Aeroclube Airport",
+    "city_en": "Nova Iguacu",
+    "city_pl": "Nova Iguacu",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SQL",
+    "name": "San Carlos Airport",
+    "city_en": "San Carlos",
+    "city_pl": "San Carlos",
+    "country_en": "United States"
+  },
+  {
+    "code": "RWI",
+    "name": "Rocky Mount Wilson Regional Airport",
+    "city_en": "Rocky Mount",
+    "city_pl": "Rocky Mount",
+    "country_en": "United States"
+  },
+  {
+    "code": "SXQ",
+    "name": "Soldotna Airport",
+    "city_en": "Soldotna",
+    "city_pl": "Soldotna",
+    "country_en": "United States"
+  },
+  {
+    "code": "SEE",
+    "name": "Gillespie Field",
+    "city_en": "El Cajon",
+    "city_pl": "El Cajon",
+    "country_en": "United States"
+  },
+  {
+    "code": "PHA",
+    "name": "Phan Rang Airport",
+    "city_en": "Phan Rang",
+    "city_pl": "Phan Rang",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "SQH",
+    "name": "Na-San Airport",
+    "city_en": "Son-La",
+    "city_pl": "Son-La",
+    "country_en": "Vietnam"
+  },
+  {
+    "code": "TKF",
+    "name": "Truckee Tahoe Airport",
+    "city_en": "Truckee",
+    "city_pl": "Truckee",
+    "country_en": "United States"
+  },
+  {
+    "code": "FRJ",
+    "name": "Fréjus Airport",
+    "city_en": "Frejus",
+    "city_pl": "Frejus",
+    "country_en": "France"
+  },
+  {
+    "code": "GEX",
+    "name": "Geelong Airport",
+    "city_en": "Geelong",
+    "city_pl": "Geelong",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LVM",
+    "name": "Mission Field",
+    "city_en": "Livingston-Montana",
+    "city_pl": "Livingston-Montana",
+    "country_en": "United States"
+  },
+  {
+    "code": "GMV",
+    "name": "Monument Valley Airport",
+    "city_en": "Monument Valley",
+    "city_pl": "Monument Valley",
+    "country_en": "United States"
+  },
+  {
+    "code": "JRA",
+    "name": "West 30th St. Heliport",
+    "city_en": "New York",
+    "city_pl": "Nowy Jork",
+    "country_en": "United States"
+  },
+  {
+    "code": "LAL",
+    "name": "Lakeland Linder International Airport",
+    "city_en": "Lakeland",
+    "city_pl": "Lakeland",
+    "country_en": "United States"
+  },
+  {
+    "code": "SYH",
+    "name": "Syangboche Airport",
+    "city_en": "Syangboche",
+    "city_pl": "Syangboche",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "RBK",
+    "name": "French Valley Airport",
+    "city_en": "Murrieta-Temecula",
+    "city_pl": "Murrieta-Temecula",
+    "country_en": "United States"
+  },
+  {
+    "code": "FNU",
+    "name": "Oristano-Fenosu Airport",
+    "city_en": "Oristano",
+    "city_pl": "Oristano",
+    "country_en": "Italy"
+  },
+  {
+    "code": "MYQ",
+    "name": "Mysore Airport",
+    "city_en": "Mysore",
+    "city_pl": "Mysore",
+    "country_en": "India"
+  },
+  {
+    "code": "MGY",
+    "name": "Dayton-Wright Brothers Airport",
+    "city_en": "Dayton",
+    "city_pl": "Dayton",
+    "country_en": "United States"
+  },
+  {
+    "code": "FDY",
+    "name": "Findlay Airport",
+    "city_en": "Findley",
+    "city_pl": "Findley",
+    "country_en": "United States"
+  },
+  {
+    "code": "PEA",
+    "name": "Penneshaw Airport",
+    "city_en": "Penneshaw",
+    "city_pl": "Penneshaw",
+    "country_en": "Australia"
+  },
+  {
+    "code": "EMP",
+    "name": "Emporia Municipal Airport",
+    "city_en": "Kempten",
+    "city_pl": "Kempten",
+    "country_en": "Germany"
+  },
+  {
+    "code": "HYC",
+    "name": "Wycombe Air Park",
+    "city_en": "Wycombe",
+    "city_pl": "Wycombe",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BBP",
+    "name": "Bembridge Airport",
+    "city_en": "Bembridge",
+    "city_pl": "Bembridge",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SPF",
+    "name": "Black Hills Airport-Clyde Ice Field",
+    "city_en": "Spearfish-South Dakota",
+    "city_pl": "Spearfish-South Dakota",
+    "country_en": "United States"
+  },
+  {
+    "code": "QYD",
+    "name": "Oksywie Military Air Base",
+    "city_en": "Gdynia",
+    "city_pl": "Gdynia",
+    "country_en": "Poland"
+  },
+  {
+    "code": "OLV",
+    "name": "Olive Branch Airport",
+    "city_en": "Olive Branch",
+    "city_pl": "Olive Branch",
+    "country_en": "United States"
+  },
+  {
+    "code": "KNA",
+    "name": "Viña del mar Airport",
+    "city_en": "Vina del Mar",
+    "city_pl": "Vina del Mar",
+    "country_en": "Chile"
+  },
+  {
+    "code": "ONQ",
+    "name": "Zonguldak Airport",
+    "city_en": "Zonguldak",
+    "city_pl": "Zonguldak",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "BJC",
+    "name": "Rocky Mountain Metropolitan Airport",
+    "city_en": "Broomfield-CO",
+    "city_pl": "Broomfield-CO",
+    "country_en": "United States"
+  },
+  {
+    "code": "SLE",
+    "name": "Salem Municipal Airport/McNary Field",
+    "city_en": "Salem",
+    "city_pl": "Salem",
+    "country_en": "United States"
+  },
+  {
+    "code": "UTM",
+    "name": "Tunica Municipal Airport",
+    "city_en": "Tunica",
+    "city_pl": "Tunica",
+    "country_en": "United States"
+  },
+  {
+    "code": "ZKB",
+    "name": "Kasaba Bay Airport",
+    "city_en": "Kasaba Bay",
+    "city_pl": "Kasaba Bay",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "LND",
+    "name": "Hunt Field",
+    "city_en": "Lindau",
+    "city_pl": "Lindau",
+    "country_en": "Germany"
+  },
+  {
+    "code": "MWC",
+    "name": "Lawrence J Timmerman Airport",
+    "city_en": "Milwaukee",
+    "city_pl": "Milwaukee",
+    "country_en": "United States"
+  },
+  {
+    "code": "JVL",
+    "name": "Southern Wisconsin Regional Airport",
+    "city_en": "Janesville",
+    "city_pl": "Janesville",
+    "country_en": "United States"
+  },
+  {
+    "code": "LZU",
+    "name": "Gwinnett County Briscoe Field",
+    "city_en": "Lawrenceville",
+    "city_pl": "Lawrenceville",
+    "country_en": "United States"
+  },
+  {
+    "code": "BWG",
+    "name": "Bowling Green Warren County Regional Airport",
+    "city_en": "Bowling Green",
+    "city_pl": "Bowling Green",
+    "country_en": "United States"
+  },
+  {
+    "code": "RVS",
+    "name": "Richard Lloyd Jones Jr Airport",
+    "city_en": "Tulsa",
+    "city_pl": "Tulsa",
+    "country_en": "United States"
+  },
+  {
+    "code": "NHD",
+    "name": "Al Minhad Air Base",
+    "city_en": "Minhad AB",
+    "city_pl": "Minhad AB",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "KGO",
+    "name": "Kirovograd Airport",
+    "city_en": "Kirovograd",
+    "city_pl": "Kirovograd",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "DBB",
+    "name": "El Alamein International Airport",
+    "city_en": "Dabaa City",
+    "city_pl": "Dabaa City",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "BCE",
+    "name": "Bryce Canyon Airport",
+    "city_en": "Bryce Canyon",
+    "city_pl": "Bryce Canyon",
+    "country_en": "United States"
+  },
+  {
+    "code": "CKL",
+    "name": "Chkalovskiy Air Base",
+    "city_en": "Shchyolkovo",
+    "city_pl": "Shchyolkovo",
+    "country_en": "Russia"
+  },
+  {
+    "code": "TCZ",
+    "name": "Tengchong Tuofeng Airport",
+    "city_en": "Tengchong",
+    "city_pl": "Tengchong",
+    "country_en": "China"
+  },
+  {
+    "code": "UKS",
+    "name": "Belbek Airport",
+    "city_en": "Sevastopol",
+    "city_pl": "Sevastopol",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "OAZ",
+    "name": "Camp Bastion Airport",
+    "city_en": "Camp Bastion",
+    "city_pl": "Camp Bastion",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "JCI",
+    "name": "New Century Aircenter Airport",
+    "city_en": "Olathe",
+    "city_pl": "Olathe",
+    "country_en": "United States"
+  },
+  {
+    "code": "ESN",
+    "name": "Easton Newnam Field",
+    "city_en": "Easton",
+    "city_pl": "Easton",
+    "country_en": "United States"
+  },
+  {
+    "code": "HMR",
+    "name": "Stafsberg Airport",
+    "city_en": "Hamar",
+    "city_pl": "Hamar",
+    "country_en": "Norway"
+  },
+  {
+    "code": "MYV",
+    "name": "Yuba County Airport",
+    "city_en": "Yuba City",
+    "city_pl": "Yuba City",
+    "country_en": "United States"
+  },
+  {
+    "code": "DUC",
+    "name": "Halliburton Field",
+    "city_en": "Duncan",
+    "city_pl": "Duncan",
+    "country_en": "United States"
+  },
+  {
+    "code": "UVA",
+    "name": "Garner Field",
+    "city_en": "Uvalde",
+    "city_pl": "Uvalde",
+    "country_en": "United States"
+  },
+  {
+    "code": "LOT",
+    "name": "Lewis University Airport",
+    "city_en": "Lockport",
+    "city_pl": "Lockport",
+    "country_en": "United States"
+  },
+  {
+    "code": "CCR",
+    "name": "Buchanan Field",
+    "city_en": "Concord",
+    "city_pl": "Concord",
+    "country_en": "United States"
+  },
+  {
+    "code": "OCA",
+    "name": "Ocean Reef Club Airport",
+    "city_en": "Ocean Reef Club Airport",
+    "city_pl": "Ocean Reef Club Airport",
+    "country_en": "United States"
+  },
+  {
+    "code": "YUS",
+    "name": "Yushu Batang Airport",
+    "city_en": "Yushu",
+    "city_pl": "Yushu",
+    "country_en": "China"
+  },
+  {
+    "code": "HIA",
+    "name": "Lianshui Airport",
+    "city_en": "Huai An",
+    "city_pl": "Huai An",
+    "country_en": "China"
+  },
+  {
+    "code": "YOO",
+    "name": "Toronto/Oshawa Executive Airport",
+    "city_en": "Oshawa",
+    "city_pl": "Oshawa",
+    "country_en": "Canada"
+  },
+  {
+    "code": "LHA",
+    "name": "Lahr Airport",
+    "city_en": "Lahr",
+    "city_pl": "Lahr",
+    "country_en": "Germany"
+  },
+  {
+    "code": "NYW",
+    "name": "Monywar Airport",
+    "city_en": "Monywa",
+    "city_pl": "Monywa",
+    "country_en": "Burma"
+  },
+  {
+    "code": "ATO",
+    "name": "Ohio University Snyder Field",
+    "city_en": "Athens",
+    "city_pl": "Ateny",
+    "country_en": "United States"
+  },
+  {
+    "code": "SGH",
+    "name": "Springfield-Beckley Municipal Airport",
+    "city_en": "Springfield",
+    "city_pl": "Springfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "HEX",
+    "name": "Herrera Airport",
+    "city_en": "Santo Domingo",
+    "city_pl": "Santo Domingo",
+    "country_en": "Dominican Republic"
+  },
+  {
+    "code": "CDA",
+    "name": "Cooinda Airport",
+    "city_en": "Cooinda",
+    "city_pl": "Cooinda",
+    "country_en": "Australia"
+  },
+  {
+    "code": "JAB",
+    "name": "Jabiru Airport",
+    "city_en": "Jabiru",
+    "city_pl": "Jabiru",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HGS",
+    "name": "Hastings Airport",
+    "city_en": "Freetown",
+    "city_pl": "Freetown",
+    "country_en": "Sierra Leone"
+  },
+  {
+    "code": "TOP",
+    "name": "Philip Billard Municipal Airport",
+    "city_en": "Topeka",
+    "city_pl": "Topeka",
+    "country_en": "United States"
+  },
+  {
+    "code": "MQY",
+    "name": "Smyrna Airport",
+    "city_en": "Smyrna",
+    "city_pl": "Smyrna",
+    "country_en": "United States"
+  },
+  {
+    "code": "UOS",
+    "name": "Franklin County Airport",
+    "city_en": "Sewanee",
+    "city_pl": "Sewanee",
+    "country_en": "United States"
+  },
+  {
+    "code": "NGQ",
+    "name": "Ngari Gunsa Airport",
+    "city_en": "Shiquanhe",
+    "city_pl": "Shiquanhe",
+    "country_en": "China"
+  },
+  {
+    "code": "CSO",
+    "name": "Cochstedt Airport",
+    "city_en": "Cochstedt",
+    "city_pl": "Cochstedt",
+    "country_en": "Germany"
+  },
+  {
+    "code": "PWK",
+    "name": "Chicago Executive Airport",
+    "city_en": "Chicago-Wheeling",
+    "city_pl": "Chicago-Wheeling",
+    "country_en": "United States"
+  },
+  {
+    "code": "KLS",
+    "name": "Southwest Washington Regional Airport",
+    "city_en": "Kelso",
+    "city_pl": "Kelso",
+    "country_en": "United States"
+  },
+  {
+    "code": "ZTA",
+    "name": "Tureia Airport",
+    "city_en": "Tureia",
+    "city_pl": "Tureia",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "PUE",
+    "name": "Puerto Obaldia Airport",
+    "city_en": "Puerto Obaldia",
+    "city_pl": "Puerto Obaldia",
+    "country_en": "Panama"
+  },
+  {
+    "code": "KHC",
+    "name": "Kerch Airport",
+    "city_en": "Kerch",
+    "city_pl": "Kerch",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "UKA",
+    "name": "Ukunda Airstrip",
+    "city_en": "Ukunda",
+    "city_pl": "Ukunda",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "ILN",
+    "name": "Wilmington Airpark",
+    "city_en": "Wilmington",
+    "city_pl": "Wilmington",
+    "country_en": "United States"
+  },
+  {
+    "code": "AVW",
+    "name": "Marana Regional Airport",
+    "city_en": "Tucson",
+    "city_pl": "Tucson",
+    "country_en": "United States"
+  },
+  {
+    "code": "CGZ",
+    "name": "Casa Grande Municipal Airport",
+    "city_en": "Casa Grande",
+    "city_pl": "Casa Grande",
+    "country_en": "United States"
+  },
+  {
+    "code": "BXK",
+    "name": "Buckeye Municipal Airport",
+    "city_en": "Buckeye",
+    "city_pl": "Buckeye",
+    "country_en": "United States"
+  },
+  {
+    "code": "MMI",
+    "name": "McMinn County Airport",
+    "city_en": "Athens",
+    "city_pl": "Ateny",
+    "country_en": "United States"
+  },
+  {
+    "code": "STK",
+    "name": "Sterling Municipal Airport",
+    "city_en": "Sterling",
+    "city_pl": "Sterling",
+    "country_en": "United States"
+  },
+  {
+    "code": "RWL",
+    "name": "Rawlins Municipal Airport/Harvey Field",
+    "city_en": "Rawlins",
+    "city_pl": "Rawlins",
+    "country_en": "United States"
+  },
+  {
+    "code": "CDW",
+    "name": "Essex County Airport",
+    "city_en": "Caldwell",
+    "city_pl": "Caldwell",
+    "country_en": "United States"
+  },
+  {
+    "code": "AIZ",
+    "name": "Lee C Fine Memorial Airport",
+    "city_en": "Kaiser Lake Ozark",
+    "city_pl": "Kaiser Lake Ozark",
+    "country_en": "United States"
+  },
+  {
+    "code": "TVI",
+    "name": "Thomasville Regional Airport",
+    "city_en": "Thomasville",
+    "city_pl": "Thomasville",
+    "country_en": "United States"
+  },
+  {
+    "code": "HSH",
+    "name": "Henderson Executive Airport",
+    "city_en": "Henderson",
+    "city_pl": "Henderson",
+    "country_en": "United States"
+  },
+  {
+    "code": "GML",
+    "name": "Gostomel Airport",
+    "city_en": "Kiev",
+    "city_pl": "Kiev",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "TMA",
+    "name": "Henry Tift Myers Airport",
+    "city_en": "Tifton",
+    "city_pl": "Tifton",
+    "country_en": "United States"
+  },
+  {
+    "code": "RDO",
+    "name": "Radom Airport",
+    "city_en": "RADOM",
+    "city_pl": "RADOM",
+    "country_en": "Poland"
+  },
+  {
+    "code": "DVT",
+    "name": "Phoenix Deer Valley Airport",
+    "city_en": "Phoenix",
+    "city_pl": "Phoenix",
+    "country_en": "United States"
+  },
+  {
+    "code": "YRV",
+    "name": "Revelstoke Airport",
+    "city_en": "Revelstoke",
+    "city_pl": "Revelstoke",
+    "country_en": "Canada"
+  },
+  {
+    "code": "FRG",
+    "name": "Republic Airport",
+    "city_en": "Farmingdale",
+    "city_pl": "Farmingdale",
+    "country_en": "United States"
+  },
+  {
+    "code": "ZHY",
+    "name": "Zhongwei Shapotou Airport",
+    "city_en": "Zhongwei",
+    "city_pl": "Zhongwei",
+    "country_en": "China"
+  },
+  {
+    "code": "MCL",
+    "name": "McKinley National Park Airport",
+    "city_en": "McKinley Park",
+    "city_pl": "McKinley Park",
+    "country_en": "United States"
+  },
+  {
+    "code": "PPC",
+    "name": "Prospect Creek Airport",
+    "city_en": "Prospect Creek",
+    "city_pl": "Prospect Creek",
+    "country_en": "United States"
+  },
+  {
+    "code": "KHW",
+    "name": "Khwai River Lodge Airport",
+    "city_en": "Khwai River",
+    "city_pl": "Khwai River",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "TXG",
+    "name": "Taichung Airport",
+    "city_en": "Taichung",
+    "city_pl": "Taichung",
+    "country_en": "Taiwan"
+  },
+  {
+    "code": "HLG",
+    "name": "Wheeling Ohio County Airport",
+    "city_en": "Wheeling",
+    "city_pl": "Wheeling",
+    "country_en": "United States"
+  },
+  {
+    "code": "XYE",
+    "name": "Ye Airport",
+    "city_en": "Ye",
+    "city_pl": "Ye",
+    "country_en": "Burma"
+  },
+  {
+    "code": "DWC",
+    "name": "Al Maktoum International Airport",
+    "city_en": "Dubai",
+    "city_pl": "Dubaj",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "RKP",
+    "name": "Aransas County Airport",
+    "city_en": "Rockport",
+    "city_pl": "Rockport",
+    "country_en": "United States"
+  },
+  {
+    "code": "MVV",
+    "name": "Megève Airport",
+    "city_en": "Verdun",
+    "city_pl": "Verdun",
+    "country_en": "France"
+  },
+  {
+    "code": "MFX",
+    "name": "Méribel Altiport",
+    "city_en": "Ajaccio",
+    "city_pl": "Ajaccio",
+    "country_en": "France"
+  },
+  {
+    "code": "AEB",
+    "name": "Baise Youjiang Airport",
+    "city_en": "Baise",
+    "city_pl": "Baise",
+    "country_en": "China"
+  },
+  {
+    "code": "OKF",
+    "name": "Okaukuejo Airport",
+    "city_en": "Okaukuejo",
+    "city_pl": "Okaukuejo",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "OKU",
+    "name": "Mokuti Lodge Airport",
+    "city_en": "Mokuti Lodge",
+    "city_pl": "Mokuti Lodge",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "KOQ",
+    "name": "Köthen Airport",
+    "city_en": "Koethen",
+    "city_pl": "Koethen",
+    "country_en": "Germany"
+  },
+  {
+    "code": "PSH",
+    "name": "St. Peter-Ording Airport",
+    "city_en": "Sankt Peter-Ording",
+    "city_pl": "Sankt Peter-Ording",
+    "country_en": "Germany"
+  },
+  {
+    "code": "TTD",
+    "name": "Portland Troutdale Airport",
+    "city_en": "Troutdale",
+    "city_pl": "Troutdale",
+    "country_en": "United States"
+  },
+  {
+    "code": "HIO",
+    "name": "Portland Hillsboro Airport",
+    "city_en": "Hillsboro",
+    "city_pl": "Hillsboro",
+    "country_en": "United States"
+  },
+  {
+    "code": "KHT",
+    "name": "Khost Airport",
+    "city_en": "Khost",
+    "city_pl": "Khost",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "NMT",
+    "name": "Namtu Airport",
+    "city_en": "Naypyidaw",
+    "city_pl": "Naypyidaw",
+    "country_en": "Burma"
+  },
+  {
+    "code": "BNO",
+    "name": "Burns Municipal Airport",
+    "city_en": "Burns",
+    "city_pl": "Burns",
+    "country_en": "United States"
+  },
+  {
+    "code": "PRZ",
+    "name": "Prineville Airport",
+    "city_en": "Prineville",
+    "city_pl": "Prineville",
+    "country_en": "United States"
+  },
+  {
+    "code": "RBL",
+    "name": "Red Bluff Municipal Airport",
+    "city_en": "Red Bluff",
+    "city_pl": "Red Bluff",
+    "country_en": "United States"
+  },
+  {
+    "code": "NOT",
+    "name": "Marin County Airport - Gnoss Field",
+    "city_en": "Novato",
+    "city_pl": "Novato",
+    "country_en": "United States"
+  },
+  {
+    "code": "LKV",
+    "name": "Lake County Airport",
+    "city_en": "Lakeview",
+    "city_pl": "Lakeview",
+    "country_en": "United States"
+  },
+  {
+    "code": "OTK",
+    "name": "Tillamook Airport",
+    "city_en": "Tillamook",
+    "city_pl": "Tillamook",
+    "country_en": "United States"
+  },
+  {
+    "code": "ONO",
+    "name": "Ontario Municipal Airport",
+    "city_en": "Ontario",
+    "city_pl": "Ontario",
+    "country_en": "United States"
+  },
+  {
+    "code": "DLS",
+    "name": "Columbia Gorge Regional the Dalles Municipal Airport",
+    "city_en": "The Dalles",
+    "city_pl": "The Dalles",
+    "country_en": "United States"
+  },
+  {
+    "code": "GAI",
+    "name": "Montgomery County Airpark",
+    "city_en": "Gaithersburg",
+    "city_pl": "Gaithersburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "OAS",
+    "name": "Sharana Airstrip",
+    "city_en": "Sharona",
+    "city_pl": "Sharona",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "YTA",
+    "name": "Pembroke Airport",
+    "city_en": "Pembroke",
+    "city_pl": "Pembroke",
+    "country_en": "Canada"
+  },
+  {
+    "code": "TSB",
+    "name": "Tsumeb Airport",
+    "city_en": "Tsumeb",
+    "city_pl": "Tsumeb",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "YSD",
+    "name": "Suffield Heliport",
+    "city_en": "Suffield",
+    "city_pl": "Suffield",
+    "country_en": "Canada"
+  },
+  {
+    "code": "BNU",
+    "name": "Blumenau Airport",
+    "city_en": "BLUMENAU",
+    "city_pl": "BLUMENAU",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "YCC",
+    "name": "Cornwall Regional Airport",
+    "city_en": "Cornwall",
+    "city_pl": "Cornwall",
+    "country_en": "Canada"
+  },
+  {
+    "code": "IZA",
+    "name": "Zona da Mata Regional Airport",
+    "city_en": "Juiz de Fora",
+    "city_pl": "Juiz de Fora",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MVL",
+    "name": "Morrisville Stowe State Airport",
+    "city_en": "Morrisville",
+    "city_pl": "Morrisville",
+    "country_en": "United States"
+  },
+  {
+    "code": "RBD",
+    "name": "Dallas Executive Airport",
+    "city_en": "Dallas",
+    "city_pl": "Dallas",
+    "country_en": "United States"
+  },
+  {
+    "code": "BXY",
+    "name": "Krainiy Airport",
+    "city_en": "Baikonur",
+    "city_pl": "Baikonur",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "WST",
+    "name": "Westerly State Airport",
+    "city_en": "Washington County",
+    "city_pl": "Washington County",
+    "country_en": "United States"
+  },
+  {
+    "code": "BID",
+    "name": "Block Island State Airport",
+    "city_en": "Block Island",
+    "city_pl": "Block Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "NME",
+    "name": "Nightmute Airport",
+    "city_en": "Nightmute",
+    "city_pl": "Nightmute",
+    "country_en": "United States"
+  },
+  {
+    "code": "OOK",
+    "name": "Toksook Bay Airport",
+    "city_en": "Toksook Bay",
+    "city_pl": "Toksook Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "OBY",
+    "name": "Ittoqqortoormiit Heliport",
+    "city_en": "Ittoqqortoormiit",
+    "city_pl": "Ittoqqortoormiit",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "VIN",
+    "name": "Vinnytsia/Gavyryshivka Airport",
+    "city_en": "Vinnitsa",
+    "city_pl": "Vinnitsa",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "BGE",
+    "name": "Decatur County Industrial Air Park",
+    "city_en": "Bainbridge",
+    "city_pl": "Bainbridge",
+    "country_en": "United States"
+  },
+  {
+    "code": "ZGS",
+    "name": "La Romaine Airport",
+    "city_en": "La Romaine",
+    "city_pl": "La Romaine",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZKG",
+    "name": "Kegaska Airport",
+    "city_en": "Kegaska",
+    "city_pl": "Kegaska",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YBI",
+    "name": "Black Tickle Airport",
+    "city_en": "Black Tickle",
+    "city_pl": "Black Tickle",
+    "country_en": "Canada"
+  },
+  {
+    "code": "WHP",
+    "name": "Whiteman Airport",
+    "city_en": "Los Angeles",
+    "city_pl": "Los Angeles",
+    "country_en": "United States"
+  },
+  {
+    "code": "MAE",
+    "name": "Madera Municipal Airport",
+    "city_en": "Madera",
+    "city_pl": "Madera",
+    "country_en": "United States"
+  },
+  {
+    "code": "YZZ",
+    "name": "Trail Airport",
+    "city_en": "Trail",
+    "city_pl": "Trail",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAB",
+    "name": "Old Arctic Bay Airport",
+    "city_en": "Arctic Bay",
+    "city_pl": "Arctic Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "GSI",
+    "name": "Grand-Santi Airport",
+    "city_en": "Grand-Santi",
+    "city_pl": "Grand-Santi",
+    "country_en": "French Guiana"
+  },
+  {
+    "code": "MPY",
+    "name": "Maripasoula Airport",
+    "city_en": "Maripasoula",
+    "city_pl": "Maripasoula",
+    "country_en": "French Guiana"
+  },
+  {
+    "code": "LDX",
+    "name": "Saint-Laurent-du-Maroni Airport",
+    "city_en": "Saint-Laurent-du-Maroni",
+    "city_pl": "Saint-Laurent-du-Maroni",
+    "country_en": "French Guiana"
+  },
+  {
+    "code": "KJI",
+    "name": "Kanas Airport",
+    "city_en": "Burqin",
+    "city_pl": "Burqin",
+    "country_en": "China"
+  },
+  {
+    "code": "CPB",
+    "name": "Capurganá Airport",
+    "city_en": "Capurgana",
+    "city_pl": "Capurgana",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "HMB",
+    "name": "Sohag International Airport",
+    "city_en": "Sohag",
+    "city_pl": "Sohag",
+    "country_en": "Egypt"
+  },
+  {
+    "code": "RVY",
+    "name": "Presidente General Don Oscar D. Gestido International Airport",
+    "city_en": "Rivera",
+    "city_pl": "Rivera",
+    "country_en": "Uruguay"
+  },
+  {
+    "code": "POJ",
+    "name": "Patos de Minas Airport",
+    "city_en": "Patos de Minas",
+    "city_pl": "Patos de Minas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "JTC",
+    "name": "Bauru - Arealva Airport",
+    "city_en": "Bauru",
+    "city_pl": "Bauru",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "OIA",
+    "name": "Ourilândia do Norte Airport",
+    "city_en": "Ourilandia do Norte",
+    "city_pl": "Ourilandia do Norte",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "RDC",
+    "name": "Redenção Airport",
+    "city_en": "Redencao",
+    "city_pl": "Redencao",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SXX",
+    "name": "São Félix do Xingu Airport",
+    "city_en": "Sao Felix do Xingu",
+    "city_pl": "Sao Felix do Xingu",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BYO",
+    "name": "Bonito Airport",
+    "city_en": "Bointo",
+    "city_pl": "Bointo",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SXO",
+    "name": "São Félix do Araguaia Airport",
+    "city_en": "Sao Felix do Araguaia",
+    "city_pl": "Sao Felix do Araguaia",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CFC",
+    "name": "Caçador Airport",
+    "city_en": "Cacador",
+    "city_pl": "Cacador",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CAF",
+    "name": "Carauari Airport",
+    "city_en": "Carauari",
+    "city_pl": "Carauari",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ERN",
+    "name": "Eirunepé Airport",
+    "city_en": "Eirunepe",
+    "city_pl": "Eirunepe",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CCI",
+    "name": "Concórdia Airport",
+    "city_en": "Concordia",
+    "city_pl": "Concordia",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "FBE",
+    "name": "Francisco Beltrão Airport",
+    "city_en": "Francisco Beltrao",
+    "city_pl": "Francisco Beltrao",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CFO",
+    "name": "Confresa Airport",
+    "city_en": "Confresa",
+    "city_pl": "Confresa",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "AAF",
+    "name": "Apalachicola Regional Airport",
+    "city_en": "Apalachicola",
+    "city_pl": "Apalachicola",
+    "country_en": "United States"
+  },
+  {
+    "code": "UMU",
+    "name": "Umuarama Airport",
+    "city_en": "Umuarama",
+    "city_pl": "Umuarama",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "DTI",
+    "name": "Diamantina Airport",
+    "city_en": "Diamantina",
+    "city_pl": "Diamantina",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "FBA",
+    "name": "Fonte Boa Airport",
+    "city_en": "Fonte Boa",
+    "city_pl": "Fonte Boa",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "OLC",
+    "name": "Senadora Eunice Micheles Airport",
+    "city_en": "Sao Paulo de Olivenca",
+    "city_pl": "Sao Paulo de Olivenca",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "HUW",
+    "name": "Humaitá Airport",
+    "city_en": "Humaita",
+    "city_pl": "Humaita",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "IRZ",
+    "name": "Tapuruquara Airport",
+    "city_en": "Santa Isabel do Rio Negro",
+    "city_pl": "Santa Isabel do Rio Negro",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ORX",
+    "name": "Oriximiná Airport",
+    "city_en": "Oriximina",
+    "city_pl": "Oriximina",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "UNA",
+    "name": "Hotel Transamérica Airport",
+    "city_en": "Una",
+    "city_pl": "Una",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TEF",
+    "name": "Telfer Airport",
+    "city_en": "Telfer",
+    "city_pl": "Telfer",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GZP",
+    "name": "Gazipaşa Airport",
+    "city_en": "Alanya",
+    "city_pl": "Alanya",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "OAA",
+    "name": "Shank Air Base",
+    "city_en": "Shank",
+    "city_pl": "Shank",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "FPR",
+    "name": "St Lucie County International Airport",
+    "city_en": "Fort Pierce",
+    "city_pl": "Fort Pierce",
+    "country_en": "United States"
+  },
+  {
+    "code": "PYM",
+    "name": "Plymouth Municipal Airport",
+    "city_en": "Plymouth",
+    "city_pl": "Plymouth",
+    "country_en": "United States"
+  },
+  {
+    "code": "NCO",
+    "name": "Quonset State Airport",
+    "city_en": "North Kingstown",
+    "city_pl": "North Kingstown",
+    "country_en": "United States"
+  },
+  {
+    "code": "OWD",
+    "name": "Norwood Memorial Airport",
+    "city_en": "Norwood",
+    "city_pl": "Norwood",
+    "country_en": "United States"
+  },
+  {
+    "code": "BAF",
+    "name": "Westfield-Barnes Regional Airport",
+    "city_en": "Westfield",
+    "city_pl": "Westfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "MGJ",
+    "name": "Orange County Airport",
+    "city_en": "Montgomery",
+    "city_pl": "Montgomery",
+    "country_en": "United States"
+  },
+  {
+    "code": "HAR",
+    "name": "Capital City Airport",
+    "city_en": "Harrisburg",
+    "city_pl": "Harrisburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "DXR",
+    "name": "Danbury Municipal Airport",
+    "city_en": "Danbury",
+    "city_pl": "Danbury",
+    "country_en": "United States"
+  },
+  {
+    "code": "ASH",
+    "name": "Boire Field",
+    "city_en": "Nashua",
+    "city_pl": "Nashua",
+    "country_en": "United States"
+  },
+  {
+    "code": "LWM",
+    "name": "Lawrence Municipal Airport",
+    "city_en": "Lawrence",
+    "city_pl": "Lawrence",
+    "country_en": "United States"
+  },
+  {
+    "code": "OXC",
+    "name": "Waterbury Oxford Airport",
+    "city_en": "Oxford",
+    "city_pl": "Oxford",
+    "country_en": "United States"
+  },
+  {
+    "code": "RMG",
+    "name": "Richard B Russell Airport",
+    "city_en": "Rome",
+    "city_pl": "Rzym",
+    "country_en": "United States"
+  },
+  {
+    "code": "GAD",
+    "name": "Northeast Alabama Regional Airport",
+    "city_en": "Gadsden",
+    "city_pl": "Gadsden",
+    "country_en": "United States"
+  },
+  {
+    "code": "WDR",
+    "name": "Barrow County Airport",
+    "city_en": "Winder",
+    "city_pl": "Winder",
+    "country_en": "United States"
+  },
+  {
+    "code": "DNN",
+    "name": "Dalton Municipal Airport",
+    "city_en": "Dalton",
+    "city_pl": "Dalton",
+    "country_en": "United States"
+  },
+  {
+    "code": "LGC",
+    "name": "LaGrange Callaway Airport",
+    "city_en": "LaGrange",
+    "city_pl": "LaGrange",
+    "country_en": "United States"
+  },
+  {
+    "code": "PIM",
+    "name": "Harris County Airport",
+    "city_en": "Pine Mountain",
+    "city_pl": "Pine Mountain",
+    "country_en": "United States"
+  },
+  {
+    "code": "GVL",
+    "name": "Lee Gilmer Memorial Airport",
+    "city_en": "Gainesville",
+    "city_pl": "Gainesville",
+    "country_en": "United States"
+  },
+  {
+    "code": "PHD",
+    "name": "Harry Clever Field",
+    "city_en": "New Philadelpha",
+    "city_pl": "New Philadelpha",
+    "country_en": "United States"
+  },
+  {
+    "code": "HHH",
+    "name": "Hilton Head Airport",
+    "city_en": "Hilton Head Island",
+    "city_pl": "Hilton Head Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "DNL",
+    "name": "Daniel Field",
+    "city_en": "Augusta",
+    "city_pl": "Augusta",
+    "country_en": "United States"
+  },
+  {
+    "code": "MRN",
+    "name": "Foothills Regional Airport",
+    "city_en": "Morganton",
+    "city_pl": "Morganton",
+    "country_en": "United States"
+  },
+  {
+    "code": "PVL",
+    "name": "Pike County-Hatcher Field",
+    "city_en": "Pikeville",
+    "city_pl": "Pikeville",
+    "country_en": "United States"
+  },
+  {
+    "code": "TOC",
+    "name": "Toccoa Airport - R.G. Letourneau Field",
+    "city_en": "Toccoa",
+    "city_pl": "Toccoa",
+    "country_en": "United States"
+  },
+  {
+    "code": "PLV",
+    "name": "Suprunovka Airport",
+    "city_en": "Poltava",
+    "city_pl": "Poltava",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "WUU",
+    "name": "Wau Airport",
+    "city_en": "Wau",
+    "city_pl": "Wau",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "HUE",
+    "name": "Humera Airport",
+    "city_en": "Humera",
+    "city_pl": "Humera",
+    "country_en": "Ethiopia"
+  },
+  {
+    "code": "OYL",
+    "name": "Moyale Airport",
+    "city_en": "Moyale",
+    "city_pl": "Moyale",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "OZG",
+    "name": "Zagora Airport",
+    "city_en": "Zagora",
+    "city_pl": "Zagora",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "WYE",
+    "name": "Yengema Airport",
+    "city_en": "Yengema",
+    "city_pl": "Yengema",
+    "country_en": "Sierra Leone"
+  },
+  {
+    "code": "GBK",
+    "name": "Gbangbatok Airport",
+    "city_en": "Gbangbatok",
+    "city_pl": "Gbangbatok",
+    "country_en": "Sierra Leone"
+  },
+  {
+    "code": "THX",
+    "name": "Turukhansk Airport",
+    "city_en": "Turukhansk",
+    "city_pl": "Turukhansk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "TGP",
+    "name": "Podkamennaya Tunguska Airport",
+    "city_en": "Bor",
+    "city_pl": "Bor",
+    "country_en": "Russia"
+  },
+  {
+    "code": "AFW",
+    "name": "Fort Worth Alliance Airport",
+    "city_en": "Fort Worth",
+    "city_pl": "Fort Worth",
+    "country_en": "United States"
+  },
+  {
+    "code": "RMK",
+    "name": "Renmark Airport",
+    "city_en": "Renmark",
+    "city_pl": "Renmark",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LGH",
+    "name": "Leigh Creek Airport",
+    "city_en": "Leigh Creek",
+    "city_pl": "Leigh Creek",
+    "country_en": "Australia"
+  },
+  {
+    "code": "RTS",
+    "name": "Rottnest Island Airport",
+    "city_en": "Rottnest Island",
+    "city_pl": "Rottnest Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "FOS",
+    "name": "Forrest Airport",
+    "city_en": "Forrest",
+    "city_pl": "Forrest",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KEW",
+    "name": "Keewaywin Airport",
+    "city_en": "Keewaywin",
+    "city_pl": "Keewaywin",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSP",
+    "name": "Marathon Airport",
+    "city_en": "Marathon",
+    "city_pl": "Marathon",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHF",
+    "name": "Hearst René Fontaine Municipal Airport",
+    "city_en": "Hearst",
+    "city_pl": "Hearst",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHN",
+    "name": "Hornepayne Municipal Airport",
+    "city_en": "Hornepayne",
+    "city_pl": "Hornepayne",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKX",
+    "name": "Kirkland Lake Airport",
+    "city_en": "Kirkland Lake",
+    "city_pl": "Kirkland Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YMG",
+    "name": "Manitouwadge Airport",
+    "city_en": "Manitouwadge",
+    "city_pl": "Manitouwadge",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXZ",
+    "name": "Wawa Airport",
+    "city_en": "Wawa",
+    "city_pl": "Wawa",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YEM",
+    "name": "Manitoulin East Municipal Airport",
+    "city_en": "Manitowaning",
+    "city_pl": "Manitowaning",
+    "country_en": "Canada"
+  },
+  {
+    "code": "LWC",
+    "name": "Lawrence Municipal Airport",
+    "city_en": "Lawrence",
+    "city_pl": "Lawrence",
+    "country_en": "United States"
+  },
+  {
+    "code": "PPM",
+    "name": "Pompano Beach Airpark",
+    "city_en": "Pompano Beach",
+    "city_pl": "Pompano Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "XMC",
+    "name": "Mallacoota Airport",
+    "city_en": "Mallacoota",
+    "city_pl": "Mallacoota",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ULH",
+    "name": "Majeed Bin Abdulaziz Airport",
+    "city_en": "Al-Ula",
+    "city_pl": "Al-Ula",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "YUE",
+    "name": "Yuendumu Airport",
+    "city_en": "Yuendumu",
+    "city_pl": "Yuendumu",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LOP",
+    "name": "Lombok International Airport",
+    "city_en": "Praya",
+    "city_pl": "Praya",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "ZMH",
+    "name": "South Cariboo Region / 108 Mile Airport",
+    "city_en": "108 Mile Ranch",
+    "city_pl": "108 Mile Ranch",
+    "country_en": "Canada"
+  },
+  {
+    "code": "HDG",
+    "name": "Handan Airport",
+    "city_en": "Handan",
+    "city_pl": "Handan",
+    "country_en": "China"
+  },
+  {
+    "code": "LOZ",
+    "name": "London-Corbin Airport/Magee Field",
+    "city_en": "London",
+    "city_pl": "Londyn",
+    "country_en": "United States"
+  },
+  {
+    "code": "FBG",
+    "name": "Simmons Army Air Field",
+    "city_en": "Fredericksburg",
+    "city_pl": "Fredericksburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "WMI",
+    "name": "Modlin Airport",
+    "city_en": "Warsaw",
+    "city_pl": "Warszawa",
+    "country_en": "Poland"
+  },
+  {
+    "code": "JXA",
+    "name": "Jixi Xingkaihu Airport",
+    "city_en": "Jixi",
+    "city_pl": "Jixi",
+    "country_en": "China"
+  },
+  {
+    "code": "JDG",
+    "name": "Jeongseok Airport",
+    "city_en": "Seogwipo",
+    "city_pl": "Seogwipo",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "YGM",
+    "name": "Gimli Industrial Park Airport",
+    "city_en": "Gimli",
+    "city_pl": "Gimli",
+    "country_en": "Canada"
+  },
+  {
+    "code": "EYK",
+    "name": "Beloyarskiy Airport",
+    "city_en": "Beloyarsky",
+    "city_pl": "Beloyarsky",
+    "country_en": "Russia"
+  },
+  {
+    "code": "RAC",
+    "name": "John H Batten Airport",
+    "city_en": "Racine",
+    "city_pl": "Racine",
+    "country_en": "United States"
+  },
+  {
+    "code": "RZP",
+    "name": "Cesar Lim Rodriguez Airport",
+    "city_en": "Taytay",
+    "city_pl": "Taytay",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "RKZ",
+    "name": "Shigatse Air Base",
+    "city_en": "Shigatse",
+    "city_pl": "Shigatse",
+    "country_en": "China"
+  },
+  {
+    "code": "TIW",
+    "name": "Tacoma Narrows Airport",
+    "city_en": "Tacoma",
+    "city_pl": "Tacoma",
+    "country_en": "United States"
+  },
+  {
+    "code": "GUF",
+    "name": "Jack Edwards Airport",
+    "city_en": "Gulf Shores",
+    "city_pl": "Gulf Shores",
+    "country_en": "United States"
+  },
+  {
+    "code": "IBB",
+    "name": "General Villamil Airport",
+    "city_en": "Isabela",
+    "city_pl": "Isabela",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "HMJ",
+    "name": "Khmelnytskyi Airport",
+    "city_en": "Khmeinitskiy",
+    "city_pl": "Khmeinitskiy",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "HIW",
+    "name": "Hiroshimanishi Airport",
+    "city_en": "Hiroshima",
+    "city_pl": "Hiroshima",
+    "country_en": "Japan"
+  },
+  {
+    "code": "KYI",
+    "name": "Yalata Mission Airport",
+    "city_en": "Yalata",
+    "city_pl": "Yalata",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HZL",
+    "name": "Hazleton Municipal Airport",
+    "city_en": "Hazleton",
+    "city_pl": "Hazleton",
+    "country_en": "United States"
+  },
+  {
+    "code": "CBE",
+    "name": "Greater Cumberland Regional Airport",
+    "city_en": "Cumberland",
+    "city_pl": "Cumberland",
+    "country_en": "United States"
+  },
+  {
+    "code": "WYN",
+    "name": "Wyndham Airport",
+    "city_en": "Wyndham",
+    "city_pl": "Wyndham",
+    "country_en": "Australia"
+  },
+  {
+    "code": "YBO",
+    "name": "Bob Quinn Lake Airport",
+    "city_en": "Bob Quinn Lake",
+    "city_pl": "Bob Quinn Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "KLF",
+    "name": "Grabtsevo Airport",
+    "city_en": "Kaluga",
+    "city_pl": "Kaluga",
+    "country_en": "Russia"
+  },
+  {
+    "code": "LNR",
+    "name": "Tri-County Regional Airport",
+    "city_en": "Lone Rock",
+    "city_pl": "Lone Rock",
+    "country_en": "United States"
+  },
+  {
+    "code": "JOT",
+    "name": "Joliet Regional Airport",
+    "city_en": "Joliet",
+    "city_pl": "Joliet",
+    "country_en": "United States"
+  },
+  {
+    "code": "VYS",
+    "name": "Illinois Valley Regional Airport-Walter A Duncan Field",
+    "city_en": "Peru",
+    "city_pl": "Peru",
+    "country_en": "United States"
+  },
+  {
+    "code": "JXN",
+    "name": "Jackson County Reynolds Field",
+    "city_en": "Jackson",
+    "city_pl": "Jackson",
+    "country_en": "United States"
+  },
+  {
+    "code": "BBX",
+    "name": "Wings Field",
+    "city_en": "Philadelphia",
+    "city_pl": "Philadelphia",
+    "country_en": "United States"
+  },
+  {
+    "code": "OBE",
+    "name": "Okeechobee County Airport",
+    "city_en": "Okeechobee",
+    "city_pl": "Okeechobee",
+    "country_en": "United States"
+  },
+  {
+    "code": "SEF",
+    "name": "Sebring Regional Airport",
+    "city_en": "Sebring",
+    "city_pl": "Sebring",
+    "country_en": "United States"
+  },
+  {
+    "code": "AVO",
+    "name": "Avon Park Executive Airport",
+    "city_en": "Avon Park",
+    "city_pl": "Avon Park",
+    "country_en": "United States"
+  },
+  {
+    "code": "GIF",
+    "name": "Winter Haven Regional Airport - Gilbert Field",
+    "city_en": "Winter Haven",
+    "city_pl": "Winter Haven",
+    "country_en": "United States"
+  },
+  {
+    "code": "ZPH",
+    "name": "Zephyrhills Municipal Airport",
+    "city_en": "Zephyrhills",
+    "city_pl": "Zephyrhills",
+    "country_en": "United States"
+  },
+  {
+    "code": "OCF",
+    "name": "Ocala International Airport - Jim Taylor Field",
+    "city_en": "Ocala",
+    "city_pl": "Ocala",
+    "country_en": "United States"
+  },
+  {
+    "code": "AIK",
+    "name": "Aiken Regional Airport",
+    "city_en": "Aiken",
+    "city_pl": "Aiken",
+    "country_en": "United States"
+  },
+  {
+    "code": "CDN",
+    "name": "Woodward Field",
+    "city_en": "Camden",
+    "city_pl": "Camden",
+    "country_en": "United States"
+  },
+  {
+    "code": "LBT",
+    "name": "Lumberton Regional Airport",
+    "city_en": "Lumberton",
+    "city_pl": "Lumberton",
+    "country_en": "United States"
+  },
+  {
+    "code": "SOP",
+    "name": "Moore County Airport",
+    "city_en": "Pinehurst-Southern Pines",
+    "city_pl": "Pinehurst-Southern Pines",
+    "country_en": "United States"
+  },
+  {
+    "code": "SVH",
+    "name": "Statesville Regional Airport",
+    "city_en": "Statesville",
+    "city_pl": "Statesville",
+    "country_en": "United States"
+  },
+  {
+    "code": "LHV",
+    "name": "William T. Piper Memorial Airport",
+    "city_en": "Lock Haven",
+    "city_pl": "Lock Haven",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKL",
+    "name": "Burke Lakefront Airport",
+    "city_en": "Cleveland",
+    "city_pl": "Cleveland",
+    "country_en": "United States"
+  },
+  {
+    "code": "DKK",
+    "name": "Chautauqua County-Dunkirk Airport",
+    "city_en": "Dunkirk",
+    "city_pl": "Dunkirk",
+    "country_en": "United States"
+  },
+  {
+    "code": "LLY",
+    "name": "South Jersey Regional Airport",
+    "city_en": "Mount Holly",
+    "city_pl": "Mount Holly",
+    "country_en": "United States"
+  },
+  {
+    "code": "LDJ",
+    "name": "Linden Airport",
+    "city_en": "Linden",
+    "city_pl": "Linden",
+    "country_en": "United States"
+  },
+  {
+    "code": "ANQ",
+    "name": "Tri State Steuben County Airport",
+    "city_en": "Angola",
+    "city_pl": "Angola",
+    "country_en": "United States"
+  },
+  {
+    "code": "CLW",
+    "name": "Clearwater Air Park",
+    "city_en": "Clearwater",
+    "city_pl": "Clearwater",
+    "country_en": "United States"
+  },
+  {
+    "code": "CGX",
+    "name": "Chicago Meigs Airport",
+    "city_en": "Chicago",
+    "city_pl": "Chicago",
+    "country_en": "United States"
+  },
+  {
+    "code": "CRE",
+    "name": "Grand Strand Airport",
+    "city_en": "North Myrtle Beach",
+    "city_pl": "North Myrtle Beach",
+    "country_en": "United States"
+  },
+  {
+    "code": "BXO",
+    "name": "Buochs Airport",
+    "city_en": "Buochs",
+    "city_pl": "Buochs",
+    "country_en": "Switzerland"
+  },
+  {
+    "code": "WBW",
+    "name": "Wilkes Barre Wyoming Valley Airport",
+    "city_en": "Wilkes-Barre",
+    "city_pl": "Wilkes-Barre",
+    "country_en": "United States"
+  },
+  {
+    "code": "LNN",
+    "name": "Willoughby Lost Nation Municipal Airport",
+    "city_en": "Willoughby",
+    "city_pl": "Willoughby",
+    "country_en": "United States"
+  },
+  {
+    "code": "UMD",
+    "name": "Uummannaq Heliport",
+    "city_en": "Uummannaq",
+    "city_pl": "Uummannaq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "RLK",
+    "name": "Bayannur Tianjitai Airport",
+    "city_en": "Bayannur",
+    "city_pl": "Bayannur",
+    "country_en": "China"
+  },
+  {
+    "code": "FFT",
+    "name": "Capital City Airport",
+    "city_en": "Frankfort",
+    "city_pl": "Frankfort",
+    "country_en": "United States"
+  },
+  {
+    "code": "LEW",
+    "name": "Auburn Lewiston Municipal Airport",
+    "city_en": "Lewiston",
+    "city_pl": "Lewiston",
+    "country_en": "United States"
+  },
+  {
+    "code": "MRK",
+    "name": "Marco Island Executive Airport",
+    "city_en": "Marco Island Airport",
+    "city_pl": "Marco Island Airport",
+    "country_en": "United States"
+  },
+  {
+    "code": "DRE",
+    "name": "Drummond Island Airport",
+    "city_en": "Drummond Island",
+    "city_pl": "Drummond Island",
+    "country_en": "United States"
+  },
+  {
+    "code": "GDW",
+    "name": "Gladwin Zettel Memorial Airport",
+    "city_en": "Gladwin",
+    "city_pl": "Gladwin",
+    "country_en": "United States"
+  },
+  {
+    "code": "MFI",
+    "name": "Marshfield Municipal Airport",
+    "city_en": "Marshfield",
+    "city_pl": "Marshfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "ISW",
+    "name": "Alexander Field South Wood County Airport",
+    "city_en": "Wisconsin Rapids",
+    "city_pl": "Wisconsin Rapids",
+    "country_en": "United States"
+  },
+  {
+    "code": "CWI",
+    "name": "Clinton Municipal Airport",
+    "city_en": "Clinton",
+    "city_pl": "Clinton",
+    "country_en": "United States"
+  },
+  {
+    "code": "BVY",
+    "name": "Beverly Municipal Airport",
+    "city_en": "Beverly",
+    "city_pl": "Beverly",
+    "country_en": "United States"
+  },
+  {
+    "code": "OSF",
+    "name": "Ostafyevo International Airport",
+    "city_en": "Moscow",
+    "city_pl": "Moscow",
+    "country_en": "Russia"
+  },
+  {
+    "code": "YRQ",
+    "name": "Trois-Rivières Airport",
+    "city_en": "Trois Rivieres",
+    "city_pl": "Trois Rivieres",
+    "country_en": "Canada"
+  },
+  {
+    "code": "POF",
+    "name": "Poplar Bluff Municipal Airport",
+    "city_en": "Poplar Bluff",
+    "city_pl": "Poplar Bluff",
+    "country_en": "United States"
+  },
+  {
+    "code": "EOK",
+    "name": "Keokuk Municipal Airport",
+    "city_en": "Keokuk",
+    "city_pl": "Keokuk",
+    "country_en": "United States"
+  },
+  {
+    "code": "PSL",
+    "name": "Perth/Scone Airport",
+    "city_en": "Perth",
+    "city_pl": "Perth",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "STP",
+    "name": "St Paul Downtown Holman Field",
+    "city_en": "St. Paul",
+    "city_pl": "St. Paul",
+    "country_en": "United States"
+  },
+  {
+    "code": "SOO",
+    "name": "Söderhamn Airport",
+    "city_en": "Soderhamn",
+    "city_pl": "Soderhamn",
+    "country_en": "Sweden"
+  },
+  {
+    "code": "VNA",
+    "name": "Saravane Airport",
+    "city_en": "Saravane",
+    "city_pl": "Saravane",
+    "country_en": "Laos"
+  },
+  {
+    "code": "DKS",
+    "name": "Dikson Airport",
+    "city_en": "Dikson",
+    "city_pl": "Dikson",
+    "country_en": "Russia"
+  },
+  {
+    "code": "BYT",
+    "name": "Bantry Aerodrome",
+    "city_en": "Bantry",
+    "city_pl": "Bantry",
+    "country_en": "Ireland"
+  },
+  {
+    "code": "ADY",
+    "name": "Alldays Airport",
+    "city_en": "Alldays",
+    "city_pl": "Alldays",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "HAO",
+    "name": "Butler Co Regional Airport - Hogan Field",
+    "city_en": "Hamilton",
+    "city_pl": "Hamilton",
+    "country_en": "United States"
+  },
+  {
+    "code": "GAS",
+    "name": "Garissa Airport",
+    "city_en": "Garissa",
+    "city_pl": "Garissa",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "HOA",
+    "name": "Hola Airport",
+    "city_en": "Hola",
+    "city_pl": "Hola",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "KEY",
+    "name": "Kericho Airport",
+    "city_en": "Kericho",
+    "city_pl": "Kericho",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "ILU",
+    "name": "Kilaguni Airport",
+    "city_en": "Kilaguni",
+    "city_pl": "Kilaguni",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "ATJ",
+    "name": "Antsirabe Airport",
+    "city_en": "Antsirabe",
+    "city_pl": "Antsirabe",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "OVA",
+    "name": "Bekily Airport",
+    "city_en": "Bekily",
+    "city_pl": "Bekily",
+    "country_en": "Madagascar"
+  },
+  {
+    "code": "UTS",
+    "name": "Ust-Tsylma Airport",
+    "city_en": "Ust-Tsylma",
+    "city_pl": "Ust-Tsylma",
+    "country_en": "Russia"
+  },
+  {
+    "code": "RGK",
+    "name": "Gorno-Altaysk Airport",
+    "city_en": "Gorno-Altaysk",
+    "city_pl": "Gorno-Altaysk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "FLD",
+    "name": "Fond du Lac County Airport",
+    "city_en": "Fond du Lac",
+    "city_pl": "Fond du Lac",
+    "country_en": "United States"
+  },
+  {
+    "code": "STE",
+    "name": "Stevens Point Municipal Airport",
+    "city_en": "Stevens Point",
+    "city_pl": "Stevens Point",
+    "country_en": "United States"
+  },
+  {
+    "code": "MQJ",
+    "name": "Moma Airport",
+    "city_en": "Honuu",
+    "city_pl": "Honuu",
+    "country_en": "Russia"
+  },
+  {
+    "code": "PEF",
+    "name": "Peenemünde Airport",
+    "city_en": "Peenemunde",
+    "city_pl": "Peenemunde",
+    "country_en": "Germany"
+  },
+  {
+    "code": "CJN",
+    "name": "Nusawiru Airport",
+    "city_en": "Nusawiru",
+    "city_pl": "Nusawiru",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "GQQ",
+    "name": "Galion Municipal Airport",
+    "city_en": "Galion",
+    "city_pl": "Galion",
+    "country_en": "United States"
+  },
+  {
+    "code": "TPN",
+    "name": "Tiputini Airport",
+    "city_en": "Tiputini",
+    "city_pl": "Tiputini",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "PTZ",
+    "name": "Rio Amazonas Airport",
+    "city_en": "Pastaza",
+    "city_pl": "Pastaza",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "CKV",
+    "name": "Clarksville–Montgomery County Regional Airport",
+    "city_en": "Clarksville",
+    "city_pl": "Clarksville",
+    "country_en": "United States"
+  },
+  {
+    "code": "LPC",
+    "name": "Lompoc Airport",
+    "city_en": "Lompoc",
+    "city_pl": "Lompoc",
+    "country_en": "United States"
+  },
+  {
+    "code": "CTH",
+    "name": "Chester County G O Carlson Airport",
+    "city_en": "Coatesville",
+    "city_pl": "Coatesville",
+    "country_en": "United States"
+  },
+  {
+    "code": "BST",
+    "name": "Bost Airport",
+    "city_en": "Lashkar Gah",
+    "city_pl": "Lashkar Gah",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "LLK",
+    "name": "Lankaran International Airport",
+    "city_en": "Lankaran",
+    "city_pl": "Lankaran",
+    "country_en": "Azerbaijan"
+  },
+  {
+    "code": "GBB",
+    "name": "Gabala International Airport",
+    "city_en": "Qabala",
+    "city_pl": "Qabala",
+    "country_en": "Azerbaijan"
+  },
+  {
+    "code": "ZTU",
+    "name": "Zaqatala International Airport",
+    "city_en": "Zaqatala",
+    "city_pl": "Zaqatala",
+    "country_en": "Azerbaijan"
+  },
+  {
+    "code": "LKP",
+    "name": "Lake Placid Airport",
+    "city_en": "Lake Placid",
+    "city_pl": "Lake Placid",
+    "country_en": "United States"
+  },
+  {
+    "code": "KDY",
+    "name": "Typliy Klyuch Airport",
+    "city_en": "Khandyga",
+    "city_pl": "Khandyga",
+    "country_en": "Russia"
+  },
+  {
+    "code": "GYG",
+    "name": "Magan Airport",
+    "city_en": "Yakutsk",
+    "city_pl": "Yakutsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "JIQ",
+    "name": "Qianjiang Wulingshan Airport",
+    "city_en": "Qianjiang",
+    "city_pl": "Qianjiang",
+    "country_en": "China"
+  },
+  {
+    "code": "AOH",
+    "name": "Lima Allen County Airport",
+    "city_en": "Lima",
+    "city_pl": "Lima",
+    "country_en": "United States"
+  },
+  {
+    "code": "DSO",
+    "name": "Sondok Airport",
+    "city_en": "Hamhung",
+    "city_pl": "Hamhung",
+    "country_en": "North Korea"
+  },
+  {
+    "code": "SSI",
+    "name": "Malcolm McKinnon Airport",
+    "city_en": "Brunswick",
+    "city_pl": "Brunswick",
+    "country_en": "United States"
+  },
+  {
+    "code": "BFP",
+    "name": "Beaver County Airport",
+    "city_en": "Beaver Falls",
+    "city_pl": "Beaver Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "GGE",
+    "name": "Georgetown County Airport",
+    "city_en": "Georgetown",
+    "city_pl": "Georgetown",
+    "country_en": "United States"
+  },
+  {
+    "code": "HDI",
+    "name": "Hardwick Field",
+    "city_en": "Cleveland",
+    "city_pl": "Cleveland",
+    "country_en": "United States"
+  },
+  {
+    "code": "RNT",
+    "name": "Renton Municipal Airport",
+    "city_en": "Renton",
+    "city_pl": "Renton",
+    "country_en": "United States"
+  },
+  {
+    "code": "POC",
+    "name": "Brackett Field",
+    "city_en": "La Verne",
+    "city_pl": "La Verne",
+    "country_en": "United States"
+  },
+  {
+    "code": "CTY",
+    "name": "Cross City Airport",
+    "city_en": "Cross City",
+    "city_pl": "Cross City",
+    "country_en": "United States"
+  },
+  {
+    "code": "CEU",
+    "name": "Oconee County Regional Airport",
+    "city_en": "Clemson",
+    "city_pl": "Clemson",
+    "country_en": "United States"
+  },
+  {
+    "code": "BEC",
+    "name": "Beech Factory Airport",
+    "city_en": "Wichita",
+    "city_pl": "Wichita",
+    "country_en": "United States"
+  },
+  {
+    "code": "QFO",
+    "name": "Duxford Aerodrome",
+    "city_en": "Duxford",
+    "city_pl": "Duxford",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "SNY",
+    "name": "Sidney Municipal-Lloyd W Carr Field",
+    "city_en": "Sidney",
+    "city_pl": "Sidney",
+    "country_en": "United States"
+  },
+  {
+    "code": "GKL",
+    "name": "Great Keppel Is Airport",
+    "city_en": "Great Keppel Island",
+    "city_pl": "Great Keppel Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "RPB",
+    "name": "Roper Bar Airport",
+    "city_en": "Roper Bar",
+    "city_pl": "Roper Bar",
+    "country_en": "Australia"
+  },
+  {
+    "code": "IFL",
+    "name": "Innisfail Airport",
+    "city_en": "Innisfail",
+    "city_pl": "Innisfail",
+    "country_en": "Australia"
+  },
+  {
+    "code": "JRF",
+    "name": "Kalaeloa Airport",
+    "city_en": "Kapolei",
+    "city_pl": "Kapolei",
+    "country_en": "United States"
+  },
+  {
+    "code": "BIN",
+    "name": "Bamiyan Airport",
+    "city_en": "Bamyan",
+    "city_pl": "Bamyan",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "NBS",
+    "name": "Changbaishan Airport",
+    "city_en": "Baishan",
+    "city_pl": "Baishan",
+    "country_en": "China"
+  },
+  {
+    "code": "RGO",
+    "name": "Orang Airport",
+    "city_en": "Chongjin",
+    "city_pl": "Chongjin",
+    "country_en": "North Korea"
+  },
+  {
+    "code": "MOO",
+    "name": "Moomba Airport",
+    "city_en": "Moomba",
+    "city_pl": "Moomba",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LUZ",
+    "name": "Lublin Airport",
+    "city_en": "Lublin",
+    "city_pl": "Lublin",
+    "country_en": "Poland"
+  },
+  {
+    "code": "ECA",
+    "name": "Iosco County Airport",
+    "city_en": "East Tawas",
+    "city_pl": "East Tawas",
+    "country_en": "United States"
+  },
+  {
+    "code": "VAM",
+    "name": "Villa Airport",
+    "city_en": "Maamigili",
+    "city_pl": "Maamigili",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "LLF",
+    "name": "Lingling Airport",
+    "city_en": "Yongzhou",
+    "city_pl": "Yongzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "LSZ",
+    "name": "Lošinj Island Airport",
+    "city_en": "Mali Losinj",
+    "city_pl": "Mali Losinj",
+    "country_en": "Croatia"
+  },
+  {
+    "code": "ONS",
+    "name": "Onslow Airport",
+    "city_en": "Onslow",
+    "city_pl": "Onslow",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TDR",
+    "name": "Theodore Airport",
+    "city_en": "Theodore",
+    "city_pl": "Theodore",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WBU",
+    "name": "Boulder Municipal Airport",
+    "city_en": "Boulder",
+    "city_pl": "Boulder",
+    "country_en": "United States"
+  },
+  {
+    "code": "BBJ",
+    "name": "Bitburg Airport",
+    "city_en": "Birburg",
+    "city_pl": "Birburg",
+    "country_en": "Germany"
+  },
+  {
+    "code": "PAO",
+    "name": "Palo Alto Airport of Santa Clara County",
+    "city_en": "Palo Alto",
+    "city_pl": "Palo Alto",
+    "country_en": "United States"
+  },
+  {
+    "code": "USR",
+    "name": "Ust-Nera Airport",
+    "city_en": "Ust-Nera",
+    "city_pl": "Ust-Nera",
+    "country_en": "Russia"
+  },
+  {
+    "code": "MSC",
+    "name": "Falcon Field",
+    "city_en": "Mesa",
+    "city_pl": "Mesa",
+    "country_en": "United States"
+  },
+  {
+    "code": "YTY",
+    "name": "Yangzhou Taizhou Airport",
+    "city_en": "Yangzhou",
+    "city_pl": "Yangzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "PTK",
+    "name": "Oakland County International Airport",
+    "city_en": "Pontiac",
+    "city_pl": "Pontiac",
+    "country_en": "United States"
+  },
+  {
+    "code": "KSI",
+    "name": "Kissidougou Airport",
+    "city_en": "Kissidougou",
+    "city_pl": "Kissidougou",
+    "country_en": "Guinea"
+  },
+  {
+    "code": "EEN",
+    "name": "Dillant Hopkins Airport",
+    "city_en": "Keene",
+    "city_pl": "Keene",
+    "country_en": "United States"
+  },
+  {
+    "code": "THQ",
+    "name": "Tianshui Maijishan Airport",
+    "city_en": "Tianshui",
+    "city_pl": "Tianshui",
+    "country_en": "China"
+  },
+  {
+    "code": "VRO",
+    "name": "Kawama Airport",
+    "city_en": "Kawama",
+    "city_pl": "Kawama",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "GKK",
+    "name": "Kooddoo Airport",
+    "city_en": "Kooddoo",
+    "city_pl": "Kooddoo",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "RCS",
+    "name": "Rochester Airport",
+    "city_en": "Rochester",
+    "city_pl": "Rochester",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "RHD",
+    "name": "Termas de Río Hondo international Airport",
+    "city_en": "Rio Hondo",
+    "city_pl": "Rio Hondo",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "KMP",
+    "name": "Keetmanshoop Airport",
+    "city_en": "Keetmanshoop",
+    "city_pl": "Keetmanshoop",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "KGT",
+    "name": "Kangding Airport",
+    "city_en": "Kangding",
+    "city_pl": "Kangding",
+    "country_en": "China"
+  },
+  {
+    "code": "VUS",
+    "name": "Velikiy Ustyug Airport",
+    "city_en": "Veliky Ustyug",
+    "city_pl": "Veliky Ustyug",
+    "country_en": "Russia"
+  },
+  {
+    "code": "IOW",
+    "name": "Iowa City Municipal Airport",
+    "city_en": "Iowa City",
+    "city_pl": "Iowa City",
+    "country_en": "United States"
+  },
+  {
+    "code": "TLQ",
+    "name": "Turpan Jiaohe Airport",
+    "city_en": "Turpan",
+    "city_pl": "Turpan",
+    "country_en": "China"
+  },
+  {
+    "code": "ANP",
+    "name": "Lee Airport",
+    "city_en": "Annapolis",
+    "city_pl": "Annapolis",
+    "country_en": "United States"
+  },
+  {
+    "code": "FXO",
+    "name": "Cuamba Airport",
+    "city_en": "Cuamba",
+    "city_pl": "Cuamba",
+    "country_en": "Mozambique"
+  },
+  {
+    "code": "ODO",
+    "name": "Bodaybo Airport",
+    "city_en": "Bodaibo",
+    "city_pl": "Bodaibo",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ZTR",
+    "name": "Zhytomyr Airport",
+    "city_en": "Zhytomyr",
+    "city_pl": "Zhytomyr",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "HRI",
+    "name": "Mattala Rajapaksa International Airport",
+    "city_en": "Mattala",
+    "city_pl": "Mattala",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "PEQ",
+    "name": "Pecos Municipal Airport",
+    "city_en": "Pecos",
+    "city_pl": "Pecos",
+    "country_en": "United States"
+  },
+  {
+    "code": "HBG",
+    "name": "Hattiesburg Bobby L Chain Municipal Airport",
+    "city_en": "Hattiesburg",
+    "city_pl": "Hattiesburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "QCJ",
+    "name": "Botucatu - Tancredo de Almeida Neves Airport",
+    "city_en": "Botucatu",
+    "city_pl": "Botucatu",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "QSC",
+    "name": "Mário Pereira Lopes–São Carlos Airport",
+    "city_en": "Sao Carlos",
+    "city_pl": "Sao Carlos",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "YKN",
+    "name": "Chan Gurney Municipal Airport",
+    "city_en": "Yankton",
+    "city_pl": "Yankton",
+    "country_en": "United States"
+  },
+  {
+    "code": "XSB",
+    "name": "Sir Bani Yas Airport",
+    "city_en": "Sir Bani Yas Island",
+    "city_pl": "Sir Bani Yas Island",
+    "country_en": "United Arab Emirates"
+  },
+  {
+    "code": "ZBM",
+    "name": "Bromont (Roland Desourdy) Airport",
+    "city_en": "Bromont",
+    "city_pl": "Bromont",
+    "country_en": "Canada"
+  },
+  {
+    "code": "KTI",
+    "name": "Kratie Airport",
+    "city_en": "Kratie",
+    "city_pl": "Kratie",
+    "country_en": "Cambodia"
+  },
+  {
+    "code": "GYU",
+    "name": "Guyuan Liupanshan Airport",
+    "city_en": "Guyuan",
+    "city_pl": "Guyuan",
+    "country_en": "China"
+  },
+  {
+    "code": "CNI",
+    "name": "Changhai Airport",
+    "city_en": "Changhai",
+    "city_pl": "Changhai",
+    "country_en": "China"
+  },
+  {
+    "code": "KRH",
+    "name": "Redhill Aerodrome",
+    "city_en": "Redhill",
+    "city_pl": "Redhill",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "JGD",
+    "name": "Jiagedaqi Airport",
+    "city_en": "Jiagedaqi District",
+    "city_pl": "Jiagedaqi District",
+    "country_en": "China"
+  },
+  {
+    "code": "CCL",
+    "name": "Chinchilla Airport",
+    "city_en": "Chinchilla",
+    "city_pl": "Chinchilla",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HWD",
+    "name": "Hayward Executive Airport",
+    "city_en": "Hayward",
+    "city_pl": "Hayward",
+    "country_en": "United States"
+  },
+  {
+    "code": "MZP",
+    "name": "Motueka Airport",
+    "city_en": "Motueka",
+    "city_pl": "Motueka",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "JHQ",
+    "name": "Shute Harbour Airport",
+    "city_en": "Shute Harbour",
+    "city_pl": "Shute Harbour",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ARB",
+    "name": "Ann Arbor Municipal Airport",
+    "city_en": "Ann Arbor",
+    "city_pl": "Ann Arbor",
+    "country_en": "United States"
+  },
+  {
+    "code": "SHT",
+    "name": "Shepparton Airport",
+    "city_en": "Shepparton",
+    "city_pl": "Shepparton",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TEM",
+    "name": "Temora Airport",
+    "city_en": "Temora",
+    "city_pl": "Temora",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GAH",
+    "name": "Gayndah Airport",
+    "city_en": "Gayndah",
+    "city_pl": "Gayndah",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WIO",
+    "name": "Wilcannia Airport",
+    "city_en": "Wilcannia",
+    "city_pl": "Wilcannia",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BFJ",
+    "name": "Bijie Feixiong Airport",
+    "city_en": "Bijie",
+    "city_pl": "Bijie",
+    "country_en": "China"
+  },
+  {
+    "code": "ULK",
+    "name": "Lensk Airport",
+    "city_en": "Lensk",
+    "city_pl": "Lensk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "KVR",
+    "name": "Kavalerovo Airport",
+    "city_en": "Kavalerovo",
+    "city_pl": "Kavalerovo",
+    "country_en": "Russia"
+  },
+  {
+    "code": "IGD",
+    "name": "Iğdır Airport",
+    "city_en": "Igdir",
+    "city_pl": "Igdir",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "GNY",
+    "name": "Şanlıurfa GAP Airport",
+    "city_en": "Sanliurfa",
+    "city_pl": "Sanliurfa",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "KZR",
+    "name": "Zafer Airport",
+    "city_en": "Kutahya",
+    "city_pl": "Kutahya",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "VLU",
+    "name": "Velikiye Luki Airport",
+    "city_en": "Velikiye Luki",
+    "city_pl": "Velikiye Luki",
+    "country_en": "Russia"
+  },
+  {
+    "code": "BEO",
+    "name": "Lake Macquarie Airport",
+    "city_en": "Lake Macquarie",
+    "city_pl": "Lake Macquarie",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BMP",
+    "name": "Brampton Island Airport",
+    "city_en": "Brampton Island",
+    "city_pl": "Brampton Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NGZ",
+    "name": "Alameda Naval Air Station",
+    "city_en": "Alameda",
+    "city_pl": "Alameda",
+    "country_en": "United States"
+  },
+  {
+    "code": "YCN",
+    "name": "Cochrane Airport",
+    "city_en": "Cochrane",
+    "city_pl": "Cochrane",
+    "country_en": "Canada"
+  },
+  {
+    "code": "BJP",
+    "name": "Estadual Arthur Siqueira Airport",
+    "city_en": "Braganca Paulista",
+    "city_pl": "Braganca Paulista",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BQB",
+    "name": "Busselton Regional Airport",
+    "city_en": "Brusselton",
+    "city_pl": "Brusselton",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SEK",
+    "name": "Srednekolymsk Airport",
+    "city_en": "Srednekolymsk",
+    "city_pl": "Srednekolymsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "IVR",
+    "name": "Inverell Airport",
+    "city_en": "Inverell",
+    "city_pl": "Inverell",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GLI",
+    "name": "Glen Innes Airport",
+    "city_en": "Glen Innes",
+    "city_pl": "Glen Innes",
+    "country_en": "Australia"
+  },
+  {
+    "code": "IMM",
+    "name": "Immokalee Regional Airport",
+    "city_en": "Immokalee",
+    "city_pl": "Immokalee",
+    "country_en": "United States"
+  },
+  {
+    "code": "TQQ",
+    "name": "Maranggo Airport",
+    "city_en": "Sulawesi Tenggara",
+    "city_pl": "Sulawesi Tenggara",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "YIC",
+    "name": "Yichun Mingyueshan Airport",
+    "city_en": "Yichun",
+    "city_pl": "Yichun",
+    "country_en": "China"
+  },
+  {
+    "code": "PTB",
+    "name": "Dinwiddie County Airport",
+    "city_en": "Petersburg",
+    "city_pl": "Petersburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "SBM",
+    "name": "Sheboygan County Memorial Airport",
+    "city_en": "Sheboygan",
+    "city_pl": "Sheboygan",
+    "country_en": "United States"
+  },
+  {
+    "code": "KFE",
+    "name": "Fortescue - Dave Forrest Aerodrome",
+    "city_en": "Cloudbreak",
+    "city_pl": "Cloudbreak",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BJU",
+    "name": "Bajura Airport",
+    "city_en": "Bajura",
+    "city_pl": "Bajura",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "MZJ",
+    "name": "Pinal Airpark",
+    "city_en": "Marana",
+    "city_pl": "Marana",
+    "country_en": "United States"
+  },
+  {
+    "code": "SAD",
+    "name": "Safford Regional Airport",
+    "city_en": "Safford",
+    "city_pl": "Safford",
+    "country_en": "United States"
+  },
+  {
+    "code": "SLJ",
+    "name": "Solomon Airport",
+    "city_en": "Solomon",
+    "city_pl": "Solomon",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KJP",
+    "name": "Kerama Airport",
+    "city_en": "Kerama",
+    "city_pl": "Kerama",
+    "country_en": "Japan"
+  },
+  {
+    "code": "EKB",
+    "name": "Ekibastuz Airport",
+    "city_en": "Ekibastuz",
+    "city_pl": "Ekibastuz",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "SIK",
+    "name": "Sikeston Memorial Municipal Airport",
+    "city_en": "Sikeston",
+    "city_pl": "Sikeston",
+    "country_en": "United States"
+  },
+  {
+    "code": "TTI",
+    "name": "Tetiaroa Airport",
+    "city_en": "Tetiaroa",
+    "city_pl": "Tetiaroa",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "GFL",
+    "name": "Floyd Bennett Memorial Airport",
+    "city_en": "Queensbury",
+    "city_pl": "Queensbury",
+    "country_en": "United States"
+  },
+  {
+    "code": "MTN",
+    "name": "Martin State Airport",
+    "city_en": "Baltimore",
+    "city_pl": "Baltimore",
+    "country_en": "United States"
+  },
+  {
+    "code": "FRY",
+    "name": "Eastern Slopes Regional Airport",
+    "city_en": "Fryeburg",
+    "city_pl": "Fryeburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "NEW",
+    "name": "Lakefront Airport",
+    "city_en": "New Orleans",
+    "city_pl": "New Orleans",
+    "country_en": "United States"
+  },
+  {
+    "code": "COE",
+    "name": "Coeur D'Alene - Pappy Boyington Field",
+    "city_en": "Coeur d'Alene",
+    "city_pl": "Coeur d'Alene",
+    "country_en": "United States"
+  },
+  {
+    "code": "BMT",
+    "name": "Beaumont Municipal Airport",
+    "city_en": "Beaumont",
+    "city_pl": "Beaumont",
+    "country_en": "United States"
+  },
+  {
+    "code": "DNV",
+    "name": "Vermilion Regional Airport",
+    "city_en": "Danville",
+    "city_pl": "Danville",
+    "country_en": "United States"
+  },
+  {
+    "code": "COJ",
+    "name": "Coonabarabran Airport",
+    "city_en": "Coonabarabran",
+    "city_pl": "Coonabarabran",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TIX",
+    "name": "Space Coast Regional Airport",
+    "city_en": "Titusville",
+    "city_pl": "Titusville",
+    "country_en": "United States"
+  },
+  {
+    "code": "BZH",
+    "name": "Bumi Airport",
+    "city_en": "Bumi Hills",
+    "city_pl": "Bumi Hills",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "UAR",
+    "name": "Bouarfa Airport",
+    "city_en": "Bouarfa",
+    "city_pl": "Bouarfa",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "NYE",
+    "name": "Nyeri Airport",
+    "city_en": "NYERI",
+    "city_pl": "NYERI",
+    "country_en": "Kenya"
+  },
+  {
+    "code": "AAP",
+    "name": "Andrau Airpark",
+    "city_en": "Houston",
+    "city_pl": "Houston",
+    "country_en": "United States"
+  },
+  {
+    "code": "FCM",
+    "name": "Flying Cloud Airport",
+    "city_en": "Eden Prairie",
+    "city_pl": "Eden Prairie",
+    "country_en": "United States"
+  },
+  {
+    "code": "LIX",
+    "name": "Likoma Island Airport",
+    "city_en": "Likoma Island",
+    "city_pl": "Likoma Island",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "OJC",
+    "name": "Johnson County Executive Airport",
+    "city_en": "Olathe",
+    "city_pl": "Olathe",
+    "country_en": "United States"
+  },
+  {
+    "code": "GIU",
+    "name": "Sigiriya Air Force Base",
+    "city_en": "Sigiriya",
+    "city_pl": "Sigiriya",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "EUM",
+    "name": "Neumünster Airport",
+    "city_en": "Neumuenster",
+    "city_pl": "Neumuenster",
+    "country_en": "Germany"
+  },
+  {
+    "code": "TKT",
+    "name": "Tak Airport",
+    "city_en": "Tak",
+    "city_pl": "Tak",
+    "country_en": "Thailand"
+  },
+  {
+    "code": "YLK",
+    "name": "Barrie-Orillia (Lake Simcoe Regional Airport)",
+    "city_en": "Barrie-Orillia",
+    "city_pl": "Barrie-Orillia",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCM",
+    "name": "Niagara District Airport",
+    "city_en": "Saint Catherines",
+    "city_pl": "Saint Catherines",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPD",
+    "name": "Parry Sound Area Municipal Airport",
+    "city_en": "Parry Sound",
+    "city_pl": "Parry Sound",
+    "country_en": "Canada"
+  },
+  {
+    "code": "MNZ",
+    "name": "Manassas Regional Airport/Harry P. Davis Field",
+    "city_en": "Manassas",
+    "city_pl": "Manassas",
+    "country_en": "United States"
+  },
+  {
+    "code": "LJN",
+    "name": "Texas Gulf Coast Regional Airport",
+    "city_en": "Angleton",
+    "city_pl": "Angleton",
+    "country_en": "United States"
+  },
+  {
+    "code": "BGG",
+    "name": "Bingöl Çeltiksuyu Airport",
+    "city_en": "Bingol",
+    "city_pl": "Bingol",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "KFS",
+    "name": "Kastamonu Airport",
+    "city_en": "Kastamonu",
+    "city_pl": "Kastamonu",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "LLV",
+    "name": "Lüliang Airport",
+    "city_en": "Lvliang",
+    "city_pl": "Lvliang",
+    "country_en": "China"
+  },
+  {
+    "code": "DCY",
+    "name": "Daocheng Yading Airport",
+    "city_en": "Daocheng",
+    "city_pl": "Daocheng",
+    "country_en": "China"
+  },
+  {
+    "code": "GXH",
+    "name": "Gannan Xiahe Airport",
+    "city_en": "Xiahe city",
+    "city_pl": "Xiahe city",
+    "country_en": "China"
+  },
+  {
+    "code": "CIY",
+    "name": "Comiso Airport",
+    "city_en": "Comiso",
+    "city_pl": "Comiso",
+    "country_en": "Italy"
+  },
+  {
+    "code": "KVM",
+    "name": "Markovo Airport",
+    "city_en": "Markovo",
+    "city_pl": "Markovo",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ZKP",
+    "name": "Zyryanka Airport",
+    "city_en": "Zyryanka",
+    "city_pl": "Zyryanka",
+    "country_en": "Russia"
+  },
+  {
+    "code": "UMS",
+    "name": "Ust-Maya Airport",
+    "city_en": "Ust-Maya",
+    "city_pl": "Ust-Maya",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ADH",
+    "name": "Aldan Airport",
+    "city_en": "Aldan",
+    "city_pl": "Aldan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "OLZ",
+    "name": "Olyokminsk Airport",
+    "city_en": "Olekminsk",
+    "city_pl": "Olekminsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NLT",
+    "name": "Xinyuan Nalati Airport",
+    "city_en": "Xinyuan",
+    "city_pl": "Xinyuan",
+    "country_en": "China"
+  },
+  {
+    "code": "PTA",
+    "name": "Port Alsworth Airport",
+    "city_en": "Port alsworth",
+    "city_pl": "Port alsworth",
+    "country_en": "United States"
+  },
+  {
+    "code": "BOR",
+    "name": "Fontaine Airport",
+    "city_en": "Belfort",
+    "city_pl": "Belfort",
+    "country_en": "France"
+  },
+  {
+    "code": "OBC",
+    "name": "Obock Airport",
+    "city_en": "Obock",
+    "city_pl": "Obock",
+    "country_en": "Djibouti"
+  },
+  {
+    "code": "TDJ",
+    "name": "Tadjoura Airport",
+    "city_en": "Tadjoura",
+    "city_pl": "Tadjoura",
+    "country_en": "Djibouti"
+  },
+  {
+    "code": "AQB",
+    "name": "Santa Cruz del Quiche Airport",
+    "city_en": "Santa Cruz des Quiche",
+    "city_pl": "Santa Cruz des Quiche",
+    "country_en": "Guatemala"
+  },
+  {
+    "code": "NOR",
+    "name": "Norðfjörður Airport",
+    "city_en": "Nordfjordur",
+    "city_pl": "Nordfjordur",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "BTZ",
+    "name": "Bursa Airport",
+    "city_en": "Bursa",
+    "city_pl": "Bursa",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "WAR",
+    "name": "Waris Airport",
+    "city_en": "Waris-Papua Island",
+    "city_pl": "Waris-Papua Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "EWK",
+    "name": "Newton City-County Airport",
+    "city_en": "Newton",
+    "city_pl": "Newton",
+    "country_en": "United States"
+  },
+  {
+    "code": "BSJ",
+    "name": "Bairnsdale Airport",
+    "city_en": "Bairnsdale",
+    "city_pl": "Bairnsdale",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TZR",
+    "name": "Taszár Air Base",
+    "city_en": "Columbus",
+    "city_pl": "Columbus",
+    "country_en": "United States"
+  },
+  {
+    "code": "FBR",
+    "name": "Fort Bridger Airport",
+    "city_en": "Fort Bridger",
+    "city_pl": "Fort Bridger",
+    "country_en": "United States"
+  },
+  {
+    "code": "CLS",
+    "name": "Chehalis Centralia Airport",
+    "city_en": "Chehalis",
+    "city_pl": "Chehalis",
+    "country_en": "United States"
+  },
+  {
+    "code": "EVW",
+    "name": "Evanston-Uinta County Airport-Burns Field",
+    "city_en": "Evanston",
+    "city_pl": "Evanston",
+    "country_en": "United States"
+  },
+  {
+    "code": "EUF",
+    "name": "Weedon Field",
+    "city_en": "Eufala",
+    "city_pl": "Eufala",
+    "country_en": "United States"
+  },
+  {
+    "code": "MEO",
+    "name": "Dare County Regional Airport",
+    "city_en": "Manteo",
+    "city_pl": "Manteo",
+    "country_en": "United States"
+  },
+  {
+    "code": "AUO",
+    "name": "Auburn University Regional Airport",
+    "city_en": "Auburn",
+    "city_pl": "Auburn",
+    "country_en": "United States"
+  },
+  {
+    "code": "DBN",
+    "name": "W H 'Bud' Barron Airport",
+    "city_en": "Dublin",
+    "city_pl": "Dublin",
+    "country_en": "United States"
+  },
+  {
+    "code": "PUK",
+    "name": "Pukarua Airport",
+    "city_en": "Pukarua",
+    "city_pl": "Pukarua",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "CVO",
+    "name": "Corvallis Municipal Airport",
+    "city_en": "Corvallis",
+    "city_pl": "Corvallis",
+    "country_en": "United States"
+  },
+  {
+    "code": "PXH",
+    "name": "Prominent Hill Airport",
+    "city_en": "Prominent Hill",
+    "city_pl": "Prominent Hill",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CWT",
+    "name": "Cowra Airport",
+    "city_en": "Chatsworth",
+    "city_pl": "Chatsworth",
+    "country_en": "Australia"
+  },
+  {
+    "code": "OGD",
+    "name": "Ogden Hinckley Airport",
+    "city_en": "Ogden",
+    "city_pl": "Ogden",
+    "country_en": "United States"
+  },
+  {
+    "code": "AKO",
+    "name": "Colorado Plains Regional Airport",
+    "city_en": "Akron",
+    "city_pl": "Akron",
+    "country_en": "United States"
+  },
+  {
+    "code": "SHN",
+    "name": "Sanderson Field",
+    "city_en": "Shelton",
+    "city_pl": "Shelton",
+    "country_en": "United States"
+  },
+  {
+    "code": "WNA",
+    "name": "Napakiak Airport",
+    "city_en": "Napakiak",
+    "city_pl": "Napakiak",
+    "country_en": "United States"
+  },
+  {
+    "code": "PKA",
+    "name": "Napaskiak Airport",
+    "city_en": "Napaskiak",
+    "city_pl": "Napaskiak",
+    "country_en": "United States"
+  },
+  {
+    "code": "YBW",
+    "name": "Bedwell Harbour Seaplane Base",
+    "city_en": "Bedwell Harbour",
+    "city_pl": "Bedwell Harbour",
+    "country_en": "Canada"
+  },
+  {
+    "code": "WSO",
+    "name": "Washabo Airport",
+    "city_en": "Washabo",
+    "city_pl": "Washabo",
+    "country_en": "Suriname"
+  },
+  {
+    "code": "WKR",
+    "name": "Abaco I Walker C Airport",
+    "city_en": "Walker's Cay",
+    "city_pl": "Walker's Cay",
+    "country_en": "Bahamas"
+  },
+  {
+    "code": "GFO",
+    "name": "Bartica A Airport",
+    "city_en": "Bartica",
+    "city_pl": "Bartica",
+    "country_en": "Guyana"
+  },
+  {
+    "code": "DYL",
+    "name": "Doylestown Airport",
+    "city_en": "Doylestown",
+    "city_pl": "Doylestown",
+    "country_en": "United States"
+  },
+  {
+    "code": "TGI",
+    "name": "Tingo Maria Airport",
+    "city_en": "Tingo Maria",
+    "city_pl": "Tingo Maria",
+    "country_en": "Peru"
+  },
+  {
+    "code": "TJL",
+    "name": "Plínio Alarcom Airport",
+    "city_en": "Tres Lagoas",
+    "city_pl": "Tres Lagoas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "YZY",
+    "name": "Zhangye Ganzhou Airport",
+    "city_en": "Zhangye",
+    "city_pl": "Zhangye",
+    "country_en": "China"
+  },
+  {
+    "code": "OAL",
+    "name": "Cacoal Airport",
+    "city_en": "Cacoal",
+    "city_pl": "Cacoal",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "OCW",
+    "name": "Warren Field",
+    "city_en": "Washington",
+    "city_pl": "Waszyngton",
+    "country_en": "United States"
+  },
+  {
+    "code": "MHC",
+    "name": "Mocopulli Airport",
+    "city_en": "Castro",
+    "city_pl": "Castro",
+    "country_en": "Chile"
+  },
+  {
+    "code": "SWO",
+    "name": "Stillwater Regional Airport",
+    "city_en": "Stillwater",
+    "city_pl": "Stillwater",
+    "country_en": "United States"
+  },
+  {
+    "code": "OKM",
+    "name": "Okmulgee Regional Airport",
+    "city_en": "Okmulgee",
+    "city_pl": "Okmulgee",
+    "country_en": "United States"
+  },
+  {
+    "code": "CUH",
+    "name": "Cushing Municipal Airport",
+    "city_en": "Cushing",
+    "city_pl": "Cushing",
+    "country_en": "United States"
+  },
+  {
+    "code": "CSM",
+    "name": "Clinton Sherman Airport",
+    "city_en": "Clinton",
+    "city_pl": "Clinton",
+    "country_en": "United States"
+  },
+  {
+    "code": "WLD",
+    "name": "Strother Field",
+    "city_en": "Winfield",
+    "city_pl": "Winfield",
+    "country_en": "United States"
+  },
+  {
+    "code": "PWA",
+    "name": "Wiley Post Airport",
+    "city_en": "Oklahoma City",
+    "city_pl": "Oklahoma City",
+    "country_en": "United States"
+  },
+  {
+    "code": "DTN",
+    "name": "Shreveport Downtown Airport",
+    "city_en": "Shreveport",
+    "city_pl": "Shreveport",
+    "country_en": "United States"
+  },
+  {
+    "code": "SEP",
+    "name": "Stephenville Clark Regional Airport",
+    "city_en": "Stephenville",
+    "city_pl": "Stephenville",
+    "country_en": "United States"
+  },
+  {
+    "code": "ADT",
+    "name": "Ada Regional Airport",
+    "city_en": "Ada",
+    "city_pl": "Ada",
+    "country_en": "United States"
+  },
+  {
+    "code": "IRB",
+    "name": "Iraan Municipal Airport",
+    "city_en": "Iraan",
+    "city_pl": "Iraan",
+    "country_en": "United States"
+  },
+  {
+    "code": "YEL",
+    "name": "Elliot Lake Municipal Airport",
+    "city_en": "ELLIOT LAKE",
+    "city_pl": "ELLIOT LAKE",
+    "country_en": "Canada"
+  },
+  {
+    "code": "IKB",
+    "name": "Wilkes County Airport",
+    "city_en": "North Wilkesboro",
+    "city_pl": "North Wilkesboro",
+    "country_en": "United States"
+  },
+  {
+    "code": "DAN",
+    "name": "Danville Regional Airport",
+    "city_en": "Danville",
+    "city_pl": "Danville",
+    "country_en": "United States"
+  },
+  {
+    "code": "ERG",
+    "name": "Yerbogachen Airport",
+    "city_en": "Yerbogachen",
+    "city_pl": "Yerbogachen",
+    "country_en": "Russia"
+  },
+  {
+    "code": "HCW",
+    "name": "Cheraw Municipal Airport/Lynch Bellinger Field",
+    "city_en": "Cheraw",
+    "city_pl": "Cheraw",
+    "country_en": "United States"
+  },
+  {
+    "code": "BEM",
+    "name": "Beni Mellal Airport",
+    "city_en": "Beni Mellal",
+    "city_pl": "Beni Mellal",
+    "country_en": "Morocco"
+  },
+  {
+    "code": "NKT",
+    "name": "Şırnak Şerafettin Elçi Airport",
+    "city_en": "Cizre",
+    "city_pl": "Cizre",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "SUY",
+    "name": "Suntar Airport",
+    "city_en": "Suntar",
+    "city_pl": "Suntar",
+    "country_en": "Russia"
+  },
+  {
+    "code": "OUZ",
+    "name": "Tazadit Airport",
+    "city_en": "Zouerat",
+    "city_pl": "Zouerat",
+    "country_en": "Mauritania"
+  },
+  {
+    "code": "ABB",
+    "name": "Asaba International Airport",
+    "city_en": "Asaba",
+    "city_pl": "Asaba",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "QUO",
+    "name": "Akwa Ibom International Airport",
+    "city_en": "Uyo",
+    "city_pl": "Uyo",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "KAA",
+    "name": "Kasama Airport",
+    "city_en": "Kasama",
+    "city_pl": "Kasama",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "SGX",
+    "name": "Songea Airport",
+    "city_en": "Songea",
+    "city_pl": "Songea",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "JUH",
+    "name": "Jiuhuashan Airport",
+    "city_en": "Chizhou",
+    "city_pl": "Chizhou",
+    "country_en": "China"
+  },
+  {
+    "code": "AOG",
+    "name": "Anshan Air Base",
+    "city_en": "Anshan",
+    "city_pl": "Anshan",
+    "country_en": "China"
+  },
+  {
+    "code": "DQA",
+    "name": "Saertu Airport",
+    "city_en": "Daqing",
+    "city_pl": "Daqing",
+    "country_en": "China"
+  },
+  {
+    "code": "ZYI",
+    "name": "Zunyi Xinzhou Airport",
+    "city_en": "Zunyi",
+    "city_pl": "Zunyi",
+    "country_en": "China"
+  },
+  {
+    "code": "LDS",
+    "name": "Lindu Airport",
+    "city_en": "Yinchun",
+    "city_pl": "Yinchun",
+    "country_en": "China"
+  },
+  {
+    "code": "AVA",
+    "name": "Anshun Huangguoshu Airport",
+    "city_en": "Anshun",
+    "city_pl": "Anshun",
+    "country_en": "China"
+  },
+  {
+    "code": "KSS",
+    "name": "Sikasso Airport",
+    "city_en": "Sikasso",
+    "city_pl": "Sikasso",
+    "country_en": "Mali"
+  },
+  {
+    "code": "WTB",
+    "name": "Toowoomba Wellcamp Airport",
+    "city_en": "Toowoomba",
+    "city_pl": "Toowoomba",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TNH",
+    "name": "Tonghua Sanyuanpu Airport",
+    "city_en": "Tonghua",
+    "city_pl": "Tonghua",
+    "country_en": "China"
+  },
+  {
+    "code": "SZV",
+    "name": "Suzhou Guangfu Airport",
+    "city_en": "Suzhou",
+    "city_pl": "Suzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "LII",
+    "name": "Mulia Airport",
+    "city_en": "Mulia",
+    "city_pl": "Mulia",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NTI",
+    "name": "Stenkol Airport",
+    "city_en": "Bintuni",
+    "city_pl": "Bintuni",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "WSR",
+    "name": "Wasior Airport",
+    "city_en": "Wasior",
+    "city_pl": "Wasior",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "DTB",
+    "name": "Silangit Airport",
+    "city_en": "Siborong-Borong",
+    "city_pl": "Siborong-Borong",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MEQ",
+    "name": "Seunagan Airport",
+    "city_en": "Nagan Raya",
+    "city_pl": "Nagan Raya",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BUW",
+    "name": "Betoambari Airport",
+    "city_en": "Bau-Bau",
+    "city_pl": "Bau-Bau",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "KAZ",
+    "name": "Kao Airport",
+    "city_en": "Kao",
+    "city_pl": "Kao",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MNA",
+    "name": "Melangguane Airport",
+    "city_en": "Melonguane",
+    "city_pl": "Melonguane",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SGQ",
+    "name": "Sanggata/Sangkimah Airport",
+    "city_en": "Sanggata",
+    "city_pl": "Sanggata",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BUU",
+    "name": "Muara Bungo Airport",
+    "city_en": "Muara Bungo",
+    "city_pl": "Muara Bungo",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "ILA",
+    "name": "Illaga Airport",
+    "city_en": "Illaga",
+    "city_pl": "Illaga",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "OKL",
+    "name": "Oksibil Airport",
+    "city_en": "Oksibil",
+    "city_pl": "Oksibil",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "KOX",
+    "name": "Kokonau Airport",
+    "city_en": "Kokonau",
+    "city_pl": "Kokonau",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "CMQ",
+    "name": "Clermont Airport",
+    "city_en": "Clermont",
+    "city_pl": "Clermont",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WMB",
+    "name": "Warrnambool Airport",
+    "city_en": "Warrnambool",
+    "city_pl": "Warrnambool",
+    "country_en": "Australia"
+  },
+  {
+    "code": "RCM",
+    "name": "Richmond Airport",
+    "city_en": "Richmond",
+    "city_pl": "Richmond",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DCN",
+    "name": "RAAF Base Curtin",
+    "city_en": "Derby",
+    "city_pl": "Derby",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KNO",
+    "name": "Kualanamu International Airport",
+    "city_en": "Medan",
+    "city_pl": "Medan",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "AMN",
+    "name": "Gratiot Community Airport",
+    "city_en": "Kamloops",
+    "city_pl": "Kamloops",
+    "country_en": "Canada"
+  },
+  {
+    "code": "HMY",
+    "name": "Seosan Air Base",
+    "city_en": "Seosan",
+    "city_pl": "Seosan",
+    "country_en": "South Korea"
+  },
+  {
+    "code": "EMT",
+    "name": "San Gabriel Valley Airport",
+    "city_en": "El Monte",
+    "city_pl": "El Monte",
+    "country_en": "United States"
+  },
+  {
+    "code": "FAH",
+    "name": "Farah Airport",
+    "city_en": "Farah",
+    "city_pl": "Farah",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "IXT",
+    "name": "Pasighat Airport",
+    "city_en": "Pasighat",
+    "city_pl": "Pasighat",
+    "country_en": "India"
+  },
+  {
+    "code": "KRQ",
+    "name": "Kramatorsk Airport",
+    "city_en": "Kramatorsk",
+    "city_pl": "Kramatorsk",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "QKX",
+    "name": "Kautokeino Air Base",
+    "city_en": "Kautokeino",
+    "city_pl": "Kautokeino",
+    "country_en": "Norway"
+  },
+  {
+    "code": "SSF",
+    "name": "Stinson Municipal Airport",
+    "city_en": "Stinson",
+    "city_pl": "Stinson",
+    "country_en": "United States"
+  },
+  {
+    "code": "JAS",
+    "name": "Jasper County Airport-Bell Field",
+    "city_en": "Jasper",
+    "city_pl": "Jasper",
+    "country_en": "United States"
+  },
+  {
+    "code": "MRF",
+    "name": "Marfa Municipal Airport",
+    "city_en": "Marfa",
+    "city_pl": "Marfa",
+    "country_en": "United States"
+  },
+  {
+    "code": "ALE",
+    "name": "Alpine Casparis Municipal Airport",
+    "city_en": "Alpine",
+    "city_pl": "Alpine",
+    "country_en": "United States"
+  },
+  {
+    "code": "BQE",
+    "name": "Bubaque Airport",
+    "city_en": "Bubaque",
+    "city_pl": "Bubaque",
+    "country_en": "Guinea-Bissau"
+  },
+  {
+    "code": "CZA",
+    "name": "Chichen Itza International Airport",
+    "city_en": "Chichen Itza",
+    "city_pl": "Chichen Itza",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "BUY",
+    "name": "Bunbury Airport",
+    "city_en": "Bunbury",
+    "city_pl": "Bunbury",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CCB",
+    "name": "Cable Airport",
+    "city_en": "Upland",
+    "city_pl": "Upland",
+    "country_en": "United States"
+  },
+  {
+    "code": "EKI",
+    "name": "Elkhart Municipal Airport",
+    "city_en": "Elkhart",
+    "city_pl": "Elkhart",
+    "country_en": "United States"
+  },
+  {
+    "code": "CUB",
+    "name": "Jim Hamilton L.B. Owens Airport",
+    "city_en": "Columbia",
+    "city_pl": "Columbia",
+    "country_en": "United States"
+  },
+  {
+    "code": "GDC",
+    "name": "Donaldson Field Airport",
+    "city_en": "Greenville",
+    "city_pl": "Greenville",
+    "country_en": "United States"
+  },
+  {
+    "code": "HVS",
+    "name": "Hartsville Regional Airport",
+    "city_en": "Hartsville",
+    "city_pl": "Hartsville",
+    "country_en": "United States"
+  },
+  {
+    "code": "SZT",
+    "name": "San Cristobal de las Casas Airport",
+    "city_en": "San Cristobal de las Casas",
+    "city_pl": "San Cristobal de las Casas",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "DU9",
+    "name": "Dunnville Airport",
+    "city_en": "Dunnville",
+    "city_pl": "Dunnville",
+    "country_en": "Canada"
+  },
+  {
+    "code": "RIH",
+    "name": "Scarlett Martinez International Airport",
+    "city_en": "Rio Hato",
+    "city_pl": "Rio Hato",
+    "country_en": "Panama"
+  },
+  {
+    "code": "LEE",
+    "name": "Leesburg International Airport",
+    "city_en": "Leesburg",
+    "city_pl": "Leesburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "PPY",
+    "name": "Pouso Alegre Airport",
+    "city_en": "Pouso Alegre",
+    "city_pl": "Pouso Alegre",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "DIQ",
+    "name": "Brigadeiro Cabral Airport",
+    "city_en": "Divinopolis",
+    "city_pl": "Divinopolis",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "EIK",
+    "name": "Yeysk Airport",
+    "city_en": "Eysk",
+    "city_pl": "Eysk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ERD",
+    "name": "Berdyansk Airport",
+    "city_en": "Berdyansk",
+    "city_pl": "Berdyansk",
+    "country_en": "Ukraine"
+  },
+  {
+    "code": "BWX",
+    "name": "Blimbingsari Airport",
+    "city_en": "Banyuwangi",
+    "city_pl": "Banyuwangi",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "ERL",
+    "name": "Erenhot Saiwusu International Airport",
+    "city_en": "Erenhot",
+    "city_pl": "Erenhot",
+    "country_en": "China"
+  },
+  {
+    "code": "CNO",
+    "name": "Chino Airport",
+    "city_en": "Chino",
+    "city_pl": "Chino",
+    "country_en": "United States"
+  },
+  {
+    "code": "HTR",
+    "name": "Hateruma Airport",
+    "city_en": "Taketomi",
+    "city_pl": "Taketomi",
+    "country_en": "Japan"
+  },
+  {
+    "code": "BWW",
+    "name": "Las Brujas Airport",
+    "city_en": "Cayo Santa Maria",
+    "city_pl": "Cayo Santa Maria",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "PRB",
+    "name": "Paso Robles Municipal Airport",
+    "city_en": "Paso Robles",
+    "city_pl": "Paso Robles",
+    "country_en": "United States"
+  },
+  {
+    "code": "PKX",
+    "name": "Beijing Daxing International Airport",
+    "city_en": "Beijing",
+    "city_pl": "Pekin",
+    "country_en": "China"
+  },
+  {
+    "code": "HAF",
+    "name": "Half Moon Bay Airport",
+    "city_en": "Half Moon Bay",
+    "city_pl": "Half Moon Bay",
+    "country_en": "United States"
+  },
+  {
+    "code": "HCJ",
+    "name": "Hechi Jinchengjiang Airport",
+    "city_en": "Hechi",
+    "city_pl": "Hechi",
+    "country_en": "China"
+  },
+  {
+    "code": "WJF",
+    "name": "General WM J Fox Airfield",
+    "city_en": "Lancaster",
+    "city_pl": "Lancaster",
+    "country_en": "United States"
+  },
+  {
+    "code": "CJF",
+    "name": "Coondewanna Airport",
+    "city_en": "Coondewanna",
+    "city_pl": "Coondewanna",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GUZ",
+    "name": "Guarapari Airport",
+    "city_en": "Guarapari",
+    "city_pl": "Guarapari",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "UBT",
+    "name": "Ubatuba Airport",
+    "city_en": "Ubatuba",
+    "city_pl": "Ubatuba",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BOX",
+    "name": "Borroloola Airport",
+    "city_en": "Borroloola",
+    "city_pl": "Borroloola",
+    "country_en": "Australia"
+  },
+  {
+    "code": "QUG",
+    "name": "Chichester/Goodwood Airport",
+    "city_en": "Goodwood",
+    "city_pl": "Goodwood",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "TNW",
+    "name": "Jumandy Airport",
+    "city_en": "Tena",
+    "city_pl": "Tena",
+    "country_en": "Ecuador"
+  },
+  {
+    "code": "FYJ",
+    "name": "Dongji Aiport",
+    "city_en": "Fuyuan",
+    "city_pl": "Fuyuan",
+    "country_en": "China"
+  },
+  {
+    "code": "PZL",
+    "name": "Zulu Inyala Airport",
+    "city_en": "Phinda",
+    "city_pl": "Phinda",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "LPF",
+    "name": "Liupanshui Yuezhao Airport",
+    "city_en": "Liupanshui",
+    "city_pl": "Liupanshui",
+    "country_en": "China"
+  },
+  {
+    "code": "KJH",
+    "name": "Kaili Airport",
+    "city_en": "Kaili",
+    "city_pl": "Kaili",
+    "country_en": "China"
+  },
+  {
+    "code": "HPG",
+    "name": "Shennongjia Hongping Airport",
+    "city_en": "Shennongjia",
+    "city_pl": "Shennongjia",
+    "country_en": "China"
+  },
+  {
+    "code": "ZQZ",
+    "name": "Zhangjiakou Ningyuan Airport",
+    "city_en": "Zhangjiakou",
+    "city_pl": "Zhangjiakou",
+    "country_en": "China"
+  },
+  {
+    "code": "YIE",
+    "name": "Arxan Yi'ershi Airport",
+    "city_en": "Arxan",
+    "city_pl": "Arxan",
+    "country_en": "China"
+  },
+  {
+    "code": "HNY",
+    "name": "Hengyang Nanyue Airport",
+    "city_en": "Hengyang",
+    "city_pl": "Hengyang",
+    "country_en": "China"
+  },
+  {
+    "code": "AHJ",
+    "name": "Hongyuan Airport",
+    "city_en": "Ngawa",
+    "city_pl": "Ngawa",
+    "country_en": "China"
+  },
+  {
+    "code": "WOS",
+    "name": "Wonsan Kalma International Airport",
+    "city_en": "Wonsan",
+    "city_pl": "Wonsan",
+    "country_en": "North Korea"
+  },
+  {
+    "code": "IGT",
+    "name": "Magas Airport",
+    "city_en": "Magas",
+    "city_pl": "Magas",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ASN",
+    "name": "Talladega Municipal Airport",
+    "city_en": "Talladega",
+    "city_pl": "Talladega",
+    "country_en": "United States"
+  },
+  {
+    "code": "GMU",
+    "name": "Greenville Downtown Airport",
+    "city_en": "Greenville",
+    "city_pl": "Greenville",
+    "country_en": "United States"
+  },
+  {
+    "code": "NGD",
+    "name": "Captain Auguste George Airport",
+    "city_en": "Anegada",
+    "city_pl": "Anegada",
+    "country_en": "British Virgin Islands"
+  },
+  {
+    "code": "TOI",
+    "name": "Troy Municipal Airport at N Kenneth Campbell Field",
+    "city_en": "Troy",
+    "city_pl": "Troy",
+    "country_en": "United States"
+  },
+  {
+    "code": "ETS",
+    "name": "Enterprise Municipal Airport",
+    "city_en": "Enterprise",
+    "city_pl": "Enterprise",
+    "country_en": "United States"
+  },
+  {
+    "code": "EFG",
+    "name": "Efogi Airport",
+    "city_en": "Efogi",
+    "city_pl": "Efogi",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "KGW",
+    "name": "Kagi Airport",
+    "city_en": "Kagi",
+    "city_pl": "Kagi",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "NDN",
+    "name": "Nadunumu Airport",
+    "city_en": "Nadunumu",
+    "city_pl": "Nadunumu",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "BNM",
+    "name": "Bodinumu Airport",
+    "city_en": "Bodinumu",
+    "city_pl": "Bodinumu",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "ALX",
+    "name": "Thomas C Russell Field",
+    "city_en": "Alexander City",
+    "city_pl": "Alexander City",
+    "country_en": "United States"
+  },
+  {
+    "code": "PKT",
+    "name": "Port Keats Airport",
+    "city_en": "Wadeye",
+    "city_pl": "Wadeye",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GPN",
+    "name": "Garden Point Airport",
+    "city_en": "Pirlangimpi",
+    "city_pl": "Pirlangimpi",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DOH",
+    "name": "Hamad International Airport",
+    "city_en": "Doha",
+    "city_pl": "Ad-Dauha",
+    "country_en": "Qatar"
+  },
+  {
+    "code": "HZP",
+    "name": "Fort Mackay / Horizon Airport",
+    "city_en": "Wood Buffalo",
+    "city_pl": "Wood Buffalo",
+    "country_en": "Canada"
+  },
+  {
+    "code": "HDE",
+    "name": "Brewster Field",
+    "city_en": "Holdredge",
+    "city_pl": "Holdredge",
+    "country_en": "United States"
+  },
+  {
+    "code": "PTT",
+    "name": "Pratt Regional Airport",
+    "city_en": "Pratt",
+    "city_pl": "Pratt",
+    "country_en": "United States"
+  },
+  {
+    "code": "LXN",
+    "name": "Jim Kelly Field",
+    "city_en": "Lexington",
+    "city_pl": "Lexington",
+    "country_en": "United States"
+  },
+  {
+    "code": "CBF",
+    "name": "Council Bluffs Municipal Airport",
+    "city_en": "Council Bluffs",
+    "city_pl": "Council Bluffs",
+    "country_en": "United States"
+  },
+  {
+    "code": "OKK",
+    "name": "Kokomo Municipal Airport",
+    "city_en": "Kokomo",
+    "city_pl": "Kokomo",
+    "country_en": "United States"
+  },
+  {
+    "code": "GBG",
+    "name": "Galesburg Municipal Airport",
+    "city_en": "Galesburg",
+    "city_pl": "Galesburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "GUY",
+    "name": "Guymon Municipal Airport",
+    "city_en": "Guymon",
+    "city_pl": "Guymon",
+    "country_en": "United States"
+  },
+  {
+    "code": "IDP",
+    "name": "Independence Municipal Airport",
+    "city_en": "Independence",
+    "city_pl": "Independence",
+    "country_en": "United States"
+  },
+  {
+    "code": "BBC",
+    "name": "Bay City Municipal Airport",
+    "city_en": "Bay City",
+    "city_pl": "Bay City",
+    "country_en": "United States"
+  },
+  {
+    "code": "PRX",
+    "name": "Cox Field",
+    "city_en": "Paris",
+    "city_pl": "Paryż",
+    "country_en": "United States"
+  },
+  {
+    "code": "CFV",
+    "name": "Coffeyville Municipal Airport",
+    "city_en": "Coffeyville",
+    "city_pl": "Coffeyville",
+    "country_en": "United States"
+  },
+  {
+    "code": "GXY",
+    "name": "Greeley–Weld County Airport",
+    "city_en": "Greeley",
+    "city_pl": "Greeley",
+    "country_en": "United States"
+  },
+  {
+    "code": "OEL",
+    "name": "Oryol Yuzhny Airport",
+    "city_en": "Oakley",
+    "city_pl": "Oakley",
+    "country_en": "United States"
+  },
+  {
+    "code": "FET",
+    "name": "Fremont Municipal Airport",
+    "city_en": "Fremont",
+    "city_pl": "Fremont",
+    "country_en": "United States"
+  },
+  {
+    "code": "LGD",
+    "name": "La Grande/Union County Airport",
+    "city_en": "La Grande",
+    "city_pl": "La Grande",
+    "country_en": "United States"
+  },
+  {
+    "code": "SZY",
+    "name": "Olsztyn-Mazury Airport",
+    "city_en": "Szczytno-Szymany",
+    "city_pl": "Szczytno-Szymany",
+    "country_en": "Poland"
+  },
+  {
+    "code": "MPO",
+    "name": "Pocono Mountains Municipal Airport",
+    "city_en": "Mount Pocono",
+    "city_pl": "Mount Pocono",
+    "country_en": "United States"
+  },
+  {
+    "code": "UKT",
+    "name": "Quakertown Airport",
+    "city_en": "Quakertown",
+    "city_pl": "Quakertown",
+    "country_en": "United States"
+  },
+  {
+    "code": "YBA",
+    "name": "Banff Airport",
+    "city_en": "Banff",
+    "city_pl": "Banff",
+    "country_en": "Canada"
+  },
+  {
+    "code": "BNG",
+    "name": "Banning Municipal Airport",
+    "city_en": "Banning",
+    "city_pl": "Banning",
+    "country_en": "United States"
+  },
+  {
+    "code": "OFK",
+    "name": "Karl Stefan Memorial Airport",
+    "city_en": "Norfolk  Nebraska",
+    "city_pl": "Norfolk  Nebraska",
+    "country_en": "United States"
+  },
+  {
+    "code": "TFL",
+    "name": "Juscelino Kubitscheck Airport",
+    "city_en": "Teofilo Otoni",
+    "city_pl": "Teofilo Otoni",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TPF",
+    "name": "Peter O Knight Airport",
+    "city_en": "Tampa",
+    "city_pl": "Tampa",
+    "country_en": "United States"
+  },
+  {
+    "code": "BZC",
+    "name": "Umberto Modiano Airport",
+    "city_en": "Buzios",
+    "city_pl": "Buzios",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ITP",
+    "name": "Itaperuna Airport",
+    "city_en": "Itaperuna",
+    "city_pl": "Itaperuna",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "REZ",
+    "name": "Resende Airport",
+    "city_en": "Resende",
+    "city_pl": "Resende",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "KBN",
+    "name": "Tunta Airport",
+    "city_en": "Kabinda",
+    "city_pl": "Kabinda",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "IKL",
+    "name": "Ikela Airport",
+    "city_en": "Ikela",
+    "city_pl": "Ikela",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "AIR",
+    "name": "Aripuanã Airport",
+    "city_en": "Aripuana",
+    "city_pl": "Aripuana",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "JRN",
+    "name": "Juruena Airport",
+    "city_en": "Juruena",
+    "city_pl": "Juruena",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "JIA",
+    "name": "Juína Airport",
+    "city_en": "Juina",
+    "city_pl": "Juina",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "VLP",
+    "name": "Vila Rica Airport",
+    "city_en": "Vila Rica",
+    "city_pl": "Vila Rica",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "JUA",
+    "name": "Inácio Luís do Nascimento Airport",
+    "city_en": "Juara",
+    "city_pl": "Juara",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CCX",
+    "name": "Cáceres Airport",
+    "city_en": "Caceres",
+    "city_pl": "Caceres",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TGQ",
+    "name": "Tangará da Serra Airport",
+    "city_en": "Tangara da Serra",
+    "city_pl": "Tangara da Serra",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "CQA",
+    "name": "Canarana Airport",
+    "city_en": "Canarana",
+    "city_pl": "Canarana",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "MTG",
+    "name": "Vila Bela da Santíssima Trindade Airport",
+    "city_en": "Vila Bela da Santissima Trindade",
+    "city_pl": "Vila Bela da Santissima Trindade",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BMB",
+    "name": "Bumbar Airport",
+    "city_en": "Bumba",
+    "city_pl": "Bumba",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "APQ",
+    "name": "Arapiraca Airport",
+    "city_en": "Arapiraca",
+    "city_pl": "Arapiraca",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "FLB",
+    "name": "Cangapara Airport",
+    "city_en": "Floriano",
+    "city_pl": "Floriano",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PCS",
+    "name": "Picos Airport",
+    "city_en": "Picos",
+    "city_pl": "Picos",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "BNC",
+    "name": "Beni Airport",
+    "city_en": "Beni",
+    "city_pl": "Beni",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "BNB",
+    "name": "Boende Airport",
+    "city_en": "Boende",
+    "city_pl": "Boende",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "MTP",
+    "name": "Montauk Airport",
+    "city_en": "Montauk",
+    "city_pl": "Montauk",
+    "country_en": "United States"
+  },
+  {
+    "code": "VPZ",
+    "name": "Porter County Municipal Airport",
+    "city_en": "Valparaiso IN",
+    "city_pl": "Valparaiso IN",
+    "country_en": "United States"
+  },
+  {
+    "code": "DRV",
+    "name": "Dharavandhoo Airport",
+    "city_en": "DHARAVANDHOO",
+    "city_pl": "DHARAVANDHOO",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "SXK",
+    "name": "Saumlaki/Olilit Airport",
+    "city_en": "Saumlaki",
+    "city_pl": "Saumlaki",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "MLZ",
+    "name": "Cerro Largo International Airport",
+    "city_en": "Melo",
+    "city_pl": "Melo",
+    "country_en": "Uruguay"
+  },
+  {
+    "code": "PDU",
+    "name": "Tydeo Larre Borges Airport",
+    "city_en": "Paysandu",
+    "city_pl": "Paysandu",
+    "country_en": "Uruguay"
+  },
+  {
+    "code": "ATI",
+    "name": "Artigas International Airport",
+    "city_en": "Artigas",
+    "city_pl": "Artigas",
+    "country_en": "Uruguay"
+  },
+  {
+    "code": "HSM",
+    "name": "Horsham Airport",
+    "city_en": "Horsham",
+    "city_pl": "Horsham",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SWH",
+    "name": "Swan Hill Airport",
+    "city_en": "Swan Hill",
+    "city_pl": "Swan Hill",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TTL",
+    "name": "Turtle Island Seaplane Base",
+    "city_en": "Turtle Island",
+    "city_pl": "Turtle Island",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "KWB",
+    "name": "Dewadaru - Kemujan Island",
+    "city_en": "Karimunjawa",
+    "city_pl": "Karimunjawa",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "KOO",
+    "name": "Kongolo Airport",
+    "city_en": "Kongolo",
+    "city_pl": "Kongolo",
+    "country_en": "Congo (Kinshasa)"
+  },
+  {
+    "code": "AOU",
+    "name": "Attopeu Airport",
+    "city_en": "Attopeu",
+    "city_pl": "Attopeu",
+    "country_en": "Laos"
+  },
+  {
+    "code": "SQX",
+    "name": "São Miguel do Oeste Airport",
+    "city_en": "Sao Miguel do Oeste",
+    "city_pl": "Sao Miguel do Oeste",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "LDM",
+    "name": "Mason County Airport",
+    "city_en": "Ludington",
+    "city_pl": "Ludington",
+    "country_en": "United States"
+  },
+  {
+    "code": "RHV",
+    "name": "Reid-Hillview Airport of Santa Clara County",
+    "city_en": "San Jose",
+    "city_pl": "San Jose",
+    "country_en": "United States"
+  },
+  {
+    "code": "OHS",
+    "name": "Sohar Airport",
+    "city_en": "Sohar",
+    "city_pl": "Sohar",
+    "country_en": "Oman"
+  },
+  {
+    "code": "KCF",
+    "name": "Kadanwari Airport",
+    "city_en": "Kadanwari",
+    "city_pl": "Kadanwari",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "RZS",
+    "name": "Sawan Airport",
+    "city_en": "Sindh",
+    "city_pl": "Sindh",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "TMF",
+    "name": "Thimarafushi Airport",
+    "city_en": "Thimarafushi",
+    "city_pl": "Thimarafushi",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "IFU",
+    "name": "Ifuru Airport",
+    "city_en": "Ifuru",
+    "city_pl": "Ifuru",
+    "country_en": "Maldives"
+  },
+  {
+    "code": "KZF",
+    "name": "Kaintiba Airport",
+    "city_en": "Kieta",
+    "city_pl": "Kieta",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "OGU",
+    "name": "Ordu Giresun Airport",
+    "city_en": "Ordu-Giresun",
+    "city_pl": "Ordu-Giresun",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "YKO",
+    "name": "Hakkari Yüksekova Airport",
+    "city_en": "Hakkari",
+    "city_pl": "Hakkari",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "BUT",
+    "name": "Bathpalathang Airport",
+    "city_en": "Jakar",
+    "city_pl": "Jakar",
+    "country_en": "Bhutan"
+  },
+  {
+    "code": "TLI",
+    "name": "Sultan Bantilan Airport",
+    "city_en": "Toli-Toli",
+    "city_pl": "Toli-Toli",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TQL",
+    "name": "Tarko-Sale Airport",
+    "city_en": "Tarko-Sale",
+    "city_pl": "Tarko-Sale",
+    "country_en": "Russia"
+  },
+  {
+    "code": "JIC",
+    "name": "Jinchuan Airport",
+    "city_en": "Jinchuan",
+    "city_pl": "Jinchuan",
+    "country_en": "China"
+  },
+  {
+    "code": "BPL",
+    "name": "Alashankou Bole (Bortala) airport",
+    "city_en": "Bole",
+    "city_pl": "Bole",
+    "country_en": "China"
+  },
+  {
+    "code": "FYN",
+    "name": "Fuyun Koktokay Airport",
+    "city_en": "Fuyun",
+    "city_pl": "Fuyun",
+    "country_en": "China"
+  },
+  {
+    "code": "ACS",
+    "name": "Achinsk Airport",
+    "city_en": "Achinsk",
+    "city_pl": "Achinsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "LFQ",
+    "name": "Linfen Qiaoli Airport",
+    "city_en": "LINFEN",
+    "city_pl": "LINFEN",
+    "country_en": "China"
+  },
+  {
+    "code": "YJP",
+    "name": "Hinton/Jasper-Hinton Airport",
+    "city_en": "Hinton",
+    "city_pl": "Hinton",
+    "country_en": "Canada"
+  },
+  {
+    "code": "WVI",
+    "name": "Watsonville Municipal Airport",
+    "city_en": "Watsonville",
+    "city_pl": "Watsonville",
+    "country_en": "United States"
+  },
+  {
+    "code": "GLU",
+    "name": "Gelephu Airport",
+    "city_en": "Gelephu",
+    "city_pl": "Gelephu",
+    "country_en": "Bhutan"
+  },
+  {
+    "code": "HLI",
+    "name": "Hollister Municipal Airport",
+    "city_en": "Hollister",
+    "city_pl": "Hollister",
+    "country_en": "United States"
+  },
+  {
+    "code": "DLK",
+    "name": "Dulkaninna Airport",
+    "city_en": "Dulkaninna",
+    "city_pl": "Dulkaninna",
+    "country_en": "Australia"
+  },
+  {
+    "code": "YBS",
+    "name": "Opapimiskan Lake Airport",
+    "city_en": "Musselwhite Mine",
+    "city_pl": "Musselwhite Mine",
+    "country_en": "Canada"
+  },
+  {
+    "code": "RIZ",
+    "name": "Rizhao Shanzihe Airport",
+    "city_en": "Rizhao",
+    "city_pl": "Rizhao",
+    "country_en": "China"
+  },
+  {
+    "code": "SQJ",
+    "name": "Shaxian Airport",
+    "city_en": "Sanming",
+    "city_pl": "Sanming",
+    "country_en": "China"
+  },
+  {
+    "code": "XTO",
+    "name": "Taroom Airport",
+    "city_en": "Taroom",
+    "city_pl": "Taroom",
+    "country_en": "Australia"
+  },
+  {
+    "code": "YSE",
+    "name": "Squamish Airport",
+    "city_en": "Squamish",
+    "city_pl": "Squamish",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAH",
+    "name": "La Grande-4 Airport",
+    "city_en": "La Grande-4",
+    "city_pl": "La Grande-4",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YAL",
+    "name": "Alert Bay Airport",
+    "city_en": "Alert Bay",
+    "city_pl": "Alert Bay",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCE",
+    "name": "Centralia / James T. Field Memorial Aerodrome",
+    "city_en": "Centralia",
+    "city_pl": "Centralia",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YCQ",
+    "name": "Chetwynd Airport",
+    "city_en": "Chetwynd",
+    "city_pl": "Chetwynd",
+    "country_en": "Canada"
+  },
+  {
+    "code": "XRR",
+    "name": "Ross River Airport",
+    "city_en": "Ross River",
+    "city_pl": "Ross River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDO",
+    "name": "Dolbeau St Felicien Airport",
+    "city_en": "Dolbeau-St-Félicien",
+    "city_pl": "Dolbeau-St-Félicien",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YEY",
+    "name": "Amos/Magny Airport",
+    "city_en": "Amos",
+    "city_pl": "Amos",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHE",
+    "name": "Hope Airport",
+    "city_en": "Hope",
+    "city_pl": "Hope",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YHT",
+    "name": "Haines Junction Airport",
+    "city_en": "Haines Junction",
+    "city_pl": "Haines Junction",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YDG",
+    "name": "Digby / Annapolis Regional Airport",
+    "city_en": "Digby",
+    "city_pl": "Digby",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YJF",
+    "name": "Fort Liard Airport",
+    "city_en": "Fort Liard",
+    "city_pl": "Fort Liard",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YKJ",
+    "name": "Key Lake Airport",
+    "city_en": "Key Lake",
+    "city_pl": "Key Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YLR",
+    "name": "Leaf Rapids Airport",
+    "city_en": "Leaf Rapids",
+    "city_pl": "Leaf Rapids",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YME",
+    "name": "Matane Airport",
+    "city_en": "Matane",
+    "city_pl": "Matane",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YML",
+    "name": "Charlevoix Airport",
+    "city_en": "Charlevoix",
+    "city_pl": "Charlevoix",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YOS",
+    "name": "Owen Sound / Billy Bishop Regional Airport",
+    "city_en": "Owen Sound",
+    "city_pl": "Owen Sound",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YPS",
+    "name": "Port Hawkesbury Airport",
+    "city_en": "Port Hawkesbury",
+    "city_pl": "Port Hawkesbury",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YQS",
+    "name": "St Thomas Municipal Airport",
+    "city_en": "St Thomas",
+    "city_pl": "St Thomas",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YRO",
+    "name": "Ottawa / Rockcliffe Airport",
+    "city_en": "Ottawa",
+    "city_pl": "Ottawa",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSH",
+    "name": "Smiths Falls-Montague (Russ Beach) Airport",
+    "city_en": "Smiths Falls",
+    "city_pl": "Smiths Falls",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSL",
+    "name": "St Leonard Airport",
+    "city_en": "St Leonard",
+    "city_pl": "St Leonard",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YVE",
+    "name": "Vernon Airport",
+    "city_en": "Vernon",
+    "city_pl": "Vernon",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YXQ",
+    "name": "Beaver Creek Airport",
+    "city_en": "Beaver Creek",
+    "city_pl": "Beaver Creek",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YSN",
+    "name": "Shuswap Regional Airport",
+    "city_en": "Salmon Arm",
+    "city_pl": "Salmon Arm",
+    "country_en": "Canada"
+  },
+  {
+    "code": "KES",
+    "name": "Kelsey Airport",
+    "city_en": "Kelsey",
+    "city_pl": "Kelsey",
+    "country_en": "Canada"
+  },
+  {
+    "code": "XPK",
+    "name": "Pukatawagan Airport",
+    "city_en": "Pukatawagan",
+    "city_pl": "Pukatawagan",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZGF",
+    "name": "Grand Forks Airport",
+    "city_en": "Grand Forks",
+    "city_pl": "Grand Forks",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZJG",
+    "name": "Jenpeg Airport",
+    "city_en": "Jenpeg",
+    "city_pl": "Jenpeg",
+    "country_en": "Canada"
+  },
+  {
+    "code": "YTD",
+    "name": "Thicket Portage Airport",
+    "city_en": "Thicket Portage",
+    "city_pl": "Thicket Portage",
+    "country_en": "Canada"
+  },
+  {
+    "code": "PIW",
+    "name": "Pikwitonei Airport",
+    "city_en": "Pikwitonei",
+    "city_pl": "Pikwitonei",
+    "country_en": "Canada"
+  },
+  {
+    "code": "XPP",
+    "name": "Poplar River Airport",
+    "city_en": "Poplar River",
+    "city_pl": "Poplar River",
+    "country_en": "Canada"
+  },
+  {
+    "code": "WPC",
+    "name": "Pincher Creek Airport",
+    "city_en": "Pincher Creek",
+    "city_pl": "Pincher Creek",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZST",
+    "name": "Stewart Airport",
+    "city_en": "Stewart",
+    "city_pl": "Stewart",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ZUC",
+    "name": "Ignace Municipal Airport",
+    "city_en": "Ignace",
+    "city_pl": "Ignace",
+    "country_en": "Canada"
+  },
+  {
+    "code": "FNB",
+    "name": "Neubrandenburg Airport",
+    "city_en": "Neubrandenburg",
+    "city_pl": "Neubrandenburg",
+    "country_en": "Germany"
+  },
+  {
+    "code": "FSS",
+    "name": "RAF Kinloss",
+    "city_en": "Kinloss",
+    "city_pl": "Kinloss",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BXP",
+    "name": "Biała Podlaska Airfield",
+    "city_en": "Biała Podlaska",
+    "city_pl": "Biała Podlaska",
+    "country_en": "Poland"
+  },
+  {
+    "code": "DGP",
+    "name": "Daugavpils Intrenational Airport",
+    "city_en": "Daugavpils",
+    "city_pl": "Daugavpils",
+    "country_en": "Latvia"
+  },
+  {
+    "code": "LMR",
+    "name": "Lime Acres Finsch Mine Airport",
+    "city_en": "Lime Acres",
+    "city_pl": "Lime Acres",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "SXN",
+    "name": "Sua Pan Airport",
+    "city_en": "Sowa",
+    "city_pl": "Sowa",
+    "country_en": "Botswana"
+  },
+  {
+    "code": "NDD",
+    "name": "Sumbe Airport",
+    "city_en": "Sumbe",
+    "city_pl": "Sumbe",
+    "country_en": "Angola"
+  },
+  {
+    "code": "MAI",
+    "name": "Mangochi Airport",
+    "city_en": "Mangochi",
+    "city_pl": "Mangochi",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "ADI",
+    "name": "Arandis Airport",
+    "city_en": "Arandis",
+    "city_pl": "Arandis",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "MWE",
+    "name": "Merowe New Airport",
+    "city_en": "Merowe",
+    "city_pl": "Merowe",
+    "country_en": "Sudan"
+  },
+  {
+    "code": "ALN",
+    "name": "St Louis Regional Airport",
+    "city_en": "Alton/St Louis",
+    "city_pl": "Alton/St Louis",
+    "country_en": "United States"
+  },
+  {
+    "code": "AXN",
+    "name": "Chandler Field",
+    "city_en": "Alexandria",
+    "city_pl": "Alexandria",
+    "country_en": "United States"
+  },
+  {
+    "code": "CLU",
+    "name": "Columbus Municipal Airport",
+    "city_en": "Columbus",
+    "city_pl": "Columbus",
+    "country_en": "United States"
+  },
+  {
+    "code": "BBD",
+    "name": "Curtis Field",
+    "city_en": "Brady",
+    "city_pl": "Brady",
+    "country_en": "United States"
+  },
+  {
+    "code": "BIH",
+    "name": "Eastern Sierra Regional Airport",
+    "city_en": "Bishop",
+    "city_pl": "Bishop",
+    "country_en": "United States"
+  },
+  {
+    "code": "BKE",
+    "name": "Baker City Municipal Airport",
+    "city_en": "Baker City",
+    "city_pl": "Baker City",
+    "country_en": "United States"
+  },
+  {
+    "code": "BPI",
+    "name": "Miley Memorial Field",
+    "city_en": "Big Piney",
+    "city_pl": "Big Piney",
+    "country_en": "United States"
+  },
+  {
+    "code": "WMH",
+    "name": "Ozark Regional Airport",
+    "city_en": "Mountain Home",
+    "city_pl": "Mountain Home",
+    "country_en": "United States"
+  },
+  {
+    "code": "BTL",
+    "name": "W K Kellogg Airport",
+    "city_en": "Battle Creek",
+    "city_pl": "Battle Creek",
+    "country_en": "United States"
+  },
+  {
+    "code": "BYI",
+    "name": "Burley Municipal Airport",
+    "city_en": "Burley",
+    "city_pl": "Burley",
+    "country_en": "United States"
+  },
+  {
+    "code": "CCY",
+    "name": "Northeast Iowa Regional Airport",
+    "city_en": "Charles City",
+    "city_pl": "Charles City",
+    "country_en": "United States"
+  },
+  {
+    "code": "CNU",
+    "name": "Chanute Martin Johnson Airport",
+    "city_en": "Chanute",
+    "city_pl": "Chanute",
+    "country_en": "United States"
+  },
+  {
+    "code": "CRG",
+    "name": "Jacksonville Executive at Craig Airport",
+    "city_en": "Jacksonville",
+    "city_pl": "Jacksonville",
+    "country_en": "United States"
+  },
+  {
+    "code": "CSV",
+    "name": "Crossville Memorial Whitson Field",
+    "city_en": "Crossville",
+    "city_pl": "Crossville",
+    "country_en": "United States"
+  },
+  {
+    "code": "DAA",
+    "name": "Davison Army Air Field",
+    "city_en": "Fort Belvoir",
+    "city_pl": "Fort Belvoir",
+    "country_en": "United States"
+  },
+  {
+    "code": "DAG",
+    "name": "Barstow Daggett Airport",
+    "city_en": "Daggett",
+    "city_pl": "Daggett",
+    "country_en": "United States"
+  },
+  {
+    "code": "DMN",
+    "name": "Deming Municipal Airport",
+    "city_en": "Deming",
+    "city_pl": "Deming",
+    "country_en": "United States"
+  },
+  {
+    "code": "DRA",
+    "name": "Desert Rock Airport",
+    "city_en": "Mercury",
+    "city_pl": "Mercury",
+    "country_en": "United States"
+  },
+  {
+    "code": "EED",
+    "name": "Needles Airport",
+    "city_en": "Needles",
+    "city_pl": "Needles",
+    "country_en": "United States"
+  },
+  {
+    "code": "EGI",
+    "name": "Duke Field",
+    "city_en": "Crestview",
+    "city_pl": "Crestview",
+    "country_en": "United States"
+  },
+  {
+    "code": "EKA",
+    "name": "Murray Field",
+    "city_en": "Eureka",
+    "city_pl": "Eureka",
+    "country_en": "United States"
+  },
+  {
+    "code": "HYR",
+    "name": "Sawyer County Airport",
+    "city_en": "Hayward",
+    "city_pl": "Hayward",
+    "country_en": "United States"
+  },
+  {
+    "code": "JCT",
+    "name": "Kimble County Airport",
+    "city_en": "Junction",
+    "city_pl": "Junction",
+    "country_en": "United States"
+  },
+  {
+    "code": "LOL",
+    "name": "Derby Field",
+    "city_en": "Lovelock",
+    "city_pl": "Lovelock",
+    "country_en": "United States"
+  },
+  {
+    "code": "MBG",
+    "name": "Mobridge Municipal Airport",
+    "city_en": "Mobridge",
+    "city_pl": "Mobridge",
+    "country_en": "United States"
+  },
+  {
+    "code": "MCB",
+    "name": "Mc Comb/Pike County Airport/John E Lewis Field",
+    "city_en": "Mc Comb",
+    "city_pl": "Mc Comb",
+    "country_en": "United States"
+  },
+  {
+    "code": "MDH",
+    "name": "Southern Illinois Airport",
+    "city_en": "Carbondale/Murphysboro",
+    "city_pl": "Carbondale/Murphysboro",
+    "country_en": "United States"
+  },
+  {
+    "code": "MMT",
+    "name": "Mc Entire Joint National Guard Base",
+    "city_en": "Eastover",
+    "city_pl": "Eastover",
+    "country_en": "United States"
+  },
+  {
+    "code": "NHZ",
+    "name": "Brunswick Executive Airport",
+    "city_en": "Brunswick",
+    "city_pl": "Brunswick",
+    "country_en": "United States"
+  },
+  {
+    "code": "NRB",
+    "name": "Naval Station Mayport (Admiral David L. Mcdonald Field)",
+    "city_en": "Mayport",
+    "city_pl": "Mayport",
+    "country_en": "United States"
+  },
+  {
+    "code": "OGB",
+    "name": "Orangeburg Municipal Airport",
+    "city_en": "Orangeburg",
+    "city_pl": "Orangeburg",
+    "country_en": "United States"
+  },
+  {
+    "code": "OTM",
+    "name": "Ottumwa Regional Airport",
+    "city_en": "Ottumwa",
+    "city_pl": "Ottumwa",
+    "country_en": "United States"
+  },
+  {
+    "code": "OZR",
+    "name": "Cairns AAF (Fort Rucker) Air Field",
+    "city_en": "Fort Rucker/Ozark",
+    "city_pl": "Fort Rucker/Ozark",
+    "country_en": "United States"
+  },
+  {
+    "code": "PWY",
+    "name": "Ralph Wenz Field",
+    "city_en": "Pinedale",
+    "city_pl": "Pinedale",
+    "country_en": "United States"
+  },
+  {
+    "code": "POU",
+    "name": "Dutchess County Airport",
+    "city_en": "Poughkeepsie",
+    "city_pl": "Poughkeepsie",
+    "country_en": "United States"
+  },
+  {
+    "code": "RSL",
+    "name": "Russell Municipal Airport",
+    "city_en": "Russell",
+    "city_pl": "Russell",
+    "country_en": "United States"
+  },
+  {
+    "code": "RWF",
+    "name": "Redwood Falls Municipal Airport",
+    "city_en": "Redwood Falls",
+    "city_pl": "Redwood Falls",
+    "country_en": "United States"
+  },
+  {
+    "code": "SNS",
+    "name": "Salinas Municipal Airport",
+    "city_en": "Salinas",
+    "city_pl": "Salinas",
+    "country_en": "United States"
+  },
+  {
+    "code": "TPH",
+    "name": "Tonopah Airport",
+    "city_en": "Tonopah",
+    "city_pl": "Tonopah",
+    "country_en": "United States"
+  },
+  {
+    "code": "UKI",
+    "name": "Ukiah Municipal Airport",
+    "city_en": "Ukiah",
+    "city_pl": "Ukiah",
+    "country_en": "United States"
+  },
+  {
+    "code": "UOX",
+    "name": "University Oxford Airport",
+    "city_en": "Oxford",
+    "city_pl": "Oxford",
+    "country_en": "United States"
+  },
+  {
+    "code": "HTV",
+    "name": "Huntsville Regional Airport",
+    "city_en": "Huntsville",
+    "city_pl": "Huntsville",
+    "country_en": "United States"
+  },
+  {
+    "code": "VTN",
+    "name": "Miller Field",
+    "city_en": "Valentine",
+    "city_pl": "Valentine",
+    "country_en": "United States"
+  },
+  {
+    "code": "WMC",
+    "name": "Winnemucca Municipal Airport",
+    "city_en": "Winnemucca",
+    "city_pl": "Winnemucca",
+    "country_en": "United States"
+  },
+  {
+    "code": "WWR",
+    "name": "West Woodward Airport",
+    "city_en": "Woodward",
+    "city_pl": "Woodward",
+    "country_en": "United States"
+  },
+  {
+    "code": "ZZV",
+    "name": "Zanesville Municipal Airport",
+    "city_en": "Zanesville",
+    "city_pl": "Zanesville",
+    "country_en": "United States"
+  },
+  {
+    "code": "ECV",
+    "name": "Cuatro Vientos Airport",
+    "city_en": "Madrid",
+    "city_pl": "Madryt",
+    "country_en": "Spain"
+  },
+  {
+    "code": "CDT",
+    "name": "Castellón-Costa Azahar Airport",
+    "city_en": "Castellón de la Plana",
+    "city_pl": "Castellón de la Plana",
+    "country_en": "Spain"
+  },
+  {
+    "code": "TEV",
+    "name": "Teruel Airport",
+    "city_en": "Teruel",
+    "city_pl": "Teruel",
+    "country_en": "Spain"
+  },
+  {
+    "code": "QLP",
+    "name": "Sarzana-Luni Air Base",
+    "city_en": "Sarzana (SP)",
+    "city_pl": "Sarzana (SP)",
+    "country_en": "Italy"
+  },
+  {
+    "code": "BJY",
+    "name": "Batajnica Air Base",
+    "city_en": "Batajnica",
+    "city_pl": "Batajnica",
+    "country_en": "Serbia"
+  },
+  {
+    "code": "RUV",
+    "name": "Rubelsanto Airport",
+    "city_en": "Rubelsanto",
+    "city_pl": "Rubelsanto",
+    "country_en": "Guatemala"
+  },
+  {
+    "code": "XPL",
+    "name": "Coronel Enrique Soto Cano Air Base",
+    "city_en": "Comayagua",
+    "city_pl": "Comayagua",
+    "country_en": "Honduras"
+  },
+  {
+    "code": "UPL",
+    "name": "Upala Airport",
+    "city_en": "Upala",
+    "city_pl": "Upala",
+    "country_en": "Costa Rica"
+  },
+  {
+    "code": "QSN",
+    "name": "San Nicolas De Bari Airport",
+    "city_en": "San Nicolás",
+    "city_pl": "San Nicolás",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "SNJ",
+    "name": "San Julian Air Base",
+    "city_en": "Pinar Del Rio",
+    "city_pl": "Pinar Del Rio",
+    "country_en": "Cuba"
+  },
+  {
+    "code": "DWD",
+    "name": "King Salman Abdulaziz Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "KMX",
+    "name": "King Khaled Air Base",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "XXN",
+    "name": "Riyadh Air Base",
+    "city_en": "Riyadh",
+    "city_pl": "Riyadh",
+    "country_en": "Saudi Arabia"
+  },
+  {
+    "code": "KNR",
+    "name": "Jam Airport",
+    "city_en": "Kangan",
+    "city_pl": "Kangan",
+    "country_en": "Iran"
+  },
+  {
+    "code": "PYK",
+    "name": "Payam International Airport",
+    "city_en": "Karaj",
+    "city_pl": "Karaj",
+    "country_en": "Iran"
+  },
+  {
+    "code": "XIJ",
+    "name": "Ahmed Al Jaber Air Base",
+    "city_en": "Ahmed Al Jaber AB",
+    "city_pl": "Ahmed Al Jaber AB",
+    "country_en": "Kuwait"
+  },
+  {
+    "code": "ATG",
+    "name": "Minhas Air Base",
+    "city_en": "Kamra",
+    "city_pl": "Kamra",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "SGI",
+    "name": "Mushaf Air Base",
+    "city_en": "Sargodha",
+    "city_pl": "Sargodha",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "RQW",
+    "name": "Qayyarah West Airport",
+    "city_en": "Qayyarah",
+    "city_pl": "Qayyarah",
+    "country_en": "Iraq"
+  },
+  {
+    "code": "ENN",
+    "name": "Nenana Municipal Airport",
+    "city_en": "Nenana",
+    "city_pl": "Nenana",
+    "country_en": "United States"
+  },
+  {
+    "code": "WWA",
+    "name": "Wasilla Airport",
+    "city_en": "Wasilla",
+    "city_pl": "Wasilla",
+    "country_en": "United States"
+  },
+  {
+    "code": "IWK",
+    "name": "Iwakuni Marine Corps Air Station",
+    "city_en": "Iwakuni",
+    "city_pl": "Iwakuni",
+    "country_en": "Japan"
+  },
+  {
+    "code": "IEJ",
+    "name": "Ie Jima Airport",
+    "city_en": "Ie",
+    "city_pl": "Ie",
+    "country_en": "Japan"
+  },
+  {
+    "code": "AAV",
+    "name": "Allah Valley Airport",
+    "city_en": "Surallah",
+    "city_pl": "Surallah",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "BPH",
+    "name": "Bislig Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "MXI",
+    "name": "Mati National Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "BAT",
+    "name": "Chafei Amsei Airport",
+    "city_en": "Barretos",
+    "city_pl": "Barretos",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "QHP",
+    "name": "Base de Aviação de Taubaté Airport",
+    "city_en": "Taubaté",
+    "city_pl": "Taubaté",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "TOQ",
+    "name": "Barriles Airport",
+    "city_en": "Tocopilla",
+    "city_pl": "Tocopilla",
+    "country_en": "Chile"
+  },
+  {
+    "code": "CNR",
+    "name": "Chañaral Airport",
+    "city_en": "Chañaral",
+    "city_pl": "Chañaral",
+    "country_en": "Chile"
+  },
+  {
+    "code": "TLX",
+    "name": "Panguilemo Airport",
+    "city_en": "Talca",
+    "city_pl": "Talca",
+    "country_en": "Chile"
+  },
+  {
+    "code": "ZIC",
+    "name": "Victoria Airport",
+    "city_en": "Victoria",
+    "city_pl": "Victoria",
+    "country_en": "Chile"
+  },
+  {
+    "code": "TTC",
+    "name": "Las Breas Airport",
+    "city_en": "Taltal",
+    "city_pl": "Taltal",
+    "country_en": "Chile"
+  },
+  {
+    "code": "API",
+    "name": "Gomez Nino Apiay Air Base",
+    "city_en": "Apiay",
+    "city_pl": "Apiay",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "CVE",
+    "name": "Coveñas Airport",
+    "city_en": "Coveñas",
+    "city_pl": "Coveñas",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PAL",
+    "name": "German Olano Air Base",
+    "city_en": "La Dorada",
+    "city_pl": "La Dorada",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "PZA",
+    "name": "Paz De Ariporo Airport",
+    "city_en": "Paz De Ariporo",
+    "city_pl": "Paz De Ariporo",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "TQS",
+    "name": "Tres Esquinas Air Base",
+    "city_en": "Tres Esquinas",
+    "city_pl": "Tres Esquinas",
+    "country_en": "Colombia"
+  },
+  {
+    "code": "RIJ",
+    "name": "Juan Simons Vela Airport",
+    "city_en": "Rioja",
+    "city_pl": "Rioja",
+    "country_en": "Peru"
+  },
+  {
+    "code": "JAE",
+    "name": "Shumba Airport",
+    "city_en": "Jaén",
+    "city_pl": "Jaén",
+    "country_en": "Peru"
+  },
+  {
+    "code": "IKU",
+    "name": "Issyk-Kul International Airport",
+    "city_en": "Tamchy",
+    "city_pl": "Tamchy",
+    "country_en": "Kyrgyzstan"
+  },
+  {
+    "code": "VYI",
+    "name": "Vilyuisk Airport",
+    "city_en": "Vilyuisk",
+    "city_pl": "Vilyuisk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "BGN",
+    "name": "Belaya Gora Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Russia"
+  },
+  {
+    "code": "GVN",
+    "name": "Maygatka Airport.",
+    "city_en": "Sovetskaya Gavan",
+    "city_pl": "Sovetskaya Gavan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "NLI",
+    "name": "Nikolayevsk-na-Amure Airport",
+    "city_en": "Nikolayevsk-na-Amure Airport",
+    "city_pl": "Nikolayevsk-na-Amure Airport",
+    "country_en": "Russia"
+  },
+  {
+    "code": "VLK",
+    "name": "Volgodonsk Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Russia"
+  },
+  {
+    "code": "INA",
+    "name": "Inta Airport",
+    "city_en": "Inta",
+    "city_pl": "Inta",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ZIX",
+    "name": "Zhigansk Airport",
+    "city_en": "Zhigansk",
+    "city_pl": "Zhigansk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "RTC",
+    "name": "Ratnagiri Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "India"
+  },
+  {
+    "code": "HIM",
+    "name": "Hingurakgoda Air Force Base",
+    "city_en": "Polonnaruwa Town",
+    "city_pl": "Polonnaruwa Town",
+    "country_en": "Sri Lanka"
+  },
+  {
+    "code": "RDP",
+    "name": "Kazi Nazrul Islam Airport",
+    "city_en": "Durgapur",
+    "city_pl": "Durgapur",
+    "country_en": "India"
+  },
+  {
+    "code": "PUT",
+    "name": "Sri Sathya Sai Airport",
+    "city_en": "Puttaparthi",
+    "city_pl": "Puttaparthi",
+    "country_en": "India"
+  },
+  {
+    "code": "LNX",
+    "name": "Smolensk North Airport",
+    "city_en": "Smolensk",
+    "city_pl": "Smolensk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "ABH",
+    "name": "Alpha Airport",
+    "city_en": "Alpha",
+    "city_pl": "Alpha",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ARY",
+    "name": "Ararat Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BLN",
+    "name": "Benalla Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BZD",
+    "name": "Balranald Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BWQ",
+    "name": "Brewarrina Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CVC",
+    "name": "Cleve Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CWW",
+    "name": "Corowa Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CYG",
+    "name": "Corryong Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CMD",
+    "name": "Cootamundra Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DRN",
+    "name": "Dirranbandi Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DNQ",
+    "name": "Deniliquin Airport",
+    "city_en": "Deniliquin",
+    "city_pl": "Deniliquin",
+    "country_en": "Australia"
+  },
+  {
+    "code": "DYA",
+    "name": "Dysart Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "ECH",
+    "name": "Echuca Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "FRB",
+    "name": "Forbes Airport",
+    "city_en": "Forbes",
+    "city_pl": "Forbes",
+    "country_en": "Australia"
+  },
+  {
+    "code": "GUH",
+    "name": "Gunnedah Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HXX",
+    "name": "Hay Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "HTU",
+    "name": "Hopetoun Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KRA",
+    "name": "Kerang Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KPS",
+    "name": "Kempsey Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "KGY",
+    "name": "Kingaroy Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TGN",
+    "name": "Latrobe Valley Airport",
+    "city_en": "Morwell",
+    "city_pl": "Morwell",
+    "country_en": "Australia"
+  },
+  {
+    "code": "MRG",
+    "name": "Mareeba Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "RPM",
+    "name": "Ngukurr Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "QRM",
+    "name": "Narromine Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PPI",
+    "name": "Port Pirie Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SIO",
+    "name": "Smithton Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SNB",
+    "name": "Snake Bay Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SWC",
+    "name": "Stawell Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TYB",
+    "name": "Tibooburra Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "TUM",
+    "name": "Tumut Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WGT",
+    "name": "Wangaratta Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WKB",
+    "name": "Warracknabeal Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "QRR",
+    "name": "Warren Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "SXE",
+    "name": "West Sale Airport",
+    "city_en": "Sale",
+    "city_pl": "Sale",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WWY",
+    "name": "West Wyalong Airport",
+    "city_en": "West Wyalong",
+    "city_pl": "West Wyalong",
+    "country_en": "Australia"
+  },
+  {
+    "code": "NGA",
+    "name": "Young Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LHK",
+    "name": "Guangzhou MR Air Base",
+    "city_en": "Guanghua",
+    "city_pl": "Guanghua",
+    "country_en": "China"
+  },
+  {
+    "code": "WDS",
+    "name": "Shiyan Wudangshan Airport",
+    "city_en": "Shiyan",
+    "city_pl": "Shiyan",
+    "country_en": "China"
+  },
+  {
+    "code": "HTT",
+    "name": "Huatugou Airport",
+    "city_en": "Mengnai",
+    "city_pl": "Mengnai",
+    "country_en": "China"
+  },
+  {
+    "code": "UUN",
+    "name": "Baruun Urt Airport",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "Mongolia"
+  },
+  {
+    "code": "BFU",
+    "name": "Bengbu Airport",
+    "city_en": "Bengbu",
+    "city_pl": "Bengbu",
+    "country_en": "China"
+  },
+  {
+    "code": "RUG",
+    "name": "Rugao Air Base",
+    "city_en": "Rugao",
+    "city_pl": "Rugao",
+    "country_en": "China"
+  },
+  {
+    "code": "WHU",
+    "name": "Wuhu Air Base",
+    "city_en": "Wuhu",
+    "city_pl": "Wuhu",
+    "country_en": "China"
+  },
+  {
+    "code": "SXJ",
+    "name": "Shanshan Airport",
+    "city_en": "Shanshan",
+    "city_pl": "Shanshan",
+    "country_en": "China"
+  },
+  {
+    "code": "YKH",
+    "name": "Yingkou Lanqi Airport",
+    "city_en": "Yingkou",
+    "city_pl": "Yingkou",
+    "country_en": "China"
+  },
+  {
+    "code": "BQG",
+    "name": "Bogorodskoye Airport",
+    "city_en": "Bogorodskoe",
+    "city_pl": "Bogorodskoe",
+    "country_en": "Russia"
+  },
+  {
+    "code": "HYD",
+    "name": "Rajiv Gandhi International Airport",
+    "city_en": "Hyderabad",
+    "city_pl": "Hyderabad",
+    "country_en": "India"
+  },
+  {
+    "code": "PKO",
+    "name": "Parakou Airport",
+    "city_en": "Parakou",
+    "city_pl": "Parakou",
+    "country_en": "Benin"
+  },
+  {
+    "code": "KDC",
+    "name": "Kandi Airport",
+    "city_en": "Kandi",
+    "city_pl": "Kandi",
+    "country_en": "Benin"
+  },
+  {
+    "code": "HMG",
+    "name": "Hermannsburg Airport",
+    "city_en": "Hermannsburg",
+    "city_pl": "Hermannsburg",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BIB",
+    "name": "Baidoa Airport",
+    "city_en": "Baidoa",
+    "city_pl": "Baidoa",
+    "country_en": "Somalia"
+  },
+  {
+    "code": "KCS",
+    "name": "Kings Creek Airport",
+    "city_en": "Petermann",
+    "city_pl": "Petermann",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BMR",
+    "name": "Baltrum Airport",
+    "city_en": "Baltrum",
+    "city_pl": "Baltrum",
+    "country_en": "Germany"
+  },
+  {
+    "code": "MVW",
+    "name": "Skagit Regional Airport",
+    "city_en": "Skagit",
+    "city_pl": "Skagit",
+    "country_en": "United States"
+  },
+  {
+    "code": "GOO",
+    "name": "Goondiwindi Airport",
+    "city_en": "Goondiwindi",
+    "city_pl": "Goondiwindi",
+    "country_en": "Australia"
+  },
+  {
+    "code": "APT",
+    "name": "Marion County Brown Field",
+    "city_en": "Jasper",
+    "city_pl": "Jasper",
+    "country_en": "United States"
+  },
+  {
+    "code": "DCU",
+    "name": "Pryor Field Regional Airport",
+    "city_en": "Decatur",
+    "city_pl": "Decatur",
+    "country_en": "United States"
+  },
+  {
+    "code": "GLW",
+    "name": "Glasgow Municipal Airport",
+    "city_en": "Glasgow",
+    "city_pl": "Glasgow",
+    "country_en": "United States"
+  },
+  {
+    "code": "DKV",
+    "name": "Docker River Airport",
+    "city_en": "Docker River",
+    "city_pl": "Docker River",
+    "country_en": "Australia"
+  },
+  {
+    "code": "RNZ",
+    "name": "Jasper County Airport",
+    "city_en": "Rensselaer",
+    "city_pl": "Rensselaer",
+    "country_en": "United States"
+  },
+  {
+    "code": "SBT",
+    "name": "Sabetta International Airport",
+    "city_en": "Sabetta",
+    "city_pl": "Sabetta",
+    "country_en": "Russia"
+  },
+  {
+    "code": "AXF",
+    "name": "Alxa Left Banner Bayanhot Airport",
+    "city_en": "Alxa Left Banner",
+    "city_pl": "Alxa Left Banner",
+    "country_en": "China"
+  },
+  {
+    "code": "NIS",
+    "name": "Simberi Airport",
+    "city_en": "Simberi Island",
+    "city_pl": "Simberi Island",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "BUL",
+    "name": "Bulolo Airport",
+    "city_en": "Bulolo",
+    "city_pl": "Bulolo",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "TBR",
+    "name": "Statesboro Bulloch County Airport",
+    "city_en": "Statesboro",
+    "city_pl": "Statesboro",
+    "country_en": "United States"
+  },
+  {
+    "code": "AMT",
+    "name": "Amata Airport",
+    "city_en": "Amata",
+    "city_pl": "Amata",
+    "country_en": "Australia"
+  },
+  {
+    "code": "EDD",
+    "name": "Erldunda Airport",
+    "city_en": "Erldunda",
+    "city_pl": "Erldunda",
+    "country_en": "Australia"
+  },
+  {
+    "code": "FIK",
+    "name": "Finke Airport",
+    "city_en": "Finke",
+    "city_pl": "Finke",
+    "country_en": "Australia"
+  },
+  {
+    "code": "JJG",
+    "name": "Humberto Ghizzo Bortoluzzi Regional Airport",
+    "city_en": "Jaguaruna",
+    "city_pl": "Jaguaruna",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "WKI",
+    "name": "Hwange (Town) Airport",
+    "city_en": "Hwange",
+    "city_pl": "Hwange",
+    "country_en": "Zimbabwe"
+  },
+  {
+    "code": "KLJ",
+    "name": "Klaipėda Airport",
+    "city_en": "Klaipeda",
+    "city_pl": "Klaipeda",
+    "country_en": "Lithuania"
+  },
+  {
+    "code": "ETB",
+    "name": "West Bend Municipal Airport",
+    "city_en": "WEST BEND",
+    "city_pl": "WEST BEND",
+    "country_en": "United States"
+  },
+  {
+    "code": "GLR",
+    "name": "Gaylord Regional Airport",
+    "city_en": "GAYLORD",
+    "city_pl": "GAYLORD",
+    "country_en": "United States"
+  },
+  {
+    "code": "AID",
+    "name": "Anderson Municipal Darlington Field",
+    "city_en": "ANDERSON",
+    "city_pl": "ANDERSON",
+    "country_en": "United States"
+  },
+  {
+    "code": "QND",
+    "name": "Cenej Airport",
+    "city_en": "Novi Sad",
+    "city_pl": "Novi Sad",
+    "country_en": "Serbia"
+  },
+  {
+    "code": "GUU",
+    "name": "Grundarfjörður Airport",
+    "city_en": "Grundarfjordur",
+    "city_pl": "Grundarfjordur",
+    "country_en": "Iceland"
+  },
+  {
+    "code": "PCD",
+    "name": "Prairie Du Chien Municipal Airport",
+    "city_en": "Prairie du Chien",
+    "city_pl": "Prairie du Chien",
+    "country_en": "United States"
+  },
+  {
+    "code": "OTJ",
+    "name": "Otjiwarongo Airport",
+    "city_en": "Otjiwarongo",
+    "city_pl": "Otjiwarongo",
+    "country_en": "Namibia"
+  },
+  {
+    "code": "TSM",
+    "name": "Taos Regional Airport",
+    "city_en": "Taos",
+    "city_pl": "Taos",
+    "country_en": "United States"
+  },
+  {
+    "code": "RTN",
+    "name": "Raton Municipal-Crews Field",
+    "city_en": "Raton",
+    "city_pl": "Raton",
+    "country_en": "United States"
+  },
+  {
+    "code": "PPA",
+    "name": "Perry Lefors Field",
+    "city_en": "Pampa",
+    "city_pl": "Pampa",
+    "country_en": "United States"
+  },
+  {
+    "code": "FLP",
+    "name": "Marion County Regional Airport",
+    "city_en": "Flippin",
+    "city_pl": "Flippin",
+    "country_en": "United States"
+  },
+  {
+    "code": "BGD",
+    "name": "Hutchinson County Airport",
+    "city_en": "Borger",
+    "city_pl": "Borger",
+    "country_en": "United States"
+  },
+  {
+    "code": "HLE",
+    "name": "St. Helena Airport",
+    "city_en": "Longwood",
+    "city_pl": "Longwood",
+    "country_en": "United Kingdom"
+  },
+  {
+    "code": "BNJ",
+    "name": "Bonn-Hangelar Airport",
+    "city_en": "Sankt-Augustin",
+    "city_pl": "Sankt-Augustin",
+    "country_en": "Germany"
+  },
+  {
+    "code": "NGK",
+    "name": "Nogliki Airport",
+    "city_en": "Nogliki",
+    "city_pl": "Nogliki",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SQA",
+    "name": "Santa Ynez Airport",
+    "city_en": "Santa Ynez",
+    "city_pl": "Santa Ynez",
+    "country_en": "United States"
+  },
+  {
+    "code": "HXD",
+    "name": "Delingha Airport",
+    "city_en": "Haixi",
+    "city_pl": "Haixi",
+    "country_en": "China"
+  },
+  {
+    "code": "BAR",
+    "name": "Qionghai Bo'ao Airport",
+    "city_en": "Qionghai",
+    "city_pl": "Qionghai",
+    "country_en": "China"
+  },
+  {
+    "code": "ZBO",
+    "name": "Bowen Airport",
+    "city_en": "Bowen",
+    "city_pl": "Bowen",
+    "country_en": "Australia"
+  },
+  {
+    "code": "UCB",
+    "name": "Ulanqab Jining Airport",
+    "city_en": "Wulanchabu",
+    "city_pl": "Wulanchabu",
+    "country_en": "China"
+  },
+  {
+    "code": "KEO",
+    "name": "Odienne Airport",
+    "city_en": "Odienne",
+    "city_pl": "Odienne",
+    "country_en": "Cote d'Ivoire"
+  },
+  {
+    "code": "GII",
+    "name": "Siguiri Airport",
+    "city_en": "Siguiri",
+    "city_pl": "Siguiri",
+    "country_en": "Guinea"
+  },
+  {
+    "code": "NZE",
+    "name": "Nzérékoré Airport",
+    "city_en": "Nzerekore",
+    "city_pl": "Nzerekore",
+    "country_en": "Guinea"
+  },
+  {
+    "code": "OCM",
+    "name": "Boolgeeda",
+    "city_en": "Brockman",
+    "city_pl": "Brockman",
+    "country_en": "Australia"
+  },
+  {
+    "code": "WGN",
+    "name": "Shaoyang Wugang Airport",
+    "city_en": "Shaoyang",
+    "city_pl": "Shaoyang",
+    "country_en": "China"
+  },
+  {
+    "code": "TXF",
+    "name": "9 de Maio - Teixeira de Freitas Airport",
+    "city_en": "Teixeira de Freitas",
+    "city_pl": "Teixeira de Freitas",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SPA",
+    "name": "Spartanburg Downtown Memorial Airport",
+    "city_en": "Spartangurg",
+    "city_pl": "Spartangurg",
+    "country_en": "United States"
+  },
+  {
+    "code": "BJW",
+    "name": "Bajawa Soa Airport",
+    "city_en": "Bajawa",
+    "city_pl": "Bajawa",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NBN",
+    "name": "Annobón Airport",
+    "city_en": "San Antonio de Pale",
+    "city_pl": "San Antonio de Pale",
+    "country_en": "Equatorial Guinea"
+  },
+  {
+    "code": "OLL",
+    "name": "Oyo Ollombo Airport",
+    "city_en": "Oyo",
+    "city_pl": "Oyo",
+    "country_en": "Congo (Brazzaville)"
+  },
+  {
+    "code": "PPF",
+    "name": "Tri-City Airport",
+    "city_en": "Parsons",
+    "city_pl": "Parsons",
+    "country_en": "United States"
+  },
+  {
+    "code": "PCQ",
+    "name": "Boun Neau Airport",
+    "city_en": "Phongsaly",
+    "city_pl": "Phongsaly",
+    "country_en": "Laos"
+  },
+  {
+    "code": "AYS",
+    "name": "Waycross Ware County Airport",
+    "city_en": "Waycross",
+    "city_pl": "Waycross",
+    "country_en": "United States"
+  },
+  {
+    "code": "DSS",
+    "name": "Blaise Diagne International Airport",
+    "city_en": "Diass",
+    "city_pl": "Diass",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "PMH",
+    "name": "Greater Portsmouth Regional Airport",
+    "city_en": "Portsmouth",
+    "city_pl": "Portsmouth",
+    "country_en": "United States"
+  },
+  {
+    "code": "NAC",
+    "name": "Naracoorte Airport",
+    "city_en": "Naracoorte",
+    "city_pl": "Naracoorte",
+    "country_en": "Australia"
+  },
+  {
+    "code": "PGZ",
+    "name": "Ponta Grossa Airport - Comandante Antonio Amilton Beraldo",
+    "city_en": "Ponta Grossa",
+    "city_pl": "Ponta Grossa",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "PQM",
+    "name": "Palenque International Airport",
+    "city_en": "Palenque",
+    "city_pl": "Palenque",
+    "country_en": "Mexico"
+  },
+  {
+    "code": "CUD",
+    "name": "Caloundra Airport",
+    "city_en": "Caloundra",
+    "city_pl": "Caloundra",
+    "country_en": "Australia"
+  },
+  {
+    "code": "CLP",
+    "name": "Clarks Point Airport",
+    "city_en": "Clarks Point",
+    "city_pl": "Clarks Point",
+    "country_en": "United States"
+  },
+  {
+    "code": "JOJ",
+    "name": "Doris Lake",
+    "city_en": "Doris Lake",
+    "city_pl": "Doris Lake",
+    "country_en": "Canada"
+  },
+  {
+    "code": "ECI",
+    "name": "Costa Esmeralda Airport",
+    "city_en": "Tola",
+    "city_pl": "Tola",
+    "country_en": "Nicaragua"
+  },
+  {
+    "code": "QGQ",
+    "name": "Attu Heliport",
+    "city_en": "Attu",
+    "city_pl": "Attu",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "QPW",
+    "name": "Kangaatsiaq Heliport",
+    "city_en": "Kangaatsiaq",
+    "city_pl": "Kangaatsiaq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "QJE",
+    "name": "Kitsissuarsuit Heliport",
+    "city_en": "Kitsissuarsuit",
+    "city_pl": "Kitsissuarsuit",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "XIQ",
+    "name": "Ilimanaq Heliport",
+    "city_en": "Ilimanaq",
+    "city_pl": "Ilimanaq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "QQT",
+    "name": "Qeqertaq Heliport",
+    "city_en": "Qeqertaq",
+    "city_pl": "Qeqertaq",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "QJI",
+    "name": "Ikamiut Heliport",
+    "city_en": "Ikamiut",
+    "city_pl": "Ikamiut",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "QFG",
+    "name": "Eqalugaarsuit Heliport",
+    "city_en": "Eqalugaarsuit",
+    "city_pl": "Eqalugaarsuit",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "QRY",
+    "name": "Ikerassaarsuk Heliport",
+    "city_en": "Ikerasaarsuk",
+    "city_pl": "Ikerasaarsuk",
+    "country_en": "Greenland"
+  },
+  {
+    "code": "NPR",
+    "name": "Novo Progresso Airport",
+    "city_en": "Novo Progresso",
+    "city_pl": "Novo Progresso",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "SMT",
+    "name": "Adolino Bedin Regional Airport",
+    "city_en": "Sorriso",
+    "city_pl": "Sorriso",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ENO",
+    "name": "Encarnación Airport",
+    "city_en": "Encarnacion",
+    "city_pl": "Encarnacion",
+    "country_en": "Paraguay"
+  },
+  {
+    "code": "UZR",
+    "name": "Urzhar Airport",
+    "city_en": "Urzhar",
+    "city_pl": "Urzhar",
+    "country_en": "Kazakhstan"
+  },
+  {
+    "code": "NYR",
+    "name": "Nyurba Airport",
+    "city_en": "Nyurba",
+    "city_pl": "Nyurba",
+    "country_en": "Russia"
+  },
+  {
+    "code": "SUK",
+    "name": "Sakkyryr Airport",
+    "city_en": "Batagay-Alyta",
+    "city_pl": "Batagay-Alyta",
+    "country_en": "Russia"
+  },
+  {
+    "code": "UKG",
+    "name": "Ust-Kuyga Airport",
+    "city_en": "Ust-Kuyga",
+    "city_pl": "Ust-Kuyga",
+    "country_en": "Russia"
+  },
+  {
+    "code": "VHV",
+    "name": "Verkhnevilyuisk Airport",
+    "city_en": "Verkhnevilyuysk",
+    "city_pl": "Verkhnevilyuysk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "DEE",
+    "name": "Mendeleyevo Airport",
+    "city_en": "Yuzhno-Kurilsk",
+    "city_pl": "Yuzhno-Kurilsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "EKS",
+    "name": "Shakhtyorsk Airport",
+    "city_en": "Shakhtyorsk",
+    "city_pl": "Shakhtyorsk",
+    "country_en": "Russia"
+  },
+  {
+    "code": "TLK",
+    "name": "Talakan Airport",
+    "city_en": "Talakan",
+    "city_pl": "Talakan",
+    "country_en": "Russia"
+  },
+  {
+    "code": "RDB",
+    "name": "Red Dog Airport",
+    "city_en": "Red Dog",
+    "city_pl": "Red Dog",
+    "country_en": "United States"
+  },
+  {
+    "code": "ION",
+    "name": "Impfondo Airport",
+    "city_en": "Impfondo",
+    "city_pl": "Impfondo",
+    "country_en": "Congo (Brazzaville)"
+  },
+  {
+    "code": "EBH",
+    "name": "El Bayadh Airport",
+    "city_en": "El Bayadh",
+    "city_pl": "El Bayadh",
+    "country_en": "Algeria"
+  },
+  {
+    "code": "ZIS",
+    "name": "Alzintan Airport",
+    "city_en": "Zintan",
+    "city_pl": "Zintan",
+    "country_en": "Libya"
+  },
+  {
+    "code": "MYZ",
+    "name": "Monkey Bay Airport",
+    "city_en": "Monkey Bay",
+    "city_pl": "Monkey Bay",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "BCU",
+    "name": "Sir Abubakar Tafawa Balewa International Airport",
+    "city_en": "Bauchi",
+    "city_pl": "Bauchi",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "GMO",
+    "name": "Gombe Lawanti International Airport",
+    "city_en": "Gombe",
+    "city_pl": "Gombe",
+    "country_en": "Nigeria"
+  },
+  {
+    "code": "KDA",
+    "name": "Kolda North Airport",
+    "city_en": "Kolda",
+    "city_pl": "Kolda",
+    "country_en": "Senegal"
+  },
+  {
+    "code": "SHO",
+    "name": "King Mswati III International Airport",
+    "city_en": "Manzini",
+    "city_pl": "Manzini",
+    "country_en": "Swaziland"
+  },
+  {
+    "code": "KIY",
+    "name": "Kilwa Masoko Airport",
+    "city_en": "Kilwa Masoko",
+    "city_pl": "Kilwa Masoko",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "QSI",
+    "name": "Moshi Airport",
+    "city_en": "Moshi",
+    "city_pl": "Moshi",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "MNS",
+    "name": "Mansa Airport",
+    "city_en": "Mansa",
+    "city_pl": "Mansa",
+    "country_en": "Zambia"
+  },
+  {
+    "code": "GZI",
+    "name": "Ghazni Airport",
+    "city_en": "Ghazni",
+    "city_pl": "Ghazni",
+    "country_en": "Afghanistan"
+  },
+  {
+    "code": "DBC",
+    "name": "Baicheng Chang'an Airport",
+    "city_en": "Baicheng",
+    "city_pl": "Baicheng",
+    "country_en": "China"
+  },
+  {
+    "code": "LNL",
+    "name": "Longnan Chengzhou Airport",
+    "city_en": "Longnan",
+    "city_pl": "Longnan",
+    "country_en": "China"
+  },
+  {
+    "code": "SQD",
+    "name": "Shangrao Sanqingshan Airport",
+    "city_en": "Shangrao",
+    "city_pl": "Shangrao",
+    "country_en": "China"
+  },
+  {
+    "code": "YSQ",
+    "name": "Songyuan Chaganhu Airport",
+    "city_en": "Songyuan",
+    "city_pl": "Songyuan",
+    "country_en": "China"
+  },
+  {
+    "code": "JSJ",
+    "name": "Jiansanjiang Airport",
+    "city_en": "Jiansanjiang",
+    "city_pl": "Jiansanjiang",
+    "country_en": "China"
+  },
+  {
+    "code": "WMT",
+    "name": "Zunyi Maotai Airport",
+    "city_en": "Zunyi",
+    "city_pl": "Zunyi",
+    "country_en": "China"
+  },
+  {
+    "code": "LLB",
+    "name": "Libo Airport",
+    "city_en": "Libo",
+    "city_pl": "Libo",
+    "country_en": "China"
+  },
+  {
+    "code": "CDE",
+    "name": "Chengde Puning Airport",
+    "city_en": "Chengde",
+    "city_pl": "Chengde",
+    "country_en": "China"
+  },
+  {
+    "code": "DTU",
+    "name": "Wudalianchi Dedu Airport",
+    "city_en": "Wudalianchi",
+    "city_pl": "Wudalianchi",
+    "country_en": "China"
+  },
+  {
+    "code": "EJN",
+    "name": "Ejin Banner-Taolai Airport",
+    "city_en": "Ejin Banner",
+    "city_pl": "Ejin Banner",
+    "country_en": "China"
+  },
+  {
+    "code": "RHT",
+    "name": "Alxa Right Banner Badanjilin Airport",
+    "city_en": "Alxa Right Banner",
+    "city_pl": "Alxa Right Banner",
+    "country_en": "China"
+  },
+  {
+    "code": "HUO",
+    "name": "Holingol Huolinhe Airport",
+    "city_en": "Holingol",
+    "city_pl": "Holingol",
+    "country_en": "China"
+  },
+  {
+    "code": "GMQ",
+    "name": "Golog Maqin Airport",
+    "city_en": "Golog",
+    "city_pl": "Golog",
+    "country_en": "China"
+  },
+  {
+    "code": "QSZ",
+    "name": "Yeerqiang Airport",
+    "city_en": "Yarkant",
+    "city_pl": "Yarkant",
+    "country_en": "China"
+  },
+  {
+    "code": "TEI",
+    "name": "Tezu Airport",
+    "city_en": "Tezu",
+    "city_pl": "Tezu",
+    "country_en": "India"
+  },
+  {
+    "code": "CWJ",
+    "name": "Cangyuan Washan Airport",
+    "city_en": "Cangyuan",
+    "city_pl": "Cangyuan",
+    "country_en": "China"
+  },
+  {
+    "code": "JMJ",
+    "name": "Lancang Jingmai Airport",
+    "city_en": "Lancang Lahu",
+    "city_pl": "Lancang Lahu",
+    "country_en": "China"
+  },
+  {
+    "code": "NLH",
+    "name": "Ninglang Luguhu Airport",
+    "city_en": "Ninglang",
+    "city_pl": "Ninglang",
+    "country_en": "China"
+  },
+  {
+    "code": "PBQ",
+    "name": "Pimenta Bueno Airport",
+    "city_en": "Pimenta Bueno",
+    "city_pl": "Pimenta Bueno",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "WUT",
+    "name": "Xinzhou Wutaishan Airport",
+    "city_en": "Xinzhou",
+    "city_pl": "Xinzhou",
+    "country_en": "China"
+  },
+  {
+    "code": "NZL",
+    "name": "Chengjisihan Airport",
+    "city_en": "Zhalantun",
+    "city_pl": "Zhalantun",
+    "country_en": "China"
+  },
+  {
+    "code": "AIP",
+    "name": "Adampur Airport",
+    "city_en": "Adampur",
+    "city_pl": "Adampur",
+    "country_en": "India"
+  },
+  {
+    "code": "VDY",
+    "name": "Vijayanagar Aerodrome (JSW)",
+    "city_en": "Toranagallu",
+    "city_pl": "Toranagallu",
+    "country_en": "India"
+  },
+  {
+    "code": "SAG",
+    "name": "Shirdi Airport",
+    "city_en": "Shirdi",
+    "city_pl": "Shirdi",
+    "country_en": "India"
+  },
+  {
+    "code": "PYB",
+    "name": "Jeypore Airport",
+    "city_en": "Jeypore",
+    "city_pl": "Jeypore",
+    "country_en": "India"
+  },
+  {
+    "code": "SUP",
+    "name": "Trunojoyo Airport",
+    "city_en": "Sumenep",
+    "city_pl": "Sumenep",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "RKO",
+    "name": "Rokot Airport",
+    "city_en": "Sipora",
+    "city_pl": "Sipora",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "PPR",
+    "name": "Pasir Pangaraan Airport",
+    "city_en": "Pasir Pangaraian",
+    "city_pl": "Pasir Pangaraian",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "TJB",
+    "name": "Sei Bati Airport",
+    "city_en": "Tanjung Balai Karimun",
+    "city_pl": "Tanjung Balai Karimun",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "KRC",
+    "name": "Departi Parbo Airport",
+    "city_en": "Kerinci Regency",
+    "city_pl": "Kerinci Regency",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NRE",
+    "name": "Namrole Airport",
+    "city_en": "Buru Island",
+    "city_pl": "Buru Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NAM",
+    "name": "Namlea Airport",
+    "city_en": "Namlea",
+    "city_pl": "Namlea",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "DOB",
+    "name": "Rar Gwamar Airport",
+    "city_en": "Dobo",
+    "city_pl": "Dobo",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "SQN",
+    "name": "Emalamo Sanana Airport",
+    "city_en": "Sanana",
+    "city_pl": "Sanana",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "AYW",
+    "name": "Ayawasi Airport",
+    "city_en": "Ayawasi",
+    "city_pl": "Ayawasi",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "BYQ",
+    "name": "Bunyu Airport",
+    "city_en": "Bunyu",
+    "city_pl": "Bunyu",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "UOL",
+    "name": "Buol Airport",
+    "city_en": "Buol",
+    "city_pl": "Buol",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "RAQ",
+    "name": "Sugimanuru Airport",
+    "city_en": "Raha",
+    "city_pl": "Raha",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "JSK",
+    "name": "Jask Airport",
+    "city_en": "Jask",
+    "city_pl": "Jask",
+    "country_en": "Iran"
+  },
+  {
+    "code": "ZBY",
+    "name": "Sayaboury Airport",
+    "city_en": "Sainyabuli",
+    "city_pl": "Sainyabuli",
+    "country_en": "Laos"
+  },
+  {
+    "code": "BGL",
+    "name": "Baglung Airport",
+    "city_en": "Baglung",
+    "city_pl": "Baglung",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "RJB",
+    "name": "Rajbiraj Airport",
+    "city_en": "Rajbiraj",
+    "city_pl": "Rajbiraj",
+    "country_en": "Nepal"
+  },
+  {
+    "code": "DQM",
+    "name": "Duqm International Airport",
+    "city_en": "Duqm",
+    "city_pl": "Duqm",
+    "country_en": "Oman"
+  },
+  {
+    "code": "CKI",
+    "name": "Croker Island Airport",
+    "city_en": "Croker Island",
+    "city_pl": "Croker Island",
+    "country_en": "Australia"
+  },
+  {
+    "code": "BYP",
+    "name": "Barimunya Airport",
+    "city_en": "Barimunya",
+    "city_pl": "Barimunya",
+    "country_en": "Australia"
+  },
+  {
+    "code": "LUC",
+    "name": "Laucala Island Airport",
+    "city_en": "Laucala",
+    "city_pl": "Laucala",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "YAS",
+    "name": "Yasawa Island Airport",
+    "city_en": "Yasawa Island",
+    "city_pl": "Yasawa Island",
+    "country_en": "Fiji"
+  },
+  {
+    "code": "WIK",
+    "name": "Waiheke Reeve Airport",
+    "city_en": "Waiheke Island",
+    "city_pl": "Waiheke Island",
+    "country_en": "New Zealand"
+  },
+  {
+    "code": "DEX",
+    "name": "Nop Goliat Airport",
+    "city_en": "Dekai",
+    "city_pl": "Dekai",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NAU",
+    "name": "Napuka Island Airport",
+    "city_en": "Napuka",
+    "city_pl": "Napuka",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "FAC",
+    "name": "Faaite Airport",
+    "city_en": "Faaite",
+    "city_pl": "Faaite",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "NUK",
+    "name": "Nukutavake Airport",
+    "city_en": "Nukutavake",
+    "city_pl": "Nukutavake",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "VHZ",
+    "name": "Vahitahi Airport",
+    "city_en": "Vahitahi",
+    "city_pl": "Vahitahi",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "HHZ",
+    "name": "Hikueru Atoll Airport",
+    "city_en": "Hikueru",
+    "city_pl": "Hikueru",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "RRR",
+    "name": "Raroia Airport",
+    "city_en": "Raroia",
+    "city_pl": "Raroia",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "KHZ",
+    "name": "Kauehi Airport",
+    "city_en": "Kauehi",
+    "city_pl": "Kauehi",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "TKV",
+    "name": "Tatakoto Airport",
+    "city_en": "Tatakoto",
+    "city_pl": "Tatakoto",
+    "country_en": "French Polynesia"
+  },
+  {
+    "code": "TDS",
+    "name": "Sasereme Airport",
+    "city_en": "Sasereme",
+    "city_pl": "Sasereme",
+    "country_en": "Papua New Guinea"
+  },
+  {
+    "code": "TMH",
+    "name": "Tanah Merah Airport",
+    "city_en": "Boven Digoel",
+    "city_pl": "Boven Digoel",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "NKB",
+    "name": "Noonkanbah Airport",
+    "city_en": "Noonkanbah",
+    "city_pl": "Noonkanbah",
+    "country_en": "Australia"
+  },
+  {
+    "code": "AEI",
+    "name": "Algeciras Heliport",
+    "city_en": "Algeciras",
+    "city_pl": "Algeciras",
+    "country_en": "Spain"
+  },
+  {
+    "code": "KSE",
+    "name": "Kasese Airport",
+    "city_en": "Kasese",
+    "city_pl": "Kasese",
+    "country_en": "Uganda"
+  },
+  {
+    "code": "NCJ",
+    "name": "Sunchales Aeroclub Airport",
+    "city_en": "Sunchales",
+    "city_pl": "Sunchales",
+    "country_en": "Argentina"
+  },
+  {
+    "code": "IST",
+    "name": "Istanbul Airport",
+    "city_en": "Istanbul",
+    "city_pl": "Stambuł",
+    "country_en": "Turkey"
+  },
+  {
+    "code": "SOV",
+    "name": "Seldovia Airport",
+    "city_en": "Seldovia",
+    "city_pl": "Seldovia",
+    "country_en": "United States"
+  },
+  {
+    "code": "YSG",
+    "name": "Lutselk'e Airport",
+    "city_en": "Lutselk'e",
+    "city_pl": "Lutselk'e",
+    "country_en": "Canada"
+  },
+  {
+    "code": "DWA",
+    "name": "Dwangwa Airport",
+    "city_en": "Dwangwa",
+    "city_pl": "Dwangwa",
+    "country_en": "Malawi"
+  },
+  {
+    "code": "HGI",
+    "name": "Paloich Airport, Heliport",
+    "city_en": "Higleig",
+    "city_pl": "Higleig",
+    "country_en": "South Sudan"
+  },
+  {
+    "code": "KQH",
+    "name": "Kishangarh Airport",
+    "city_en": "Ajmer",
+    "city_pl": "Ajmer",
+    "country_en": "India"
+  },
+  {
+    "code": "CNN",
+    "name": "Kannur International Airport",
+    "city_en": "Kannur",
+    "city_pl": "Kannur",
+    "country_en": "India"
+  },
+  {
+    "code": "ZCO",
+    "name": "La Araucanía Airport",
+    "city_en": "Temuco",
+    "city_pl": "Temuco",
+    "country_en": "Chile"
+  },
+  {
+    "code": "ASS",
+    "name": "Arathusa Safari Lodge Airport",
+    "city_en": "Arathusa",
+    "city_pl": "Arathusa",
+    "country_en": "South Africa"
+  },
+  {
+    "code": "VDI",
+    "name": "Vidalia Regional Airport",
+    "city_en": "Vidalia",
+    "city_pl": "Vidalia",
+    "country_en": "United States"
+  },
+  {
+    "code": "ISB",
+    "name": "New Islamabad International Airport",
+    "city_en": "Islamabad",
+    "city_pl": "Islamabad",
+    "country_en": "Pakistan"
+  },
+  {
+    "code": "MHE",
+    "name": "Mitchell Municipal Airport",
+    "city_en": "Mitchell",
+    "city_pl": "Mitchell",
+    "country_en": "United States"
+  },
+  {
+    "code": "GIT",
+    "name": "Mchauru Airport",
+    "city_en": "Geita",
+    "city_pl": "Geita",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "GID",
+    "name": "Gitega Airport",
+    "city_en": "Gitega",
+    "city_pl": "Gitega",
+    "country_en": "Burundi"
+  },
+  {
+    "code": "RMU",
+    "name": "Región de Murcia International Airport",
+    "city_en": "Murcia",
+    "city_pl": "Murcia",
+    "country_en": "Spain"
+  },
+  {
+    "code": "CQS",
+    "name": "Costa Marques Airport",
+    "city_en": "COSTA MARQUES",
+    "city_pl": "COSTA MARQUES",
+    "country_en": "Brazil"
+  },
+  {
+    "code": "ZXT",
+    "name": "Zabrat Airport",
+    "city_en": "Baku",
+    "city_pl": "Baku",
+    "country_en": "Azerbaijan"
+  },
+  {
+    "code": "JAM",
+    "name": "Bezmer Air Base",
+    "city_en": "Yambol",
+    "city_pl": "Yambol",
+    "country_en": "Bulgaria"
+  },
+  {
+    "code": "YUA",
+    "name": "Yuanmou Air Base",
+    "city_en": "Yuanmou",
+    "city_pl": "Yuanmou",
+    "country_en": "China"
+  },
+  {
+    "code": "XEN",
+    "name": "Xingcheng Air Base",
+    "city_en": "",
+    "city_pl": "",
+    "country_en": "China"
+  },
+  {
+    "code": "GEC",
+    "name": "Lefkoniko Airport",
+    "city_en": "Geçitkale",
+    "city_pl": "Geçitkale",
+    "country_en": "Cyprus"
+  },
+  {
+    "code": "MBI",
+    "name": "Songwe Airport",
+    "city_en": "Mbeya",
+    "city_pl": "Mbeya",
+    "country_en": "Tanzania"
+  },
+  {
+    "code": "UGU",
+    "name": "Bilogai-Sugapa Airport",
+    "city_en": "Sugapa-Papua Island",
+    "city_pl": "Sugapa-Papua Island",
+    "country_en": "Indonesia"
+  },
+  {
+    "code": "ETM",
+    "name": "Ramon Airport",
+    "city_en": "Eilat",
+    "city_pl": "Eilat",
+    "country_en": "Israel"
+  },
+  {
+    "code": "MNH",
+    "name": "Rustaq Airport",
+    "city_en": "Al Masna'ah",
+    "city_pl": "Al Masna'ah",
+    "country_en": "Oman"
+  },
+  {
+    "code": "CGY",
+    "name": "Laguindingan Airport",
+    "city_en": "Cagayan de Oro City",
+    "city_pl": "Cagayan de Oro City",
+    "country_en": "Philippines"
+  },
+  {
+    "code": "CPO",
+    "name": "Desierto de Atacama Airport",
+    "city_en": "Copiapo",
+    "city_pl": "Copiapo",
+    "country_en": "Chile"
+  }
+];
+
+export function searchAirports(query: string, limit = 10): Airport[] {
+  const q = query.toLowerCase().trim();
+  if (q.length < 2) return [];
+
+  return airports
+    .filter(a =>
+      a.code.toLowerCase().includes(q) ||
+      a.city_en.toLowerCase().includes(q) ||
+      a.city_pl.toLowerCase().includes(q) ||
+      a.name.toLowerCase().includes(q) ||
+      a.country_en.toLowerCase().includes(q)
+    )
+    .sort((a, b) => {
+      // Dokładne dopasowanie kodu - najwyższy priorytet
+      if (a.code.toLowerCase() === q) return -1;
+      if (b.code.toLowerCase() === q) return 1;
+      
+      // Miasto zaczyna się od query (polski)
+      const aStartsPl = a.city_pl.toLowerCase().startsWith(q);
+      const bStartsPl = b.city_pl.toLowerCase().startsWith(q);
+      if (aStartsPl && !bStartsPl) return -1;
+      if (bStartsPl && !aStartsPl) return 1;
+      
+      // Miasto zaczyna się od query (angielski)
+      const aStartsEn = a.city_en.toLowerCase().startsWith(q);
+      const bStartsEn = b.city_en.toLowerCase().startsWith(q);
+      if (aStartsEn && !bStartsEn) return -1;
+      if (bStartsEn && !aStartsEn) return 1;
+      
+      return 0;
+    })
+    .slice(0, limit);
+}
+
+export function getAirportByCode(code: string): Airport | undefined {
+  return airports.find(a => a.code.toUpperCase() === code.toUpperCase());
+}
+
+// Pomocnicza funkcja do wyświetlania nazwy miasta (preferuje polską)
+export function getDisplayCity(airport: Airport): string {
+  return airport.city_pl || airport.city_en;
+}
