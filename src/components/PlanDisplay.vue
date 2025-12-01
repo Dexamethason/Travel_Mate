@@ -1,43 +1,40 @@
 <template>
-  <div v-if="plan" class="space-y-6">
+  <!-- Brak planu -->
+  <div v-if="!plan" class="rounded-lg border border-gray-200 bg-white p-8 text-center dark:border-gray-700 dark:bg-gray-800">
+    <InboxIcon class="mx-auto mb-4 h-16 w-16 text-gray-400 dark:text-gray-500" />
+    <p class="text-lg text-gray-600 dark:text-gray-400">Brak danych planu</p>
+  </div>
+
+  <!-- Plan -->
+  <div v-else class="space-y-6">
     <!-- Nagłówek planu -->
-    <div class="rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white shadow-lg">
+    <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
       <div class="flex items-start justify-between">
         <div>
-          <h2 class="mb-2 text-3xl font-bold">{{ plan.destination }}</h2>
-          <div class="flex flex-wrap gap-4 text-sm">
+          <h2 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">{{ plan.destination }}</h2>
+          <div class="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
             <span class="flex items-center gap-1">
-              📅 {{ formatDate(plan.start_date) }} - {{ formatDate(plan.end_date) }}
+              <CalendarDaysIcon class="h-4 w-4" />
+              {{ formatDate(plan.start_date) }} - {{ formatDate(plan.end_date) }}
             </span>
             <span class="flex items-center gap-1">
-              🗓️ {{ plan.days.length }} dni
+              <CalendarDaysIcon class="h-4 w-4" />
+              {{ plan.days.length }} dni
             </span>
             <span class="flex items-center gap-1">
-              💰 {{ plan.total_estimated_cost.toLocaleString('pl-PL') }} PLN
+              <CurrencyDollarIcon class="h-4 w-4" />
+              {{ plan.total_estimated_cost.toLocaleString('pl-PL') }} PLN
             </span>
           </div>
-        </div>
-        <div v-if="showActions" class="flex gap-2">
-          <button
-            @click="$emit('edit')"
-            class="rounded-lg bg-white/20 px-4 py-2 text-sm font-medium backdrop-blur-sm transition-all hover:bg-white/30"
-          >
-            ✏️ Edytuj
-          </button>
-          <button
-            @click="$emit('delete')"
-            class="rounded-lg bg-red-500/20 px-4 py-2 text-sm font-medium backdrop-blur-sm transition-all hover:bg-red-500/30"
-          >
-            🗑️ Usuń
-          </button>
         </div>
       </div>
     </div>
 
     <!-- wskazówki -->
-    <div v-if="plan.tips && plan.tips.length > 0" class="rounded-lg bg-yellow-50 p-4 dark:bg-yellow-900/20">
+    <div v-if="plan.tips && plan.tips.length > 0" class="rounded-lg border border-yellow-200 bg-yellow-50 p-4 dark:border-yellow-800 dark:bg-yellow-900/20">
       <h3 class="mb-3 flex items-center gap-2 text-lg font-semibold text-yellow-800 dark:text-yellow-200">
-        💡 Praktyczne wskazówki
+        <LightBulbIcon class="h-5 w-5" />
+        Praktyczne wskazówki
       </h3>
       <ul class="space-y-2">
         <li
@@ -53,7 +50,10 @@
 
     <!-- plan -->
     <div class="space-y-4">
-      <h3 class="text-xl font-bold text-gray-900 dark:text-white">📅 Plan dzień po dniu</h3>
+      <h3 class="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
+        <CalendarDaysIcon class="h-6 w-6" />
+        Plan dzień po dniu
+      </h3>
       
       <div class="space-y-4">
         <div
@@ -88,10 +88,10 @@
             >
               <div class="flex-shrink-0">
                 <div
-                  class="flex h-12 w-12 items-center justify-center rounded-full text-2xl"
+                  class="flex h-12 w-12 items-center justify-center rounded-full"
                   :class="getActivityColorClass(activity.type)"
                 >
-                  {{ getActivityIcon(activity.type) }}
+                  <component :is="getActivityIcon(activity.type)" class="h-6 w-6" :class="getActivityIconColor(activity.type)" />
                 </div>
               </div>
 
@@ -110,13 +110,16 @@
                 
                 <div class="mb-2 flex flex-wrap gap-3 text-sm text-gray-600 dark:text-gray-400">
                   <span class="flex items-center gap-1">
-                    🕐 {{ activity.time }}
+                    <ClockIcon class="h-4 w-4" />
+                    {{ activity.time }}
                   </span>
                   <span class="flex items-center gap-1">
-                    💰 {{ activity.cost_estimate.toLocaleString('pl-PL') }} PLN
+                    <CurrencyDollarIcon class="h-4 w-4" />
+                    {{ activity.cost_estimate.toLocaleString('pl-PL') }} PLN
                   </span>
                   <span v-if="activity.location" class="flex items-center gap-1">
-                    📍 {{ activity.location }}
+                    <MapPinIcon class="h-4 w-4" />
+                    {{ activity.location }}
                   </span>
                 </div>
 
@@ -130,8 +133,11 @@
       </div>
     </div>
 
-    <div class="rounded-lg bg-gray-50 p-5 dark:bg-gray-800">
-      <h3 class="mb-4 text-lg font-bold text-gray-900 dark:text-white">💰 Podsumowanie kosztów</h3>
+    <div class="rounded-lg border border-gray-200 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-800">
+      <h3 class="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900 dark:text-white">
+        <CurrencyDollarIcon class="h-5 w-5" />
+        Podsumowanie kosztów
+      </h3>
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
         <div class="rounded-lg bg-white p-4 dark:bg-gray-700">
           <p class="text-sm text-gray-600 dark:text-gray-400">Całkowity koszt</p>
@@ -157,19 +163,59 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, watch } from 'vue';
 import type { TravelPlan } from '../types/plan';
-import { ACTIVITY_TYPES } from '../types/plan';
+import {
+  CalendarDaysIcon,
+  CurrencyDollarIcon,
+  LightBulbIcon,
+  ClockIcon,
+  MapPinIcon,
+  BuildingLibraryIcon,
+  UserIcon,
+  SparklesIcon,
+  CakeIcon,
+  TruckIcon,
+  BuildingOffice2Icon,
+  MapIcon,
+  InboxIcon,
+} from '@heroicons/vue/24/outline';
 
 const props = defineProps<{
   plan: TravelPlan | null;
   showActions?: boolean;
 }>();
 
-defineEmits<{
-  edit: [];
-  delete: [];
-}>();
+// Walidacja planu - tylko loguje ostrzeżenia w konsoli, nie blokuje wyświetlania
+const validatePlan = (plan: TravelPlan | null): void => {
+  if (!plan) {
+    return;
+  }
+  
+  // Tylko loguj ostrzeżenia w konsoli, nie blokuj wyświetlania
+  if (!plan.destination) {
+    console.warn('PlanDisplay: Plan nie ma przypisanego celu podróży');
+  }
+  
+  if (!plan.days || plan.days.length === 0) {
+    console.warn('PlanDisplay: Plan nie zawiera żadnych dni');
+  }
+  
+  if (!plan.start_date || !plan.end_date) {
+    console.warn('PlanDisplay: Plan nie ma przypisanych dat');
+  }
+};
+
+// Walidacja przy zmianie planu - tylko logowanie
+watch(
+  () => props.plan,
+  (newPlan) => {
+    if (newPlan) {
+      validatePlan(newPlan);
+    }
+  },
+  { immediate: true }
+);
 
 // formatowanie daty
 const formatDate = (dateString: string) => {
@@ -194,11 +240,42 @@ const totalActivities = computed(() => {
 });
 
 const getActivityIcon = (type: string) => {
-  return ACTIVITY_TYPES[type as keyof typeof ACTIVITY_TYPES]?.icon || '📍';
+  const iconMap: Record<string, any> = {
+    museum: BuildingLibraryIcon,
+    restaurant: CakeIcon,
+    walk: UserIcon,
+    attraction: SparklesIcon,
+    transport: TruckIcon,
+    accommodation: BuildingOffice2Icon,
+    other: MapIcon,
+  };
+  return iconMap[type] || MapIcon;
+};
+
+const getActivityIconColor = (type: string) => {
+  const colorMap: Record<string, string> = {
+    museum: 'text-blue-600 dark:text-blue-400',
+    restaurant: 'text-orange-600 dark:text-orange-400',
+    walk: 'text-green-600 dark:text-green-400',
+    attraction: 'text-purple-600 dark:text-purple-400',
+    transport: 'text-gray-600 dark:text-gray-400',
+    accommodation: 'text-indigo-600 dark:text-indigo-400',
+    other: 'text-slate-600 dark:text-slate-400',
+  };
+  return colorMap[type] || 'text-gray-600 dark:text-gray-400';
 };
 
 const getActivityTypeLabel = (type: string) => {
-  return ACTIVITY_TYPES[type as keyof typeof ACTIVITY_TYPES]?.label || 'Inne';
+  const labelMap: Record<string, string> = {
+    museum: 'Muzeum',
+    restaurant: 'Restauracja',
+    walk: 'Spacer',
+    attraction: 'Atrakcja',
+    transport: 'Transport',
+    accommodation: 'Nocleg',
+    other: 'Inne',
+  };
+  return labelMap[type] || 'Inne';
 };
 
 const getActivityColorClass = (type: string) => {

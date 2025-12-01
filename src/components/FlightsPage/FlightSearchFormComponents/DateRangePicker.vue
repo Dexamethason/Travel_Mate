@@ -170,6 +170,18 @@ watch(
   active => {
     if (!active && showCalendar.value) {
       showCalendar.value = false;
+      // Jeśli wybrano datę wylotu, ale nie datę powrotu, wyczyść datę powrotu
+      if (tempDeparture.value && !tempReturn.value) {
+        emit('update:returnDate', '');
+      } else if (tempDeparture.value && tempReturn.value) {
+        // Jeśli obie daty są wybrane, zapisz je
+        emit('update:departure', tempDeparture.value);
+        emit('update:returnDate', tempReturn.value);
+      } else if (tempDeparture.value) {
+        // Jeśli tylko data wylotu, zapisz ją i wyczyść datę powrotu
+        emit('update:departure', tempDeparture.value);
+        emit('update:returnDate', '');
+      }
     }
   }
 );
@@ -348,6 +360,18 @@ const handleClickOutside = (event: MouseEvent) => {
     buttonRef.value &&
     !buttonRef.value.contains(target)
   ) {
+    // Jeśli wybrano datę wylotu, ale nie datę powrotu, wyczyść datę powrotu
+    if (tempDeparture.value && !tempReturn.value) {
+      emit('update:returnDate', '');
+    } else if (tempDeparture.value && tempReturn.value) {
+      // Jeśli obie daty są wybrane, zapisz je
+      emit('update:departure', tempDeparture.value);
+      emit('update:returnDate', tempReturn.value);
+    } else if (tempDeparture.value) {
+      // Jeśli tylko data wylotu, zapisz ją i wyczyść datę powrotu
+      emit('update:departure', tempDeparture.value);
+      emit('update:returnDate', '');
+    }
     showCalendar.value = false;
     closePanel();
   }
