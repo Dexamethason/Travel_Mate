@@ -482,7 +482,6 @@ const {
   accommodations,
   loading,
   error,
-  searchAccommodations: searchAccommodationsAPI,
   clearError,
 } = useAccommodations();
 
