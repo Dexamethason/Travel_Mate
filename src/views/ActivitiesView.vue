@@ -1,20 +1,18 @@
 <template>
-  <div class="min-h-screen bg-gray-50 p-8 dark:bg-gray-900">
-    <div class="mx-auto max-w-6xl">
-      <h1 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Atrakcje</h1>
-      <p class="mb-8 text-gray-500 dark:text-gray-400">Odkryj najlepsze atrakcje i restauracje</p>
-
-      <div class="py-16 text-center">
-        <div class="mb-4 text-6xl">🎭</div>
-        <p class="text-xl text-gray-600 dark:text-gray-400">Wkrótce dostępne</p>
-        <p class="mt-2 text-gray-500 dark:text-gray-500">
-          Funkcjonalność wyszukiwania atrakcji jest w trakcie rozwoju
-        </p>
-      </div>
+  <div class="min-h-screen bg-gray-50">
+    <ViewHeader :active-tab="activeTab" @update:active-tab="activeTab = $event" />
+    <div class="p-6 space-y-4">
+      <component :is="activeTab === 'restaurants' ? RestaurantsView : AttractionsView" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-// atrakcje - póki co tylko placeholder, zrobimy później
+import { ref } from 'vue';
+import ViewHeader from '@/components/ActivitiesPage/ViewHeader.vue';
+import RestaurantsView from '@/components/ActivitiesPage/Restaurants/RestaurantsView.vue';
+import AttractionsView from '@/components/ActivitiesPage/Attractions/AttractionsView.vue';
+
+// Aktywna zakładka (restauracje lub atrakcje)
+const activeTab = ref<'restaurants' | 'attractions'>('restaurants');
 </script>
