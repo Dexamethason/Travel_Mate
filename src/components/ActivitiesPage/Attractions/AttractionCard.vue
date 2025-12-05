@@ -16,36 +16,36 @@
           <h3
             class="text-lg font-bold text-gray-900 truncate group-hover:text-primary-600 transition-colors"
           >
-            {{ restaurant.name }}
+            {{ attraction.name }}
           </h3>
           <span
             :class="[
               'px-3 py-1.5 text-xs font-semibold rounded-lg whitespace-nowrap flex-shrink-0',
-              restaurant.isOpen
+              attraction.status === 'Otwarte'
                 ? 'bg-green-100 text-green-700 border border-green-300'
                 : 'bg-red-100 text-red-700 border border-red-300',
             ]"
           >
-            {{ restaurant.isOpen ? 'Otwarte' : 'Zamknięte' }}
+            {{ attraction.status }}
           </span>
         </div>
 
         <div class="flex items-center gap-3 mb-3">
           <div class="flex items-center bg-yellow-50 px-2 py-1 rounded-lg">
             <StarIcon class="w-4 h-4 text-yellow-500" />
-            <span class="ml-1.5 text-sm font-bold text-gray-900">{{ restaurant.rating }}</span>
+            <span class="ml-1.5 text-sm font-bold text-gray-900">{{ attraction.rating }}</span>
           </div>
           <span class="text-sm text-gray-500"
-            >({{ restaurant.reviews.toLocaleString() }} opinii)</span
+            >({{ attraction.reviews.toLocaleString() }} opinii)</span
           >
           <span class="text-gray-300">•</span>
-          <span class="text-sm font-medium text-gray-700">{{ restaurant.cuisine }}</span>
+          <span class="text-sm font-medium text-gray-700">{{ attraction.category }}</span>
         </div>
 
         <div class="flex items-center gap-3 text-sm text-gray-600">
-          <span class="font-semibold text-gray-900">{{ restaurant.priceRange }}</span>
+          <span class="font-semibold text-gray-900">{{ attraction.priceRange }}</span>
           <span class="text-gray-300">•</span>
-          <span>{{ restaurant.openingHours }}</span>
+          <span>{{ attraction.openingHours }}</span>
         </div>
       </div>
     </div>
@@ -55,9 +55,9 @@
 <script setup lang="ts">
 import { PhotoIcon } from '@heroicons/vue/24/outline';
 import { StarIcon } from '@heroicons/vue/24/solid';
-import type { Restaurant } from '@/types/activitie';
+import type { Attraction } from '@/types/activitie';
 
 defineProps<{
-  restaurant: Restaurant;
+  attraction: Attraction;
 }>();
 </script>

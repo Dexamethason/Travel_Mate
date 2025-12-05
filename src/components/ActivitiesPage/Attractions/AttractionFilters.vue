@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
     <div class="flex flex-col md:flex-row gap-3">
-      <!-- Search Field -->
+      <!-- Pole wyszukiwania -->
       <div class="flex-1">
         <div class="relative">
           <input
@@ -10,78 +10,37 @@
             placeholder="Szukaj atrakcji..."
             class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
           />
-          <svg
+          <MagnifyingGlassIcon
             class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
+          />
         </div>
       </div>
 
-      <!-- Filters Button -->
+      <!-- Przycisk filtrów -->
       <button
-        class="px-4 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2 text-gray-700 font-medium"
-        @click="showFilters = !showFilters"
+        class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+        @click="$emit('open-filters')"
       >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-          />
-        </svg>
-        Filtry
-        <span
-          v-if="activeFiltersCount > 0"
-          class="ml-1 px-2 py-0.5 bg-primary-600 text-white text-xs rounded-full"
-        >
-          {{ activeFiltersCount }}
-        </span>
+        <FunnelIcon class="w-5 h-5 text-gray-600" />
+        <span class="text-sm font-medium text-gray-700">Filtry</span>
       </button>
 
-      <!-- Sort Dropdown -->
+      <!-- Sortowanie -->
       <div class="relative">
-        <button
-          class="px-4 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2 text-gray-700 font-medium min-w-[180px] justify-between"
-          @click="showSort = !showSort"
+        <select
+          :value="sortBy"
+          class="px-4 py-2 border border-gray-300 rounded-lg bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors cursor-pointer"
+          @change="$emit('update:sort-by', ($event.target as HTMLSelectElement).value)"
         >
-          <span>{{ selectedSort }}</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
-
-        <div
-          v-if="showSort"
-          class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-10"
-        >
-          <button
-            v-for="option in sortOptions"
-            :key="option"
-            class="w-full px-4 py-2 text-left hover:bg-gray-50 transition-colors text-sm text-gray-700"
-            @click="selectSort(option)"
-          >
-            {{ option }}
-          </button>
-        </div>
+          <option value="recommended">Rekomendowane</option>
+          <option value="rating">Najwyżej oceniane</option>
+          <option value="distance">Najbliższe</option>
+          <option value="popular">Najpopularniejsze</option>
+        </select>
       </div>
     </div>
 
-    <!-- Filters Panel -->
+    <!-- Panel filtrów -->
     <div v-if="showFilters" class="mt-4 pt-4 border-t border-gray-200">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div>
@@ -160,12 +119,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
+import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/vue/24/outline';
+
+// Props
+defineProps<{
+  sortBy?: string;
+}>();
+
+// Emits
+defineEmits<{
+  'open-filters': [];
+  'update:sort-by': [value: string];
+}>();
 
 const searchQuery = ref('');
 const showFilters = ref(false);
-const showSort = ref(false);
-const selectedSort = ref('Rekomendowane');
 
 const filters = ref({
   type: '',
@@ -173,28 +142,6 @@ const filters = ref({
   minRating: '',
   wheelchairAccessible: false,
 });
-
-const sortOptions = [
-  'Rekomendowane',
-  'Najwyżej oceniane',
-  'Najbliżej',
-  'Najpopularniejsze',
-  'Najnowsze',
-];
-
-const activeFiltersCount = computed(() => {
-  let count = 0;
-  if (filters.value.type) count++;
-  if (filters.value.priceRange) count++;
-  if (filters.value.minRating) count++;
-  if (filters.value.wheelchairAccessible) count++;
-  return count;
-});
-
-const selectSort = (option: string) => {
-  selectedSort.value = option;
-  showSort.value = false;
-};
 
 const clearFilters = () => {
   filters.value = {
@@ -206,7 +153,7 @@ const clearFilters = () => {
 };
 
 const applyFilters = () => {
-  // Apply filters logic here
+  // TODO logika filtrów
   showFilters.value = false;
 };
 </script>

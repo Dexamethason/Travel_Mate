@@ -1,163 +1,136 @@
 <template>
-  <div class="bg-white rounded-xl shadow-sm border border-gray-200">
-    <!-- Nagłówek z filtrami i sortowaniem -->
-    <div class="p-4 border-b border-gray-200">
-      <div class="flex items-center justify-between mb-4">
-        <h2 class="text-lg font-semibold text-gray-900">
-          Restauracje
-          <span class="text-gray-500 font-normal">({{ restaurants.length }})</span>
-        </h2>
+  <div class="flex flex-col h-full overflow-hidden">
+    <div class="flex-1 overflow-y-auto bg-gray-50 px-6">
+      <div class="sticky top-0 z-10 bg-gray-50 pt-4">
+        <div class="bg-white rounded-t-xl shadow-md border-x border-t border-gray-200 p-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-baseline gap-2">
+              <h2 class="text-3xl font-extrabold text-gray-900">Restauracje</h2>
+              <span class="text-base font-medium text-gray-400">({{ restaurants.length }})</span>
+            </div>
 
-        <div class="flex items-center gap-2">
-          <!-- Przycisk pokazywania filtrów -->
-          <button
-            class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2 text-gray-700 text-sm font-medium"
-            @click="showFilters = !showFilters"
-          >
-            <!-- Ikona lejka (Funnel) -->
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-              />
-            </svg>
-            Filtry
-            <!-- Licznik aktywnych filtrów -->
-            <span
-              v-if="activeFiltersCount > 0"
-              class="px-2 py-0.5 bg-primary-600 text-white text-xs rounded-full"
-            >
-              {{ activeFiltersCount }}
-            </span>
-          </button>
-
-          <!-- Menu rozwijane sortowania -->
-          <div class="relative">
-            <button
-              class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2 text-gray-700 text-sm font-medium min-w-[180px] justify-between"
-              @click="showSort = !showSort"
-            >
-              <span>{{ selectedSort }}</span>
-              <!-- Ikona strzałki w dół (ChevronDown) -->
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-
-            <!-- Lista opcji sortowania -->
-            <div
-              v-if="showSort"
-              class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-10"
-            >
+            <div class="flex items-center gap-3">
+              <!-- Przycisk filtrów -->
               <button
-                v-for="option in sortOptions"
-                :key="option"
-                class="w-full px-4 py-2 text-left hover:bg-gray-50 transition-colors text-sm text-gray-700"
-                @click="selectSort(option)"
+                class="px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 hover:border-primary-500 transition-all flex items-center gap-2 text-gray-700 text-sm font-semibold shadow-sm"
+                @click="showFilters = !showFilters"
               >
-                {{ option }}
+                <FunnelIcon class="w-4 h-4" />
+                Filtry
+                <span
+                  v-if="activeFiltersCount > 0"
+                  class="ml-1 px-2 py-0.5 bg-primary-600 text-white text-xs font-bold rounded-full"
+                >
+                  {{ activeFiltersCount }}
+                </span>
+              </button>
+
+              <!-- Menu sortowania -->
+              <div class="relative">
+                <button
+                  class="px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 hover:border-primary-500 transition-all flex items-center gap-2 text-gray-700 text-sm font-semibold min-w-[180px] justify-between shadow-sm"
+                  @click="showSort = !showSort"
+                >
+                  <span>{{ selectedSort }}</span>
+                  <ChevronDownIcon
+                    class="w-4 h-4 transition-transform"
+                    :class="{ 'rotate-180': showSort }"
+                  />
+                </button>
+
+                <div
+                  v-if="showSort"
+                  class="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border-2 border-gray-200 py-2 z-20"
+                >
+                  <button
+                    v-for="option in sortOptions"
+                    :key="option"
+                    class="w-full px-4 py-2.5 text-left hover:bg-primary-50 transition-colors text-sm font-semibold"
+                    :class="{
+                      'bg-primary-100 text-primary-700': selectedSort === option,
+                      'text-gray-700': selectedSort !== option,
+                    }"
+                    @click="selectSort(option)"
+                  >
+                    {{ option }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel filtrów -->
+          <div v-if="showFilters" class="mt-5 pt-5 border-t-2 border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-sm font-bold text-gray-700 mb-2">Typ kuchni</label>
+                <select
+                  v-model="filters.cuisine"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                >
+                  <option value="">Wszystkie</option>
+                  <option value="french">Kuchnia francuska</option>
+                  <option value="italian">Kuchnia włoska</option>
+                  <option value="asian">Kuchnia azjatycka</option>
+                  <option value="cafe">Kawiarnie</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-bold text-gray-700 mb-2">Przedział cenowy</label>
+                <select
+                  v-model="filters.priceRange"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                >
+                  <option value="">Wszystkie</option>
+                  <option value="1">€ - Tanie</option>
+                  <option value="2">€€ - Średnie</option>
+                  <option value="3">€€€ - Drogie</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-bold text-gray-700 mb-2">Ocena min.</label>
+                <select
+                  v-model="filters.minRating"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                >
+                  <option value="">Wszystkie</option>
+                  <option value="4.5">4.5+</option>
+                  <option value="4.0">4.0+</option>
+                  <option value="3.5">3.5+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mt-4 flex items-center justify-between">
+              <label class="flex items-center text-sm font-bold text-gray-700 cursor-pointer">
+                <input
+                  v-model="filters.openNow"
+                  type="checkbox"
+                  class="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500 mr-2"
+                />
+                Tylko otwarte teraz
+              </label>
+
+              <button
+                class="text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors"
+                @click="clearFilters"
+              >
+                Wyczyść filtry
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Panel z filtrami (rozwijany) -->
-      <div v-if="showFilters" class="pt-4 border-t border-gray-200">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <!-- Filtr typu kuchni -->
-          <div>
-            <label class="block text-xs font-medium text-gray-700 mb-1">Typ kuchni</label>
-            <select
-              v-model="filters.cuisine"
-              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-            >
-              <option value="">Wszystkie</option>
-              <option value="french">Kuchnia francuska</option>
-              <option value="italian">Kuchnia włoska</option>
-              <option value="asian">Kuchnia azjatycka</option>
-              <option value="cafe">Kawiarnie</option>
-            </select>
-          </div>
-
-          <!-- Filtr przedziału cenowego -->
-          <div>
-            <label class="block text-xs font-medium text-gray-700 mb-1">Przedział cenowy</label>
-            <select
-              v-model="filters.priceRange"
-              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-            >
-              <option value="">Wszystkie</option>
-              <option value="1">€ - Tanie</option>
-              <option value="2">€€ - Średnie</option>
-              <option value="3">€€€ - Drogie</option>
-            </select>
-          </div>
-
-          <!-- Filtr minimalnej oceny -->
-          <div>
-            <label class="block text-xs font-medium text-gray-700 mb-1">Ocena min.</label>
-            <select
-              v-model="filters.minRating"
-              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-            >
-              <option value="">Wszystkie</option>
-              <option value="4.5">4.5+</option>
-              <option value="4.0">4.0+</option>
-              <option value="3.5">3.5+</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Dodatkowe opcje filtrowania -->
-        <div class="mt-3 flex items-center gap-4">
-          <label class="flex items-center text-sm text-gray-700">
-            <input
-              v-model="filters.openNow"
-              type="checkbox"
-              class="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500 mr-2"
-            />
-            Tylko otwarte teraz
-          </label>
-
-          <button class="ml-auto text-sm text-gray-600 hover:text-gray-900" @click="clearFilters">
-            Wyczyść filtry
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Lista kart restauracji -->
-    <div class="overflow-y-auto max-h-[calc(100vh-300px)] divide-y divide-gray-200">
-      <RestaurantCard
-        v-for="restaurant in restaurants"
-        :key="restaurant.id"
-        :restaurant="restaurant"
-      />
-
-      <!-- Przycisk ładowania więcej wyników -->
-      <div class="p-6 text-center">
-        <button
-          class="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center gap-2 mx-auto"
-        >
-          Załaduj więcej wyników
-          <!-- Ikona strzałki w dół (ChevronDown) -->
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
+      <!-- Lista kart z paddingiem tylko od góry i dołu -->
+      <div class="pt-4 pb-4 space-y-4">
+        <RestaurantCard
+          v-for="restaurant in restaurants"
+          :key="restaurant.id"
+          :restaurant="restaurant"
+        />
       </div>
     </div>
   </div>
@@ -165,56 +138,18 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { FunnelIcon, ChevronDownIcon } from '@heroicons/vue/24/outline';
 import RestaurantCard from './RestaurantCard.vue';
+import type { Restaurant } from '@/types/activitie';
 
-// Interfejs restauracji
-interface Restaurant {
-  id: number;
-  photo: string;
-  name: string;
-  rating: number;
-  reviews: number;
-  cuisine: string;
-  priceRange: string;
-  distance: string;
-  isOpen: boolean;
-  openingHours?: string;
-}
+defineProps<{
+  restaurants: Restaurant[];
+}>();
 
-// Przykładowe dane restauracji
-const restaurants = ref<Restaurant[]>([
-  {
-    id: 1,
-    photo: '',
-    name: 'Le Jules Verne',
-    rating: 4.7,
-    reviews: 14394,
-    cuisine: 'Kuchnia francuska',
-    priceRange: '€€€',
-    distance: 'min od wieży Eiffla',
-    isOpen: true,
-    openingHours: 'Czynne do 22:00',
-  },
-  {
-    id: 2,
-    photo: '',
-    name: 'Café de Flore',
-    rating: 4.5,
-    reviews: 8234,
-    cuisine: 'Kawiarnia',
-    priceRange: '€€',
-    distance: '12 min spacerem',
-    isOpen: true,
-    openingHours: 'Czynne do 23:00',
-  },
-]);
-
-// Stany UI
 const showFilters = ref(false);
 const showSort = ref(false);
 const selectedSort = ref('Rekomendowane');
 
-// Filtry
 const filters = ref({
   cuisine: '',
   priceRange: '',
@@ -222,7 +157,6 @@ const filters = ref({
   openNow: false,
 });
 
-// Opcje sortowania
 const sortOptions = [
   'Rekomendowane',
   'Najwyżej oceniane',
@@ -231,7 +165,6 @@ const sortOptions = [
   'Najwyższa cena',
 ];
 
-// Obliczanie liczby aktywnych filtrów
 const activeFiltersCount = computed(() => {
   let count = 0;
   if (filters.value.cuisine) count++;
@@ -241,13 +174,11 @@ const activeFiltersCount = computed(() => {
   return count;
 });
 
-// Wybór opcji sortowania
 const selectSort = (option: string) => {
   selectedSort.value = option;
   showSort.value = false;
 };
 
-// Czyszczenie filtrów
 const clearFilters = () => {
   filters.value = {
     cuisine: '',
