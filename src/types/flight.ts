@@ -17,7 +17,7 @@ export interface FlightSearchParams {
 }
 
 export interface Flight {
-  id: number | string;
+  id: string;
   airline: string;
   stops: string;
   departureTime: string;
@@ -27,7 +27,8 @@ export interface Flight {
   duration: string;
   type: string;
   price: number;
-  // Powrotny (opcjonalne dlatego ?)
+
+  // Pola dla lotu powrotnego (opcjonalne)
   returnAirline?: string;
   returnStops?: string;
   returnDepartureTime?: string;
@@ -38,10 +39,9 @@ export interface Flight {
 }
 
 export interface Location {
+  code: string;
   name: string;
-  iataCode: string;
-  cityName: string;
-  countryName: string;
+  city: string;
 }
 
 export interface FlightFiltersType {
@@ -51,18 +51,22 @@ export interface FlightFiltersType {
   currency?: string;
 
   // Przesiadki
-  directOnly?: boolean;
-  maxStops?: number | null;
+  directOnly?: boolean; // NIE UŻYWANE
+  maxStops?: number | null; // NIE UŻYWANE
+  excludedStops?: number[]; // [0, 1, 2] - wykluczaj loty z tą liczbą przesiadek
 
   // Czas lotu
   maxDuration?: number; // w godzinach
 
-  // Godziny wylotu/przylotu
-  departureTime?: string[]; // ['morning', 'afternoon', 'evening', 'night']
-  arrivalTime?: string[]; // ['morning', 'afternoon', 'evening', 'night']
+  // Godziny wylotu/przylotu - ZMIENIONA LOGIKA (zakresy zamiast kategorii)
+  departureTime?: string[]; // NIE UŻYWANE - zostaw dla kompatybilności
+  arrivalTime?: string[]; // NIE UŻYWANE - zostaw dla kompatybilności
+  departureTimeRange?: [number, number]; // [min, max] w godzinach (0-24)
+  arrivalTimeRange?: [number, number]; // [min, max] w godzinach (0-24)
 
   // Linie lotnicze
-  airlines?: string[]; // kody IATA linii lotniczych
+  airlines?: string[]; // NIE UŻYWANE - zostaw dla kompatybilności wstecznej
+  excludedAirlines?: string[]; // kody IATA wykluczonych linii lotniczych (odznaczone)
 
   // Klasa podróży
   cabin?: string[]; // ['ECONOMY', 'PREMIUM_ECONOMY', 'BUSINESS', 'FIRST']
