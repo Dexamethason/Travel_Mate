@@ -515,13 +515,13 @@ const resetStopsFilter = () => {
 const resetPriceFilter = () => {
   emit('update:modelValue', {
     ...props.modelValue,
-    priceMin: null,
-    priceMax: null,
+    priceMin: undefined,
+    priceMax: undefined,
   });
 };
 
 const resetDurationFilter = () => {
-  emit('update:modelValue', { ...props.modelValue, maxDuration: null });
+  emit('update:modelValue', { ...props.modelValue, maxDuration: undefined });
 };
 
 const resetDepartureTimeFilter = () => {
