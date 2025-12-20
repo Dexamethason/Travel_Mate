@@ -20,7 +20,9 @@ const generateCacheKey = (params: AccommodationSearchParams): string => {
     checkOut: params.checkOutDate,
     adults: params.adults || 1,
     children: params.children || 0,
-    currency: params.currency || 'USD'
+    currency: params.currency || 'PLN',
+    hl: params.hl || 'pl',
+    gl: params.gl || 'pl'
   });
   
   return crypto.createHash('md5').update(dataToHash).digest('hex');
@@ -28,7 +30,7 @@ const generateCacheKey = (params: AccommodationSearchParams): string => {
 
 const transformSerpApiData = (result: SerpApiHotelResult): Accommodation => {
   let priceAmount = 0;
-  const currency = 'USD';
+  const currency = 'PLN';
 
   if (result.rate_per_night?.extracted_lowest) {
     priceAmount = result.rate_per_night.extracted_lowest;
@@ -97,7 +99,9 @@ export const searchAccommodations = async (params: AccommodationSearchParams): P
     if (params.children) {
       url.searchParams.append('children', params.children.toString());
     }
-    url.searchParams.append('currency', params.currency || 'USD');
+    url.searchParams.append('currency', params.currency || 'PLN');
+    url.searchParams.append('hl', params.hl || 'pl');
+    url.searchParams.append('gl', params.gl || 'pl');
     url.searchParams.append('api_key', serpApiEnv.apiKey);
     
     // TODO: Opcjonalnie: sortowanie, paginacja itp.

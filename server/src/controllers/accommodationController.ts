@@ -4,7 +4,7 @@ import { AccommodationSearchParams } from '../types/accommodation';
 
 export const getAccommodations = async (req: Request, res: Response) => {
   try {
-    const { location, checkIn, checkOut, adults, children, currency } = req.query;
+    const { location, checkIn, checkOut, adults, children, currency, hl, gl } = req.query;
 
     if (!location || typeof location !== 'string') {
       return res.status(400).json({ error: 'Missing or invalid parameter: location' });
@@ -24,7 +24,9 @@ export const getAccommodations = async (req: Request, res: Response) => {
       checkOutDate: checkOut as string,
       adults: adults ? parseInt(adults as string, 10) : 1,
       children: children ? parseInt(children as string, 10) : 0,
-      currency: (currency as string) || 'USD' // TODO: Sprawdzić czy wspiera PLN
+      currency: (currency as string) || 'PLN',
+      hl: (hl as string) || 'pl',
+      gl: (gl as string) || 'pl'
     };
 
     const checkInDate = new Date(searchParams.checkInDate);

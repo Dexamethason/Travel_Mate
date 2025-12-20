@@ -4,7 +4,9 @@ export interface AccommodationSearchParams {
   checkOutDate: string; // YYYY-MM-DD
   adults?: number;
   children?: number;
-  currency?: string; 
+  currency?: string;
+  hl?: string;
+  gl?: string;
 }
 
 export interface Accommodation {

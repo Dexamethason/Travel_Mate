@@ -99,6 +99,8 @@ export function useAccommodations() {
         checkIn: params.checkIn,
         checkOut: params.checkOut,
         adults: params.adults.toString(),
+        hl: 'pl',
+        gl: 'pl',
       });
 
       if (params.children !== undefined && params.children > 0) {
