@@ -9,7 +9,6 @@
           :src="accommodation.image"
           :alt="accommodation.name"
           class="h-52 w-full rounded-t-2xl object-cover md:h-full md:rounded-l-2xl md:rounded-tr-none"
-          @error="handleImageError"
         />
 
         <!-- Overlay: ulubione + liczba zdjęć -->
@@ -362,8 +361,4 @@ const handleViewDetails = () => {
   }
 };
 
-const handleImageError = (event: Event) => {
-  const img = event.target as HTMLImageElement;
-  img.src = 'https://via.placeholder.com/800x600?text=Nocleg';
-};
 </script>

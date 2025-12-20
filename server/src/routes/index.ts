@@ -6,6 +6,7 @@ import invitationRoutes from './invitationRoutes';
 import userRoutes from './userRoutes';
 import planRoutes from './planRoutes';
 import flightRoutes from './flightRoutes';
+import accommodationRoutes from './accommodationRoutes';
 
 const router = express.Router();
 
@@ -37,6 +38,7 @@ router.use('/invitations', invitationRoutes);
 router.use('/users', userRoutes);
 router.use('/plans', planRoutes);
 router.use('/flights', flightRoutes);
+router.use('/accommodations', accommodationRoutes);
 
 // // Przykładowe trasy (do rozwinięcia)
 // router.get('/test-firestore', async (req, res) => {

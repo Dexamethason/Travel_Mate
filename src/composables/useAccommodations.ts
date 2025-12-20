@@ -95,7 +95,7 @@ export function useAccommodations() {
     try {
       // Budowanie query string
       const queryParams = new URLSearchParams({
-        destination: params.destination,
+        location: params.destination, 
         checkIn: params.checkIn,
         checkOut: params.checkOut,
         adults: params.adults.toString(),
@@ -104,73 +104,40 @@ export function useAccommodations() {
       if (params.children !== undefined && params.children > 0) {
         queryParams.append('children', params.children.toString());
       }
-
-      if (params.priceMin !== undefined) {
-        queryParams.append('priceMin', params.priceMin.toString());
-      }
-      if (params.priceMax !== undefined) {
-        queryParams.append('priceMax', params.priceMax.toString());
-      }
-      if (params.type) {
-        queryParams.append('type', params.type);
-      }
-      if (params.minRating !== undefined) {
-        queryParams.append('minRating', params.minRating.toString());
-      }
-      if (params.amenities && params.amenities.length > 0) {
-        params.amenities.forEach(amenity => {
-          queryParams.append('amenities', amenity);
-        });
-      }
-      if (params.stars !== undefined) {
-        queryParams.append('stars', params.stars.toString());
-      }
-      if (params.maxDistance !== undefined) {
-        queryParams.append('maxDistance', params.maxDistance.toString());
-      }
-      if (params.freeCancellation !== undefined) {
-        queryParams.append('freeCancellation', params.freeCancellation.toString());
-      }
-      if (params.breakfastIncluded !== undefined) {
-        queryParams.append('breakfastIncluded', params.breakfastIncluded.toString());
-      }
-      if (params.petFriendly !== undefined) {
-        queryParams.append('petFriendly', params.petFriendly.toString());
-      }
-      if (params.airConditioning !== undefined) {
-        queryParams.append('airConditioning', params.airConditioning.toString());
-      }
-      if (params.balcony !== undefined) {
-        queryParams.append('balcony', params.balcony.toString());
-      }
-      if (params.fitnessCenter !== undefined) {
-        queryParams.append('fitnessCenter', params.fitnessCenter.toString());
-      }
-      if (params.spa !== undefined) {
-        queryParams.append('spa', params.spa.toString());
-      }
-      if (params.restaurant !== undefined) {
-        queryParams.append('restaurant', params.restaurant.toString());
-      }
-      if (params.reception24h !== undefined) {
-        queryParams.append('reception24h', params.reception24h.toString());
-      }
-      if (params.airportTransfer !== undefined) {
-        queryParams.append('airportTransfer', params.airportTransfer.toString());
-      }
-
-      const response = await fetch(`${API_URL}/accommodations?${queryParams.toString()}`, {
+      
+      const response = await fetch(`${API_URL}/accommodations/search?${queryParams.toString()}`, {
         method: 'GET',
         headers: getAuthHeaders(),
       });
 
       const data = await response.json();
 
-      if (!response.ok || !data.success) {
+      if (!response.ok) {
         throw new Error(data.message || data.error || 'Nie udało się wyszukać noclegów');
       }
 
-      accommodations.value = data.data || [];
+      // Backend zwraca { data: [], meta: {} }
+      const results = data.data || [];
+      
+      // Mapowanie wyników z backendu na format frontendowy jeśli konieczne
+      accommodations.value = results.map((item: any) => ({
+        id: item.id,
+        name: item.name,
+        type: 'Hotel', // Domyślnie
+        location: item.location.address || item.name,
+        address: item.location.address,
+        price: item.price.amount,
+        rating: item.rating,
+        reviews: item.reviews,
+        image: item.imageUrl,
+        description: item.description,
+        amenities: item.amenities || [],
+        distance: '0 km', // Brak danych w SerpApi o odległości od centrum wprost
+        latitude: item.location.latitude,
+        longitude: item.location.longitude,
+        externalUrl: item.link
+      }));
+
       return accommodations.value;
     } catch (err) {
       error.value = err instanceof Error ? err.message : 'Nieznany błąd podczas wyszukiwania noclegów';
