@@ -1,43 +1,104 @@
 <template>
   <div class="flex h-screen bg-gray-100">
-    <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow-lg">
-      <!-- Logo/Nazwa aplikacji - klikalna -->
-      <router-link
-        to="/"
-        class="flex items-center gap-3 border-b p-6 transition-colors hover:bg-gray-50"
+    <!-- Mobile hamburger button -->
+    <button
+      v-if="!sidebarOpen"
+      @click="sidebarOpen = true"
+      class="fixed left-4 top-4 z-50 rounded-lg bg-white p-2 shadow-lg lg:hidden"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-gray-600"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
       >
-        <div
-          class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-400"
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Sidebar -->
+    <aside
+      :class="[
+        'fixed lg:static inset-y-0 left-0 z-40 w-64 bg-white shadow-lg transition-transform duration-300 lg:translate-x-0',
+        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      ]"
+    >
+      <!-- Logo/Nazwa aplikacji - klikalna -->
+      <div class="flex items-center justify-between border-b p-6">
+        <router-link
+          to="/dashboard"
+          class="flex items-center gap-3 transition-colors hover:opacity-80"
         >
-          <span class="text-xl font-bold text-white">✈️</span>
-        </div>
-        <span class="text-xl font-bold text-gray-800">Travel Mate</span>
-      </router-link>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-400"
+          >
+            <span class="text-xl font-bold text-white">✈️</span>
+          </div>
+          <span class="text-xl font-bold text-gray-800">TravelMate</span>
+        </router-link>
+        <button
+          @click="sidebarOpen = false"
+          class="lg:hidden rounded-lg p-1 hover:bg-gray-100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Przycisk Nowa podróż -->
+      <div class="border-b p-4">
+        <button
+          @click="openNewTripModal"
+          class="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Nowa podróż +
+        </button>
+      </div>
 
       <!-- Nawigacja -->
-      <nav class="flex flex-col gap-2 p-4">
+      <nav class="flex flex-col gap-1 p-4">
         <router-link
           v-for="item in navigationItems"
           :key="item.name"
           :to="item.path"
-          class="flex items-center gap-3 rounded-lg px-3 py-2 transition-colors"
+          @click="sidebarOpen = false"
+          class="flex items-center gap-3 rounded-lg px-3 py-2.5 transition-colors"
           :class="
             isActive(item.path)
-              ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-300'
-              : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+              ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-600 dark:bg-blue-900/30 dark:text-blue-300'
+              : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
           "
         >
           <svg
             fill="currentColor"
-            height="24"
+            height="20"
             viewBox="0 0 256 256"
-            width="24"
+            width="20"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path :d="item.icon"></path>
           </svg>
-          <span class="text-sm font-semibold">{{ item.label }}</span>
+          <span class="text-sm font-medium">{{ item.label }}</span>
         </router-link>
       </nav>
 
@@ -87,6 +148,13 @@
       </div>
     </aside>
 
+    <!-- Overlay for mobile -->
+    <div
+      v-if="sidebarOpen"
+      @click="sidebarOpen = false"
+      class="fixed inset-0 z-30 bg-black/50 lg:hidden"
+    ></div>
+
     <!-- główna treść -->
     <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900">
       <router-view />
@@ -95,12 +163,22 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useAuth } from '../composables/useAuth';
+import { useNewTripModal } from '../composables/useNewTripModal';
 
 const route = useRoute();
 const router = useRouter();
 const { logout } = useAuth();
+const { openModal } = useNewTripModal();
+
+const sidebarOpen = ref(false);
+
+const openNewTripModal = () => {
+  openModal();
+  sidebarOpen.value = false;
+};
 
 const navigationItems = [
   {

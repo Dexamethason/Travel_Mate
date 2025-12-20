@@ -66,11 +66,27 @@ export function useTrips() {
     loading.value = true;
     error.value = null;
     try {
+      const headers = getAuthHeaders();
+      
+      // Sprawdź czy token istnieje
+      if (!headers['Authorization']) {
+        error.value = 'Brak autoryzacji. Zaloguj się ponownie.';
+        console.error('Brak tokena autoryzacji');
+        return null;
+      }
+
       const response = await fetch(`${API_URL}/trips`, {
         method: 'POST',
-        headers: getAuthHeaders(),
+        headers,
         body: JSON.stringify(tripData),
       });
+
+      // Sprawdź status odpowiedzi przed parsowaniem JSON
+      if (response.status === 401) {
+        error.value = 'Sesja wygasła. Zaloguj się ponownie.';
+        console.error('401 Unauthorized - token może być nieważny lub wygasły');
+        return null;
+      }
 
       const data = await response.json();
 

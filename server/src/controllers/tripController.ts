@@ -1,3 +1,4 @@
+
 import { Request, Response } from 'express';
 import { tripService } from '../services/tripService';
 import { authService } from '../services/authService';
