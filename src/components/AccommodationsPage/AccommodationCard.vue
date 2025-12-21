@@ -6,9 +6,10 @@
       <!-- LEWA KOLUMNA – ZDJĘCIE -->
       <div class="relative w-full overflow-hidden md:w-1/3">
         <img
-          :src="accommodation.image"
+          :src="finalImageUrl"
           :alt="accommodation.name"
-          class="h-52 w-full rounded-t-2xl object-cover md:h-full md:rounded-l-2xl md:rounded-tr-none"
+          class="h-52 w-full rounded-t-2xl object-cover md:h-64 md:rounded-l-2xl md:rounded-tr-none"
+          @error="handleImageError"
         />
 
         <!-- Overlay: ulubione + liczba zdjęć -->
@@ -59,17 +60,9 @@
         <!-- Lokalizacja -->
         <section class="mt-1 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
           <MapPinIcon class="h-4 w-4 text-gray-400 dark:text-gray-500" />
-          <div class="space-y-0.5">
-            <p class="line-clamp-1">
-              {{ accommodation.address || accommodation.location }}
-            </p>
-            <p class="line-clamp-1">
-              Odległość od centrum:
-              <span class="font-medium text-gray-700 dark:text-gray-200">
-                {{ accommodation.distance || 'nieznana' }}
-              </span>
-            </p>
-          </div>
+          <p class="line-clamp-1">
+            {{ accommodation.address || accommodation.location }}
+          </p>
         </section>
 
         <!-- Ocena + tagi -->
@@ -267,6 +260,10 @@ const amenityLabelMap: Record<string, string> = {
   lounge: 'Salon',
   garden: 'Ogród',
   pets: 'Zwierzęta',
+  airconditioning: 'Klimatyzacja',
+  restaurant: 'Restauracja',
+  reception24h: 'Recepcja 24h',
+  airporttransfer: 'Transfer z lotniska',
 };
 
 const typeClass = computed(
@@ -330,6 +327,34 @@ const visibleAmenityChips = computed(() => {
   });
 
   return chips.slice(0, 8);
+});
+
+// Domyślne zdjęcie hotelu - fallback gdy brak zdjęcia
+const DEFAULT_HOTEL_IMAGE = '/default-hotel.jpg';
+
+// Computed dla URL zdjęcia z fallbackiem
+const imageUrl = computed(() => {
+  const img = accommodation.image;
+  if (!img || img.trim() === '' || img === 'undefined' || img === 'null') {
+    return DEFAULT_HOTEL_IMAGE;
+  }
+  return img;
+});
+
+// Obsługa błędu ładowania zdjęcia
+const imageError = ref(false);
+const handleImageError = () => {
+  if (!imageError.value) {
+    imageError.value = true;
+  }
+};
+
+// Finalny URL zdjęcia - jeśli wystąpił błąd, użyj domyślnego
+const finalImageUrl = computed(() => {
+  if (imageError.value) {
+    return DEFAULT_HOTEL_IMAGE;
+  }
+  return imageUrl.value;
 });
 
 const favorite = ref<boolean>(isFavorite);
