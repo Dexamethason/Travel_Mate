@@ -17,7 +17,7 @@ export interface FlightSearchParams {
 }
 
 export interface Flight {
-  id: number | string;
+  id: string;
   airline: string;
   stops: string;
   departureTime: string;
@@ -27,7 +27,8 @@ export interface Flight {
   duration: string;
   type: string;
   price: number;
-  // Powrotny (opcjonalne dlatego ?)
+
+  // Pola dla lotu powrotnego
   returnAirline?: string;
   returnStops?: string;
   returnDepartureTime?: string;
@@ -38,10 +39,9 @@ export interface Flight {
 }
 
 export interface Location {
+  code: string;
   name: string;
-  iataCode: string;
-  cityName: string;
-  countryName: string;
+  city: string;
 }
 
 export interface FlightFiltersType {
@@ -53,28 +53,23 @@ export interface FlightFiltersType {
   // Przesiadki
   directOnly?: boolean;
   maxStops?: number | null;
+  excludedStops?: number[]; // [0, 1, 2] - wykluczaj loty z tą liczbą przesiadek
 
   // Czas lotu
-  maxDuration?: number; // w godzinach
+  maxDuration?: number;
 
   // Godziny wylotu/przylotu
-  departureTime?: string[]; // ['morning', 'afternoon', 'evening', 'night']
-  arrivalTime?: string[]; // ['morning', 'afternoon', 'evening', 'night']
+  departureTime?: string[];
+  arrivalTime?: string[];
+  departureTimeRange?: [number, number];
+  arrivalTimeRange?: [number, number];
 
   // Linie lotnicze
-  airlines?: string[]; // kody IATA linii lotniczych
+  airlines?: string[];
+  excludedAirlines?: string[]; // kody IATA wykluczonych linii lotniczych
 
   // Klasa podróży
   cabin?: string[]; // ['ECONOMY', 'PREMIUM_ECONOMY', 'BUSINESS', 'FIRST']
-
-  // Dodatkowe opcje
-  includedBaggage?: boolean; // bagaż rejestrowany w cenie
-  refundable?: boolean; // zwrotny bilet
-  noPenalty?: boolean; // bez kar za zmianę
-  ecoFriendly?: boolean; // sortowanie po emisji CO₂
-
-  // Liczba miejsc
-  minSeats?: number; // minimalna liczba dostępnych miejsc
 }
 
 export interface DayObject {

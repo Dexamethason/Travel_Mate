@@ -35,13 +35,18 @@
     <!-- Jedna linia z wszystkimi polami -->
     <div class="flex items-end gap-3">
       <!-- Wylot z -->
-      <LocationInput
-        v-model="localForm.from"
-        label="Wylot z"
-        placeholder="Warszawa"
-        :has-error="!!fieldErrors.from"
-        @update:model-value="clearFieldError('from')"
-      />
+      <div class="relative flex-1">
+        <p class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+          Wylot z
+          <span v-if="fieldErrors.from" class="text-red-600 dark:text-red-400">*</span>
+        </p>
+        <AirportAutocomplete
+          v-model="localForm.from"
+          placeholder="Warszawa"
+          :class="{ 'airport-error': !!fieldErrors.from }"
+          @update:model-value="clearFieldError('from')"
+        />
+      </div>
 
       <!-- Strzałka swap -->
       <div class="flex h-12 items-center pb-0">
@@ -55,13 +60,18 @@
       </div>
 
       <!-- Lot do -->
-      <LocationInput
-        v-model="localForm.to"
-        label="Lot do"
-        placeholder="Paryż"
-        :has-error="!!fieldErrors.to"
-        @update:model-value="clearFieldError('to')"
-      />
+      <div class="relative flex-1">
+        <p class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+          Lot do
+          <span v-if="fieldErrors.to" class="text-red-600 dark:text-red-400">*</span>
+        </p>
+        <AirportAutocomplete
+          v-model="localForm.to"
+          placeholder="Paryż"
+          :class="{ 'airport-error': !!fieldErrors.to }"
+          @update:model-value="clearFieldError('to')"
+        />
+      </div>
 
       <!-- Termin podróży -->
       <div class="relative flex-1">
@@ -270,7 +280,7 @@ import {
 } from '@heroicons/vue/24/outline';
 import CalendarMonth from './FlightSearchFormComponents/CalendarMonth.vue';
 import TravelersSelector from './FlightSearchFormComponents/TravelersSelector.vue';
-import LocationInput from './FlightSearchFormComponents/LocationInput.vue';
+import AirportAutocomplete from './FlightSearchFormComponents/AirPortAutoComplete.vue';
 import type { SearchForm } from '@/types/flight';
 import { useActivePanel } from '@/composables/useActivePanel';
 import { useCalendar } from '@/composables/useCalendar';
@@ -547,5 +557,20 @@ onUnmounted(() => {
 .error-leave-to {
   opacity: 0;
   max-height: 0;
+}
+
+.airport-error {
+  border-color: #e53e3e;
+  background-color: #fff5f5;
+}
+
+.airport-error :deep(input) {
+  border-color: rgb(239 68 68);
+  background-color: rgb(254 242 242);
+}
+
+.dark .airport-error :deep(input) {
+  border-color: rgb(185 28 28);
+  background-color: rgb(127 29 29 / 0.2);
 }
 </style>

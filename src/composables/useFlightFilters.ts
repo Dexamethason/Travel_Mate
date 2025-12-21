@@ -13,11 +13,6 @@ export function useFlightFilters(flights: Ref<Flight[]>) {
     arrivalTime: [],
     airlines: [],
     cabin: [],
-    includedBaggage: false,
-    refundable: false,
-    noPenalty: false,
-    ecoFriendly: false,
-    minSeats: 1,
   });
 
   const availableAirlines = computed(() => {
@@ -129,11 +124,6 @@ export function useFlightFilters(flights: Ref<Flight[]>) {
       arrivalTime: [],
       airlines: [],
       cabin: [],
-      includedBaggage: false,
-      refundable: false,
-      noPenalty: false,
-      ecoFriendly: false,
-      minSeats: 1,
     };
   };
 
