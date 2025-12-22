@@ -68,3 +68,12 @@ if (!amadeusEnv.clientId || !amadeusEnv.clientSecret) {
   console.warn('⚠️  Dane do API Amadeus nie są ustawione');
   console.warn('📝 Dodaj AMADEUS_API_KEY i AMADEUS_API_SECRET do pliku server/.env');
 }
+
+export const serpApiEnv = {
+  apiKey: process.env.SERPAPI_API_KEY || '',
+};
+
+if (!serpApiEnv.apiKey) {
+  console.warn('⚠️  SERPAPI_API_KEY nie jest ustawiony w pliku .env');
+  console.warn('📝 Dodaj SERPAPI_API_KEY do pliku server/.env aby korzystać z wyszukiwania hoteli');
+}
