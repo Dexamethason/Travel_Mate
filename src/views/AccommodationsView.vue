@@ -66,8 +66,6 @@
               <option value="rating-asc">Ocena: od najniższej</option>
               <option value="popularity-desc">Popularność: najpopularniejsze</option>
               <option value="popularity-asc">Popularność: najmniej popularne</option>
-              <option value="distance-asc">Odległość: najbliżej centrum</option>
-              <option value="distance-desc">Odległość: najdalej od centrum</option>
             </select>
           </div>
 

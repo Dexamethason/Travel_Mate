@@ -88,37 +88,54 @@ const normalizeAmenities = (amenities: string[]): string[] => {
   const normalized: string[] = [];
   const normalizedSet = new Set<string>();
 
-  // Mapowanie różnych wariantów na standardowe klucze
+  // Mapowanie różnych wariantów na standardowe klucze (angielskie i polskie)
   const amenityMapping: Record<string, string> = {
     // WiFi
     'wifi': 'wifi',
     'wi-fi': 'wifi',
     'wi fi': 'wifi',
     'free wifi': 'wifi',
+    'free wi-fi': 'wifi',
     'wireless internet': 'wifi',
     'internet': 'wifi',
     'free wireless': 'wifi',
     'wireless': 'wifi',
+    'bezpłatne wi-fi': 'wifi',
+    'bezpłatne wifi': 'wifi',
+    'darmowe wi-fi': 'wifi',
+    'darmowe wifi': 'wifi',
     
     // Parking
     'parking': 'parking',
     'free parking': 'parking',
+    'parking ($)': 'parking',
+    'parking($)': 'parking',
     'car park': 'parking',
     'parking available': 'parking',
     'valet parking': 'parking',
+    'bezpłatny parking': 'parking',
+    'darmowy parking': 'parking',
+    'parking bezpłatny': 'parking',
     
     // Pool
     'pool': 'pool',
     'swimming pool': 'pool',
     'outdoor pool': 'pool',
     'indoor pool': 'pool',
+    'basen kryty': 'pool',
+    'basen': 'pool',
+    'basen odkryty': 'pool',
     
     // Breakfast
     'breakfast': 'breakfast',
     'free breakfast': 'breakfast',
     'breakfast included': 'breakfast',
+    'breakfast ($)': 'breakfast',
+    'breakfast($)': 'breakfast',
     'continental breakfast': 'breakfast',
     'buffet breakfast': 'breakfast',
+    'śniadanie': 'breakfast',
+    'śniadanie wliczone': 'breakfast',
     
     // SPA
     'spa': 'spa',
@@ -132,50 +149,139 @@ const normalizeAmenities = (amenities: string[]): string[] => {
     'fitness': 'gym',
     'fitness room': 'gym',
     'workout room': 'gym',
+    'siłownia': 'gym',
+    'centrum fitness': 'gym',
     
     // Restaurant
     'restaurant': 'restaurant',
     'dining': 'restaurant',
     'on-site restaurant': 'restaurant',
+    'restauracja': 'restaurant',
     
     // Kitchen
     'kitchen': 'kitchen',
     'kitchenette': 'kitchen',
     'full kitchen': 'kitchen',
+    'kuchnia': 'kitchen',
+    'aneks kuchenny': 'kitchen',
+    'kuchenka mikrofalowa': 'kitchen',
+    'kuchenka z piekarnikiem': 'kitchen',
     
     // Balcony
     'balcony': 'balcony',
     'terrace': 'balcony',
     'patio': 'balcony',
+    'taras': 'balcony',
+    'balkon': 'balcony',
     
     // Air Conditioning
     'air conditioning': 'airconditioning',
+    'airconditioning': 'airconditioning',
     'ac': 'airconditioning',
     'climate control': 'airconditioning',
+    'klimatyzacja': 'airconditioning',
     
     // Pets
     'pets': 'pets',
     'pet friendly': 'pets',
+    'pet-friendly': 'pets',
     'pets allowed': 'pets',
+    'petsallowed': 'pets',
+    'przyjazny zwierzętom': 'pets',
+    'zwierzęta dozwolone': 'pets',
     
     // Garden
     'garden': 'garden',
     'outdoor garden': 'garden',
+    'ogród': 'garden',
     
     // Lounge
     'lounge': 'lounge',
     'lobby': 'lounge',
     'common area': 'lounge',
+    'salon': 'lounge',
     
     // 24h Reception
     '24 hour reception': 'reception24h',
     '24/7 reception': 'reception24h',
     '24-hour front desk': 'reception24h',
+    'recepcja 24h': 'reception24h',
+    'recepcja 24/7': 'reception24h',
     
     // Airport Transfer
     'airport transfer': 'airporttransfer',
     'airport shuttle': 'airporttransfer',
     'airport pickup': 'airporttransfer',
+    'transfer lotniskowy': 'airporttransfer',
+    'shuttle lotniskowy': 'airporttransfer',
+    
+    // Laundry
+    'laundry': 'laundry',
+    'full-service laundry': 'laundry',
+    'full service laundry': 'laundry',
+    'laundry service': 'laundry',
+    'pralnia': 'laundry',
+    'pralka': 'laundry',
+    'usługa pralni': 'laundry',
+    
+    // Accessible
+    'accessible': 'accessible',
+    'wheelchair accessible': 'accessible',
+    'disabled access': 'accessible',
+    'dostępne dla osób na wózkach': 'accessible',
+    'dla niepełnosprawnych': 'accessible',
+    'winda': 'accessible', // Elevator też może być związane z dostępnością
+    
+    // Kid-friendly
+    'kid-friendly': 'kidfriendly',
+    'kid friendly': 'kidfriendly',
+    'children friendly': 'kidfriendly',
+    'family friendly': 'kidfriendly',
+    'przyjazny dzieciom': 'kidfriendly',
+    'dla rodzin': 'kidfriendly',
+    'łóżeczko dziecięce': 'kidfriendly',
+    
+    // Smoke-free
+    'smoke-free property': 'smokefree',
+    'smoke free property': 'smokefree',
+    'non-smoking': 'smokefree',
+    'nonsmoking': 'smokefree',
+    'dla niepalących': 'smokefree',
+    'zakaz palenia': 'smokefree',
+    
+    // Bar
+    'bar': 'bar',
+    'cocktail bar': 'bar',
+    'bar/lounge': 'bar',
+    
+    // Room Service
+    'room service': 'roomservice',
+    'roomservice': 'roomservice',
+    'room-service': 'roomservice',
+    'usługa pokojowa': 'roomservice',
+    
+    // Business Center
+    'business center': 'businesscenter',
+    'businesscentre': 'businesscenter',
+    'business centre': 'businesscenter',
+    'centrum biznesowe': 'businesscenter',
+    
+    // Heating
+    'heating': 'heating',
+    'central heating': 'heating',
+    'ogrzewanie': 'heating',
+    
+    // Ironing
+    'ironing board': 'ironing',
+    'iron': 'ironing',
+    'deska do prasowania': 'ironing',
+    
+    // Cable TV
+    'cable tv': 'cabletv',
+    'cable television': 'cabletv',
+    'satellite tv': 'cabletv',
+    'telewizja kablowa': 'cabletv',
+    'tv': 'cabletv',
   };
 
   amenities.forEach(amenity => {
@@ -208,50 +314,6 @@ const normalizeAmenities = (amenities: string[]): string[] => {
   return normalized;
 };
 
-/**
- * Normalizuje typ noclegu z wartości zwracanej przez API na standardowe klucze
- */
-const normalizeAccommodationTypeFromApi = (apiType: string): string => {
-  const type = apiType.toLowerCase().trim();
-  
-  // Mapowanie typów z API na nasze klucze
-  if (type.includes('apartment') || type.includes('apartament')) {
-    return 'apartment';
-  }
-  if (type.includes('hostel')) {
-    return 'hostel';
-  }
-  if (type.includes('villa') || type.includes('willa')) {
-    return 'villa';
-  }
-  if (type.includes('bed') && type.includes('breakfast') || type.includes('b&b') || type.includes('bnb')) {
-    return 'bnb';
-  }
-  // Domyślnie hotel
-  return 'hotel';
-};
-
-/**
- * Normalizuje typ noclegu z nazwy/opisu na standardowe klucze (fallback gdy API nie zwraca type)
- */
-const normalizeAccommodationType = (name: string, description?: string): string => {
-  const text = `${name} ${description || ''}`.toLowerCase();
-  
-  if (text.includes('apartment') || text.includes('apartament') || text.includes('mieszkanie')) {
-    return 'apartment';
-  }
-  if (text.includes('hostel')) {
-    return 'hostel';
-  }
-  if (text.includes('villa') || text.includes('willa')) {
-    return 'villa';
-  }
-  if (text.includes('bed') && text.includes('breakfast') || text.includes('b&b') || text.includes('bnb')) {
-    return 'bnb';
-  }
-  // Domyślnie hotel
-  return 'hotel';
-};
 
 /**
  * Parsuje liczbę gwiazdek z hotel_class (np. "4-star hotel" -> 4)
@@ -315,18 +377,7 @@ export function useAccommodations() {
       
       // Mapowanie wyników z backendu na format frontendowy jeśli konieczne
       accommodations.value = results.map((item: any) => {
-        // Normalizacja typu noclegu - najpierw sprawdź czy backend zwraca type, jeśli nie - analizuj nazwę/opis
-        let normalizedType: string;
-        if (item.type) {
-          // Backend zwraca type z API - znormalizuj do naszego formatu
-          normalizedType = normalizeAccommodationTypeFromApi(item.type);
-        } else {
-          // Fallback - analizuj nazwę i opis
-          normalizedType = normalizeAccommodationType(item.name || '', item.description);
-        }
-        
         // Parsowanie gwiazdek - jeśli backend nie zwraca hotel_class, próbujemy z innych źródeł
-        // Możemy też sprawdzić czy w nazwie/opisie jest informacja o gwiazdkach
         let stars: number | undefined = undefined;
         if (item.hotel_class) {
           stars = parseStarsFromHotelClass(item.hotel_class);
@@ -338,7 +389,7 @@ export function useAccommodations() {
         return {
           id: item.id,
           name: item.name,
-          type: normalizedType,
+          type: 'hotel', // Wszystko jest hotelem
           location: item.location.address || item.name,
           address: item.location.address,
           price: item.price.amount,

@@ -226,41 +226,11 @@
             <input
               type="checkbox"
               class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('gym')"
-              value="gym"
-              @change="toggleAmenity('gym')"
+              :checked="modelValue.amenities.includes('accessible')"
+              value="accessible"
+              @change="toggleAmenity('accessible')"
             />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Siłownia</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('spa')"
-              value="spa"
-              @change="toggleAmenity('spa')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">SPA</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('restaurant')"
-              value="restaurant"
-              @change="toggleAmenity('restaurant')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Restauracja</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('reception24h')"
-              value="reception24h"
-              @change="toggleAmenity('reception24h')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Recepcja 24h</span>
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Dostępne dla niepełnosprawnych</span>
           </label>
           <label class="flex cursor-pointer items-center">
             <input
@@ -276,11 +246,91 @@
             <input
               type="checkbox"
               class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('bar')"
+              value="bar"
+              @change="toggleAmenity('bar')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Bar</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('businesscenter')"
+              value="businesscenter"
+              @change="toggleAmenity('businesscenter')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Centrum biznesowe</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('cabletv')"
+              value="cabletv"
+              @change="toggleAmenity('cabletv')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Telewizja kablowa</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               :checked="modelValue.amenities.includes('garden')"
               value="garden"
               @change="toggleAmenity('garden')"
             />
             <span class="ml-2 text-gray-700 dark:text-gray-300">Ogród</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('gym')"
+              value="gym"
+              @change="toggleAmenity('gym')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Siłownia</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('heating')"
+              value="heating"
+              @change="toggleAmenity('heating')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Ogrzewanie</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('ironing')"
+              value="ironing"
+              @change="toggleAmenity('ironing')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Deska do prasowania</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('kidfriendly')"
+              value="kidfriendly"
+              @change="toggleAmenity('kidfriendly')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Przyjazne dzieciom</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('laundry')"
+              value="laundry"
+              @change="toggleAmenity('laundry')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Pralnia</span>
           </label>
           <label class="flex cursor-pointer items-center">
             <input
@@ -292,33 +342,59 @@
             />
             <span class="ml-2 text-gray-700 dark:text-gray-300">Salon</span>
           </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('reception24h')"
+              value="reception24h"
+              @change="toggleAmenity('reception24h')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Recepcja 24h</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('restaurant')"
+              value="restaurant"
+              @change="toggleAmenity('restaurant')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Restauracja</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('roomservice')"
+              value="roomservice"
+              @change="toggleAmenity('roomservice')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Usługa pokojowa</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('smokefree')"
+              value="smokefree"
+              @change="toggleAmenity('smokefree')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">Dla niepalących</span>
+          </label>
+          <label class="flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+              :checked="modelValue.amenities.includes('spa')"
+              value="spa"
+              @change="toggleAmenity('spa')"
+            />
+            <span class="ml-2 text-gray-700 dark:text-gray-300">SPA</span>
+          </label>
         </div>
       </div>
 
-      <!-- opcje specjalne -->
-      <div class="mb-6">
-        <p class="mb-4 text-base font-medium text-gray-900 dark:text-white">Opcje specjalne</p>
-        <div class="space-y-2">
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.freeCancellation"
-              @change="updateBooleanField('freeCancellation', $event)"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Anulowanie bezpłatne</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.petFriendly"
-              @change="updateBooleanField('petFriendly', $event)"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Przyjazne zwierzętom</span>
-          </label>
-        </div>
-      </div>
     </div>
   </div>
 </template>
