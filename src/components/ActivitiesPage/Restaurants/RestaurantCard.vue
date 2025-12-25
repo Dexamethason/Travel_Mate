@@ -1,6 +1,7 @@
 <template>
   <div
     class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gray-300 transition-all duration-200 cursor-pointer group"
+    @click="$emit('click')"
   >
     <div class="flex gap-5">
       <!-- Zdjęcie -->
@@ -59,5 +60,9 @@ import type { Restaurant } from '@/types/activitie';
 
 defineProps<{
   restaurant: Restaurant;
+}>();
+
+defineEmits<{
+  click: [];
 }>();
 </script>

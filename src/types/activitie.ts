@@ -14,6 +14,14 @@ export interface Attraction {
   openingHours: string;
   status: string;
   buttonText: string;
+  // Nowe pola dla szczegółów
+  description?: string;
+  address?: string;
+  phone?: string;
+  website?: string;
+  detailedReviews?: Review[];
+  photos?: string[];
+  amenities?: string[];
 }
 
 export interface Restaurant {
@@ -27,6 +35,24 @@ export interface Restaurant {
   distance: string;
   openingHours: string;
   isOpen: boolean;
+  // Nowe pola dla szczegółów
+  description?: string;
+  address?: string;
+  phone?: string;
+  website?: string;
+  detailedReviews?: Review[];
+  photos?: string[];
+  menu?: string;
+  reservationRequired?: boolean;
+}
+
+export interface Review {
+  id: number;
+  author: string;
+  rating: number;
+  date: string;
+  comment: string;
+  helpful?: number;
 }
 
 export interface AttractionFilters {
