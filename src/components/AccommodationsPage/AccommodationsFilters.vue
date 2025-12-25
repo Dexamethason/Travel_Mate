@@ -447,14 +447,6 @@ const updateRangeField = (
   }
 };
 
-const updateBooleanField = (
-  field: keyof AccommodationFilters,
-  event: Event
-) => {
-  const checked = (event.target as HTMLInputElement).checked;
-  updateField(field, checked);
-};
-
 const toggleAmenity = (amenity: string) => {
   const current = props.modelValue.amenities;
   const exists = current.includes(amenity);
