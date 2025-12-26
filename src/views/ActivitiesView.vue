@@ -1,20 +1,31 @@
 <template>
-  <div class="min-h-screen bg-gray-50 p-8 dark:bg-gray-900">
-    <div class="mx-auto max-w-6xl">
-      <h1 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Atrakcje</h1>
-      <p class="mb-8 text-gray-500 dark:text-gray-400">Odkryj najlepsze atrakcje i restauracje</p>
+  <div class="flex flex-col h-screen">
+    <!-- Header -->
+    <ViewHeader v-model:active-tab="activeTab" />
 
-      <div class="py-16 text-center">
-        <div class="mb-4 text-6xl">🎭</div>
-        <p class="text-xl text-gray-600 dark:text-gray-400">Wkrótce dostępne</p>
-        <p class="mt-2 text-gray-500 dark:text-gray-500">
-          Funkcjonalność wyszukiwania atrakcji jest w trakcie rozwoju
-        </p>
+    <!-- Główna zawartość - split view bez odstępów -->
+    <div class="flex flex-1 overflow-hidden">
+      <!-- Lewa strona - Lista restauracji/atrakcji ze scrollem -->
+      <div class="w-[600px] bg-white overflow-y-auto">
+        <RestaurantsView v-if="activeTab === 'restaurants'" />
+        <AttractionsView v-else />
+      </div>
+
+      <div class="flex-1 overflow-hidden">
+        <RestaurantsMap v-if="activeTab === 'restaurants'" />
+        <AttractionsMap v-else />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-// atrakcje - póki co tylko placeholder, zrobimy później
+import { ref } from 'vue';
+import ViewHeader from '@/components/ActivitiesPage/ViewHeader.vue';
+import RestaurantsView from '@/components/ActivitiesPage/Restaurants/RestaurantsView.vue';
+import RestaurantsMap from '@/components/ActivitiesPage/Restaurants/RestaurantsMap.vue';
+import AttractionsView from '@/components/ActivitiesPage/Attractions/AttractionsView.vue';
+import AttractionsMap from '@/components/ActivitiesPage/Attractions/AttractionsMap.vue';
+
+const activeTab = ref<'restaurants' | 'attractions'>('restaurants');
 </script>
