@@ -317,13 +317,21 @@ const normalizeAmenities = (amenities: string[]): string[] => {
 
 /**
  * Parsuje liczbę gwiazdek z hotel_class (np. "4-star hotel" -> 4)
+ * Obsługuje różne formaty: "4-star hotel", "4", "4 stars", "4.0", liczby itp.
  * Jeśli hotel_class nie jest dostępne, zwraca undefined
  */
-const parseStarsFromHotelClass = (hotelClass?: string): number | undefined => {
+const parseStarsFromHotelClass = (hotelClass?: string | number): number | undefined => {
   if (!hotelClass) return undefined;
   
-  // hotel_class może być w formacie "4-star hotel" lub "4" lub "4 stars"
-  const match = hotelClass.match(/(\d+)/);
+  // Jeśli już jest liczbą
+  if (typeof hotelClass === 'number') {
+    const stars = Math.round(hotelClass);
+    return stars >= 1 && stars <= 5 ? stars : undefined;
+  }
+  
+  // Jeśli jest stringiem, wyciągnij liczbę
+  // hotel_class może być w formacie "4-star hotel", "4", "4 stars", "4.0" itp.
+  const match = String(hotelClass).match(/(\d+)/);
   if (match && match[1]) {
     const stars = parseInt(match[1], 10);
     return stars >= 1 && stars <= 5 ? stars : undefined;
@@ -377,10 +385,10 @@ export function useAccommodations() {
       
       // Mapowanie wyników z backendu na format frontendowy jeśli konieczne
       accommodations.value = results.map((item: any) => {
-        // Parsowanie gwiazdek - jeśli backend nie zwraca hotel_class, próbujemy z innych źródeł
+        // Parsowanie gwiazdek z hotelClass
         let stars: number | undefined = undefined;
-        if (item.hotel_class) {
-          stars = parseStarsFromHotelClass(item.hotel_class);
+        if (item.hotelClass) {
+          stars = parseStarsFromHotelClass(item.hotelClass);
         }
         
         // Sprawdź rating - upewnij się że jest liczbą

@@ -12,16 +12,35 @@
     <!-- Jedna linia z polami -->
     <div class="flex flex-wrap items-end gap-3 rounded-lg bg-white px-2 py-2 dark:bg-gray-800">
       <!-- Miejsce docelowe -->
-      <label class="flex min-w-56 flex-1 flex-col">
+      <label class="relative flex min-w-56 flex-1 flex-col">
         <p class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
           Miejsce docelowe
         </p>
         <input
           v-model="localForm.destination"
+          ref="destinationInputRef"
           class="h-12 w-full rounded-lg border border-gray-300 bg-white px-4 text-sm text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
           placeholder="Miasto lub region (np. Paryż)"
+          @input="handleDestinationInput"
           @keyup.enter="handleSearchClick"
+          @focus="showSuggestions = true"
+          @blur="handleDestinationBlur"
         />
+        <!-- Lista sugestii -->
+        <div
+          v-if="showSuggestions && filteredSuggestions.length > 0"
+          class="absolute top-full z-50 mt-1 max-h-60 w-full overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800"
+        >
+          <button
+            v-for="(suggestion, index) in filteredSuggestions"
+            :key="index"
+            type="button"
+            class="w-full px-4 py-2 text-left text-sm text-gray-900 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-700"
+            @click="selectSuggestion(suggestion)"
+          >
+            {{ suggestion }}
+          </button>
+        </div>
       </label>
 
       <!-- Termin (bez napisu „pobytu”) -->
@@ -121,6 +140,22 @@ const localForm = ref<AccommodationsSearchForm>({ ...props.modelValue });
 const showTravelers = ref(false);
 const travelersButtonRef = ref<HTMLElement | null>(null);
 const travelersRef = ref<HTMLElement | null>(null);
+const destinationInputRef = ref<HTMLInputElement | null>(null);
+
+// Lista popularnych miast
+const popularCities = [
+  'Warszawa', 'Kraków', 'Gdańsk', 'Wrocław', 'Poznań', 'Łódź', 'Katowice', 'Lublin',
+  'Białystok', 'Szczecin', 'Bydgoszcz', 'Toruń', 'Zakopane', 'Sopot', 'Gdynia',
+  'Paryż', 'Londyn', 'Berlin', 'Rzym', 'Madryt', 'Barcelona', 'Amsterdam', 'Wiedeń',
+  'Praga', 'Budapeszt', 'Sztokholm', 'Kopenhaga', 'Oslo', 'Helsinki', 'Dublin',
+  'Lizbona', 'Ateny', 'Istanbul', 'Dubaj', 'Nowy Jork', 'Los Angeles', 'Chicago',
+  'Miami', 'Las Vegas', 'San Francisco', 'Boston', 'Seattle', 'Toronto', 'Vancouver',
+  'Sydney', 'Melbourne', 'Tokio', 'Seul', 'Singapur', 'Bangkok', 'Hongkong',
+  'Bombaj', 'Delhi', 'Kair', 'Kapsztad', 'Rio de Janeiro', 'São Paulo', 'Buenos Aires'
+];
+
+const showSuggestions = ref(false);
+const filteredSuggestions = ref<string[]>([]);
 
 const { setActivePanel, isActive, closePanel } = useActivePanel();
 
@@ -182,8 +217,59 @@ const handleClickOutside = (event: MouseEvent) => {
   }
 };
 
+/**
+ * Normalizuje polskie znaki diakrytyczne do ich odpowiedników bez znaków
+ * np. "Kraków" -> "krakow", "Łódź" -> "lodz"
+ */
+const normalizePolishChars = (text: string): string => {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Usuwa znaki diakrytyczne
+    .replace(/ą/g, 'a')
+    .replace(/ć/g, 'c')
+    .replace(/ę/g, 'e')
+    .replace(/ł/g, 'l')
+    .replace(/ń/g, 'n')
+    .replace(/ó/g, 'o')
+    .replace(/ś/g, 's')
+    .replace(/ź/g, 'z')
+    .replace(/ż/g, 'z');
+};
+
+const handleDestinationInput = () => {
+  const query = localForm.value.destination.trim();
+  if (query.length > 0) {
+    const normalizedQuery = normalizePolishChars(query);
+    filteredSuggestions.value = popularCities
+      .filter(city => {
+        const normalizedCity = normalizePolishChars(city);
+        return normalizedCity.includes(normalizedQuery);
+      })
+      .slice(0, 8); // Maksymalnie 8 sugestii
+    showSuggestions.value = true;
+  } else {
+    filteredSuggestions.value = [];
+    showSuggestions.value = false;
+  }
+};
+
+const selectSuggestion = (suggestion: string) => {
+  localForm.value.destination = suggestion;
+  showSuggestions.value = false;
+  destinationInputRef.value?.blur();
+};
+
+const handleDestinationBlur = () => {
+  // Opóźnienie, aby umożliwić kliknięcie w sugestię
+  setTimeout(() => {
+    showSuggestions.value = false;
+  }, 200);
+};
+
 const handleSearchClick = () => {
   if (!isSearchFormValid.value || props.loading) return;
+  showSuggestions.value = false;
   emit('search');
 };
 

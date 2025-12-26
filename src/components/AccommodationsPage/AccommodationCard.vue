@@ -15,20 +15,8 @@
           referrerpolicy="no-referrer-when-downgrade"
         />
 
-        <!-- Overlay: ulubione + liczba zdjęć -->
-        <div class="pointer-events-none absolute inset-x-0 top-0 flex justify-between p-3">
-          <button
-            class="pointer-events-auto inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/80 text-gray-700 shadow-sm backdrop-blur hover:bg-white dark:bg-gray-900/70 dark:text-gray-100"
-            type="button"
-            @click="toggleFavorite"
-          >
-            <component
-              :is="favorite ? HeartSolidIcon : HeartOutlineIcon"
-              class="h-5 w-5"
-              :class="favorite ? 'text-red-500' : 'text-gray-400'"
-            />
-          </button>
-
+        <!-- Overlay: liczba zdjęć -->
+        <div class="pointer-events-none absolute inset-x-0 top-0 flex justify-end p-3">
           <div
             v-if="photosCount && photosCount > 1"
             class="inline-flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-xs text-white backdrop-blur"
@@ -63,9 +51,9 @@
         <!-- Lokalizacja -->
         <section class="mt-1 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
           <MapPinIcon class="h-4 w-4 text-gray-400 dark:text-gray-500" />
-          <p class="line-clamp-1">
-            {{ accommodation.address || accommodation.location }}
-          </p>
+            <p class="line-clamp-1">
+              {{ accommodation.address || accommodation.location }}
+            </p>
         </section>
 
         <!-- Ocena -->
@@ -114,21 +102,21 @@
         <!-- Udogodnienia -->
         <section class="mt-1">
           <div class="flex flex-wrap gap-2 text-xs">
-            <div
+          <div
               v-for="item in displayedAmenityChips"
-              :key="item.key"
-              class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-1 text-gray-700 dark:bg-gray-700 dark:text-gray-200"
-            >
-              <component :is="item.icon" class="h-3.5 w-3.5 text-gray-400" />
-              <span>{{ item.label }}</span>
-            </div>
+            :key="item.key"
+            class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-1 text-gray-700 dark:bg-gray-700 dark:text-gray-200"
+          >
+            <component :is="item.icon" class="h-3.5 w-3.5 text-gray-400" />
+            <span>{{ item.label }}</span>
+          </div>
 
             <button
-              v-if="remainingAmenitiesCount > 0"
+            v-if="remainingAmenitiesCount > 0"
               type="button"
               class="inline-flex cursor-pointer items-center rounded-full bg-gray-50 px-2.5 py-1 text-gray-500 transition hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
               @click="toggleAmenitiesExpanded"
-            >
+          >
               <span v-if="!amenitiesExpanded">+{{ remainingAmenitiesCount }} więcej</span>
               <span v-else>Pokaż mniej</span>
             </button>
@@ -167,9 +155,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { computed, ref } from 'vue';
 import {
-  HeartIcon as HeartSolidIcon,
   PhotoIcon,
   MapPinIcon,
   StarIcon,
@@ -203,7 +190,6 @@ import {
   WrenchIcon,
   DevicePhoneMobileIcon,
 } from '@heroicons/vue/24/solid';
-import { HeartIcon as HeartOutlineIcon } from '@heroicons/vue/24/outline';
 import type { Accommodation } from '@/composables/useAccommodations';
 
 interface Props {
@@ -216,7 +202,6 @@ interface Props {
   noHiddenFees?: boolean;
   priceNote?: string;
   availabilityNote?: string;
-  isFavorite?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -228,7 +213,6 @@ const props = withDefaults(defineProps<Props>(), {
   noHiddenFees: false,
   priceNote: 'Możliwe dodatkowe opłaty serwisowe.',
   availabilityNote: '',
-  isFavorite: false,
 });
 
 const {
@@ -241,13 +225,7 @@ const {
   noHiddenFees,
   priceNote,
   availabilityNote,
-  isFavorite,
 } = props;
-
-const emit = defineEmits<{
-  (e: 'toggle-favorite'): void;
-  (e: 'update:isFavorite', value: boolean): void;
-}>();
 
 const typeClassMap: Record<string, string> = {
   hotel: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
@@ -427,22 +405,6 @@ const handleImageError = (event: Event) => {
   if (img.src !== DEFAULT_HOTEL_IMAGE && !img.src.includes('deafult-hotel.png')) {
     img.src = DEFAULT_HOTEL_IMAGE;
   }
-};
-
-const favorite = ref<boolean>(isFavorite);
-
-watch(
-  () => isFavorite,
-  value => {
-    favorite.value = value;
-  }
-);
-
-const toggleFavorite = (event: MouseEvent) => {
-  event.stopPropagation();
-  favorite.value = !favorite.value;
-  emit('update:isFavorite', favorite.value);
-  emit('toggle-favorite');
 };
 
 const handleViewDetails = () => {

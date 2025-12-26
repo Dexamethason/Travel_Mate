@@ -48,7 +48,11 @@
       <!-- Wyniki -->
       <div v-else class="mt-8 flex gap-8">
         <!-- Filtry -->
-        <AccommodationsFilters v-model="filters" @reset="resetFilters" />
+        <AccommodationsFilters 
+          v-model="filters" 
+          :available-amenities="availableAmenities"
+          @reset="resetFilters" 
+        />
 
         <!-- Lista wyników -->
         <div class="flex-1">
@@ -144,6 +148,21 @@ const filters = ref<AccommodationFilters>({ ...defaultFilters });
 const resetFilters = () => {
   filters.value = { ...defaultFilters };
 };
+
+// Zbierz wszystkie unikalne amenities z wyników wyszukiwania
+const availableAmenities = computed(() => {
+  const amenitiesSet = new Set<string>();
+  accommodations.value.forEach(accommodation => {
+    if (accommodation.amenities && Array.isArray(accommodation.amenities)) {
+      accommodation.amenities.forEach(amenity => {
+        if (amenity && typeof amenity === 'string' && amenity.trim() !== '') {
+          amenitiesSet.add(amenity);
+        }
+      });
+    }
+  });
+  return Array.from(amenitiesSet).sort();
+});
 
 const sortBy = ref('price-asc');
 

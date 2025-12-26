@@ -7,7 +7,7 @@
           class="cursor-pointer text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
           @click="resetFilters"
         >
-          Resetuj
+          Resetuj wszystko
         </button>
       </div>
 
@@ -75,7 +75,16 @@
 
       <!-- typ noclegu -->
       <div class="mb-6">
-        <p class="mb-4 text-base font-medium text-gray-900 dark:text-white">Typ noclegu</p>
+        <div class="mb-4 flex items-center justify-between">
+          <p class="text-base font-medium text-gray-900 dark:text-white">Typ noclegu</p>
+          <button
+            type="button"
+            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            @click="resetField('type')"
+          >
+            Resetuj
+          </button>
+        </div>
         <select
           :value="modelValue.type"
           class="w-full cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400"
@@ -92,29 +101,46 @@
 
       <!-- filtr ocen -->
       <div class="mb-6">
-        <p class="mb-4 text-base font-medium text-gray-900 dark:text-white">
-          Minimalna ocena gości
-        </p>
+        <div class="mb-4 flex items-center justify-between">
+          <p class="text-base font-medium text-gray-900 dark:text-white">
+            Minimalna ocena gości
+          </p>
+          <button
+            type="button"
+            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            @click="resetField('minRating')"
+          >
+            Resetuj
+          </button>
+        </div>
         <select
           :value="modelValue.minRating"
           class="w-full cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400"
           @change="handleSelectNumberChange('minRating', $event)"
         >
           <option :value="0">Wszystkie</option>
+          <option :value="1">1.0+</option>
+          <option :value="2">2.0+</option>
+          <option :value="3">3.0+</option>
           <option :value="4">4.0+</option>
           <option :value="5">5.0+</option>
-          <option :value="6">6.0+</option>
-          <option :value="7">7.0+</option>
-          <option :value="8">8.0+</option>
-          <option :value="9">9.0+</option>
         </select>
       </div>
 
       <!-- filtr gwiazdek -->
       <div class="mb-6">
-        <p class="mb-4 text-base font-medium text-gray-900 dark:text-white">
-          Kategoria (gwiazdki)
-        </p>
+        <div class="mb-4 flex items-center justify-between">
+          <p class="text-base font-medium text-gray-900 dark:text-white">
+            Kategoria (gwiazdki)
+          </p>
+          <button
+            type="button"
+            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            @click="resetField('stars')"
+          >
+            Resetuj
+          </button>
+        </div>
         <select
           :value="modelValue.stars"
           class="w-full cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400"
@@ -130,267 +156,67 @@
       </div>
 
       <!-- udogodnienia podstawowe -->
-      <div class="mb-6">
-        <p class="mb-4 text-base font-medium text-gray-900 dark:text-white">Udogodnienia</p>
+      <div v-if="basicAvailableAmenities.length > 0" class="mb-6">
+        <div class="mb-4 flex items-center justify-between">
+          <p class="text-base font-medium text-gray-900 dark:text-white">Udogodnienia</p>
+          <button
+            type="button"
+            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            @click="resetAmenities"
+          >
+            Resetuj
+          </button>
+        </div>
         <div class="space-y-2">
-          <label class="flex cursor-pointer items-center">
+          <label
+            v-for="amenity in basicAvailableAmenities"
+            :key="amenity"
+            class="flex cursor-pointer items-center"
+          >
             <input
               type="checkbox"
               class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('wifi')"
-              value="wifi"
-              @change="toggleAmenity('wifi')"
+              :checked="modelValue.amenities.includes(amenity)"
+              :value="amenity"
+              @change="toggleAmenity(amenity)"
             />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Wi-Fi</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('parking')"
-              value="parking"
-              @change="toggleAmenity('parking')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Parking</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('pool')"
-              value="pool"
-              @change="toggleAmenity('pool')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Basen</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('breakfast')"
-              value="breakfast"
-              @change="toggleAmenity('breakfast')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Śniadanie</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('airconditioning')"
-              value="airconditioning"
-              @change="toggleAmenity('airconditioning')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Klimatyzacja</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('balcony')"
-              value="balcony"
-              @change="toggleAmenity('balcony')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Balkon/Taras</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('kitchen')"
-              value="kitchen"
-              @change="toggleAmenity('kitchen')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Kuchnia</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('pets')"
-              value="pets"
-              @change="toggleAmenity('pets')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Przyjazne zwierzętom</span>
+            <span class="ml-2 text-gray-700 dark:text-gray-300">
+              {{ amenityLabelMap[amenity] || amenity }}
+            </span>
           </label>
         </div>
       </div>
 
       <!-- dodatkowe udogodnienia -->
-      <div class="mb-6">
-        <p class="mb-4 text-base font-medium text-gray-900 dark:text-white">
-          Dodatkowe udogodnienia
-        </p>
+      <div v-if="additionalAvailableAmenities.length > 0" class="mb-6">
+        <div class="mb-4 flex items-center justify-between">
+          <p class="text-base font-medium text-gray-900 dark:text-white">
+            Dodatkowe udogodnienia
+          </p>
+          <button
+            type="button"
+            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            @click="resetAmenities"
+          >
+            Resetuj
+          </button>
+        </div>
         <div class="space-y-2">
-          <label class="flex cursor-pointer items-center">
+          <label
+            v-for="amenity in additionalAvailableAmenities"
+            :key="amenity"
+            class="flex cursor-pointer items-center"
+          >
             <input
               type="checkbox"
               class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('accessible')"
-              value="accessible"
-              @change="toggleAmenity('accessible')"
+              :checked="modelValue.amenities.includes(amenity)"
+              :value="amenity"
+              @change="toggleAmenity(amenity)"
             />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Dostępne dla niepełnosprawnych</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('airporttransfer')"
-              value="airporttransfer"
-              @change="toggleAmenity('airporttransfer')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Transfer z lotniska</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('bar')"
-              value="bar"
-              @change="toggleAmenity('bar')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Bar</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('businesscenter')"
-              value="businesscenter"
-              @change="toggleAmenity('businesscenter')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Centrum biznesowe</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('cabletv')"
-              value="cabletv"
-              @change="toggleAmenity('cabletv')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Telewizja kablowa</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('garden')"
-              value="garden"
-              @change="toggleAmenity('garden')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Ogród</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('gym')"
-              value="gym"
-              @change="toggleAmenity('gym')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Siłownia</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('heating')"
-              value="heating"
-              @change="toggleAmenity('heating')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Ogrzewanie</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('ironing')"
-              value="ironing"
-              @change="toggleAmenity('ironing')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Deska do prasowania</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('kidfriendly')"
-              value="kidfriendly"
-              @change="toggleAmenity('kidfriendly')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Przyjazne dzieciom</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('laundry')"
-              value="laundry"
-              @change="toggleAmenity('laundry')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Pralnia</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('lounge')"
-              value="lounge"
-              @change="toggleAmenity('lounge')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Salon</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('reception24h')"
-              value="reception24h"
-              @change="toggleAmenity('reception24h')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Recepcja 24h</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('restaurant')"
-              value="restaurant"
-              @change="toggleAmenity('restaurant')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Restauracja</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('roomservice')"
-              value="roomservice"
-              @change="toggleAmenity('roomservice')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Usługa pokojowa</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('smokefree')"
-              value="smokefree"
-              @change="toggleAmenity('smokefree')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">Dla niepalących</span>
-          </label>
-          <label class="flex cursor-pointer items-center">
-            <input
-              type="checkbox"
-              class="cursor-pointer rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              :checked="modelValue.amenities.includes('spa')"
-              value="spa"
-              @change="toggleAmenity('spa')"
-            />
-            <span class="ml-2 text-gray-700 dark:text-gray-300">SPA</span>
+            <span class="ml-2 text-gray-700 dark:text-gray-300">
+              {{ amenityLabelMap[amenity] || amenity }}
+            </span>
           </label>
         </div>
       </div>
@@ -400,13 +226,61 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import type { AccommodationFilters } from '@/composables/useAccommodations';
 
 interface Props {
   modelValue: AccommodationFilters;
+  availableAmenities?: string[];
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  availableAmenities: () => [],
+});
+
+// Mapowanie nazw amenities na polskie etykiety
+const amenityLabelMap: Record<string, string> = {
+  wifi: 'Wi-Fi',
+  parking: 'Parking',
+  pool: 'Basen',
+  breakfast: 'Śniadanie',
+  spa: 'SPA',
+  gym: 'Siłownia',
+  kitchen: 'Kuchnia',
+  balcony: 'Balkon',
+  lounge: 'Salon',
+  garden: 'Ogród',
+  pets: 'Zwierzęta',
+  airconditioning: 'Klimatyzacja',
+  restaurant: 'Restauracja',
+  reception24h: 'Recepcja 24h',
+  airporttransfer: 'Transfer z lotniska',
+  laundry: 'Pralnia',
+  accessible: 'Dostępne dla niepełnosprawnych',
+  kidfriendly: 'Przyjazne dzieciom',
+  smokefree: 'Dla niepalących',
+  bar: 'Bar',
+  roomservice: 'Usługa pokojowa',
+  businesscenter: 'Centrum biznesowe',
+  heating: 'Ogrzewanie',
+  ironing: 'Deska do prasowania',
+  cabletv: 'Telewizja kablowa',
+};
+
+// Podział na podstawowe i dodatkowe amenities
+const basicAmenities = ['wifi', 'parking', 'pool', 'breakfast', 'airconditioning', 'kitchen', 'balcony', 'pets'];
+const isBasicAmenity = (amenity: string) => basicAmenities.includes(amenity);
+
+// Filtruj dostępne amenities na podstawowe i dodatkowe
+const basicAvailableAmenities = computed(() => {
+  const available = props.availableAmenities || [];
+  return available.filter(amenity => isBasicAmenity(amenity)).sort();
+});
+
+const additionalAvailableAmenities = computed(() => {
+  const available = props.availableAmenities || [];
+  return available.filter(amenity => !isBasicAmenity(amenity)).sort();
+});
 
 const emit = defineEmits<{
   (e: 'update:modelValue', value: AccommodationFilters): void;
@@ -477,6 +351,40 @@ const handleSelectNumberChange = (field: keyof AccommodationFilters, event: Even
 
 const resetFilters = () => {
   emit('reset');
+};
+
+const resetField = (field: keyof AccommodationFilters) => {
+  const defaultValue = getDefaultValue(field);
+  if (field === 'amenities') {
+    emit('update:modelValue', { ...props.modelValue, amenities: [] });
+  } else {
+    updateField(field, defaultValue as string | number | boolean);
+  }
+};
+
+const resetAmenities = () => {
+  emit('update:modelValue', { ...props.modelValue, amenities: [] });
+};
+
+const getDefaultValue = (field: keyof AccommodationFilters): string | number | boolean => {
+  const defaults: Partial<Record<keyof AccommodationFilters, string | number | boolean>> = {
+    priceMin: 0,
+    priceMax: 2000,
+    type: '',
+    minRating: 0,
+    stars: 0,
+    freeCancellation: false,
+    breakfastIncluded: false,
+    petFriendly: false,
+    airConditioning: false,
+    balcony: false,
+    fitnessCenter: false,
+    spa: false,
+    restaurant: false,
+    reception24h: false,
+    airportTransfer: false,
+  };
+  return defaults[field] ?? '';
 };
 </script>
 
