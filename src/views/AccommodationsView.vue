@@ -66,8 +66,6 @@
               <option value="rating-asc">Ocena: od najniższej</option>
               <option value="popularity-desc">Popularność: najpopularniejsze</option>
               <option value="popularity-asc">Popularność: najmniej popularne</option>
-              <option value="distance-asc">Odległość: najbliżej centrum</option>
-              <option value="distance-desc">Odległość: najdalej od centrum</option>
             </select>
           </div>
 
@@ -129,7 +127,6 @@ const defaultFilters: AccommodationFilters = {
   minRating: 0,
   amenities: [] as string[],
   stars: 0,
-  maxDistance: 0,
   freeCancellation: false,
   breakfastIncluded: false,
   petFriendly: false,
@@ -156,9 +153,9 @@ const filteredAccommodations = computed<Accommodation[]>(() => {
       (!filters.value.priceMin || accommodation.price >= filters.value.priceMin) &&
       (!filters.value.priceMax || accommodation.price <= filters.value.priceMax);
 
-    const typeMatch = !filters.value.type || accommodation.type === filters.value.type;
+    const typeMatch = !filters.value.type || accommodation.type.toLowerCase() === filters.value.type.toLowerCase();
 
-    const ratingMatch = accommodation.rating >= filters.value.minRating;
+    const ratingMatch = (accommodation.rating || 0) >= filters.value.minRating;
 
     const amenitiesMatch =
       filters.value.amenities.length === 0 ||
@@ -169,11 +166,6 @@ const filteredAccommodations = computed<Accommodation[]>(() => {
     const starsMatch =
       !filters.value.stars ||
       (accommodation.stars !== undefined && accommodation.stars >= filters.value.stars);
-
-    const distanceMatch =
-      !filters.value.maxDistance ||
-      (accommodation.distanceValue !== undefined &&
-        accommodation.distanceValue <= filters.value.maxDistance);
 
     const freeCancellationMatch =
       !filters.value.freeCancellation || accommodation.freeCancellation === true;
@@ -205,7 +197,6 @@ const filteredAccommodations = computed<Accommodation[]>(() => {
       ratingMatch &&
       amenitiesMatch &&
       starsMatch &&
-      distanceMatch &&
       freeCancellationMatch &&
       breakfastMatch &&
       petFriendlyMatch &&

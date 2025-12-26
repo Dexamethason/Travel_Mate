@@ -4,11 +4,15 @@
   >
     <div class="flex flex-col gap-4 md:flex-row md:gap-6">
       <!-- LEWA KOLUMNA – ZDJĘCIE -->
-      <div class="relative w-full overflow-hidden md:w-1/3">
+      <div class="relative w-full overflow-hidden md:w-1/3 md:flex-shrink-0">
         <img
-          :src="accommodation.image"
+          :src="imageUrl"
           :alt="accommodation.name"
-          class="h-52 w-full rounded-t-2xl object-cover md:h-full md:rounded-l-2xl md:rounded-tr-none"
+          class="h-52 w-full rounded-t-2xl object-cover md:h-[280px] md:w-full md:object-cover md:rounded-l-2xl md:rounded-tr-none"
+          style="min-height: 280px; max-height: 280px;"
+          @error="handleImageError"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
         />
 
         <!-- Overlay: ulubione + liczba zdjęć -->
@@ -59,20 +63,12 @@
         <!-- Lokalizacja -->
         <section class="mt-1 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
           <MapPinIcon class="h-4 w-4 text-gray-400 dark:text-gray-500" />
-          <div class="space-y-0.5">
-            <p class="line-clamp-1">
-              {{ accommodation.address || accommodation.location }}
-            </p>
-            <p class="line-clamp-1">
-              Odległość od centrum:
-              <span class="font-medium text-gray-700 dark:text-gray-200">
-                {{ accommodation.distance || 'nieznana' }}
-              </span>
-            </p>
-          </div>
+          <p class="line-clamp-1">
+            {{ accommodation.address || accommodation.location }}
+          </p>
         </section>
 
-        <!-- Ocena + tagi -->
+        <!-- Ocena -->
         <section class="flex flex-wrap items-center gap-3 text-xs">
           <div class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-green-700 dark:bg-green-900/30 dark:text-green-200">
             <StarIcon class="h-4 w-4 text-yellow-400" />
@@ -81,17 +77,6 @@
             </span>
             <span class="text-[11px] text-gray-500 dark:text-gray-300">
               ({{ accommodation.reviews }} opinii)
-            </span>
-          </div>
-
-          <div class="flex flex-wrap gap-1">
-            <span
-              v-for="tag in reviewTags"
-              :key="tag"
-              class="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-[11px] text-gray-600 dark:bg-gray-700 dark:text-gray-300"
-            >
-              <SparklesIcon class="mr-1 h-3 w-3 text-gray-400" />
-              {{ tag }}
             </span>
           </div>
         </section>
@@ -127,22 +112,27 @@
         </section>
 
         <!-- Udogodnienia -->
-        <section class="mt-1 flex flex-wrap gap-2 text-xs">
-          <div
-            v-for="item in visibleAmenityChips"
-            :key="item.key"
-            class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-1 text-gray-700 dark:bg-gray-700 dark:text-gray-200"
-          >
-            <component :is="item.icon" class="h-3.5 w-3.5 text-gray-400" />
-            <span>{{ item.label }}</span>
-          </div>
+        <section class="mt-1">
+          <div class="flex flex-wrap gap-2 text-xs">
+            <div
+              v-for="item in displayedAmenityChips"
+              :key="item.key"
+              class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-1 text-gray-700 dark:bg-gray-700 dark:text-gray-200"
+            >
+              <component :is="item.icon" class="h-3.5 w-3.5 text-gray-400" />
+              <span>{{ item.label }}</span>
+            </div>
 
-          <span
-            v-if="remainingAmenitiesCount > 0"
-            class="inline-flex items-center rounded-full bg-gray-50 px-2.5 py-1 text-gray-500 dark:bg-gray-800 dark:text-gray-300"
-          >
-            +{{ remainingAmenitiesCount }} więcej
-          </span>
+            <button
+              v-if="remainingAmenitiesCount > 0"
+              type="button"
+              class="inline-flex cursor-pointer items-center rounded-full bg-gray-50 px-2.5 py-1 text-gray-500 transition hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+              @click="toggleAmenitiesExpanded"
+            >
+              <span v-if="!amenitiesExpanded">+{{ remainingAmenitiesCount }} więcej</span>
+              <span v-else>Pokaż mniej</span>
+            </button>
+          </div>
         </section>
       </div>
 
@@ -192,6 +182,26 @@ import {
   WifiIcon,
   TruckIcon,
   SwatchIcon,
+  BeakerIcon,
+  FireIcon,
+  BuildingLibraryIcon,
+  HomeIcon,
+  SunIcon,
+  HeartIcon,
+  Cog6ToothIcon,
+  BuildingStorefrontIcon,
+  ClockIcon,
+  PaperAirplaneIcon,
+  BuildingOffice2Icon,
+  RectangleStackIcon,
+  UserCircleIcon,
+  UserGroupIcon,
+  XCircleIcon,
+  BeakerIcon as GlassIcon,
+  BellIcon,
+  BriefcaseIcon,
+  WrenchIcon,
+  DevicePhoneMobileIcon,
 } from '@heroicons/vue/24/solid';
 import { HeartIcon as HeartOutlineIcon } from '@heroicons/vue/24/outline';
 import type { Accommodation } from '@/composables/useAccommodations';
@@ -267,6 +277,20 @@ const amenityLabelMap: Record<string, string> = {
   lounge: 'Salon',
   garden: 'Ogród',
   pets: 'Zwierzęta',
+  airconditioning: 'Klimatyzacja',
+  restaurant: 'Restauracja',
+  reception24h: 'Recepcja 24h',
+  airporttransfer: 'Transfer z lotniska',
+  laundry: 'Pralnia',
+  accessible: 'Dostępne dla niepełnosprawnych',
+  kidfriendly: 'Przyjazne dzieciom',
+  smokefree: 'Dla niepalących',
+  bar: 'Bar',
+  roomservice: 'Usługa pokojowa',
+  businesscenter: 'Centrum biznesowe',
+  heating: 'Ogrzewanie',
+  ironing: 'Deska do prasowania',
+  cabletv: 'Telewizja kablowa',
 };
 
 const typeClass = computed(
@@ -279,24 +303,53 @@ const typeLabel = computed(
   () => typeLabelMap[accommodation.type] || accommodation.type
 );
 
-// Proste tagi z recenzji – można rozwinąć później na podstawie realnych danych
-const reviewTags = computed(() => ['Czystość', 'Lokalizacja', 'Wygoda']);
-
-// Udogodnienia z ikonami
+// Udogodnienia z ikonami - każdy amenity ma unikalną ikonę
 const amenityIconMap: Record<string, any> = {
   wifi: WifiIcon,
   parking: TruckIcon,
-  pool: SwatchIcon,
-  garden: SwatchIcon,
-  balcony: SwatchIcon,
+  pool: BeakerIcon, // Basen - ikona wody/beaker
+  breakfast: FireIcon, // Śniadanie - ikona ognia (kuchnia)
+  spa: SparklesIcon, // SPA - ikona iskier
+  gym: BoltIcon, // Siłownia - ikona błyskawicy (energia)
+  kitchen: HomeIcon, // Kuchnia - ikona domu
+  balcony: SunIcon, // Balkon - ikona słońca
+  lounge: BuildingLibraryIcon, // Salon - ikona biblioteki
+  garden: SwatchIcon, // Ogród - ikona palety kolorów
+  pets: HeartIcon, // Zwierzęta - ikona serca
+  airconditioning: Cog6ToothIcon, // Klimatyzacja - ikona koła zębatego
+  restaurant: BuildingStorefrontIcon || BuildingOffice2Icon, // Restauracja - ikona sklepu/budynku
+  reception24h: ClockIcon, // Recepcja 24h - ikona zegara
+  airporttransfer: PaperAirplaneIcon, // Transfer z lotniska - ikona samolotu
+  laundry: RectangleStackIcon, // Pralnia - ikona stosu (ubrań)
+  accessible: UserCircleIcon, // Dostępne dla niepełnosprawnych - ikona użytkownika
+  kidfriendly: UserGroupIcon, // Przyjazne dzieciom - ikona grupy użytkowników
+  smokefree: XCircleIcon, // Dla niepalących - ikona zakazu
+  bar: GlassIcon, // Bar - ikona szkła
+  roomservice: BellIcon, // Usługa pokojowa - ikona dzwonka
+  businesscenter: BriefcaseIcon, // Centrum biznesowe - ikona teczki
+  heating: FireIcon, // Ogrzewanie - ikona ognia
+  ironing: WrenchIcon, // Deska do prasowania - ikona narzędzia
+  cabletv: DevicePhoneMobileIcon, // Telewizja kablowa - ikona urządzenia
 };
 
-const visibleAmenities = computed(() => accommodation.amenities.slice(0, 6));
+const amenitiesExpanded = ref(false);
+
+const visibleAmenities = computed(() => {
+  if (amenitiesExpanded.value) {
+    return accommodation.amenities;
+  }
+  return accommodation.amenities.slice(0, 6);
+});
+
 const remainingAmenitiesCount = computed(
-  () => accommodation.amenities.length - visibleAmenities.value.length
+  () => accommodation.amenities.length - 6
 );
 
-const visibleAmenityChips = computed(() => {
+const toggleAmenitiesExpanded = () => {
+  amenitiesExpanded.value = !amenitiesExpanded.value;
+};
+
+const displayedAmenityChips = computed(() => {
   const chips: Array<{ key: string; label: string; icon: any }> = [];
 
   if (maxGuests) {
@@ -329,8 +382,52 @@ const visibleAmenityChips = computed(() => {
     });
   });
 
-  return chips.slice(0, 8);
+  return chips;
 });
+
+// Domyślne zdjęcie hotelu - fallback gdy brak zdjęcia
+const DEFAULT_HOTEL_IMAGE = '/deafult-hotel.png';
+
+/**
+ * Waliduje czy URL zdjęcia jest poprawny
+ */
+const isValidImageUrl = (url: string): boolean => {
+  if (!url || typeof url !== 'string') return false;
+  
+  const trimmed = url.trim();
+  if (trimmed === '' || trimmed === 'undefined' || trimmed === 'null') return false;
+  
+  // Lokalne ścieżki (zaczynające się od /) są poprawne
+  if (trimmed.startsWith('/')) return true;
+  
+  // Sprawdź czy to poprawny URL
+  try {
+    const urlObj = new URL(trimmed);
+    // Sprawdź czy to HTTP/HTTPS
+    if (!['http:', 'https:'].includes(urlObj.protocol)) return false;
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+// Computed dla URL zdjęcia z fallbackiem
+const imageUrl = computed(() => {
+  const img = accommodation.image;
+  if (!isValidImageUrl(img)) {
+    return DEFAULT_HOTEL_IMAGE;
+  }
+  return img;
+});
+
+// Obsługa błędu ładowania zdjęcia - automatycznie używa domyślnego
+const handleImageError = (event: Event) => {
+  const img = event.target as HTMLImageElement;
+  // Jeśli zdjęcie nie załadowało się i to nie jest już domyślne, użyj domyślnego
+  if (img.src !== DEFAULT_HOTEL_IMAGE && !img.src.includes('deafult-hotel.png')) {
+    img.src = DEFAULT_HOTEL_IMAGE;
+  }
+};
 
 const favorite = ref<boolean>(isFavorite);
 

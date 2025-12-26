@@ -15,7 +15,6 @@ export interface AccommodationSearchParams {
   minRating?: number;
   amenities?: string[];
   stars?: number; // Liczba gwiazdek (1-5)
-  maxDistance?: number; // Maksymalna odległość od centrum w km
   freeCancellation?: boolean;
   breakfastIncluded?: boolean;
   petFriendly?: boolean;
@@ -35,7 +34,6 @@ export interface AccommodationFilters {
   minRating: number;
   amenities: string[];
   stars: number;
-  maxDistance: number;
   freeCancellation: boolean;
   breakfastIncluded: boolean;
   petFriendly: boolean;
@@ -77,6 +75,262 @@ export interface Accommodation {
   reception24h?: boolean;
   airportTransfer?: boolean;
 }
+
+/**
+ * Normalizuje amenities z API do formatu używanego w filtrach
+ * Mapuje różne warianty nazw na standardowe klucze
+ */
+const normalizeAmenities = (amenities: string[]): string[] => {
+  if (!amenities || !Array.isArray(amenities)) {
+    return [];
+  }
+
+  const normalized: string[] = [];
+  const normalizedSet = new Set<string>();
+
+  // Mapowanie różnych wariantów na standardowe klucze (angielskie i polskie)
+  const amenityMapping: Record<string, string> = {
+    // WiFi
+    'wifi': 'wifi',
+    'wi-fi': 'wifi',
+    'wi fi': 'wifi',
+    'free wifi': 'wifi',
+    'free wi-fi': 'wifi',
+    'wireless internet': 'wifi',
+    'internet': 'wifi',
+    'free wireless': 'wifi',
+    'wireless': 'wifi',
+    'bezpłatne wi-fi': 'wifi',
+    'bezpłatne wifi': 'wifi',
+    'darmowe wi-fi': 'wifi',
+    'darmowe wifi': 'wifi',
+    
+    // Parking
+    'parking': 'parking',
+    'free parking': 'parking',
+    'parking ($)': 'parking',
+    'parking($)': 'parking',
+    'car park': 'parking',
+    'parking available': 'parking',
+    'valet parking': 'parking',
+    'bezpłatny parking': 'parking',
+    'darmowy parking': 'parking',
+    'parking bezpłatny': 'parking',
+    
+    // Pool
+    'pool': 'pool',
+    'swimming pool': 'pool',
+    'outdoor pool': 'pool',
+    'indoor pool': 'pool',
+    'basen kryty': 'pool',
+    'basen': 'pool',
+    'basen odkryty': 'pool',
+    
+    // Breakfast
+    'breakfast': 'breakfast',
+    'free breakfast': 'breakfast',
+    'breakfast included': 'breakfast',
+    'breakfast ($)': 'breakfast',
+    'breakfast($)': 'breakfast',
+    'continental breakfast': 'breakfast',
+    'buffet breakfast': 'breakfast',
+    'śniadanie': 'breakfast',
+    'śniadanie wliczone': 'breakfast',
+    
+    // SPA
+    'spa': 'spa',
+    'spa services': 'spa',
+    'spa center': 'spa',
+    'wellness center': 'spa',
+    
+    // Gym/Fitness
+    'gym': 'gym',
+    'fitness center': 'gym',
+    'fitness': 'gym',
+    'fitness room': 'gym',
+    'workout room': 'gym',
+    'siłownia': 'gym',
+    'centrum fitness': 'gym',
+    
+    // Restaurant
+    'restaurant': 'restaurant',
+    'dining': 'restaurant',
+    'on-site restaurant': 'restaurant',
+    'restauracja': 'restaurant',
+    
+    // Kitchen
+    'kitchen': 'kitchen',
+    'kitchenette': 'kitchen',
+    'full kitchen': 'kitchen',
+    'kuchnia': 'kitchen',
+    'aneks kuchenny': 'kitchen',
+    'kuchenka mikrofalowa': 'kitchen',
+    'kuchenka z piekarnikiem': 'kitchen',
+    
+    // Balcony
+    'balcony': 'balcony',
+    'terrace': 'balcony',
+    'patio': 'balcony',
+    'taras': 'balcony',
+    'balkon': 'balcony',
+    
+    // Air Conditioning
+    'air conditioning': 'airconditioning',
+    'airconditioning': 'airconditioning',
+    'ac': 'airconditioning',
+    'climate control': 'airconditioning',
+    'klimatyzacja': 'airconditioning',
+    
+    // Pets
+    'pets': 'pets',
+    'pet friendly': 'pets',
+    'pet-friendly': 'pets',
+    'pets allowed': 'pets',
+    'petsallowed': 'pets',
+    'przyjazny zwierzętom': 'pets',
+    'zwierzęta dozwolone': 'pets',
+    
+    // Garden
+    'garden': 'garden',
+    'outdoor garden': 'garden',
+    'ogród': 'garden',
+    
+    // Lounge
+    'lounge': 'lounge',
+    'lobby': 'lounge',
+    'common area': 'lounge',
+    'salon': 'lounge',
+    
+    // 24h Reception
+    '24 hour reception': 'reception24h',
+    '24/7 reception': 'reception24h',
+    '24-hour front desk': 'reception24h',
+    'recepcja 24h': 'reception24h',
+    'recepcja 24/7': 'reception24h',
+    
+    // Airport Transfer
+    'airport transfer': 'airporttransfer',
+    'airport shuttle': 'airporttransfer',
+    'airport pickup': 'airporttransfer',
+    'transfer lotniskowy': 'airporttransfer',
+    'shuttle lotniskowy': 'airporttransfer',
+    
+    // Laundry
+    'laundry': 'laundry',
+    'full-service laundry': 'laundry',
+    'full service laundry': 'laundry',
+    'laundry service': 'laundry',
+    'pralnia': 'laundry',
+    'pralka': 'laundry',
+    'usługa pralni': 'laundry',
+    
+    // Accessible
+    'accessible': 'accessible',
+    'wheelchair accessible': 'accessible',
+    'disabled access': 'accessible',
+    'dostępne dla osób na wózkach': 'accessible',
+    'dla niepełnosprawnych': 'accessible',
+    'winda': 'accessible', // Elevator też może być związane z dostępnością
+    
+    // Kid-friendly
+    'kid-friendly': 'kidfriendly',
+    'kid friendly': 'kidfriendly',
+    'children friendly': 'kidfriendly',
+    'family friendly': 'kidfriendly',
+    'przyjazny dzieciom': 'kidfriendly',
+    'dla rodzin': 'kidfriendly',
+    'łóżeczko dziecięce': 'kidfriendly',
+    
+    // Smoke-free
+    'smoke-free property': 'smokefree',
+    'smoke free property': 'smokefree',
+    'non-smoking': 'smokefree',
+    'nonsmoking': 'smokefree',
+    'dla niepalących': 'smokefree',
+    'zakaz palenia': 'smokefree',
+    
+    // Bar
+    'bar': 'bar',
+    'cocktail bar': 'bar',
+    'bar/lounge': 'bar',
+    
+    // Room Service
+    'room service': 'roomservice',
+    'roomservice': 'roomservice',
+    'room-service': 'roomservice',
+    'usługa pokojowa': 'roomservice',
+    
+    // Business Center
+    'business center': 'businesscenter',
+    'businesscentre': 'businesscenter',
+    'business centre': 'businesscenter',
+    'centrum biznesowe': 'businesscenter',
+    
+    // Heating
+    'heating': 'heating',
+    'central heating': 'heating',
+    'ogrzewanie': 'heating',
+    
+    // Ironing
+    'ironing board': 'ironing',
+    'iron': 'ironing',
+    'deska do prasowania': 'ironing',
+    
+    // Cable TV
+    'cable tv': 'cabletv',
+    'cable television': 'cabletv',
+    'satellite tv': 'cabletv',
+    'telewizja kablowa': 'cabletv',
+    'tv': 'cabletv',
+  };
+
+  amenities.forEach(amenity => {
+    if (!amenity) return;
+    
+    const normalizedAmenity = amenity.toLowerCase().trim();
+    
+    // Sprawdź bezpośrednie dopasowanie
+    if (amenityMapping[normalizedAmenity]) {
+      const mapped = amenityMapping[normalizedAmenity];
+      if (!normalizedSet.has(mapped)) {
+        normalized.push(mapped);
+        normalizedSet.add(mapped);
+      }
+      return;
+    }
+    
+    // Sprawdź częściowe dopasowanie - czy amenity zawiera któryś z kluczy
+    for (const [key, value] of Object.entries(amenityMapping)) {
+      if (normalizedAmenity.includes(key) || key.includes(normalizedAmenity)) {
+        if (!normalizedSet.has(value)) {
+          normalized.push(value);
+          normalizedSet.add(value);
+        }
+        return;
+      }
+    }
+  });
+
+  return normalized;
+};
+
+
+/**
+ * Parsuje liczbę gwiazdek z hotel_class (np. "4-star hotel" -> 4)
+ * Jeśli hotel_class nie jest dostępne, zwraca undefined
+ */
+const parseStarsFromHotelClass = (hotelClass?: string): number | undefined => {
+  if (!hotelClass) return undefined;
+  
+  // hotel_class może być w formacie "4-star hotel" lub "4" lub "4 stars"
+  const match = hotelClass.match(/(\d+)/);
+  if (match && match[1]) {
+    const stars = parseInt(match[1], 10);
+    return stars >= 1 && stars <= 5 ? stars : undefined;
+  }
+  
+  return undefined;
+};
 
 export function useAccommodations() {
   const accommodations = ref<Accommodation[]>([]);
@@ -122,23 +376,35 @@ export function useAccommodations() {
       const results = data.data || [];
       
       // Mapowanie wyników z backendu na format frontendowy jeśli konieczne
-      accommodations.value = results.map((item: any) => ({
-        id: item.id,
-        name: item.name,
-        type: 'Hotel', // Domyślnie
-        location: item.location.address || item.name,
-        address: item.location.address,
-        price: item.price.amount,
-        rating: item.rating,
-        reviews: item.reviews,
-        image: item.imageUrl,
-        description: item.description,
-        amenities: item.amenities || [],
-        distance: '0 km', // Brak danych w SerpApi o odległości od centrum wprost
-        latitude: item.location.latitude,
-        longitude: item.location.longitude,
-        externalUrl: item.link
-      }));
+      accommodations.value = results.map((item: any) => {
+        // Parsowanie gwiazdek - jeśli backend nie zwraca hotel_class, próbujemy z innych źródeł
+        let stars: number | undefined = undefined;
+        if (item.hotel_class) {
+          stars = parseStarsFromHotelClass(item.hotel_class);
+        }
+        
+        // Sprawdź rating - upewnij się że jest liczbą
+        const rating = item.rating || item.overall_rating || 0;
+        
+        return {
+          id: item.id,
+          name: item.name,
+          type: 'hotel', // Wszystko jest hotelem
+          location: item.location.address || item.name,
+          address: item.location.address,
+          price: item.price.amount,
+          rating: typeof rating === 'number' ? rating : 0,
+          reviews: item.reviews || 0,
+          image: item.imageUrl || '', // Pusty string jeśli brak - fallback w komponencie
+          description: item.description,
+          amenities: normalizeAmenities(item.amenities || []), // Normalizacja amenities do formatu filtrów
+          distance: '0 km', // Brak danych w SerpApi o odległości od centrum wprost
+          latitude: item.location.latitude,
+          longitude: item.location.longitude,
+          externalUrl: item.link,
+          stars: stars
+        };
+      });
 
       return accommodations.value;
     } catch (err) {
