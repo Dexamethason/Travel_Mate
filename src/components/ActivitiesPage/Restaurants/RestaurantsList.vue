@@ -3,17 +3,17 @@
     <div class="flex-1 overflow-y-auto bg-gray-50 px-6">
       <div class="sticky top-0 z-10 bg-gray-50 pt-4">
         <div class="bg-white rounded-t-xl shadow-md border-x border-t border-gray-200 p-5">
-          <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center justify-between" :class="{ 'mb-4': showFilters }">
             <div class="flex items-baseline gap-1">
               <h2 class="text-3xl font-extrabold text-gray-900">Restauracje</h2>
               <span class="text-base font-medium text-gray-500">({{ restaurants.length }})</span>
             </div>
 
-            <div class="flex items-center gap-3">
-              <!-- Przycisk filtrów - dopasowany do sortowania -->
+            <div class="flex items-center gap-3 ml-6">
+              <!-- Przycisk filtrów -->
               <button
-                :class="[
-                  'px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 transition-all flex items-center gap-2 text-sm font-semibold shadow-sm',
+                :class=" [
+                  'px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 transition-all flex items-center gap-2 text-sm font-semibold shadow-sm cursor-pointer',
                   activeFiltersCount > 0
                     ? 'border-primary-500 text-primary-700 hover:border-primary-600'
                     : 'hover:border-primary-500 text-gray-700'
@@ -27,7 +27,7 @@
               <!-- Menu sortowania -->
               <div class="relative" ref="sortMenuRef">
                 <button
-                  class="px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 hover:border-primary-500 transition-all flex items-center gap-2 text-gray-700 text-sm font-semibold min-w-[200px] justify-between shadow-sm"
+                  class="px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 hover:border-primary-500 transition-all flex items-center gap-2 text-gray-700 text-sm font-semibold min-w-[180px] justify-between shadow-sm cursor-pointer"
                   @click="toggleSort"
                 >
                   <span>{{ getSortLabel(sortBy) }}</span>
@@ -44,7 +44,7 @@
                   <button
                     v-for="option in sortOptions"
                     :key="option.value"
-                    class="w-full px-4 py-2.5 text-left hover:bg-primary-50 transition-colors text-sm font-semibold"
+                    class="w-full px-4 py-2.5 text-left hover:bg-primary-50 transition-colors text-sm font-semibold cursor-pointer"
                     :class="{
                       'bg-primary-100 text-primary-700': sortBy === option.value,
                       'text-gray-700': sortBy !== option.value,
@@ -65,7 +65,7 @@
                 <label class="block text-sm font-bold text-gray-700 mb-2">Typ kuchni</label>
                 <select
                   :value="filters.cuisine"
-                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
                   @change="updateFilter('cuisine', ($event.target as HTMLSelectElement).value)"
                 >
                   <option value="">Wszystkie</option>
@@ -82,7 +82,7 @@
                 <label class="block text-sm font-bold text-gray-700 mb-2">Przedział cenowy</label>
                 <select
                   :value="filters.priceRange"
-                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
                   @change="updateFilter('priceRange', ($event.target as HTMLSelectElement).value)"
                 >
                   <option value="">Wszystkie</option>
@@ -97,7 +97,7 @@
                 <label class="block text-sm font-bold text-gray-700 mb-2">Ocena min.</label>
                 <select
                   :value="filters.minRating"
-                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
                   @change="updateFilter('minRating', ($event.target as HTMLSelectElement).value)"
                 >
                   <option value="">Wszystkie</option>
@@ -176,7 +176,7 @@ interface Props {
   activeFiltersCount: number;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>();
 
 const emit = defineEmits<{
   'update:filters': [filters: Partial<RestaurantFilters>];
