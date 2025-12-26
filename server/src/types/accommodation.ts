@@ -28,6 +28,7 @@ export interface Accommodation {
   imageUrl?: string;
   amenities?: string[];
   link?: string;
+  hotelClass?: number;
 }
 
 export interface SerpApiHotelResult {
@@ -65,6 +66,7 @@ export interface SerpApiHotelResult {
   amenities?: string[];
   link?: string;
   hotel_class?: string;
+  extracted_hotel_class?: number;
   check_in_time?: string;
   check_out_time?: string;
 }
