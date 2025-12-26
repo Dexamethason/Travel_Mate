@@ -58,7 +58,8 @@ const transformSerpApiData = (result: SerpApiHotelResult): Accommodation => {
     reviews: result.reviews,
     imageUrl: result.images?.[0]?.original_image || result.images?.[0]?.thumbnail || 'https://img.freepik.com/premium-vector/file-folder-mascot-character-design-vector_166742-4413.jpg?semt=ais_hybrid&w=740&q=80',
     amenities: result.amenities,
-    link: result.link
+    link: result.link,
+    hotelClass: result.extracted_hotel_class
   };
 };
 
