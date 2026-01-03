@@ -1,22 +1,21 @@
 <template>
   <div class="flex h-screen bg-gray-100">
     <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow-lg">
-      <!-- Logo/Nazwa aplikacji - klikalna -->
-      <router-link
-        to="/"
-        class="flex items-center gap-3 border-b p-6 transition-colors hover:bg-gray-50"
-      >
-        <div
-          class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-400"
-        >
-          <span class="text-xl font-bold text-white">✈️</span>
-        </div>
-        <span class="text-xl font-bold text-gray-800">Travel Mate</span>
-      </router-link>
+    <aside class="w-64 bg-white shadow-lg flex flex-col">
+      <!-- Logo w sidebarze -->
+      <div class="p-4 border-b">
+        <router-link to="/" class="flex items-center gap-3 transition-colors hover:opacity-80">
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-400"
+          >
+            <span class="text-xl font-bold text-white">✈️</span>
+          </div>
+          <span class="text-xl font-bold text-gray-800">Travel Mate</span>
+        </router-link>
+      </div>
 
       <!-- Nawigacja -->
-      <nav class="flex flex-col gap-2 p-4">
+      <nav class="flex flex-col gap-2 p-4 flex-1">
         <router-link
           v-for="item in navigationItems"
           :key="item.name"
@@ -68,8 +67,13 @@
 
         <!-- Przycisk wylogowania -->
         <button
-          @click="() => { logout(); router.push('/login'); }"
           class="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-colors hover:bg-red-50 hover:text-red-600"
+          @click="
+            () => {
+              logout();
+              router.push('/login');
+            }
+          "
         >
           <svg
             fill="currentColor"
@@ -135,7 +139,7 @@ const navigationItems = [
   },
   {
     name: 'activities',
-    label: 'Atrakcje',
+    label: 'Aktywności',
     path: '/activities',
     icon: 'M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm64,24V200H96V72ZM40,72H80V200H40ZM216,200H176V72h40V200Z',
   },
