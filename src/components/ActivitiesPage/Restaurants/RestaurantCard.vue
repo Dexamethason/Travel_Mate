@@ -8,7 +8,13 @@
       <div
         class="w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex-shrink-0 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-200"
       >
-        <PhotoIcon class="w-12 h-12 text-gray-400" />
+        <img
+          v-if="restaurant.photo || restaurant.photos?.[0]"
+          :src="restaurant.photo || restaurant.photos?.[0]"
+          :alt="restaurant.name"
+          class="w-full h-full object-cover"
+        />
+        <PhotoIcon v-else class="w-12 h-12 text-gray-400" />
       </div>
 
       <!-- Informacje -->
@@ -20,6 +26,7 @@
             {{ restaurant.name }}
           </h3>
           <span
+            v-if="restaurant.isOpen !== undefined"
             :class="[
               'px-3 py-1.5 text-xs font-semibold rounded-lg whitespace-nowrap flex-shrink-0',
               restaurant.isOpen
@@ -31,22 +38,32 @@
           </span>
         </div>
 
-        <div class="flex items-center gap-3 mb-3">
-          <div class="flex items-center bg-yellow-50 px-2 py-1 rounded-lg">
+        <div class="flex items-center gap-3 mb-3 flex-wrap">
+          <div v-if="restaurant.rating" class="flex items-center bg-yellow-50 px-2 py-1 rounded-lg">
             <StarIcon class="w-4 h-4 text-yellow-500" />
-            <span class="ml-1.5 text-sm font-bold text-gray-900">{{ restaurant.rating }}</span>
+            <span class="ml-1.5 text-sm font-bold text-gray-900">{{ restaurant.rating.toFixed(1) }}</span>
           </div>
-          <span class="text-sm text-gray-500"
-            >({{ restaurant.reviews.toLocaleString() }} opinii)</span
-          >
-          <span class="text-gray-300">•</span>
-          <span class="text-sm font-medium text-gray-700">{{ restaurant.cuisine }}</span>
+          <span v-if="restaurant.reviews" class="text-sm text-gray-500">
+            ({{ restaurant.reviews.toLocaleString() }} opinii)
+          </span>
+          <template v-if="restaurant.cuisine">
+            <span v-if="restaurant.rating || restaurant.reviews" class="text-gray-300">•</span>
+            <span class="text-sm font-medium text-gray-700">{{ restaurant.cuisine }}</span>
+          </template>
         </div>
 
-        <div class="flex items-center gap-3 text-sm text-gray-600">
-          <span class="font-semibold text-gray-900">{{ restaurant.priceRange }}</span>
-          <span class="text-gray-300">•</span>
-          <span>{{ restaurant.openingHours }}</span>
+        <div class="flex items-center gap-3 text-sm text-gray-600 flex-wrap">
+          <span v-if="restaurant.priceRange" class="font-semibold text-gray-900">
+            {{ restaurant.priceRange }}
+          </span>
+          <template v-if="restaurant.openingHours">
+            <span v-if="restaurant.priceRange" class="text-gray-300">•</span>
+            <span>{{ restaurant.openingHours }}</span>
+          </template>
+          <template v-if="restaurant.address">
+            <span class="text-gray-300">•</span>
+            <span class="text-xs text-gray-500 truncate">{{ restaurant.address }}</span>
+          </template>
         </div>
       </div>
     </div>
