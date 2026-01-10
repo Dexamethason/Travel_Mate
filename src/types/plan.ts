@@ -28,6 +28,7 @@ export interface TravelPlan {
 }
 
 export interface PlannerInput {
+  origin?: string;
   destination: string;
   start_date: string;
   end_date: string;

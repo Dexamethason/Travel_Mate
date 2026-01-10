@@ -19,7 +19,8 @@
     "firebase": "^12.4.0",
     "firebase-admin": "^13.5.0",
     "helmet": "^8.1.0",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "amadeus": "^11.0.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

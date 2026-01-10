@@ -212,6 +212,10 @@ WAŻNE:
 
   async deletePlan(planId: string, userId: string): Promise<void> {
     try {
+      if (!userId) {
+        throw new Error('userId jest wymagany');
+      }
+
       const docRef = doc(db, 'plans', planId);
       const docSnap = await getDoc(docRef);
 
@@ -220,6 +224,10 @@ WAŻNE:
       }
 
       const data = docSnap.data();
+      
+      if (!data || !data.userId) {
+        throw new Error('Plan nie ma przypisanego użytkownika');
+      }
       
       if (data.userId !== userId) {
         throw new Error('Brak dostępu do tego planu');
