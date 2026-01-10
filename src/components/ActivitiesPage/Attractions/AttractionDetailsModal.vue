@@ -39,9 +39,7 @@
           <span
             :class="[
               'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold shadow-lg',
-              attraction.status === 'Otwarte'
-                ? 'bg-green-500 text-white'
-                : 'bg-red-500 text-white',
+              attraction.status === 'Otwarte' ? 'bg-green-500 text-white' : 'bg-red-500 text-white',
             ]"
           >
             <span class="h-2 w-2 rounded-full bg-white"></span>
@@ -65,7 +63,7 @@
                 <span class="text-xl font-bold text-gray-900">{{ attraction.rating }}</span>
               </div>
               <span class="text-sm text-gray-500"
-                >({{ attraction.reviews.toLocaleString() }} opinii)</span
+                >({{ attraction.reviews?.toLocaleString() ?? 0 }} opinii)</span
               >
             </div>
           </div>
@@ -176,7 +174,10 @@
         </div>
 
         <!-- Sekcja opinii -->
-        <div v-if="attraction.detailedReviews && attraction.detailedReviews.length > 0" class="mb-8">
+        <div
+          v-if="attraction.detailedReviews && attraction.detailedReviews.length > 0"
+          class="mb-8"
+        >
           <h3 class="mb-4 text-xl font-bold text-gray-900">Opinie odwiedzających</h3>
           <div class="space-y-4">
             <div
