@@ -1,23 +1,67 @@
 <template>
-  <AttractionsList 
-    :attractions="sortedAttractions"
-    :filters="filters"
-    :sort-by="sortBy"
-    :active-filters-count="activeFiltersCount"
-    @update:filters="updateFilters"
-    @update:sort-by="updateSortBy"
-    @reset-filters="resetFilters"
-  />
+  <div class="flex flex-col h-full">
+    <div class="bg-white border-b border-gray-200 px-6 py-4">
+      <div class="max-w-2xl">
+        <h3 class="text-sm font-bold text-gray-700 mb-2">Wyszukaj atrakcje</h3>
+        <div class="flex gap-2">
+          <input
+            v-model="searchLocation"
+            type="text"
+            placeholder="np. Paryż, Kraków, Warszawa..."
+            class="flex-1 px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+            @keyup.enter="handleSearch"
+          />
+          <input
+            v-model="searchQuery"
+            type="text"
+            placeholder="Opcjonalnie: muzea, parki..."
+            class="flex-1 px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+            @keyup.enter="handleSearch"
+          />
+          <button
+            :disabled="!searchLocation || isSearching"
+            class="px-6 py-2.5 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all shadow-sm"
+            @click="handleSearch"
+          >
+            {{ isSearching ? 'Szukam...' : 'Szukaj' }}
+          </button>
+        </div>
+        <p v-if="searchError" class="text-sm text-red-600 mt-2">{{ searchError }}</p>
+        <p v-if="searchResults" class="text-sm text-gray-600 mt-2">
+          {{ searchResults }}
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-1 overflow-hidden">
+      <AttractionsList 
+        :attractions="sortedAttractions"
+        :filters="filters"
+        :sort-by="sortBy"
+        :active-filters-count="activeFiltersCount"
+        @update:filters="updateFilters"
+        @update:sort-by="updateSortBy"
+        @reset-filters="resetFilters"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import AttractionsList from './AttractionsList.vue';
 import { useAttractionFilters } from '@/composables/useAttractionFilters';
+import { useActivities } from '@/composables/useActivities';
 import type { Attraction } from '@/types/activitie';
 
-// Przykładowe dane atrakcji z rozszerzonymi informacjami
-const attractions = ref<Attraction[]>([
+const searchLocation = ref('');
+const searchQuery = ref('');
+const searchError = ref('');
+const searchResults = ref('');
+const isSearching = ref(false);
+const { searchAttractions: searchAttractionsApi } = useActivities();
+
+const defaultAttractions = ref<Attraction[]>([
   {
     id: 1,
     photo: '',
@@ -295,6 +339,43 @@ const attractions = ref<Attraction[]>([
     ],
   },
 ]);
+
+const apiAttractions = ref<Attraction[]>([]);
+
+const attractions = computed(() => {
+  return apiAttractions.value.length > 0 ? apiAttractions.value : defaultAttractions.value;
+});
+
+// search
+const handleSearch = async () => {
+  if (!searchLocation.value.trim()) {
+    searchError.value = 'Proszę podać lokalizację';
+    return;
+  }
+
+  isSearching.value = true;
+  searchError.value = '';
+  searchResults.value = '';
+
+  try {
+    const results = await searchAttractionsApi(
+      searchLocation.value.trim(),
+      searchQuery.value.trim() || undefined
+    );
+    
+    apiAttractions.value = results;
+    searchResults.value = `Znaleziono ${results.length} atrakcji w lokalizacji: ${searchLocation.value}`;
+    
+    if (results.length === 0) {
+      searchError.value = 'Nie znaleziono żadnych atrakcji. Spróbuj innej lokalizacji.';
+    }
+  } catch (error) {
+    searchError.value = error instanceof Error ? error.message : 'Wystąpił błąd podczas wyszukiwania';
+    apiAttractions.value = [];
+  } finally {
+    isSearching.value = false;
+  }
+};
 
 const { 
   filters, 
