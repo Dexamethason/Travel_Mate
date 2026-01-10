@@ -3,10 +3,10 @@ import type { Attraction, AttractionFilters } from '@/types/activitie';
 
 export function useAttractionFilters(attractions: Ref<Attraction[]>) {
   const filters = ref<AttractionFilters>({
-    type: 'all',
-    priceRange: 'all',
-    minRating: 'all',
-    wheelchairAccessible: false,
+    type: '',
+    priceRange: '',
+    minRating: '',
+    openNow: false,
   });
 
   const sortBy = ref<'recommended' | 'rating' | 'distance' | 'popular'>('recommended');
@@ -15,7 +15,7 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
     let result = [...attractions.value];
 
     // Filtr typu atrakcji - porównuje z category
-    if (filters.value.type && filters.value.type !== 'all') {
+    if (filters.value.type && filters.value.type !== '') {
       result = result.filter(
         a =>
           a.category?.toLowerCase().includes(filters.value.type.toLowerCase()) ||
@@ -24,7 +24,7 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
     }
 
     // Price range filter
-    if (filters.value.priceRange && filters.value.priceRange !== 'all') {
+    if (filters.value.priceRange && filters.value.priceRange !== '') {
       result = result.filter(a => {
         if (filters.value.priceRange === 'free') {
           return a.price?.toLowerCase().includes('darmowe') ?? false;
@@ -34,14 +34,37 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
     }
 
     // Rating filter
-    if (filters.value.minRating && filters.value.minRating !== 'all') {
+    if (filters.value.minRating && filters.value.minRating !== '') {
       const minRating = parseFloat(filters.value.minRating);
       result = result.filter(a => (a.rating ?? 0) >= minRating);
     }
 
-    // Filtr dostępności dla niepełnosprawnych
-    if (filters.value.wheelchairAccessible) {
-      result = result.filter(a => a.wheelchairAccessible);
+    // Open now filter - pokaż otwarte ORAZ te bez informacji
+    if (filters.value.openNow) {
+      result = result.filter(a => {
+        const hours = a.openingHours;
+
+        // Jeśli brak informacji o godzinach, pokaż atrakcję
+        if (!hours) return true;
+
+        // Sprawdź czy czynne całą dobę
+        if (/Czynne całą dobę/i.test(hours)) {
+          return true;
+        }
+
+        // Sprawdź czy zawiera słowo "Otwarte"
+        if (/Otwarte/i.test(hours)) {
+          return true;
+        }
+
+        // Sprawdź czy zawiera słowo "Zamknięte" - jeśli tak, ukryj
+        if (/Zamknięte/i.test(hours)) {
+          return false;
+        }
+
+        // Jeśli nie ma wyraźnej informacji w tekście, pokaż
+        return true;
+      });
     }
 
     return result;
@@ -76,20 +99,19 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
 
   const resetFilters = () => {
     filters.value = {
-      type: 'all',
-      priceRange: 'all',
-      minRating: 'all',
-      wheelchairAccessible: false,
+      type: '',
+      priceRange: '',
+      minRating: '',
+      openNow: false,
     };
-    sortBy.value = 'recommended';
   };
 
   const activeFiltersCount = computed(() => {
     let count = 0;
-    if (filters.value.type && filters.value.type !== 'all') count++;
-    if (filters.value.priceRange && filters.value.priceRange !== 'all') count++;
-    if (filters.value.minRating && filters.value.minRating !== 'all') count++;
-    if (filters.value.wheelchairAccessible) count++;
+    if (filters.value.type && filters.value.type !== '') count++;
+    if (filters.value.priceRange && filters.value.priceRange !== '') count++;
+    if (filters.value.minRating && filters.value.minRating !== '') count++;
+    if (filters.value.openNow) count++;
     return count;
   });
 

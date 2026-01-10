@@ -3,40 +3,61 @@ import type { Restaurant, RestaurantFilters } from '@/types/activitie';
 
 export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
   const filters = ref<RestaurantFilters>({
-    cuisine: 'all',
-    priceRange: 'all',
-    minRating: 'all',
+    cuisine: '',
+    priceRange: '',
+    minRating: '',
     openNow: false,
   });
 
-  const sortBy = ref<'recommended' | 'rating' | 'distance' | 'price-low' | 'price-high'>(
-    'recommended'
-  );
+  const sortBy = ref<'recommended' | 'rating' | 'price-low' | 'price-high'>('recommended');
 
   const filteredRestaurants = computed(() => {
     let result = [...restaurants.value];
 
-    // Filtr typu kuchni - sprawdza czy cuisine zawiera wybrany tekst
-    if (filters.value.cuisine && filters.value.cuisine !== 'all') {
-      result = result.filter(
-        r => r.cuisine?.toLowerCase().includes(filters.value.cuisine.toLowerCase()) ?? false
+    // Cuisine filter
+    if (filters.value.cuisine && filters.value.cuisine !== '') {
+      result = result.filter(r =>
+        r.cuisine?.toLowerCase().includes(filters.value.cuisine.toLowerCase())
       );
     }
 
-    // Filtr przedziału cenowego - porównuje długość stringów
-    if (filters.value.priceRange && filters.value.priceRange !== 'all') {
+    // Price range filter
+    if (filters.value.priceRange && filters.value.priceRange !== '') {
       result = result.filter(r => r.priceRange === filters.value.priceRange);
     }
 
-    // Filtr minimalnej oceny
-    if (filters.value.minRating && filters.value.minRating !== 'all') {
+    // Rating filter
+    if (filters.value.minRating && filters.value.minRating !== '') {
       const minRating = parseFloat(filters.value.minRating);
       result = result.filter(r => (r.rating ?? 0) >= minRating);
     }
 
-    // Filtr otwarte teraz
+    // Open now filter - sprawdź na podstawie openingHours
     if (filters.value.openNow) {
-      result = result.filter(r => r.isOpen);
+      result = result.filter(r => {
+        const hours = r.openingHours;
+
+        // Jeśli brak informacji o godzinach, pokaż restaurację
+        if (!hours) return true;
+
+        // Sprawdź czy czynne całą dobę
+        if (/Czynne całą dobę/i.test(hours)) {
+          return true;
+        }
+
+        // Sprawdź czy zawiera słowo "Otwarte"
+        if (/Otwarte/i.test(hours)) {
+          return true;
+        }
+
+        // Sprawdź czy zawiera słowo "Zamknięte" - jeśli tak, ukryj
+        if (/Zamknięte/i.test(hours)) {
+          return false;
+        }
+
+        // Jeśli nie ma wyraźnej informacji w tekście, pokaż
+        return true;
+      });
     }
 
     return result;
@@ -49,18 +70,19 @@ export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
       case 'rating':
         return result.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
 
-      case 'distance':
+      case 'price-low':
         return result.sort((a, b) => {
-          const distA = parseFloat(a.distance?.match(/\d+/)?.[0] || '999');
-          const distB = parseFloat(b.distance?.match(/\d+/)?.[0] || '999');
-          return distA - distB;
+          const priceA = a.priceRange?.length ?? 0;
+          const priceB = b.priceRange?.length ?? 0;
+          return priceA - priceB;
         });
 
-      case 'price-low':
-        return result.sort((a, b) => (a.priceRange?.length ?? 0) - (b.priceRange?.length ?? 0));
-
       case 'price-high':
-        return result.sort((a, b) => (b.priceRange?.length ?? 0) - (a.priceRange?.length ?? 0));
+        return result.sort((a, b) => {
+          const priceA = a.priceRange?.length ?? 0;
+          const priceB = b.priceRange?.length ?? 0;
+          return priceB - priceA;
+        });
 
       case 'recommended':
       default:
@@ -74,19 +96,18 @@ export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
 
   const resetFilters = () => {
     filters.value = {
-      cuisine: 'all',
-      priceRange: 'all',
-      minRating: 'all',
+      cuisine: '',
+      priceRange: '',
+      minRating: '',
       openNow: false,
     };
-    sortBy.value = 'recommended';
   };
 
   const activeFiltersCount = computed(() => {
     let count = 0;
-    if (filters.value.cuisine && filters.value.cuisine !== 'all') count++;
-    if (filters.value.priceRange && filters.value.priceRange !== 'all') count++;
-    if (filters.value.minRating && filters.value.minRating !== 'all') count++;
+    if (filters.value.cuisine && filters.value.cuisine !== '') count++;
+    if (filters.value.priceRange && filters.value.priceRange !== '') count++;
+    if (filters.value.minRating && filters.value.minRating !== '') count++;
     if (filters.value.openNow) count++;
     return count;
   });

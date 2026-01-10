@@ -13,11 +13,11 @@
             <div class="flex items-center gap-3">
               <!-- Przycisk filtrów -->
               <button
-                :class=" [
+                :class="[
                   'px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 transition-all flex items-center gap-2 text-sm font-semibold shadow-sm',
                   activeFiltersCount > 0
                     ? 'border-primary-500 text-primary-700 hover:border-primary-600'
-                    : 'hover:border-primary-500 text-gray-700'
+                    : 'hover:border-primary-500 text-gray-700',
                 ]"
                 @click="showFilters = !showFilters"
               >
@@ -26,7 +26,7 @@
               </button>
 
               <!-- Menu sortowania -->
-              <div class="relative" ref="sortMenuRef">
+              <div ref="sortMenuRef" class="relative">
                 <button
                   class="px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 hover:border-primary-500 transition-all flex items-center gap-2 text-gray-700 text-sm font-semibold min-w-[200px] justify-between shadow-sm"
                   @click="toggleSort"
@@ -65,44 +65,42 @@
               <div>
                 <label class="block text-sm font-bold text-gray-700 mb-2">Typ atrakcji</label>
                 <select
-                  :value="filters.type"
-                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
+                  :value="filters.type || ''"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-0 focus:border-gray-400 focus:outline-none transition-all cursor-pointer"
                   @change="updateFilter('type', ($event.target as HTMLSelectElement).value)"
                 >
-                  <option value="" class="cursor-pointer">Wszystkie</option>
-                  <option value="muzeum" class="cursor-pointer">Muzea</option>
-                  <option value="zabytek" class="cursor-pointer">Zabytki</option>
-                  <option value="park" class="cursor-pointer">Parki</option>
-                  <option value="rozrywka" class="cursor-pointer">Rozrywka</option>
+                  <option value="">Wszystkie</option>
+                  <option v-for="type in availableTypes" :key="type" :value="type">
+                    {{ type }}
+                  </option>
                 </select>
               </div>
 
               <div>
                 <label class="block text-sm font-bold text-gray-700 mb-2">Przedział cenowy</label>
                 <select
-                  :value="filters.priceRange"
-                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
+                  :value="filters.priceRange || ''"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-0 focus:border-gray-400 focus:outline-none transition-all cursor-pointer"
                   @change="updateFilter('priceRange', ($event.target as HTMLSelectElement).value)"
                 >
-                  <option value="" class="cursor-pointer">Wszystkie</option>
-                  <option value="free" class="cursor-pointer">Darmowe</option>
-                  <option value="€" class="cursor-pointer">€ - Tanie</option>
-                  <option value="€€" class="cursor-pointer">€€ - Średnie</option>
-                  <option value="€€€" class="cursor-pointer">€€€ - Drogie</option>
+                  <option value="">Wszystkie</option>
+                  <option v-for="range in availablePriceRanges" :key="range" :value="range">
+                    {{ range }}
+                  </option>
                 </select>
               </div>
 
               <div>
                 <label class="block text-sm font-bold text-gray-700 mb-2">Ocena min.</label>
                 <select
-                  :value="filters.minRating"
-                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
+                  :value="filters.minRating || ''"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-0 focus:border-gray-400 focus:outline-none transition-all cursor-pointer"
                   @change="updateFilter('minRating', ($event.target as HTMLSelectElement).value)"
                 >
-                  <option value="" class="cursor-pointer">Wszystkie</option>
-                  <option value="4.5" class="cursor-pointer">4.5+</option>
-                  <option value="4.0" class="cursor-pointer">4.0+</option>
-                  <option value="3.5" class="cursor-pointer">3.5+</option>
+                  <option value="">Wszystkie</option>
+                  <option value="4.5">4.5+</option>
+                  <option value="4.0">4.0+</option>
+                  <option value="3.5">3.5+</option>
                 </select>
               </div>
             </div>
@@ -110,12 +108,12 @@
             <div class="mt-4 flex items-center justify-between">
               <label class="flex items-center text-sm font-bold text-gray-700 cursor-pointer">
                 <input
-                  :checked="filters.wheelchairAccessible"
+                  :checked="filters.openNow"
                   type="checkbox"
-                  class="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500 mr-2"
-                  @change="updateFilter('wheelchairAccessible', ($event.target as HTMLInputElement).checked)"
+                  class="w-4 h-4 text-gray-600 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 cursor-pointer"
+                  @change="updateFilter('openNow', ($event.target as HTMLInputElement).checked)"
                 />
-                Dostępne dla niepełnosprawnych
+                <span class="ml-2">Tylko otwarte teraz</span>
               </label>
 
               <button
@@ -132,9 +130,17 @@
 
       <!-- Lista kart -->
       <div class="pt-4 pb-4 space-y-4">
+        <!-- Brak wyników wyszukiwania -->
         <div v-if="attractions.length === 0" class="text-center py-12">
-          <p class="text-gray-500 text-lg">Brak atrakcji spełniających wybrane kryteria</p>
+          <p class="text-gray-500 text-lg mb-2">
+            {{
+              activeFiltersCount > 0
+                ? 'Brak atrakcji spełniających wybrane kryteria'
+                : 'Wyszukaj atrakcje, aby zobaczyć wyniki'
+            }}
+          </p>
           <button
+            v-if="activeFiltersCount > 0"
             class="mt-4 text-primary-600 hover:text-primary-700 font-semibold"
             @click="$emit('reset-filters')"
           >
@@ -173,6 +179,8 @@ interface Props {
   filters: AttractionFilters;
   sortBy: string;
   activeFiltersCount: number;
+  availableTypes: string[];
+  availablePriceRanges: string[];
 }
 
 defineProps<Props>();
@@ -209,8 +217,10 @@ const selectSort = (value: string) => {
   showSort.value = false;
 };
 
-const updateFilter = (key: keyof AttractionFilters, value: any) => {
-  emit('update:filters', { [key]: value });
+const updateFilter = (key: keyof AttractionFilters, value: string | boolean) => {
+  const filters: Partial<AttractionFilters> = {};
+  filters[key] = value as never;
+  emit('update:filters', filters);
 };
 
 const openAttractionDetails = (attraction: Attraction) => {

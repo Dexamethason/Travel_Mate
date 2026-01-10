@@ -9,12 +9,11 @@
         class="w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex-shrink-0 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-200"
       >
         <img
-          v-if="restaurant.photo || restaurant.photos?.[0]"
-          :src="restaurant.photo || restaurant.photos?.[0]"
+          :src="restaurant.photo || restaurant.photos?.[0] || '/img-notfound.png'"
           :alt="restaurant.name"
           class="w-full h-full object-cover"
+          @error="handleImageError"
         />
-        <PhotoIcon v-else class="w-12 h-12 text-gray-400" />
       </div>
 
       <!-- Informacje -->
@@ -26,22 +25,23 @@
             {{ restaurant.name }}
           </h3>
           <span
-            v-if="restaurant.isOpen !== undefined"
             :class="[
               'px-3 py-1.5 text-xs font-semibold rounded-lg whitespace-nowrap flex-shrink-0',
-              restaurant.isOpen
+              isOpenNow
                 ? 'bg-green-100 text-green-700 border border-green-300'
                 : 'bg-red-100 text-red-700 border border-red-300',
             ]"
           >
-            {{ restaurant.isOpen ? 'Otwarte' : 'Zamknięte' }}
+            {{ isOpenNow ? 'Otwarte' : 'Zamknięte' }}
           </span>
         </div>
 
         <div class="flex items-center gap-3 mb-3 flex-wrap">
           <div v-if="restaurant.rating" class="flex items-center bg-yellow-50 px-2 py-1 rounded-lg">
             <StarIcon class="w-4 h-4 text-yellow-500" />
-            <span class="ml-1.5 text-sm font-bold text-gray-900">{{ restaurant.rating.toFixed(1) }}</span>
+            <span class="ml-1.5 text-sm font-bold text-gray-900">{{
+              restaurant.rating.toFixed(1)
+            }}</span>
           </div>
           <span v-if="restaurant.reviews" class="text-sm text-gray-500">
             ({{ restaurant.reviews.toLocaleString() }} opinii)
@@ -71,15 +71,46 @@
 </template>
 
 <script setup lang="ts">
-import { PhotoIcon } from '@heroicons/vue/24/outline';
+import { computed } from 'vue';
 import { StarIcon } from '@heroicons/vue/24/solid';
 import type { Restaurant } from '@/types/activitie';
 
-defineProps<{
+const props = defineProps<{
   restaurant: Restaurant;
 }>();
 
 defineEmits<{
   click: [];
 }>();
+
+// Oblicz czy otwarte na podstawie openingHours
+const isOpenNow = computed(() => {
+  const hours = props.restaurant.openingHours;
+  if (!hours) return false;
+
+  // Sprawdź czy czynne całą dobę
+  if (/Czynne całą dobę/i.test(hours)) {
+    return true;
+  }
+
+  // Sprawdź czy zawiera słowo "Otwarte"
+  if (/Otwarte/i.test(hours)) {
+    return true;
+  }
+
+  // Sprawdź czy zawiera słowo "Zamknięte"
+  if (/Zamknięte/i.test(hours)) {
+    return false;
+  }
+
+  // Jeśli nie ma wyraźnej informacji, zwróć wartość z API
+  return props.restaurant.isOpen ?? false;
+});
+
+// Obsługa błędu ładowania obrazu - ustaw domyślny obraz
+const handleImageError = (event: Event) => {
+  const target = event.target as HTMLImageElement;
+  target.src = '/img-notfound.png';
+  target.onerror = null;
+};
 </script>
