@@ -1,27 +1,32 @@
 <template>
   <div>
-    <!-- Górny pasek wyrównany z logo -->
-    <header class="h-[73px] bg-white border-b flex items-center px-6 gap-6">
-      <!-- Pasek wyszukiwania miasta -->
-      <div class="flex-1 max-w-md">
-        <div class="relative">
-          <input
-            v-model="citySearch"
-            type="text"
-            placeholder="Szukaj miasta..."
-            class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-          />
-          <!-- Ikona lupy (MagnifyingGlass) -->
-          <MagnifyingGlassIcon
-            class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
-          />
-        </div>
+    <!-- Górny pasek -->
+    <header class="h-[73px] bg-white border-b flex items-center justify-between px-6 gap-6">
+      <!-- Pole wyszukiwania -->
+      <div class="flex gap-2 max-w-2xl">
+        <input
+          v-model="searchLocation"
+          type="text"
+          placeholder="np. Paryż, Kraków, Warszawa..."
+          class="w-96 px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:border-gray-500 outline-none transition-colors"
+          @keyup.enter="handleSearch"
+        />
+        <button
+          :disabled="!searchLocation || isSearching"
+          class="px-8 py-2.5 text-white rounded-xl font-bold transition-all shadow-sm flex items-center gap-2"
+          :class="
+            searchLocation && !isSearching
+              ? 'bg-blue-600 hover:bg-blue-700 cursor-pointer'
+              : 'bg-blue-300 cursor-not-allowed'
+          "
+          @click="handleSearch"
+        >
+          <MagnifyingGlassIcon v-if="!isSearching" class="w-5 h-5" />
+          <span>{{ isSearching ? 'Szukam...' : 'Szukaj' }}</span>
+        </button>
       </div>
 
-      <!-- Spacer -->
-      <div class="flex-1"></div>
-
-      <!-- Przełącznik między restauracjami a atrakcjami - po prawej stronie -->
+      <!-- Przełącznik między restauracjami a atrakcjami -->
       <div class="flex items-center gap-2 bg-gray-100 rounded-lg p-1">
         <button
           :class="[
@@ -51,17 +56,49 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/outline';
 
-defineProps<{
+const props = defineProps<{
   activeTab: 'restaurants' | 'attractions';
+  initialLocation?: string;
 }>();
 
-defineEmits<{
+const emit = defineEmits<{
   'update:active-tab': [value: 'restaurants' | 'attractions'];
+  search: [location: string, query: string];
 }>();
 
-// Domyślne miasto do wyszukiwania
-const citySearch = ref('Paryż');
+const searchLocation = ref(props.initialLocation || '');
+const isSearching = ref(false);
+
+// Aktualizuj wartość inputa gdy zmieni się initialLocation z parenta
+watch(
+  () => props.initialLocation,
+  newLocation => {
+    searchLocation.value = newLocation || '';
+  }
+);
+
+const handleSearch = () => {
+  if (!searchLocation.value.trim()) {
+    return;
+  }
+
+  isSearching.value = true;
+
+  emit('search', searchLocation.value.trim(), '');
+
+  // Reset stanu po krótkiej chwili (zostanie zaktualizowany przez parent)
+  setTimeout(() => {
+    isSearching.value = false;
+  }, 500);
+};
+
+// Funkcje do aktualizacji komunikatów z poziomu parenta (puste, ale zachowane dla kompatybilności)
+defineExpose({
+  setSearchResults: () => {},
+  setSearchError: () => {},
+  clearMessages: () => {},
+});
 </script>

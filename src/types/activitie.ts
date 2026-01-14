@@ -14,7 +14,7 @@ export interface Attraction {
   openingHours?: string;
   status?: string;
   buttonText?: string;
-  // Nowe pola dla szczegółów
+  //modal szczegółów
   description?: string;
   address?: string;
   phone?: string;
@@ -45,7 +45,7 @@ export interface Restaurant {
   distance?: string;
   openingHours?: string;
   isOpen?: boolean;
-  // Nowe pola dla szczegółów
+  //modal szczegółów
   description?: string;
   address?: string;
   phone?: string;
@@ -79,7 +79,7 @@ export interface AttractionFilters {
   type: string;
   priceRange: string;
   minRating: string;
-  wheelchairAccessible: boolean;
+  openNow: boolean;
 }
 
 export interface RestaurantFilters {

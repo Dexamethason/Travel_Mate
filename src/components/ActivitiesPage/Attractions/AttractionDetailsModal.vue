@@ -9,22 +9,12 @@
     >
       <!-- Header z galerią zdjęć -->
       <div class="relative h-80 bg-gradient-to-br from-gray-200 to-gray-300">
-        <div
-          v-if="attraction.photos && attraction.photos.length > 0"
+        <img
+          :src="attraction.photos?.[0] || attraction.photo || '/img-notfound.png'"
+          :alt="attraction.name"
           class="h-full w-full object-cover"
-        >
-          <img
-            :src="attraction.photos[0]"
-            :alt="attraction.name"
-            class="h-full w-full object-cover"
-          />
-        </div>
-        <div
-          v-else
-          class="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300"
-        >
-          <PhotoIcon class="h-24 w-24 text-gray-400" />
-        </div>
+          @error="handleImageError"
+        />
 
         <!-- Przycisk zamknij -->
         <button
@@ -39,13 +29,11 @@
           <span
             :class="[
               'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold shadow-lg',
-              attraction.status === 'Otwarte'
-                ? 'bg-green-500 text-white'
-                : 'bg-red-500 text-white',
+              statusText === 'Otwarte' ? 'bg-green-500 text-white' : 'bg-red-500 text-white',
             ]"
           >
             <span class="h-2 w-2 rounded-full bg-white"></span>
-            {{ attraction.status }}
+            {{ statusText }}
           </span>
         </div>
       </div>
@@ -65,7 +53,7 @@
                 <span class="text-xl font-bold text-gray-900">{{ attraction.rating }}</span>
               </div>
               <span class="text-sm text-gray-500"
-                >({{ attraction.reviews.toLocaleString() }} opinii)</span
+                >({{ attraction.reviews?.toLocaleString() ?? 0 }} opinii)</span
               >
             </div>
           </div>
@@ -78,24 +66,19 @@
           <!-- Tagi -->
           <div class="flex flex-wrap gap-2">
             <span
-              class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700"
-            >
-              {{ attraction.priceRange }}
-            </span>
-            <span
               class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700"
             >
               {{ attraction.category }}
             </span>
             <span
-              v-if="attraction.wheelchairAccessible"
-              class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700"
+              v-if="attraction.type && attraction.type !== attraction.category"
+              class="inline-flex items-center rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700"
             >
-              ♿ Dostępne dla niepełnosprawnych
+              {{ attraction.type }}
             </span>
             <span
               v-if="attraction.duration"
-              class="inline-flex items-center rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700"
+              class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700"
             >
               ⏱️ {{ attraction.duration }}
             </span>
@@ -112,7 +95,7 @@
             </div>
           </div>
 
-          <div class="flex items-start gap-3">
+          <div v-if="attraction.openingHours" class="flex items-start gap-3">
             <ClockIcon class="h-5 w-5 flex-shrink-0 text-gray-600" />
             <div>
               <p class="text-sm font-medium text-gray-900">Godziny otwarcia</p>
@@ -143,22 +126,6 @@
               </a>
             </div>
           </div>
-
-          <div class="flex items-start gap-3">
-            <MapIcon class="h-5 w-5 flex-shrink-0 text-gray-600" />
-            <div>
-              <p class="text-sm font-medium text-gray-900">Odległość</p>
-              <p class="text-sm text-gray-600">{{ attraction.distance }}</p>
-            </div>
-          </div>
-
-          <div v-if="attraction.price" class="flex items-start gap-3">
-            <TicketIcon class="h-5 w-5 flex-shrink-0 text-gray-600" />
-            <div>
-              <p class="text-sm font-medium text-gray-900">Cena</p>
-              <p class="text-sm text-gray-600">{{ attraction.price }}</p>
-            </div>
-          </div>
         </div>
 
         <!-- Udogodnienia -->
@@ -176,7 +143,7 @@
         </div>
 
         <!-- Sekcja opinii -->
-        <div v-if="attraction.detailedReviews && attraction.detailedReviews.length > 0" class="mb-8">
+        <div v-if="attraction.detailedReviews && attraction.detailedReviews.length > 0">
           <h3 class="mb-4 text-xl font-bold text-gray-900">Opinie odwiedzających</h3>
           <div class="space-y-4">
             <div
@@ -194,35 +161,9 @@
                   <span class="text-sm font-bold text-gray-900">{{ review.rating }}</span>
                 </div>
               </div>
-              <p class="mb-2 text-gray-700">{{ review.comment }}</p>
-              <button
-                v-if="review.helpful !== undefined"
-                class="text-sm text-gray-500 hover:text-gray-700"
-              >
-                👍 Pomocne ({{ review.helpful }})
-              </button>
+              <p class="text-gray-700">{{ review.comment }}</p>
             </div>
           </div>
-        </div>
-
-        <!-- Przyciski akcji -->
-        <div class="flex gap-3">
-          <button
-            class="flex-1 rounded-lg bg-primary-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-700"
-          >
-            Dodaj do planu
-          </button>
-          <button
-            v-if="attraction.status === 'Otwarte'"
-            class="flex-1 rounded-lg border-2 border-primary-600 px-6 py-3 font-semibold text-primary-600 transition-colors hover:bg-primary-50"
-          >
-            {{ attraction.buttonText }}
-          </button>
-          <button
-            class="rounded-lg border border-gray-300 px-6 py-3 text-gray-700 transition-colors hover:bg-gray-50"
-          >
-            <ShareIcon class="h-5 w-5" />
-          </button>
         </div>
       </div>
     </div>
@@ -230,6 +171,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import {
   XMarkIcon,
   StarIcon,
@@ -237,10 +179,6 @@ import {
   ClockIcon,
   PhoneIcon,
   GlobeAltIcon,
-  MapIcon,
-  ShareIcon,
-  PhotoIcon,
-  TicketIcon,
 } from '@heroicons/vue/24/outline';
 import type { Attraction } from '@/types/activitie';
 
@@ -249,11 +187,35 @@ interface Props {
   attraction: Attraction;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
 
 defineEmits<{
   close: [];
 }>();
+
+// Oblicz status na podstawie openingHours
+const statusText = computed(() => {
+  const hours = props.attraction.openingHours;
+  if (!hours) return props.attraction.status || 'Brak danych';
+
+  // Sprawdź czy czynne całą dobę
+  if (/Czynne całą dobę/i.test(hours)) {
+    return 'Otwarte';
+  }
+
+  // Sprawdź czy zawiera słowo "Otwarte"
+  if (/Otwarte/i.test(hours)) {
+    return 'Otwarte';
+  }
+
+  // Sprawdź czy zawiera słowo "Zamknięte"
+  if (/Zamknięte/i.test(hours)) {
+    return 'Zamknięte';
+  }
+
+  // Jeśli nie ma wyraźnej informacji, zwróć wartość z API
+  return props.attraction.status || 'Brak danych';
+});
 
 const formatDate = (date: string) => {
   return new Date(date).toLocaleDateString('pl-PL', {
@@ -261,5 +223,12 @@ const formatDate = (date: string) => {
     month: 'long',
     day: 'numeric',
   });
+};
+
+// Obsługa błędu ładowania obrazu - ustaw domyślny obraz
+const handleImageError = (event: Event) => {
+  const target = event.target as HTMLImageElement;
+  target.src = '/img-notfound.png';
+  target.onerror = null;
 };
 </script>

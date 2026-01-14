@@ -9,32 +9,56 @@ export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
     openNow: false,
   });
 
-  const sortBy = ref<'recommended' | 'rating' | 'distance' | 'price-low' | 'price-high'>('recommended');
+  const sortBy = ref<
+    'recommended' | 'rating' | 'rating-asc' | 'popular' | 'popular-asc' | 'price-low' | 'price-high'
+  >('recommended');
 
   const filteredRestaurants = computed(() => {
     let result = [...restaurants.value];
 
-    // Filtr typu kuchni - sprawdza czy cuisine zawiera wybrany tekst
-    if (filters.value.cuisine) {
-      result = result.filter(r => 
-        r.cuisine.toLowerCase().includes(filters.value.cuisine.toLowerCase())
+    // Cuisine filter
+    if (filters.value.cuisine && filters.value.cuisine !== '') {
+      result = result.filter(r =>
+        r.cuisine?.toLowerCase().includes(filters.value.cuisine.toLowerCase())
       );
     }
 
-    // Filtr przedziału cenowego - porównuje długość stringów
-    if (filters.value.priceRange) {
+    // Price range filter
+    if (filters.value.priceRange && filters.value.priceRange !== '') {
       result = result.filter(r => r.priceRange === filters.value.priceRange);
     }
 
-    // Filtr minimalnej oceny
-    if (filters.value.minRating) {
+    // Rating filter
+    if (filters.value.minRating && filters.value.minRating !== '') {
       const minRating = parseFloat(filters.value.minRating);
-      result = result.filter(r => r.rating >= minRating);
+      result = result.filter(r => (r.rating ?? 0) >= minRating);
     }
 
-    // Filtr otwarte teraz
+    // Open now filter
     if (filters.value.openNow) {
-      result = result.filter(r => r.isOpen);
+      result = result.filter(r => {
+        const hours = r.openingHours;
+
+        // Jeśli brak informacji o godzinach, pokaż restaurację
+        if (!hours) return true;
+
+        // Sprawdź czy czynne całą dobę
+        if (/Czynne całą dobę/i.test(hours)) {
+          return true;
+        }
+
+        // Sprawdź czy zawiera słowo "Otwarte"
+        if (/Otwarte/i.test(hours)) {
+          return true;
+        }
+
+        // Sprawdź czy zawiera słowo "Zamknięte" - jeśli tak, ukryj
+        if (/Zamknięte/i.test(hours)) {
+          return false;
+        }
+
+        return true;
+      });
     }
 
     return result;
@@ -45,28 +69,36 @@ export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
 
     switch (sortBy.value) {
       case 'rating':
-        return result.sort((a, b) => b.rating - a.rating);
-      
-      case 'distance':
-        return result.sort((a, b) => {
-          // Wyciąga liczby z stringów typu "12 min spacerem"
-          const distA = parseFloat(a.distance.match(/\d+/)?.[0] || '999');
-          const distB = parseFloat(b.distance.match(/\d+/)?.[0] || '999');
-          return distA - distB;
-        });
-      
+        return result.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+
+      case 'rating-asc':
+        return result.sort((a, b) => (a.rating ?? 0) - (b.rating ?? 0));
+
+      case 'popular':
+        return result.sort((a, b) => (b.reviews ?? 0) - (a.reviews ?? 0));
+
+      case 'popular-asc':
+        return result.sort((a, b) => (a.reviews ?? 0) - (b.reviews ?? 0));
+
       case 'price-low':
-        return result.sort((a, b) => a.priceRange.length - b.priceRange.length);
-      
+        return result.sort((a, b) => {
+          const priceA = a.priceRange?.length ?? 0;
+          const priceB = b.priceRange?.length ?? 0;
+          return priceA - priceB;
+        });
+
       case 'price-high':
-        return result.sort((a, b) => b.priceRange.length - a.priceRange.length);
-      
+        return result.sort((a, b) => {
+          const priceA = a.priceRange?.length ?? 0;
+          const priceB = b.priceRange?.length ?? 0;
+          return priceB - priceA;
+        });
+
       case 'recommended':
       default:
-        // Sortowanie według kombinacji oceny i liczby opinii
         return result.sort((a, b) => {
-          const scoreA = a.rating * Math.log10(a.reviews + 1);
-          const scoreB = b.rating * Math.log10(b.reviews + 1);
+          const scoreA = (a.rating ?? 0) * Math.log10((a.reviews ?? 0) + 1);
+          const scoreB = (b.rating ?? 0) * Math.log10((b.reviews ?? 0) + 1);
           return scoreB - scoreA;
         });
     }
@@ -79,14 +111,13 @@ export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
       minRating: '',
       openNow: false,
     };
-    sortBy.value = 'recommended';
   };
 
   const activeFiltersCount = computed(() => {
     let count = 0;
-    if (filters.value.cuisine) count++;
-    if (filters.value.priceRange) count++;
-    if (filters.value.minRating) count++;
+    if (filters.value.cuisine && filters.value.cuisine !== '') count++;
+    if (filters.value.priceRange && filters.value.priceRange !== '') count++;
+    if (filters.value.minRating && filters.value.minRating !== '') count++;
     if (filters.value.openNow) count++;
     return count;
   });
