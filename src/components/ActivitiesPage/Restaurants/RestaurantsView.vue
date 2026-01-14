@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, toRef } from 'vue';
 import RestaurantsList from './RestaurantsList.vue';
 import { useRestaurantFilters } from '@/composables/useRestaurantFilters';
 import type { Restaurant, RestaurantFilters } from '@/types/activitie';
@@ -24,10 +24,8 @@ const props = defineProps<{
   restaurants: Restaurant[];
 }>();
 
-const restaurantsToDisplay = computed(() => props.restaurants);
-
 const { filters, sortBy, sortedRestaurants, resetFilters, activeFiltersCount } =
-  useRestaurantFilters(restaurantsToDisplay);
+  useRestaurantFilters(toRef(props, 'restaurants'));
 
 // Dynamicznie pobierz unikalne typy kuchni z danych
 const availableCuisines = computed(() => {

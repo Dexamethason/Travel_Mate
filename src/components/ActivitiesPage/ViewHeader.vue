@@ -76,7 +76,6 @@ const isSearching = ref(false);
 watch(
   () => props.initialLocation,
   newLocation => {
-    // Ustaw wartość tylko jeśli newLocation ma wartość, w przeciwnym razie wyczyść
     searchLocation.value = newLocation || '';
   }
 );
@@ -88,7 +87,6 @@ const handleSearch = () => {
 
   isSearching.value = true;
 
-  // Przekazujemy tylko lokalizację, bez query
   emit('search', searchLocation.value.trim(), '');
 
   // Reset stanu po krótkiej chwili (zostanie zaktualizowany przez parent)

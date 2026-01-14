@@ -98,15 +98,12 @@ const handleSearch = async (location: string, query?: string) => {
     if (activeTab.value === 'restaurants') {
       lastRestaurantLocation.value = location;
       const results = await searchRestaurants(location, query || undefined);
-      // Nie nadpisuj isOpen - używaj danych z API
       restaurants.value = results;
 
       if (results.length > 0) {
         hasSearched.value = true;
         setTimeout(() => {
-          headerRef.value?.setSearchResults(
-            `Znaleziono ${results.length} restauracji w lokalizacji: ${location}`
-          );
+          headerRef.value?.setSearchResults();
           searchHeroRef.value?.resetSearching();
         }, 0);
       } else {
@@ -117,15 +114,12 @@ const handleSearch = async (location: string, query?: string) => {
     } else {
       lastAttractionLocation.value = location;
       const results = await searchAttractions(location, query || undefined);
-      // Nie nadpisuj status - używaj danych z API
       attractions.value = results;
 
       if (results.length > 0) {
         hasSearched.value = true;
         setTimeout(() => {
-          headerRef.value?.setSearchResults(
-            `Znaleziono ${results.length} atrakcji w lokalizacji: ${location}`
-          );
+          headerRef.value?.setSearchResults();
           searchHeroRef.value?.resetSearching();
         }, 0);
       } else {

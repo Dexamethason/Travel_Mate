@@ -16,7 +16,7 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
   const filteredAttractions = computed(() => {
     let result = [...attractions.value];
 
-    // Filtr typu atrakcji - porównuje z category
+    // Filtr typu atrakcji
     if (filters.value.type && filters.value.type !== '') {
       result = result.filter(
         a =>
@@ -59,7 +59,6 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
           return true;
         }
 
-        // Dla innych przypadków (np. konkretne godziny), nie pokazuj jeśli nie ma wyraźnej informacji "Otwarte"
         return false;
       });
     }

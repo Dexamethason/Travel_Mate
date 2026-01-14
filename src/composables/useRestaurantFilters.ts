@@ -34,7 +34,7 @@ export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
       result = result.filter(r => (r.rating ?? 0) >= minRating);
     }
 
-    // Open now filter - sprawdź na podstawie openingHours
+    // Open now filter
     if (filters.value.openNow) {
       result = result.filter(r => {
         const hours = r.openingHours;
@@ -57,7 +57,6 @@ export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
           return false;
         }
 
-        // Jeśli nie ma wyraźnej informacji w tekście, pokaż
         return true;
       });
     }
