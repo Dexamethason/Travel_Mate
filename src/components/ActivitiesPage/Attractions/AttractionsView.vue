@@ -6,7 +6,6 @@
       :sort-by="sortBy"
       :active-filters-count="activeFiltersCount"
       :available-types="availableTypes"
-      :available-price-ranges="availablePriceRanges"
       @update:filters="updateFilters"
       @update:sort-by="updateSortBy"
       @reset-filters="resetFilters"
@@ -39,28 +38,11 @@ const availableTypes = computed(() => {
   return Array.from(types).sort();
 });
 
-// Dynamicznie pobierz unikalne przedziały cenowe z danych
-const availablePriceRanges = computed(() => {
-  const ranges = new Set<string>();
-  props.attractions.forEach(a => {
-    if (a.priceRange) {
-      ranges.add(a.priceRange);
-    }
-    if (a.price) {
-      // Jeśli jest tekst "Darmowe", dodaj jako osobną opcję
-      if (a.price.toLowerCase().includes('darmowe')) {
-        ranges.add('Darmowe');
-      }
-    }
-  });
-  return Array.from(ranges).sort();
-});
-
 const updateFilters = (newFilters: Partial<AttractionFilters>) => {
   filters.value = { ...filters.value, ...newFilters };
 };
 
 const updateSortBy = (newSort: string) => {
-  sortBy.value = newSort as 'recommended' | 'rating' | 'distance' | 'popular';
+  sortBy.value = newSort as 'recommended' | 'rating' | 'popular' | 'rating-asc' | 'popular-asc';
 };
 </script>

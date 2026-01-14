@@ -56,6 +56,13 @@ const updateFilters = (newFilters: Partial<RestaurantFilters>) => {
 };
 
 const updateSortBy = (newSort: string) => {
-  sortBy.value = newSort as 'recommended' | 'rating' | 'price-low' | 'price-high';
+  sortBy.value = newSort as
+    | 'recommended'
+    | 'rating'
+    | 'rating-asc'
+    | 'popular'
+    | 'popular-asc'
+    | 'price-low'
+    | 'price-high';
 };
 </script>

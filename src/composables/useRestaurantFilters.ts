@@ -9,7 +9,9 @@ export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
     openNow: false,
   });
 
-  const sortBy = ref<'recommended' | 'rating' | 'price-low' | 'price-high'>('recommended');
+  const sortBy = ref<
+    'recommended' | 'rating' | 'rating-asc' | 'popular' | 'popular-asc' | 'price-low' | 'price-high'
+  >('recommended');
 
   const filteredRestaurants = computed(() => {
     let result = [...restaurants.value];
@@ -69,6 +71,15 @@ export function useRestaurantFilters(restaurants: Ref<Restaurant[]>) {
     switch (sortBy.value) {
       case 'rating':
         return result.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+
+      case 'rating-asc':
+        return result.sort((a, b) => (a.rating ?? 0) - (b.rating ?? 0));
+
+      case 'popular':
+        return result.sort((a, b) => (b.reviews ?? 0) - (a.reviews ?? 0));
+
+      case 'popular-asc':
+        return result.sort((a, b) => (a.reviews ?? 0) - (b.reviews ?? 0));
 
       case 'price-low':
         return result.sort((a, b) => {

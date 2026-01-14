@@ -199,6 +199,9 @@ const sortMenuRef = ref<HTMLElement | null>(null);
 const sortOptions = [
   { value: 'recommended', label: 'Rekomendowane' },
   { value: 'rating', label: 'Najwyżej oceniane' },
+  { value: 'rating-asc', label: 'Najniżej oceniane' },
+  { value: 'popular', label: 'Najpopularniejsze' },
+  { value: 'popular-asc', label: 'Najmniej popularne' },
   { value: 'price-low', label: 'Najniższa cena' },
   { value: 'price-high', label: 'Najwyższa cena' },
 ];

@@ -9,7 +9,9 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
     openNow: false,
   });
 
-  const sortBy = ref<'recommended' | 'rating' | 'distance' | 'popular'>('recommended');
+  const sortBy = ref<'recommended' | 'rating' | 'popular' | 'rating-asc' | 'popular-asc'>(
+    'recommended'
+  );
 
   const filteredAttractions = computed(() => {
     let result = [...attractions.value];
@@ -23,37 +25,27 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
       );
     }
 
-    // Price range filter
-    if (filters.value.priceRange && filters.value.priceRange !== '') {
-      result = result.filter(a => {
-        if (filters.value.priceRange === 'free') {
-          return a.price?.toLowerCase().includes('darmowe') ?? false;
-        }
-        return a.priceRange === filters.value.priceRange;
-      });
-    }
-
     // Rating filter
     if (filters.value.minRating && filters.value.minRating !== '') {
       const minRating = parseFloat(filters.value.minRating);
       result = result.filter(a => (a.rating ?? 0) >= minRating);
     }
 
-    // Open now filter - pokaż otwarte ORAZ te bez informacji
+    // Open now filter - sprawdź czy atrakcja jest teraz otwarta
     if (filters.value.openNow) {
       result = result.filter(a => {
         const hours = a.openingHours;
 
-        // Jeśli brak informacji o godzinach, pokaż atrakcję
+        // Jeśli brak informacji o godzinach, pokaż jako otwarte
         if (!hours) return true;
 
-        // Sprawdź czy czynne całą dobę
-        if (/Czynne całą dobę/i.test(hours)) {
+        // Sprawdź czy jest status "Brak informacji"
+        if (/Brak informacji/i.test(hours)) {
           return true;
         }
 
-        // Sprawdź czy zawiera słowo "Otwarte"
-        if (/Otwarte/i.test(hours)) {
+        // Sprawdź czy czynne całą dobę
+        if (/Czynne całą dobę/i.test(hours)) {
           return true;
         }
 
@@ -62,8 +54,13 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
           return false;
         }
 
-        // Jeśli nie ma wyraźnej informacji w tekście, pokaż
-        return true;
+        // Sprawdź czy zawiera słowo "Otwarte" - jeśli tak, pokaż
+        if (/Otwarte/i.test(hours)) {
+          return true;
+        }
+
+        // Dla innych przypadków (np. konkretne godziny), nie pokazuj jeśli nie ma wyraźnej informacji "Otwarte"
+        return false;
       });
     }
 
@@ -77,15 +74,14 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
       case 'rating':
         return result.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
 
-      case 'distance':
-        return result.sort((a, b) => {
-          const distA = parseFloat(a.distance?.match(/\d+/)?.[0] || '999');
-          const distB = parseFloat(b.distance?.match(/\d+/)?.[0] || '999');
-          return distA - distB;
-        });
+      case 'rating-asc':
+        return result.sort((a, b) => (a.rating ?? 0) - (b.rating ?? 0));
 
       case 'popular':
         return result.sort((a, b) => (b.reviews ?? 0) - (a.reviews ?? 0));
+
+      case 'popular-asc':
+        return result.sort((a, b) => (a.reviews ?? 0) - (b.reviews ?? 0));
 
       case 'recommended':
       default:
