@@ -10,6 +10,9 @@
       @update:filters="updateFilters"
       @update:sort-by="updateSortBy"
       @reset-filters="resetFilters"
+      @card-hover="$emit('card-hover', $event)"
+      @card-leave="$emit('card-leave')"
+      @restaurant-click="$emit('restaurant-click', $event)"
     />
   </div>
 </template>
@@ -24,10 +27,15 @@ const props = defineProps<{
   restaurants: Restaurant[];
 }>();
 
+defineEmits<{
+  'card-hover': [id: string | number];
+  'card-leave': [];
+  'restaurant-click': [restaurant: Restaurant];
+}>();
+
 const { filters, sortBy, sortedRestaurants, resetFilters, activeFiltersCount } =
   useRestaurantFilters(toRef(props, 'restaurants'));
 
-// Dynamicznie pobierz unikalne typy kuchni z danych
 const availableCuisines = computed(() => {
   const cuisines = new Set<string>();
   props.restaurants.forEach(r => {
@@ -38,7 +46,6 @@ const availableCuisines = computed(() => {
   return Array.from(cuisines).sort();
 });
 
-// Dynamicznie pobierz unikalne przedziały cenowe z danych
 const availablePriceRanges = computed(() => {
   const ranges = new Set<string>();
   props.restaurants.forEach(r => {

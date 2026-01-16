@@ -9,6 +9,9 @@
       @update:filters="updateFilters"
       @update:sort-by="updateSortBy"
       @reset-filters="resetFilters"
+      @card-hover="$emit('card-hover', $event)"
+      @card-leave="$emit('card-leave')"
+      @attraction-click="$emit('attraction-click', $event)"
     />
   </div>
 </template>
@@ -23,12 +26,17 @@ const props = defineProps<{
   attractions: Attraction[];
 }>();
 
+defineEmits<{
+  'card-hover': [id: string | number];
+  'card-leave': [];
+  'attraction-click': [attraction: Attraction];
+}>();
+
 const attractionsToDisplay = computed(() => props.attractions);
 
 const { filters, sortBy, sortedAttractions, resetFilters, activeFiltersCount } =
   useAttractionFilters(attractionsToDisplay);
 
-// Dynamicznie pobierz unikalne typy atrakcji z danych
 const availableTypes = computed(() => {
   const types = new Set<string>();
   props.attractions.forEach(a => {

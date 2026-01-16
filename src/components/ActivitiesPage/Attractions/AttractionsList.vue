@@ -1,7 +1,6 @@
 <template>
   <div class="flex flex-col h-full overflow-hidden">
     <div class="flex-1 overflow-y-auto bg-gray-50 px-6">
-      <!-- Nagłówek -->
       <div class="sticky top-0 z-10 bg-gray-50 pt-4">
         <div class="bg-white rounded-t-xl shadow-md border-x border-t border-gray-200 p-5">
           <div class="flex items-center justify-between" :class="{ 'mb-4': showFilters }">
@@ -11,7 +10,6 @@
             </div>
 
             <div class="flex items-center gap-3">
-              <!-- Przycisk filtrów -->
               <button
                 :class="[
                   'px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 transition-all flex items-center gap-2 text-sm font-semibold shadow-sm',
@@ -25,7 +23,6 @@
                 <span>Filtry</span>
               </button>
 
-              <!-- Menu sortowania -->
               <div ref="sortMenuRef" class="relative">
                 <button
                   class="px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 hover:border-primary-500 transition-all flex items-center gap-2 text-gray-700 text-sm font-semibold min-w-[200px] justify-between shadow-sm"
@@ -59,7 +56,6 @@
             </div>
           </div>
 
-          <!-- Panel filtrów -->
           <div v-if="showFilters" class="pt-5 border-t-2 border-gray-200">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -114,9 +110,7 @@
         </div>
       </div>
 
-      <!-- Lista kart -->
       <div class="pt-4 pb-4 space-y-4">
-        <!-- Brak wyników wyszukiwania -->
         <div v-if="attractions.length === 0" class="text-center py-12">
           <p class="text-gray-500 text-lg mb-2">
             {{
@@ -138,18 +132,12 @@
           v-for="attraction in attractions"
           :key="attraction.id"
           :attraction="attraction"
-          @click="openAttractionDetails(attraction)"
+          @click="$emit('attraction-click', attraction)"
+          @hover="$emit('card-hover', $event)"
+          @leave="$emit('card-leave')"
         />
       </div>
     </div>
-
-    <!-- Modal szczegółów atrakcji -->
-    <AttractionDetailsModal
-      v-if="selectedAttraction"
-      :show="showDetailsModal"
-      :attraction="selectedAttraction"
-      @close="closeAttractionDetails"
-    />
   </div>
 </template>
 
@@ -157,7 +145,6 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { FunnelIcon, ChevronDownIcon } from '@heroicons/vue/24/outline';
 import AttractionCard from './AttractionCard.vue';
-import AttractionDetailsModal from './AttractionDetailsModal.vue';
 import type { Attraction, AttractionFilters } from '@/types/activitie';
 
 interface Props {
@@ -174,12 +161,13 @@ const emit = defineEmits<{
   'update:filters': [filters: Partial<AttractionFilters>];
   'update:sort-by': [sortBy: string];
   'reset-filters': [];
+  'card-hover': [id: string | number];
+  'card-leave': [];
+  'attraction-click': [attraction: Attraction];
 }>();
 
 const showFilters = ref(false);
 const showSort = ref(false);
-const showDetailsModal = ref(false);
-const selectedAttraction = ref<Attraction | null>(null);
 const sortMenuRef = ref<HTMLElement | null>(null);
 
 const sortOptions = [
@@ -209,19 +197,6 @@ const updateFilter = (key: keyof AttractionFilters, value: string | boolean) => 
   emit('update:filters', filters);
 };
 
-const openAttractionDetails = (attraction: Attraction) => {
-  selectedAttraction.value = attraction;
-  showDetailsModal.value = true;
-};
-
-const closeAttractionDetails = () => {
-  showDetailsModal.value = false;
-  setTimeout(() => {
-    selectedAttraction.value = null;
-  }, 300);
-};
-
-// Zamknij dropdown sortowania po kliknięciu poza nim
 const handleClickOutside = (event: MouseEvent) => {
   if (sortMenuRef.value && !sortMenuRef.value.contains(event.target as Node)) {
     showSort.value = false;

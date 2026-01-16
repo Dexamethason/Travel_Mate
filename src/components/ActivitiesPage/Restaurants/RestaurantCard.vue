@@ -2,21 +2,21 @@
   <div
     class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gray-300 transition-all duration-200 cursor-pointer group"
     @click="$emit('click')"
+    @mouseenter="$emit('hover', restaurant.id)"
+    @mouseleave="$emit('leave')"
   >
     <div class="flex gap-5">
-      <!-- Zdjęcie -->
       <div
         class="w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex-shrink-0 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-200"
       >
         <img
-          :src="restaurant.photo || restaurant.photos?.[0] || '/img-notfound.png'"
+          :src="restaurant.photos?.[0] || restaurant.photo || '/img-notfound.png'"
           :alt="restaurant.name"
           class="w-full h-full object-cover"
           @error="handleImageError"
         />
       </div>
 
-      <!-- Informacje -->
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3 mb-2">
           <h3
@@ -81,33 +81,29 @@ const props = defineProps<{
 
 defineEmits<{
   click: [];
+  hover: [id: string | number];
+  leave: [];
 }>();
 
-// Oblicz czy otwarte na podstawie openingHours
 const isOpenNow = computed(() => {
   const hours = props.restaurant.openingHours;
   if (!hours) return false;
 
-  // Sprawdź czy czynne całą dobę
   if (/Czynne całą dobę/i.test(hours)) {
     return true;
   }
 
-  // Sprawdź czy zawiera słowo "Otwarte"
   if (/Otwarte/i.test(hours)) {
     return true;
   }
 
-  // Sprawdź czy zawiera słowo "Zamknięte"
   if (/Zamknięte/i.test(hours)) {
     return false;
   }
 
-  // Jeśli nie ma wyraźnej informacji, zwróć wartość z API
   return props.restaurant.isOpen ?? false;
 });
 
-// Obsługa błędu ładowania obrazu - ustaw domyślny obraz
 const handleImageError = (event: Event) => {
   const target = event.target as HTMLImageElement;
   target.src = '/img-notfound.png';
