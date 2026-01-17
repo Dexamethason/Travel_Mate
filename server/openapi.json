@@ -1,0 +1,3609 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Travel Mate API",
+    "version": "1.0.0",
+    "description": "Dokumentacja API dla aplikacji Travel Mate - kompleksowej platformy do planowania podróży",
+    "contact": {
+      "name": "Travel Mate Team",
+      "email": "contact@travelmate.com"
+    },
+    "license": {
+      "name": "Private",
+      "url": "https://travelmate.com/license"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001",
+      "description": "Development server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "JWT token z Firebase Authentication. Otrzymasz go po zalogowaniu przez POST /api/auth/login"
+      }
+    },
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "uid": {
+            "type": "string",
+            "description": "Unikalny identyfikator użytkownika z Firebase Auth"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Adres email użytkownika"
+          },
+          "firstName": {
+            "type": "string",
+            "description": "Imię użytkownika"
+          },
+          "lastName": {
+            "type": "string",
+            "description": "Nazwisko użytkownika"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Data utworzenia konta"
+          }
+        },
+        "required": [
+          "uid",
+          "email",
+          "firstName",
+          "lastName"
+        ]
+      },
+      "RegisterRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 6
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 2
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 2
+          }
+        },
+        "required": [
+          "email",
+          "password",
+          "firstName",
+          "lastName"
+        ]
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "ForgotPasswordRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "required": [
+          "email"
+        ]
+      },
+      "AuthResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "token": {
+            "type": "string",
+            "description": "JWT token dla autoryzacji"
+          },
+          "error": {
+            "type": "string"
+          }
+        }
+      },
+      "Participant": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "userId",
+          "email",
+          "firstName",
+          "lastName"
+        ]
+      },
+      "Trip": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "budget": {
+            "type": "number"
+          },
+          "ownerId": {
+            "type": "string"
+          },
+          "participants": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Participant"
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "name",
+          "budget",
+          "ownerId",
+          "participants"
+        ]
+      },
+      "CreateTripData": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "budget": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "name",
+          "budget"
+        ]
+      },
+      "UpdateTripData": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "budget": {
+            "type": "number"
+          },
+          "participants": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Participant"
+            }
+          }
+        }
+      },
+      "Flight": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "airline": {
+            "type": "string"
+          },
+          "stops": {
+            "type": "string"
+          },
+          "departureTime": {
+            "type": "string"
+          },
+          "departureAirport": {
+            "type": "string"
+          },
+          "arrivalTime": {
+            "type": "string"
+          },
+          "arrivalAirport": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "returnAirline": {
+            "type": "string"
+          },
+          "returnStops": {
+            "type": "string"
+          },
+          "returnDepartureTime": {
+            "type": "string"
+          },
+          "returnDepartureAirport": {
+            "type": "string"
+          },
+          "returnArrivalTime": {
+            "type": "string"
+          },
+          "returnArrivalAirport": {
+            "type": "string"
+          },
+          "returnDuration": {
+            "type": "string"
+          }
+        }
+      },
+      "FlightSearchParams": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "description": "Kod IATA lotniska wylotu (np. WAW)"
+          },
+          "to": {
+            "type": "string",
+            "description": "Kod IATA lotniska przylotu (np. LHR)"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Data wylotu (YYYY-MM-DD)"
+          },
+          "returnDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Data powrotu (YYYY-MM-DD)"
+          },
+          "passengers": {
+            "type": "integer",
+            "minimum": 1,
+            "default": 1
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "date"
+        ]
+      },
+      "Accommodation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "location": {
+            "type": "object",
+            "properties": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "address": {
+                "type": "string"
+              }
+            }
+          },
+          "price": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "totalAmount": {
+                "type": "number"
+              }
+            }
+          },
+          "rating": {
+            "type": "number"
+          },
+          "reviews": {
+            "type": "number"
+          },
+          "imageUrl": {
+            "type": "string"
+          },
+          "amenities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "link": {
+            "type": "string"
+          },
+          "hotelClass": {
+            "type": "number"
+          }
+        }
+      },
+      "Attraction": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "number"
+          },
+          "reviews": {
+            "type": "number"
+          },
+          "category": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "priceRange": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "openingHours": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "geometry": {
+            "type": "object",
+            "properties": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "Restaurant": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "number"
+          },
+          "reviews": {
+            "type": "number"
+          },
+          "cuisine": {
+            "type": "string"
+          },
+          "priceRange": {
+            "type": "string"
+          },
+          "isOpen": {
+            "type": "boolean"
+          },
+          "openingHours": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "geometry": {
+            "type": "object",
+            "properties": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "PlanActivity": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "museum",
+              "restaurant",
+              "walk",
+              "attraction",
+              "transport",
+              "accommodation",
+              "other"
+            ]
+          },
+          "time": {
+            "type": "string"
+          },
+          "cost_estimate": {
+            "type": "number"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "time",
+          "cost_estimate"
+        ]
+      },
+      "PlanDay": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "activities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlanActivity"
+            }
+          },
+          "daily_cost": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "day",
+          "date",
+          "activities"
+        ]
+      },
+      "TravelPlan": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "end_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "days": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlanDay"
+            }
+          },
+          "total_estimated_cost": {
+            "type": "number"
+          },
+          "tips": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "PlannerInput": {
+        "type": "object",
+        "properties": {
+          "origin": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "end_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "budget": {
+            "type": "number"
+          },
+          "participants": {
+            "type": "integer"
+          },
+          "interests": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "transport": {
+            "type": "string"
+          },
+          "accommodation": {
+            "type": "string"
+          },
+          "must_visit": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "avoid": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "intensity": {
+            "type": "string",
+            "enum": [
+              "relaxed",
+              "moderate",
+              "active"
+            ]
+          }
+        },
+        "required": [
+          "destination",
+          "start_date",
+          "end_date",
+          "budget",
+          "participants",
+          "interests",
+          "transport",
+          "accommodation"
+        ]
+      },
+      "SplitParticipant": {
+        "type": "object",
+        "properties": {
+          "participantId": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "participantId",
+          "amount"
+        ]
+      },
+      "Expense": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tripId": {
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "transport",
+              "food",
+              "accommodation",
+              "attraction",
+              "other"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "splitWith": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SplitParticipant"
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CreateExpenseData": {
+        "type": "object",
+        "properties": {
+          "tripId": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "category": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "splitWith": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SplitParticipant"
+            }
+          }
+        },
+        "required": [
+          "tripId",
+          "date",
+          "category",
+          "description",
+          "amount",
+          "splitWith"
+        ]
+      },
+      "Invitation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tripId": {
+            "type": "string"
+          },
+          "tripName": {
+            "type": "string"
+          },
+          "invitedEmail": {
+            "type": "string",
+            "format": "email"
+          },
+          "invitedUserId": {
+            "type": "string"
+          },
+          "invitedBy": {
+            "type": "string"
+          },
+          "invitedByName": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "accepted",
+              "rejected"
+            ]
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CreateInvitationData": {
+        "type": "object",
+        "properties": {
+          "tripId": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "required": [
+          "tripId",
+          "email"
+        ]
+      },
+      "ApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object"
+          },
+          "error": {
+            "type": "string"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": false
+          },
+          "error": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "Authentication",
+      "description": "Endpointy związane z rejestracją, logowaniem i zarządzaniem hasłem"
+    },
+    {
+      "name": "Users",
+      "description": "Zarządzanie profilem użytkownika"
+    },
+    {
+      "name": "Trips",
+      "description": "CRUD operacje na podróżach użytkownika"
+    },
+    {
+      "name": "Flights",
+      "description": "Wyszukiwanie lotów przez Amadeus API"
+    },
+    {
+      "name": "Accommodations",
+      "description": "Wyszukiwanie noclegów przez SerpAPI"
+    },
+    {
+      "name": "Activities",
+      "description": "Wyszukiwanie atrakcji turystycznych i restauracji"
+    },
+    {
+      "name": "Plans",
+      "description": "Generowanie i zarządzanie planami podróży przez AI"
+    },
+    {
+      "name": "Expenses",
+      "description": "Zarządzanie wydatkami podróży"
+    },
+    {
+      "name": "Invitations",
+      "description": "System zaproszeń do wspólnych podróży"
+    }
+  ],
+  "paths": {
+    "/api/accommodations/search": {
+      "get": {
+        "tags": [
+          "Accommodations"
+        ],
+        "summary": "Wyszukaj noclegi",
+        "description": "Wyszukuje dostępne noclegi (hotele) za pomocą SerpAPI Google Hotels",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "location",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Lokalizacja (miasto lub region)",
+            "example": "Ateny, Grecja"
+          },
+          {
+            "in": "query",
+            "name": "checkInDate",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "description": "Data zameldowania (YYYY-MM-DD)",
+            "example": "2026-06-15"
+          },
+          {
+            "in": "query",
+            "name": "checkOutDate",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "description": "Data wymeldowania (YYYY-MM-DD)",
+            "example": "2026-06-22"
+          },
+          {
+            "in": "query",
+            "name": "adults",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 2
+            },
+            "description": "Liczba dorosłych",
+            "example": 2
+          },
+          {
+            "in": "query",
+            "name": "children",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "description": "Liczba dzieci",
+            "example": 0
+          },
+          {
+            "in": "query",
+            "name": "currency",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "PLN"
+            },
+            "description": "Waluta cen",
+            "example": "PLN"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista dostępnych noclegów",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "accommodations": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Accommodation"
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "accommodations": [
+                    {
+                      "id": "hotel123",
+                      "name": "Hotel Grande Bretagne",
+                      "description": "Luksusowy hotel w centrum Aten",
+                      "location": {
+                        "latitude": 37.9755,
+                        "longitude": 23.7348,
+                        "address": "Syntagma Square, Athens"
+                      },
+                      "price": {
+                        "amount": 250,
+                        "currency": "PLN",
+                        "totalAmount": 1750
+                      },
+                      "rating": 4.7,
+                      "reviews": 1250,
+                      "imageUrl": "https://example.com/hotel.jpg",
+                      "amenities": [
+                        "WiFi",
+                        "Basen",
+                        "Spa"
+                      ],
+                      "link": "https://booking.com/hotel123",
+                      "hotelClass": 5
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe parametry wyszukiwania",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Parametry location, checkInDate i checkOutDate są wymagane"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera lub SerpAPI",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/activities/attractions/search": {
+      "get": {
+        "tags": [
+          "Activities"
+        ],
+        "summary": "Wyszukaj atrakcje turystyczne",
+        "description": "Wyszukuje atrakcje turystyczne za pomocą SerpAPI Google Local",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "location",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Lokalizacja wyszukiwania (miasto lub region)",
+            "example": "Ateny, Grecja"
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Dodatkowe słowa kluczowe wyszukiwania",
+            "example": "muzeum"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Typ miejsca (np. museum, park, monument)",
+            "example": "museum"
+          },
+          {
+            "in": "query",
+            "name": "hl",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "pl"
+            },
+            "description": "Język wyników",
+            "example": "pl"
+          },
+          {
+            "in": "query",
+            "name": "gl",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "pl"
+            },
+            "description": "Kraj wyników",
+            "example": "pl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista atrakcji turystycznych",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "attractions": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Attraction"
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "attractions": [
+                    {
+                      "id": "attr123",
+                      "name": "Akropol",
+                      "rating": 4.8,
+                      "reviews": 45000,
+                      "category": "Atrakcja turystyczna",
+                      "type": "monument",
+                      "priceRange": "€€",
+                      "status": "Otwarte",
+                      "openingHours": "08:00 - 20:00",
+                      "description": "Starożytna cytadela na wzgórzu",
+                      "address": "Athens 105 58, Grecja",
+                      "phone": "+30 21 0321 4172",
+                      "website": "https://odysseus.culture.gr",
+                      "photo": "https://example.com/acropolis.jpg",
+                      "geometry": {
+                        "latitude": 37.9715,
+                        "longitude": 23.7267
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe parametry wyszukiwania",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Parametr location jest wymagany"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera lub SerpAPI",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/activities/restaurants/search": {
+      "get": {
+        "tags": [
+          "Activities"
+        ],
+        "summary": "Wyszukaj restauracje",
+        "description": "Wyszukuje restauracje za pomocą SerpAPI Google Local",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "location",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Lokalizacja wyszukiwania (miasto lub region)",
+            "example": "Ateny, Grecja"
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Dodatkowe słowa kluczowe wyszukiwania",
+            "example": "grecka kuchnia"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Typ kuchni lub restauracji",
+            "example": "greek"
+          },
+          {
+            "in": "query",
+            "name": "hl",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "pl"
+            },
+            "description": "Język wyników",
+            "example": "pl"
+          },
+          {
+            "in": "query",
+            "name": "gl",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "pl"
+            },
+            "description": "Kraj wyników",
+            "example": "pl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista restauracji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "restaurants": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Restaurant"
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "restaurants": [
+                    {
+                      "id": "rest123",
+                      "name": "Taverna Plaka",
+                      "rating": 4.5,
+                      "reviews": 1250,
+                      "cuisine": "Grecka",
+                      "priceRange": "€€",
+                      "isOpen": true,
+                      "openingHours": "12:00 - 23:00",
+                      "description": "Tradycyjna grecka tawerna",
+                      "address": "Plaka, Athens 105 58, Grecja",
+                      "phone": "+30 21 0322 1234",
+                      "website": "https://tavernaplaka.gr",
+                      "photo": "https://example.com/taverna.jpg",
+                      "geometry": {
+                        "latitude": 37.9738,
+                        "longitude": 23.7275
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe parametry wyszukiwania",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Parametr location jest wymagany"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera lub SerpAPI",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/register": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "Rejestracja nowego użytkownika",
+        "description": "Tworzy nowe konto użytkownika w Firebase Authentication i zapisuje dane w Firestore",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              },
+              "example": {
+                "email": "jan.kowalski@example.com",
+                "password": "SecurePass123!",
+                "firstName": "Jan",
+                "lastName": "Kowalski"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Użytkownik został pomyślnie zarejestrowany",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponse"
+                },
+                "example": {
+                  "success": true,
+                  "message": "Użytkownik zarejestrowany pomyślnie",
+                  "user": {
+                    "uid": "abc123xyz",
+                    "email": "jan.kowalski@example.com",
+                    "firstName": "Jan",
+                    "lastName": "Kowalski",
+                    "createdAt": "2026-01-17T18:00:00.000Z"
+                  },
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe dane wejściowe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Wszystkie pola są wymagane"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Użytkownik z tym emailem już istnieje",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Użytkownik z tym emailem już istnieje"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "Logowanie użytkownika",
+        "description": "Uwierzytelnia użytkownika za pomocą Firebase Authentication i zwraca JWT token",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              },
+              "example": {
+                "email": "jan.kowalski@example.com",
+                "password": "SecurePass123!"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Użytkownik został pomyślnie zalogowany",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponse"
+                },
+                "example": {
+                  "success": true,
+                  "message": "Zalogowano pomyślnie",
+                  "user": {
+                    "uid": "abc123xyz",
+                    "email": "jan.kowalski@example.com",
+                    "firstName": "Jan",
+                    "lastName": "Kowalski",
+                    "createdAt": "2026-01-17T18:00:00.000Z"
+                  },
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe dane wejściowe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Email i hasło są wymagane"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Nieprawidłowe dane logowania",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Nieprawidłowy email lub hasło"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/forgot-password": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "Resetowanie hasła",
+        "description": "Wysyła email z linkiem do resetowania hasła za pomocą Firebase Authentication",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordRequest"
+              },
+              "example": {
+                "email": "jan.kowalski@example.com"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Email z linkiem do resetowania hasła został wysłany",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                },
+                "example": {
+                  "success": true,
+                  "message": "Email z linkiem do resetowania hasła został wysłany"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe dane wejściowe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Email jest wymagany"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Użytkownik nie został znaleziony",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Nie znaleziono użytkownika z tym adresem email"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/expenses/{tripId}": {
+      "get": {
+        "tags": [
+          "Expenses"
+        ],
+        "summary": "Pobierz wydatki dla podróży",
+        "description": "Zwraca listę wszystkich wydatków dla konkretnej podróży",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "tripId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID podróży"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista wydatków dla podróży",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "expenses": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Expense"
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "expenses": [
+                    {
+                      "id": "exp123",
+                      "tripId": "trip123",
+                      "createdBy": "user123",
+                      "date": "2026-06-15",
+                      "category": "transport",
+                      "description": "Lot do Aten",
+                      "amount": 450,
+                      "splitWith": [
+                        {
+                          "participantId": "user123",
+                          "amount": 225
+                        },
+                        {
+                          "participantId": "user456",
+                          "amount": 225
+                        }
+                      ],
+                      "createdAt": "2026-01-17T18:00:00.000Z"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Brak dostępu do wydatków tej podróży",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/expenses": {
+      "post": {
+        "tags": [
+          "Expenses"
+        ],
+        "summary": "Utwórz nowy wydatek",
+        "description": "Dodaje nowy wydatek do podróży",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateExpenseData"
+              },
+              "example": {
+                "tripId": "trip123",
+                "date": "2026-06-15",
+                "category": "food",
+                "description": "Kolacja w restauracji",
+                "amount": 120,
+                "splitWith": [
+                  {
+                    "participantId": "user123",
+                    "amount": 60
+                  },
+                  {
+                    "participantId": "user456",
+                    "amount": 60
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Wydatek został utworzony",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "expense": {
+                      "$ref": "#/components/schemas/Expense"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "Wydatek został utworzony",
+                  "expense": {
+                    "id": "exp124",
+                    "tripId": "trip123",
+                    "createdBy": "user123",
+                    "date": "2026-06-15",
+                    "category": "food",
+                    "description": "Kolacja w restauracji",
+                    "amount": 120,
+                    "splitWith": [
+                      {
+                        "participantId": "user123",
+                        "amount": 60
+                      },
+                      {
+                        "participantId": "user456",
+                        "amount": 60
+                      }
+                    ],
+                    "createdAt": "2026-01-17T18:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe dane wejściowe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/expenses/{id}": {
+      "put": {
+        "tags": [
+          "Expenses"
+        ],
+        "summary": "Aktualizuj wydatek",
+        "description": "Aktualizuje istniejący wydatek",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID wydatku"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "category": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "splitWith": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/SplitParticipant"
+                    }
+                  }
+                }
+              },
+              "example": {
+                "date": "2026-06-15",
+                "category": "food",
+                "description": "Kolacja w restauracji - zaktualizowane",
+                "amount": 150,
+                "splitWith": [
+                  {
+                    "participantId": "user123",
+                    "amount": 75
+                  },
+                  {
+                    "participantId": "user456",
+                    "amount": 75
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Wydatek został zaktualizowany",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "expense": {
+                      "$ref": "#/components/schemas/Expense"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe dane wejściowe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Wydatek nie został znaleziony",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Expenses"
+        ],
+        "summary": "Usuń wydatek",
+        "description": "Usuwa wydatek z podróży",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID wydatku"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Wydatek został usunięty",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "Wydatek został usunięty"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Wydatek nie został znaleziony",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/flights/search": {
+      "get": {
+        "tags": [
+          "Flights"
+        ],
+        "summary": "Wyszukaj loty",
+        "description": "Wyszukuje dostępne loty za pomocą Amadeus API. Obsługuje loty w jedną stronę i powrotne.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "from",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Kod IATA lotniska wylotu (np. WAW)",
+            "example": "WAW"
+          },
+          {
+            "in": "query",
+            "name": "to",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Kod IATA lotniska przylotu (np. LHR)",
+            "example": "LHR"
+          },
+          {
+            "in": "query",
+            "name": "date",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "description": "Data wylotu (YYYY-MM-DD)",
+            "example": "2026-06-15"
+          },
+          {
+            "in": "query",
+            "name": "returnDate",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "description": "Data powrotu (YYYY-MM-DD) - opcjonalna dla lotów powrotnych",
+            "example": "2026-06-22"
+          },
+          {
+            "in": "query",
+            "name": "passengers",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            },
+            "description": "Liczba pasażerów",
+            "example": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista dostępnych lotów",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "flights": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Flight"
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "flights": [
+                    {
+                      "id": "1",
+                      "airline": "LOT Polish Airlines",
+                      "stops": "0",
+                      "departureTime": "10:30",
+                      "departureAirport": "WAW",
+                      "arrivalTime": "12:45",
+                      "arrivalAirport": "LHR",
+                      "duration": "2h 15m",
+                      "type": "round-trip",
+                      "price": 450,
+                      "returnAirline": "LOT Polish Airlines",
+                      "returnStops": "0",
+                      "returnDepartureTime": "14:00",
+                      "returnDepartureAirport": "LHR",
+                      "returnArrivalTime": "18:15",
+                      "returnArrivalAirport": "WAW",
+                      "returnDuration": "2h 15m"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe parametry wyszukiwania",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": "Parametry from, to i date są wymagane"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera lub Amadeus API",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/invitations": {
+      "post": {
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Wyślij zaproszenie do podróży",
+        "description": "Wysyła zaproszenie do wspólnej podróży innemu użytkownikowi",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateInvitationData"
+              },
+              "example": {
+                "tripId": "trip123",
+                "email": "anna.nowak@example.com"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Zaproszenie zostało wysłane",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "invitation": {
+                      "$ref": "#/components/schemas/Invitation"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "Zaproszenie zostało wysłane",
+                  "invitation": {
+                    "id": "inv123",
+                    "tripId": "trip123",
+                    "tripName": "Wakacje w Grecji",
+                    "invitedEmail": "anna.nowak@example.com",
+                    "invitedUserId": "user456",
+                    "invitedBy": "user123",
+                    "invitedByName": "Jan Kowalski",
+                    "status": "pending",
+                    "createdAt": "2026-01-17T18:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe dane wejściowe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Użytkownik lub podróż nie zostały znalezione",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Pobierz zaproszenia użytkownika",
+        "description": "Zwraca listę wszystkich zaproszeń dla zalogowanego użytkownika",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista zaproszeń użytkownika",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "invitations": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Invitation"
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "invitations": [
+                    {
+                      "id": "inv123",
+                      "tripId": "trip123",
+                      "tripName": "Wakacje w Grecji",
+                      "invitedEmail": "anna.nowak@example.com",
+                      "invitedUserId": "user456",
+                      "invitedBy": "user123",
+                      "invitedByName": "Jan Kowalski",
+                      "status": "pending",
+                      "createdAt": "2026-01-17T18:00:00.000Z"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/invitations/trip/{tripId}": {
+      "get": {
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Pobierz zaproszenia dla podróży",
+        "description": "Zwraca listę wszystkich zaproszeń dla konkretnej podróży",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "tripId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID podróży"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista zaproszeń dla podróży",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "invitations": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Invitation"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Brak dostępu do zaproszeń tej podróży",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/invitations/{id}/accept": {
+      "post": {
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Zaakceptuj zaproszenie",
+        "description": "Akceptuje zaproszenie do podróży i dodaje użytkownika jako uczestnika",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID zaproszenia"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Zaproszenie zostało zaakceptowane",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "Zaproszenie zostało zaakceptowane"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Zaproszenie nie zostało znalezione",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/invitations/{id}/reject": {
+      "post": {
+        "tags": [
+          "Invitations"
+        ],
+        "summary": "Odrzuć zaproszenie",
+        "description": "Odrzuca zaproszenie do podróży",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID zaproszenia"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Zaproszenie zostało odrzucone",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "Zaproszenie zostało odrzucone"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Zaproszenie nie zostało znalezione",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/plans/generate": {
+      "post": {
+        "tags": [
+          "Plans"
+        ],
+        "summary": "Wygeneruj plan podróży za pomocą AI",
+        "description": "Generuje szczegółowy plan podróży na podstawie preferencji użytkownika za pomocą Google Gemini AI",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlannerInput"
+              },
+              "example": {
+                "origin": "Warszawa",
+                "destination": "Ateny",
+                "start_date": "2026-06-15",
+                "end_date": "2026-06-22",
+                "budget": 5000,
+                "participants": 2,
+                "interests": [
+                  "historia",
+                  "kultura",
+                  "plaże"
+                ],
+                "transport": "samolot",
+                "accommodation": "hotel",
+                "must_visit": [
+                  "Akropol",
+                  "Partenon"
+                ],
+                "avoid": [
+                  "miejsca tłumne"
+                ],
+                "intensity": "moderate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Plan podróży został wygenerowany",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "plan": {
+                      "$ref": "#/components/schemas/TravelPlan"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "plan": {
+                    "id": "plan123",
+                    "userId": "user123",
+                    "destination": "Ateny",
+                    "start_date": "2026-06-15",
+                    "end_date": "2026-06-22",
+                    "days": [
+                      {
+                        "day": 1,
+                        "date": "2026-06-15",
+                        "activities": [
+                          {
+                            "name": "Przylot do Aten",
+                            "type": "transport",
+                            "time": "10:00",
+                            "cost_estimate": 450,
+                            "notes": "Lot z Warszawy",
+                            "location": "Lotnisko Ateny"
+                          },
+                          {
+                            "name": "Zameldowanie w hotelu",
+                            "type": "accommodation",
+                            "time": "14:00",
+                            "cost_estimate": 250,
+                            "location": "Hotel Grande Bretagne"
+                          }
+                        ],
+                        "daily_cost": 700
+                      }
+                    ],
+                    "total_estimated_cost": 4900,
+                    "tips": [
+                      "Zarezerwuj bilety na Akropol online",
+                      "Najlepszy czas na zwiedzanie to rano"
+                    ],
+                    "created_at": "2026-01-17T18:00:00.000Z",
+                    "updated_at": "2026-01-17T18:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe dane wejściowe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera lub AI",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/plans": {
+      "get": {
+        "tags": [
+          "Plans"
+        ],
+        "summary": "Pobierz wszystkie plany użytkownika",
+        "description": "Zwraca listę wszystkich planów podróży użytkownika",
+        "responses": {
+          "200": {
+            "description": "Lista planów użytkownika",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "plans": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/TravelPlan"
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "plans": [
+                    {
+                      "id": "plan123",
+                      "userId": "user123",
+                      "destination": "Ateny",
+                      "start_date": "2026-06-15",
+                      "end_date": "2026-06-22",
+                      "total_estimated_cost": 4900,
+                      "created_at": "2026-01-17T18:00:00.000Z"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/plans/{id}": {
+      "get": {
+        "tags": [
+          "Plans"
+        ],
+        "summary": "Pobierz szczegóły planu",
+        "description": "Zwraca szczegółowe informacje o konkretnym planie podróży",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID planu"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Szczegóły planu",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "plan": {
+                      "$ref": "#/components/schemas/TravelPlan"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Plan nie został znaleziony",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Plans"
+        ],
+        "summary": "Aktualizuj plan",
+        "description": "Aktualizuje istniejący plan podróży",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID planu"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "days": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/PlanDay"
+                    }
+                  },
+                  "tips": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Plan został zaktualizowany",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "plan": {
+                      "$ref": "#/components/schemas/TravelPlan"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Plan nie został znaleziony",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Plans"
+        ],
+        "summary": "Usuń plan",
+        "description": "Usuwa plan podróży",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID planu"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Plan został usunięty",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "Plan został usunięty"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Plan nie został znaleziony",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/trips": {
+      "get": {
+        "tags": [
+          "Trips"
+        ],
+        "summary": "Pobierz wszystkie podróże użytkownika",
+        "description": "Zwraca listę wszystkich podróży, w których użytkownik jest właścicielem lub uczestnikiem",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista podróży użytkownika",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "trips": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Trip"
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "trips": [
+                    {
+                      "id": "trip123",
+                      "name": "Wakacje w Grecji",
+                      "budget": 5000,
+                      "ownerId": "user123",
+                      "participants": [
+                        {
+                          "userId": "user123",
+                          "email": "jan.kowalski@example.com",
+                          "firstName": "Jan",
+                          "lastName": "Kowalski"
+                        }
+                      ],
+                      "createdAt": "2026-01-15T10:00:00.000Z"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Trips"
+        ],
+        "summary": "Utwórz nową podróż",
+        "description": "Tworzy nową podróż dla zalogowanego użytkownika",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTripData"
+              },
+              "example": {
+                "name": "Wakacje w Grecji",
+                "budget": 5000
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Podróż została utworzona",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "trip": {
+                      "$ref": "#/components/schemas/Trip"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "Podróż została utworzona",
+                  "trip": {
+                    "id": "trip123",
+                    "name": "Wakacje w Grecji",
+                    "budget": 5000,
+                    "ownerId": "user123",
+                    "participants": [
+                      {
+                        "userId": "user123",
+                        "email": "jan.kowalski@example.com",
+                        "firstName": "Jan",
+                        "lastName": "Kowalski"
+                      }
+                    ],
+                    "createdAt": "2026-01-17T18:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe dane wejściowe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/trips/{id}": {
+      "get": {
+        "tags": [
+          "Trips"
+        ],
+        "summary": "Pobierz szczegóły podróży",
+        "description": "Zwraca szczegółowe informacje o konkretnej podróży",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID podróży"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Szczegóły podróży",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "trip": {
+                      "$ref": "#/components/schemas/Trip"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "trip": {
+                    "id": "trip123",
+                    "name": "Wakacje w Grecji",
+                    "budget": 5000,
+                    "ownerId": "user123",
+                    "participants": [
+                      {
+                        "userId": "user123",
+                        "email": "jan.kowalski@example.com",
+                        "firstName": "Jan",
+                        "lastName": "Kowalski"
+                      }
+                    ],
+                    "createdAt": "2026-01-15T10:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Brak dostępu do tej podróży",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Podróż nie została znaleziona",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Trips"
+        ],
+        "summary": "Aktualizuj podróż",
+        "description": "Aktualizuje dane istniejącej podróży (tylko właściciel)",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID podróży"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTripData"
+              },
+              "example": {
+                "name": "Wakacje w Grecji - zaktualizowane",
+                "budget": 6000,
+                "participants": [
+                  {
+                    "userId": "user123",
+                    "email": "jan.kowalski@example.com",
+                    "firstName": "Jan",
+                    "lastName": "Kowalski"
+                  },
+                  {
+                    "userId": "user456",
+                    "email": "anna.nowak@example.com",
+                    "firstName": "Anna",
+                    "lastName": "Nowak"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Podróż została zaktualizowana",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "trip": {
+                      "$ref": "#/components/schemas/Trip"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "Podróż została zaktualizowana",
+                  "trip": {
+                    "id": "trip123",
+                    "name": "Wakacje w Grecji - zaktualizowane",
+                    "budget": 6000,
+                    "ownerId": "user123",
+                    "participants": [
+                      {
+                        "userId": "user123",
+                        "email": "jan.kowalski@example.com",
+                        "firstName": "Jan",
+                        "lastName": "Kowalski"
+                      },
+                      {
+                        "userId": "user456",
+                        "email": "anna.nowak@example.com",
+                        "firstName": "Anna",
+                        "lastName": "Nowak"
+                      }
+                    ],
+                    "createdAt": "2026-01-15T10:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Nieprawidłowe dane wejściowe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Tylko właściciel może aktualizować podróż",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Podróż nie została znaleziona",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Trips"
+        ],
+        "summary": "Usuń podróż",
+        "description": "Usuwa podróż wraz ze wszystkimi powiązanymi danymi (tylko właściciel)",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID podróży"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Podróż została usunięta",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "Podróż została usunięta"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Tylko właściciel może usunąć podróż",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Podróż nie została znaleziona",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/users/search": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Wyszukaj użytkownika po emailu",
+        "description": "Wyszukuje użytkownika w systemie po adresie email (używane do wysyłania zaproszeń)",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "email",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "email"
+            },
+            "description": "Adres email użytkownika",
+            "example": "anna.nowak@example.com"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Użytkownik został znaleziony",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "user": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "user": {
+                    "uid": "user456",
+                    "email": "anna.nowak@example.com",
+                    "firstName": "Anna",
+                    "lastName": "Nowak",
+                    "createdAt": "2026-01-10T12:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Brak parametru email",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Użytkownik nie został znaleziony",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/users/me": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Pobierz dane zalogowanego użytkownika",
+        "description": "Zwraca profil aktualnie zalogowanego użytkownika",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Dane użytkownika",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "user": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "user": {
+                    "uid": "user123",
+                    "email": "jan.kowalski@example.com",
+                    "firstName": "Jan",
+                    "lastName": "Kowalski",
+                    "createdAt": "2026-01-17T18:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Brak autoryzacji",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Błąd serwera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
