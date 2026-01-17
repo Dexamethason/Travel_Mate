@@ -9,10 +9,13 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "check-env": "node check-env.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:generate": "tsx src/swagger/generate.ts",
+    "docs:serve": "npm run dev"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
+    "amadeus": "^11.0.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
@@ -20,13 +23,16 @@
     "firebase-admin": "^13.5.0",
     "helmet": "^8.1.0",
     "morgan": "^1.10.1",
-    "amadeus": "^11.0.0"
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.6.0",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.6",
