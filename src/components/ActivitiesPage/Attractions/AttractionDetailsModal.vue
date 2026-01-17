@@ -7,7 +7,6 @@
     <div
       class="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white shadow-2xl"
     >
-      <!-- Header z galerią zdjęć -->
       <div class="relative h-80 bg-gradient-to-br from-gray-200 to-gray-300">
         <img
           :src="attraction.photos?.[0] || attraction.photo || '/img-notfound.png'"
@@ -16,7 +15,6 @@
           @error="handleImageError"
         />
 
-        <!-- Przycisk zamknij -->
         <button
           class="absolute right-4 top-4 rounded-full bg-white p-2 shadow-lg transition-colors hover:bg-gray-100"
           @click="$emit('close')"
@@ -24,7 +22,6 @@
           <XMarkIcon class="h-6 w-6 text-gray-600" />
         </button>
 
-        <!-- Status badge -->
         <div class="absolute bottom-4 left-4">
           <span
             :class="[
@@ -38,9 +35,7 @@
         </div>
       </div>
 
-      <!-- Zawartość -->
       <div class="p-8">
-        <!-- Nazwa i podstawowe info -->
         <div class="mb-6">
           <div class="mb-3 flex items-start justify-between">
             <div>
@@ -58,12 +53,10 @@
             </div>
           </div>
 
-          <!-- Opis -->
           <p v-if="attraction.description" class="mb-4 text-gray-700 leading-relaxed">
             {{ attraction.description }}
           </p>
 
-          <!-- Tagi -->
           <div class="flex flex-wrap gap-2">
             <span
               class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700"
@@ -85,7 +78,6 @@
           </div>
         </div>
 
-        <!-- Szczegóły kontaktowe -->
         <div class="mb-8 grid gap-4 rounded-xl bg-gray-50 p-6 md:grid-cols-2">
           <div v-if="attraction.address" class="flex items-start gap-3">
             <MapPinIcon class="h-5 w-5 flex-shrink-0 text-gray-600" />
@@ -128,7 +120,6 @@
           </div>
         </div>
 
-        <!-- Udogodnienia -->
         <div v-if="attraction.amenities && attraction.amenities.length > 0" class="mb-8">
           <h3 class="mb-3 text-xl font-bold text-gray-900">Udogodnienia</h3>
           <div class="flex flex-wrap gap-2">
@@ -142,7 +133,6 @@
           </div>
         </div>
 
-        <!-- Sekcja opinii -->
         <div v-if="attraction.detailedReviews && attraction.detailedReviews.length > 0">
           <h3 class="mb-4 text-xl font-bold text-gray-900">Opinie odwiedzających</h3>
           <div class="space-y-4">
@@ -174,12 +164,12 @@
 import { computed } from 'vue';
 import {
   XMarkIcon,
-  StarIcon,
   MapPinIcon,
   ClockIcon,
   PhoneIcon,
   GlobeAltIcon,
 } from '@heroicons/vue/24/outline';
+import { StarIcon } from '@heroicons/vue/24/solid';
 import type { Attraction } from '@/types/activitie';
 
 interface Props {
@@ -193,27 +183,22 @@ defineEmits<{
   close: [];
 }>();
 
-// Oblicz status na podstawie openingHours
 const statusText = computed(() => {
   const hours = props.attraction.openingHours;
   if (!hours) return props.attraction.status || 'Brak danych';
 
-  // Sprawdź czy czynne całą dobę
   if (/Czynne całą dobę/i.test(hours)) {
     return 'Otwarte';
   }
 
-  // Sprawdź czy zawiera słowo "Otwarte"
   if (/Otwarte/i.test(hours)) {
     return 'Otwarte';
   }
 
-  // Sprawdź czy zawiera słowo "Zamknięte"
   if (/Zamknięte/i.test(hours)) {
     return 'Zamknięte';
   }
 
-  // Jeśli nie ma wyraźnej informacji, zwróć wartość z API
   return props.attraction.status || 'Brak danych';
 });
 
@@ -225,7 +210,6 @@ const formatDate = (date: string) => {
   });
 };
 
-// Obsługa błędu ładowania obrazu - ustaw domyślny obraz
 const handleImageError = (event: Event) => {
   const target = event.target as HTMLImageElement;
   target.src = '/img-notfound.png';

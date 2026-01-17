@@ -10,7 +10,6 @@
             </div>
 
             <div class="flex items-center gap-3 ml-6">
-              <!-- Przycisk filtrów -->
               <button
                 :class="[
                   'px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 transition-all flex items-center gap-2 text-sm font-semibold shadow-sm cursor-pointer',
@@ -24,7 +23,6 @@
                 <span>Filtry</span>
               </button>
 
-              <!-- Menu sortowania -->
               <div ref="sortMenuRef" class="relative">
                 <button
                   class="px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 hover:border-primary-500 transition-all flex items-center gap-2 text-gray-700 text-sm font-semibold min-w-[180px] justify-between shadow-sm cursor-pointer"
@@ -58,7 +56,6 @@
             </div>
           </div>
 
-          <!-- Panel filtrów -->
           <div v-if="showFilters" class="pt-5 border-t-2 border-gray-200">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
@@ -127,9 +124,7 @@
         </div>
       </div>
 
-      <!-- Lista kart -->
       <div class="pt-4 pb-4 space-y-4">
-        <!-- Brak wyników wyszukiwania -->
         <div v-if="restaurants.length === 0" class="text-center py-12">
           <p class="text-gray-500 text-lg mb-2">
             {{
@@ -151,18 +146,12 @@
           v-for="restaurant in restaurants"
           :key="restaurant.id"
           :restaurant="restaurant"
-          @click="openRestaurantDetails(restaurant)"
+          @click="$emit('restaurant-click', restaurant)"
+          @hover="$emit('card-hover', $event)"
+          @leave="$emit('card-leave')"
         />
       </div>
     </div>
-
-    <!-- Modal szczegółów restauracji -->
-    <RestaurantDetailsModal
-      v-if="selectedRestaurant"
-      :show="showDetailsModal"
-      :restaurant="selectedRestaurant"
-      @close="closeRestaurantDetails"
-    />
   </div>
 </template>
 
@@ -170,7 +159,6 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { FunnelIcon, ChevronDownIcon } from '@heroicons/vue/24/outline';
 import RestaurantCard from './RestaurantCard.vue';
-import RestaurantDetailsModal from './RestaurantDetailsModal.vue';
 import type { Restaurant, RestaurantFilters } from '@/types/activitie';
 
 interface Props {
@@ -188,12 +176,13 @@ const emit = defineEmits<{
   'update:filters': [filters: Partial<RestaurantFilters>];
   'update:sort-by': [sortBy: string];
   'reset-filters': [];
+  'card-hover': [id: string | number];
+  'card-leave': [];
+  'restaurant-click': [restaurant: Restaurant];
 }>();
 
 const showFilters = ref(false);
 const showSort = ref(false);
-const showDetailsModal = ref(false);
-const selectedRestaurant = ref<Restaurant | null>(null);
 const sortMenuRef = ref<HTMLElement | null>(null);
 
 const sortOptions = [
@@ -225,19 +214,6 @@ const updateFilter = (key: keyof RestaurantFilters, value: string | boolean) => 
   emit('update:filters', filters);
 };
 
-const openRestaurantDetails = (restaurant: Restaurant) => {
-  selectedRestaurant.value = restaurant;
-  showDetailsModal.value = true;
-};
-
-const closeRestaurantDetails = () => {
-  showDetailsModal.value = false;
-  setTimeout(() => {
-    selectedRestaurant.value = null;
-  }, 300);
-};
-
-// Zamknij dropdown sortowania po kliknięciu poza nim
 const handleClickOutside = (event: MouseEvent) => {
   if (sortMenuRef.value && !sortMenuRef.value.contains(event.target as Node)) {
     showSort.value = false;
