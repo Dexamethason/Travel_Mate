@@ -333,11 +333,16 @@ const tempReturn = ref<string>('');
 // Computed
 const hasErrors = computed(() => Object.keys(fieldErrors.value).length > 0);
 
+// Flaga do śledzenia aktualizacji wewnętrznych
+let isInternalUpdate = false;
+
 // Watchers
 watch(
   () => props.modelValue,
   newValue => {
-    localForm.value = { ...newValue };
+    if (!isInternalUpdate) {
+      localForm.value = { ...newValue };
+    }
   },
   { deep: true }
 );
@@ -345,7 +350,11 @@ watch(
 watch(
   localForm,
   newValue => {
+    isInternalUpdate = true;
     emit('update:modelValue', { ...newValue });
+    nextTick(() => {
+      isInternalUpdate = false;
+    });
   },
   { deep: true }
 );
