@@ -10,13 +10,12 @@
             </div>
 
             <div class="flex items-center gap-3 ml-6">
-              <!-- Przycisk filtrów -->
               <button
-                :class=" [
+                :class="[
                   'px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 transition-all flex items-center gap-2 text-sm font-semibold shadow-sm cursor-pointer',
                   activeFiltersCount > 0
                     ? 'border-primary-500 text-primary-700 hover:border-primary-600'
-                    : 'hover:border-primary-500 text-gray-700'
+                    : 'hover:border-primary-500 text-gray-700',
                 ]"
                 @click="showFilters = !showFilters"
               >
@@ -24,8 +23,7 @@
                 <span>Filtry</span>
               </button>
 
-              <!-- Menu sortowania -->
-              <div class="relative" ref="sortMenuRef">
+              <div ref="sortMenuRef" class="relative">
                 <button
                   class="px-4 py-2 bg-white border-2 border-gray-300 rounded-xl hover:bg-gray-50 hover:border-primary-500 transition-all flex items-center gap-2 text-gray-700 text-sm font-semibold min-w-[180px] justify-between shadow-sm cursor-pointer"
                   @click="toggleSort"
@@ -58,46 +56,41 @@
             </div>
           </div>
 
-          <!-- Panel filtrów -->
           <div v-if="showFilters" class="pt-5 border-t-2 border-gray-200">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                 <label class="block text-sm font-bold text-gray-700 mb-2">Typ kuchni</label>
                 <select
-                  :value="filters.cuisine"
-                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
+                  :value="filters.cuisine || ''"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-0 focus:border-gray-400 focus:outline-none transition-all cursor-pointer"
                   @change="updateFilter('cuisine', ($event.target as HTMLSelectElement).value)"
                 >
                   <option value="">Wszystkie</option>
-                  <option value="francuska">Kuchnia francuska</option>
-                  <option value="włoska">Kuchnia włoska</option>
-                  <option value="azjatycka">Kuchnia azjatycka</option>
-                  <option value="kawiarnia">Kawiarnie</option>
-                  <option value="haute">Haute cuisine</option>
-                  <option value="bistro">Bistro</option>
+                  <option v-for="cuisine in availableCuisines" :key="cuisine" :value="cuisine">
+                    {{ cuisine }}
+                  </option>
                 </select>
               </div>
 
               <div>
                 <label class="block text-sm font-bold text-gray-700 mb-2">Przedział cenowy</label>
                 <select
-                  :value="filters.priceRange"
-                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
+                  :value="filters.priceRange || ''"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-0 focus:border-gray-400 focus:outline-none transition-all cursor-pointer"
                   @change="updateFilter('priceRange', ($event.target as HTMLSelectElement).value)"
                 >
                   <option value="">Wszystkie</option>
-                  <option value="€">€ - Tanie</option>
-                  <option value="€€">€€ - Średnie</option>
-                  <option value="€€€">€€€ - Drogie</option>
-                  <option value="€€€€">€€€€ - Bardzo drogie</option>
+                  <option v-for="range in availablePriceRanges" :key="range" :value="range">
+                    {{ range }}
+                  </option>
                 </select>
               </div>
 
               <div>
                 <label class="block text-sm font-bold text-gray-700 mb-2">Ocena min.</label>
                 <select
-                  :value="filters.minRating"
-                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all cursor-pointer"
+                  :value="filters.minRating || ''"
+                  class="w-full px-4 py-2.5 border-2 border-gray-300 rounded-xl text-sm font-medium focus:ring-0 focus:border-gray-400 focus:outline-none transition-all cursor-pointer"
                   @change="updateFilter('minRating', ($event.target as HTMLSelectElement).value)"
                 >
                   <option value="">Wszystkie</option>
@@ -113,10 +106,10 @@
                 <input
                   :checked="filters.openNow"
                   type="checkbox"
-                  class="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500 mr-2"
+                  class="w-4 h-4 text-gray-600 border-gray-300 rounded focus:ring-0 focus:ring-offset-0 cursor-pointer"
                   @change="updateFilter('openNow', ($event.target as HTMLInputElement).checked)"
                 />
-                Tylko otwarte teraz
+                <span class="ml-2">Tylko otwarte teraz</span>
               </label>
 
               <button
@@ -131,34 +124,34 @@
         </div>
       </div>
 
-      <!-- Lista kart -->
       <div class="pt-4 pb-4 space-y-4">
         <div v-if="restaurants.length === 0" class="text-center py-12">
-          <p class="text-gray-500 text-lg">Brak restauracji spełniających wybrane kryteria</p>
+          <p class="text-gray-500 text-lg mb-2">
+            {{
+              activeFiltersCount > 0
+                ? 'Brak restauracji spełniających wybrane kryteria'
+                : 'Wyszukaj restauracje, aby zobaczyć wyniki'
+            }}
+          </p>
           <button
+            v-if="activeFiltersCount > 0"
             class="mt-4 text-primary-600 hover:text-primary-700 font-semibold"
             @click="$emit('reset-filters')"
           >
             Wyczyść filtry
           </button>
         </div>
-        
+
         <RestaurantCard
           v-for="restaurant in restaurants"
           :key="restaurant.id"
           :restaurant="restaurant"
-          @click="openRestaurantDetails(restaurant)"
+          @click="$emit('restaurant-click', restaurant)"
+          @hover="$emit('card-hover', $event)"
+          @leave="$emit('card-leave')"
         />
       </div>
     </div>
-
-    <!-- Modal szczegółów restauracji -->
-    <RestaurantDetailsModal
-      v-if="selectedRestaurant"
-      :show="showDetailsModal"
-      :restaurant="selectedRestaurant"
-      @close="closeRestaurantDetails"
-    />
   </div>
 </template>
 
@@ -166,7 +159,6 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { FunnelIcon, ChevronDownIcon } from '@heroicons/vue/24/outline';
 import RestaurantCard from './RestaurantCard.vue';
-import RestaurantDetailsModal from './RestaurantDetailsModal.vue';
 import type { Restaurant, RestaurantFilters } from '@/types/activitie';
 
 interface Props {
@@ -174,6 +166,8 @@ interface Props {
   filters: RestaurantFilters;
   sortBy: string;
   activeFiltersCount: number;
+  availableCuisines: string[];
+  availablePriceRanges: string[];
 }
 
 defineProps<Props>();
@@ -182,18 +176,21 @@ const emit = defineEmits<{
   'update:filters': [filters: Partial<RestaurantFilters>];
   'update:sort-by': [sortBy: string];
   'reset-filters': [];
+  'card-hover': [id: string | number];
+  'card-leave': [];
+  'restaurant-click': [restaurant: Restaurant];
 }>();
 
 const showFilters = ref(false);
 const showSort = ref(false);
-const showDetailsModal = ref(false);
-const selectedRestaurant = ref<Restaurant | null>(null);
 const sortMenuRef = ref<HTMLElement | null>(null);
 
 const sortOptions = [
   { value: 'recommended', label: 'Rekomendowane' },
   { value: 'rating', label: 'Najwyżej oceniane' },
-  { value: 'distance', label: 'Najbliżej' },
+  { value: 'rating-asc', label: 'Najniżej oceniane' },
+  { value: 'popular', label: 'Najpopularniejsze' },
+  { value: 'popular-asc', label: 'Najmniej popularne' },
   { value: 'price-low', label: 'Najniższa cena' },
   { value: 'price-high', label: 'Najwyższa cena' },
 ];
@@ -211,23 +208,12 @@ const selectSort = (value: string) => {
   showSort.value = false;
 };
 
-const updateFilter = (key: keyof RestaurantFilters, value: any) => {
-  emit('update:filters', { [key]: value });
+const updateFilter = (key: keyof RestaurantFilters, value: string | boolean) => {
+  const filters: Partial<RestaurantFilters> = {};
+  filters[key] = value as never;
+  emit('update:filters', filters);
 };
 
-const openRestaurantDetails = (restaurant: Restaurant) => {
-  selectedRestaurant.value = restaurant;
-  showDetailsModal.value = true;
-};
-
-const closeRestaurantDetails = () => {
-  showDetailsModal.value = false;
-  setTimeout(() => {
-    selectedRestaurant.value = null;
-  }, 300);
-};
-
-// Zamknij dropdown sortowania po kliknięciu poza nim
 const handleClickOutside = (event: MouseEvent) => {
   if (sortMenuRef.value && !sortMenuRef.value.contains(event.target as Node)) {
     showSort.value = false;

@@ -6,43 +6,61 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
     type: '',
     priceRange: '',
     minRating: '',
-    wheelchairAccessible: false,
+    openNow: false,
   });
 
-  const sortBy = ref<'recommended' | 'rating' | 'distance' | 'popular'>('recommended');
+  const sortBy = ref<'recommended' | 'rating' | 'popular' | 'rating-asc' | 'popular-asc'>(
+    'recommended'
+  );
 
   const filteredAttractions = computed(() => {
     let result = [...attractions.value];
 
-    // Filtr typu atrakcji - porównuje z category
-    if (filters.value.type) {
-      result = result.filter(a => 
-        a.category.toLowerCase().includes(filters.value.type.toLowerCase()) ||
-        a.type?.toLowerCase().includes(filters.value.type.toLowerCase())
+    // Filtr typu atrakcji
+    if (filters.value.type && filters.value.type !== '') {
+      result = result.filter(
+        a =>
+          a.category?.toLowerCase().includes(filters.value.type.toLowerCase()) ||
+          a.type?.toLowerCase().includes(filters.value.type.toLowerCase())
       );
     }
 
-    // Filtr przedziału cenowego
-    if (filters.value.priceRange) {
-      if (filters.value.priceRange === 'free') {
-        result = result.filter(a => 
-          a.priceRange?.toLowerCase().includes('darmowe') || 
-          a.price.toLowerCase().includes('darmowe')
-        );
-      } else {
-        result = result.filter(a => a.priceRange === filters.value.priceRange);
-      }
-    }
-
-    // Filtr minimalnej oceny
-    if (filters.value.minRating) {
+    // Rating filter
+    if (filters.value.minRating && filters.value.minRating !== '') {
       const minRating = parseFloat(filters.value.minRating);
-      result = result.filter(a => a.rating >= minRating);
+      result = result.filter(a => (a.rating ?? 0) >= minRating);
     }
 
-    // Filtr dostępności dla niepełnosprawnych
-    if (filters.value.wheelchairAccessible) {
-      result = result.filter(a => a.wheelchairAccessible);
+    // Open now filter - sprawdź czy atrakcja jest teraz otwarta
+    if (filters.value.openNow) {
+      result = result.filter(a => {
+        const hours = a.openingHours;
+
+        // Jeśli brak informacji o godzinach, pokaż jako otwarte
+        if (!hours) return true;
+
+        // Sprawdź czy jest status "Brak informacji"
+        if (/Brak informacji/i.test(hours)) {
+          return true;
+        }
+
+        // Sprawdź czy czynne całą dobę
+        if (/Czynne całą dobę/i.test(hours)) {
+          return true;
+        }
+
+        // Sprawdź czy zawiera słowo "Zamknięte" - jeśli tak, ukryj
+        if (/Zamknięte/i.test(hours)) {
+          return false;
+        }
+
+        // Sprawdź czy zawiera słowo "Otwarte" - jeśli tak, pokaż
+        if (/Otwarte/i.test(hours)) {
+          return true;
+        }
+
+        return false;
+      });
     }
 
     return result;
@@ -53,25 +71,22 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
 
     switch (sortBy.value) {
       case 'rating':
-        return result.sort((a, b) => b.rating - a.rating);
-      
-      case 'distance':
-        return result.sort((a, b) => {
-          // Wyciąga liczby z stringów typu "5 min spacerem"
-          const distA = parseFloat(a.distance.match(/\d+/)?.[0] || '999');
-          const distB = parseFloat(b.distance.match(/\d+/)?.[0] || '999');
-          return distA - distB;
-        });
-      
+        return result.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+
+      case 'rating-asc':
+        return result.sort((a, b) => (a.rating ?? 0) - (b.rating ?? 0));
+
       case 'popular':
-        return result.sort((a, b) => b.reviews - a.reviews);
-      
+        return result.sort((a, b) => (b.reviews ?? 0) - (a.reviews ?? 0));
+
+      case 'popular-asc':
+        return result.sort((a, b) => (a.reviews ?? 0) - (b.reviews ?? 0));
+
       case 'recommended':
       default:
-        // Sortowanie według kombinacji oceny i liczby opinii
         return result.sort((a, b) => {
-          const scoreA = a.rating * Math.log10(a.reviews + 1);
-          const scoreB = b.rating * Math.log10(b.reviews + 1);
+          const scoreA = (a.rating ?? 0) * Math.log10((a.reviews ?? 0) + 1);
+          const scoreB = (b.rating ?? 0) * Math.log10((b.reviews ?? 0) + 1);
           return scoreB - scoreA;
         });
     }
@@ -82,17 +97,16 @@ export function useAttractionFilters(attractions: Ref<Attraction[]>) {
       type: '',
       priceRange: '',
       minRating: '',
-      wheelchairAccessible: false,
+      openNow: false,
     };
-    sortBy.value = 'recommended';
   };
 
   const activeFiltersCount = computed(() => {
     let count = 0;
-    if (filters.value.type) count++;
-    if (filters.value.priceRange) count++;
-    if (filters.value.minRating) count++;
-    if (filters.value.wheelchairAccessible) count++;
+    if (filters.value.type && filters.value.type !== '') count++;
+    if (filters.value.priceRange && filters.value.priceRange !== '') count++;
+    if (filters.value.minRating && filters.value.minRating !== '') count++;
+    if (filters.value.openNow) count++;
     return count;
   });
 

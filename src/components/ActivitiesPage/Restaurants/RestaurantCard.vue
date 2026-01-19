@@ -2,16 +2,21 @@
   <div
     class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-gray-300 transition-all duration-200 cursor-pointer group"
     @click="$emit('click')"
+    @mouseenter="$emit('hover', restaurant.id)"
+    @mouseleave="$emit('leave')"
   >
     <div class="flex gap-5">
-      <!-- Zdjęcie -->
       <div
         class="w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex-shrink-0 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-200"
       >
-        <PhotoIcon class="w-12 h-12 text-gray-400" />
+        <img
+          :src="restaurant.photos?.[0] || restaurant.photo || '/img-notfound.png'"
+          :alt="restaurant.name"
+          class="w-full h-full object-cover"
+          @error="handleImageError"
+        />
       </div>
 
-      <!-- Informacje -->
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3 mb-2">
           <h3
@@ -22,31 +27,43 @@
           <span
             :class="[
               'px-3 py-1.5 text-xs font-semibold rounded-lg whitespace-nowrap flex-shrink-0',
-              restaurant.isOpen
+              isOpenNow
                 ? 'bg-green-100 text-green-700 border border-green-300'
                 : 'bg-red-100 text-red-700 border border-red-300',
             ]"
           >
-            {{ restaurant.isOpen ? 'Otwarte' : 'Zamknięte' }}
+            {{ isOpenNow ? 'Otwarte' : 'Zamknięte' }}
           </span>
         </div>
 
-        <div class="flex items-center gap-3 mb-3">
-          <div class="flex items-center bg-yellow-50 px-2 py-1 rounded-lg">
+        <div class="flex items-center gap-3 mb-3 flex-wrap">
+          <div v-if="restaurant.rating" class="flex items-center bg-yellow-50 px-2 py-1 rounded-lg">
             <StarIcon class="w-4 h-4 text-yellow-500" />
-            <span class="ml-1.5 text-sm font-bold text-gray-900">{{ restaurant.rating }}</span>
+            <span class="ml-1.5 text-sm font-bold text-gray-900">{{
+              restaurant.rating.toFixed(1)
+            }}</span>
           </div>
-          <span class="text-sm text-gray-500"
-            >({{ restaurant.reviews.toLocaleString() }} opinii)</span
-          >
-          <span class="text-gray-300">•</span>
-          <span class="text-sm font-medium text-gray-700">{{ restaurant.cuisine }}</span>
+          <span v-if="restaurant.reviews" class="text-sm text-gray-500">
+            ({{ restaurant.reviews.toLocaleString() }} opinii)
+          </span>
+          <template v-if="restaurant.cuisine">
+            <span v-if="restaurant.rating || restaurant.reviews" class="text-gray-300">•</span>
+            <span class="text-sm font-medium text-gray-700">{{ restaurant.cuisine }}</span>
+          </template>
         </div>
 
-        <div class="flex items-center gap-3 text-sm text-gray-600">
-          <span class="font-semibold text-gray-900">{{ restaurant.priceRange }}</span>
-          <span class="text-gray-300">•</span>
-          <span>{{ restaurant.openingHours }}</span>
+        <div class="flex items-center gap-3 text-sm text-gray-600 flex-wrap">
+          <span v-if="restaurant.priceRange" class="font-semibold text-gray-900">
+            {{ restaurant.priceRange }}
+          </span>
+          <template v-if="restaurant.openingHours">
+            <span v-if="restaurant.priceRange" class="text-gray-300">•</span>
+            <span>{{ restaurant.openingHours }}</span>
+          </template>
+          <template v-if="restaurant.address">
+            <span class="text-gray-300">•</span>
+            <span class="text-xs text-gray-500 truncate">{{ restaurant.address }}</span>
+          </template>
         </div>
       </div>
     </div>
@@ -54,15 +71,42 @@
 </template>
 
 <script setup lang="ts">
-import { PhotoIcon } from '@heroicons/vue/24/outline';
+import { computed } from 'vue';
 import { StarIcon } from '@heroicons/vue/24/solid';
 import type { Restaurant } from '@/types/activitie';
 
-defineProps<{
+const props = defineProps<{
   restaurant: Restaurant;
 }>();
 
 defineEmits<{
   click: [];
+  hover: [id: string | number];
+  leave: [];
 }>();
+
+const isOpenNow = computed(() => {
+  const hours = props.restaurant.openingHours;
+  if (!hours) return false;
+
+  if (/Czynne całą dobę/i.test(hours)) {
+    return true;
+  }
+
+  if (/Otwarte/i.test(hours)) {
+    return true;
+  }
+
+  if (/Zamknięte/i.test(hours)) {
+    return false;
+  }
+
+  return props.restaurant.isOpen ?? false;
+});
+
+const handleImageError = (event: Event) => {
+  const target = event.target as HTMLImageElement;
+  target.src = '/img-notfound.png';
+  target.onerror = null;
+};
 </script>

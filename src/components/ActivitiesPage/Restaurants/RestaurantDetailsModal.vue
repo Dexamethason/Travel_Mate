@@ -7,26 +7,14 @@
     <div
       class="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white shadow-2xl"
     >
-      <!-- Header z galerią zdjęć -->
       <div class="relative h-80 bg-gradient-to-br from-gray-200 to-gray-300">
-        <div
-          v-if="restaurant.photos && restaurant.photos.length > 0"
+        <img
+          :src="restaurant.photos?.[0] || restaurant.photo || '/assets/default-hotel.png'"
+          :alt="restaurant.name"
           class="h-full w-full object-cover"
-        >
-          <img
-            :src="restaurant.photos[0]"
-            :alt="restaurant.name"
-            class="h-full w-full object-cover"
-          />
-        </div>
-        <div
-          v-else
-          class="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300"
-        >
-          <PhotoIcon class="h-24 w-24 text-gray-400" />
-        </div>
+          @error="handleImageError"
+        />
 
-        <!-- Przycisk zamknij -->
         <button
           class="absolute right-4 top-4 rounded-full bg-white p-2 shadow-lg transition-colors hover:bg-gray-100"
           @click="$emit('close')"
@@ -34,25 +22,20 @@
           <XMarkIcon class="h-6 w-6 text-gray-600" />
         </button>
 
-        <!-- Status badge -->
         <div class="absolute bottom-4 left-4">
           <span
             :class="[
               'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold shadow-lg',
-              restaurant.isOpen
-                ? 'bg-green-500 text-white'
-                : 'bg-red-500 text-white',
+              isOpenNow ? 'bg-green-500 text-white' : 'bg-red-500 text-white',
             ]"
           >
             <span class="h-2 w-2 rounded-full bg-white"></span>
-            {{ restaurant.isOpen ? 'Otwarte' : 'Zamknięte' }}
+            {{ isOpenNow ? 'Otwarte' : 'Zamknięte' }}
           </span>
         </div>
       </div>
 
-      <!-- Zawartość -->
       <div class="p-8">
-        <!-- Nazwa i podstawowe info -->
         <div class="mb-6">
           <div class="mb-3 flex items-start justify-between">
             <div>
@@ -65,17 +48,15 @@
                 <span class="text-xl font-bold text-gray-900">{{ restaurant.rating }}</span>
               </div>
               <span class="text-sm text-gray-500"
-                >({{ restaurant.reviews.toLocaleString() }} opinii)</span
+                >({{ restaurant.reviews?.toLocaleString() ?? 0 }} opinii)</span
               >
             </div>
           </div>
 
-          <!-- Opis -->
           <p v-if="restaurant.description" class="mb-4 text-gray-700 leading-relaxed">
             {{ restaurant.description }}
           </p>
 
-          <!-- Tagi -->
           <div class="flex flex-wrap gap-2">
             <span
               class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700"
@@ -96,7 +77,6 @@
           </div>
         </div>
 
-        <!-- Szczegóły kontaktowe -->
         <div class="mb-8 grid gap-4 rounded-xl bg-gray-50 p-6 md:grid-cols-2">
           <div v-if="restaurant.address" class="flex items-start gap-3">
             <MapPinIcon class="h-5 w-5 flex-shrink-0 text-gray-600" />
@@ -137,18 +117,9 @@
               </a>
             </div>
           </div>
-
-          <div class="flex items-start gap-3">
-            <MapIcon class="h-5 w-5 flex-shrink-0 text-gray-600" />
-            <div>
-              <p class="text-sm font-medium text-gray-900">Odległość</p>
-              <p class="text-sm text-gray-600">{{ restaurant.distance }}</p>
-            </div>
-          </div>
         </div>
 
-        <!-- Sekcja opinii -->
-        <div v-if="restaurant.detailedReviews && restaurant.detailedReviews.length > 0" class="mb-8">
+        <div v-if="restaurant.detailedReviews && restaurant.detailedReviews.length > 0">
           <h3 class="mb-4 text-xl font-bold text-gray-900">Opinie gości</h3>
           <div class="space-y-4">
             <div
@@ -166,35 +137,9 @@
                   <span class="text-sm font-bold text-gray-900">{{ review.rating }}</span>
                 </div>
               </div>
-              <p class="mb-2 text-gray-700">{{ review.comment }}</p>
-              <button
-                v-if="review.helpful !== undefined"
-                class="text-sm text-gray-500 hover:text-gray-700"
-              >
-                👍 Pomocne ({{ review.helpful }})
-              </button>
+              <p class="text-gray-700">{{ review.comment }}</p>
             </div>
           </div>
-        </div>
-
-        <!-- Przyciski akcji -->
-        <div class="flex gap-3">
-          <button
-            class="flex-1 rounded-lg bg-primary-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-700"
-          >
-            Dodaj do planu
-          </button>
-          <button
-            v-if="restaurant.reservationRequired"
-            class="flex-1 rounded-lg border-2 border-primary-600 px-6 py-3 font-semibold text-primary-600 transition-colors hover:bg-primary-50"
-          >
-            Zarezerwuj stolik
-          </button>
-          <button
-            class="rounded-lg border border-gray-300 px-6 py-3 text-gray-700 transition-colors hover:bg-gray-50"
-          >
-            <ShareIcon class="h-5 w-5" />
-          </button>
         </div>
       </div>
     </div>
@@ -202,17 +147,15 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import {
   XMarkIcon,
-  StarIcon,
   MapPinIcon,
   ClockIcon,
   PhoneIcon,
   GlobeAltIcon,
-  MapIcon,
-  ShareIcon,
-  PhotoIcon,
 } from '@heroicons/vue/24/outline';
+import { StarIcon } from '@heroicons/vue/24/solid';
 import type { Restaurant } from '@/types/activitie';
 
 interface Props {
@@ -220,11 +163,30 @@ interface Props {
   restaurant: Restaurant;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
 
 defineEmits<{
   close: [];
 }>();
+
+const isOpenNow = computed(() => {
+  const hours = props.restaurant.openingHours;
+  if (!hours) return false;
+
+  if (/Czynne całą dobę/i.test(hours)) {
+    return true;
+  }
+
+  if (/Otwarte/i.test(hours)) {
+    return true;
+  }
+
+  if (/Zamknięte/i.test(hours)) {
+    return false;
+  }
+
+  return props.restaurant.isOpen ?? false;
+});
 
 const formatDate = (date: string) => {
   return new Date(date).toLocaleDateString('pl-PL', {
@@ -232,5 +194,11 @@ const formatDate = (date: string) => {
     month: 'long',
     day: 'numeric',
   });
+};
+
+const handleImageError = (event: Event) => {
+  const target = event.target as HTMLImageElement;
+  target.src = '/img-notfound.png';
+  target.onerror = null;
 };
 </script>

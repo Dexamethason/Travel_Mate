@@ -1,20 +1,20 @@
 export interface Attraction {
-  id: number;
+  id: number | string;
   photo?: string;
   name: string;
-  rating: number;
-  reviews: number;
+  rating?: number;
+  reviews?: number;
   type?: string;
-  category: string;
+  category?: string;
   priceRange?: string;
-  price: string;
-  distance: string;
+  price?: string;
+  distance?: string;
   duration?: string;
   wheelchairAccessible?: boolean;
-  openingHours: string;
-  status: string;
-  buttonText: string;
-  // Nowe pola dla szczegółów
+  openingHours?: string;
+  status?: string;
+  buttonText?: string;
+  //modal szczegółów
   description?: string;
   address?: string;
   phone?: string;
@@ -22,20 +22,30 @@ export interface Attraction {
   detailedReviews?: Review[];
   photos?: string[];
   amenities?: string[];
+  place_id?: string;
+  user_ratings_total?: number;
+  vicinity?: string;
+  opening_hours_text?: string[];
+  price_level?: number;
+  types?: string[];
+  geometry?: {
+    latitude: number;
+    longitude: number;
+  };
 }
 
 export interface Restaurant {
-  id: number;
+  id: number | string;
   photo?: string;
   name: string;
-  rating: number;
-  reviews: number;
-  cuisine: string;
-  priceRange: string;
-  distance: string;
-  openingHours: string;
-  isOpen: boolean;
-  // Nowe pola dla szczegółów
+  rating?: number;
+  reviews?: number;
+  cuisine?: string;
+  priceRange?: string;
+  distance?: string;
+  openingHours?: string;
+  isOpen?: boolean;
+  //modal szczegółów
   description?: string;
   address?: string;
   phone?: string;
@@ -44,6 +54,16 @@ export interface Restaurant {
   photos?: string[];
   menu?: string;
   reservationRequired?: boolean;
+  place_id?: string;
+  user_ratings_total?: number;
+  vicinity?: string;
+  opening_hours_text?: string[];
+  price_level?: number;
+  types?: string[];
+  geometry?: {
+    latitude: number;
+    longitude: number;
+  };
 }
 
 export interface Review {
@@ -59,7 +79,7 @@ export interface AttractionFilters {
   type: string;
   priceRange: string;
   minRating: string;
-  wheelchairAccessible: boolean;
+  openNow: boolean;
 }
 
 export interface RestaurantFilters {

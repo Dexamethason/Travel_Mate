@@ -2,10 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import swaggerUi from 'swagger-ui-express';
 import { serverEnv } from './config/env';
 import { initializeFirebase } from './config/firebase';
 import { errorHandler, notFound } from './middleware/errorHandler';
 import indexRoutes from './routes/index';
+import { swaggerSpec } from './swagger/swagger';
 
 const app = express();
 const PORT = serverEnv.port;
@@ -46,10 +48,17 @@ app.get('/', (req, res) => {
     version: '1.0.0',
     endpoints: {
       health: '/health',
-      api: '/api'
+      api: '/api',
+      docs: '/api-docs'
     }
   });
 });
+
+// Swagger UI - dokumentacja API
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: 'Travel Mate API Documentation',
+}));
 
 // Główne trasy API
 app.use('/api', indexRoutes);
@@ -69,6 +78,7 @@ app.listen(Number(PORT), '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📍 Environment: ${serverEnv.nodeEnv}`);
   console.log(`🔗 Health check: http://localhost:${PORT}/health`);
+  console.log(`📚 API Documentation: http://localhost:${PORT}/api-docs`);
 });
 
 export default app;
