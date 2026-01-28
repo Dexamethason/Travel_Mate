@@ -3,15 +3,21 @@
     <!-- Hamburger button (mobile) -->
     <button
       v-if="isMobile"
-      @click="sidebarOpen = !sidebarOpen"
       class="fixed left-4 top-4 z-50 rounded-lg bg-white p-2 shadow-lg dark:bg-gray-800"
+      @click="sidebarOpen = !sidebarOpen"
     >
       <Bars3Icon v-if="!sidebarOpen" class="h-6 w-6 text-gray-700 dark:text-gray-300" />
       <XMarkIcon v-else class="h-6 w-6 text-gray-700 dark:text-gray-300" />
     </button>
 
     <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow-lg flex flex-col">
+    <aside
+      :class="[
+        'w-64 bg-white shadow-lg flex flex-col transition-transform duration-300 ease-in-out',
+        isMobile ? 'fixed inset-y-0 left-0 z-40 transform' : 'relative',
+        isMobile && !sidebarOpen ? '-translate-x-full' : 'translate-x-0',
+      ]"
+    >
       <!-- Logo w sidebarze -->
       <div class="p-4 border-b">
         <router-link to="/" class="flex items-center gap-3 transition-colors hover:opacity-80">
@@ -66,6 +72,7 @@
             () => {
               logout();
               router.push('/login');
+              isMobile && (sidebarOpen = false);
             }
           "
         >
@@ -78,12 +85,12 @@
     <!-- Overlay dla mobile -->
     <div
       v-if="isMobile && sidebarOpen"
-      class="fixed inset-0 z-30 bg-black/50"
+      class="fixed inset-0 z-30 bg-black/50 transition-opacity duration-300"
       @click="sidebarOpen = false"
     ></div>
 
     <!-- główna treść -->
-    <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900">
+    <main :class="['flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900', isMobile ? 'w-full' : '']">
       <router-view />
     </main>
   </div>
@@ -117,6 +124,8 @@ const checkMobile = () => {
   isMobile.value = window.innerWidth < 768;
   if (!isMobile.value) {
     sidebarOpen.value = true;
+  } else {
+    sidebarOpen.value = false;
   }
 };
 
